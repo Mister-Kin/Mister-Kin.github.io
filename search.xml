@@ -398,7 +398,7 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
 <div class="dropdown-menu">
     <button class="dropdown-menu-btn">蓝图规划</button>
     <div class="dropdown-menu-content">
-        <a href="/roadmap/#BL-插件-ToggleLanguage">BL插件</a>
+        <a href="/roadmap/#切换语言-Blender-插件">切换语言</a>
     </div>
 </div>
 <div class="blank-space"></div>
@@ -497,134 +497,6 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
 }
 </style>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Blender 插件 - 切换语言</title>
-    <url>/ToggleLanguage/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">视频链接</th>
-<th align="center">PDF 及 LaTeX 源码链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="/">点击跳转</a></td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/Articles/ToggleLanguage">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一款 blender 插件，旨在通过一键快速、轻松地在两种语言之间切换用户界面，而非重复打开偏好设置。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因 blender 手册翻译需要，本人频繁地在中英文之间切换软件用户界面语言以校对相关 UI 内容。但每次繁琐地使用偏好设置进行语言切换令人苦不堪言，索性就开发一款插件以简化这操作。</p>
-<h2 id="面向人群"><a href="#面向人群" class="headerlink" title="面向人群"></a>面向人群</h2><ul>
-<li>翻译者：需要频繁切换界面语言以校对相关内容。</li>
-<li>CG 学习者：需要频繁切换界面语言才能跟进外语教程。</li>
-</ul>
-<h2 id="插件目前实现的功能"><a href="#插件目前实现的功能" class="headerlink" title="插件目前实现的功能"></a>插件目前实现的功能</h2><ul>
-<li>一键切换 UI 语言（中/英）</li>
-<li>一键打开用户偏好设置</li>
-<li>用以选择 UI 提示方案的菜单</li>
-</ul>
-<p><em>注：规划中的功能请<a href="/roadmap/#BL-%E6%8F%92%E4%BB%B6-ToggleLanguage">跳转蓝图规划页</a>查看。</em></p>
-<span id="more"></span>
-
-<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装"><a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><ul>
-<li>下载地址：<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">跳转下载页</a></li>
-<li>blender版本要求：<a href="https://www.blender.org/download/">v2.83+</a></li>
-</ul>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li>打开「Preferences/用户偏好设置」。</li>
-<li>选择「Add‐ons/插件」选项卡。</li>
-<li>点击「Install…/安装」后选择插件并确定。</li>
-<li>启用插件</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="/images/ToggleLanguage/Installation.webp">安装方法</div>
-    <div class="flex-column">
-    <img data-src="/images/ToggleLanguage/EnableAddon.webp">启用插件</div>
-</div>
-
-<h2 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h2><p><strong>点击UI按钮即可实现相应功能：</strong></p>
-<ul>
-<li>左侧是语言切换按钮，其中按钮文字会自适应于当前 UI 语言。</li>
-<li>中间是用以选择 UI 提示方案的菜单。<ul>
-<li>默认：关闭「开发选项」「Python 工具提示」。</li>
-<li>开发者：启用「开发选项」「Python 工具提示」。</li>
-</ul>
-</li>
-<li>右侧的“齿轮”按钮是用于打开「Preferences/用户偏好设置」。</li>
-</ul>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="/images/ToggleLanguage/UI.webp">插件 UI</div>
-    <div class="flex-column">
-    <img data-src="/images/ToggleLanguage/OptionForHintScheme.webp">提示方案有关的选项</div>
-</div>
-
-<h1 id="开发记录"><a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>开发测试环境：Win10 v2004 OS 和 Blender v2.90。</p>
-<p><em>注：建议在 blender v2.83 以上使用。2.83 默认是启用翻译功能，以下版本的翻译都得手动启用。因为没有实际测试过，所以 2.83 以下版本要使用该插件，可能需要手动启用翻译功能。这也是我将插件最低支持版本改为 2.83 的原因，当然，你也可在 2.83 以下的版本去使用。</em></p>
-<h2 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><table>
-<thead>
-<tr>
-<th align="center">版本</th>
-<th align="center">更新日期</th>
-<th align="center">更新内容</th>
-<th align="center">标签</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">v0.5‐beta</td>
-<td align="center">2020/9/20</td>
-<td align="center">添加菜单用以选择 UI 提示方案</td>
-<td align="center"><mark class="label info">New features</mark></td>
-</tr>
-<tr>
-<td align="center">v0.4</td>
-<td align="center">2020/8/3</td>
-<td align="center">代码项目重命名为 ToggleLanguage；按钮 UI 放置于最右端；添加新按钮以快速查看 preferences</td>
-<td align="center"><mark class="label info">New features</mark></td>
-</tr>
-<tr>
-<td align="center">v0.3</td>
-<td align="center">2020/6/5</td>
-<td align="center">更新至 blender 2.83 api；修改部分类名；添加文档链接；修改完善许可说明</td>
-<td align="center"><mark class="label success">Minor changes</mark></td>
-</tr>
-<tr>
-<td align="center">v0.2</td>
-<td align="center">2020/5/21</td>
-<td align="center">清除未使用属性的报错</td>
-<td align="center"><mark class="label danger">Bug fixes</mark></td>
-</tr>
-<tr>
-<td align="center">v0.1</td>
-<td align="center">2020/5/12</td>
-<td align="center">完成基础的功能设计「一键切换」</td>
-<td align="center"><mark class="label info">New features</mark></td>
-</tr>
-</tbody></table>
-<h1 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
-<style>
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-.flex-column{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-</style>
-]]></content>
-      <categories>
-        <category>blender 插件</category>
-      </categories>
-      <tags>
-        <tag>开源软件</tag>
-        <tag>blender</tag>
-        <tag>插件</tag>
-      </tags>
   </entry>
   <entry>
     <title>翻译计划（作废）</title>
