@@ -5,7 +5,7 @@
     <url>/Announcement/</url>
     <content><![CDATA[<center>
 
-<div class="note info no-icon"><p><strong>置顶公告1：本站点的镜像网站：，用以解决 Github 访问不畅的问题。</strong></p>
+<div class="note info no-icon"><p><strong>置顶公告1：点击访问本站的「<a href="https://mister-kin.gitee.io/">基于 Gitee Pages 的镜像网站</a>」，以解决国内访问 Github Pages 时网络不畅的问题。</strong></p>
 </div>
 
 <div class="note info no-icon"><p><strong>置顶公告2：所有博文均有对应的 PDF 及 LaTeX 源码，均可下载用以离线查看，下载方式请查看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
@@ -392,19 +392,23 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
 
 <center>
 <div class="dropdown-menu">
+    <button class="dropdown-menu-btn">镜像网站</button>
+    <div class="dropdown-menu-content">
+        <a href="https://mister-kin.gitee.io/">GiteePages</a>
+    </div>
+</div>
+<div class="dropdown-menu">
     <button class="dropdown-menu-btn">软件作品</button>
     <div class="dropdown-menu-content">
         <a href="/manuals/toggle-language/">切换语言</a>
     </div>
 </div>
-<div class="blank-space"></div>
 <div class="dropdown-menu">
     <button class="dropdown-menu-btn">蓝图规划</button>
     <div class="dropdown-menu-content">
         <a href="/roadmap/#切换语言-Blender-插件">切换语言</a>
     </div>
 </div>
-<div class="blank-space"></div>
 <div class="dropdown-menu">
     <button class="dropdown-menu-btn">关于我</button>
     <div class="dropdown-menu-content">
@@ -414,7 +418,6 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
         <a href="/about/#挺我">挺挺我</a>
     </div>
 </div>
-<div class="blank-space"></div>
 <div class="dropdown-menu">
     <button class="dropdown-menu-btn">关于本站</button>
     <div class="dropdown-menu-content">
@@ -425,7 +428,6 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
         <a href="/about/post-offline-download/">离线下载</a>
     </div>
 </div>
-<div class="blank-space"></div>
 </center>
 
 <style>
@@ -479,9 +481,6 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
     color: var(--btn-default-hover-color);
     background: var(--btn-default-hover-bg);
     cursor: pointer;
-}
-.blank-space{
-    display: inline-block;
 }
 .flex-row{
     display: flex;
