@@ -800,7 +800,7 @@ QQ二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wid
 <h1 id="联系方式">6 联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#x65;&#x72;&#x6b;&#x69;&#110;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#x65;&#x72;&#x6b;&#x69;&#110;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#107;&#x69;&#110;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#107;&#x69;&#110;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -931,8 +931,8 @@ QQ 二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wi
     <url>/roadmap/index.html</url>
     <content><![CDATA[<div class="tabs" id="roadmap"><ul class="nav-tabs"><li class="tab active"><a href="#roadmap-1"><i class="fa fa-bug"></i>软件开发</a></li><li class="tab"><a href="#roadmap-2"><i class="fa fa-film"></i>自媒体创作</a></li><li class="tab"><a href="#roadmap-3"><i class="fa fa-server"></i>网站建设</a></li></ul><div class="tab-content"><div class="tab-pane active" id="roadmap-1"><h1 id="切换语言-Blender-插件">1 切换语言 - Blender 插件</h1><ul>
 <li><input disabled type="checkbox"> <strong>（暂时搁置）</strong> 支持注销 F6 键（查询功能，增设的快捷键）</li>
-<li><input disabled type="checkbox"> 「加载我的设置」支持 win 以外的系统。</li>
-<li><input disabled type="checkbox"> 「加载我的设置」支持任意路径安装的blender。</li>
+<li><input checked disabled type="checkbox"> 「加载我的设置」支持 win 以外的系统。</li>
+<li><input checked disabled type="checkbox"> 「加载我的设置」支持任意路径安装的blender。</li>
 <li><input disabled type="checkbox"> GUI界面支持生成自定义的设定文件（插件读取并设置）</li>
 <li><input checked disabled type="checkbox"> 支持任意两种语言之间切换（导入模块 lang，lang 文件定义 dict 字典）</li>
 <li><input checked disabled type="checkbox"> 模块化开发，并建立翻译模块以支持切换其他国际化语言（使用 blender API 完成翻译流程）</li>
@@ -1168,7 +1168,7 @@ QQ 二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wi
   <entry>
     <title>更新日志</title>
     <url>/about/logs/index.html</url>
-    <content><![CDATA[<div class="note info"><p>注：本页面用来记录本博客的建设日志。</p>
+    <content><![CDATA[<div class="note info"><p>注：本页面用来记录本博客的建设日志。（从2021/11/11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
 </div>
 
 <blockquote class="blockquote-center">
@@ -1177,6 +1177,9 @@ QQ 二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wi
 </blockquote>
 <div class="hang-retract">
 
+<p>2021/11/7 - Next theme更新至v8.8.1。</p>
+<p>2021/10/29 - 本地开发环境：Node.js 从 v16.8.0 更新至 v16.13.0。</p>
+<p>2021/10/28 - 更新手册「切换语言」。</p>
 <p>2021/10/21 - 规范化HTML的style和script标签的写法（补充type=”text/css”和type=”text/javascript”）；调整flexbox布局的部分间距以改善排版效果；移除flexbox布局内img等标签自动生成的底部外边距（margin-bottom）；移除 fancybox生成的图像父标签（即a标签）的下划线；增加“免费支持我”内容和按钮。</p>
 <p>2021/10/20 - Next theme更新至v8.8.0；修改赞赏内容的描述。</p>
 <p>2021/10/19 - 更新「关于我」页面的QQ二维码。</p>
@@ -1451,14 +1454,12 @@ QQ 二维码<img data-src="/images_public/QQTwoDimensionBarcode2.webp" style="wi
 <thead>
 <tr>
 <th align="center">插件下载链接</th>
-<th align="center">视频链接</th>
 <th align="center">PDF 链接</th>
 <th align="center">LaTeX 源码链接</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">点击跳转</a></td>
-<td align="center">暂无</td>
 <td align="center"><a href="https://wwr.lanzoui.com/b02c7lamf">点击跳转</a>（提取码：docs）</td>
 <td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/Manuals/ToggleLanguage">点击跳转</a></td>
 </tr>
