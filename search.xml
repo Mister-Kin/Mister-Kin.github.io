@@ -20,7 +20,7 @@
 
 <p><strong>注：2.8手册刚刚开写，所以内容跟2.79基本一样。(目前网站上已可以正常切换中文版手册)<del>且现在官网上也无法正常切换到中文版的手册，估计是官方忙着写新手册吧。</del></strong></p>
 <h3 id="Blender官方完整文档（Blender-WiKi）【推荐】">0.1.2 <a href="#Blender官方完整文档（Blender-WiKi）【推荐】" class="headerlink" title="Blender官方完整文档（Blender WiKi）【推荐】"></a>Blender官方完整文档（Blender WiKi）<strong>【推荐】</strong></h3><p>条件：不需翻墙。</p>
-<p>描述：WiKi上记录着很多Blender的资料，包括各版本的发布记录，记录详情可在Reference/Release Notes条目中找到，在这你能了解到Blender各模块发展情况。此外，WiKi上还有FAQ等内容，这些就不多介绍了。</p>
+<p>描述：WiKi上记录着很多Blender的资料，包括各版本的发布记录，记录详情可在Reference&#x2F;Release Notes条目中找到，在这你能了解到Blender各模块发展情况。此外，WiKi上还有FAQ等内容，这些就不多介绍了。</p>
 <p>入口：<a href="https://wiki.blender.org/">Wiki网站链接</a></p>
 <div class="flex-column">
 <img data-src="/images/blender_learning_resources/developer-wiki.png">WiKi网站部分截图
@@ -343,9 +343,9 @@
 
 <h2 id="本店优势">1.2 <a href="#本店优势" class="headerlink" title="本店优势"></a>本店优势</h2><p>“远程”二字就已经很好说明了本店的一个特色。飞助远程，提供一个方便的平台，远程控制，无需到店。注意是<strong>远程！远程！！！</strong></p>
 <p>无论客户身处何处，只要能提供一个良好的网络通信条件，保证机子能够访问互联网，本店就能为你服务。</p>
-<p><strong>联系飞助远程，远程帮助系统优化/维修/重装，价格合理。</strong></p>
-<h1 id="服务内容">2 <a href="#服务内容" class="headerlink" title="服务内容"></a>服务内容</h1><h2 id="系统优化-维修-重装">2.1 <a href="#系统优化-维修-重装" class="headerlink" title="系统优化/维修/重装"></a>系统优化/维修/重装</h2><p>曾经，您是否曾苦恼于系统卡顿或者出现无法解决的毛病，想要维修或重装系统，但却无从下手。</p>
-<p>联系飞助远程，远程帮助<strong>系统优化/维修/重装</strong>，物美价廉。</p>
+<p><strong>联系飞助远程，远程帮助系统优化&#x2F;维修&#x2F;重装，价格合理。</strong></p>
+<h1 id="服务内容">2 <a href="#服务内容" class="headerlink" title="服务内容"></a>服务内容</h1><h2 id="系统优化-x2F-维修-x2F-重装">2.1 <a href="#系统优化-x2F-维修-x2F-重装" class="headerlink" title="系统优化&#x2F;维修&#x2F;重装"></a>系统优化&#x2F;维修&#x2F;重装</h2><p>曾经，您是否曾苦恼于系统卡顿或者出现无法解决的毛病，想要维修或重装系统，但却无从下手。</p>
+<p>联系飞助远程，远程帮助<strong>系统优化&#x2F;维修&#x2F;重装</strong>，物美价廉。</p>
 <div class="note danger no-icon"><p><em>注：关于系统，本店默认以最新的<strong>64</strong>位的<strong>WIN10</strong>系统镜像为源（有其他需求的请另外告知店长）。系统完全纯净，不带任何多余的第三方软件。另提供<strong>虚拟机</strong>的安装，可在其上安装<strong>Mac</strong>或<strong>Linux</strong>系统。</em></p>
 </div>
 
@@ -415,7 +415,7 @@
 </ol>
 <p>首先来了解下进程的概念。</p>
 <blockquote>
-<p>用户下达运行程序的命令后，就会产生进程。同一程序可产生多个进程（一对多关系），以允许同时有多位用户运行同一程序，却不会相冲突。进程需要一些资源才能完成工作，如CPU使用时间、存储器、文件以及I/O设备，且为依序逐一进行，也就是每个CPU核心任何时间内仅能运行一项进程。程序本身只是指令、数据及其组织形式的描述，进程才是程序（那些指令和数据）的真正运行实例。  ---  <a href="https://zh.wikipedia.org/wiki/%E8%BF%9B%E7%A8%8B">维基百科</a></p>
+<p>用户下达运行程序的命令后，就会产生进程。同一程序可产生多个进程（一对多关系），以允许同时有多位用户运行同一程序，却不会相冲突。进程需要一些资源才能完成工作，如CPU使用时间、存储器、文件以及I&#x2F;O设备，且为依序逐一进行，也就是每个CPU核心任何时间内仅能运行一项进程。程序本身只是指令、数据及其组织形式的描述，进程才是程序（那些指令和数据）的真正运行实例。  ---  <a href="https://zh.wikipedia.org/wiki/%E8%BF%9B%E7%A8%8B">维基百科</a></p>
 </blockquote>
 <p>也就是说<strong>关掉无用程序，即是关闭相关进程</strong>。</p>
 <p>众所周知，计算机程序的运行是在内存中进行的。加速球所做的就是关闭进程，将它认为内存中不常用的数据调回到硬盘上。而实际上，当程序又被运行时，系统又会将相关数据加载进内存中。加速球的做法，其实是拖慢了该程序的运行速度。这种腾出内存的做法在某些使用场景中，对于低内存配置的电脑有所帮助，但本质上这是<strong>治标不治本</strong>。</p>
@@ -437,6 +437,34 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>电脑维修</tag>
         <tag>个人店铺</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux总结</title>
+    <url>/code/linux/</url>
+    <content><![CDATA[<h1 id="终端符号输入">1 <a href="#终端符号输入" class="headerlink" title="终端符号输入"></a>终端符号输入</h1><ul>
+<li>ctrl+c：停止</li>
+<li>ctrl+z：停止输入</li>
+</ul>
+<h1 id="包管理器">2 <a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">2.1 <a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">2.1.1 <a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
+
+<h1 id="硬盘和分区管理">3 <a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="将-x2F-home目录挂载到新分区（或新硬盘）">3.1 <a href="#将-x2F-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line">sudo mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line">sudo rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line">sudo <span class="built_in">mv</span> /home /home_old</span><br><span class="line">sudo <span class="built_in">mkdir</span> /home</span><br><span class="line">sudo umount /dev/新分区</span><br><span class="line">sudo mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line">sudo gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line">sudo <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="编译问题">4 <a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="普通用户导致的编译问题">4.1 <a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
+<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
+<h1 id="账户管理">5 <a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 <a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自动root登录">5.2 <a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"># 在daemon下添加</span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">6 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[2] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -506,14 +534,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="常规软件的安装和使用">4 <a href="#常规软件的安装和使用" class="headerlink" title="常规软件的安装和使用"></a>常规软件的安装和使用</h1><p>目前深度商店的软件应用数量已经比以前增加了很多，在商店中搜索并安装自己想用的软件即可。</p>
 <p>让我最为惊喜的是，商店竟然有酷狗，而且不是网页版或者安卓版。这点不错，也省去了我手动折腾wine的麻烦。</p>
 <p>至此，z500算是获得了新生。</p>
-<h1 id="参考文献">5 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 如何安装[EB/OL]. <a href="https://www.deepin.org/zh/installation/">https://www.deepin.org/zh/installation/</a>.<br>[2] 蓝牙[EB/OL]. <a href="https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99">https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99</a>.<br>[3] Recommended Partitioning Scheme[EB/OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>
+<h1 id="参考文献">5 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 如何安装[EB&#x2F;OL]. <a href="https://www.deepin.org/zh/installation/">https://www.deepin.org/zh/installation/</a>.<br>[2] 蓝牙[EB&#x2F;OL]. <a href="https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99">https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99</a>.<br>[3] Recommended Partitioning Scheme[EB&#x2F;OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>
 ]]></content>
       <categories>
         <category>os</category>
       </categories>
       <tags>
-        <tag>deepin</tag>
         <tag>linux</tag>
+        <tag>deepin</tag>
         <tag>系统</tag>
         <tag>深度系统</tag>
         <tag>联想</tag>
@@ -539,16 +567,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">[Sprite Fright][]</td>
 <td align="center">惊悚小精灵</td>
 <td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+<td align="center">[点击跳转][subtitles]</td>
 </tr>
 <tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">[The Daily Dweebs][]</td>
 <td align="center">每日蠢事</td>
 <td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+<td align="center">[点击跳转][subtitles]</td>
 </tr>
 </tbody></table>
 <h2 id="Blender-fundamental-教程">2.2 <a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
@@ -791,12 +819,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
 <p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
 <p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
 <p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
@@ -804,17 +832,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
 <p>编写程序，在标准输出上打印 Hello, World。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
 <p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
 <p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -835,7 +863,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
 <p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
 <p>指出下列哪些输出语句是合法的(如果有的话)：</p>
@@ -950,11 +978,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p>参考：</p>
 <ul>
-<li><a href="https://isocpp.org/wiki/faq/newbie#choosing-int-size">What are the criteria for choosing between short / int / long data types?</a></li>
+<li><a href="https://isocpp.org/wiki/faq/newbie#choosing-int-size">What are the criteria for choosing between short &#x2F; int &#x2F; long data types?</a></li>
 <li><a href="http://stackoverflow.com/questions/2386772/difference-between-float-and-double">Difference between float and double</a></li>
 </ul>
-<h3 id="float有效位理解"><a href="#float有效位理解" class="headerlink" title="float有效位理解"></a>float有效位理解</h3><p>IEEE规定<code>float</code>为32bit，尾数用23位存储，加上隐含的小数点前的1位1，2^(23+1) = 16777216。因为 10^7 &lt; 16777216 &lt; 10^8，所以说单精度浮点数的有效位数是7位（能保证7位有效数字，当然，并非说第8位一定是非有效数字，它也有可能是准确的）。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> i = <span class="number">12345678.76348</span>;</span><br><span class="line">    <span class="keyword">float</span> j = <span class="number">46857.9874</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%f\n%f\n%.3f\n%.8f&quot;</span>, i, j, j, j);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="float有效位理解"><a href="#float有效位理解" class="headerlink" title="float有效位理解"></a>float有效位理解</h3><p>IEEE规定<code>float</code>为32bit，尾数用23位存储，加上隐含的小数点前的1位1，2^(23+1) &#x3D; 16777216。因为 10^7 &lt; 16777216 &lt; 10^8，所以说单精度浮点数的有效位数是7位（能保证7位有效数字，当然，并非说第8位一定是非有效数字，它也有可能是准确的）。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> i = <span class="number">12345678.76348</span>;</span><br><span class="line">    <span class="type">float</span> j = <span class="number">46857.9874</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%f\n%f\n%.3f\n%.8f&quot;</span>, i, j, j, j);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">12345679.000000</span><br><span class="line">46857.988281</span><br><span class="line">46857.988</span><br><span class="line">46857.98828125</span><br></pre></td></tr></table></figure>
 
@@ -966,7 +994,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-3"><a href="#练习2-3" class="headerlink" title="练习2.3"></a>练习2.3</h2><blockquote>
 <p>读程序写结果。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> u = <span class="number">10</span>, u2 = <span class="number">42</span>;</span><br><span class="line">std::cout &lt;&lt; u2 - u &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; u - u2 &lt;&lt; std::endl;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">10</span>, i2 = <span class="number">42</span>;</span><br><span class="line">std::cout &lt;&lt; i2 - i &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; i - i2 &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; i - u &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; u - i &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> u = <span class="number">10</span>, u2 = <span class="number">42</span>;</span><br><span class="line">std::cout &lt;&lt; u2 - u &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; u - u2 &lt;&lt; std::endl;</span><br><span class="line"><span class="type">int</span> i = <span class="number">10</span>, i2 = <span class="number">42</span>;</span><br><span class="line">std::cout &lt;&lt; i2 - i &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; i - i2 &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; i - u &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; u - i &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">32</span><br><span class="line">4294967264 // -32=(-1)×2^32+4294967264</span><br><span class="line">32</span><br><span class="line">-32</span><br><span class="line">0</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
@@ -980,16 +1008,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>赋给带符号类型一个超出范围的值时，结果是未定义的。此时，程序可能工作、可能崩溃、也可能生成垃圾数据。</li>
 </ul>
 <p><strong>无符号类型和有符号类型计算，结果为负数时，结果值的计算方法</strong></p>
-<p>给定一个正整数p，任意一个整数n，一定存在等式n=kp+r</p>
-<p>其中k、r是整数，且0&lt;=r&lt;p，称k为n除以p的商，r为n除以p的余数。</p>
+<p>给定一个正整数p，任意一个整数n，一定存在等式n&#x3D;kp+r</p>
+<p>其中k、r是整数，且0&lt;&#x3D;r&lt;p，称k为n除以p的商，r为n除以p的余数。</p>
 <p>定义取模运算：a % p（或a mod p），表示a除以p的余数。</p>
-<p><strong>实际运用场景</strong>：将-1赋给8bit的<code>unsigned char</code>时，结果值为255。<br>计算过程：-1=(-1)×256+255</p>
+<p><strong>实际运用场景</strong>：将-1赋给8bit的<code>unsigned char</code>时，结果值为255。<br>计算过程：-1&#x3D;(-1)×256+255</p>
 <p>二进制表示的本质：用补码表示，先看原码（符号位为1，数值位只有一个1）对原码取反加1（符号位不变），转换成补码后，所有位都是1。</p>
 <h3 id="类型转换的使用场景总结"><a href="#类型转换的使用场景总结" class="headerlink" title="类型转换的使用场景总结"></a>类型转换的使用场景总结</h3><ul>
 <li>不要混用带符号类型和无符号类型：表达式中含有这两种类型时，带符号数会自动转换成无符号数（此时，一个负数转换成无符号数后，真值将很大）。</li>
-<li>循环中的判断条件慎用无符号数：无符号数表示范围为正整数，不会小于0，尤其是当循环的临界条件是0时。如以下代码，就是死循环，当u=0时，循环条件依然满足，继续执行，--u就是-1，但无符号数只能表示整数，-1被自动地转换成一个合法的无符号数，即正整数。</li>
+<li>循环中的判断条件慎用无符号数：无符号数表示范围为正整数，不会小于0，尤其是当循环的临界条件是0时。如以下代码，就是死循环，当u&#x3D;0时，循环条件依然满足，继续执行，--u就是-1，但无符号数只能表示整数，-1被自动地转换成一个合法的无符号数，即正整数。</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">unsigned</span> u = <span class="number">10</span>; u &gt;= <span class="number">0</span>; --u)</span><br><span class="line">    std::cout &lt;&lt; u &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">unsigned</span> u = <span class="number">10</span>; u &gt;= <span class="number">0</span>; --u)</span><br><span class="line">    std::cout &lt;&lt; u &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
 
 <p>解决方式：</p>
 <ol>
@@ -998,7 +1026,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>类似while语句，将for语句的--u置于cout语句中。</li>
 <li>2和3本质上就是保证u不会变为-1。</li>
 </ol>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> u = <span class="number">11</span>;</span><br><span class="line"><span class="keyword">while</span> (u &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    --u;</span><br><span class="line">    std::cout &lt;&lt; u &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> u = <span class="number">11</span>;</span><br><span class="line"><span class="keyword">while</span> (u &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    --u;</span><br><span class="line">    std::cout &lt;&lt; u &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-4"><a href="#练习2-4" class="headerlink" title="练习2.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap2/2_4.cpp">练习2.4</a></h2><blockquote>
 <p>编写程序检查你的估计是否正确，如果不正确，请仔细研读本节直到弄明白问题所在。</p>
@@ -1022,7 +1050,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-6"><a href="#练习2-6" class="headerlink" title="练习2.6"></a>练习2.6</h2><blockquote>
 <p>下面两组定义是否有区别，如果有，请叙述之：</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> month = <span class="number">9</span>, day = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> month = <span class="number">09</span>, day = <span class="number">07</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> month = <span class="number">9</span>, day = <span class="number">7</span>;</span><br><span class="line"><span class="type">int</span> month = <span class="number">09</span>, day = <span class="number">07</span>;</span><br></pre></td></tr></table></figure>
 
 <p>第一行定义的是十进制整型。<br>第二行定义的是八进制整型，但是 month 变量无效，因为八进制没有 9 。</p>
 <h2 id="练习2-7"><a href="#练习2-7" class="headerlink" title="练习2.7"></a>练习2.7</h2><blockquote>
@@ -1051,35 +1079,35 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-8"><a href="#练习2-8" class="headerlink" title="练习2.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap2/2_8.cpp">练习2.8</a></h2><blockquote>
 <p>请利用转义序列编写一段程序，要求先输出 2M，然后转到新一行。修改程序使其先输出 2，然后输出制表符，再输出 M，最后转到新一行。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;\062\115\012&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;\062\t\115\012&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;\062\115\012&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;\062\t\115\012&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-9"><a href="#练习2-9" class="headerlink" title="练习2.9"></a>练习2.9</h2><blockquote>
 <p>解释下列定义的含义，对于非法的定义，请说明错在何处并将其改正。</p>
 </blockquote>
 <ul>
 <li>(a) std::cin &gt;&gt; int input_value;</li>
-<li>(b) int i = { 3.14 };</li>
-<li>(c) double salary = wage = 9999.99;</li>
-<li>(d) int i = 3.14;</li>
+<li>(b) int i &#x3D; { 3.14 };</li>
+<li>(c) double salary &#x3D; wage &#x3D; 9999.99;</li>
+<li>(d) int i &#x3D; 3.14;</li>
 </ul>
 <p>(a): 应该先定义再使用。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> input_value = <span class="number">0</span>;</span><br><span class="line">std::cin &gt;&gt; input_value;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> input_value = <span class="number">0</span>;</span><br><span class="line">std::cin &gt;&gt; input_value;</span><br></pre></td></tr></table></figure>
 
 <p>(b): 用列表初始化内置类型的变量时，如果存在丢失信息的风险，则编译器将报错。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> i = &#123; <span class="number">3.14</span> &#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> i = &#123; <span class="number">3.14</span> &#125;;</span><br></pre></td></tr></table></figure>
 
 <p>(c): 在这里 wage 是未定义的，应该在此之前将其定义。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> wage;</span><br><span class="line"><span class="keyword">double</span> salary = wage = <span class="number">9999.99</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> wage;</span><br><span class="line"><span class="type">double</span> salary = wage = <span class="number">9999.99</span>;</span><br></pre></td></tr></table></figure>
 <p>或者</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> wage, salary = wage = <span class="number">9999.99</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> wage, salary = wage = <span class="number">9999.99</span>;</span><br></pre></td></tr></table></figure>
 
 <p>(d): 不报错，但是小数部分会被截断。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> i = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> i = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-10"><a href="#练习2-10" class="headerlink" title="练习2.10"></a>练习2.10</h2><blockquote>
 <p>下列变量的初值分别是什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::string global_str;</span><br><span class="line"><span class="keyword">int</span> global_int;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> local_int;</span><br><span class="line">    std::string local_str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::string global_str;</span><br><span class="line"><span class="type">int</span> global_int;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> local_int;</span><br><span class="line">    std::string local_str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><code>global_int</code> 是全局变量，所以初值为 0 。<br><code>local_int</code> 是局部变量并且没有初始化，它的初值是未定义的。<br><code>global_str</code> 和 <code>local_str</code> 是 string 类的对象，该对象定义了默认的初始化方式，即初始化为空字符串。</p>
 <p><strong>P.S. 要养成良好习惯，初始化每个内置类型的变量，避免这种未定义造成程序运行故障（无法预计的故障）。</strong></p>
@@ -1087,7 +1115,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>指出下面的语句是声明还是定义：</p>
 </blockquote>
 <ul>
-<li>(a) extern int ix = 1024;</li>
+<li>(a) extern int ix &#x3D; 1024;</li>
 <li>(b) int iy;</li>
 <li>(c) extern int iz;</li>
 </ul>
@@ -1097,34 +1125,34 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>请指出下面的名字中哪些是非法的？</p>
 </blockquote>
 <ul>
-<li>(a) int double = 3.14;</li>
+<li>(a) int double &#x3D; 3.14;</li>
 <li>(b) int _;</li>
 <li>(c) int catch-22;</li>
-<li>(d) int 1_or_2 = 1;</li>
-<li>(e) double Double = 3.14;</li>
+<li>(d) int 1_or_2 &#x3D; 1;</li>
+<li>(e) double Double &#x3D; 3.14;</li>
 </ul>
 <p><code>(a)</code>, <code>(c)</code>, <code>(d)</code> 非法。</p>
 <p>标识符由<strong>字母、数字和下划线</strong>组成。开头必须是<strong>字母或下划线</strong>。（C++中用户自定义的标识符，<strong>不能连续出现两个下划线，不能以下划线紧连大写字母开头</strong>）</p>
 <h2 id="练习2-13"><a href="#练习2-13" class="headerlink" title="练习2.13"></a>练习2.13</h2><blockquote>
 <p>下面程序中 j 的值是多少？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">int</span> j = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">100</span>;</span><br><span class="line">    <span class="type">int</span> j = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><code>j</code> 的值是 <code>100</code> ，局部变量 <code>i</code> 覆盖了全局变量 <code>i</code> 。</p>
 <h2 id="练习2-14"><a href="#练习2-14" class="headerlink" title="练习2.14"></a>练习2.14</h2><blockquote>
 <p>下面的程序合法吗？如果合法，它将输出什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">100</span>, sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i != <span class="number">10</span>; ++i)</span><br><span class="line">    sum += i;</span><br><span class="line">std::cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; sum &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">100</span>, sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != <span class="number">10</span>; ++i)</span><br><span class="line">    sum += i;</span><br><span class="line">std::cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; sum &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
 
 <p>合法。输出是 <code>100 45</code> 。</p>
 <h2 id="练习2-15"><a href="#练习2-15" class="headerlink" title="练习2.15"></a>练习2.15</h2><blockquote>
 <p>下面的哪个定义是不合法的？为什么？</p>
 </blockquote>
 <ul>
-<li>(a) int ival = 1.01;</li>
-<li>(b) int &amp;rval1 = 1.01;</li>
-<li>(c) int &amp;rval2 = ival;</li>
-<li>(d) int &rval3;</li>
+<li>(a) int ival &#x3D; 1.01;</li>
+<li>(b) int &amp;rval1 &#x3D; 1.01;</li>
+<li>(c) int &amp;rval2 &#x3D; ival;</li>
+<li>(d) int &amp;rval3;</li>
 </ul>
 <p><code>(b)</code> 和 <code>(d)</code> 不合法，<code>(b)</code> 引用必须绑定在对象上，<code>(d)</code> 引用必须初始化。</p>
 <p><strong>引用（左值引用）只能绑定在对象上，而且必须初始化。</strong></p>
@@ -1138,7 +1166,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-17"><a href="#练习2-17" class="headerlink" title="练习2.17"></a>练习2.17</h2><blockquote>
 <p>执行下面的代码段将输出什么结果？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i, &amp;ri = i;</span><br><span class="line">i = <span class="number">5</span>; ri = <span class="number">10</span>;</span><br><span class="line">std::cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; ri &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i, &amp;ri = i;</span><br><span class="line">i = <span class="number">5</span>; ri = <span class="number">10</span>;</span><br><span class="line">std::cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; ri &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10 10</span><br></pre></td></tr></table></figure>
@@ -1146,7 +1174,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-18"><a href="#练习2-18" class="headerlink" title="练习2.18"></a>练习2.18</h2><blockquote>
 <p>编写代码分别改变指针的值以及指针所指对象的值。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> *p1 = &amp;a, *p2 = p1;</span><br><span class="line"></span><br><span class="line"><span class="comment">// change the value of a pointer.</span></span><br><span class="line">p1 = &amp;b;</span><br><span class="line"><span class="comment">// change the value to which the pointer points</span></span><br><span class="line">*p2 = b;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> *p1 = &amp;a, *p2 = p1;</span><br><span class="line"></span><br><span class="line"><span class="comment">// change the value of a pointer.</span></span><br><span class="line">p1 = &amp;b;</span><br><span class="line"><span class="comment">// change the value to which the pointer points</span></span><br><span class="line">*p2 = b;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-19"><a href="#练习2-19" class="headerlink" title="练习2.19"></a>练习2.19</h2><blockquote>
 <p>说明指针和引用的主要区别</p>
@@ -1158,7 +1186,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-20"><a href="#练习2-20" class="headerlink" title="练习2.20"></a>练习2.20</h2><blockquote>
 <p>请叙述下面这段代码的作用。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">int</span> *p1 = &amp;i;</span><br><span class="line">*p1 = *p1 * *p1;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="type">int</span> *p1 = &amp;i;</span><br><span class="line">*p1 = *p1 * *p1;</span><br></pre></td></tr></table></figure>
 
 <p>让指针 <code>pi</code> 指向 <code>i</code>，然后将 <code>i</code> 的值重新赋值为 42 * 42 (1764)。</p>
 <h2 id="练习2-21"><a href="#练习2-21" class="headerlink" title="练习2.21"></a>练习2.21</h2><blockquote>
@@ -1181,7 +1209,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-24"><a href="#练习2-24" class="headerlink" title="练习2.24"></a>练习2.24</h2><blockquote>
 <p>在下面这段代码中为什么 p 合法而 lp 非法？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">void</span> *p = &amp;i;</span><br><span class="line"><span class="keyword">long</span> *lp = &amp;i;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="type">void</span> *p = &amp;i;</span><br><span class="line"><span class="type">long</span> *lp = &amp;i;</span><br></pre></td></tr></table></figure>
 
 <p><code>void *</code> 是（从C语言那里继承过来的，这句话存疑，暂未查证），可以指向任何类型的对象（即可以存放任意对象的地址）。而其他指针类型必须要与所指对象严格匹配。</p>
 <p>注意，<code>void *</code>不是空指针，空指针是null pointer，不指向任何对象，字面值常用<code>nullptr</code>。</p>
@@ -1189,30 +1217,30 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>说明下列变量的类型和值。</p>
 </blockquote>
 <ul>
-<li>(a) int* ip, i, &amp;r = i;</li>
-<li>(b) int i, *ip = 0;</li>
+<li>(a) int* ip, i, &amp;r &#x3D; i;</li>
+<li>(b) int i, *ip &#x3D; 0;</li>
 <li>(c) int* ip, ip2;</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(a): ip是一个指向int的指针（块作用域内不赋初值），i是一个int（块作用域内不赋初值）, r是i的引用（同上）。</span><br><span class="line">(b): i是int（块作用域内不赋初值），ip是一个空指针（不指向任何对象）。</span><br><span class="line">(c): ip是一个指向int的指针（块作用域内不赋初值）, ip2是一个 int（块作用域内不赋初值）。</span><br></pre></td></tr></table></figure>
 
 <p>作用域：全局作用域（global scope）和块作用域（block scope），一般块作用域习惯称为局部作用域。</p>
 <p>面对一条复杂的指针或引用的声明语句时，从右往左阅读：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> ival = <span class="number">1024</span>;</span><br><span class="line"><span class="keyword">int</span> *pi = &amp;ival;</span><br><span class="line"><span class="keyword">int</span> **ppi = &amp;pi; <span class="comment">// ppi是指向指针的指针</span></span><br><span class="line"><span class="keyword">int</span> **ppi = <span class="number">0</span><span class="comment">// 为访问最原始的对象，需要两次解引用 **ppi</span></span><br><span class="line"><span class="keyword">int</span> *&amp;r = pi <span class="comment">// 从右往左阅读，&amp;r是一个引用，*说明r引用的是指针，int类型则具体说明了r引用的是int指针。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> ival = <span class="number">1024</span>;</span><br><span class="line"><span class="type">int</span> *pi = &amp;ival;</span><br><span class="line"><span class="type">int</span> **ppi = &amp;pi; <span class="comment">// ppi是指向指针的指针</span></span><br><span class="line"><span class="type">int</span> **ppi = <span class="number">0</span><span class="comment">// 为访问最原始的对象，需要两次解引用 **ppi</span></span><br><span class="line"><span class="type">int</span> *&amp;r = pi <span class="comment">// 从右往左阅读，&amp;r是一个引用，*说明r引用的是指针，int类型则具体说明了r引用的是int指针。</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-26"><a href="#练习2-26" class="headerlink" title="练习2.26"></a>练习2.26</h2><blockquote>
 <p>下面哪些语句是合法的？如果不合法，请说明为什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> buf;      <span class="comment">// 不合法, const 对象必须初始化</span></span><br><span class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>;        <span class="comment">// 合法</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> sz = cnt; <span class="comment">// 合法</span></span><br><span class="line">++cnt; ++sz;        <span class="comment">// ++sz不合法, const 对象不能被改变</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> buf;      <span class="comment">// 不合法, const 对象必须初始化</span></span><br><span class="line"><span class="type">int</span> cnt = <span class="number">0</span>;        <span class="comment">// 合法</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> sz = cnt; <span class="comment">// 合法</span></span><br><span class="line">++cnt; ++sz;        <span class="comment">// ++sz不合法, const 对象不能被改变</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-27"><a href="#练习2-27" class="headerlink" title="练习2.27"></a>练习2.27</h2><blockquote>
 <p>下面的哪些初始化是合法的？请说明原因。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">-1</span>, &amp;r = <span class="number">0</span>;         <span class="comment">// 不合法, r必须引用一个对象（非常量引用的初始值必须是一个对象）</span></span><br><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> p2 = &amp;i2;        <span class="comment">// 合法</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> i = <span class="number">-1</span>, &amp;r = <span class="number">0</span>;   <span class="comment">// 合法，常量引用可以非常量的对象、绑定字面值、一般表达式</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *<span class="keyword">const</span> p3 = &amp;i2;  <span class="comment">// 合法</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p1 = &amp;i2;        <span class="comment">// 合法</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp;<span class="keyword">const</span> r2;        <span class="comment">// 不合法, r2是引用，引用没有顶层 const（引用只是对象的别名）</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> i2 = i, &amp;r = i;   <span class="comment">// 合法</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">-1</span>, &amp;r = <span class="number">0</span>;         <span class="comment">// 不合法, r必须引用一个对象（非常量引用的初始值必须是一个对象）</span></span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p2 = &amp;i2;        <span class="comment">// 合法</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> i = <span class="number">-1</span>, &amp;r = <span class="number">0</span>;   <span class="comment">// 合法，常量引用可以非常量的对象、绑定字面值、一般表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;i2;  <span class="comment">// 合法</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p1 = &amp;i2;        <span class="comment">// 合法</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;<span class="type">const</span> r2;        <span class="comment">// 不合法, r2是引用，引用没有顶层 const（引用只是对象的别名）</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> i2 = i, &amp;r = i;   <span class="comment">// 合法</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-28"><a href="#练习2-28" class="headerlink" title="练习2.28"></a>练习2.28</h2><blockquote>
 <p>说明下面的这些定义是什么意思，挑出其中不合法的。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i, *<span class="keyword">const</span> cp;       <span class="comment">// 不合法，cp未初始化，const指针必须初始化（指针常量要初始化）</span></span><br><span class="line"><span class="keyword">int</span> *p1, *<span class="keyword">const</span> p2;     <span class="comment">// 不合法，p2未初始化，const指针必须初始化</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ic, &amp;r = ic;  <span class="comment">// 不合法，ic未初始化，const int必须初始化</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *<span class="keyword">const</span> p3;    <span class="comment">// 不合法，p3未初始化，const指针必须初始化</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p;           <span class="comment">// 合法。一个指针，指向 const int（常量指针）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i, *<span class="type">const</span> cp;       <span class="comment">// 不合法，cp未初始化，const指针必须初始化（指针常量要初始化）</span></span><br><span class="line"><span class="type">int</span> *p1, *<span class="type">const</span> p2;     <span class="comment">// 不合法，p2未初始化，const指针必须初始化</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> ic, &amp;r = ic;  <span class="comment">// 不合法，ic未初始化，const int必须初始化</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3;    <span class="comment">// 不合法，p3未初始化，const指针必须初始化</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p;           <span class="comment">// 合法。一个指针，指向 const int（常量指针）</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>一个常量对象必须初始化，一旦初始化其值就不能再改变。</strong></p>
 <h2 id="练习2-29"><a href="#练习2-29" class="headerlink" title="练习2.29"></a>练习2.29</h2><blockquote>
@@ -1227,7 +1255,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-30"><a href="#练习2-30" class="headerlink" title="练习2.30"></a>练习2.30</h2><blockquote>
 <p>对于下面的这些语句，请说明对象被声明成了顶层const还是底层const？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> v2 = <span class="number">0</span>; <span class="keyword">int</span> v1 = v2;</span><br><span class="line"><span class="keyword">int</span> *p1 = &amp;v1, &amp;r1 = v1;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p2 = &amp;v2, *<span class="keyword">const</span> p3 = &amp;i, &amp;r2 = v2;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> v2 = <span class="number">0</span>; <span class="type">int</span> v1 = v2;</span><br><span class="line"><span class="type">int</span> *p1 = &amp;v1, &amp;r1 = v1;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;v2, *<span class="type">const</span> p3 = &amp;i, &amp;r2 = v2;</span><br></pre></td></tr></table></figure>
 
 <p>v2是顶层const，v1是普通int；p1是普通指针，r1是对v1的引用；p2是底层const，p3既是顶层const也是底层const，r2是底层const。</p>
 <ul>
@@ -1235,7 +1263,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>底层const：表示所指或所引用对象是常量，只与指针、引用等复合类型的基本类型部分有关。（用于声明引用的const都是底层const）。拷贝时，要求两个对象具有相同的底层const或者两个对象之间的数据类型可以转换（非常量可以转常量）。</li>
 </ul>
 <p>常量表达式是指值不会改变，在编译过程中就能得到计算结果的表达式。</p>
-<p>constexpr类型声明的变量是由编译器验证变量的值是否是一个常量表达式。用constexpr声明的对象会把它置为顶层const，比如constexpr int *q = nullptr就相当于int *const q = nullptr。</p>
+<p>constexpr类型声明的变量是由编译器验证变量的值是否是一个常量表达式。用constexpr声明的对象会把它置为顶层const，比如constexpr int *q &#x3D; nullptr就相当于int *const q &#x3D; nullptr。</p>
 <h2 id="练习2-31"><a href="#练习2-31" class="headerlink" title="练习2.31"></a>练习2.31</h2><blockquote>
 <p>假设已有上一个练习中所做的那些声明，则下面的哪些语句是合法的？请说明顶层const和底层const在每个例子中有何体现。</p>
 </blockquote>
@@ -1248,7 +1276,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>非法。（书本P49）把int变量直接赋给指针是错误的操作，即使int变量的值恰好等于0也不行。<br>修正方式1：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int null = 0, *p = 0;</span><br></pre></td></tr></table></figure>
 <p>修正方式2：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> null = <span class="number">0</span>, *p = &amp;null;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> null = <span class="number">0</span>, *p = &amp;null;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-33"><a href="#练习2-33" class="headerlink" title="练习2.33"></a>练习2.33</h2><blockquote>
 <p>利用本节定义的变量，判断下列语句的运行结果。</p>
@@ -1256,7 +1284,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">a=<span class="number">42</span>; <span class="comment">// a 是 int</span></span><br><span class="line">b=<span class="number">42</span>; <span class="comment">// b 是一个 int,(ci的顶层const在拷贝时被忽略掉了)</span></span><br><span class="line">c=<span class="number">42</span>; <span class="comment">// c 也是一个int</span></span><br><span class="line">d=<span class="number">42</span>; <span class="comment">// d 是一个 int *，所以语句非法</span></span><br><span class="line">e=<span class="number">42</span>; <span class="comment">// e 是一个 const int *，所以语句非法</span></span><br><span class="line">g=<span class="number">42</span>; <span class="comment">// g 是一个 const int 的引用，引用都是底层const，所以不能被赋值</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>类型别名（typedef和using）</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">double</span> wages</span><br><span class="line"><span class="keyword">using</span> wages=<span class="keyword">double</span></span><br><span class="line"><span class="comment">// 注意指针和类型别名的应用</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> *pstring;</span><br><span class="line"><span class="keyword">const</span> pstring cstr = <span class="number">0</span>; <span class="comment">// cstr是指向char的指针常量。注意不要理解成 cosnt char *cstr = 0，这是错误的，const在这里是修饰整个类型，应该是顶层const。</span></span><br><span class="line"><span class="keyword">const</span> pstring *ps; <span class="comment">// ps是一个指针（实际就是指针的指针），它的对象是指向char的指针常量。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> wages</span><br><span class="line"><span class="keyword">using</span> wages=<span class="type">double</span></span><br><span class="line"><span class="comment">// 注意指针和类型别名的应用</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> *pstring;</span><br><span class="line"><span class="type">const</span> pstring cstr = <span class="number">0</span>; <span class="comment">// cstr是指向char的指针常量。注意不要理解成 cosnt char *cstr = 0，这是错误的，const在这里是修饰整个类型，应该是顶层const。</span></span><br><span class="line"><span class="type">const</span> pstring *ps; <span class="comment">// ps是一个指针（实际就是指针的指针），它的对象是指向char的指针常量。</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>auto关键字（让编译器通过初始值推断类型）</strong></p>
 <ul>
@@ -1270,14 +1298,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习2-35"><a href="#练习2-35" class="headerlink" title="练习2.35"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap2/2_35.cpp">练习2.35</a></h2><blockquote>
 <p>判断下列定义推断出的类型是什么，然后编写程序进行验证。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">auto</span> j = i; <span class="keyword">const</span> <span class="keyword">auto</span> &amp;k = i; <span class="keyword">auto</span> *p = &amp;i;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">auto</span> j2 = i, &amp;k2 = i;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> i = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">auto</span> j = i; <span class="type">const</span> <span class="keyword">auto</span> &amp;k = i; <span class="keyword">auto</span> *p = &amp;i;</span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> j2 = i, &amp;k2 = i;</span><br></pre></td></tr></table></figure>
 
 <p>j 是 int，k 是 const int的引用，p 是const int *，j2 是const int，k2 是 const int 的引用。</p>
 <p>验证依靠hint即可（鼠标悬停在变量上），无需编译。</p>
 <h2 id="练习2-36"><a href="#练习2-36" class="headerlink" title="练习2.36"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap2/2_36.cpp">练习2.36</a></h2><blockquote>
 <p>关于下面的代码，请指出每一个变量的类型以及程序结束时它们各自的值。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>, b = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">decltype</span>(a) c = a;</span><br><span class="line"><span class="keyword">decltype</span>((b)) d = a;</span><br><span class="line">++c;</span><br><span class="line">++d;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">3</span>, b = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">decltype</span>(a) c = a;</span><br><span class="line"><span class="keyword">decltype</span>((b)) d = a;</span><br><span class="line">++c;</span><br><span class="line">++d;</span><br></pre></td></tr></table></figure>
 <p>a、b、c都是int类型，d是int &amp;类型，即引用，绑定到a。<br>程序结束时的值：a、b、c、d都为4。</p>
 <p><strong>decltype关键字（让编译器分析表达式来得到类型，不计算表达式的值）</strong></p>
 <ul>
@@ -1291,12 +1319,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>双层括号decltype((variable))返回的结果永远是引用类型。</li>
 <li>decltype(表达式为解引用操作，如*p)，返回引用类型（解引用指针操作，得到指针所指的对象，还能给这个对象赋值）。</li>
 </ol>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">42</span>, *p = &amp;i, &amp;r = i;</span><br><span class="line"><span class="keyword">decltype</span>(r) a = i;   <span class="comment">// a是引用，绑定到变量i</span></span><br><span class="line"><span class="keyword">decltype</span>(r + <span class="number">0</span>) b;   <span class="comment">// b是int，b是一个未初始化的int</span></span><br><span class="line"><span class="keyword">decltype</span>((i)) c = i; <span class="comment">// c是引用，绑定到变量i</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) d = i;  <span class="comment">// d是引用，绑定到变量i</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>, *p = &amp;i, &amp;r = i;</span><br><span class="line"><span class="keyword">decltype</span>(r) a = i;   <span class="comment">// a是引用，绑定到变量i</span></span><br><span class="line"><span class="keyword">decltype</span>(r + <span class="number">0</span>) b;   <span class="comment">// b是int，b是一个未初始化的int</span></span><br><span class="line"><span class="keyword">decltype</span>((i)) c = i; <span class="comment">// c是引用，绑定到变量i</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) d = i;  <span class="comment">// d是引用，绑定到变量i</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-37"><a href="#练习2-37" class="headerlink" title="练习2.37"></a>练习2.37</h2><blockquote>
-<p>赋值是会产生引用的一类典型表达式，引用的类型就是左值的类型。也就是说，如果 i 是 int，则表达式 i=x 的类型是 int&amp;。根据这一特点，请指出下面的代码中每一个变量的类型和值。</p>
+<p>赋值是会产生引用的一类典型表达式，引用的类型就是左值的类型。也就是说，如果 i 是 int，则表达式 i&#x3D;x 的类型是 int&amp;。根据这一特点，请指出下面的代码中每一个变量的类型和值。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>, b = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">decltype</span>(a) c = a;</span><br><span class="line"><span class="keyword">decltype</span>(a = b) d = a;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">3</span>, b = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">decltype</span>(a) c = a;</span><br><span class="line"><span class="keyword">decltype</span>(a = b) d = a;</span><br></pre></td></tr></table></figure>
 <p>a、b、c都是int类型，d是int &amp;类型，即引用，绑定到a。<br>a的值为3，b的值为4，c的值为3，d的值为3。</p>
 <h2 id="练习2-38"><a href="#练习2-38" class="headerlink" title="练习2.38"></a>练习2.38</h2><blockquote>
 <p>说明由decltype 指定类型和由auto指定类型有何区别。请举一个例子，decltype指定的类型与auto指定的类型一样；再举一个例子，decltype指定的类型与auto指定的类型不一样。</p>
@@ -1305,29 +1333,29 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>decltype依据类型决定是否需要赋初值，auto必须要有初值。</li>
 <li>decltype处理顶层const方式与auto不同，decltype会将顶层const保留起来，auto会忽略掉顶层const。</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>, &amp;r = i;</span><br><span class="line"><span class="comment">// 相同 都是int</span></span><br><span class="line"><span class="keyword">auto</span> a = i;</span><br><span class="line"><span class="keyword">decltype</span>(i) b = i;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不同 d 是一个 int&amp;</span></span><br><span class="line"><span class="keyword">auto</span> c = r;</span><br><span class="line"><span class="keyword">decltype</span>(r) d = r;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">0</span>, &amp;r = i;</span><br><span class="line"><span class="comment">// 相同 都是int</span></span><br><span class="line"><span class="keyword">auto</span> a = i;</span><br><span class="line"><span class="keyword">decltype</span>(i) b = i;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不同 d 是一个 int&amp;</span></span><br><span class="line"><span class="keyword">auto</span> c = r;</span><br><span class="line"><span class="keyword">decltype</span>(r) d = r;</span><br></pre></td></tr></table></figure>
 
 <p>stackoverflow的<a href="http://stackoverflow.com/questions/21369113/what-is-the-difference-between-auto-and-decltypeauto-when-returning-from-a-fun">参考1</a>和<a href="http://stackoverflow.com/questions/12084040/decltype-vs-auto">参考2</a>有更多的讨论。</p>
 <h2 id="练习2-39"><a href="#练习2-39" class="headerlink" title="练习2.39"></a>练习2.39</h2><blockquote>
 <p>编译下面的程序观察其运行结果，注意，如果忘记写类定义体后面的分号会发生什么情况？记录下相关的信息，以后可能会有用。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Foo</span> &#123;</span> <span class="comment">/* 此处为空  */</span> &#125; <span class="comment">// 注意：没有分号</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Foo</span> &#123; <span class="comment">/* 此处为空  */</span> &#125; <span class="comment">// 注意：没有分号</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>提示应输入分号。</p>
 <p><strong>关键字<code>class</code>和<code>struct</code>都可以用来定义数据类型（类）。</strong></p>
 <h2 id="练习2-40"><a href="#练习2-40" class="headerlink" title="练习2.40"></a>练习2.40</h2><blockquote>
 <p>根据自己的理解写出 Sales_data 类，最好与书中的例子有所区别。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sale_data</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    std::string bookNo;</span><br><span class="line">    std::string bookName;</span><br><span class="line">    <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">    <span class="keyword">double</span> price = <span class="number">0.0</span>;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Sale_data</span></span><br><span class="line">&#123;</span><br><span class="line">    std::string bookNo;</span><br><span class="line">    std::string bookName;</span><br><span class="line">    <span class="type">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">    <span class="type">double</span> price = <span class="number">0.0</span>;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-41"><a href="#练习2-41" class="headerlink" title="练习2.41"></a>练习2.41</h2><blockquote>
 <p>使用你自己的Sale_data类重写1.5.1节（第20页）、1.5.2节（第21页）和1.6节（第22页）的练习。眼下先把Sales_data类的定义和main函数放在一个文件里。</p>
 </blockquote>
-<h3 id="1-5-1节"><a href="#1-5-1节" class="headerlink" title="1.5.1节"></a>1.5.1节</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sale_data</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    std::string bookNo;</span><br><span class="line">    <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Sale_data book;</span><br><span class="line">    <span class="keyword">double</span> price;</span><br><span class="line">    std::cin &gt;&gt; book.bookNo &gt;&gt; book.units_sold &gt;&gt; price;</span><br><span class="line">    book.revenue = book.units_sold * price;</span><br><span class="line">    std::cout &lt;&lt; book.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; book.units_sold &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; book.revenue &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; price;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-1节"><a href="#1-5-1节" class="headerlink" title="1.5.1节"></a>1.5.1节</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Sale_data</span></span><br><span class="line">&#123;</span><br><span class="line">    std::string bookNo;</span><br><span class="line">    <span class="type">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Sale_data book;</span><br><span class="line">    <span class="type">double</span> price;</span><br><span class="line">    std::cin &gt;&gt; book.bookNo &gt;&gt; book.units_sold &gt;&gt; price;</span><br><span class="line">    book.revenue = book.units_sold * price;</span><br><span class="line">    std::cout &lt;&lt; book.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; book.units_sold &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; book.revenue &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; price;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-5-2节"><a href="#1-5-2节" class="headerlink" title="1.5.2节"></a>1.5.2节</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sale_data</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    std::string bookNo;</span><br><span class="line">    <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Sale_data book1, book2;</span><br><span class="line">    <span class="keyword">double</span> price1, price2;</span><br><span class="line">    std::cin &gt;&gt; book1.bookNo &gt;&gt; book1.units_sold &gt;&gt; price1;</span><br><span class="line">    std::cin &gt;&gt; book2.bookNo &gt;&gt; book2.units_sold &gt;&gt; price2;</span><br><span class="line">    book1.revenue = book1.units_sold * price1;</span><br><span class="line">    book2.revenue = book2.units_sold * price2;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (book1.bookNo == book2.bookNo)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">unsigned</span> totalCnt = book1.units_sold + book2.units_sold;</span><br><span class="line">        <span class="keyword">double</span> totalRevenue = book1.revenue + book2.revenue;</span><br><span class="line">        std::cout &lt;&lt; book1.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; totalCnt &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; totalRevenue &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (totalCnt != <span class="number">0</span>)</span><br><span class="line">            std::cout &lt;&lt; totalRevenue / totalCnt &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;(no sales)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;Data must refer to same ISBN&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;  <span class="comment">// indicate failure</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-2节"><a href="#1-5-2节" class="headerlink" title="1.5.2节"></a>1.5.2节</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Sale_data</span></span><br><span class="line">&#123;</span><br><span class="line">    std::string bookNo;</span><br><span class="line">    <span class="type">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Sale_data book1, book2;</span><br><span class="line">    <span class="type">double</span> price1, price2;</span><br><span class="line">    std::cin &gt;&gt; book1.bookNo &gt;&gt; book1.units_sold &gt;&gt; price1;</span><br><span class="line">    std::cin &gt;&gt; book2.bookNo &gt;&gt; book2.units_sold &gt;&gt; price2;</span><br><span class="line">    book1.revenue = book1.units_sold * price1;</span><br><span class="line">    book2.revenue = book2.units_sold * price2;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (book1.bookNo == book2.bookNo)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">unsigned</span> totalCnt = book1.units_sold + book2.units_sold;</span><br><span class="line">        <span class="type">double</span> totalRevenue = book1.revenue + book2.revenue;</span><br><span class="line">        std::cout &lt;&lt; book1.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; totalCnt &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; totalRevenue &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (totalCnt != <span class="number">0</span>)</span><br><span class="line">            std::cout &lt;&lt; totalRevenue / totalCnt &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;(no sales)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;Data must refer to same ISBN&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;  <span class="comment">// indicate failure</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-6节"><a href="#1-6节" class="headerlink" title="1.6节"></a>1.6节</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sale_data</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    std::string bookNo;</span><br><span class="line">    <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Sale_data total;</span><br><span class="line">    <span class="keyword">double</span> totalPrice;</span><br><span class="line">    <span class="keyword">if</span> (std::cin &gt;&gt; total.bookNo &gt;&gt; total.units_sold &gt;&gt; totalPrice)</span><br><span class="line">    &#123;</span><br><span class="line">        total.revenue = total.units_sold * totalPrice;</span><br><span class="line"></span><br><span class="line">        Sale_data trans;</span><br><span class="line">        <span class="keyword">double</span> transPrice;</span><br><span class="line">        <span class="keyword">while</span> (std::cin &gt;&gt; trans.bookNo &gt;&gt; trans.units_sold &gt;&gt; transPrice)</span><br><span class="line">        &#123;</span><br><span class="line">            trans.revenue = trans.units_sold * transPrice;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (total.bookNo == trans.bookNo)</span><br><span class="line">            &#123;</span><br><span class="line">                total.units_sold += trans.units_sold;</span><br><span class="line">                total.revenue += trans.revenue;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                std::cout &lt;&lt; total.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.units_sold &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.revenue &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (total.units_sold != <span class="number">0</span>)</span><br><span class="line">                    std::cout &lt;&lt; total.revenue / total.units_sold &lt;&lt; std::endl;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    std::cout &lt;&lt; <span class="string">&quot;(no sales)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">                total.bookNo = trans.bookNo;</span><br><span class="line">                total.units_sold = trans.units_sold;</span><br><span class="line">                total.revenue = trans.revenue;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        std::cout &lt;&lt; total.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.units_sold &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.revenue &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (total.units_sold != <span class="number">0</span>)</span><br><span class="line">            std::cout &lt;&lt; total.revenue / total.units_sold &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;(no sales)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;No data?!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;  <span class="comment">// indicate failure</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-6节"><a href="#1-6节" class="headerlink" title="1.6节"></a>1.6节</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Sale_data</span></span><br><span class="line">&#123;</span><br><span class="line">    std::string bookNo;</span><br><span class="line">    <span class="type">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> revenue = <span class="number">0.0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Sale_data total;</span><br><span class="line">    <span class="type">double</span> totalPrice;</span><br><span class="line">    <span class="keyword">if</span> (std::cin &gt;&gt; total.bookNo &gt;&gt; total.units_sold &gt;&gt; totalPrice)</span><br><span class="line">    &#123;</span><br><span class="line">        total.revenue = total.units_sold * totalPrice;</span><br><span class="line"></span><br><span class="line">        Sale_data trans;</span><br><span class="line">        <span class="type">double</span> transPrice;</span><br><span class="line">        <span class="keyword">while</span> (std::cin &gt;&gt; trans.bookNo &gt;&gt; trans.units_sold &gt;&gt; transPrice)</span><br><span class="line">        &#123;</span><br><span class="line">            trans.revenue = trans.units_sold * transPrice;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (total.bookNo == trans.bookNo)</span><br><span class="line">            &#123;</span><br><span class="line">                total.units_sold += trans.units_sold;</span><br><span class="line">                total.revenue += trans.revenue;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                std::cout &lt;&lt; total.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.units_sold &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.revenue &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (total.units_sold != <span class="number">0</span>)</span><br><span class="line">                    std::cout &lt;&lt; total.revenue / total.units_sold &lt;&lt; std::endl;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    std::cout &lt;&lt; <span class="string">&quot;(no sales)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">                total.bookNo = trans.bookNo;</span><br><span class="line">                total.units_sold = trans.units_sold;</span><br><span class="line">                total.revenue = trans.revenue;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        std::cout &lt;&lt; total.bookNo &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.units_sold &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; total.revenue &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (total.units_sold != <span class="number">0</span>)</span><br><span class="line">            std::cout &lt;&lt; total.revenue / total.units_sold &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;(no sales)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;No data?!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;  <span class="comment">// indicate failure</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习2-42"><a href="#练习2-42" class="headerlink" title="练习2.42"></a>练习2.42</h2><blockquote>
 <p>根据你自己的理解重写一个Sales_data.h头文件，并以此为基础重做2.6.2节（第67页）的练习。</p>
@@ -1396,12 +1424,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>string对象操作的一些总结：</p>
 <ul>
 <li><strong>定义、初始化和基本操作看下面代码（书本见P76和P77）。</strong></li>
-<li>关系运算符&lt;、&lt;=、&gt;、&gt;=比较规则：依次比较每个位置上的字符大小，若都一样时，则长度更长的字符串就更大。</li>
+<li>关系运算符&lt;、&lt;&#x3D;、&gt;、&gt;&#x3D;比较规则：依次比较每个位置上的字符大小，若都一样时，则长度更长的字符串就更大。</li>
 <li><code>string</code>和字符字面值和字符串字面值混在一条语句中，必须确保加法运算符「+」两侧至少有一个<code>string</code>对象（因为标准库可以将字面值转换为<code>string</code>对象，但不允许两个字面值直接相加）</li>
 <li><code>size()</code>函数返回的是<code>string::size_type</code>类型的值，是无符号数。表达式中如果有<code>size()</code>，切记不要再使用<code>int</code>。如果需要定义变量存储<code>size()</code>函数，使用<code>auto</code>或<code>decltype</code>，例如<code>auto len = str.size()</code></li>
 <li><strong>注意字符串字面值不是<code>string</code>对象，和<code>string</code>是不同的类型（因为需要兼容C）。</strong></li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义和初始化（等号是拷贝初始化，圆括号是直接初始化）</span></span><br><span class="line">string s1;     <span class="comment">//默认初始化为空串</span></span><br><span class="line"><span class="function">string <span class="title">s2</span><span class="params">(s1)</span></span>; <span class="comment">// s2是s1的副本</span></span><br><span class="line">string s2 = s1; <span class="comment">// 同上，不过是拷贝初始化</span></span><br><span class="line">string s3 = (<span class="string">&quot;hello&quot;</span>); <span class="comment">// s3是字面值&quot;hello&quot;的副本（不包括字面值中的空字符）</span></span><br><span class="line">string s3 = <span class="string">&quot;hello&quot;</span>; <span class="comment">// 同上</span></span><br><span class="line"><span class="function">string <span class="title">s4</span><span class="params">(n, <span class="string">&#x27;c&#x27;</span>)</span></span>; <span class="comment">// s4初始化为由n个字符c组成的串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 基本操作</span></span><br><span class="line">os &lt;&lt; s; <span class="comment">// 将s写到输出流os，返回os</span></span><br><span class="line">is &gt;&gt; s; <span class="comment">// 将输入流is读取字符串赋值给s，字符串以空白分割，返回is</span></span><br><span class="line"><span class="built_in">getline</span>(is, s); <span class="comment">// 从输入流is读取一行赋值给s，返回is</span></span><br><span class="line">s.<span class="built_in">empty</span>(); <span class="comment">// s为空返回true，否则返回false</span></span><br><span class="line">s.<span class="built_in">size</span>(); <span class="comment">// 返回s中字符的个数</span></span><br><span class="line">s[n]; <span class="comment">// 返回s中第n个字符的引用，下标从0计起。</span></span><br><span class="line">s1 + s2; <span class="comment">// 返回s1和s2连接后的结果</span></span><br><span class="line">s1 = s2; <span class="comment">// 用s2的副本代替s1中原来的字符</span></span><br><span class="line">s1 == s2; <span class="comment">// 判断两个string对象是否相等，对字母大小写敏感</span></span><br><span class="line">s1 != s2;</span><br><span class="line">&lt;, &lt;=, &gt;, &gt;= ; <span class="comment">// 利用字符在字典中的顺序进行比较，对字母大小写敏感</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h2 id="练习3-6"><a href="#练习3-6" class="headerlink" title="练习3.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_6.cpp">练习3.6</a></h2><blockquote>
 <p>编写一段程序，使用范围for语句将字符串内的所有字符用X代替。</p>
@@ -1413,7 +1443,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>就上一题完成的程序而言，如果将循环控制变量的类型设为char将发生什么？先估计一下结果，然后实际编程进行验证。</p>
 </blockquote>
 <p>字符串没有变化（因为c只是拷贝，即char，而非引用，即char &amp;，所以无法改变字符串的）。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="string">&quot;hello, world!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">char</span> c : str)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="string">&quot;hello, world!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">char</span> c : str)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <h2 id="练习3-8"><a href="#练习3-8" class="headerlink" title="练习3.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_8.cpp">练习3.8</a></h2><blockquote>
 <p>分别用while循环和传统for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？</p>
@@ -1433,7 +1463,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-11"><a href="#练习3-11" class="headerlink" title="练习3.11"></a>练习3.11</h2><blockquote>
 <p>下面的范围for语句合法吗？如果合法，c的类型是什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> string s = <span class="string">&quot;Keep out!&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s)&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> string s = <span class="string">&quot;Keep out!&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s)&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure>
 
 <p>要根据for循环体中的代码来看是否合法，s是常量，c是string对象中字符的引用（const char &amp;）。因此如果for循环体中的代码重新给c赋值就会非法，如果不改变c的值，那么合法。</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; c;  <span class="comment">// 合法</span></span><br><span class="line">c = <span class="string">&#x27;X&#x27;</span>;    <span class="comment">// 不合法</span></span><br></pre></td></tr></table></figure>
@@ -1441,12 +1471,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-12"><a href="#练习3-12" class="headerlink" title="练习3.12"></a>练习3.12</h2><blockquote>
 <p>下列vector对象的定义有不正确的吗？如果有，请指出来。对于正确的，描述其执行结果；对于不正确的，说明其错误的原因。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; ivec;         <span class="comment">// 在C++11当中合法，ivec的元素是vector对象</span></span><br><span class="line">vector&lt;string&gt; svec = ivec;       <span class="comment">// 不合法，类型不一样，ivec的元素是vector int，svec的元素是string</span></span><br><span class="line"><span class="function">vector&lt;string&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>, <span class="string">&quot;null&quot;</span>)</span></span>;  <span class="comment">// 合法，svec有10个字符串：&quot;null&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ivec;         <span class="comment">// 在C++11当中合法，ivec的元素是vector对象</span></span><br><span class="line">vector&lt;string&gt; svec = ivec;       <span class="comment">// 不合法，类型不一样，ivec的元素是vector int，svec的元素是string</span></span><br><span class="line"><span class="function">vector&lt;string&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>, <span class="string">&quot;null&quot;</span>)</span></span>;  <span class="comment">// 合法，svec有10个字符串：&quot;null&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习3-13"><a href="#练习3-13" class="headerlink" title="练习3.13"></a>练习3.13</h2><blockquote>
 <p>下列的vector对象各包含多少个元素？这些元素的值分别是多少？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="keyword">int</span>&gt; v1;         <span class="comment">// 0个，无值</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">v2</span><span class="params">(<span class="number">10</span>)</span></span>;     <span class="comment">// 10个，都是0</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">v3</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>; <span class="comment">// 10个，都是42</span></span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; v4&#123; <span class="number">10</span> &#125;;     <span class="comment">// 1个，10</span></span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; v5&#123; <span class="number">10</span>, <span class="number">42</span> &#125;; <span class="comment">// 2个，10和42</span></span><br><span class="line">vector&lt;string&gt; v6&#123; <span class="number">10</span> &#125;;  <span class="comment">// 10个，空串</span></span><br><span class="line">vector&lt;string&gt; v7&#123; <span class="number">10</span>, <span class="string">&quot;hi&quot;</span> &#125;;  <span class="comment">// 10个，都是&quot;hi&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v1;         <span class="comment">// 0个，无值</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v2</span><span class="params">(<span class="number">10</span>)</span></span>;     <span class="comment">// 10个，都是0</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v3</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>; <span class="comment">// 10个，都是42</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v4&#123; <span class="number">10</span> &#125;;     <span class="comment">// 1个，10</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v5&#123; <span class="number">10</span>, <span class="number">42</span> &#125;; <span class="comment">// 2个，10和42</span></span><br><span class="line">vector&lt;string&gt; v6&#123; <span class="number">10</span> &#125;;  <span class="comment">// 10个，空串</span></span><br><span class="line">vector&lt;string&gt; v7&#123; <span class="number">10</span>, <span class="string">&quot;hi&quot;</span> &#125;;  <span class="comment">// 10个，都是&quot;hi&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>初始化的括号区别：</p>
 <ul>
@@ -1469,7 +1499,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-18"><a href="#练习3-18" class="headerlink" title="练习3.18"></a>练习3.18</h2><blockquote>
 <p>下面的程序合法吗？如果不合法，你准备如何修改？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="keyword">int</span>&gt; ivec;</span><br><span class="line">ivec[<span class="number">0</span>] = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; ivec;</span><br><span class="line">ivec[<span class="number">0</span>] = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
 
 <p>不合法（ivec是空vector对象，对其执行下标操作是非法行为）。修正方式：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ivec.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
@@ -1477,7 +1507,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-19"><a href="#练习3-19" class="headerlink" title="练习3.19"></a>练习3.19</h2><blockquote>
 <p>如果想定义一个含有10个元素的vector对象，所有元素的值都是42，请列举出三种不同的实现方法，哪种方式更好呢？为什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">ivec1</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>;</span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; ivec2&#123; <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span> &#125;;</span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; ivec3;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">    ivec3.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">ivec1</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec2&#123; <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec3;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">    ivec3.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
 <p>第一种方式最好。写法简洁。</p>
 <h2 id="练习3-20"><a href="#练习3-20" class="headerlink" title="练习3.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_20.cpp">练习3.20</a></h2><blockquote>
 <p>读入一组整数并把它们存入一个vector对象，将每对相邻整数的和输出出来。改写你的程序，这次要求先输出第1个和最后1个元素的和，接着输出第2个和倒数第2个元素的和，以此类推。</p>
@@ -1507,14 +1537,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>3.3.3节（第93页）划分分数段的程序是使用下标运算符实现的，请利用迭代器改写该程序并实现完全相同的功能。</p>
 </blockquote>
 <h2 id="练习3-26"><a href="#练习3-26" class="headerlink" title="练习3.26"></a>练习3.26</h2><blockquote>
-<p>在100页的二分搜索程序中，为什么用的是 mid = beg + (end - beg) / 2，而非 mid = (beg + end) / 2 ; ?</p>
+<p>在100页的二分搜索程序中，为什么用的是 mid &#x3D; beg + (end - beg) &#x2F; 2，而非 mid &#x3D; (beg + end) &#x2F; 2 ; ?</p>
 </blockquote>
 <p>因为两个迭代器之间支持的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>，而没有<code>+</code> 。<code>end - beg</code> 相减的结果是之间的距离，将之除以2然后与beg相加，表示将beg移动到一半的位置。</p>
 <p>迭代器运算的理解：迭代器可以加减一个数（包括加减复合赋值运算符），但两个迭代器之间的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>关系运算符。</p>
 <h2 id="练习3-27"><a href="#练习3-27" class="headerlink" title="练习3.27"></a>练习3.27</h2><blockquote>
 <p>假设txt_size是一个无参数的函数，它的返回值是int。请回答下列哪个定义是非法的？为什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> buf_size = <span class="number">1024</span>;</span><br><span class="line">(a) <span class="keyword">int</span> ia[buf_size];</span><br><span class="line">(b) <span class="keyword">int</span> ia[<span class="number">4</span> * <span class="number">7</span> - <span class="number">14</span>];</span><br><span class="line">(c) <span class="keyword">int</span> ia[<span class="built_in">txt_size</span>()];</span><br><span class="line">(d) <span class="keyword">char</span> st[<span class="number">11</span>] = <span class="string">&quot;fundamental&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> buf_size = <span class="number">1024</span>;</span><br><span class="line">(a) <span class="type">int</span> ia[buf_size];</span><br><span class="line">(b) <span class="type">int</span> ia[<span class="number">4</span> * <span class="number">7</span> - <span class="number">14</span>];</span><br><span class="line">(c) <span class="type">int</span> ia[<span class="built_in">txt_size</span>()];</span><br><span class="line">(d) <span class="type">char</span> st[<span class="number">11</span>] = <span class="string">&quot;fundamental&quot;</span>;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>(a) 非法。纬度必须是一个常量表达式。</li>
@@ -1525,7 +1555,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-28"><a href="#练习3-28" class="headerlink" title="练习3.28"></a>练习3.28</h2><blockquote>
 <p>下列数组中元素的值是什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string sa[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> ia[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	string sa2[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> ia2[<span class="number">10</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string sa[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> ia[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	string sa2[<span class="number">10</span>];</span><br><span class="line">	<span class="type">int</span> ia2[<span class="number">10</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>sa的元素值全部为空字符串，ia的元素值全部为0。sa2的元素值全部为空字符串，ia2的元素没有被初始化，初值全部未定义。</p>
 <h2 id="练习3-29"><a href="#练习3-29" class="headerlink" title="练习3.29"></a>练习3.29</h2><blockquote>
@@ -1539,7 +1569,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-30"><a href="#练习3-30" class="headerlink" title="练习3.30"></a>练习3.30</h2><blockquote>
 <p>指出下面代码中的索引错误。</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">size_t</span> array_size = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> ia[array_size];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">size_t</span> ix = <span class="number">1</span>; ix &lt;= array_size; ++ix)</span><br><span class="line">	ia[ix] = ix;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">size_t</span> array_size = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> ia[array_size];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> ix = <span class="number">1</span>; ix &lt;= array_size; ++ix)</span><br><span class="line">	ia[ix] = ix;</span><br></pre></td></tr></table></figure>
 
 <p>当ix等于10时，表达式ia[ix]属于未定义行为（UB），下标越界。</p>
 <p><strong>通常将数组下标类型定义size_t，size_t定义在cstddef头文件，是一种机器相关的无符号类型，可以表示内存中任意对象的大小（因为被设计得足够大）。</strong></p>
@@ -1565,7 +1595,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p><strong>数组与指针的总结：</strong></p>
 <ul>
 <li>数组名是首指针（编译器会自动将其转换成一个指向数组首元素的指针）</li>
-<li>类似迭代器，也可以获取数组的首尾指针（假设数组int array[10]={xxx}。<strong>类似尾迭代器，注意尾指针不指向具体元素，不能对其进行解引用或递增操作</strong>）<ul>
+<li>类似迭代器，也可以获取数组的首尾指针（假设数组int array[10]&#x3D;{xxx}。<strong>类似尾迭代器，注意尾指针不指向具体元素，不能对其进行解引用或递增操作</strong>）<ul>
 <li><code>int *begin = array; int *end = &amp;array[10];</code></li>
 <li><code>int *begin = begin(array); int *end = end(array);</code> <strong>begin和end函数定义在iterator头文件（数组不是类类型，没有类似vector迭代器那种成员函数）</strong></li>
 </ul>
@@ -1573,7 +1603,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>两个指针相减的结果类型是ptrdiff_t，是一种带符号类型，和size_t一样也定义在cstddef头文件。</li>
 <li><strong>只要指针指向数组元素（或者尾元素的下一位置，即尾指针），都可以执行下标运算（当然，需要保证运算后的指针也是指向同一数组或者尾指针）。像数组这种C++语言内置的下标运算允许处理负值，但像标准库类型string和vector则限定下标是无符号类型。</strong></li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> *p = &amp;array[<span class="number">2</span>]; <span class="comment">// p指向索引为2的元素</span></span><br><span class="line"><span class="keyword">int</span> j = p[<span class="number">1</span>];       <span class="comment">// p[1]等价于*(p+1)，即array[3]</span></span><br><span class="line"><span class="keyword">int</span> k = p[<span class="number">-2</span>];      <span class="comment">// 即array[0]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p = &amp;array[<span class="number">2</span>]; <span class="comment">// p指向索引为2的元素</span></span><br><span class="line"><span class="type">int</span> j = p[<span class="number">1</span>];       <span class="comment">// p[1]等价于*(p+1)，即array[3]</span></span><br><span class="line"><span class="type">int</span> k = p[<span class="number">-2</span>];      <span class="comment">// 即array[0]</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习3-36"><a href="#练习3-36" class="headerlink" title="练习3.36"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_36.cpp">练习3.36</a></h2><blockquote>
 <p>编写一段程序，比较两个数组是否相等。再写一段程序，比较两个vector对象是否相等。</p>
@@ -1581,7 +1611,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="练习3-37"><a href="#练习3-37" class="headerlink" title="练习3.37"></a>练习3.37</h2><blockquote>
 <p>下面的程序是何含义，程序的输出结果是什么？</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> ca[] = &#123; <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *cp = ca;</span><br><span class="line"><span class="keyword">while</span> (*cp) &#123;</span><br><span class="line">    cout &lt;&lt; *cp &lt;&lt; endl;</span><br><span class="line">    ++cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> ca[] = &#123; <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *cp = ca;</span><br><span class="line"><span class="keyword">while</span> (*cp) &#123;</span><br><span class="line">    cout &lt;&lt; *cp &lt;&lt; endl;</span><br><span class="line">    ++cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>会将ca字符数组中的元素打印出来，但是因为没有空字符&#39;\0&#39;的存在，循环不会终止，会打印出来很多无意义脏数据。</p>
 <h2 id="练习3-38"><a href="#练习3-38" class="headerlink" title="练习3.38"></a>练习3.38</h2><blockquote>
@@ -1600,7 +1630,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>strcpy(p1,p2) p2拷贝给p1，再返回p1</li>
 </ul>
 <p><strong>注意这些函数的指针必须指向以空字符作为结束的数组</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> ca[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125; <span class="comment">// 没有以空字符结束。</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">strlen</span>(ca) &lt;&lt; endl; <span class="comment">// 严重错误，没有空字符，该函数有可能在内存中不断向前寻找，直至找到空字符。</span></span><br><span class="line"><span class="comment">// 修正方式：用字符串字面值给ca赋初值&quot;ab&quot;。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> ca[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125; <span class="comment">// 没有以空字符结束。</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">strlen</span>(ca) &lt;&lt; endl; <span class="comment">// 严重错误，没有空字符，该函数有可能在内存中不断向前寻找，直至找到空字符。</span></span><br><span class="line"><span class="comment">// 修正方式：用字符串字面值给ca赋初值&quot;ab&quot;。</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="练习3-40"><a href="#练习3-40" class="headerlink" title="练习3.40"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_40.cpp">练习3.40</a></h2><blockquote>
 <p>编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前面两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组当中。</p>
@@ -1612,7 +1642,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>编写一段程序，将含有整数元素的vector对象拷贝给一个整型数组。</p>
 </blockquote>
 <p><strong>使用数组初始化vector对象（不能用数组初始化数组；不能用vector对象初始化数组）</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> array[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(begin(array), end(array))</span></span>; <span class="comment">// 使用首尾指针</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">subv</span><span class="params">(array + <span class="number">1</span>, array + <span class="number">3</span>)</span></span>; <span class="comment">// 数组中的部分也可用来初始化</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> array[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(begin(array), end(array))</span></span>; <span class="comment">// 使用首尾指针</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">subv</span><span class="params">(array + <span class="number">1</span>, array + <span class="number">3</span>)</span></span>; <span class="comment">// 数组中的部分也可用来初始化</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>混用string对象和C风格字符串</strong></p>
 <ul>
@@ -1631,7 +1661,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>再一次改写程序，这次使用auto关键字。</p>
 </blockquote>
 <p><strong>多维数组和指针的总结</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 多维数组本质上是数组的数组，初始化时内层嵌套的花括号也可去掉</span></span><br><span class="line"><span class="keyword">int</span> ia[<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">1</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用范围for语句处理多维数组时，要将控制变量声明为引用类型（为避免编译器将其转换成指针）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;row : ia)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;col : row)</span><br><span class="line">        ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义指向多维数组的指针注意写法（手动写较易写错，建议使用auto或者decltype）</span></span><br><span class="line"><span class="keyword">int</span> *ip[<span class="number">2</span>];          <span class="comment">// 整型指针的数组</span></span><br><span class="line"><span class="built_in"><span class="keyword">int</span></span>(*ip)[<span class="number">2</span>];         <span class="comment">// 指针，指向含有2个整数的数组</span></span><br><span class="line"><span class="built_in"><span class="keyword">int</span></span>(&amp;ip)[<span class="number">2</span>] = ia[<span class="number">0</span>]; <span class="comment">// 引用，指向含有2个整数的数组</span></span><br><span class="line"><span class="comment">// 类型别名简化写法，下面两行等同于int(*ip)[2];</span></span><br><span class="line"><span class="keyword">using</span> int_array = <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">int_array *ip;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 多维数组本质上是数组的数组，初始化时内层嵌套的花括号也可去掉</span></span><br><span class="line"><span class="type">int</span> ia[<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">1</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用范围for语句处理多维数组时，要将控制变量声明为引用类型（为避免编译器将其转换成指针）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;row : ia)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;col : row)</span><br><span class="line">        ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义指向多维数组的指针注意写法（手动写较易写错，建议使用auto或者decltype）</span></span><br><span class="line"><span class="type">int</span> *ip[<span class="number">2</span>];          <span class="comment">// 整型指针的数组</span></span><br><span class="line"><span class="built_in">int</span>(*ip)[<span class="number">2</span>];         <span class="comment">// 指针，指向含有2个整数的数组</span></span><br><span class="line"><span class="built_in">int</span>(&amp;ip)[<span class="number">2</span>] = ia[<span class="number">0</span>]; <span class="comment">// 引用，指向含有2个整数的数组</span></span><br><span class="line"><span class="comment">// 类型别名简化写法，下面两行等同于int(*ip)[2];</span></span><br><span class="line"><span class="keyword">using</span> int_array = <span class="type">int</span>[<span class="number">2</span>];</span><br><span class="line">int_array *ip;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>code-training</category>
@@ -1651,21 +1681,21 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 <a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 <a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-ODVNXJXOEArHqpyv" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-ODVNXJXOEArHqpyv").style.height=document.getElementById("mmedia-ODVNXJXOEArHqpyv").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 <a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-GhdMckbpvQtmMUPK" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-GhdMckbpvQtmMUPK").style.height=document.getElementById("mmedia-GhdMckbpvQtmMUPK").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-ODVNXJXOEArHqpyv").style.height=document.getElementById("mmedia-ODVNXJXOEArHqpyv").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-GhdMckbpvQtmMUPK").style.height=document.getElementById("mmedia-GhdMckbpvQtmMUPK").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 <a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
 <h1 id="本期翻译的英语词汇总结">4 <a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
 <li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns/sweet cakes/love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
 <li>get wasted 喝醉，形容大醉</li>
 <li>way ahead of you 形容比别人更早地完成或者解决某事</li>
 <li>dilly-dally v. 犹豫，磨蹭</li>
 <li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
 <li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do/be sth. 应当……</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
 <li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
 <li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
 <li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
@@ -1686,7 +1716,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
 <li>treat sth. as sth. 把……视为……，把……看作……</li>
 </ul>
-<h1 id="参考文献">5 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB/OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB/OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB/OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB/OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+<h1 id="参考文献">5 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
 ]]></content>
       <categories>
         <category>translations</category>
@@ -1782,10 +1812,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <img data-src="/images_public/single_dog.webp">
 
 <h1 id="技能点">2 <a href="#技能点" class="headerlink" title="技能点"></a>技能点</h1><div class="tabs" id="skill"><ul class="nav-tabs"><li class="tab active"><a href="#skill-1"><i class="fa fa-laptop-code"></i>编程</a></li><li class="tab"><a href="#skill-2"><i class="fa fa-video"></i>后期处理</a></li><li class="tab"><a href="#skill-3"><i class="fa fa-pen-nib"></i>文档办公</a></li><li class="tab"><a href="#skill-4"><i class="fa fa-tools"></i>计算机维修</a></li><li class="tab"><a href="#skill-5"><i class="fa fa-graduation-cap"></i>专业</a></li></ul><div class="tab-content"><div class="tab-pane active" id="skill-1"><ul>
-<li>C/C++</li>
+<li>C&#x2F;C++</li>
 <li>Assembly</li>
 <li>Python</li>
-<li>Html/CSS/JavaScript</li>
+<li>Html&#x2F;CSS&#x2F;JavaScript</li>
 <li>Batch</li>
 <li>Linux</li>
 </ul></div><div class="tab-pane" id="skill-2"><div class="tabs" id="post_process"><ul class="nav-tabs"><li class="tab active"><a href="#post_process-1"><i class="fa fa-code-branch"></i>开源类</a></li><li class="tab"><a href="#post_process-2"><i class="fa fa-user-secret"></i>闭源类</a></li></ul><div class="tab-content"><div class="tab-pane active" id="post_process-1"><ul>
@@ -1838,7 +1868,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">6 <a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#x72;&#x6b;&#105;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x69;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#x72;&#x6b;&#105;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#x74;&#x65;&#x72;&#x6b;&#105;&#110;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#x74;&#x65;&#x72;&#x6b;&#105;&#110;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -1884,7 +1914,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <p>扫码得到的红包，可以正常使用，向商家付款。当然，如果你不用的话，也可以通过上面的支付宝收款码直接捐赠给我，无需花一分钱即可支持我！</p>
 <p>不差钱的朋友，可以通过<a href="#%E6%94%AF%E6%8C%81%E6%88%91">以下方式</a>支持我！</p>
-<h1 id="支持我">9 <a href="#支持我" class="headerlink" title="支持我"></a>支持我</h1><div class="note primary no-icon"><p>靓仔/美女，不考虑请我喝杯饮料，吃份外卖吗？<strong>谢谢支持与鼓励！(๑•̀ㅂ•́)و✧</strong></p>
+<h1 id="支持我">9 <a href="#支持我" class="headerlink" title="支持我"></a>支持我</h1><div class="note primary no-icon"><p>靓仔&#x2F;美女，不考虑请我喝杯饮料，吃份外卖吗？<strong>谢谢支持与鼓励！(๑•̀ㅂ•́)و✧</strong></p>
 </div>
 
 <div class="tabs" id="support_me"><ul class="nav-tabs"><li class="tab active"><a href="#support_me-1"><i class="fa fa-bars"></i>一包薯片</a></li><li class="tab"><a href="#support_me-2"><i class="fa fa-mug-hot"></i>一杯饮料</a></li><li class="tab"><a href="#support_me-3"><i class="fa fa-concierge-bell"></i>一份外卖</a></li><li class="tab"><a href="#support_me-4"><i class="fa fa-gifts"></i>富豪大吉大利</a></li><li class="tab"><a href="#support_me-5"><i class="fa fa-yen-sign"></i>任意金额</a></li></ul><div class="tab-content"><div class="tab-pane active" id="support_me-1"><div class="tabs" id="a_bag_of_chips"><ul class="nav-tabs"><li class="tab active"><a href="#a_bag_of_chips-1"><i class="fab fa-alipay"></i>支付宝</a></li><li class="tab"><a href="#a_bag_of_chips-2"><i class="fab fa-weixin"></i>微信</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a_bag_of_chips-1"><div class="flex-column" style="font-size: 30px; font-weight: bold;">
@@ -1974,7 +2004,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><input checked disabled type="checkbox"> 「加载我的设置」支持任意路径安装的blender。</li>
 <li><input checked disabled type="checkbox"> 支持任意两种语言之间切换（导入模块 lang，lang 文件定义 dict 字典）</li>
 <li><input checked disabled type="checkbox"> 模块化开发，并建立翻译模块以支持切换其他国际化语言（使用 blender API 完成翻译流程）</li>
-<li><input checked disabled type="checkbox"> （使用下拉菜单独选实现）工具提示自动勾选（针对开发者 / 翻译者及学习者等启用不同提示）<ul>
+<li><input checked disabled type="checkbox"> （使用下拉菜单独选实现）工具提示自动勾选（针对开发者 &#x2F; 翻译者及学习者等启用不同提示）<ul>
 <li><input disabled type="checkbox"> <strong>（废弃）</strong>大神模式：仅启用「UI（翻译）」</li>
 <li><input checked disabled type="checkbox"> CG 爱好者模式：启用「工具提示（显示）」「UI（翻译）」「工具提示（翻译）」「新建数据（翻译）」</li>
 <li><input checked disabled type="checkbox"> 开发者模式，启用「工具提示（显示）」「python 工具提示（显示）」「开发者选项（显示）」「UI（翻译）」「工具提示（翻译）」「新建数据（翻译）」</li>
@@ -2010,9 +2040,9 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><input disabled type="checkbox"> 实现鼠标尾部拖动粒子特效</li>
 <li>特殊节日特效<ul>
 <li><input disabled type="checkbox"> 改进特殊节日的烟花特效</li>
-<li><input disabled type="checkbox"> 支持农历节日（1/1 1/15 8/15  7/7 12/30（12/29） ）</li>
+<li><input disabled type="checkbox"> 支持农历节日（1&#x2F;1 1&#x2F;15 8&#x2F;15  7&#x2F;7 12&#x2F;30（12&#x2F;29） ）</li>
 <li><input disabled type="checkbox"> 七夕等节日特定的特效</li>
-<li><input disabled type="checkbox"> 补充公历节日的特效（2/14 3/14 情人节效果）</li>
+<li><input disabled type="checkbox"> 补充公历节日的特效（2&#x2F;14 3&#x2F;14 情人节效果）</li>
 <li><input disabled type="checkbox"> ribbon 等图标文件提供是否在移动端显示</li>
 </ul>
 </li>
@@ -2024,7 +2054,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </li>
 </ul>
 <blockquote class="blockquote-center">
-<p><strong>9月 / 2021年</strong></p>
+<p><strong>9月 &#x2F; 2021年</strong></p>
 
 </blockquote>
 
@@ -2033,7 +2063,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><input checked disabled type="checkbox"> 使用npm包安装next主题</li>
 </ul>
 <blockquote class="blockquote-center">
-<p><strong>8月 / 2021年</strong></p>
+<p><strong>8月 &#x2F; 2021年</strong></p>
 
 </blockquote>
 
@@ -2043,7 +2073,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><input checked disabled type="checkbox"> 改进头像效果：支持鼠标悬停变色；添加环阴影效果</li>
 </ul>
 <blockquote class="blockquote-center">
-<p><strong>6月 / 2021年</strong></p>
+<p><strong>6月 &#x2F; 2021年</strong></p>
 
 </blockquote>
 
@@ -2054,7 +2084,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><input checked disabled type="checkbox"> 樱花动效背景</li>
 </ul>
 <blockquote class="blockquote-center">
-<p><strong>2月 / 2021年</strong></p>
+<p><strong>2月 &#x2F; 2021年</strong></p>
 
 </blockquote>
 
@@ -2066,7 +2096,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </li>
 </ul>
 <blockquote class="blockquote-center">
-<p><strong>6 月 / 2020年</strong></p>
+<p><strong>6 月 &#x2F; 2020年</strong></p>
 
 </blockquote>
 
@@ -2100,7 +2130,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </li>
 </ul>
 <blockquote class="blockquote-center">
-<p><strong>5 月（25-31）/2020年</strong></p>
+<p><strong>5 月（25-31）&#x2F;2020年</strong></p>
 
 </blockquote>
 
@@ -2133,7 +2163,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     <url>/about/about-site/index.html</url>
     <content><![CDATA[<h1 id="初衷">1 <a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
 <p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
-<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔/美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
+<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
 </div>
 
 <h1 id="本站许可协议">2 <a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
@@ -2185,7 +2215,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
 <p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
 <blockquote class="blockquote-center">
-<p>多数研究表明深色字体/浅色背景要优于浅色字体/深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
+<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
 
 </blockquote>
 
@@ -2206,7 +2236,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
   <entry>
     <title>更新日志</title>
     <url>/about/logs/index.html</url>
-    <content><![CDATA[<div class="note info"><p>注：本页面用来记录本博客的建设日志。（从2021/11/11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
+    <content><![CDATA[<div class="note info"><p>注：本页面用来记录本博客的建设日志。（从2021&#x2F;11&#x2F;11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
 </div>
 
 <blockquote class="blockquote-center">
@@ -2215,10 +2245,13 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </blockquote>
 <div class="hang-retract">
 
-<p>2022/1/19 - hexo-heading-index从v1.0.4升级至v1.0.6（昨日向插件作者反应，该插件无法保留超链接，作者于今日提交了两个版本以解决这个问题，目前插件可以保留原标题的html的样式）。</p>
-<p>2022/1/18 - 超链接样式适配markdown标题链接；修复样式重名bug：post-body-end.njk中line样式和next主题的codeblock样式中line重名（现已将line和text样式重新命名为dividing-line和tag-text样式，并移除add-vertical-space样式，将其写进标签中的style属性）；关闭hexo默认渲染器marked（hexo-renderer-marked）的smartypants选项，避免英文引号被替换成中文引号。</p>
-<p>2022/1/14 - 调整参考文献的小节文字的css样式：左对齐；依赖升级：hexo-heading-index从v1.0.2升级至v1.0.4，hexo-server从v2.0.0升级至v3.0.0。</p>
-<p>2022/1/2 - hexo从v5.4.0更新至v6.0.0；hexo-generator-sitemap从v2.1.0更新至v2.2.0；hexo-renderer-ejs从v1.0.0更新至v2.0.0；hexo-theme-next从v8.8.1更新至v8.9.0；stylus从v0.55.0更新至v0.56.0。本地开发环境：Node.js从v16.13.0更新至v17.3.0，yarn从v1.22.5更新至v1.22.15。<del>移除yarn的v1.22.5版本，使用Node.js的v16.10版本起自带的corepack工具，<code>corepack enable</code>命令启用corepack工具即可正常使用yarn（目前是v1.22.15，暂不考虑迁移到yarn的高版本）。</del></p>
+<p>2022&#x2F;2&#x2F;7 - hexo-theme-next从v8.9.0升级至v8.10.0（解决了highlight.js版本导致的问题，新版中tomorrow-night被移除。折腾了两天的问题终于得到了解决。<em>highlight.js v11.0版本后发布的css经过了压缩，导致next主题原有的正则表达式失效，传递了空值给stylus引擎。NexT为了支持highlight.js提供的近百个代码高亮主题，使用正则表达式从css中提取代码块的前景、背景色。虽然健壮性不好，但对现有的绝大多数highlight.js主题都适用。——引用自主题维护者</em>）。</p>
+<p>2022&#x2F;2&#x2F;4 - hexo-renderer-marked从v4.1.0升级至v5.0.0。</p>
+<p>2022&#x2F;2&#x2F;3 - 关闭next主题的bookmark选项。</p>
+<p>2022&#x2F;1&#x2F;19 - hexo-heading-index从v1.0.4升级至v1.0.6（昨日向插件作者反应，<a href="https://github.com/r12f/hexo-heading-index/issues/5">该插件无法保留超链接</a>，作者于今日提交了两个版本以解决这个问题，目前插件可以保留原标题的html的样式）。</p>
+<p>2022&#x2F;1&#x2F;18 - 超链接样式适配markdown标题链接；修复样式重名bug：post-body-end.njk中line样式和next主题的codeblock样式中line重名（现已将line和text样式重新命名为dividing-line和tag-text样式，并移除add-vertical-space样式，将其写进标签中的style属性）；关闭hexo默认渲染器marked（hexo-renderer-marked）的smartypants选项，避免英文引号被替换成中文引号。</p>
+<p>2022&#x2F;1&#x2F;14 - 调整参考文献的小节文字的css样式：左对齐；依赖升级：hexo-heading-index从v1.0.2升级至v1.0.4，hexo-server从v2.0.0升级至v3.0.0。</p>
+<p>2022&#x2F;1&#x2F;2 - hexo从v5.4.0更新至v6.0.0；hexo-generator-sitemap从v2.1.0更新至v2.2.0；hexo-renderer-ejs从v1.0.0更新至v2.0.0；hexo-theme-next从v8.8.1更新至v8.9.0；stylus从v0.55.0更新至v0.56.0。本地开发环境：Node.js从v16.13.0更新至v17.3.0，yarn从v1.22.5更新至v1.22.15。<del>移除yarn的v1.22.5版本，使用Node.js的v16.10版本起自带的corepack工具，<code>corepack enable</code>命令启用corepack工具即可正常使用yarn（目前是v1.22.15，暂不考虑迁移到yarn的高版本）。</del></p>
 </div>
 
 <blockquote class="blockquote-center">
@@ -2227,46 +2260,46 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </blockquote>
 <div class="hang-retract">
 
-<p>2021/11/7 - Next theme更新至v8.8.1。</p>
-<p>2021/10/29 - 本地开发环境：Node.js 从 v16.8.0 更新至 v16.13.0。</p>
-<p>2021/10/28 - 更新手册「切换语言」。</p>
-<p>2021/10/21 - 规范化HTML的style和script标签的写法（补充type=&quot;text/css&quot;和type=&quot;text/javascript&quot;）；调整flexbox布局的部分间距以改善排版效果；移除flexbox布局内img等标签自动生成的底部外边距（margin-bottom）；移除 fancybox生成的图像父标签（即a标签）的下划线；增加“免费支持我”内容和按钮。</p>
-<p>2021/10/20 - Next theme更新至v8.8.0；修改赞赏内容的描述。</p>
-<p>2021/10/19 - 更新「关于我」页面的QQ二维码。</p>
-<p>2021/10/18 - 特殊日子网站效果-纪念日：国庆节由1号改至1-7号。</p>
-<p>2021/10/4 - 樱花动效的z-index属性设置为-1：避免在浏览文章时遮挡视线。</p>
-<p>2021/9/29 - 添加hexo-footnotes插件（同时用styles.styl强制覆盖原有样式）；移除每个文件内的flex样式，改由styles.styl文件实现；添加适配超链接样式的父标签：文章顶部的 meta 信息。</p>
-<p>2021/9/22 - 添加hexo-directory-category插件：根据文章目录自动生成文章的category；hexo-generator-searchdb插件从v1.3.4更新至1.4.0。</p>
-<p>2021/9/9 - 移除适配超链接文本样式：文章的span行内元素标签（效果不佳）。</p>
-<p>2021/9/7 - 使用variables.styl定义超链接文本样式颜色的变量；启用一些主题设置：links（友情链接）+pangu（自动添加中英文字符间的空格）+pace（页面加载进度）；hexo-renderer-marked从v4.0.0更新至v4.1.0；stylus从v0.54.8更新至v0.55.0；自定义主题设置选项从button更改为sidebar_button。</p>
-<p>2021/9/6 - 修改 Github Action 并支持部署到 gitee；部分文件名中的 Wechat 修正为 WeChat。</p>
-<p>2021/9/5 - 添加适配超链接文本样式的父标签：文章的 span 行内元素标签；使用 npm 包安装 next 主题，同时利用 _config.next.yml 配置主题（弃用以往手动更新主题相关文件的繁琐流程）。</p>
-<p>2021/8/24 - 添加特殊日子网站效果：纪念日（烟花特效和庆祝语）、公祭日及哀悼日（全站灰色效果+R.I.P标语+黑色丝带图标）；「关于本站」页面添加“本站存在的问题”的描述。</p>
-<p>2021/8/22 - 添加适配超链接文本样式的父标签：页面文章底部的面包屑导航按钮。</p>
-<p>2021/8/17 - 改进头像效果：支持鼠标悬停变色。</p>
-<p>2021/8/14 - 改进头像效果：添加环阴影效果，禁用旋转效果。</p>
-<p>2021/8/13 - 启用 next 主题的 pjax 功能：提供更快的页面加载速度。</p>
-<p>2021/8/5 - 修正「站点导航」下拉菜单内容的鼠标悬停样式为 pointer。</p>
-<p>2021/8/2 - 添加 hexo-heading-index 插件，实现文章标题自动编号；关闭文章侧边栏目录的自动编号功能；改进文章末尾添加 “本文结束” 标记：添加顶部间距 + 加深颜色，从 #bbb 改为 darkgrey；改进超链接文本样式：合并部分功能选项设置 + 自适应博文中的多种父标签。</p>
-<p>2021/8/1 - Next theme 从 v8.5.0 更新至 v8.7.0；本地开发环境：Node 从 v16.5.0 更新至 v16.6.0；更新「博文离线下载 - PDF 及 LaTeX 源码」页面。</p>
-<p>2021/7/31 - 更新「「切换语言」使用手册 - Blender 插件」页面中的链接。</p>
-<p>2021/7/27 - 本地开发环境：Node 从 v16.3.0 更新至 v16.5.0。</p>
-<p>2021/6/22 - 本地开发环境：hexo-cli 依赖从 v4.2.0 更新到 v4.3.0；优化改进「live2d 模型更换 - 小埋」：分别 fork 仓库 <a href="https://github.com/EYHN/hexo-helper-live2d"> EYHN/hexo-helper-live2d </a> 和仓库 <a href="https://github.com/xiazeyu/live2d-widget.js"> xiazeyu/live2d-widget.js </a> 后再进行修改代码及重新编译（为 umaru 模型修正 motion 的读取），以便适配 Github Action 的自动构建流程（无需增加 action 流程，例如写相关命令来自动修改文件代码和自动编译）。</p>
-<p>2021/6/21 - 实现「蓝图规划」页面中「网站建设」的「live2d 模型更换 - 小埋」；移除 hibiki 模型依赖：live2d-widget-model-hibiki；hexo-generator-searchdb 插件从 v1.3.3 更新到 v1.3.4。</p>
-<p>2021/6/20 - 格式化 source/_data/body-end.njk 部分注释内容的代码（优化排版）。</p>
-<p>2021/6/19 - 修改 Next 主题侧边栏超链接的文本样式，以适配 postbody 类的超链接样式，同时合并两种超链接文本样式的设置选项到父设置选项 theme_color_custom。</p>
-<p>2021/6/18 - 实现「蓝图规划」页面中「网站建设」的「鼠标指针样式修改」。</p>
-<p>2021/6/17 - 实现「蓝图规划」页面中「网站建设」的「超链接样式优化改进」。</p>
-<p>2021/6/15 - 实现「蓝图规划」页面中「网站建设」的「樱花动效背景」。</p>
-<p>2021/6/2 - Next theme 更新至 v8.5.0，hexo-tag-mmedia 插件从 v1.1.6 更新到 v1.1.7。</p>
-<p>2021/5/30 - 本地开发环境的 Node 从 v15.11.0 升级至 v16.2.0。</p>
-<p>2021/5/1 - 创建页面「博文离线下载」；站点导航增加按钮「离线下载」；添加置顶公告1；纠正「关于我」页面中的 flex 布局错乱；Next theme 更新至 v8.4.0。</p>
-<p>2021/4/30 - 优化 flex 布局的 CSS 样式（添加图片并排的间隔；针对图片大小不一，统一横向底端对齐；针对小图的横向并排居中显示）。</p>
-<p>2021/4/26 - Next theme 更新至 2021/4/26 仓库版本；hexo-cake-moon-menu 插件从 2.4.1 更新至 2.5.0 版本；新建页面「软件使用手册」；将文章「Blender 插件 - 切换语言」内容作为手册内容移植到页面「软件使用手册」；依照新页面「软件使用手册」更新相应链接和菜单。</p>
-<p>2021/3/11 - Next theme 更新至 v8.2.2；Hexo 更新至 v5.4.0；改用_data/languages.yml 文件实现语言修改，取代直接修改语言配置文件；升级插件的过时包依赖（订正新版本 hexo-tag-mmedia 标签写法）；除主题外，全部更新均使用 package 中 dependencies 版本号修改更新完成。</p>
-<p>2021/2/11 - 完成 Github Actions 编写，成功部署博客。</p>
-<p>2021/2/10 - 取消 Next Theme 中 back2top 的设置，改换 hexo-cake-moon-menu 插件实现；修改 站点配置文件中 url 块的设置，修复 RSS 中原文链接错误的问题；修改 hexo-generator-feed 的设置，在 RSS 展示文章所有内容，同时修复 icon 路径问题。</p>
-<p>2021/2/8 - Next theme 更新至仓库最新；Hexo 更新至 5.3.0；hexo-cli 重装 4.2.0（目前默认主题 landscape 已经改为 npm 安装，clone hexo-cli 就很快速简便了）；关闭 motion 动画（加载过慢）；<s> 图片查看方法由 fancybox 更改为 mediumzoom</s>（mediumzoom 只支持查看单张图片，即无法在浏览时切换其他图片，并且会使 「关于我」中头像排版混乱，因为以前的 html 代码是在 fancybox 下调试编写的）。</p>
+<p>2021&#x2F;11&#x2F;7 - Next theme更新至v8.8.1。</p>
+<p>2021&#x2F;10&#x2F;29 - 本地开发环境：Node.js 从 v16.8.0 更新至 v16.13.0。</p>
+<p>2021&#x2F;10&#x2F;28 - 更新手册「切换语言」。</p>
+<p>2021&#x2F;10&#x2F;21 - 规范化HTML的style和script标签的写法（补充type&#x3D;&quot;text&#x2F;css&quot;和type&#x3D;&quot;text&#x2F;javascript&quot;）；调整flexbox布局的部分间距以改善排版效果；移除flexbox布局内img等标签自动生成的底部外边距（margin-bottom）；移除 fancybox生成的图像父标签（即a标签）的下划线；增加“免费支持我”内容和按钮。</p>
+<p>2021&#x2F;10&#x2F;20 - Next theme更新至v8.8.0；修改赞赏内容的描述。</p>
+<p>2021&#x2F;10&#x2F;19 - 更新「关于我」页面的QQ二维码。</p>
+<p>2021&#x2F;10&#x2F;18 - 特殊日子网站效果-纪念日：国庆节由1号改至1-7号。</p>
+<p>2021&#x2F;10&#x2F;4 - 樱花动效的z-index属性设置为-1：避免在浏览文章时遮挡视线。</p>
+<p>2021&#x2F;9&#x2F;29 - 添加hexo-footnotes插件（同时用styles.styl强制覆盖原有样式）；移除每个文件内的flex样式，改由styles.styl文件实现；添加适配超链接样式的父标签：文章顶部的 meta 信息。</p>
+<p>2021&#x2F;9&#x2F;22 - 添加hexo-directory-category插件：根据文章目录自动生成文章的category；hexo-generator-searchdb插件从v1.3.4更新至1.4.0。</p>
+<p>2021&#x2F;9&#x2F;9 - 移除适配超链接文本样式：文章的span行内元素标签（效果不佳）。</p>
+<p>2021&#x2F;9&#x2F;7 - 使用variables.styl定义超链接文本样式颜色的变量；启用一些主题设置：links（友情链接）+pangu（自动添加中英文字符间的空格）+pace（页面加载进度）；hexo-renderer-marked从v4.0.0更新至v4.1.0；stylus从v0.54.8更新至v0.55.0；自定义主题设置选项从button更改为sidebar_button。</p>
+<p>2021&#x2F;9&#x2F;6 - 修改 Github Action 并支持部署到 gitee；部分文件名中的 Wechat 修正为 WeChat。</p>
+<p>2021&#x2F;9&#x2F;5 - 添加适配超链接文本样式的父标签：文章的 span 行内元素标签；使用 npm 包安装 next 主题，同时利用 _config.next.yml 配置主题（弃用以往手动更新主题相关文件的繁琐流程）。</p>
+<p>2021&#x2F;8&#x2F;24 - 添加特殊日子网站效果：纪念日（烟花特效和庆祝语）、公祭日及哀悼日（全站灰色效果+R.I.P标语+黑色丝带图标）；「关于本站」页面添加“本站存在的问题”的描述。</p>
+<p>2021&#x2F;8&#x2F;22 - 添加适配超链接文本样式的父标签：页面文章底部的面包屑导航按钮。</p>
+<p>2021&#x2F;8&#x2F;17 - 改进头像效果：支持鼠标悬停变色。</p>
+<p>2021&#x2F;8&#x2F;14 - 改进头像效果：添加环阴影效果，禁用旋转效果。</p>
+<p>2021&#x2F;8&#x2F;13 - 启用 next 主题的 pjax 功能：提供更快的页面加载速度。</p>
+<p>2021&#x2F;8&#x2F;5 - 修正「站点导航」下拉菜单内容的鼠标悬停样式为 pointer。</p>
+<p>2021&#x2F;8&#x2F;2 - 添加 hexo-heading-index 插件，实现文章标题自动编号；关闭文章侧边栏目录的自动编号功能；改进文章末尾添加 “本文结束” 标记：添加顶部间距 + 加深颜色，从 #bbb 改为 darkgrey；改进超链接文本样式：合并部分功能选项设置 + 自适应博文中的多种父标签。</p>
+<p>2021&#x2F;8&#x2F;1 - Next theme 从 v8.5.0 更新至 v8.7.0；本地开发环境：Node 从 v16.5.0 更新至 v16.6.0；更新「博文离线下载 - PDF 及 LaTeX 源码」页面。</p>
+<p>2021&#x2F;7&#x2F;31 - 更新「「切换语言」使用手册 - Blender 插件」页面中的链接。</p>
+<p>2021&#x2F;7&#x2F;27 - 本地开发环境：Node 从 v16.3.0 更新至 v16.5.0。</p>
+<p>2021&#x2F;6&#x2F;22 - 本地开发环境：hexo-cli 依赖从 v4.2.0 更新到 v4.3.0；优化改进「live2d 模型更换 - 小埋」：分别 fork 仓库 <a href="https://github.com/EYHN/hexo-helper-live2d"> EYHN&#x2F;hexo-helper-live2d </a> 和仓库 <a href="https://github.com/xiazeyu/live2d-widget.js"> xiazeyu&#x2F;live2d-widget.js </a> 后再进行修改代码及重新编译（为 umaru 模型修正 motion 的读取），以便适配 Github Action 的自动构建流程（无需增加 action 流程，例如写相关命令来自动修改文件代码和自动编译）。</p>
+<p>2021&#x2F;6&#x2F;21 - 实现「蓝图规划」页面中「网站建设」的「live2d 模型更换 - 小埋」；移除 hibiki 模型依赖：live2d-widget-model-hibiki；hexo-generator-searchdb 插件从 v1.3.3 更新到 v1.3.4。</p>
+<p>2021&#x2F;6&#x2F;20 - 格式化 source&#x2F;_data&#x2F;body-end.njk 部分注释内容的代码（优化排版）。</p>
+<p>2021&#x2F;6&#x2F;19 - 修改 Next 主题侧边栏超链接的文本样式，以适配 postbody 类的超链接样式，同时合并两种超链接文本样式的设置选项到父设置选项 theme_color_custom。</p>
+<p>2021&#x2F;6&#x2F;18 - 实现「蓝图规划」页面中「网站建设」的「鼠标指针样式修改」。</p>
+<p>2021&#x2F;6&#x2F;17 - 实现「蓝图规划」页面中「网站建设」的「超链接样式优化改进」。</p>
+<p>2021&#x2F;6&#x2F;15 - 实现「蓝图规划」页面中「网站建设」的「樱花动效背景」。</p>
+<p>2021&#x2F;6&#x2F;2 - Next theme 更新至 v8.5.0，hexo-tag-mmedia 插件从 v1.1.6 更新到 v1.1.7。</p>
+<p>2021&#x2F;5&#x2F;30 - 本地开发环境的 Node 从 v15.11.0 升级至 v16.2.0。</p>
+<p>2021&#x2F;5&#x2F;1 - 创建页面「博文离线下载」；站点导航增加按钮「离线下载」；添加置顶公告1；纠正「关于我」页面中的 flex 布局错乱；Next theme 更新至 v8.4.0。</p>
+<p>2021&#x2F;4&#x2F;30 - 优化 flex 布局的 CSS 样式（添加图片并排的间隔；针对图片大小不一，统一横向底端对齐；针对小图的横向并排居中显示）。</p>
+<p>2021&#x2F;4&#x2F;26 - Next theme 更新至 2021&#x2F;4&#x2F;26 仓库版本；hexo-cake-moon-menu 插件从 2.4.1 更新至 2.5.0 版本；新建页面「软件使用手册」；将文章「Blender 插件 - 切换语言」内容作为手册内容移植到页面「软件使用手册」；依照新页面「软件使用手册」更新相应链接和菜单。</p>
+<p>2021&#x2F;3&#x2F;11 - Next theme 更新至 v8.2.2；Hexo 更新至 v5.4.0；改用_data&#x2F;languages.yml 文件实现语言修改，取代直接修改语言配置文件；升级插件的过时包依赖（订正新版本 hexo-tag-mmedia 标签写法）；除主题外，全部更新均使用 package 中 dependencies 版本号修改更新完成。</p>
+<p>2021&#x2F;2&#x2F;11 - 完成 Github Actions 编写，成功部署博客。</p>
+<p>2021&#x2F;2&#x2F;10 - 取消 Next Theme 中 back2top 的设置，改换 hexo-cake-moon-menu 插件实现；修改 站点配置文件中 url 块的设置，修复 RSS 中原文链接错误的问题；修改 hexo-generator-feed 的设置，在 RSS 展示文章所有内容，同时修复 icon 路径问题。</p>
+<p>2021&#x2F;2&#x2F;8 - Next theme 更新至仓库最新；Hexo 更新至 5.3.0；hexo-cli 重装 4.2.0（目前默认主题 landscape 已经改为 npm 安装，clone hexo-cli 就很快速简便了）；关闭 motion 动画（加载过慢）；<s> 图片查看方法由 fancybox 更改为 mediumzoom</s>（mediumzoom 只支持查看单张图片，即无法在浏览时切换其他图片，并且会使 「关于我」中头像排版混乱，因为以前的 html 代码是在 fancybox 下调试编写的）。</p>
 </div>
 
 <blockquote class="blockquote-center">
@@ -2276,35 +2309,35 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <div class="hang-retract">
 2020/12/18 - 「关于我」页面添加「关于 Mr. Kin 的名称说明」小节内容。
 
-<p>2020/12/10 - Next theme 更新至仓库最新；开启 hexo-neat 插件中移除 LineBreaks 的选项（主题作者已修复该问题，不会因此导致 sticky icon 和文章标题之间缺失空白）。</p>
-<p>2020/9/30 - Node 从 12.8.3 升级至 12.8.4；Hexo 从 v5.1.1 升级至 5.2.0；Next theme 更新至最新仓库；去除 Sticky 功能的依赖插件 hexo-generator-indexed，未安装时无影响。</p>
-<p>2020/9/22 - 更新文章「Blender 插件 - 切换语言 」。</p>
-<p>2020/9/20 - 更新页面「第三方开源许可声明」；更新文章「Blender 插件 - 切换语言」。</p>
-<p>2020/9/19 - 「关于我」页面更新专业技能点。</p>
-<p>2020/9/18 - 「关于本站」页面添加 “本站许可协议” 说明。</p>
-<p>2020/9/17 - 更新文章「Blender 插件 - 切换语言」；更新「站点导航」部分链接。</p>
-<p>2020/9/15 - Hexo 从 v5.0.0 升级至 v5.1.1；hexo-cli 脚手架从 v4.1.0 升级至 v4.2.0；Next theme 从 v8.0.0-rc.5 升级至 v8.0.0；因主题作者已使用 flex 排版进行重构，所以去除「文章末尾自动插入信息」功能实现的旧方案 -“injects point”，使用 flex 中 order 属性实现顺序排版功能。</p>
-<p>2020/8/6 - 去除页面“关于我”第一小节的原 hr 标签生成的横线，改用 css 样式生成边框和分割线。</p>
-<p>2020/8/4 - 调整 hexo-neat 插件组件中的 HTMLMinifie（设置项为neat_html） 的参数设置，添加参数以保留 LineBreaks（因其默认参数会移除 LineBreaks，该问题会导致 sticky icon 和文章标题之间缺失空白空间的情况）。</p>
-<p>2020/8/3 - Hexo 从 v4.2.1 升级至 v5.0.0；hexo-cli 脚手架从 v3.1.0 升级至 v4.1.0；Next theme 从 v8.0.0-rc.3 升级至 v8.0.0-rc.5；移除标签云插件 hexo-tag-cloud（对当前主题兼容性不好，会导致侧边栏超出限定 height 而出现滚动栏。另外，此插件有时挺占用 CPU 资源）；添加插件 index_generator 以支持置顶文章（扩展 Front-matter: sticky 参数）；重新添加回 hexo-browsersync 插件（字数超过 1000 时渲染空白的问题已找到解决方法，hexo-server 插件导致产生此bug，设置下 server 插件的参数即可）；页面 “关于我” 修改第一小节的排版属性 position 和 width 的参数以适应排版（当前环境下渲染有问题）。</p>
-<p>2020/6/29 - 补充页面“关于”「技能点」；页面“关于”「挺我」中二维码放弃瀑布流排版方式，换用 tabs 实现切换。</p>
-<p>2020/6/25 - 谷歌帐号由 moyu1355 迁至新帐号 im.misterkin，更新相应的 Google Analytics, Google Search Console, Google AdSense 标签代码；更新网站上关于 Gmail 邮件和 Youtube 频道的链接。</p>
-<p>2020/6/21 - 部分页面使用 Pangu 在全角和半角字符间添加空格。</p>
-<p>2020/6/16 - 替换网站透明图标和页面 “关于” 的透明头像；样式修改：深色模式下也给头像添加阴影（适应「深色模式」选项启用时的浅色浏览，即操作系统不启用 “深色模式”）；删除页面 “更新日志” 的标题 “日志内容”。</p>
-<p>2020/6/14 - 更新页面 “关于我”「技能点」小节；侧边栏底部添加标签云特效；关闭侧边栏许可图标；侧边栏按钮增加样式 “顶部边距”。</p>
-<p>2020/6/7 - 更新页面 “关于本站”；发表文章《BL 插件 - 一键切换语言》</p>
-<p>2020/6/4 - 本机环境 Node 从 v14.3.0 降级到 v12.18.0 LTS（模块 stylus 在 node v14 下有 &#39;Accessing non-existent property&#39;s error&#39;，待该项目修复升级支持 node v14 才能解决；模块 fsevents（可选模块）在两个 node 版本都出现 win32 incompatible，暂未找到解决方式）；Next 主题从 v8.0.0-rc.2 升级至 v8.0.0-rc.3；增加 velocity 的 jsdelivr cdn；修改 hexo\config.yml 和 Next\config.yml 的部分注释；重新测试 hexo-browsersync 插件在 node v12 的效果（文章字数过多时，渲染页面依旧是空白）；更新页面 “蓝图”。</p>
-<p>2020/6/3 - 更新页面 “关于本站”；添加页面 “<a href="/about/third-party-declaration/"> 第三方声明 </a>”。</p>
-<p>2020/6/2 - 完成蓝图目标 “文章末尾自动插入信息” 剩余任务；去除功能「按钮菜单」「文章末尾自动插入信息」中具体颜色代码，使用 Next 主题定义的颜色变量，以适配 default/darkmode 两种方案的显示。</p>
-<p>2020/6/1 - 完成蓝图目标 “文章末尾自动插入信息 - 添加结尾标记” 等。</p>
-<p>2020/5/29 - “flex-column” 类增加文字居中效果，去除以往手动添加 center 的标签；添加页面 “<a href="/roadmap/"> 蓝图规划 </a>”；页面 “更新日志” 迁至 <a href="/roadmap/"> 蓝图 </a> 子菜单之下。</p>
-<p>2020/5/28 - Next 主题从 v7.8.0 升级至 v8.0.0-rc.2（<a href="https://github.com/theme-next/hexo-theme-next/">v7.8.0 仓库 </a> 废弃，新版迁至 <a href="https://github.com/next-theme/hexo-theme-next"> v8.0.0 仓库 </a>）；重新测试 hexo-browsersync 插件（当前主题版本勉强能用，但文章字数超过 1k 后就会加载异常，渲染空白）；使用新主题的 TabJS 重编排以往文章「飞助远程服务店」的 “注明” 部分内容及去除 img 标签的 width 属性，改用 style 实现；去除旧文章文件名中的 “-” 字符，统一使用大驼峰式命名法；<strong>推送时 hexo deploy 强制 push 导致所有 commit 丢失</strong>。</p>
-<p>2020/5/27 - 对比 v5.1.4 和 v7.8.0 的异同，并进行相关测试 debug；新版主题已集成很多功能，删除 “Github forkme”“文章底部标签图标修改” 等自定义实现的代码；原页面 “关于” 中「关于本站」小节内容单独分离出做子菜单页面 “关于本站”。</p>
-<p>2020/5/25-26 - 升级 hexo-cli 脚手架至 v3.1.0；hexo 框架从 v3.9.0 升级至 v4.2.1；Next 主题从 v5.1.4 升级至 v7.8.0（<a href="https://github.com/iissnan/hexo-theme-next/">v5.1.4 仓库 </a> 废弃，新版迁至 <a href="https://github.com/theme-next/hexo-theme-next/">v7.8.0 仓库 </a>）；删除 hexo-browsersync 插件（不支持新版 next 主题，主页空页）。</p>
-<p>2020/5/8 - 添加 hexo-browsersync 插件；删除 “分类” 页；更新主页菜单联系图标；修改文章样式模板以适应：草稿 draft &gt; 发布 publish 的工作流；更正 “关于” 页面中「关注我」- 知乎图标。</p>
-<p>2020/4/27 - 插入谷歌自动广告代码。</p>
-<p>2020/4/24 - 完善 “关于页面” 信息；完善 “版权声明” 信息；完善 “侵权声明” 信息；添加 “许可注意事项”；将站点位图转换成 webp 格式；重新制作白色透明通道网站图标；修改文章尾部 “阅读结束” 样式；删除自定义代码块高亮效果；添加文章尾部 “微信公众号订阅”。</p>
-<p>2020/2/23 - 重新排版 “关于页面”；作废文章《飞助远程服务店》《翻译计划》。</p>
+<p>2020&#x2F;12&#x2F;10 - Next theme 更新至仓库最新；开启 hexo-neat 插件中移除 LineBreaks 的选项（主题作者已修复该问题，不会因此导致 sticky icon 和文章标题之间缺失空白）。</p>
+<p>2020&#x2F;9&#x2F;30 - Node 从 12.8.3 升级至 12.8.4；Hexo 从 v5.1.1 升级至 5.2.0；Next theme 更新至最新仓库；去除 Sticky 功能的依赖插件 hexo-generator-indexed，未安装时无影响。</p>
+<p>2020&#x2F;9&#x2F;22 - 更新文章「Blender 插件 - 切换语言 」。</p>
+<p>2020&#x2F;9&#x2F;20 - 更新页面「第三方开源许可声明」；更新文章「Blender 插件 - 切换语言」。</p>
+<p>2020&#x2F;9&#x2F;19 - 「关于我」页面更新专业技能点。</p>
+<p>2020&#x2F;9&#x2F;18 - 「关于本站」页面添加 “本站许可协议” 说明。</p>
+<p>2020&#x2F;9&#x2F;17 - 更新文章「Blender 插件 - 切换语言」；更新「站点导航」部分链接。</p>
+<p>2020&#x2F;9&#x2F;15 - Hexo 从 v5.0.0 升级至 v5.1.1；hexo-cli 脚手架从 v4.1.0 升级至 v4.2.0；Next theme 从 v8.0.0-rc.5 升级至 v8.0.0；因主题作者已使用 flex 排版进行重构，所以去除「文章末尾自动插入信息」功能实现的旧方案 -“injects point”，使用 flex 中 order 属性实现顺序排版功能。</p>
+<p>2020&#x2F;8&#x2F;6 - 去除页面“关于我”第一小节的原 hr 标签生成的横线，改用 css 样式生成边框和分割线。</p>
+<p>2020&#x2F;8&#x2F;4 - 调整 hexo-neat 插件组件中的 HTMLMinifie（设置项为neat_html） 的参数设置，添加参数以保留 LineBreaks（因其默认参数会移除 LineBreaks，该问题会导致 sticky icon 和文章标题之间缺失空白空间的情况）。</p>
+<p>2020&#x2F;8&#x2F;3 - Hexo 从 v4.2.1 升级至 v5.0.0；hexo-cli 脚手架从 v3.1.0 升级至 v4.1.0；Next theme 从 v8.0.0-rc.3 升级至 v8.0.0-rc.5；移除标签云插件 hexo-tag-cloud（对当前主题兼容性不好，会导致侧边栏超出限定 height 而出现滚动栏。另外，此插件有时挺占用 CPU 资源）；添加插件 index_generator 以支持置顶文章（扩展 Front-matter: sticky 参数）；重新添加回 hexo-browsersync 插件（字数超过 1000 时渲染空白的问题已找到解决方法，hexo-server 插件导致产生此bug，设置下 server 插件的参数即可）；页面 “关于我” 修改第一小节的排版属性 position 和 width 的参数以适应排版（当前环境下渲染有问题）。</p>
+<p>2020&#x2F;6&#x2F;29 - 补充页面“关于”「技能点」；页面“关于”「挺我」中二维码放弃瀑布流排版方式，换用 tabs 实现切换。</p>
+<p>2020&#x2F;6&#x2F;25 - 谷歌帐号由 moyu1355 迁至新帐号 im.misterkin，更新相应的 Google Analytics, Google Search Console, Google AdSense 标签代码；更新网站上关于 Gmail 邮件和 Youtube 频道的链接。</p>
+<p>2020&#x2F;6&#x2F;21 - 部分页面使用 Pangu 在全角和半角字符间添加空格。</p>
+<p>2020&#x2F;6&#x2F;16 - 替换网站透明图标和页面 “关于” 的透明头像；样式修改：深色模式下也给头像添加阴影（适应「深色模式」选项启用时的浅色浏览，即操作系统不启用 “深色模式”）；删除页面 “更新日志” 的标题 “日志内容”。</p>
+<p>2020&#x2F;6&#x2F;14 - 更新页面 “关于我”「技能点」小节；侧边栏底部添加标签云特效；关闭侧边栏许可图标；侧边栏按钮增加样式 “顶部边距”。</p>
+<p>2020&#x2F;6&#x2F;7 - 更新页面 “关于本站”；发表文章《BL 插件 - 一键切换语言》</p>
+<p>2020&#x2F;6&#x2F;4 - 本机环境 Node 从 v14.3.0 降级到 v12.18.0 LTS（模块 stylus 在 node v14 下有 &#39;Accessing non-existent property&#39;s error&#39;，待该项目修复升级支持 node v14 才能解决；模块 fsevents（可选模块）在两个 node 版本都出现 win32 incompatible，暂未找到解决方式）；Next 主题从 v8.0.0-rc.2 升级至 v8.0.0-rc.3；增加 velocity 的 jsdelivr cdn；修改 hexo\config.yml 和 Next\config.yml 的部分注释；重新测试 hexo-browsersync 插件在 node v12 的效果（文章字数过多时，渲染页面依旧是空白）；更新页面 “蓝图”。</p>
+<p>2020&#x2F;6&#x2F;3 - 更新页面 “关于本站”；添加页面 “<a href="/about/third-party-declaration/"> 第三方声明 </a>”。</p>
+<p>2020&#x2F;6&#x2F;2 - 完成蓝图目标 “文章末尾自动插入信息” 剩余任务；去除功能「按钮菜单」「文章末尾自动插入信息」中具体颜色代码，使用 Next 主题定义的颜色变量，以适配 default&#x2F;darkmode 两种方案的显示。</p>
+<p>2020&#x2F;6&#x2F;1 - 完成蓝图目标 “文章末尾自动插入信息 - 添加结尾标记” 等。</p>
+<p>2020&#x2F;5&#x2F;29 - “flex-column” 类增加文字居中效果，去除以往手动添加 center 的标签；添加页面 “<a href="/roadmap/"> 蓝图规划 </a>”；页面 “更新日志” 迁至 <a href="/roadmap/"> 蓝图 </a> 子菜单之下。</p>
+<p>2020&#x2F;5&#x2F;28 - Next 主题从 v7.8.0 升级至 v8.0.0-rc.2（<a href="https://github.com/theme-next/hexo-theme-next/">v7.8.0 仓库 </a> 废弃，新版迁至 <a href="https://github.com/next-theme/hexo-theme-next"> v8.0.0 仓库 </a>）；重新测试 hexo-browsersync 插件（当前主题版本勉强能用，但文章字数超过 1k 后就会加载异常，渲染空白）；使用新主题的 TabJS 重编排以往文章「飞助远程服务店」的 “注明” 部分内容及去除 img 标签的 width 属性，改用 style 实现；去除旧文章文件名中的 “-” 字符，统一使用大驼峰式命名法；<strong>推送时 hexo deploy 强制 push 导致所有 commit 丢失</strong>。</p>
+<p>2020&#x2F;5&#x2F;27 - 对比 v5.1.4 和 v7.8.0 的异同，并进行相关测试 debug；新版主题已集成很多功能，删除 “Github forkme”“文章底部标签图标修改” 等自定义实现的代码；原页面 “关于” 中「关于本站」小节内容单独分离出做子菜单页面 “关于本站”。</p>
+<p>2020&#x2F;5&#x2F;25-26 - 升级 hexo-cli 脚手架至 v3.1.0；hexo 框架从 v3.9.0 升级至 v4.2.1；Next 主题从 v5.1.4 升级至 v7.8.0（<a href="https://github.com/iissnan/hexo-theme-next/">v5.1.4 仓库 </a> 废弃，新版迁至 <a href="https://github.com/theme-next/hexo-theme-next/">v7.8.0 仓库 </a>）；删除 hexo-browsersync 插件（不支持新版 next 主题，主页空页）。</p>
+<p>2020&#x2F;5&#x2F;8 - 添加 hexo-browsersync 插件；删除 “分类” 页；更新主页菜单联系图标；修改文章样式模板以适应：草稿 draft &gt; 发布 publish 的工作流；更正 “关于” 页面中「关注我」- 知乎图标。</p>
+<p>2020&#x2F;4&#x2F;27 - 插入谷歌自动广告代码。</p>
+<p>2020&#x2F;4&#x2F;24 - 完善 “关于页面” 信息；完善 “版权声明” 信息；完善 “侵权声明” 信息；添加 “许可注意事项”；将站点位图转换成 webp 格式；重新制作白色透明通道网站图标；修改文章尾部 “阅读结束” 样式；删除自定义代码块高亮效果；添加文章尾部 “微信公众号订阅”。</p>
+<p>2020&#x2F;2&#x2F;23 - 重新排版 “关于页面”；作废文章《飞助远程服务店》《翻译计划》。</p>
 </div>
 
 <blockquote class="blockquote-center">
@@ -2314,23 +2347,23 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <div class="hang-retract">
 2019/9/15 - 访客数悬浮框显示改用 setTimeout 和 innerHTML 调试成功。调试记录：头次使用不蒜子计数标签失败，因为同一页面内不能出现两个相同 id 的标签；接着尝试异步拷贝数据，由于实在看不懂 async 和 await 命令；后来尝试 setTimeout 命令，但 setTimeout 执行外部 function 不能成功，将 function 置于 setTimeout 内后，document.write 数值获取成功，但页面被重写；最后改用 innerHTML 后没问题。从 4 号开始尝试的功能，终于调试成功。但目前 setTimeout 实现效果不完美，以后有时间再完善。
 
-<p>2019/9/14 - “关于页面” 个人经历添加 Blender 翻译成员统计链接。</p>
-<p>2019/9/4 - 更新 “关于页面” 个人经历中的 Blender 翻译阶段；悬浮菜单下添加访客数悬浮框显示（不蒜子标签方式未成功显示），另外探索新的方式显示。</p>
-<p>2019/9/3 - 文章末尾添加 “侵权声明”。</p>
-<p>2019/9/1 - “关于” 页面个人经历添加时间标注，修改个人技能描述。文章末尾 “勘误声明” 在 “联系我” 字符上增加联系方式链接。</p>
-<p>2019/8/1 - “logs” 页面放弃 markdown 的列表排版，改用 css 样式达到换行缩进效果。更新 “about” 页面：添加打赏小节及相关二维码，添加关注小节。修改《火狐浏览器拓展推荐》文章的 read more 标签位置。添加站点悬浮按钮。</p>
-<p>2019/7/31 - 完善 404 页面：添加导航按钮、添加音乐播放 + 歌单。</p>
-<p>2019/7/27 - 增加博文压缩功能 (hexo-neat)。</p>
-<p>2019/7/26 - 更改 logs 页面菜单图标；更改 youtube 图标，查询 html 源码得出 next 主题使用 Font Awesome 4.6.2 版本图标，不支持 5.0; 添加 google_analytics；google_site_verification 项属性值直接更换 meta 值；停用自定义代码高亮，启用自带的 night 风格的高亮；增加图片懒加载功能 (lazyload)。</p>
-<p>2019/7/24-25 - 完成旧样式的重现，并重新开发文件，把自定义修改独立成一个配置文件，主题自定义资源整合一个文件夹。新添加样式：Gemini 配色 / 主页文章阴影效果 / 代码块自定义 / 网页点击浮现文字；新添加布局：网站运行时间；新添加社交链接及图标：优酷 / 油管；更改：显示” 全站文字统计 “的语言文件 /“勘误声明” 的实现方式 /”Fork me on Github“图标 / 版权声明使用官方配置实现 / 文章结束标记使用雪花图标 / 第三方布局” 不蒜子统计” 的域名更新。</p>
-<p>2019/7/23 - hexo 框架组件出问题，重建 hexo 博客并重新规范化配置文件。站点配置和主题配置文件修改完成。</p>
-<p>2019/7/22 - 添加 live2d-hibiki，相应配置信息在站点配置文件下。live2d 配置若放于主题配置文件下，本机测试结果无法生效。</p>
-<p>2019/7/20 - 系统重装，hexo 系统重新部署。ssh 丢失，现已新建部署测试通过。</p>
-<p>2019/5/14 - 修改 Github 用户名，迁移博客地址至 <a href="https://mister-kin.github.io/">https://mister-kin.github.io/</a> ，旧地址 <a href="https://kin-sir.github.io/">https://kin-sir.github.io/</a> 已失效。</p>
-<p>2019/4/1 - “关于” 页面增添点击 qq 号码调用客户端加好友方式。</p>
-<p>2019/3/31 - 更新 “关于” 页面的本人概述内容。</p>
-<p>2019/3/30 - 博客地址更改后的相应更新，签名更新，制作个人 logo 并更新头像，更新网站图标，更新统一结尾文件信息，更新文章《飞助远程服务店》联系方式内容。</p>
-<p>2019/3/19 - 添加 &amp; 编写 “更新日志” 页面。</p>
+<p>2019&#x2F;9&#x2F;14 - “关于页面” 个人经历添加 Blender 翻译成员统计链接。</p>
+<p>2019&#x2F;9&#x2F;4 - 更新 “关于页面” 个人经历中的 Blender 翻译阶段；悬浮菜单下添加访客数悬浮框显示（不蒜子标签方式未成功显示），另外探索新的方式显示。</p>
+<p>2019&#x2F;9&#x2F;3 - 文章末尾添加 “侵权声明”。</p>
+<p>2019&#x2F;9&#x2F;1 - “关于” 页面个人经历添加时间标注，修改个人技能描述。文章末尾 “勘误声明” 在 “联系我” 字符上增加联系方式链接。</p>
+<p>2019&#x2F;8&#x2F;1 - “logs” 页面放弃 markdown 的列表排版，改用 css 样式达到换行缩进效果。更新 “about” 页面：添加打赏小节及相关二维码，添加关注小节。修改《火狐浏览器拓展推荐》文章的 read more 标签位置。添加站点悬浮按钮。</p>
+<p>2019&#x2F;7&#x2F;31 - 完善 404 页面：添加导航按钮、添加音乐播放 + 歌单。</p>
+<p>2019&#x2F;7&#x2F;27 - 增加博文压缩功能 (hexo-neat)。</p>
+<p>2019&#x2F;7&#x2F;26 - 更改 logs 页面菜单图标；更改 youtube 图标，查询 html 源码得出 next 主题使用 Font Awesome 4.6.2 版本图标，不支持 5.0; 添加 google_analytics；google_site_verification 项属性值直接更换 meta 值；停用自定义代码高亮，启用自带的 night 风格的高亮；增加图片懒加载功能 (lazyload)。</p>
+<p>2019&#x2F;7&#x2F;24-25 - 完成旧样式的重现，并重新开发文件，把自定义修改独立成一个配置文件，主题自定义资源整合一个文件夹。新添加样式：Gemini 配色 &#x2F; 主页文章阴影效果 &#x2F; 代码块自定义 &#x2F; 网页点击浮现文字；新添加布局：网站运行时间；新添加社交链接及图标：优酷 &#x2F; 油管；更改：显示” 全站文字统计 “的语言文件 &#x2F;“勘误声明” 的实现方式 &#x2F;”Fork me on Github“图标 &#x2F; 版权声明使用官方配置实现 &#x2F; 文章结束标记使用雪花图标 &#x2F; 第三方布局” 不蒜子统计” 的域名更新。</p>
+<p>2019&#x2F;7&#x2F;23 - hexo 框架组件出问题，重建 hexo 博客并重新规范化配置文件。站点配置和主题配置文件修改完成。</p>
+<p>2019&#x2F;7&#x2F;22 - 添加 live2d-hibiki，相应配置信息在站点配置文件下。live2d 配置若放于主题配置文件下，本机测试结果无法生效。</p>
+<p>2019&#x2F;7&#x2F;20 - 系统重装，hexo 系统重新部署。ssh 丢失，现已新建部署测试通过。</p>
+<p>2019&#x2F;5&#x2F;14 - 修改 Github 用户名，迁移博客地址至 <a href="https://mister-kin.github.io/">https://mister-kin.github.io/</a> ，旧地址 <a href="https://kin-sir.github.io/">https://kin-sir.github.io/</a> 已失效。</p>
+<p>2019&#x2F;4&#x2F;1 - “关于” 页面增添点击 qq 号码调用客户端加好友方式。</p>
+<p>2019&#x2F;3&#x2F;31 - 更新 “关于” 页面的本人概述内容。</p>
+<p>2019&#x2F;3&#x2F;30 - 博客地址更改后的相应更新，签名更新，制作个人 logo 并更新头像，更新网站图标，更新统一结尾文件信息，更新文章《飞助远程服务店》联系方式内容。</p>
+<p>2019&#x2F;3&#x2F;19 - 添加 &amp; 编写 “更新日志” 页面。</p>
 </div>
 
 <blockquote class="blockquote-center">
@@ -2340,10 +2373,10 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <div class="hang-retract">
 2018/12/17 - 修改一些拼写错误，更新 B 站 UP 信息。P.S. 自此记录更新日志
 
-<p>2018/12/16 - 发表文章《翻译计划》。</p>
-<p>2018/10/5 - 发表文章《Blender 自学资料向（干货整理）》。</p>
-<p>2018/9/9 - 发表文章《飞助远程服务店》。</p>
-<p>2018/8/12 - 博客搭建。</p>
+<p>2018&#x2F;12&#x2F;16 - 发表文章《翻译计划》。</p>
+<p>2018&#x2F;10&#x2F;5 - 发表文章《Blender 自学资料向（干货整理）》。</p>
+<p>2018&#x2F;9&#x2F;9 - 发表文章《飞助远程服务店》。</p>
+<p>2018&#x2F;8&#x2F;12 - 博客搭建。</p>
 </div>
 
 <style type="text/css">
@@ -2366,7 +2399,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
 <h2 id="OpenDocs-仓库存储结构">3.1 <a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021/6/28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
 <p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
 <p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
@@ -2535,9 +2568,9 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <p><em>注：建议在 blender v2.83 以上使用。2.83 默认是启用翻译功能，2.83 以下版本的翻译都得手动启用。因为没有实际测试过，所以在 2.83 以下版本使用该插件时，可能需要手动启用翻译功能。</em></p>
 <h3 id="安装步骤">2.1.2 <a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
 <li>运行 Blender。</li>
-<li>打开「Preferences/用户偏好设置」（Menu/菜单 &gt;Edit/编辑 &gt;Preferences/用户偏好设置）。</li>
-<li>选择「Add‐ons/插件」选项卡。</li>
-<li>点击「Install.../安装」后，选择先前所下载好的 ToggleLanguage.zip 并点击确定。</li>
+<li>打开「Preferences&#x2F;用户偏好设置」（Menu&#x2F;菜单 &gt;Edit&#x2F;编辑 &gt;Preferences&#x2F;用户偏好设置）。</li>
+<li>选择「Add‐ons&#x2F;插件」选项卡。</li>
+<li>点击「Install...&#x2F;安装」后，选择先前所下载好的 ToggleLanguage.zip 并点击确定。</li>
 <li>启用插件。</li>
 </ol>
 <div class="flex-row">
@@ -2567,7 +2600,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li>开发者模式：启用「开发选项」「Python 工具提示」，如图 1.5 所示。</li>
 </ol>
 </li>
-<li>翻译新建数据块名称按钮：启用/禁用新建数据块名称的翻译功能<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，默认值为禁用，如图 1.7 所示，其对应在偏好设置中的选项如图 1.6 所示。在非英语界面环境中，启用该功能可使 blender 新建数据块的名称为当前语言，如图 1.8所示，新建平面的名称为「平面」，而非「plane」。</li>
+<li>翻译新建数据块名称按钮：启用&#x2F;禁用新建数据块名称的翻译功能<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，默认值为禁用，如图 1.7 所示，其对应在偏好设置中的选项如图 1.6 所示。在非英语界面环境中，启用该功能可使 blender 新建数据块的名称为当前语言，如图 1.8所示，新建平面的名称为「平面」，而非「plane」。</li>
 <li>加载我的设置按钮（<strong>试验性，慎用</strong>）：部署我个人的偏好设置。所涉及的设置选项详见<a href="#%E6%88%91%E7%9A%84%E8%AE%BE%E7%BD%AE%EF%BC%88%E6%88%91%E6%9C%AC%E4%BA%BA%E7%9A%84%E4%B8%80%E4%BA%9B-blender-%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%89">我的设置</a>。该功能会覆盖你原有的 blender 设置（启动文件和偏好设置），请详细了解所涉及的设置项后再确认是否使用该功能。目前该功能仅支持拥有英伟达显卡的 win 平台（默认路径安装），其他系统平台或者其他安装路径的用户使用该功能可能会有报错。<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
 <li>加载初始设置按钮：加载初始的偏好设置和启动文件，即重置 blender，还原成初次安装时的状态。</li>
 </ol>
@@ -2652,53 +2685,53 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </thead>
 <tbody><tr>
 <td align="center">v0.8</td>
-<td align="center">2021/8/30</td>
+<td align="center">2021&#x2F;8&#x2F;30</td>
 <td align="center">支持切换更多语言；支持完整翻译插件 UI；为某些功能添加交互提示（信息框，确认框等）⋯⋯</td>
 </tr>
 <tr>
 <td align="center">v0.7</td>
-<td align="center">2021/7/11</td>
+<td align="center">2021&#x2F;7&#x2F;11</td>
 <td align="center">我的偏好设置支持 blender v2.93；重写 property 代码</td>
 </tr>
 <tr>
 <td align="center">v0.6</td>
-<td align="center">2021/3/10</td>
+<td align="center">2021&#x2F;3&#x2F;10</td>
 <td align="center">添加布尔值按钮‐新数据翻译；支持快捷键；代码重构，插件翻译重构⋯⋯</td>
 </tr>
 <tr>
 <td align="center">v0.5</td>
-<td align="center">2020/12/8</td>
+<td align="center">2020&#x2F;12&#x2F;8</td>
 <td align="center">支持 blender v2.91；支持从.zip 文件安装插件⋯⋯</td>
 </tr>
 <tr>
 <td align="center">v0.5‐beta</td>
-<td align="center">2020/9/20</td>
+<td align="center">2020&#x2F;9&#x2F;20</td>
 <td align="center">添加菜单用以选择 UI 提示方案</td>
 </tr>
 <tr>
 <td align="center">v0.4</td>
-<td align="center">2020/8/3</td>
+<td align="center">2020&#x2F;8&#x2F;3</td>
 <td align="center">代码项目重命名为 ToggleLanguage；按钮 UI 放置于最右端；添加新按钮以快速查看 preferences</td>
 </tr>
 <tr>
 <td align="center">v0.3</td>
-<td align="center">2020/6/5</td>
+<td align="center">2020&#x2F;6&#x2F;5</td>
 <td align="center">更新至 blender 2.83 API；修改部分类名；添加文档链接；修改完善许可说明</td>
 </tr>
 <tr>
 <td align="center">v0.2</td>
-<td align="center">2020/5/21</td>
+<td align="center">2020&#x2F;5&#x2F;21</td>
 <td align="center">清除未使用属性的报错</td>
 </tr>
 <tr>
 <td align="center">v0.1</td>
-<td align="center">2020/5/12</td>
+<td align="center">2020&#x2F;5&#x2F;12</td>
 <td align="center">完成基础的功能设计「一键切换」</td>
 </tr>
 </tbody></table>
 <p><em>注：更多详细的信息，请查看 <a href="https://github.com/Mister-Kin/ToggleLanguage/releases">Release Notes</a> 。</em></p>
 <h1 id="作者">4 <a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
-<h1 id="参考文献">5 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007/978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB/OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB/OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB/OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB/OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB/OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB/OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB/OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB/OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB/OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB/OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.</p>
+<h1 id="参考文献">5 <a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">该功能会接管用户偏好设置中的对应功能，这意味着你将无法通过用户偏好设置来修改这个功能。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">因为涉及到 blender 主题文件路径和 Cycles 引擎渲染设备的选择，暂不支持全平台任意路径安装的情况。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">在 blender v2.93.3 版本测试中，Topbar Menu&gt;Edit&gt;Menu Search 功能的 UI 提示会覆盖显示为 F6 键。不用担心，你仍然可以通过 F3 键进行菜单搜索。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">即 blender UI 翻译语言中 Complete 和 In Progress 两个列表中的语言。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;">指通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:7" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
   </entry>
 </search>
