@@ -197,12 +197,12 @@
 <div class="dropdown-menu">
     <button class="dropdown-menu-btn">软件作品</button>
     <div class="dropdown-menu-content">
-        <a href="/manuals/toggle-language/">切换语言</a>
-        <a href="/manuals/batch-tools/">批处理工具</a>
+        <a href="/works/software-works/toggle-language/">切换语言</a>
+        <a href="/works/software-works/batch-tools/">批处理工具</a>
     </div>
 </div>
 <div class="dropdown-menu">
-    <button class="dropdown-menu-btn">设计作品</button>
+    <button class="dropdown-menu-btn">艺术作品</button>
     <div class="dropdown-menu-content">
     </div>
 </div>
@@ -619,6 +619,38 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 <a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>翻译计划</title>
     <url>/translations/translation-plan/</url>
     <content><![CDATA[<h1 id="计划重启缘由">1 <a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
@@ -1029,7 +1061,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>C++ Primer</tag>
         <tag>第一章</tag>
         <tag>习题答案</tag>
-        <tag>联系总结</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -1444,7 +1476,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>C++</tag>
         <tag>C++ Primer</tag>
         <tag>习题答案</tag>
-        <tag>联系总结</tag>
+        <tag>练习总结</tag>
         <tag>第二章</tag>
       </tags>
   </entry>
@@ -1742,7 +1774,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>C++</tag>
         <tag>C++ Primer</tag>
         <tag>习题答案</tag>
-        <tag>联系总结</tag>
+        <tag>练习总结</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -1781,18 +1813,63 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>第一章</tag>
         <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
-        <tag>练习总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender总结v3.4</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>总结</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 <a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 <a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 <a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方式：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 <a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 <a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 <a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 <a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
       </tags>
   </entry>
   <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 <a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 <a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-UXIowpmgSDzJjdrW" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-UXIowpmgSDzJjdrW").style.height=document.getElementById("mmedia-UXIowpmgSDzJjdrW").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 <a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-iMaszUGAGyRumxVT" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-iMaszUGAGyRumxVT").style.height=document.getElementById("mmedia-iMaszUGAGyRumxVT").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-UXIowpmgSDzJjdrW").style.height=document.getElementById("mmedia-UXIowpmgSDzJjdrW").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-iMaszUGAGyRumxVT").style.height=document.getElementById("mmedia-iMaszUGAGyRumxVT").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 <a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -1971,7 +2048,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 <a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -2088,21 +2165,89 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>软件使用手册</title>
+    <title>知识总结手册</title>
     <url>/manuals/index.html</url>
-    <content><![CDATA[<div class="navigation-border">
-<center>
-<a href="/manuals/toggle-language">
-<button class="navigation-button-box">切换语言</button></a>
-<a href="/manuals/batch-tools">
-<button class="navigation-button-box">批处理工具</button></a>
-</center></div>
+    <content><![CDATA[<p>to-do</p>
 ]]></content>
   </entry>
   <entry>
     <title>标签</title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>作品</title>
+    <url>/works/index.html</url>
+    <content><![CDATA[<div class="wrap">
+<div class="left">
+<div class="row-right">
+<a href="/works/software-works">
+<button class="navigation-button-box">软件作品</button></a></div>
+
+<div class="blank-space-column"></div>
+
+<div class="row-right">
+<a href="/works/software-works/toggle-language">
+<button class="navigation-button-box">切换语言</button></a>
+<div class="blank-space-row"></div>
+</div>
+
+<div class="blank-space-column"></div>
+
+<div class="row-right">
+<a href="/works/software-works/batch-tools">
+<button class="navigation-button-box">批处理工具</button></a>
+<div class="blank-space-row"></div>
+</div>
+
+</div>
+
+<div class="right">
+<div class="row-left">
+<a href="/works/artworks/">
+<button class="navigation-button-box">艺术作品</button></a></div></div>
+
+<div class="row-left">
+
+<div class="blank-space-row"></div>
+</div>
+
+</div>
+
+<style type="text/css">
+.wrap{
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 25px;
+}
+.right {
+    flex-grow: 1;
+    margin-left: 25px;
+}
+.row-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.row-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.blank-space-column{
+    height: 20px;
+}
+.blank-space-row{
+    width: 60px;
+}
+</style>
+]]></content>
   </entry>
   <entry>
     <title>关于本站</title>
@@ -2189,6 +2334,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a><center>2023</center></h1><div class="hang-retract">
 
+<p>2023&#x2F;03&#x2F;08 - styles样式表的「center-bold」样式设置字体大小为x-large。</p>
 <p>2023&#x2F;03&#x2F;05 - hexo-theme-next从v8.14.2升级至v8.15.0；本地开发环境：Node.js从v19.3.0更新至v19.7.0。</p>
 <p>2023&#x2F;02&#x2F;05 - hexo-theme-next从v8.14.1升级至v8.14.2。</p>
 <p>2023&#x2F;01&#x2F;31 - 文章末尾社交链接添加橡皮筋动画。</p>
@@ -2428,6 +2574,7 @@ CGI&后期处理
 <li><a href="https://krita.org/en/">Krita</a>: <a href="https://docs.krita.org/en/KritaFAQ.html?highlight=license#license-rights-and-the-krita-foundation">Krita's GNU GPL license</a></li>
 <li><a href="https://inkscape.org/">Inkscape</a>: <a href="https://inkscape.org/about/license/">GPL</a></li>
 <li><a href="https://www.audacityteam.org/">Audacity</a>: <a href="https://www.audacityteam.org/about/license/">GPL v2</a></li>
+<li><a href="https://www.gimp.org">GIMP</a>: <a href="https://www.gimp.org/about/COPYING">GPL</a></li>
 </ul>
 </div>
 
@@ -2451,7 +2598,6 @@ CGI&后期处理
 已弃用
 </div>
 <ul>
-<li><a href="https://www.gimp.org">GIMP</a>: <a href="https://www.gimp.org/about/COPYING">GPL</a></li>
 <li><a href="https://handbrake.fr">Handbrake</a>: <a href="https://github.com/HandBrake/HandBrake/blob/master/LICENSE">GPL v2</a></li>
 </ul>
 </div>
@@ -2484,8 +2630,26 @@ CGI&后期处理
     <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
   <entry>
+    <title>艺术作品</title>
+    <url>/works/artworks/index.html</url>
+    <content><![CDATA[<p>to-do</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>软件作品</title>
+    <url>/works/software-works/index.html</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/works/software-works/toggle-language">
+<button class="navigation-button-box">切换语言</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/batch-tools">
+<button class="navigation-button-box">批处理工具</button></a>
+</div>
+]]></content>
+  </entry>
+  <entry>
     <title>「批处理工具」使用手册</title>
-    <url>/manuals/batch-tools/index.html</url>
+    <url>/works/software-works/batch-tools/index.html</url>
     <content><![CDATA[<h1 id="准备工作">1 <a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="需要下载的文件">1.1 <a href="#需要下载的文件" class="headerlink" title="需要下载的文件"></a>需要下载的文件</h2><ul>
 <li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
 <li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
@@ -2546,7 +2710,7 @@ CGI&后期处理
   </entry>
   <entry>
     <title>「切换语言」使用手册v1.3 - Blender 插件</title>
-    <url>/manuals/toggle-language/index.html</url>
+    <url>/works/software-works/toggle-language/index.html</url>
     <content><![CDATA[<table>
 <thead>
 <tr>
