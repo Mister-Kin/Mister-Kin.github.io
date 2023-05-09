@@ -1947,6 +1947,53 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center"></td>
 </tr>
 </tbody></table>
+<h2 id="视窗导航（Menu-gt-View）"><a href="#视窗导航（Menu-gt-View）" class="headerlink" title="视窗导航（Menu&gt;View）"></a>视窗导航（Menu&gt;View）</h2><p><strong>gizmo位于3D视窗右上角，数字或标点符号快捷键位于数字键盘区</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视窗导航功能</th>
+<th align="center">view function</th>
+<th align="center">快捷键</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">环绕</td>
+<td align="center">orbit</td>
+<td align="center">MMB or Gizmo球体 or 4862</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">平移</td>
+<td align="center">pan</td>
+<td align="center">Shift+Drag MMB or Gizmo手掌</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">缩放</td>
+<td align="center">zoom in or out</td>
+<td align="center">滚轮 or Gizmo放大镜 or +‑</td>
+<td align="center">平滑缩放：Ctrl+Drag MMB</td>
+</tr>
+<tr>
+<td align="center">框选选中对象</td>
+<td align="center">frame selected</td>
+<td align="center">.</td>
+<td align="center">最大化显示选中物体</td>
+</tr>
+<tr>
+<td align="center">查看活动摄像机</td>
+<td align="center">view active camera</td>
+<td align="center">Gizmo摄像机 or 0</td>
+<td align="center">切换到摄像视图</td>
+</tr>
+<tr>
+<td align="center">透视&#x2F;正交视图</td>
+<td align="center">perspective&#x2F;orthographic projection</td>
+<td align="center">Gizmo网格</td>
+<td align="center">透视：近大远小；正交：观察模型准确性（2d草图）</td>
+</tr>
+</tbody></table>
 <h2 id="选择（Menu-gt-Select）"><a href="#选择（Menu-gt-Select）" class="headerlink" title="选择（Menu&gt;Select）"></a>选择（Menu&gt;Select）</h2><p><strong>多选模式下，亮橙色是当前激活物体，关系到属性编辑器显示的内容。</strong></p>
 <table>
 <thead>
@@ -2007,60 +2054,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </tr>
 </tbody></table>
 <p>P.S. 选择菜单中的Select More&#x2F;Less只在编辑模式下生效</p>
-<h2 id="视窗导航（Menu-gt-View）"><a href="#视窗导航（Menu-gt-View）" class="headerlink" title="视窗导航（Menu&gt;View）"></a>视窗导航（Menu&gt;View）</h2><p><strong>gizmo位于3D视窗右上角，数字或标点符号快捷键位于数字键盘区</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视窗导航功能</th>
-<th align="center">view function</th>
-<th align="center">快捷键</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">环绕</td>
-<td align="center">orbit</td>
-<td align="center">MMB or Gizmo球体 or 4862</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">平移</td>
-<td align="center">pan</td>
-<td align="center">Shift+Drag MMB or Gizmo手掌</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">缩放</td>
-<td align="center">zoom in or out</td>
-<td align="center">滚轮 or Gizmo放大镜 or +‑</td>
-<td align="center">平滑缩放：Ctrl+Drag MMB</td>
-</tr>
-<tr>
-<td align="center">框选选中对象</td>
-<td align="center">frame selected</td>
-<td align="center">.</td>
-<td align="center">最大化显示选中物体</td>
-</tr>
-<tr>
-<td align="center">查看活动摄像机</td>
-<td align="center">view active camera</td>
-<td align="center">Gizmo摄像机 or 0</td>
-<td align="center">切换到摄像视图</td>
-</tr>
-<tr>
-<td align="center">透视&#x2F;正交视图</td>
-<td align="center">perspective&#x2F;orthographic projection</td>
-<td align="center">Gizmo网格</td>
-<td align="center">透视：近大远小；正交：观察模型准确性（2d草图）</td>
-</tr>
-</tbody></table>
 <span id="more"></span>
 
-<h2 id="界面（UI）"><a href="#界面（UI）" class="headerlink" title="界面（UI）"></a>界面（UI）</h2><ul>
-<li>底部信息栏可根据当前鼠标事件提示用户</li>
-<li>窗口边界可以调整窗口大小，右键边界处可拆分合并窗口（拖动四角也行，拆分：鼠标拖动要保持在同一窗口；合并：鼠标拖动到另一窗口）</li>
-</ul>
-<table>
+<h2 id="界面（UI）"><a href="#界面（UI）" class="headerlink" title="界面（UI）"></a>界面（UI）</h2><table>
 <thead>
 <tr>
 <th align="center">界面操作</th>
@@ -2100,6 +2096,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center"></td>
 </tr>
 </tbody></table>
+<ul>
+<li>底部信息栏可根据当前鼠标事件提示用户</li>
+<li>拖动视窗边界可以调整窗口大小，右键边界处可拆分合并窗口（拖动四角也行，拆分：鼠标拖动要保持在同一窗口；合并：鼠标拖动到另一窗口）</li>
+<li>删除视窗：右键边界处合并窗口</li>
+</ul>
 <h2 id="变换物体（Menu-gt-Object-gt-Transform）"><a href="#变换物体（Menu-gt-Object-gt-Transform）" class="headerlink" title="变换物体（Menu&gt;Object&gt;Transform）"></a>变换物体（Menu&gt;Object&gt;Transform）</h2><table>
 <thead>
 <tr>
@@ -2306,9 +2307,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 <a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 <a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-nrjbEfzpLjNlMNxn" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-nrjbEfzpLjNlMNxn").style.height=document.getElementById("mmedia-nrjbEfzpLjNlMNxn").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 <a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-dogmSERdIdtOlhhT" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-dogmSERdIdtOlhhT").style.height=document.getElementById("mmedia-dogmSERdIdtOlhhT").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-nrjbEfzpLjNlMNxn").style.height=document.getElementById("mmedia-nrjbEfzpLjNlMNxn").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-dogmSERdIdtOlhhT").style.height=document.getElementById("mmedia-dogmSERdIdtOlhhT").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 <a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -2505,7 +2506,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 <a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#x69;&#x73;&#x74;&#101;&#114;&#x6b;&#105;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x69;&#x6d;&#x2e;&#109;&#x69;&#x73;&#x74;&#101;&#114;&#x6b;&#105;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#x65;&#114;&#107;&#x69;&#110;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#x65;&#114;&#107;&#x69;&#110;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -2805,6 +2806,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a><center>2023</center></h1><div class="hang-retract">
 
+<p>2023&#x2F;05&#x2F;09 - hexo-theme-next从v8.15.1升级至v8.16.0；本地开发环境：Node.js从v20.0.0更新至v20.1.0。</p>
 <p>2023&#x2F;04&#x2F;25 - follow me增添acfun链接，更新bilibili的fontawesome图标。</p>
 <p>2023&#x2F;04&#x2F;20 - 本地开发环境：Node.js从v19.7.0更新至v20.0.0。</p>
 <p>2023&#x2F;04&#x2F;03 - hexo-theme-next从v8.15.0升级至v8.15.1。</p>
