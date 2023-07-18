@@ -262,7 +262,76 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Linux总结</title>
+    <title>Bash总结笔记</title>
+    <url>/code/bash/</url>
+    <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
+<p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p>
+<h1 id="shell提示符">2 &nbsp&nbsp<a href="#shell提示符" class="headerlink" title="shell提示符"></a>shell提示符</h1><p>shell命令行界面（CLI）</p>
+<h1 id="bash的配置">3 &nbsp&nbsp<a href="#bash的配置" class="headerlink" title="bash的配置"></a>bash的配置</h1><p>source ~&#x2F;.bashrc<br>source ~&#x2F;.profile<br>echo &#39;export APP&#x3D;&#x2F;opt&#x2F;tinyos-2.x&#x2F;apps&#39; &gt;&gt; ~&#x2F;.bashrc</p>
+<h1 id="参数表达式">4 &nbsp&nbsp<a href="#参数表达式" class="headerlink" title="参数表达式"></a><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">参数表达式</a></h1><h2 id="前缀和后缀的获取">4.1 &nbsp&nbsp<a href="#前缀和后缀的获取" class="headerlink" title="前缀和后缀的获取"></a>前缀和后缀的获取</h2><p><code>$&#123;file%.*&#125;</code>：移除最后一个点之后的内容<br><code>$&#123;file%%.*&#125;</code>：移除第一个点之后的内容<br><code>$&#123;file#*.&#125;</code>：移除第一个点之前的内容<br><code>$&#123;file##*.&#125;</code>：移除最后一个点之前的内容</p>
+<h1 id="test">5 &nbsp&nbsp<a href="#test" class="headerlink" title="test"></a>test</h1><p>test可以与&amp;&amp;组成一个条件判断，无需用if命令。</p>
+<h1 id="case">6 &nbsp&nbsp<a href="#case" class="headerlink" title="case"></a>case</h1><p>case命令，无法使用test命令。<br>case不能用正则表达，只用<a href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching">样式匹配</a>。</p>
+<h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BLUM R, BRESNAHAN C. Linux 命令行与 shell 脚本编程大全[M]. 门佳, 武海峰, 译. 3 版. 北京: 人民邮电出版社, 2016.<br>[2] GNU Bash[EB&#x2F;OL]. <a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>.<br>[3] Test variable in a bash case statement[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/205084/test%E2%80%91variable%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://unix.stackexchange.com/questions/205084/test‑variable‑in‑a‑bash‑case‑statement</a>.<br>[4] Regular expressions in a Bash case statement[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/9631335/regular%E2%80%91expressions%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://stackoverflow.com/questions/9631335/regular‑expressions‑in‑a‑bash‑case‑statement</a>.<br>[5] Adding suffix to filename during for loop in bash[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/600051/adding%E2%80%91suffix%E2%80%91to%E2%80%91filename%E2%80%91during%E2%80%91for%E2%80%91loop%E2%80%91in%E2%80%91bash">https://unix.stackexchange.com/questions/600051/adding‑suffix‑to‑filename‑during‑for‑loop‑in‑bash</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>bash</tag>
+        <tag>总结</tag>
+        <tag>shell</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git总结笔记</title>
+    <url>/code/git/</url>
+    <content><![CDATA[<h1 id="实例">1 &nbsp&nbsp<a href="#实例" class="headerlink" title="实例"></a>实例</h1><h2 id="添加子仓库">1.1 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h2><p>git submodule add <a href="https://github.com/Mister-Kin/actions.git">https://github.com/Mister-Kin/actions.git</a></p>
+<p>启动该功能，更新主仓，同时会执行submodule update<br>git config --global submodule.recurse true</p>
+<h2 id="重命名分支并推送到远程仓库">1.2 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><h1 id="Rename-the-local-branch-to-the-new-name">2 &nbsp&nbsp<a href="#Rename-the-local-branch-to-the-new-name" class="headerlink" title="Rename the local branch to the new name"></a>Rename the local branch to the new name</h1><p>git branch -m <old_name> <new_name></new_name></old_name></p>
+<h1 id="Delete-the-old-branch-on-remote-where-is-for-example-origin">3 &nbsp&nbsp<a href="#Delete-the-old-branch-on-remote-where-is-for-example-origin" class="headerlink" title="Delete the old branch on remote - where  is, for example, origin"></a>Delete the old branch on remote - where <remote> is, for example, origin</remote></h1><p>git push <remote> --delete <old_name></old_name></remote></p>
+<h1 id="Or-shorter-way-to-delete-remote-branch">4 &nbsp&nbsp<a href="#Or-shorter-way-to-delete-remote-branch" class="headerlink" title="Or shorter way to delete remote branch [:]"></a>Or shorter way to delete remote branch [:]</h1><p>git push <remote> :<old_name></old_name></remote></p>
+<p>删除失败时，请更改默认分支</p>
+<h1 id="Prevent-git-from-using-the-old-name-when-pushing-in-the-next-step">5 &nbsp&nbsp<a href="#Prevent-git-from-using-the-old-name-when-pushing-in-the-next-step" class="headerlink" title="Prevent git from using the old name when pushing in the next step."></a>Prevent git from using the old name when pushing in the next step.</h1><h1 id="Otherwise-git-will-use-the-old-upstream-name-instead-of">6 &nbsp&nbsp<a href="#Otherwise-git-will-use-the-old-upstream-name-instead-of" class="headerlink" title="Otherwise, git will use the old upstream name instead of ."></a>Otherwise, git will use the old upstream name instead of <new_name>.</new_name></h1><p>git branch --unset-upstream <new_name></new_name></p>
+<h1 id="Push-the-new-branch-to-remote">7 &nbsp&nbsp<a href="#Push-the-new-branch-to-remote" class="headerlink" title="Push the new branch to remote"></a>Push the new branch to remote</h1><p>git push <remote> <new_name></new_name></remote></p>
+<h1 id="Reset-the-upstream-branch-for-the-new-name-local-branch">8 &nbsp&nbsp<a href="#Reset-the-upstream-branch-for-the-new-name-local-branch" class="headerlink" title="Reset the upstream branch for the new_name local branch"></a>Reset the upstream branch for the new_name local branch</h1><p>git push <remote> -u <new_name></new_name></remote></p>
+<p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>git</tag>
+        <tag>github</tag>
+        <tag>笔记</tag>
+        <tag>代码管理</tag>
+        <tag>版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="宏包">1 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">1.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">2 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">2.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>语法</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux总结笔记</title>
     <url>/code/linux/</url>
     <content><![CDATA[<h1 id="终端符号输入">1 &nbsp&nbsp<a href="#终端符号输入" class="headerlink" title="终端符号输入"></a>终端符号输入</h1><ul>
 <li>ctrl+c：停止</li>
@@ -285,8 +354,509 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>code</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>总结</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+        <tag>笔记</tag>
+        <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown语法总结笔记</title>
+    <url>/code/markdown/</url>
+    <content><![CDATA[<h1 id="标题">1 &nbsp&nbsp<a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
+<li>一级标题：<code># 标题</code></li>
+<li>二级标题：<code>## 标题</code></li>
+<li>三级标题：<code>### 标题</code></li>
+<li>四级标题：<code>#### 标题</code></li>
+<li>五级标题：<code>##### 标题</code></li>
+<li>六级标题：<code>###### 标题</code></li>
+</ul>
+<h1 id="代码块">2 &nbsp&nbsp<a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码">2.1 &nbsp&nbsp<a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号包裹住代码内容：<code>`代码内容`</code></p>
+<h2 id="多行代码（围栏代码块）">2.2 &nbsp&nbsp<a href="#多行代码（围栏代码块）" class="headerlink" title="多行代码（围栏代码块）"></a>多行代码（围栏代码块）</h2><p>在代码内容前后使用三个反引号包裹住。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```语言关键字</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+
+<p>代码块支持语法高亮的语言关键字：</p>
+<table>
+<thead>
+<tr>
+<th>language</th>
+<th>key</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1C</td>
+<td>1c</td>
+</tr>
+<tr>
+<td>ActionScript</td>
+<td>actionscript</td>
+</tr>
+<tr>
+<td>Apache</td>
+<td>apache</td>
+</tr>
+<tr>
+<td>AppleScript</td>
+<td>applescript</td>
+</tr>
+<tr>
+<td>AsciiDoc</td>
+<td>asciidoc</td>
+</tr>
+<tr>
+<td>AspectJ</td>
+<td>asciidoc</td>
+</tr>
+<tr>
+<td>AutoHotkey</td>
+<td>autohotkey</td>
+</tr>
+<tr>
+<td>AVR Assembler</td>
+<td>avrasm</td>
+</tr>
+<tr>
+<td>Axapta</td>
+<td>axapta</td>
+</tr>
+<tr>
+<td>Bash</td>
+<td>bash</td>
+</tr>
+<tr>
+<td>BrainFuck</td>
+<td>brainfuck</td>
+</tr>
+<tr>
+<td>Cap’n Proto</td>
+<td>capnproto</td>
+</tr>
+<tr>
+<td>Clojure REPL</td>
+<td>clojure</td>
+</tr>
+<tr>
+<td>Clojure</td>
+<td>clojure</td>
+</tr>
+<tr>
+<td>CMake</td>
+<td>cmake</td>
+</tr>
+<tr>
+<td>CoffeeScript</td>
+<td>coffeescript</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>cpp</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>cs</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>css</td>
+</tr>
+<tr>
+<td>D</td>
+<td>d</td>
+</tr>
+<tr>
+<td>Dart</td>
+<td>d</td>
+</tr>
+<tr>
+<td>Delphi</td>
+<td>delphi</td>
+</tr>
+<tr>
+<td>Diff</td>
+<td>diff</td>
+</tr>
+<tr>
+<td>Django</td>
+<td>django</td>
+</tr>
+<tr>
+<td>DOS.bat</td>
+<td>dos</td>
+</tr>
+<tr>
+<td>Dust</td>
+<td>dust</td>
+</tr>
+<tr>
+<td>Elixir</td>
+<td>elixir</td>
+</tr>
+<tr>
+<td>ERB(Embedded Ruby)</td>
+<td>erb</td>
+</tr>
+<tr>
+<td>Erlang REPL</td>
+<td>erlang-repl</td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>erlang</td>
+</tr>
+<tr>
+<td>FIX</td>
+<td>fix</td>
+</tr>
+<tr>
+<td>F#</td>
+<td>fsharp</td>
+</tr>
+<tr>
+<td>G-code(ISO 6983)</td>
+<td>gcode</td>
+</tr>
+<tr>
+<td>Gherkin</td>
+<td>gherkin</td>
+</tr>
+<tr>
+<td>GLSL</td>
+<td>glsl</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>go</td>
+</tr>
+<tr>
+<td>Gradle</td>
+<td>gradle</td>
+</tr>
+<tr>
+<td>Groovy</td>
+<td>groovy</td>
+</tr>
+<tr>
+<td>Haml</td>
+<td>haml</td>
+</tr>
+<tr>
+<td>Handlebars</td>
+<td>handlebars</td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td>haskell</td>
+</tr>
+<tr>
+<td>Haxe</td>
+<td>haxe</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>html</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>http</td>
+</tr>
+<tr>
+<td>Ini file</td>
+<td>ini</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>java</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>javascript</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>json</td>
+</tr>
+<tr>
+<td>Lasso</td>
+<td>lasso</td>
+</tr>
+<tr>
+<td>Less</td>
+<td>less</td>
+</tr>
+<tr>
+<td>Lisp</td>
+<td>lisp</td>
+</tr>
+<tr>
+<td>LiveCode</td>
+<td>livecodeserver</td>
+</tr>
+<tr>
+<td>LiveScript</td>
+<td>livescript</td>
+</tr>
+<tr>
+<td>Lua</td>
+<td>lua</td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>makefile</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>markdown</td>
+</tr>
+<tr>
+<td>Mathematica</td>
+<td>mathematica</td>
+</tr>
+<tr>
+<td>Matlab</td>
+<td>matlab</td>
+</tr>
+<tr>
+<td>MEL (Maya Embedded Language)</td>
+<td>mel</td>
+</tr>
+<tr>
+<td>Mercury</td>
+<td>mercury</td>
+</tr>
+<tr>
+<td>Mizar</td>
+<td>mizar</td>
+</tr>
+<tr>
+<td>Monkey</td>
+<td>monkey</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>nginx</td>
+</tr>
+<tr>
+<td>Nimrod</td>
+<td>nimrod</td>
+</tr>
+<tr>
+<td>Nix</td>
+<td>nix</td>
+</tr>
+<tr>
+<td>NSIS</td>
+<td>nsis</td>
+</tr>
+<tr>
+<td>Objective C</td>
+<td>objectivec</td>
+</tr>
+<tr>
+<td>OCaml</td>
+<td>ocaml</td>
+</tr>
+<tr>
+<td>Oxygene</td>
+<td>oxygene</td>
+</tr>
+<tr>
+<td>Parser 3</td>
+<td>parser3</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>perl</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>php</td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td>powershell</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>processing</td>
+</tr>
+<tr>
+<td>Python’s profiler output</td>
+<td>profile</td>
+</tr>
+<tr>
+<td>Protocol Buffers</td>
+<td>protobuf</td>
+</tr>
+<tr>
+<td>Puppet</td>
+<td>puppet</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>python</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>q</td>
+</tr>
+<tr>
+<td>R</td>
+<td>r</td>
+</tr>
+<tr>
+<td>RenderMan RIB</td>
+<td>rib</td>
+</tr>
+<tr>
+<td>Roboconf</td>
+<td>roboconf</td>
+</tr>
+<tr>
+<td>RenderMan RSL</td>
+<td>rsl</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>ruby</td>
+</tr>
+<tr>
+<td>Oracle Rules Language</td>
+<td>ruleslanguage</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>rust</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td>scala</td>
+</tr>
+<tr>
+<td>Scheme</td>
+<td>scheme</td>
+</tr>
+<tr>
+<td>Scilab</td>
+<td>scilab</td>
+</tr>
+<tr>
+<td>SCSS</td>
+<td>scss</td>
+</tr>
+<tr>
+<td>Smali</td>
+<td>smali</td>
+</tr>
+<tr>
+<td>SmallTalk</td>
+<td>smalltalk</td>
+</tr>
+<tr>
+<td>SML</td>
+<td>sml</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>sql</td>
+</tr>
+<tr>
+<td>Stata</td>
+<td>stata</td>
+</tr>
+<tr>
+<td>STEP Part21(ISO 10303-21)</td>
+<td>step21</td>
+</tr>
+<tr>
+<td>Stylus</td>
+<td>stylus</td>
+</tr>
+<tr>
+<td>Swift</td>
+<td>swift</td>
+</tr>
+<tr>
+<td>Tcl</td>
+<td>tcl</td>
+</tr>
+<tr>
+<td>Tex</td>
+<td>tex</td>
+</tr>
+<tr>
+<td>text</td>
+<td>text&#x2F;plain</td>
+</tr>
+<tr>
+<td>Thrift</td>
+<td>thrift</td>
+</tr>
+<tr>
+<td>Twig</td>
+<td>twig</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>typescript</td>
+</tr>
+<tr>
+<td>Vala</td>
+<td>vala</td>
+</tr>
+<tr>
+<td>VB.NET</td>
+<td>vbnet</td>
+</tr>
+<tr>
+<td>VBScript in HTML</td>
+<td>vbscript-html</td>
+</tr>
+<tr>
+<td>VBScript</td>
+<td>vbscript</td>
+</tr>
+<tr>
+<td>Verilog</td>
+<td>verilog</td>
+</tr>
+<tr>
+<td>VHDL</td>
+<td>vhdl</td>
+</tr>
+<tr>
+<td>Vim Script</td>
+<td>vim</td>
+</tr>
+<tr>
+<td>Intel x86 Assembly</td>
+<td>x86asm</td>
+</tr>
+<tr>
+<td>XL</td>
+<td>xl</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td>yml</td>
+</tr>
+</tbody></table>
+<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Markdown 官方教程[EB&#x2F;OL]. <a href="https://markdown.com.cn/">https://markdown.com.cn/</a>.<br>[2] MarkDown 支持高亮的语言[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012102104/article/details/78950290">https://blog.csdn.net/u012102104/article/details/78950290</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>语法</tag>
+        <tag>markdown</tag>
+        <tag>写作</tag>
       </tags>
   </entry>
   <entry>
@@ -382,9 +952,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>os</category>
       </categories>
       <tags>
+        <tag>系统</tag>
         <tag>linux</tag>
         <tag>deepin</tag>
-        <tag>系统</tag>
         <tag>深度系统</tag>
         <tag>联想</tag>
         <tag>lenovo</tag>
@@ -2295,9 +2865,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-mrhkGwOdoEHeREKL" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-mrhkGwOdoEHeREKL").style.height=document.getElementById("mmedia-mrhkGwOdoEHeREKL").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-gtWwEQYTfmPsDPlV" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-gtWwEQYTfmPsDPlV").style.height=document.getElementById("mmedia-gtWwEQYTfmPsDPlV").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-mrhkGwOdoEHeREKL").style.height=document.getElementById("mmedia-mrhkGwOdoEHeREKL").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-gtWwEQYTfmPsDPlV").style.height=document.getElementById("mmedia-gtWwEQYTfmPsDPlV").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -2396,7 +2966,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-apjDUkWGlVKtNCwt"></div><script> var apjDUkWGlVKtNCwt_options = JSON.parse('{\"id\":\"mmedia-apjDUkWGlVKtNCwt\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(apjDUkWGlVKtNCwt_options); </script>
+<div id="mmedia-rOBryKeZBQrwPkad"></div><script> var rOBryKeZBQrwPkad_options = JSON.parse('{\"id\":\"mmedia-rOBryKeZBQrwPkad\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(rOBryKeZBQrwPkad_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -2494,7 +3064,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x69;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">

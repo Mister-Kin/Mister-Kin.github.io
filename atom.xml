@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2023-04-13T00:06:25.000Z</updated>
+  <updated>2023-07-18T08:11:29.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,156 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git总结笔记</title>
+    <link href="https://mister-kin.github.io/code/git/"/>
+    <id>https://mister-kin.github.io/code/git/</id>
+    <published>2023-07-18T06:49:53.000Z</published>
+    <updated>2023-07-18T08:11:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="实例">1 &nbsp&nbsp<a href="#实例" class="headerlink" title="实例"></a>实例</h1><h2 id="添加子仓库">1.1 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h2><p>git submodule add <a href="https://github.com/Mister-Kin/actions.git">https://github.com/Mister-Kin/actions.git</a></p><p>启动该功能，更新主仓，同时会执行submodule update<br>git config --global submodule.recurse true</p><h2 id="重命名分支并推送到远程仓库">1.2 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><h1 id="Rename-the-local-branch-to-the-new-name">2 &nbsp&nbsp<a href="#Rename-the-local-branch-to-the-new-name" class="headerlink" title="Rename the local branch to the new name"></a>Rename the local branch to the new name</h1><p>git branch -m <old_name> <new_name></new_name></old_name></p><h1 id="Delete-the-old-branch-on-remote-where-is-for-example-origin">3 &nbsp&nbsp<a href="#Delete-the-old-branch-on-remote-where-is-for-example-origin" class="headerlink" title="Delete the old branch on remote - where  is, for example, origin"></a>Delete the old branch on remote - where <remote> is, for example, origin</remote></h1><p>git push <remote> --delete <old_name></old_name></remote></p><h1 id="Or-shorter-way-to-delete-remote-branch">4 &nbsp&nbsp<a href="#Or-shorter-way-to-delete-remote-branch" class="headerlink" title="Or shorter way to delete remote branch [:]"></a>Or shorter way to delete remote branch [:]</h1><p>git push <remote> :<old_name></old_name></remote></p><p>删除失败时，请更改默认分支</p><h1 id="Prevent-git-from-using-the-old-name-when-pushing-in-the-next-step">5 &nbsp&nbsp<a href="#Prevent-git-from-using-the-old-name-when-pushing-in-the-next-step" class="headerlink" title="Prevent git from using the old name when pushing in the next step."></a>Prevent git from using the old name when pushing in the next step.</h1><h1 id="Otherwise-git-will-use-the-old-upstream-name-instead-of">6 &nbsp&nbsp<a href="#Otherwise-git-will-use-the-old-upstream-name-instead-of" class="headerlink" title="Otherwise, git will use the old upstream name instead of ."></a>Otherwise, git will use the old upstream name instead of <new_name>.</new_name></h1><p>git branch --unset-upstream <new_name></new_name></p><h1 id="Push-the-new-branch-to-remote">7 &nbsp&nbsp<a href="#Push-the-new-branch-to-remote" class="headerlink" title="Push the new branch to remote"></a>Push the new branch to remote</h1><p>git push <remote> <new_name></new_name></remote></p><h1 id="Reset-the-upstream-branch-for-the-new-name-local-branch">8 &nbsp&nbsp<a href="#Reset-the-upstream-branch-for-the-new-name-local-branch" class="headerlink" title="Reset the upstream branch for the new_name local branch"></a>Reset the upstream branch for the new_name local branch</h1><p>git push <remote> -u <new_name></new_name></remote></p><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;实例&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#实例&quot; class=&quot;headerlink&quot; title=&quot;实例&quot;&gt;&lt;/a&gt;实例&lt;/h1&gt;&lt;h2 id=&quot;添加子仓库&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#添加子仓库&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
+    
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="git" scheme="https://mister-kin.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://mister-kin.github.io/tags/github/"/>
+    
+    <category term="笔记" scheme="https://mister-kin.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="代码管理" scheme="https://mister-kin.github.io/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="版本控制" scheme="https://mister-kin.github.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bash总结笔记</title>
+    <link href="https://mister-kin.github.io/code/bash/"/>
+    <id>https://mister-kin.github.io/code/bash/</id>
+    <published>2023-07-18T06:48:46.000Z</published>
+    <updated>2023-07-18T08:11:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p><p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p><h1 id="shell提示符">2 &nbsp&nbsp<a href="#shell提示符" class="headerlink" title="shell提示符"></a>shell提示符</h1><p>shell命令行界面（CLI）</p><h1 id="bash的配置">3 &nbsp&nbsp<a href="#bash的配置" class="headerlink" title="bash的配置"></a>bash的配置</h1><p>source ~&#x2F;.bashrc<br>source ~&#x2F;.profile<br>echo &#39;export APP&#x3D;&#x2F;opt&#x2F;tinyos-2.x&#x2F;apps&#39; &gt;&gt; ~&#x2F;.bashrc</p><h1 id="参数表达式">4 &nbsp&nbsp<a href="#参数表达式" class="headerlink" title="参数表达式"></a><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">参数表达式</a></h1><h2 id="前缀和后缀的获取">4.1 &nbsp&nbsp<a href="#前缀和后缀的获取" class="headerlink" title="前缀和后缀的获取"></a>前缀和后缀的获取</h2><p><code>$&#123;file%.*&#125;</code>：移除最后一个点之后的内容<br><code>$&#123;file%%.*&#125;</code>：移除第一个点之后的内容<br><code>$&#123;file#*.&#125;</code>：移除第一个点之前的内容<br><code>$&#123;file##*.&#125;</code>：移除最后一个点之前的内容</p><h1 id="test">5 &nbsp&nbsp<a href="#test" class="headerlink" title="test"></a>test</h1><p>test可以与&amp;&amp;组成一个条件判断，无需用if命令。</p><h1 id="case">6 &nbsp&nbsp<a href="#case" class="headerlink" title="case"></a>case</h1><p>case命令，无法使用test命令。<br>case不能用正则表达，只用<a href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching">样式匹配</a>。</p><h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BLUM R, BRESNAHAN C. Linux 命令行与 shell 脚本编程大全[M]. 门佳, 武海峰, 译. 3 版. 北京: 人民邮电出版社, 2016.<br>[2] GNU Bash[EB&#x2F;OL]. <a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>.<br>[3] Test variable in a bash case statement[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/205084/test%E2%80%91variable%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://unix.stackexchange.com/questions/205084/test‑variable‑in‑a‑bash‑case‑statement</a>.<br>[4] Regular expressions in a Bash case statement[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/9631335/regular%E2%80%91expressions%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://stackoverflow.com/questions/9631335/regular‑expressions‑in‑a‑bash‑case‑statement</a>.<br>[5] Adding suffix to filename during for loop in bash[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/600051/adding%E2%80%91suffix%E2%80%91to%E2%80%91filename%E2%80%91during%E2%80%91for%E2%80%91loop%E2%80%91in%E2%80%91bash">https://unix.stackexchange.com/questions/600051/adding‑suffix‑to‑filename‑during‑for‑loop‑in‑bash</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Bash-的简介&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#Bash-的简介&quot; class=&quot;headerlink&quot; title=&quot;Bash 的简介&quot;&gt;&lt;/a&gt;Bash</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
+    
+    
+    <category term="bash" scheme="https://mister-kin.github.io/tags/bash/"/>
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="shell" scheme="https://mister-kin.github.io/tags/shell/"/>
+    
+    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
+    
+    <category term="终端" scheme="https://mister-kin.github.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <link href="https://mister-kin.github.io/code/latex/"/>
+    <id>https://mister-kin.github.io/code/latex/</id>
+    <published>2023-07-18T06:40:16.000Z</published>
+    <updated>2023-07-18T08:11:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="宏包">1 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">1.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p><h1 id="常见问题">2 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">2.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;宏包&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#宏包&quot; class=&quot;headerlink&quot; title=&quot;宏包&quot;&gt;&lt;/a&gt;宏包&lt;/h1&gt;&lt;h2 id=&quot;moderncv&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#moderncv&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
+    
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="笔记" scheme="https://mister-kin.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="LaTeX" scheme="https://mister-kin.github.io/tags/LaTeX/"/>
+    
+    <category term="TeX" scheme="https://mister-kin.github.io/tags/TeX/"/>
+    
+    <category term="语法" scheme="https://mister-kin.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="编译" scheme="https://mister-kin.github.io/tags/%E7%BC%96%E8%AF%91/"/>
+    
+    <category term="排版" scheme="https://mister-kin.github.io/tags/%E6%8E%92%E7%89%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法总结笔记</title>
+    <link href="https://mister-kin.github.io/code/markdown/"/>
+    <id>https://mister-kin.github.io/code/markdown/</id>
+    <published>2023-07-18T06:32:10.000Z</published>
+    <updated>2023-07-18T08:11:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="标题">1 &nbsp&nbsp<a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul><li>一级标题：<code># 标题</code></li><li>二级标题：<code>## 标题</code></li><li>三级标题：<code>### 标题</code></li><li>四级标题：<code>#### 标题</code></li><li>五级标题：<code>##### 标题</code></li><li>六级标题：<code>###### 标题</code></li></ul><h1 id="代码块">2 &nbsp&nbsp<a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码">2.1 &nbsp&nbsp<a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号包裹住代码内容：<code>`代码内容`</code></p><h2 id="多行代码（围栏代码块）">2.2 &nbsp&nbsp<a href="#多行代码（围栏代码块）" class="headerlink" title="多行代码（围栏代码块）"></a>多行代码（围栏代码块）</h2><p>在代码内容前后使用三个反引号包裹住。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```语言关键字</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure><p>代码块支持语法高亮的语言关键字：</p><table><thead><tr><th>language</th><th>key</th></tr></thead><tbody><tr><td>1C</td><td>1c</td></tr><tr><td>ActionScript</td><td>actionscript</td></tr><tr><td>Apache</td><td>apache</td></tr><tr><td>AppleScript</td><td>applescript</td></tr><tr><td>AsciiDoc</td><td>asciidoc</td></tr><tr><td>AspectJ</td><td>asciidoc</td></tr><tr><td>AutoHotkey</td><td>autohotkey</td></tr><tr><td>AVR Assembler</td><td>avrasm</td></tr><tr><td>Axapta</td><td>axapta</td></tr><tr><td>Bash</td><td>bash</td></tr><tr><td>BrainFuck</td><td>brainfuck</td></tr><tr><td>Cap’n Proto</td><td>capnproto</td></tr><tr><td>Clojure REPL</td><td>clojure</td></tr><tr><td>Clojure</td><td>clojure</td></tr><tr><td>CMake</td><td>cmake</td></tr><tr><td>CoffeeScript</td><td>coffeescript</td></tr><tr><td>C++</td><td>cpp</td></tr><tr><td>C#</td><td>cs</td></tr><tr><td>CSS</td><td>css</td></tr><tr><td>D</td><td>d</td></tr><tr><td>Dart</td><td>d</td></tr><tr><td>Delphi</td><td>delphi</td></tr><tr><td>Diff</td><td>diff</td></tr><tr><td>Django</td><td>django</td></tr><tr><td>DOS.bat</td><td>dos</td></tr><tr><td>Dust</td><td>dust</td></tr><tr><td>Elixir</td><td>elixir</td></tr><tr><td>ERB(Embedded Ruby)</td><td>erb</td></tr><tr><td>Erlang REPL</td><td>erlang-repl</td></tr><tr><td>Erlang</td><td>erlang</td></tr><tr><td>FIX</td><td>fix</td></tr><tr><td>F#</td><td>fsharp</td></tr><tr><td>G-code(ISO 6983)</td><td>gcode</td></tr><tr><td>Gherkin</td><td>gherkin</td></tr><tr><td>GLSL</td><td>glsl</td></tr><tr><td>Go</td><td>go</td></tr><tr><td>Gradle</td><td>gradle</td></tr><tr><td>Groovy</td><td>groovy</td></tr><tr><td>Haml</td><td>haml</td></tr><tr><td>Handlebars</td><td>handlebars</td></tr><tr><td>Haskell</td><td>haskell</td></tr><tr><td>Haxe</td><td>haxe</td></tr><tr><td>HTML</td><td>html</td></tr><tr><td>HTTP</td><td>http</td></tr><tr><td>Ini file</td><td>ini</td></tr><tr><td>Java</td><td>java</td></tr><tr><td>JavaScript</td><td>javascript</td></tr><tr><td>JSON</td><td>json</td></tr><tr><td>Lasso</td><td>lasso</td></tr><tr><td>Less</td><td>less</td></tr><tr><td>Lisp</td><td>lisp</td></tr><tr><td>LiveCode</td><td>livecodeserver</td></tr><tr><td>LiveScript</td><td>livescript</td></tr><tr><td>Lua</td><td>lua</td></tr><tr><td>Makefile</td><td>makefile</td></tr><tr><td>Markdown</td><td>markdown</td></tr><tr><td>Mathematica</td><td>mathematica</td></tr><tr><td>Matlab</td><td>matlab</td></tr><tr><td>MEL (Maya Embedded Language)</td><td>mel</td></tr><tr><td>Mercury</td><td>mercury</td></tr><tr><td>Mizar</td><td>mizar</td></tr><tr><td>Monkey</td><td>monkey</td></tr><tr><td>Nginx</td><td>nginx</td></tr><tr><td>Nimrod</td><td>nimrod</td></tr><tr><td>Nix</td><td>nix</td></tr><tr><td>NSIS</td><td>nsis</td></tr><tr><td>Objective C</td><td>objectivec</td></tr><tr><td>OCaml</td><td>ocaml</td></tr><tr><td>Oxygene</td><td>oxygene</td></tr><tr><td>Parser 3</td><td>parser3</td></tr><tr><td>Perl</td><td>perl</td></tr><tr><td>PHP</td><td>php</td></tr><tr><td>PowerShell</td><td>powershell</td></tr><tr><td>Processing</td><td>processing</td></tr><tr><td>Python’s profiler output</td><td>profile</td></tr><tr><td>Protocol Buffers</td><td>protobuf</td></tr><tr><td>Puppet</td><td>puppet</td></tr><tr><td>Python</td><td>python</td></tr><tr><td>Q</td><td>q</td></tr><tr><td>R</td><td>r</td></tr><tr><td>RenderMan RIB</td><td>rib</td></tr><tr><td>Roboconf</td><td>roboconf</td></tr><tr><td>RenderMan RSL</td><td>rsl</td></tr><tr><td>Ruby</td><td>ruby</td></tr><tr><td>Oracle Rules Language</td><td>ruleslanguage</td></tr><tr><td>Rust</td><td>rust</td></tr><tr><td>Scala</td><td>scala</td></tr><tr><td>Scheme</td><td>scheme</td></tr><tr><td>Scilab</td><td>scilab</td></tr><tr><td>SCSS</td><td>scss</td></tr><tr><td>Smali</td><td>smali</td></tr><tr><td>SmallTalk</td><td>smalltalk</td></tr><tr><td>SML</td><td>sml</td></tr><tr><td>SQL</td><td>sql</td></tr><tr><td>Stata</td><td>stata</td></tr><tr><td>STEP Part21(ISO 10303-21)</td><td>step21</td></tr><tr><td>Stylus</td><td>stylus</td></tr><tr><td>Swift</td><td>swift</td></tr><tr><td>Tcl</td><td>tcl</td></tr><tr><td>Tex</td><td>tex</td></tr><tr><td>text</td><td>text&#x2F;plain</td></tr><tr><td>Thrift</td><td>thrift</td></tr><tr><td>Twig</td><td>twig</td></tr><tr><td>TypeScript</td><td>typescript</td></tr><tr><td>Vala</td><td>vala</td></tr><tr><td>VB.NET</td><td>vbnet</td></tr><tr><td>VBScript in HTML</td><td>vbscript-html</td></tr><tr><td>VBScript</td><td>vbscript</td></tr><tr><td>Verilog</td><td>verilog</td></tr><tr><td>VHDL</td><td>vhdl</td></tr><tr><td>Vim Script</td><td>vim</td></tr><tr><td>Intel x86 Assembly</td><td>x86asm</td></tr><tr><td>XL</td><td>xl</td></tr><tr><td>XML</td><td>xml</td></tr><tr><td>YAML</td><td>yml</td></tr></tbody></table><h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Markdown 官方教程[EB&#x2F;OL]. <a href="https://markdown.com.cn/">https://markdown.com.cn/</a>.<br>[2] MarkDown 支持高亮的语言[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012102104/article/details/78950290">https://blog.csdn.net/u012102104/article/details/78950290</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;标题&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;一级标题：&lt;code&gt;# 标题&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;二级标题：&lt;code&gt;##</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
+    
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="笔记" scheme="https://mister-kin.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="语法" scheme="https://mister-kin.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="markdown" scheme="https://mister-kin.github.io/tags/markdown/"/>
+    
+    <category term="写作" scheme="https://mister-kin.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Blender教程总结</title>
@@ -596,11 +746,11 @@
   </entry>
   
   <entry>
-    <title>Linux总结</title>
+    <title>Linux总结笔记</title>
     <link href="https://mister-kin.github.io/code/linux/"/>
     <id>https://mister-kin.github.io/code/linux/</id>
     <published>2022-02-05T17:14:25.000Z</published>
-    <updated>2022-02-07T13:10:07.000Z</updated>
+    <updated>2023-07-18T08:11:29.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="终端符号输入">1 &nbsp&nbsp<a href="#终端符号输入" class="headerlink" title="终端符号输入"></a>终端符号输入</h1><ul><li>ctrl+c：停止</li><li>ctrl+z：停止输入</li></ul><h1 id="包管理器">2 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">2.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">2.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure><h1 id="硬盘和分区管理">3 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="将-home目录挂载到新分区（或新硬盘）">3.1 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line">sudo mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line">sudo rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line">sudo <span class="built_in">mv</span> /home /home_old</span><br><span class="line">sudo <span class="built_in">mkdir</span> /home</span><br><span class="line">sudo umount /dev/新分区</span><br><span class="line">sudo mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line">sudo gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line">sudo <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure><h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="普通用户导致的编译问题">4.1 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p><p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p><h1 id="账户管理">5 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure><h2 id="自动root登录">5.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"># 在daemon下添加</span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure><h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[2] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.</p>]]></content>
     
@@ -618,9 +768,17 @@
     <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
     
     
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
     <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
     
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="终端" scheme="https://mister-kin.github.io/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+    <category term="笔记" scheme="https://mister-kin.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="命令" scheme="https://mister-kin.github.io/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
@@ -860,155 +1018,6 @@
     <category term="习题答案" scheme="https://mister-kin.github.io/tags/%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88/"/>
     
     <category term="练习总结" scheme="https://mister-kin.github.io/tags/%E7%BB%83%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>翻译计划</title>
-    <link href="https://mister-kin.github.io/translations/translation-plan/"/>
-    <id>https://mister-kin.github.io/translations/translation-plan/</id>
-    <published>2022-01-16T08:21:06.000Z</published>
-    <updated>2022-01-19T12:08:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p><p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p><p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p><p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p><h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p><h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table><thead><tr><th align="center">视频名</th><th align="center">中译名</th><th align="center">完成进度</th><th align="center">字幕下载</th></tr></thead><tbody><tr><td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td><td align="center">惊悚小精灵</td><td align="center">已翻译</td><td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td></tr><tr><td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td><td align="center">每日蠢事</td><td align="center">已翻译</td><td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td></tr></tbody></table><h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table><thead><tr><th align="center">视频名</th><th align="center">中译名</th><th align="center">完成进度</th><th align="center">字幕下载</th></tr></thead></table>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;计划重启缘由&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#计划重启缘由&quot; class=&quot;headerlink&quot; title=&quot;计划重启缘由&quot;&gt;&lt;/a&gt;计划重启缘由&lt;/h1&gt;&lt;p&gt;2018年末之际，我发布了一篇博文&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="translations" scheme="https://mister-kin.github.io/categories/translations/"/>
-    
-    
-    <category term="翻译" scheme="https://mister-kin.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-    <category term="计划" scheme="https://mister-kin.github.io/tags/%E8%AE%A1%E5%88%92/"/>
-    
-    <category term="字幕" scheme="https://mister-kin.github.io/tags/%E5%AD%97%E5%B9%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <link href="https://mister-kin.github.io/translations/blender-animation/sprite-fright/"/>
-    <id>https://mister-kin.github.io/translations/blender-animation/sprite-fright/</id>
-    <published>2022-01-15T15:34:22.000Z</published>
-    <updated>2022-01-15T15:38:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p><h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-mrhkGwOdoEHeREKL" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-mrhkGwOdoEHeREKL").style.height=document.getElementById("mmedia-mrhkGwOdoEHeREKL").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-mrhkGwOdoEHeREKL").style.height=document.getElementById("mmedia-mrhkGwOdoEHeREKL").scrollWidth*0.76+"px";    }; </script><h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p><h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul><li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li><li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li><li>get wasted 喝醉，形容大醉</li><li>way ahead of you 形容比别人更早地完成或者解决某事</li><li>dilly-dally v. 犹豫，磨蹭</li><li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li><li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li><li>be supposed to do&#x2F;be sth. 应当……</li><li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li><li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li><li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul><li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li></ul></li><li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li><li>shag v. 和……性交（该词我根据上下文来翻译了）<ul><li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li></ul></li><li>peppermint n. （常用于糖果的）薄荷</li><li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul><li>We sprite balance to the forest. 我们让森林保持平衡</li><li>Sprite them! 净化他们</li></ul></li><li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li><li>treat sth. as sth. 把……视为……，把……看作……</li></ul><h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;翻译的感想&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#翻译的感想&quot; class=&quot;headerlink&quot; title=&quot;翻译的感想&quot;&gt;&lt;/a&gt;翻译的感想&lt;/h1&gt;&lt;p&gt;抽空翻译了blender的开放动画电影《Sprite</summary>
-        
-      
-    
-    
-    
-    <category term="translations" scheme="https://mister-kin.github.io/categories/translations/"/>
-    
-    <category term="blender-animation" scheme="https://mister-kin.github.io/categories/translations/blender-animation/"/>
-    
-    
-    <category term="翻译" scheme="https://mister-kin.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-    <category term="blender" scheme="https://mister-kin.github.io/tags/blender/"/>
-    
-    <category term="字幕" scheme="https://mister-kin.github.io/tags/%E5%AD%97%E5%B9%95/"/>
-    
-    <category term="英语" scheme="https://mister-kin.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
-    
-    <category term="开放动画" scheme="https://mister-kin.github.io/tags/%E5%BC%80%E6%94%BE%E5%8A%A8%E7%94%BB/"/>
-    
-    <category term="动画" scheme="https://mister-kin.github.io/tags/%E5%8A%A8%E7%94%BB/"/>
-    
-    <category term="动画电影" scheme="https://mister-kin.github.io/tags/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/"/>
-    
-    <category term="电影" scheme="https://mister-kin.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>给联想z500安装deepin linux（深度系统）</title>
-    <link href="https://mister-kin.github.io/os/install-deepin-on-lenovo-z500/"/>
-    <id>https://mister-kin.github.io/os/install-deepin-on-lenovo-z500/</id>
-    <published>2022-01-14T13:28:29.000Z</published>
-    <updated>2022-01-14T13:35:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="起因">1 &nbsp&nbsp<a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。</p><p>这个手提电脑是联想在2012年推出的erazer z500系列机型，大概是2013年或是2014年买的吧。用到现在，这个老本子大修过好几次，换过屏幕，换过电源适配器，换过电池……总之是遇到过不少大大小小的毛病。</p><p>印象中，这本子最初的系统是win7，后来换过win8和win8.1，现在用的是win10。不过整体配置确实是不太适合新版win10了，毕竟CPU是3代的i5，频率也不高，系统空载时占用的内存也不少。</p><h1 id="解决方案">2 &nbsp&nbsp<a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>既然是系统不太合适，那就更换系统呗！我凭借自身的知识储备，大致想出了如下的系统更换方案：</p><ol><li>老版的win10</li><li>精简版win10</li><li>win8.1</li><li>win7</li><li>linux</li></ol><p>方案1的老版win10换汤不换药，感觉很大机率还是会出现卡顿的现象，不作考虑。</p><p>方案2，网上论坛流传的精简版镜像基本都会添加私货（各种乱七八糟的预装软件，同时可能也会有后门软件，不安全），自己动手制作精简版镜像倒也行，不过现在都没啥精力折腾这些东西了，这个方案也pass。</p><p>方案3，网卡驱动会有问题，以前这本子用win8.1的时候就遇到过无法连接某些wifi信号，pass。</p><p>方案4的win7系统太老了，直接pass。</p><p>最后也就只剩方案5——linux系统。linux确实很适合老配置的机子，系统本身就不会消耗过多的硬件资源。不过，linux的软件生态和驱动远不如windows平台，并且发行版众多。现在暂且不考虑软件生态和驱动问题，如何选择linux的发行版呢？</p><span id="more"></span><p>arch？不行！没啥精力折腾了。</p><p>ubuntu？嗯，倒还行，不过有点臃肿，而且不太适合国内的使用习惯。</p><p>这个时候，deepin出现在我的脑海中。deepin和ubuntu都是基于debian，而且deepin的桌面gui比较符合国内使用习惯，虽然对硬件要求比ubuntu高，但我认为z500的配置应该足够了。</p><p>至于linux的软件生态问题，毕竟现在这老本子是家里长辈在使用，老父亲平时也就只用酷狗听一下歌。酷狗好像没有linux客户端，不过没关系，大不了用安卓版或是wine（应该能解决吧？(＞﹏＜)）。</p><p>至于驱动，应该是双显卡驱动和网卡驱动可能会有点问题。</p><p>多思无益，先安装再说吧，走一步，看一步！</p><h1 id="deepin的安装步骤">3 &nbsp&nbsp<a href="#deepin的安装步骤" class="headerlink" title="deepin的安装步骤"></a>deepin的安装步骤</h1><h2 id="备份数据">3.1 &nbsp&nbsp<a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h2><p>安装系统前，第一步当然是备份数据。数据无价，可别因为懒而导致丢失宝贵的数据。</p><h2 id="制作启动盘">3.2 &nbsp&nbsp<a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h2><ol><li>下载系统镜像和启动盘制作工具：<a href="https://www.deepin.org/zh/download/">点击跳转下载地址</a>。</li><li>准备一个大于2G的U盘，备份U盘数据。</li><li>利用启动盘制作工具，制作深度系统启动盘（格式化U盘制作）。</li></ol><h2 id="安装deepin">3.3 &nbsp&nbsp<a href="#安装deepin" class="headerlink" title="安装deepin"></a>安装deepin</h2><ol><li>插入U盘，开机，摁Fn+F12进入快速启动项（本机的BIOS开启了Fn功能键），选择U盘启动项。</li><li>按照提示进行安装，这里不一一列出。</li><li>安装时，勾选集成的闭源显卡驱动。</li><li>我是手动分区的（分区方案如下），不懂的朋友可以选择全盘安装。</li><li>完成安装，重启系统，拔出U盘。</li></ol><p><strong>分区方案（120G的固态硬盘，列表顺序就是实际的分区顺序）</strong></p><ul><li><code>/boot/efi</code> 300M</li><li><code>/boot</code> 1G</li><li><code>swap</code> 12G（8G×1.5）</li><li><code>/</code> 剩余的空间</li><li><code>/home</code> 40G</li></ul><h2 id="驱动安装">3.4 &nbsp&nbsp<a href="#驱动安装" class="headerlink" title="驱动安装"></a>驱动安装</h2><p><strong>安装显卡驱动</strong></p><ol><li>打开商店，搜索并安装「显卡驱动管理器」。</li><li>选择prime显卡方案。</li><li>按照提示重启系统。</li></ol><p><strong>安装蓝牙管理器</strong></p><ol><li>打开终端</li><li>输入命令：<code>sudo apt-get install blueman</code></li></ol><p>安装完显卡驱动和蓝牙管理器之后，驱动这方面基本没啥问题。</p><h2 id="几个值得注意的地方">3.5 &nbsp&nbsp<a href="#几个值得注意的地方" class="headerlink" title="几个值得注意的地方"></a>几个值得注意的地方</h2><ul><li><strong>不需要关闭BIOS的安全启动</strong>：deepin v20.2.2及之后的版本都能较好的支持安全启动，因此安装deepin不需要专门关闭BIOS的安全启动。</li><li><strong>未安装蓝牙管理器之前，不要使用无线鼠标</strong>：deepin默认状态下没有蓝牙管理器，因此，使用无线鼠标会出现一些莫名其妙的bug（例如，若不关闭安全启动，安装过程中则无法点击；即使关闭安全启动后安装系统时，点击操作也会导致UI变成外文语言；安装系统后初次启动时，无线鼠标使用正常，但重启后就会出现异常卡顿现象，甚至无法点击）。这些bug当时困扰了我许久，后来我想起无线鼠标的原理，才准确地定位出问题所在。只有安装蓝牙管理器之后，才能正常使用无线鼠标。</li></ul><h1 id="常规软件的安装和使用">4 &nbsp&nbsp<a href="#常规软件的安装和使用" class="headerlink" title="常规软件的安装和使用"></a>常规软件的安装和使用</h1><p>目前深度商店的软件应用数量已经比以前增加了很多，在商店中搜索并安装自己想用的软件即可。</p><p>让我最为惊喜的是，商店竟然有酷狗，而且不是网页版或者安卓版。这点不错，也省去了我手动折腾wine的麻烦。</p><p>至此，z500算是获得了新生。</p><h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 如何安装[EB&#x2F;OL]. <a href="https://www.deepin.org/zh/installation/">https://www.deepin.org/zh/installation/</a>.<br>[2] 蓝牙[EB&#x2F;OL]. <a href="https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99">https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99</a>.<br>[3] Recommended Partitioning Scheme[EB&#x2F;OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;起因&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h1&gt;&lt;p&gt;前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。&lt;/p&gt;
-&lt;p&gt;这个手提电脑是联想在2012年推出的erazer z500系列机型，大概是2013年或是2014年买的吧。用到现在，这个老本子大修过好几次，换过屏幕，换过电源适配器，换过电池……总之是遇到过不少大大小小的毛病。&lt;/p&gt;
-&lt;p&gt;印象中，这本子最初的系统是win7，后来换过win8和win8.1，现在用的是win10。不过整体配置确实是不太适合新版win10了，毕竟CPU是3代的i5，频率也不高，系统空载时占用的内存也不少。&lt;/p&gt;
-&lt;h1 id=&quot;解决方案&quot;&gt;2 &amp;nbsp&amp;nbsp&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h1&gt;&lt;p&gt;既然是系统不太合适，那就更换系统呗！我凭借自身的知识储备，大致想出了如下的系统更换方案：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;老版的win10&lt;/li&gt;
-&lt;li&gt;精简版win10&lt;/li&gt;
-&lt;li&gt;win8.1&lt;/li&gt;
-&lt;li&gt;win7&lt;/li&gt;
-&lt;li&gt;linux&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;方案1的老版win10换汤不换药，感觉很大机率还是会出现卡顿的现象，不作考虑。&lt;/p&gt;
-&lt;p&gt;方案2，网上论坛流传的精简版镜像基本都会添加私货（各种乱七八糟的预装软件，同时可能也会有后门软件，不安全），自己动手制作精简版镜像倒也行，不过现在都没啥精力折腾这些东西了，这个方案也pass。&lt;/p&gt;
-&lt;p&gt;方案3，网卡驱动会有问题，以前这本子用win8.1的时候就遇到过无法连接某些wifi信号，pass。&lt;/p&gt;
-&lt;p&gt;方案4的win7系统太老了，直接pass。&lt;/p&gt;
-&lt;p&gt;最后也就只剩方案5——linux系统。linux确实很适合老配置的机子，系统本身就不会消耗过多的硬件资源。不过，linux的软件生态和驱动远不如windows平台，并且发行版众多。现在暂且不考虑软件生态和驱动问题，如何选择linux的发行版呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="os" scheme="https://mister-kin.github.io/categories/os/"/>
-    
-    
-    <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
-    
-    <category term="deepin" scheme="https://mister-kin.github.io/tags/deepin/"/>
-    
-    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="深度系统" scheme="https://mister-kin.github.io/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="联想" scheme="https://mister-kin.github.io/tags/%E8%81%94%E6%83%B3/"/>
-    
-    <category term="lenovo" scheme="https://mister-kin.github.io/tags/lenovo/"/>
-    
-    <category term="z500" scheme="https://mister-kin.github.io/tags/z500/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>站点导航和公告</title>
-    <link href="https://mister-kin.github.io/navigation-announcement/"/>
-    <id>https://mister-kin.github.io/navigation-announcement/</id>
-    <published>2020-08-09T15:23:00.000Z</published>
-    <updated>2023-04-13T00:06:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><div style="margin-top: -35px; margin-bottom: 25px"><div class="dropdown-menu">    <button class="dropdown-menu-btn">镜像网站</button>    <div class="dropdown-menu-content">        <a href="https://mister-kin.gitee.io/">GiteePages</a>    </div></div><div class="dropdown-menu">    <button class="dropdown-menu-btn">软件作品</button>    <div class="dropdown-menu-content">        <a href="/works/software-works/toggle-language/">切换语言</a>        <a href="/works/software-works/batch-tools/">批处理工具</a>    </div></div><div class="dropdown-menu">    <button class="dropdown-menu-btn">艺术作品</button>    <div class="dropdown-menu-content">    </div></div><div class="dropdown-menu">    <button class="dropdown-menu-btn">关于我</button>    <div class="dropdown-menu-content">        <a href="/about">关于我</a>        <a href="/about/#联系方式">联系我</a>        <a href="/about/#关注我">关注我</a>        <a href="/about/#免费支持我">支持我</a>    </div></div><div class="dropdown-menu">    <button class="dropdown-menu-btn">关于本站</button>    <div class="dropdown-menu-content">        <a href="/about/about-site">关于本站</a>        <a href="/about/about-site/#本站许可协议">许可说明</a>        <a href="/about/logs">更新日志</a>        <a href="/about/third-party-declaration/">第三方声明</a>        <a href="/about/post-offline-download/">离线下载</a>    </div></div></div><div class="note info no-icon"><p><strong>置顶公告1：若需联系，请通过邮箱或QQ联系我，其他方式我基本不看！！！具体联系方式请点击并详看<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">「联系我」</a>。</strong></p></div><div class="note info no-icon"><p><strong>置顶公告2：点击访问本站的「<a href="https://mister-kin.gitee.io/">基于 Gitee Pages 的镜像网站</a>」，以解决国内访问 Github Pages 时网络不畅的问题。</strong></p></div><div class="note info no-icon"><p><strong>置顶公告3：本站一些重要的博文会有对应的PDF及LaTeX源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p></div><div class="note danger no-icon"><p><strong>当前公告：随缘更新</strong></p></div></center><style type="text/css">.dropdown-menu {    position: relative;    display: inline-block;}.dropdown-menu-btn {    background: var(--btn-default-bg);    border: 5px solid var(--btn-default-border-color);    border-radius: 5px;    color: var(--btn-default-color);    display: inline-block;    font-weight: bold;    font-size: 25px;    line-height: 2;    padding: 0 12px;    text-decoration: none;    transition-property: background-color;    transition-delay: 0s;    transition-duration: .2s;    transition-timing-function: ease-in-out;    margin-right: -5px;}.dropdown-menu:hover .dropdown-menu-btn {    background: var(--btn-default-hover-bg);    border-color: var(--btn-default-hover-border-color);    color: var(--btn-default-hover-color);    cursor: pointer;}.dropdown-menu-content {    display: none;    position: absolute;    z-index: 9999;    border: 3px solid var(--btn-default-border-color);    border-radius: 3px;    width: 100%;}.dropdown-menu:hover .dropdown-menu-content {    display: block;    border-color: var(--btn-default-hover-border-color);}.dropdown-menu-content a {    display: block;    font-size: 22px;    color: var(--btn-default-color);    background-color: var(--btn-default-bg);    padding:  5px 5px;}.dropdown-menu-content a:hover {    color: var(--btn-default-hover-color);    background: var(--btn-default-hover-bg);    cursor: pointer;}</style>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;center&gt;
-&lt;div style=&quot;margin-top: -35px; margin-bottom: 25px&quot;&gt;
-
-&lt;div class=&quot;dropdown-menu&quot;&gt;
-    &lt;button</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
