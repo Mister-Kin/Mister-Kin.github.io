@@ -316,14 +316,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Git总结笔记</title>
     <url>/code/git/</url>
-    <content><![CDATA[<h1 id="Git-LFS">1 &nbsp&nbsp<a href="#Git-LFS" class="headerlink" title="Git LFS"></a>Git LFS</h1><p>windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code></p>
+    <content><![CDATA[<h1 id="克隆远程仓库中的指定文件或者文件夹">1 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h1><p>以克隆blender手册翻译的简中为例：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> locale</span><br><span class="line">$ <span class="built_in">cd</span> locale</span><br><span class="line"></span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> D:/git/blender-manual/locale/.git/</span><br><span class="line"></span><br><span class="line">$ git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line">Updating origin</span><br><span class="line">remote: Enumerating objects: 420552, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (420552/420552), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (138226/138226), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 420552 (delta 268033), reused 420520 (delta 268009), pack-reused 0</span><br><span class="line">Receiving objects: 100% (420552/420552), 834.07 MiB | 274.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (268033/268033), <span class="keyword">done</span>.</span><br><span class="line">From https://projects.blender.org/blender/blender-manual-translations</span><br><span class="line"> * [new branch]            main       -&gt; origin/main</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout <span class="comment"># sparse-checkout文件里写入要拉取的文件或者文件夹</span></span><br><span class="line">$ git config core.sparsecheckout <span class="literal">true</span> <span class="comment"># 开启稀疏检出</span></span><br><span class="line">$ git pull origin main <span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Git-LFS大文件管理">2 &nbsp&nbsp<a href="#Git-LFS大文件管理" class="headerlink" title="Git LFS大文件管理"></a>Git LFS大文件管理</h1><p>windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code></p>
 <p>添加LFS需要管理的大文件：<code>git lfs track test.txt</code></p>
-<h1 id="添加子仓库">2 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="添加子仓库">3 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 
-<h1 id="重命名分支并推送到远程仓库">3 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="重命名分支并推送到远程仓库">4 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
 
-<p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.</p>
+<p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -1116,30 +1119,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>计算机硬件排障总结</title>
-    <url>/hardware/hardware-troubleshooting/</url>
-    <content><![CDATA[<h1 id="不开机">1 &nbsp&nbsp<a href="#不开机" class="headerlink" title="不开机"></a>不开机</h1><h2 id="内存接触不良导致自启后直接掉电">1.1 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，重新重插（尝试擦拭金手指）</p>
-<h1 id="屏幕">2 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
-<h1 id="主板">3 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">3.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
-<h1 id="其它类别">4 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">4.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.</p>
-]]></content>
-      <categories>
-        <category>hardware</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>维修</tag>
-        <tag>故障</tag>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给联想z500安装deepin linux（深度系统）</title>
-    <url>/os/install-deepin-on-lenovo-z500/</url>
+    <url>/software/install-deepin-on-lenovo-z500/</url>
     <content><![CDATA[<h1 id="起因">1 &nbsp&nbsp<a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。</p>
 <p>这个手提电脑是联想在2012年推出的erazer z500系列机型，大概是2013年或是2014年买的吧。用到现在，这个老本子大修过好几次，换过屏幕，换过电源适配器，换过电池……总之是遇到过不少大大小小的毛病。</p>
 <p>印象中，这本子最初的系统是win7，后来换过win8和win8.1，现在用的是win10。不过整体配置确实是不太适合新版win10了，毕竟CPU是3代的i5，频率也不高，系统空载时占用的内存也不少。</p>
@@ -1207,7 +1188,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 如何安装[EB&#x2F;OL]. <a href="https://www.deepin.org/zh/installation/">https://www.deepin.org/zh/installation/</a>.<br>[2] 蓝牙[EB&#x2F;OL]. <a href="https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99">https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99</a>.<br>[3] Recommended Partitioning Scheme[EB&#x2F;OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>
 ]]></content>
       <categories>
-        <category>os</category>
+        <category>software</category>
       </categories>
       <tags>
         <tag>系统</tag>
@@ -1217,97 +1198,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>联想</tag>
         <tag>lenovo</tag>
         <tag>z500</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10系统排障总结</title>
-    <url>/os/windows10-troubleshooting/</url>
-    <content><![CDATA[<h1 id="LTSC系统相关">1 &nbsp&nbsp<a href="#LTSC系统相关" class="headerlink" title="LTSC系统相关"></a>LTSC系统相关</h1><h2 id="LTSC2021安装微软商店MicrosoftStore">1.1 &nbsp&nbsp<a href="#LTSC2021安装微软商店MicrosoftStore" class="headerlink" title="LTSC2021安装微软商店MicrosoftStore"></a>LTSC2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
-<h1 id="运行库">2 &nbsp&nbsp<a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><h2 id="Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954">2.1 &nbsp&nbsp<a href="#Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954" class="headerlink" title="Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954"></a>Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954</h2><p>问题：一般是系统更新程序WUserver无法争取获取更新文件，可能是由于精简或者相关服务项被禁用导致引起。</p>
-<p>解决方法：</p>
-<ol>
-<li>使用离线方式安装（推荐此法）</li>
-<li>恢复WUserver的正常运行，确保在线安装的功能可以正常获取更新文件</li>
-</ol>
-<p>离线方式安装步骤：</p>
-<ol>
-<li>下载当前系统版本所对应的系统镜像</li>
-<li>把source文件夹中的sxs文件夹解压出来，例如<code>C:\path\sxs</code></li>
-<li>管理员身份打开powershell，运行安装命令：<code>dism.exe /online /enable-feature /featurename:NetFX3 /Source:C:\path\sxs</code></li>
-</ol>
-<h1 id="数据恢复">3 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h1><p>专业数据恢复软件：PC3000</p>
-<h1 id="语言设置">4 &nbsp&nbsp<a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h1><h2 id="欢迎屏幕和程序语言乱码">4.1 &nbsp&nbsp<a href="#欢迎屏幕和程序语言乱码" class="headerlink" title="欢迎屏幕和程序语言乱码"></a>欢迎屏幕和程序语言乱码</h2><p>设置&gt;时间和语言&gt;语言&gt;管理语言设置。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/windows10-troubleshooting/setting-language-zones.webp">区域语言设置</div>
-<div class="flex-column">
-<img data-src="/images/windows10-troubleshooting/setting-language-welcom-screen.webp">欢迎屏幕设置</div>
-</div>
-
-
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 安装.NET Framework 3.5 Error 0x800f0950 in Windows 10[EB&#x2F;OL]. <a href="https://blog.csdn.net/sinat_29315697/article/details/90438542">https://blog.csdn.net/sinat_29315697/article/details/90438542</a>.<br>[2] Win10 .Net Framework 3.5 安装错误 0x800F0954[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012722571/article/details/106336899">https://blog.csdn.net/u012722571/article/details/106336899</a>.</p>
-]]></content>
-      <categories>
-        <category>os</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>系统</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>维修</tag>
-        <tag>故障</tag>
-        <tag>windows10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows平台的运行库修复</title>
-    <url>/software/runtime-library-repair-on-windows/</url>
-    <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
-</div>
-
-<h1 id="什么是运行库">1 &nbsp&nbsp<a href="#什么是运行库" class="headerlink" title="什么是运行库"></a>什么是运行库</h1><h1 id="安装软件或运行软件时提示dll缺失等现象产生的原因">2 &nbsp&nbsp<a href="#安装软件或运行软件时提示dll缺失等现象产生的原因" class="headerlink" title="安装软件或运行软件时提示dll缺失等现象产生的原因"></a>安装软件或运行软件时提示dll缺失等现象产生的原因</h1><p>使用不同框架环境来开发的程序需要相对应的运行库才能正常工作，例如VC的程序需要VC运行库，VB的程序需要VB运行库，java程序需要Java Runtime一样，而使用 .Net 开发的程序需要在 .NET Framework下才能运行。</p>
-<p>而纯净的windows系统是不自带有以上这些库或者内置一个版本的库。比如windows系统不自带VC库和java runtime；win10自带的.net框架一般为4.7（老版本的win10可能为4.6或者更早）；win10自带的dx则为dx12。当系统无法提供程序所需的库时，例如没有该库，或者内置库与程序所需的版本不一致，又或者相应库文件已损坏，那么便会弹出dll缺失等运行库问题的错误提示窗口。</p>
-<h1 id="解决方法">3 &nbsp&nbsp<a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>请根据错误提示窗口的信息找对应的工具，「.dll缺失」一般用方法1即可解决，「.net framework缺失」请用方法2。</p>
-<h2 id="DX库和VC库修复：">3.1 &nbsp&nbsp<a href="#DX库和VC库修复：" class="headerlink" title="DX库和VC库修复："></a>DX库和VC库修复：</h2><p>使用VBcom大佬开发的dx修复工具：<a href="https://blog.csdn.net/vbcom/article/details/7245186">https://blog.csdn.net/vbcom/article/details/7245186</a></p>
-<p>注：请注意要下载增强版，增强版才含有VC库（上述链接便是增强版的）。</p>
-<h2 id="vc库无限报错弹窗">3.2 &nbsp&nbsp<a href="#vc库无限报错弹窗" class="headerlink" title="vc库无限报错弹窗"></a>vc库无限报错弹窗</h2><p>安装和卸载vc2017库出现弹窗，标题为Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008，内容提示为 vc_runtimeAdditional_x64.msi is not a valid installtino package for product Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008。</p>
-<p>解决方式：使用官方的<a href="https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">troubleshooter</a>先卸载掉已存在的残留安装信息。</p>
-<h2 id="NET框架">3.3 &nbsp&nbsp<a href="#NET框架" class="headerlink" title="NET框架"></a>NET框架</h2><p>net框架微软官方下载地址：<a href="https://dotnet.microsoft.com/download/dotnet-framework">https://dotnet.microsoft.com/download/dotnet-framework</a><br>net框架修复工具微软官方下载地址：<a href="https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available">https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available</a></p>
-<p>注：请自己选择需要的版本下载并进行安装。建议安装或修复运行库后请重启系统。关于版本选择，请看以下说明！！！</p>
-<p>注意！！！Net Framework版本关系：<br>.Net版本并非完全独立，但也不支持向下兼容。目前为止微软推出了3个版本的CLR，分别是 1.1、2.0 、4.0。 .Net 4是基于CLR4的，而.Net 2.0 3.0 3.5都是基于 CLR2.0， 3.0 3.5其实只是在2.0的基础上增加了新的功能，并没有改变CLR。<br>换而言之，你的程序需要2.0&#x2F;3.0&#x2F;3.5之中的任意一个版本时，安装.Net 3.5 SP1就可以了。<br>所以，如果只是想扩展系统的运行库的话，以win10 OS为例，那么只需要选择安装.Net 3.5 SP1和.Net 4.8（最新的.Net 4.X的就行，4.8是我写该教程时最新的版本）</p>
-<p>Mr. Kin<br>2020.6.16</p>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] The Visual C++ missing error PLAGUE! Here’s how to fix that pesky missing .MSI file<br>in 5 easy steps![EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=ybr5ExVOlqI">https://www.youtube.com/watch?v=ybr5ExVOlqI</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>运行库</tag>
-        <tag>修复</tag>
-        <tag>DirectX</tag>
-        <tag>NET Framework</tag>
-        <tag>Microsoft Visual C++ Runtime</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机软件排障总结</title>
-    <url>/software/software-troubleshooting/</url>
-    <content><![CDATA[<h1 id="系统">1 &nbsp&nbsp<a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="运行库的排障">1.1 &nbsp&nbsp<a href="#运行库的排障" class="headerlink" title="运行库的排障"></a>运行库的排障</h2><p>详看<a href="/software/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a>。</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>维修</tag>
-        <tag>故障</tag>
-        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -1604,6 +1494,120 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>翻译</tag>
         <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机硬件排障总结</title>
+    <url>/troubleshooting/hardware-troubleshooting/</url>
+    <content><![CDATA[<h1 id="不开机">1 &nbsp&nbsp<a href="#不开机" class="headerlink" title="不开机"></a>不开机</h1><h2 id="内存接触不良导致自启后直接掉电">1.1 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，重新重插（尝试擦拭金手指）</p>
+<h1 id="屏幕">2 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
+<h1 id="主板">3 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">3.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
+<h1 id="其它类别">4 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">4.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>维修</tag>
+        <tag>故障</tag>
+        <tag>硬件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows平台的运行库修复</title>
+    <url>/troubleshooting/runtime-library-repair-on-windows/</url>
+    <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
+</div>
+
+<h1 id="什么是运行库">1 &nbsp&nbsp<a href="#什么是运行库" class="headerlink" title="什么是运行库"></a>什么是运行库</h1><h1 id="安装软件或运行软件时提示dll缺失等现象产生的原因">2 &nbsp&nbsp<a href="#安装软件或运行软件时提示dll缺失等现象产生的原因" class="headerlink" title="安装软件或运行软件时提示dll缺失等现象产生的原因"></a>安装软件或运行软件时提示dll缺失等现象产生的原因</h1><p>使用不同框架环境来开发的程序需要相对应的运行库才能正常工作，例如VC的程序需要VC运行库，VB的程序需要VB运行库，java程序需要Java Runtime一样，而使用 .Net 开发的程序需要在 .NET Framework下才能运行。</p>
+<p>而纯净的windows系统是不自带有以上这些库或者内置一个版本的库。比如windows系统不自带VC库和java runtime；win10自带的.net框架一般为4.7（老版本的win10可能为4.6或者更早）；win10自带的dx则为dx12。当系统无法提供程序所需的库时，例如没有该库，或者内置库与程序所需的版本不一致，又或者相应库文件已损坏，那么便会弹出dll缺失等运行库问题的错误提示窗口。</p>
+<h1 id="解决方法">3 &nbsp&nbsp<a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>请根据错误提示窗口的信息找对应的工具，「.dll缺失」一般用方法1即可解决，「.net framework缺失」请用方法2。</p>
+<h2 id="DX库和VC库修复：">3.1 &nbsp&nbsp<a href="#DX库和VC库修复：" class="headerlink" title="DX库和VC库修复："></a>DX库和VC库修复：</h2><p>使用VBcom大佬开发的dx修复工具：<a href="https://blog.csdn.net/vbcom/article/details/7245186">https://blog.csdn.net/vbcom/article/details/7245186</a></p>
+<p>注：请注意要下载增强版，增强版才含有VC库（上述链接便是增强版的）。</p>
+<h2 id="vc库无限报错弹窗">3.2 &nbsp&nbsp<a href="#vc库无限报错弹窗" class="headerlink" title="vc库无限报错弹窗"></a>vc库无限报错弹窗</h2><p>安装和卸载vc2017库出现弹窗，标题为Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008，内容提示为 vc_runtimeAdditional_x64.msi is not a valid installtino package for product Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008。</p>
+<p>解决方式：使用官方的<a href="https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">troubleshooter</a>先卸载掉已存在的残留安装信息。</p>
+<h2 id="NET框架">3.3 &nbsp&nbsp<a href="#NET框架" class="headerlink" title="NET框架"></a>NET框架</h2><p>net框架微软官方下载地址：<a href="https://dotnet.microsoft.com/download/dotnet-framework">https://dotnet.microsoft.com/download/dotnet-framework</a><br>net框架修复工具微软官方下载地址：<a href="https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available">https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available</a></p>
+<p>注：请自己选择需要的版本下载并进行安装。建议安装或修复运行库后请重启系统。关于版本选择，请看以下说明！！！</p>
+<p>注意！！！Net Framework版本关系：<br>.Net版本并非完全独立，但也不支持向下兼容。目前为止微软推出了3个版本的CLR，分别是 1.1、2.0 、4.0。 .Net 4是基于CLR4的，而.Net 2.0 3.0 3.5都是基于 CLR2.0， 3.0 3.5其实只是在2.0的基础上增加了新的功能，并没有改变CLR。<br>换而言之，你的程序需要2.0&#x2F;3.0&#x2F;3.5之中的任意一个版本时，安装.Net 3.5 SP1就可以了。<br>所以，如果只是想扩展系统的运行库的话，以win10 OS为例，那么只需要选择安装.Net 3.5 SP1和.Net 4.8（最新的.Net 4.X的就行，4.8是我写该教程时最新的版本）</p>
+<p>Mr. Kin<br>2020.6.16</p>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] The Visual C++ missing error PLAGUE! Here’s how to fix that pesky missing .MSI file<br>in 5 easy steps![EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=ybr5ExVOlqI">https://www.youtube.com/watch?v=ybr5ExVOlqI</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>运行库</tag>
+        <tag>修复</tag>
+        <tag>DirectX</tag>
+        <tag>NET Framework</tag>
+        <tag>Microsoft Visual C++ Runtime</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机软件排障总结</title>
+    <url>/troubleshooting/software-troubleshooting/</url>
+    <content><![CDATA[<h1 id="系统">1 &nbsp&nbsp<a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="运行库的排障">1.1 &nbsp&nbsp<a href="#运行库的排障" class="headerlink" title="运行库的排障"></a>运行库的排障</h2><p>详看<a href="/software/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a>。</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>维修</tag>
+        <tag>故障</tag>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10系统排障总结</title>
+    <url>/troubleshooting/windows10-troubleshooting/</url>
+    <content><![CDATA[<h1 id="LTSC系统相关">1 &nbsp&nbsp<a href="#LTSC系统相关" class="headerlink" title="LTSC系统相关"></a>LTSC系统相关</h1><h2 id="LTSC2021安装微软商店MicrosoftStore">1.1 &nbsp&nbsp<a href="#LTSC2021安装微软商店MicrosoftStore" class="headerlink" title="LTSC2021安装微软商店MicrosoftStore"></a>LTSC2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
+<h1 id="运行库">2 &nbsp&nbsp<a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>详看<a href="/troubleshooting/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a></p>
+<h2 id="Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954">2.1 &nbsp&nbsp<a href="#Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954" class="headerlink" title="Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954"></a>Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954</h2><p>问题：一般是系统更新程序WUserver无法争取获取更新文件，可能是由于精简或者相关服务项被禁用导致引起。</p>
+<p>解决方法：</p>
+<ol>
+<li>使用离线方式安装（推荐此法）</li>
+<li>恢复WUserver的正常运行，确保在线安装的功能可以正常获取更新文件</li>
+</ol>
+<p>离线方式安装步骤：</p>
+<ol>
+<li>下载当前系统版本所对应的系统镜像</li>
+<li>把source文件夹中的sxs文件夹解压出来，例如<code>C:\path\sxs</code></li>
+<li>管理员身份打开powershell，运行安装命令：<code>dism.exe /online /enable-feature /featurename:NetFX3 /Source:C:\path\sxs</code></li>
+</ol>
+<h1 id="数据恢复">3 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h1><p>专业数据恢复软件：PC3000</p>
+<h1 id="语言设置">4 &nbsp&nbsp<a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h1><h2 id="欢迎屏幕和程序语言乱码">4.1 &nbsp&nbsp<a href="#欢迎屏幕和程序语言乱码" class="headerlink" title="欢迎屏幕和程序语言乱码"></a>欢迎屏幕和程序语言乱码</h2><p>设置&gt;时间和语言&gt;语言&gt;管理语言设置。</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/windows10-troubleshooting/setting-language-zones.webp">区域语言设置</div>
+<div class="flex-column">
+<img data-src="/images/windows10-troubleshooting/setting-language-welcom-screen.webp">欢迎屏幕设置</div>
+</div>
+
+
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 安装.NET Framework 3.5 Error 0x800f0950 in Windows 10[EB&#x2F;OL]. <a href="https://blog.csdn.net/sinat_29315697/article/details/90438542">https://blog.csdn.net/sinat_29315697/article/details/90438542</a>.<br>[2] Win10 .Net Framework 3.5 安装错误 0x800F0954[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012722571/article/details/106336899">https://blog.csdn.net/u012722571/article/details/106336899</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>系统</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>维修</tag>
+        <tag>故障</tag>
+        <tag>windows10</tag>
       </tags>
   </entry>
   <entry>
@@ -3165,9 +3169,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-vFLRWKWoQGeYqaSG" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-vFLRWKWoQGeYqaSG").style.height=document.getElementById("mmedia-vFLRWKWoQGeYqaSG").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-mwRMjZsToaIwBVfq" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-mwRMjZsToaIwBVfq").style.height=document.getElementById("mmedia-mwRMjZsToaIwBVfq").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-vFLRWKWoQGeYqaSG").style.height=document.getElementById("mmedia-vFLRWKWoQGeYqaSG").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-mwRMjZsToaIwBVfq").style.height=document.getElementById("mmedia-mwRMjZsToaIwBVfq").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -3290,7 +3294,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-gTDPppOBJdqsQxhH"></div><script> var gTDPppOBJdqsQxhH_options = JSON.parse('{\"id\":\"mmedia-gTDPppOBJdqsQxhH\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(gTDPppOBJdqsQxhH_options); </script>
+<div id="mmedia-svYOLTmfdOQpiQpQ"></div><script> var svYOLTmfdOQpiQpQ_options = JSON.parse('{\"id\":\"mmedia-svYOLTmfdOQpiQpQ\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(svYOLTmfdOQpiQpQ_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -3389,7 +3393,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x69;&#x6d;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#110;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x69;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#110;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
