@@ -1867,7 +1867,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h1 id="Windows11">5 &nbsp&nbsp<a href="#Windows11" class="headerlink" title="Windows11"></a>Windows11</h1><h2 id="OOBE安装跳过强制登录帐号">5.1 &nbsp&nbsp<a href="#OOBE安装跳过强制登录帐号" class="headerlink" title="OOBE安装跳过强制登录帐号"></a>OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#x75;&#46;&#x63;&#111;&#109;">&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#x75;&#46;&#x63;&#111;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>输入<a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#111;&#109;">&#110;&#111;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#111;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
 </ul>
 <h1 id="Windows7">6 &nbsp&nbsp<a href="#Windows7" class="headerlink" title="Windows7"></a>Windows7</h1><h2 id="新主板安装win7启动报错蓝屏0x000000a5">6.1 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[4] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.</p>
@@ -2756,11 +2756,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>C++ Primer 第五版：习题答案</title>
     <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a></p>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer</a>仓库。</em></p>
 <ul>
 <li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
 <li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
 <li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -3445,9 +3447,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-pBATbxKbnrueOyzA" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-pBATbxKbnrueOyzA").style.height=document.getElementById("mmedia-pBATbxKbnrueOyzA").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-WIomKOjLFqhqLmZO" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-WIomKOjLFqhqLmZO").style.height=document.getElementById("mmedia-WIomKOjLFqhqLmZO").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-pBATbxKbnrueOyzA").style.height=document.getElementById("mmedia-pBATbxKbnrueOyzA").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-WIomKOjLFqhqLmZO").style.height=document.getElementById("mmedia-WIomKOjLFqhqLmZO").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -3570,7 +3572,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-vkluIfzIpKQpIbDj"></div><script> var vkluIfzIpKQpIbDj_options = JSON.parse('{\"id\":\"mmedia-vkluIfzIpKQpIbDj\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(vkluIfzIpKQpIbDj_options); </script>
+<div id="mmedia-szxDGBdyTVfTPWmS"></div><script> var szxDGBdyTVfTPWmS_options = JSON.parse('{\"id\":\"mmedia-szxDGBdyTVfTPWmS\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(szxDGBdyTVfTPWmS_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -3669,7 +3671,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x69;&#x6d;&#x2e;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -3969,6 +3971,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a><center>2023</center></h1><div class="hang-retract">
 
+<p>2023&#x2F;08&#x2F;02 - hexo-theme-next从v8.17.1升级至v8.18.0；启动代码块折叠功能（设置超过高度600就折叠）。</p>
 <p>2023&#x2F;07&#x2F;18 - 本地开发环境：Node.js从v20.1.0更新至v20.4.0；hexo-renderer-marked从v6.1.0升级至v6.1.1；hexo-tag-mmedia从v1.1.7升级至v1.2.1。</p>
 <p>2023&#x2F;07&#x2F;02 - hexo-theme-next从v8.17.0升级至v8.17.1。</p>
 <p>2023&#x2F;06&#x2F;07 - post-body样式下的special_declaration样式名称重命名为special-declaration。</p>
