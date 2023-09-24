@@ -1272,6 +1272,93 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>安装Arch Linux的踩坑记录总结</title>
+    <url>/software/arch-linux/</url>
+    <content><![CDATA[<h1 id="安装arch系统镜像">1 &nbsp&nbsp<a href="#安装arch系统镜像" class="headerlink" title="安装arch系统镜像"></a>安装arch系统镜像</h1><ol>
+<li>下载镜像：<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/">点击跳转</a>，使用PE U盘或者虚拟机加载CD方式加载系统镜像。</li>
+<li>选择<code>Arch Linux install medium (x86_64, UEFI)</code>。</li>
+<li>验证启动模式：<code>ls /sys/firmware/efi/efivars</code>。若正确输出目录且无错误，则证明是UEFI模式。</li>
+<li>连接网络（由路由器DHCP自动下发分配IP），ping测试联网状态（<code>ip addr</code>查看IP），可用ssh连接完成后面的工作，方便复制粘贴命令（<code>systemctl status sshd</code>查看ssh保护进程运行状态），passwd修改当前环境root账户的密码。</li>
+<li>重新设置镜像源mirrorlist，使用reflector获取速度最快的6个镜像，并保存至指定路径<code>/etc/pacman.d/mirrorlist</code>。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reflector -c China -a 6 --<span class="built_in">sort</span> rate --save /etc/pacman.d/mirrorlist</span><br><span class="line">reflector -c China -a 6 --<span class="built_in">sort</span> rate --save /mnt/etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+手动设置镜像源：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /etc/pacman.d/mirrorlist</span><br><span class="line"><span class="comment"># 顶部添加如下镜像源</span></span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></span><br><span class="line">Server = https://repo.archlinuxcn.org/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure></li>
+<li>打开自动同步时间：<code>timedatectl set-ntp true</code>。检测命令生效情况：<code>timedatectl status</code>。</li>
+<li><code>lsblk</code>或者<code>fdisk -l</code>查看硬盘情况（rom、loop、airoot的设备可忽略掉）。使用fdisk分区：<code>fdisk /dev/sda</code>，按<code>g</code>并回车将磁盘分区表设置为GPT格式，按<code>n</code>并回车新增一个分区，分区号默参直接回车，起始扇区默参直接回车，结束位置输入<code>+300M</code>并回车表示分区大小为300M。重复<code>n</code>命令三次，完成剩余的三个分区的工作。按<code>t</code>并回车更改分区类型，输入分区编号1并回车，输入分区类型1并回车（1代表EFI system partition）。重复<code>t</code>命令，将2、3、4号分区分别改为类型19（SWAP），类型23（Linux root (x86-64)），类型42（Linux home）。最后按<code>w</code>并回车保存分区表。<code>df -h</code>查看分区情况。</li>
+<li>磁盘格式化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkfs.fat -F 32 /dev/sda1</span><br><span class="line">mkswap /dev/sda2</span><br><span class="line">mkfs.ext4 /dev/sda3</span><br><span class="line">mkfs.ext4 /dev/sda4</span><br></pre></td></tr></table></figure></li>
+<li>挂载文件系统<br>挂载boot<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mount /dev/sda3 /mnt</span><br><span class="line"><span class="built_in">mkdir</span> -p /mnt/home <span class="comment">#创建/mnt/home目录供挂载</span></span><br><span class="line">mount /dev/sda4 /mnt/home</span><br><span class="line"><span class="built_in">mkdir</span> -p /mnt/boot <span class="comment">#创建/mnt/boot目录供挂载</span></span><br><span class="line">mount /dev/sda1 /mnt/boot</span><br></pre></td></tr></table></figure>
+挂载swap：<code>swapon /dev/sda2</code></li>
+<li>安装系统：<code>pacstrap /mnt base linux linux-firmware nano</code></li>
+<li>生成fstab文件：<code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code>。检查fstab文件内容：<code>cat /mnt/etc/fstab</code>。</li>
+<li>更换当前的根目录到安装到硬盘上的系统：<code>arch-chroot /mnt</code></li>
+<li>将时区设置为亚洲&#x2F;上海：<code>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code>。</li>
+<li>同步硬件时钟：<code>hwclock --systohc</code>。</li>
+<li>配置本地化设置：<code>nano /etc/locale.gen</code>，<code>ctrl+w</code>搜索，分别找到<code>#en_US</code>,<code>#zh_CN</code>带有UTF-8的两行，去掉前面的#号。<code>ctrl+o</code>并回车保存文件，<code>ctrl+x</code>并回车退出nano。生成配置：<code>locale-gen</code>。</li>
+<li>创建并修改&#x2F;etc&#x2F;locale.conf文件，填入<code>LANG=en_US.UTF-8</code>并保存。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> /etc/locale.conf</span><br><span class="line">nano /etc/locale.conf</span><br></pre></td></tr></table></figure></li>
+<li>配置网络主机名：<code>echo &quot;archlinux&quot; &gt;&gt; /etc/hostname</code>，</li>
+<li>设置root密码：<code>passwd</code>。</li>
+<li>设置引导程序<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -S dosfstools grub efibootmgr  <span class="comment"># 安装引导程序</span></span><br><span class="line">grub-install --target=x86_64-efi --efi-directory=/boot --recheck  <span class="comment"># 将grub安装至EFI分区</span></span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg  <span class="comment"># 生成grub配置</span></span><br></pre></td></tr></table></figure></li>
+<li>安装新系统必要的包：<code>pacman -S networkmanager network-manager-applet dhcpcd dialog os-prober mtools ntfs-3g base-devel linux-headers reflector git</code>。更新软件包缓存：<code>sudo pacman -Syy</code>。更新系统：<code>sudo pacman -Syu</code>。</li>
+<li>开启dhcpcd<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start dhcpcd  <span class="comment"># 启动dhcpcd</span></span><br><span class="line">systemctl <span class="built_in">enable</span> dhcpcd  <span class="comment"># 使dhcpcd自启</span></span><br></pre></td></tr></table></figure></li>
+<li>启用sshd服务并远程控制<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start sshd</span><br><span class="line">systemctl <span class="built_in">enable</span> sshd</span><br><span class="line">nano /etc/ssh/sshd_config</span><br><span class="line"><span class="comment"># 将其中PermitRootLogin前面#号去掉并且将值设置为yes</span></span><br><span class="line"><span class="comment"># 将其中PasswordAuthentication前面#号去掉并且将值设置为yes</span></span><br><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure></li>
+<li>添加普通用户<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd -m kin <span class="comment"># 添加用户名为kin的用户</span></span><br><span class="line">passwd kin <span class="comment"># 为用户kin设置密码</span></span><br><span class="line"><span class="comment"># 添加用户的更多选项</span></span><br><span class="line"><span class="comment"># useradd -m -G additional_groups -s login_shell username</span></span><br><span class="line">pacman -S sudo</span><br><span class="line">nao /etc/sudoers</span><br><span class="line"><span class="comment"># 打开/etc/sudoers文件后，在root ALL=(ALL:ALL) ALL一行下，添加kin ALL=(ALL:ALL) ALL。</span></span><br></pre></td></tr></table></figure></li>
+<li>退出chroot环境，卸载掉挂载的硬盘并重启<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span>  <span class="comment"># 返回至arch-chroot之前的环境</span></span><br><span class="line">umount /mnt/home</span><br><span class="line">umount /mnt/boot</span><br><span class="line">umount /mnt</span><br><span class="line">reboot  <span class="comment"># 重启</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>分区方案（列表顺序就是实际的分区顺序）</strong></p>
+<ul>
+<li><code>/boot/efi</code> 300M</li>
+<li><code>swap</code>（内存大小×1.5）</li>
+<li><code>/</code> 40G</li>
+<li><code>/home</code> 剩余全部空间</li>
+</ul>
+<p><strong>Swap分区的大小分配推荐方案</strong></p>
+<table>
+<thead>
+<tr>
+<th>Amount of RAM in the system</th>
+<th>Recommended swap space</th>
+<th>Recommended swap space if allowing for hibernation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>⩽ 2GB</td>
+<td>2 times the amount of RAM</td>
+<td>3 times the amount of RAM</td>
+</tr>
+<tr>
+<td>&gt; 2GB – 8GB</td>
+<td>Equal to the amount of RAM</td>
+<td>2 times the amount of RAM</td>
+</tr>
+<tr>
+<td>&gt; 8GB – 64GB</td>
+<td>At least 4 GB</td>
+<td>1.5 times the amount of RAM</td>
+</tr>
+<tr>
+<td>&gt; 64GB</td>
+<td>At least 4 GB</td>
+<td>Hibernation not recommended</td>
+</tr>
+</tbody></table>
+<h1 id="安装KDE桌面环境">2 &nbsp&nbsp<a href="#安装KDE桌面环境" class="headerlink" title="安装KDE桌面环境"></a>安装KDE桌面环境</h1><ol>
+<li>安装显示Xorg服务器：<code>sudo pacman -S xorg</code>。</li>
+<li>安装KDE Plasma桌面环境和其他KDE软件包：<code>sudo pacman -S plasma kde-applications</code>。</li>
+<li>安装显示管理器（开机图形界面登录）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S sddm</span><br><span class="line">systemctl <span class="built_in">enable</span> sddm.service <span class="comment"># 开机自启动sddm服务</span></span><br></pre></td></tr></table></figure></li>
+<li>进入桌面环境<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 手动进入桌面环境</span></span><br><span class="line">startx</span><br><span class="line"><span class="comment"># 修改当前帐户bash配置，让账户登录后自动进入桌面环境</span></span><br><span class="line">nano ~/.bash_profile</span><br><span class="line"><span class="comment"># 或者修改Shell的全局启动配置文件</span></span><br><span class="line">nano /etc/profile</span><br><span class="line"><span class="comment"># 文件末尾处添加如下内容</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$&#123;DISPLAY&#125;</span>&quot;</span> ] &amp;&amp; [ <span class="string">&quot;<span class="variable">$&#123;XDG_VTNR&#125;</span>&quot;</span> -eq 1 ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">exec</span> startx</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 在ProxmoxVE(PVE)7.0中安装ArchLinux[EB&#x2F;OL]. <a href="https://www.raobee.com/archives/343/">https://www.raobee.com/archives/343/</a>.<br>[2]  Arch Linux + KDE 的安装和配置[EB&#x2F;OL]. <a href="https://peoxin.github.io/blog/2022/05/01/Arch%20Linux%20+%20KDE%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">https://peoxin.github.io/blog/2022/05/01/Arch%20Linux%20+%20KDE%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</a>.<br>[3] Installation guide[EB&#x2F;OL]. <a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a>.<br>[4] How to Install Deepin Desktop in Arch Linux [Complete Guide][EB&#x2F;OL]. <a href="https://www.debugpoint.com/2021/01/deepin-arch-linux-install-20/">https://www.debugpoint.com/2021/01/deepin-arch-linux-install-20/</a>.<br>[5] Easy Step - Arch Linux ( EFI ) With Clover ( EFI )[EB&#x2F;OL]. <a href="https://www.insanelymac.com/forum/topic/294443-easy-step-arch-linux-efi-with-clover-efi/">https://www.insanelymac.com/forum/topic/294443-easy-step-arch-linux-efi-with-clover-efi/</a>.<br>[6] 10 Commands to Check Disk Partitions and Disk Space on Linux[EB&#x2F;OL]. <a href="https://www.binarytides.com/linux-command-check-disk-partitions/">https://www.binarytides.com/linux-command-check-disk-partitions/</a>.<br>[7] Can&#39;t establish an internet connection in Arch Linux[EB&#x2F;OL]. <a href="https://superuser.com/questions/751961/cant-establish-an-internet-connection-in-arch-linux">https://superuser.com/questions/751961/cant-establish-an-internet-connection-in-arch-linux</a>.<br>[8] Deepin Desktop Environment (简体中文)[EB&#x2F;OL]. <a href="https://wiki.archlinux.org/title/Deepin_Desktop_Environment_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/title/Deepin_Desktop_Environment_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a>.<br>[9] Localization (简体中文)&#x2F;Simplified Chinese (简体中文)[EB&#x2F;OL]. <a href="https://wiki.archlinux.org/title/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/title/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a>.<br>[10] VirtualBox&#x2F;Install Arch Linux as a guest[EB&#x2F;OL]. <a href="https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest">https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest</a>.<br>[11] How to enable a Virtualbox shared folder for Linux guest systems[EB&#x2F;OL]. <a href="https://averagelinuxuser.com/virtualbox-shared-folder/">https://averagelinuxuser.com/virtualbox-shared-folder/</a>.<br>[12] Recommended Partitioning Scheme[EB&#x2F;OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>arch</tag>
+        <tag>virtualbox</tag>
+        <tag>pve</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给联想z500安装deepin linux（深度系统）</title>
     <url>/software/install-deepin-on-lenovo-z500/</url>
     <content><![CDATA[<h1 id="起因">1 &nbsp&nbsp<a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。</p>
@@ -1351,6 +1438,51 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>联想</tag>
         <tag>lenovo</tag>
         <tag>z500</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英伟达Jetson开发板踩坑记录总结</title>
+    <url>/software/nvidia-jetson/</url>
+    <content><![CDATA[<h1 id="测试项目">1 &nbsp&nbsp<a href="#测试项目" class="headerlink" title="测试项目"></a>测试项目</h1><ul>
+<li>人体骨架检测：<a href="https://blog.csdn.net/willbetter01/article/details/120906567">VideoPose3d</a></li>
+<li>人脸年龄修改：<a href="https://github.com/InterDigitalInc/HRFAE">HRFAE</a></li>
+</ul>
+<h1 id="硬件型号">2 &nbsp&nbsp<a href="#硬件型号" class="headerlink" title="硬件型号"></a>硬件型号</h1><p>NVIDIA Jetson TX2 NX，16GB eMMC，额外挂载一个120G的固态盘。</p>
+<h1 id="烧录系统">3 &nbsp&nbsp<a href="#烧录系统" class="headerlink" title="烧录系统"></a>烧录系统</h1><h2 id="烧录前准备">3.1 &nbsp&nbsp<a href="#烧录前准备" class="headerlink" title="烧录前准备"></a>烧录前准备</h2><ul>
+<li>一台Ubuntu 18.00 LTS系统的PC（其他的jetson设备不能作为刷机主机，必须用ubuntu电脑。也不能用vbox或者vmware之类的虚拟机创建ubuntu刷机主机，因为虚拟机系统无法处理usb等底层的驱动，这会导致刷机时一直提示未正确进入刷机模式，但实际机器已经真正进入到刷机模式的）</li>
+<li>一条micro-usb数据线</li>
+<li>根据硬件型号选择<a href="https://developer.nvidia.com/embedded/jetson-linux-archive">对应版本</a>的<a href="https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.4/t186/jetson_linux_r32.7.4_aarch64.tbz2">驱动包（BSP包）</a>和<a href="https://developer.nvidia.com/downloads/embedded/l4t/r32_release_v7.4/t186/tegra_linux_sample-root-filesystem_r32.7.4_aarch64.tbz2">示例根文件系统</a>（目前适配TX2 NX的最新版为<a href="https://developer.nvidia.com/embedded/linux-tegra-r3274">R32.7.4</a>）。</li>
+</ul>
+<p> </p>
+<h2 id="烧录步骤">3.2 &nbsp&nbsp<a href="#烧录步骤" class="headerlink" title="烧录步骤"></a>烧录步骤</h2><ol>
+<li>在刷机主机ubuntu系统中启用ssh。</li>
+<li>通过<a href="https://winscp.net/eng/download.php">WinSCP</a>将驱动包（BSP包）和示例根文件系统复制至刷机主机系统中的家目录<code>/home</code>。</li>
+<li>刷机命令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装必要库</span></span><br><span class="line">sudo apt-get install qemu-user-static</span><br><span class="line">sudo apt-get install python</span><br><span class="line"><span class="comment"># j为使用bzip2算法，x为解压，v为显示操作的详细信息，f为指定操作的文件</span></span><br><span class="line">sudo tar -jxvf Jetson_Linux_R32.7.4_aarch64.tbz2</span><br><span class="line"><span class="built_in">cd</span> Linux_for_Tegra/rootfs</span><br><span class="line"><span class="comment"># p为于保留文件的权限和属性，即保持原有文件的权限模式和时间戳信息</span></span><br><span class="line">sudo tar -jxpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.4_aarch64.tbz2</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="comment"># 拷贝NVIDIA库文件到文件系统</span></span><br><span class="line">sudo ./apply_binaries.sh</span><br><span class="line"><span class="built_in">cd</span> Linux_for_Tegra/tools</span><br><span class="line"><span class="comment"># u为用户名，p为密码</span></span><br><span class="line">sudo ./l4t_create_default_user.sh -u nvidia -p nvidia</span><br><span class="line"><span class="comment"># NVIDIA Jetson是通过Micro USB接口烧录系统。Recovery模式下可以进行文件系统更新包含：内核Kernel，启动Bootloader，文件系统Rootfs等。</span></span><br><span class="line"><span class="comment"># 进入Recovery模式的步骤：</span></span><br><span class="line"><span class="comment"># 1）使用Micro USB 的数据线连接Jetson和Ubuntu Host主机(一端插在开发板的OTG口,一端插在Ubuntu Host主机的usb插口)；</span></span><br><span class="line"><span class="comment"># 2）连接开发板的电源;</span></span><br><span class="line"><span class="comment"># 3) 按住RECOVERY按键，同时按下RESET复位按键1-2秒后释放，等待3秒释放RECOVERY按键，此时开发板进入Recovery刷机模式 （可通过在Ubuntu Host主机上运行命令：lsusb  查看是否有Nvidia Corporation 设备（不同Jetson模块USB VID/PID 不同）来确认是否进入正常）</span></span><br><span class="line"><span class="comment"># 执行刷机命令</span></span><br><span class="line"><span class="built_in">cd</span> Linux_for_Tegra</span><br><span class="line">sudo ./flash.sh jetson-xavier-nx-devkit-tx2-nx mmcblk0p1</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="烧录后无法进入到桌面环境">3.2.1 &nbsp&nbsp<a href="#烧录后无法进入到桌面环境" class="headerlink" title="烧录后无法进入到桌面环境"></a>烧录后无法进入到桌面环境</h3><p>Jetson报错无法进到桌面环境： Failed to start nvpmode1 server. 和Failed to start load kernel modules</p>
+<p>无桌面环境的条件下进入到终端操作的两种方式：</p>
+<ul>
+<li>ssh连接虚拟ip：jetson的usb有虚拟ip，可以通过ssh远程连接，用上位机通过USB数据线（有的USB不能传数据只能充电）连接jetson。打开上位机远程登陆开发板，登陆ip为：192.168.55.1：<code>sudo nvidia@192.168.55.1</code></li>
+<li>按ctrl+alt+F1-F6等组合键切换命令窗口1-6</li>
+</ul>
+<p>Failed to start nvpmode1 server一般是桌面环境出问题引起的，重装桌面环境即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install nvidia-l4t-x11</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+
+<p>Failed to start load kernel modules一般配置方面出问题，重新运行更新配置。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 切换到root模式，并保留当前终端环境</span></span><br><span class="line">sudo -i</span><br><span class="line">apt-get update</span><br><span class="line">dpkg --configure -a</span><br><span class="line">apt-get dist-upgrade</span><br><span class="line">apt-get -f install</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Nvidia xavier NX 通过 flash.sh 烧录 linux 系统[EB&#x2F;OL]. <a href="https://blog.csdn.net/Yan_uuu/article/details/126947983">https://blog.csdn.net/Yan_uuu/article/details/126947983</a>.<br>[2] Jetson Xavier NX 镜像制作、烧录及克隆[EB&#x2F;OL]. <a href="https://blog.csdn.net/qhdd123/article/details/123815911">https://blog.csdn.net/qhdd123/article/details/123815911</a>.<br>[3] 解决 Jetson：Failed to start nvpmode1 server. 和 Failed to start load kernel modules[EB&#x2F;OL]. <a href="https://blog.csdn.net/alianfibakic/article/details/123807606">https://blog.csdn.net/alianfibakic/article/details/123807606</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英伟达</tag>
+        <tag>nvidia</tag>
+        <tag>jetson</tag>
+        <tag>开发板</tag>
+        <tag>踩坑</tag>
       </tags>
   </entry>
   <entry>
@@ -2292,7 +2424,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Linux系统排障总结</title>
     <url>/troubleshooting/linux-troubleshooting/</url>
-    <content><![CDATA[<h1 id="基础命令">1 &nbsp&nbsp<a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
+    <content><![CDATA[<h1 id="Bash终端">1 &nbsp&nbsp<a href="#Bash终端" class="headerlink" title="Bash终端"></a>Bash终端</h1><h2 id="符号输入控制">1.1 &nbsp&nbsp<a href="#符号输入控制" class="headerlink" title="符号输入控制"></a>符号输入控制</h2><ul>
+<li>ctrl+c：停止</li>
+<li>ctrl+z：停止输入</li>
+</ul>
+<h1 id="基础命令">2 &nbsp&nbsp<a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
 <li>关机：<ul>
 <li><code>poweroff</code>（也是调用shutdown工具链实现）</li>
 <li><code>halt</code>（实际调用shutdown -h）</li>
@@ -2307,14 +2443,24 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h1 id="终端符号输入">2 &nbsp&nbsp<a href="#终端符号输入" class="headerlink" title="终端符号输入"></a>终端符号输入</h1><ul>
-<li>ctrl+c：停止</li>
-<li>ctrl+z：停止输入</li>
-</ul>
+<h2 id="VirtualBox安装ubuntu虚拟机打不开terminal终端">2.1 &nbsp&nbsp<a href="#VirtualBox安装ubuntu虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line">sudo nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line">sudo locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
+
 <h1 id="包管理器">3 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">3.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">3.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
 
-<h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="普通用户导致的编译问题">4.1 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
+<h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="源码编译的程序的安装和卸载">4.1 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line">sudo ./configure --prefix=/path_to_install</span><br><span class="line">sudo make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>卸载方式：</p>
+<ul>
+<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
+<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
+<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
+<li>debian系列linux可尝试使用auto-apt 和 checkinstall：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="普通用户导致的编译问题">4.2 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
 <p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
 <h1 id="账户管理">5 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
 
@@ -2420,7 +2566,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
 
 
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.</p>
+<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -2532,7 +2678,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;">&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="微软商店应用">2 &nbsp&nbsp<a href="#微软商店应用" class="headerlink" title="微软商店应用"></a>微软商店应用</h1><h2 id="Win10-LTSC-2021安装微软商店MicrosoftStore">2.1 &nbsp&nbsp<a href="#Win10-LTSC-2021安装微软商店MicrosoftStore" class="headerlink" title="Win10 LTSC 2021安装微软商店MicrosoftStore"></a>Win10 LTSC 2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
@@ -5166,9 +5312,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-HlFLtFodholfSaEu" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-HlFLtFodholfSaEu").style.height=document.getElementById("mmedia-HlFLtFodholfSaEu").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-YZElBtFMzNaoacBW" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-YZElBtFMzNaoacBW").style.height=document.getElementById("mmedia-YZElBtFMzNaoacBW").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-HlFLtFodholfSaEu").style.height=document.getElementById("mmedia-HlFLtFodholfSaEu").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-YZElBtFMzNaoacBW").style.height=document.getElementById("mmedia-YZElBtFMzNaoacBW").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -5291,7 +5437,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-MNWnhYtZoWCcBIfX"></div><script> var MNWnhYtZoWCcBIfX_options = JSON.parse('{\"id\":\"mmedia-MNWnhYtZoWCcBIfX\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(MNWnhYtZoWCcBIfX_options); </script>
+<div id="mmedia-sUHCyQHMEqxNZGHF"></div><script> var sUHCyQHMEqxNZGHF_options = JSON.parse('{\"id\":\"mmedia-sUHCyQHMEqxNZGHF\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(sUHCyQHMEqxNZGHF_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -5390,7 +5536,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x69;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#105;&#115;&#x74;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#105;&#x6d;&#x2e;&#109;&#105;&#115;&#x74;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
