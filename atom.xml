@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2023-10-12T19:33:14.000Z</updated>
+  <updated>2023-10-14T19:43:38.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <link href="https://mister-kin.github.io/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/"/>
+    <id>https://mister-kin.github.io/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</id>
+    <published>2023-10-14T19:31:49.000Z</published>
+    <updated>2023-10-14T19:43:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p><p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p><ul><li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li></ul>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;习题代码和总结笔记主要参照视频教程&lt;a href=&quot;https://www.bilibili.com/video/BV1km4y1k7CW/&quot;&gt;《Qt6 C++开发指南》2023（上册，完整版）&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;练习代码文件的仓库链接：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="code-training" scheme="https://mister-kin.github.io/categories/code-training/"/>
+    
+    <category term="qt6-cpp-development-guide" scheme="https://mister-kin.github.io/categories/code-training/qt6-cpp-development-guide/"/>
+    
+    
+    <category term="C++" scheme="https://mister-kin.github.io/tags/C/"/>
+    
+    <category term="qt" scheme="https://mister-kin.github.io/tags/qt/"/>
+    
+    <category term="qt6" scheme="https://mister-kin.github.io/tags/qt6/"/>
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="开发" scheme="https://mister-kin.github.io/tags/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="第一版" scheme="https://mister-kin.github.io/tags/%E7%AC%AC%E4%B8%80%E7%89%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
+    <link href="https://mister-kin.github.io/code-training/qt6-cpp-development-guide/chap1/"/>
+    <id>https://mister-kin.github.io/code-training/qt6-cpp-development-guide/chap1/</id>
+    <published>2023-10-14T19:21:37.000Z</published>
+    <updated>2023-10-14T19:43:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul><li>跨平台应用程序开发框架</li><li>首次发布于1995年5月</li><li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li></ul><h2 id="跨平台开发能力">1.2 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h2><table><thead><tr><th align="center">目标设备</th><th align="center">目标平台</th><th align="center">主机平台</th></tr></thead><tbody><tr><td align="center"></td><td align="center">桌面Linux</td><td align="center">桌面Linux</td></tr><tr><td align="center">计算机</td><td align="center">macOS</td><td align="center">macOS</td></tr><tr><td align="center"></td><td align="center">Windows</td><td align="center">Windows</td></tr><tr><td align="center"></td><td align="center">Android</td><td align="center">桌面Linux、 macOS、Windows</td></tr><tr><td align="center">移动设备</td><td align="center">iOS</td><td align="center">macOS</td></tr><tr><td align="center"></td><td align="center">手机Windows</td><td align="center">Windows</td></tr><tr><td align="center"></td><td align="center">嵌入式Linux</td><td align="center">桌面Linux</td></tr><tr><td align="center">嵌入式设备</td><td align="center">QNX</td><td align="center">桌面Linux、 Windows</td></tr><tr><td align="center"></td><td align="center">VxWorks</td><td align="center">桌面Linux、 Windows</td></tr><tr><td align="center"></td><td align="center">嵌入式Windows</td><td align="center">Windows</td></tr><tr><td align="center">单片机</td><td align="center">FreeRTOS或无操作系统</td><td align="center">Windows、 桌面Linux</td></tr></tbody></table><p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p><h2 id="Qt许可的类型">1.3 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h2><p>Qt 的许可类型</p><ul><li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li><li>开源许可：<ul><li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li><li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li></ul></li></ul><h2 id="安装包">1.4 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h2><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p><h2 id="Qt支持的开发语言">1.5 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h2><ol><li>C++ 和 QML<ul><li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li><li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li><li>C++和QML可以混合使用。</li></ul></li><li>Python<ul><li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li><li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li></ul></li></ol><h2 id="Qt6新特性">1.6 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h2><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p><ul><li>支持 C++ 17 标准。</li><li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li><li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li><li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li><li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li></ul>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章：认识Qt&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#第一章：认识Qt&quot; class=&quot;headerlink&quot; title=&quot;第一章：认识Qt&quot;&gt;&lt;/a&gt;第一章：认识Qt&lt;/h1&gt;&lt;h2 id=&quot;Qt简介&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="code-training" scheme="https://mister-kin.github.io/categories/code-training/"/>
+    
+    <category term="qt6-cpp-development-guide" scheme="https://mister-kin.github.io/categories/code-training/qt6-cpp-development-guide/"/>
+    
+    
+    <category term="第一章" scheme="https://mister-kin.github.io/tags/%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    
+    <category term="qt" scheme="https://mister-kin.github.io/tags/qt/"/>
+    
+    <category term="qt6" scheme="https://mister-kin.github.io/tags/qt6/"/>
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>正则表达式总结笔记</title>
@@ -314,9 +389,9 @@
     <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
     
     
-    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
+    
+    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="arch" scheme="https://mister-kin.github.io/tags/arch/"/>
     
@@ -349,9 +424,9 @@
     <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
     
     
-    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
+    
+    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="pve系统" scheme="https://mister-kin.github.io/tags/pve%E7%B3%BB%E7%BB%9F/"/>
     
@@ -685,90 +760,6 @@
     
     <category term="cad" scheme="https://mister-kin.github.io/categories/cad/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Office总结笔记</title>
-    <link href="https://mister-kin.github.io/software/office/"/>
-    <id>https://mister-kin.github.io/software/office/</id>
-    <published>2023-07-24T14:42:36.000Z</published>
-    <updated>2023-10-12T15:17:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul><li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li><li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li><li>分节符用的下一页。</li></ul><p>关于分页符和分节符的删除：</p><ul><li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li><li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li></ul><h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul><li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li><li>单击时，只能使用一次。双击时，能多次使用。</li></ul><h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p><h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p><h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p><p>几种模式的区别：</p><ul><li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li><li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li></ul><p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p><h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol><li>在表格的最下方一行按 TAB 键，生成第二页表格。</li><li>在第二页表格第一行，插入空白页。</li><li>之后删除表格页。</li></ol><h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol><li>创建文献编号，排版文献<ol><li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li><li>在数值左右分别添加 [] 符号</li><li>对参考文献使用该格式进行排版</li></ol></li><li>交叉引用，插入引用编号<ol><li>「引用」选项卡 &gt; 交叉引用</li><li>编号项 + 段落编号 + 插入为超链接</li><li>选择所引用的参考文献</li></ol></li><li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li></ol><h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="边框颜色修改问题">2.1 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p><p>注意顺序不能搞错，必须先选颜色，再选边框。</p><h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul><li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li></ul>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Word&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#Word&quot; class=&quot;headerlink&quot; title=&quot;Word&quot;&gt;&lt;/a&gt;Word&lt;/h1&gt;&lt;h2 id=&quot;页码排版问题&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#页码排版问题&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
-    
-    
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="笔记" scheme="https://mister-kin.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="office" scheme="https://mister-kin.github.io/tags/office/"/>
-    
-    <category term="excel" scheme="https://mister-kin.github.io/tags/excel/"/>
-    
-    <category term="word" scheme="https://mister-kin.github.io/tags/word/"/>
-    
-    <category term="ppt" scheme="https://mister-kin.github.io/tags/ppt/"/>
-    
-    <category term="powerpoint" scheme="https://mister-kin.github.io/tags/powerpoint/"/>
-    
-    <category term="软件" scheme="https://mister-kin.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="操作" scheme="https://mister-kin.github.io/tags/%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android系统排障总结</title>
-    <link href="https://mister-kin.github.io/troubleshooting/android-troubleshooting/"/>
-    <id>https://mister-kin.github.io/troubleshooting/android-troubleshooting/</id>
-    <published>2023-07-24T14:39:33.000Z</published>
-    <updated>2023-08-02T18:13:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p><h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol><li>更新到提示你“立即安装”这一步，先不要点</li><li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li><li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li></ol><h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;安卓系统免杀后台进程设置步骤（包含各个安卓系统）&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#安卓系统免杀后台进程设置步骤（包含各个安卓系统）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="troubleshooting" scheme="https://mister-kin.github.io/categories/troubleshooting/"/>
-    
-    
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="计算机" scheme="https://mister-kin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    <category term="电脑" scheme="https://mister-kin.github.io/tags/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="维护" scheme="https://mister-kin.github.io/tags/%E7%BB%B4%E6%8A%A4/"/>
-    
-    <category term="维修" scheme="https://mister-kin.github.io/tags/%E7%BB%B4%E4%BF%AE/"/>
-    
-    <category term="故障" scheme="https://mister-kin.github.io/tags/%E6%95%85%E9%9A%9C/"/>
-    
-    <category term="android" scheme="https://mister-kin.github.io/tags/android/"/>
     
   </entry>
   
