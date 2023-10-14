@@ -578,8 +578,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>五级标题：<code>##### 标题</code></li>
 <li>六级标题：<code>###### 标题</code></li>
 </ul>
-<h1 id="代码块">2 &nbsp&nbsp<a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码">2.1 &nbsp&nbsp<a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号包裹住代码内容：<code>`代码内容`</code></p>
-<h2 id="多行代码（围栏代码块）">2.2 &nbsp&nbsp<a href="#多行代码（围栏代码块）" class="headerlink" title="多行代码（围栏代码块）"></a>多行代码（围栏代码块）</h2><p>在代码内容前后使用三个反引号包裹住。</p>
+<h1 id="链接">2 &nbsp&nbsp<a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>链接中添加空格的方法</p>
+<ul>
+<li>使用<code>\&amp;\#32</code></li>
+<li>使用<code>-</code>替代空格</li>
+</ul>
+<h1 id="代码块">3 &nbsp&nbsp<a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码">3.1 &nbsp&nbsp<a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>反引号（位于tab键之上）包裹住代码内容：<code>`代码内容`</code></p>
+<h2 id="多行代码（围栏代码块）">3.2 &nbsp&nbsp<a href="#多行代码（围栏代码块）" class="headerlink" title="多行代码（围栏代码块）"></a>多行代码（围栏代码块）</h2><p>在代码内容前后使用三个反引号包裹住。</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```语言关键字</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
 
 <p>代码块支持语法高亮的语言关键字：</p>
@@ -1051,7 +1056,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td>yml</td>
 </tr>
 </tbody></table>
-<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Markdown 官方教程[EB&#x2F;OL]. <a href="https://markdown.com.cn/">https://markdown.com.cn/</a>.<br>[2] MarkDown 支持高亮的语言[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012102104/article/details/78950290">https://blog.csdn.net/u012102104/article/details/78950290</a>.</p>
+<h1 id="参考资料">4 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Markdown 官方教程[EB&#x2F;OL]. <a href="https://markdown.com.cn/">https://markdown.com.cn/</a>.<br>[2] MarkDown 支持高亮的语言[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012102104/article/details/78950290">https://blog.csdn.net/u012102104/article/details/78950290</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -1625,7 +1630,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>下载预训练模型<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> checkpoint</span><br><span class="line"><span class="built_in">cd</span> checkpoint</span><br><span class="line">wget https://dl.fbaipublicfiles.com/video-pose-3d/pretrained_h36m_cpn.bin</span><br><span class="line">wget https://dl.fbaipublicfiles.com/video-pose-3d/pretrained_humaneva15_detectron.bin</span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure></li>
 <li>测试Human3.6M模型数据<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python run.py -k cpn_ft_h36m_dbb -arc 3,3,3,3,3 -c checkpoint --evaluate pretrained_h36m_cpn.bin</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="HRFAE">3 &nbsp&nbsp<a href="#HRFAE" class="headerlink" title="HRFAE"></a>HRFAE</h1><p>官方要求的依赖库</p>
+<h1 id="HRFAE">3 &nbsp&nbsp<a href="#HRFAE" class="headerlink" title="HRFAE"></a>HRFAE</h1><p>官方要求的依赖库（注意torch需要是cuda版本的，因为源码是使用cuda设备的方法）</p>
 <ul>
 <li>Python 3.7</li>
 <li>Pytorch 1.1</li>
@@ -1650,8 +1655,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>下载预训练模型<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 科学网络条件好的，可以直接参考官方命令下载checkpoint</span></span><br><span class="line"><span class="built_in">cd</span> ./logs/001</span><br><span class="line">./download.sh</span><br><span class="line"><span class="comment"># 如果网络条件不行的话，直接使用链接下载后在传入logs目录，注意上传后记得修改属性权限755或者777</span></span><br><span class="line"><span class="comment"># https://partage.imt.fr/index.php/s/7DzqFHQggfJDw79/download</span></span><br></pre></td></tr></table></figure></li>
 <li>运行命令生成结果<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> HRFAE</span><br><span class="line"><span class="comment"># 年龄区间：20-70</span></span><br><span class="line">python3.7 test.py --config 001 --target_age 40</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p>报错：Killed</p>
-<h2 id="自训练模型的配置步骤">3.2 &nbsp&nbsp<a href="#自训练模型的配置步骤" class="headerlink" title="自训练模型的配置步骤"></a>自训练模型的配置步骤</h2><h1 id="硬件型号">4 &nbsp&nbsp<a href="#硬件型号" class="headerlink" title="硬件型号"></a>硬件型号</h1><p>NVIDIA Jetson TX2 NX，16GB eMMC，额外挂载一个120G的固态盘。</p>
+<h2 id="进程被Killed的故障排查">3.2 &nbsp&nbsp<a href="#进程被Killed的故障排查" class="headerlink" title="进程被Killed的故障排查"></a>进程被Killed的故障排查</h2><p>现象：终端输出一句「Killed」后，进程就闪退退出了。</p>
+<p>原因：这是由于pytroch程序占用过多内存，引起系统OOM（Out of memory）机制。</p>
+<p>解决方式：无。在我的尝试方法中，尝试了增加虚拟内存的大小至13GB，仍然是无法解决，依然是触发OOM了（即使我对pytorch进程禁用系统OOM killer，并观察内存占用情况，物理4GB全部吃满，虚拟内存zram占用到3.6GB后就整个系统卡死了）。推测可能还因为显存不足。</p>
+<p>内存管理的相关命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看虚拟内存使用分配机制，vm.swappiness = 0：最大限度使用物理内存，vm.swappiness = 100：积极的使用交换空间</span></span><br><span class="line">sysctl -a| grep vm.swappiness</span><br><span class="line"><span class="comment"># vm.swappiness = 60</span></span><br><span class="line"><span class="comment"># 临时设置swappiness</span></span><br><span class="line"><span class="built_in">echo</span> 10 &gt; /proc/sys/vm/swappiness</span><br><span class="line"><span class="comment"># 查看内存使用率高的进程id</span></span><br><span class="line">top</span><br><span class="line"><span class="comment"># 对某个进程禁用系统OOM killer，$PID替换为进程ID数字即可</span></span><br><span class="line"><span class="built_in">echo</span> -17 &gt; /proc/<span class="variable">$PID</span>/oom_adj</span><br></pre></td></tr></table></figure>
+
+<p>查看系统是否主动杀掉进程的日志排查：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看系统内核日志中最后7行</span></span><br><span class="line">sudo dmesg | <span class="built_in">tail</span> -7</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过以下三种命令查看系统是否主动杀死程序进程</span></span><br><span class="line"><span class="comment"># 将dmesg命令的输出通过管道传递给egrep命令进行过滤。egrep命令使用正则表达式&#x27;killed process&#x27;来匹配包含&quot;killed process&quot;的行，并且使用-i选项忽略大小写。-B100选项会在匹配到的行之前显示100行的上下文。</span></span><br><span class="line">dmesg | egrep -i -B100 <span class="string">&#x27;killed process&#x27;</span></span><br><span class="line"><span class="comment"># 在/var/log/messages文件中搜索包含&quot;killed process&quot;的行，并且使用-i选项忽略大小写</span></span><br><span class="line">egrep -i <span class="string">&#x27;killed process&#x27;</span> /var/log/messages</span><br><span class="line"><span class="comment"># 在/var/log目录及其子目录下递归地搜索包含&quot;killed process&quot;的行，并且使用-i选项忽略大小写</span></span><br><span class="line">egrep -i -r <span class="string">&#x27;killed process&#x27;</span> /var/log</span><br><span class="line"><span class="comment"># 将journalctl -xb命令的输出通过管道传递给egrep命令进行过滤。journalctl -xb命令用于查看系统启动时的日志，并且使用-i选项忽略大小写</span></span><br><span class="line">journalctl -xb | egrep -i <span class="string">&#x27;killed process&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果未发现/var/log/messages文件，编辑50-default.conf文件，取消注释一行内容</span></span><br><span class="line">nano /etc/rsyslog.d/50-default.conf</span><br><span class="line"><span class="comment">#       mail,news.none          -/var/log/messages</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自训练模型的配置步骤">3.3 &nbsp&nbsp<a href="#自训练模型的配置步骤" class="headerlink" title="自训练模型的配置步骤"></a>自训练模型的配置步骤</h2><h2 id="Windows-x86版环境搭建">3.4 &nbsp&nbsp<a href="#Windows-x86版环境搭建" class="headerlink" title="Windows x86版环境搭建"></a>Windows x86版环境搭建</h2><ol>
+<li>安装miniconda3：<a href="https://docs.conda.io/projects/miniconda/en/latest/">跳转下载</a></li>
+<li>创建并切换新的虚拟环境<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create -n hrfae python=3.7</span><br><span class="line">conda activate hrfae</span><br></pre></td></tr></table></figure></li>
+<li>先下载并安装torch和torchvision的cuda版whl（建议先关闭科学上网，避免浪费科学上网的流量），使用<code>pip install</code>即可：<a href="https://download.pytorch.org/whl/cu117/torch-1.13.1%2Bcu117-cp37-cp37m-win_amd64.whl">torch-1.13.1+cu117-cp37-cp37m-win_amd64.whl</a>和<a href="https://download.pytorch.org/whl/cu117/torchvision-0.14.1%2Bcu117-cp37-cp37m-win_amd64.whl">torchvision-0.14.1+cu117-cp37-cp37m-win_amd64.whl</a>。别使用<code>conda install torch</code>安装torch，否则易出现一些版本依赖的问题。例如：<code>解决python urllib3 v2.0 only supports OpenSSL 1.1.1+, currently</code>。这是因为openSSL版本太低，可以安装低版本解决：<code>pip install urllib3==1.23 -i https://pypi.tuna.tsinghua.edu.cn/simple</code>。</li>
+<li>之后一一安装其他库，如果<code>conda install</code>找不到库，就使用<code>pip install</code>，例如<code>Tensorboard-logger</code>。</li>
+</ol>
+<h1 id="硬件型号">4 &nbsp&nbsp<a href="#硬件型号" class="headerlink" title="硬件型号"></a>硬件型号</h1><p>NVIDIA Jetson TX2 NX，16GB eMMC，额外挂载一个120G的固态盘。</p>
 <h1 id="烧录系统">5 &nbsp&nbsp<a href="#烧录系统" class="headerlink" title="烧录系统"></a>烧录系统</h1><h2 id="烧录前准备">5.1 &nbsp&nbsp<a href="#烧录前准备" class="headerlink" title="烧录前准备"></a>烧录前准备</h2><ul>
 <li>一台Ubuntu 18.00 LTS系统的PC（其他的jetson设备不能作为刷机主机，必须用ubuntu电脑。也不能用vbox或者vmware之类的虚拟机创建ubuntu刷机主机，因为虚拟机系统无法处理usb等底层的驱动，这会导致刷机时一直提示未正确进入刷机模式，但实际机器已经真正进入到刷机模式的）</li>
 <li>一条micro-usb数据线</li>
@@ -1789,7 +1808,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <ol start="4">
 <li>设置构建参数的环境变量（如果有改变终端，记得重新export这些环境变量）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> USE_NCCL=0</span><br><span class="line"><span class="comment"># skip setting this if you want to enable OpenMPI backend</span></span><br><span class="line"><span class="built_in">export</span> USE_DISTRIBUTED=0</span><br><span class="line"><span class="built_in">export</span> USE_QNNPACK=0</span><br><span class="line"><span class="built_in">export</span> USE_PYTORCH_QNNPACK=0</span><br><span class="line"><span class="comment"># or &quot;7.2;8.7&quot; for JetPack 5 wheels for Xavier/Orin</span></span><br><span class="line"><span class="built_in">export</span> TORCH_CUDA_ARCH_LIST=<span class="string">&quot;5.3;6.2;7.2&quot;</span></span><br><span class="line"><span class="comment"># without the leading &#x27;v&#x27;, e.g. 1.3.0 for PyTorch v1.3.0</span></span><br><span class="line"><span class="built_in">export</span> PYTORCH_BUILD_VERSION=1.10.2</span><br><span class="line"><span class="built_in">export</span> PYTORCH_BUILD_NUMBER=1</span><br></pre></td></tr></table></figure></li>
 <li>安装构建必要的系统库：<code>sudo apt install cmake libopenblas-dev libopenmpi-dev</code>，这里我使用的ubuntu官方源。</li>
-<li>编译源码构建程序（在构建之前建议先备份pytorch文件夹，毕竟克隆不容易：<code>cp -r pytorch pytorch.bak</code>）：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> pytorch</span><br><span class="line"><span class="comment"># 安装构建必要的pip3.7库</span></span><br><span class="line">pip3.7 install -r requirements.txt</span><br><span class="line">pip3.7 install scikit-build</span><br><span class="line">pip3.7 install ninja</span><br><span class="line"><span class="comment"># 开始编译源码构建程序，生成的安装包输出在dist文件夹：torch-1.10.2-cp37-cp37m-linux_aarch64.whl</span></span><br><span class="line">python3.7 setup.py bdist_wheel</span><br><span class="line"><span class="built_in">cd</span> dist</span><br><span class="line">pip3.7 install torch-1.10.2-cp37-cp37m-linux_aarch64.whl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在编译过程中，反复出现一个报错：c++: internal compiler error: 已杀死 (program cc1plus)</span></span><br><span class="line"><span class="comment"># 原因：swap交换空间不足，使用jtop命令查看当前开发板只有系统分配的1.9G的zram交换空间，需手动增加swap空间</span></span><br><span class="line"><span class="comment"># 弃用以下传统的swapfile方法，修改zram的大小就好</span></span><br><span class="line"><span class="comment"># 查看所有zram相关文件</span></span><br><span class="line">find / -name <span class="string">&quot;*zram*&quot;</span> 2&gt;/dev/null</span><br><span class="line"><span class="comment"># 编辑zram配置文件</span></span><br><span class="line">nano /etc/systemd/nvzramconfig.sh</span><br><span class="line"><span class="comment"># 修改前</span></span><br><span class="line">mem=$(((totalmem / <span class="number">2</span> / <span class="variable">$&#123;NRDEVICES&#125;</span>) * <span class="number">1024</span>))</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 修改后zram总大小为物理内存大小的三倍</span></span><br><span class="line">mem=$(((totalmem * <span class="number">3</span> / <span class="variable">$&#123;NRDEVICES&#125;</span>) * <span class="number">1024</span>))</span><br><span class="line"><span class="comment"># 查看zram情况</span></span><br><span class="line">zramctl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新增swapfile文件大小自定义</span></span><br><span class="line">sudo fallocate -l 8G /var/swapfile</span><br><span class="line"><span class="comment"># 配置该文件的权限</span></span><br><span class="line">sudo <span class="built_in">chmod</span> 600 /var/swapfile</span><br><span class="line"><span class="comment"># 建立交换分区</span></span><br><span class="line">sudo mkswap /var/swapfile</span><br><span class="line"><span class="comment"># 启用交换分区，再次运行jtop，可看到swap空间已经变成了10G</span></span><br><span class="line">sudo swapon /var/swapfile</span><br><span class="line"><span class="comment"># 设置为自动启用swapfile</span></span><br><span class="line">sudo bash -c <span class="string">&#x27;echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab&#x27;</span></span><br><span class="line"><span class="comment"># 关闭交换分区</span></span><br><span class="line">sudo swapoff /var/swapfile</span><br><span class="line"><span class="comment"># 删除交换分区文件</span></span><br><span class="line">sudo <span class="built_in">rm</span> /var/swapfile</span><br><span class="line"><span class="comment"># 删除fstab相关设置</span></span><br><span class="line">nano /etc/fstab</span><br></pre></td></tr></table></figure></li>
+<li>编译源码构建程序（在构建之前建议先备份pytorch文件夹，毕竟克隆不容易：<code>cp -r pytorch pytorch.bak</code>）：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> pytorch</span><br><span class="line"><span class="comment"># 安装构建必要的pip3.7库</span></span><br><span class="line">pip3.7 install -r requirements.txt</span><br><span class="line">pip3.7 install scikit-build</span><br><span class="line">pip3.7 install ninja</span><br><span class="line"><span class="comment"># 开始编译源码构建程序，生成的安装包输出在dist文件夹：torch-1.10.2-cp37-cp37m-linux_aarch64.whl</span></span><br><span class="line">python3.7 setup.py bdist_wheel</span><br><span class="line"><span class="built_in">cd</span> dist</span><br><span class="line">pip3.7 install torch-1.10.2-cp37-cp37m-linux_aarch64.whl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在编译过程中，反复出现一个报错：c++: internal compiler error: 已杀死 (program cc1plus)</span></span><br><span class="line"><span class="comment"># 原因：swap交换空间不足，使用jtop命令查看当前开发板只有系统分配的1.9G的zram交换空间，需手动增加swap空间</span></span><br><span class="line"><span class="comment"># 弃用以下传统的swapfile方法，修改zram的大小就好</span></span><br><span class="line"><span class="comment"># 查看所有zram相关文件</span></span><br><span class="line">find / -name <span class="string">&quot;*zram*&quot;</span> 2&gt;/dev/null</span><br><span class="line"><span class="comment"># 编辑zram配置文件</span></span><br><span class="line">nano /etc/systemd/nvzramconfig.sh</span><br><span class="line"><span class="comment"># 修改前</span></span><br><span class="line">mem=$(((totalmem / <span class="number">2</span> / <span class="variable">$&#123;NRDEVICES&#125;</span>) * <span class="number">1024</span>))</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 修改后zram总大小为物理内存大小的三倍</span></span><br><span class="line">mem=$(((totalmem * <span class="number">3</span> / <span class="variable">$&#123;NRDEVICES&#125;</span>) * <span class="number">1024</span>))</span><br><span class="line"><span class="comment"># 查看zram情况</span></span><br><span class="line">zramctl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新增swapfile文件大小自定义</span></span><br><span class="line">sudo fallocate -l 8G /var/swapfile</span><br><span class="line"><span class="comment"># 配置该文件的权限</span></span><br><span class="line">sudo <span class="built_in">chmod</span> 600 /var/swapfile</span><br><span class="line"><span class="comment"># 建立交换分区</span></span><br><span class="line">sudo mkswap /var/swapfile</span><br><span class="line"><span class="comment"># 启用交换分区，再次运行jtop，可看到swap空间已经变成了10G</span></span><br><span class="line">sudo swapon /var/swapfile</span><br><span class="line"><span class="comment"># 设置为自动启用swapfile</span></span><br><span class="line">sudo bash -c <span class="string">&#x27;echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab&#x27;</span></span><br><span class="line"><span class="comment"># 关闭交换分区</span></span><br><span class="line">sudo swapoff /var/swapfile</span><br><span class="line"><span class="comment"># 在现有的/var//swapfile后面追加30GB（增加容量后，请手动mkswap及swapon）</span></span><br><span class="line">sudo <span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=/var/swapfile bs=1M count=30720 oflag=append conv=notrunc</span><br><span class="line"><span class="comment"># 删除交换分区文件</span></span><br><span class="line">sudo <span class="built_in">rm</span> /var/swapfile</span><br><span class="line"><span class="comment"># 删除fstab相关设置</span></span><br><span class="line">nano /etc/fstab</span><br></pre></td></tr></table></figure></li>
 <li>检测pytorch安装是否成功<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3.7</span><br><span class="line">import torch</span><br><span class="line"><span class="comment"># 输出True安装成功</span></span><br><span class="line">torch.cuda.is_available()</span><br><span class="line">torch.backends.cudnn.is_available()</span><br><span class="line"><span class="comment"># 查看cuda版本</span></span><br><span class="line"><span class="built_in">print</span>(torch.version.cuda)</span><br><span class="line"><span class="comment"># 查看cudnn版本</span></span><br><span class="line"><span class="built_in">print</span>(torch.backends.cudnn.version())</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="为python3-7编译torchvision">12.2.2 &nbsp&nbsp<a href="#为python3-7编译torchvision" class="headerlink" title="为python3.7编译torchvision"></a>为python3.7编译torchvision</h3><p>查看<a href="https://github.com/pytorch/vision#installation">torchvision的README页面</a>，可知torch和torchvision对应版本信息，以及所要求的python版本。</p>
@@ -1854,7 +1873,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：剔除环境配置文件environment.yml中的版本信息，只需删除第二个等号之后的内容即可</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pytorch=1.1.0=py3.7_cuda10.0.130_cudnn7.5.1_0</span><br><span class="line"><span class="comment"># 例如上面这行的修改如下</span></span><br><span class="line">pytorch=1.1.0</span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Nvidia xavier NX 通过 flash.sh 烧录 linux 系统[EB&#x2F;OL]. <a href="https://blog.csdn.net/Yan_uuu/article/details/126947983">https://blog.csdn.net/Yan_uuu/article/details/126947983</a>.<br>[2] Jetson Xavier NX 镜像制作、烧录及克隆[EB&#x2F;OL]. <a href="https://blog.csdn.net/qhdd123/article/details/123815911">https://blog.csdn.net/qhdd123/article/details/123815911</a>.<br>[3] 解决 Jetson：Failed to start nvpmode1 server. 和 Failed to start load kernel modules[EB&#x2F;OL]. <a href="https://blog.csdn.net/alianfibakic/article/details/123807606">https://blog.csdn.net/alianfibakic/article/details/123807606</a>.<br>[4] Jetson TX2 更换软件源[EB&#x2F;OL]. <a href="https://blog.csdn.net/qlulibin/article/details/80271096">https://blog.csdn.net/qlulibin/article/details/80271096</a>.<br>[5] Ubuntu18.04 默认源恢复默认源恢复备份源[EB&#x2F;OL]. <a href="https://blog.csdn.net/ZeyiRTangent/article/details/114885286">https://blog.csdn.net/ZeyiRTangent/article/details/114885286</a>.<br>[6] PyPI 镜像使用帮助[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/</a>.<br>[7] Ubuntu 编译安装 python3.7.10, 解决‘_ctypes‘和 ssl 问题, 建立软链接 python3.7 和 pip3.7[EB&#x2F;OL]. <a href="https://blog.csdn.net/tmaccs/article/details/117029067">https://blog.csdn.net/tmaccs/article/details/117029067</a>.<br>[8] ubuntu18.04 下源码编译安装最新版本 Python3[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/62930419">https://zhuanlan.zhihu.com/p/62930419</a>.<br>[9] ubuntu pip is configured with locations that require TLS&#x2F;SSL[EB&#x2F;OL]. <a href="https://blog.csdn.net/a1007720052/article/details/107342695">https://blog.csdn.net/a1007720052/article/details/107342695</a>.<br>[10] libssl‑dev : Depends: libssl1.0.0 (&#x3D; 1.0.2g‑1ubuntu4) but 1.0.2g‑1ubuntu4.15 is to be installed[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_38890593/article/details/102783551">https://blog.csdn.net/weixin_38890593/article/details/102783551</a>.<br>[11] TX2开启最大功耗模式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/gezhuangzhuang/p/11674062.html">https://www.cnblogs.com/gezhuangzhuang/p/11674062.html</a>.<br>[12] 使用git --recursive进行循环克隆，由于网络原因，出现克隆失败的情况。[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_43212651/article/details/116376103">https://blog.csdn.net/qq_43212651/article/details/116376103</a>.<br>[13] 解决c++: internal compiler error: 已杀死 (program cc1plus)[EB&#x2F;OL]. <a href="https://blog.csdn.net/chenmeng0508/article/details/122283442">https://blog.csdn.net/chenmeng0508/article/details/122283442</a>.<br>[14] Jetson nano增加Swap分区大小操作指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33475105/article/details/108372878">https://blog.csdn.net/qq_33475105/article/details/108372878</a>.<br>[15] 玩转NVIDIA Jetson （25）--- jetson 安装pytorch和torchvision[EB&#x2F;OL]. <a href="https://blog.csdn.net/huiyuanliyan/article/details/126686036">https://blog.csdn.net/huiyuanliyan/article/details/126686036</a>.<br>[16] Ubuntu 安装PHP找不着BZip2[EB&#x2F;OL]. <a href="https://blog.csdn.net/handsome_926/article/details/77933926">https://blog.csdn.net/handsome_926/article/details/77933926</a>.<br>[17] ModuleNotFoundError: No module named &#39;_lzma&#39;[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/404162713">https://zhuanlan.zhihu.com/p/404162713</a>.<br>[18] Error :: You must put some &#39;source&#39; URIs in your sources.list[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/496549/error-you-must-put-some-source-uris-in-your-sources-list">https://askubuntu.com/questions/496549/error-you-must-put-some-source-uris-in-your-sources-list</a>.<br>[19] 3d-pose-baseline[EB&#x2F;OL]. <a href="https://github.com/una-dinosauria/3d-pose-baseline">https://github.com/una-dinosauria/3d-pose-baseline</a>.<br>[20] How to stop jetson_clocks?[EB&#x2F;OL]. <a href="https://forums.developer.nvidia.com/t/how-to-stop-jetson-clocks/144713">https://forums.developer.nvidia.com/t/how-to-stop-jetson-clocks/144713</a>.<br>[21] VideoPose3d:环境搭建+制作自己的视频[EB&#x2F;OL]. <a href="https://blog.csdn.net/willbetter01/article/details/120906567">https://blog.csdn.net/willbetter01/article/details/120906567</a>.<br>[22] 【VideoPose3D】可视化自定义视频[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_44942539/article/details/121983187">https://blog.csdn.net/qq_44942539/article/details/121983187</a>.<br>[23] Windows下VideoPose3D成功运行记录2：运行自定义视频[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv19291005/">https://www.bilibili.com/read/cv19291005/</a>.<br>[24] How to Use OpenCV with CUDA Support in Python[EB&#x2F;OL]. <a href="https://saturncloud.io/blog/how-to-use-opencv-with-cuda-support-in-python/">https://saturncloud.io/blog/how-to-use-opencv-with-cuda-support-in-python/</a>.<br>[25] Jetson Xavier NX OpenCV 安装[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/411901208">https://zhuanlan.zhihu.com/p/411901208</a>.<br>[26] Nvidia Jetson TX2 配置Cuda 加速的Opencv[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_62651190/article/details/129348245">https://blog.csdn.net/weixin_62651190/article/details/129348245</a>.<br>[27] Guide to build OpenCV from source with GPU support (CUDA and cuDNN)[EB&#x2F;OL]. <a href="https://gist.github.com/minhhieutruong0705/8f0ec70c400420e0007c15c98510f133">https://gist.github.com/minhhieutruong0705/8f0ec70c400420e0007c15c98510f133</a>.<br>[28] How to install OpenCV 4.2.0 with CUDA 10.0 in Ubuntu distro 18.04[EB&#x2F;OL]. <a href="https://gist.github.com/changx03/b4aa9bb2827217c3a6a7e08365441417">https://gist.github.com/changx03/b4aa9bb2827217c3a6a7e08365441417</a>.<br>[29] Jetson带CUDA编译的opencv4.5安装教程与踩坑指南，cmake配置很重要！[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39298885/article/details/110851373">https://blog.csdn.net/weixin_39298885/article/details/110851373</a>.<br>[30] ubuntu 编译安装支持CUDA的OpenCV[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_44523137/article/details/124098406">https://blog.csdn.net/qq_44523137/article/details/124098406</a>.<br>[31] Install OpenCV on Jetson Nano[EB&#x2F;OL]. <a href="https://qengineering.eu/install-opencv-on-jetson-nano.html">https://qengineering.eu/install-opencv-on-jetson-nano.html</a>.<br>[32] 「解析」Jetson Orin NX 安装 CUDA&#x2F;cuDNN[EB&#x2F;OL]. <a href="https://blog.csdn.net/ViatorSun/article/details/129909317">https://blog.csdn.net/ViatorSun/article/details/129909317</a>.<br>[33] OpenCV 4.2.0 and CuDNN for Jetson Nano?[EB&#x2F;OL]. <a href="https://forums.developer.nvidia.com/t/opencv-4-2-0-and-cudnn-for-jetson-nano/112281?page=2">https://forums.developer.nvidia.com/t/opencv-4-2-0-and-cudnn-for-jetson-nano/112281?page=2</a>.<br>[34] Correction in OpenCV&#39;s default CMAKE search Path for OpenBLAS Library on Ubuntu-64bit Machines [Solution] [EB&#x2F;OL]. <a href="https://github.com/opencv/opencv/issues/12957">https://github.com/opencv/opencv/issues/12957</a>.<br>[35] jetson tx2 安装miniconda失败原因（illegal instruction (core dump）原因解析与简易安装miniconda[EB&#x2F;OL]. <a href="https://blog.csdn.net/buxiangyaomingzi/article/details/123297295">https://blog.csdn.net/buxiangyaomingzi/article/details/123297295</a>.<br>[36] TypeError: load() missing 1 required positional argument: &#39;Loader&#39; in Google Colab[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/69564817/typeerror-load-missing-1-required-positional-argument-loader-in-google-col">https://stackoverflow.com/questions/69564817/typeerror-load-missing-1-required-positional-argument-loader-in-google-col</a>.<br>[37] 解决创建conda环境时Solving environment: failed 和 ResolvePackageNotFound 的错误[EB&#x2F;OL]. <a href="https://blog.csdn.net/hshudoudou/article/details/126407029">https://blog.csdn.net/hshudoudou/article/details/126407029</a>.<br>[38] 关于Ubuntu下ZRAM的配置和使用[EB&#x2F;OL]. <a href="https://blog.xzr.moe/archives/88/">https://blog.xzr.moe/archives/88/</a>.</p>
+<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Nvidia xavier NX 通过 flash.sh 烧录 linux 系统[EB&#x2F;OL]. <a href="https://blog.csdn.net/Yan_uuu/article/details/126947983">https://blog.csdn.net/Yan_uuu/article/details/126947983</a>.<br>[2] Jetson Xavier NX 镜像制作、烧录及克隆[EB&#x2F;OL]. <a href="https://blog.csdn.net/qhdd123/article/details/123815911">https://blog.csdn.net/qhdd123/article/details/123815911</a>.<br>[3] 解决 Jetson：Failed to start nvpmode1 server. 和 Failed to start load kernel modules[EB&#x2F;OL]. <a href="https://blog.csdn.net/alianfibakic/article/details/123807606">https://blog.csdn.net/alianfibakic/article/details/123807606</a>.<br>[4] Jetson TX2 更换软件源[EB&#x2F;OL]. <a href="https://blog.csdn.net/qlulibin/article/details/80271096">https://blog.csdn.net/qlulibin/article/details/80271096</a>.<br>[5] Ubuntu18.04 默认源恢复默认源恢复备份源[EB&#x2F;OL]. <a href="https://blog.csdn.net/ZeyiRTangent/article/details/114885286">https://blog.csdn.net/ZeyiRTangent/article/details/114885286</a>.<br>[6] PyPI 镜像使用帮助[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/</a>.<br>[7] Ubuntu 编译安装 python3.7.10, 解决‘_ctypes‘和 ssl 问题, 建立软链接 python3.7 和 pip3.7[EB&#x2F;OL]. <a href="https://blog.csdn.net/tmaccs/article/details/117029067">https://blog.csdn.net/tmaccs/article/details/117029067</a>.<br>[8] ubuntu18.04 下源码编译安装最新版本 Python3[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/62930419">https://zhuanlan.zhihu.com/p/62930419</a>.<br>[9] ubuntu pip is configured with locations that require TLS&#x2F;SSL[EB&#x2F;OL]. <a href="https://blog.csdn.net/a1007720052/article/details/107342695">https://blog.csdn.net/a1007720052/article/details/107342695</a>.<br>[10] libssl‑dev : Depends: libssl1.0.0 (&#x3D; 1.0.2g‑1ubuntu4) but 1.0.2g‑1ubuntu4.15 is to be installed[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_38890593/article/details/102783551">https://blog.csdn.net/weixin_38890593/article/details/102783551</a>.<br>[11] TX2开启最大功耗模式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/gezhuangzhuang/p/11674062.html">https://www.cnblogs.com/gezhuangzhuang/p/11674062.html</a>.<br>[12] 使用git --recursive进行循环克隆，由于网络原因，出现克隆失败的情况。[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_43212651/article/details/116376103">https://blog.csdn.net/qq_43212651/article/details/116376103</a>.<br>[13] 解决c++: internal compiler error: 已杀死 (program cc1plus)[EB&#x2F;OL]. <a href="https://blog.csdn.net/chenmeng0508/article/details/122283442">https://blog.csdn.net/chenmeng0508/article/details/122283442</a>.<br>[14] Jetson nano增加Swap分区大小操作指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33475105/article/details/108372878">https://blog.csdn.net/qq_33475105/article/details/108372878</a>.<br>[15] 玩转NVIDIA Jetson （25）--- jetson 安装pytorch和torchvision[EB&#x2F;OL]. <a href="https://blog.csdn.net/huiyuanliyan/article/details/126686036">https://blog.csdn.net/huiyuanliyan/article/details/126686036</a>.<br>[16] Ubuntu 安装PHP找不着BZip2[EB&#x2F;OL]. <a href="https://blog.csdn.net/handsome_926/article/details/77933926">https://blog.csdn.net/handsome_926/article/details/77933926</a>.<br>[17] ModuleNotFoundError: No module named &#39;_lzma&#39;[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/404162713">https://zhuanlan.zhihu.com/p/404162713</a>.<br>[18] Error :: You must put some &#39;source&#39; URIs in your sources.list[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/496549/error-you-must-put-some-source-uris-in-your-sources-list">https://askubuntu.com/questions/496549/error-you-must-put-some-source-uris-in-your-sources-list</a>.<br>[19] 3d-pose-baseline[EB&#x2F;OL]. <a href="https://github.com/una-dinosauria/3d-pose-baseline">https://github.com/una-dinosauria/3d-pose-baseline</a>.<br>[20] How to stop jetson_clocks?[EB&#x2F;OL]. <a href="https://forums.developer.nvidia.com/t/how-to-stop-jetson-clocks/144713">https://forums.developer.nvidia.com/t/how-to-stop-jetson-clocks/144713</a>.<br>[21] VideoPose3d:环境搭建+制作自己的视频[EB&#x2F;OL]. <a href="https://blog.csdn.net/willbetter01/article/details/120906567">https://blog.csdn.net/willbetter01/article/details/120906567</a>.<br>[22] 【VideoPose3D】可视化自定义视频[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_44942539/article/details/121983187">https://blog.csdn.net/qq_44942539/article/details/121983187</a>.<br>[23] Windows下VideoPose3D成功运行记录2：运行自定义视频[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv19291005/">https://www.bilibili.com/read/cv19291005/</a>.<br>[24] How to Use OpenCV with CUDA Support in Python[EB&#x2F;OL]. <a href="https://saturncloud.io/blog/how-to-use-opencv-with-cuda-support-in-python/">https://saturncloud.io/blog/how-to-use-opencv-with-cuda-support-in-python/</a>.<br>[25] Jetson Xavier NX OpenCV 安装[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/411901208">https://zhuanlan.zhihu.com/p/411901208</a>.<br>[26] Nvidia Jetson TX2 配置Cuda 加速的Opencv[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_62651190/article/details/129348245">https://blog.csdn.net/weixin_62651190/article/details/129348245</a>.<br>[27] Guide to build OpenCV from source with GPU support (CUDA and cuDNN)[EB&#x2F;OL]. <a href="https://gist.github.com/minhhieutruong0705/8f0ec70c400420e0007c15c98510f133">https://gist.github.com/minhhieutruong0705/8f0ec70c400420e0007c15c98510f133</a>.<br>[28] How to install OpenCV 4.2.0 with CUDA 10.0 in Ubuntu distro 18.04[EB&#x2F;OL]. <a href="https://gist.github.com/changx03/b4aa9bb2827217c3a6a7e08365441417">https://gist.github.com/changx03/b4aa9bb2827217c3a6a7e08365441417</a>.<br>[29] Jetson带CUDA编译的opencv4.5安装教程与踩坑指南，cmake配置很重要！[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39298885/article/details/110851373">https://blog.csdn.net/weixin_39298885/article/details/110851373</a>.<br>[30] ubuntu 编译安装支持CUDA的OpenCV[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_44523137/article/details/124098406">https://blog.csdn.net/qq_44523137/article/details/124098406</a>.<br>[31] Install OpenCV on Jetson Nano[EB&#x2F;OL]. <a href="https://qengineering.eu/install-opencv-on-jetson-nano.html">https://qengineering.eu/install-opencv-on-jetson-nano.html</a>.<br>[32] 「解析」Jetson Orin NX 安装 CUDA&#x2F;cuDNN[EB&#x2F;OL]. <a href="https://blog.csdn.net/ViatorSun/article/details/129909317">https://blog.csdn.net/ViatorSun/article/details/129909317</a>.<br>[33] OpenCV 4.2.0 and CuDNN for Jetson Nano?[EB&#x2F;OL]. <a href="https://forums.developer.nvidia.com/t/opencv-4-2-0-and-cudnn-for-jetson-nano/112281?page=2">https://forums.developer.nvidia.com/t/opencv-4-2-0-and-cudnn-for-jetson-nano/112281?page=2</a>.<br>[34] Correction in OpenCV&#39;s default CMAKE search Path for OpenBLAS Library on Ubuntu-64bit Machines [Solution] [EB&#x2F;OL]. <a href="https://github.com/opencv/opencv/issues/12957">https://github.com/opencv/opencv/issues/12957</a>.<br>[35] jetson tx2 安装miniconda失败原因（illegal instruction (core dump）原因解析与简易安装miniconda[EB&#x2F;OL]. <a href="https://blog.csdn.net/buxiangyaomingzi/article/details/123297295">https://blog.csdn.net/buxiangyaomingzi/article/details/123297295</a>.<br>[36] TypeError: load() missing 1 required positional argument: &#39;Loader&#39; in Google Colab[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/69564817/typeerror-load-missing-1-required-positional-argument-loader-in-google-col">https://stackoverflow.com/questions/69564817/typeerror-load-missing-1-required-positional-argument-loader-in-google-col</a>.<br>[37] 解决创建conda环境时Solving environment: failed 和 ResolvePackageNotFound 的错误[EB&#x2F;OL]. <a href="https://blog.csdn.net/hshudoudou/article/details/126407029">https://blog.csdn.net/hshudoudou/article/details/126407029</a>.<br>[38] 关于Ubuntu下ZRAM的配置和使用[EB&#x2F;OL]. <a href="https://blog.xzr.moe/archives/88/">https://blog.xzr.moe/archives/88/</a>.<br>[39] 解决python urllib3 v2.0 only supports OpenSSL 1.1.1+, currently[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_43205308/article/details/130830307">https://blog.csdn.net/weixin_43205308/article/details/130830307</a>.<br>[40] 从TensorFlow被kill到增加Swap分区[EB&#x2F;OL]. <a href="https://www.zhihu.com/column/p/30562899">https://www.zhihu.com/column/p/30562899</a>.<br>[41] Linux运行程序时，程序进程莫名退出（被杀死）[EB&#x2F;OL]. <a href="https://blog.csdn.net/ispringmw/article/details/112719262">https://blog.csdn.net/ispringmw/article/details/112719262</a>.<br>[42] linux 环境下进程被 killed掉原因分析和解决方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/ktigerhero3/article/details/80004315">https://blog.csdn.net/ktigerhero3/article/details/80004315</a>.<br>[43] Linux OOM Killer机制 以及防止被OOM Killer杀死的方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/top_explore/article/details/107733974">https://blog.csdn.net/top_explore/article/details/107733974</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -1934,6 +1953,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>软件</tag>
         <tag>操作</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Perforce Helix Core版本控制</title>
+    <url>/software/perforce/</url>
+    <content><![CDATA[<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
+<h1 id="安装">2 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
   </entry>
   <entry>
     <title>PVE+iKuai+OpenWrt虚拟机折腾记录</title>
@@ -3019,15 +3048,28 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>安装向日葵<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line">sudo systemctl start runsunloginclient.service</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
-<h1 id="开机排障">8 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复-救援模式（recovery-mode）">8.1 &nbsp&nbsp<a href="#ubuntu恢复-救援模式（recovery-mode）" class="headerlink" title="ubuntu恢复&#x2F;救援模式（recovery mode）"></a>ubuntu恢复&#x2F;救援模式（recovery mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的 单用户模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
+<h1 id="开机排障">8 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">8.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
 <p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
 <ul>
 <li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
-<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键看看。</li>
+<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
 </ul>
-<p>从救援模式切换到紧急模式：<code>systemctl emergency</code></p>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="ubuntu紧急模式">8.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
 <p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
 <h2 id="开机出现initramfs-requires-a-manual-fsck">8.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
 <ul>
 <li>异常断电或者关机引起文件数据损坏</li>
@@ -3038,7 +3080,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
 
 
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.</p>
+<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -3100,16 +3142,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Perforce Helix Core版本控制</title>
-    <url>/software/perforce/</url>
-    <content><![CDATA[<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
-<h1 id="安装">2 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机软件排障总结</title>
     <url>/troubleshooting/software-troubleshooting/</url>
     <content><![CDATA[<h1 id="系统">1 &nbsp&nbsp<a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="运行库的排障">1.1 &nbsp&nbsp<a href="#运行库的排障" class="headerlink" title="运行库的排障"></a>运行库的排障</h2><p>详看<a href="/software/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a>。</p>
@@ -3163,16 +3195,18 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;">&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;">&#110;&#x6f;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="微软商店应用">2 &nbsp&nbsp<a href="#微软商店应用" class="headerlink" title="微软商店应用"></a>微软商店应用</h1><h2 id="Win10-LTSC-2021安装微软商店MicrosoftStore">2.1 &nbsp&nbsp<a href="#Win10-LTSC-2021安装微软商店MicrosoftStore" class="headerlink" title="Win10 LTSC 2021安装微软商店MicrosoftStore"></a>Win10 LTSC 2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
 <h1 id="运行库">3 &nbsp&nbsp<a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>详看<a href="/troubleshooting/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a></p>
 <h1 id="硬件分区数据">4 &nbsp&nbsp<a href="#硬件分区数据" class="headerlink" title="硬件分区数据"></a>硬件分区数据</h1><h2 id="数据恢复">4.1 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000</p>
 <h1 id="注册表">5 &nbsp&nbsp<a href="#注册表" class="headerlink" title="注册表"></a>注册表</h1><p><a href="https://pecmd.net/thread-68.htm">教程：了解和掌握Windows操作系统注册表，包括在线和离线修改方法</a></p>
-<h1 id="网络">6 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="win10-ssh客户端">6.1 &nbsp&nbsp<a href="#win10-ssh客户端" class="headerlink" title="win10 ssh客户端"></a>win10 ssh客户端</h2><p>win10 1803版本自带安装ssh客户端，可检查是否已启用。新版都自带安装客户端并自动启动。</p>
+<h1 id="网络">6 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="网络测试">6.1 &nbsp&nbsp<a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 验证本机 TCP/IP 协议是否安装好</span></span><br><span class="line">ping 127.0.0.1</span><br><span class="line"><span class="comment"># 验证本机 IP 地址是否配置完成或者网卡物理属性是否完好</span></span><br><span class="line">ping 192.168.1.55</span><br><span class="line"><span class="comment"># 验证从本机到网关的物理线路是否连通</span></span><br><span class="line">ping 192.168.1.1/192.168.0.1</span><br><span class="line"><span class="comment"># 目标地址查看电脑与目标机器工作是否正常。</span></span><br><span class="line">ping</span><br><span class="line"><span class="comment"># 目标地址跟踪数据包到达目的主机的路径，可以探测网络故障是发生在哪一个位置</span></span><br><span class="line">Tracert</span><br><span class="line"><span class="comment"># 首先 localhost 是一个域名，在过去它指向 127.0.0.1 这个 IP 地址。在操作系统支持 ipv6 后，它同时还指向 ipv6 的地址 [::1] 。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="win10-ssh客户端">6.2 &nbsp&nbsp<a href="#win10-ssh客户端" class="headerlink" title="win10 ssh客户端"></a>win10 ssh客户端</h2><p>win10 1803版本自带安装ssh客户端，可检查是否已启用。新版都自带安装客户端并自动启动。</p>
 <p>使用：<code>ssh username@ip</code></p>
-<h2 id="win10-ssh服务端并允许空密码连接登录">6.2 &nbsp&nbsp<a href="#win10-ssh服务端并允许空密码连接登录" class="headerlink" title="win10 ssh服务端并允许空密码连接登录"></a>win10 ssh服务端并允许空密码连接登录</h2><p>虽说新版win10已自带安装ssh客户端，但服务端需自行安装设置。</p>
+<h2 id="win10-ssh服务端并允许空密码连接登录">6.3 &nbsp&nbsp<a href="#win10-ssh服务端并允许空密码连接登录" class="headerlink" title="win10 ssh服务端并允许空密码连接登录"></a>win10 ssh服务端并允许空密码连接登录</h2><p>虽说新版win10已自带安装ssh客户端，但服务端需自行安装设置。</p>
 <ol>
 <li>设置&gt;应用&gt;应用和功能：可选功能</li>
 <li>添加功能：OpenSSH 服务器，选择安装</li>
@@ -3186,17 +3220,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>程序主目录：C:\Windows\System32\OpenSSH</li>
 <li>配置文件目录：%PROGRAMDATA%\ssh\sshd_config</li>
 </ul>
-<h1 id="win防火墙开启后无法被ping通">7 &nbsp&nbsp<a href="#win防火墙开启后无法被ping通" class="headerlink" title="win防火墙开启后无法被ping通"></a>win防火墙开启后无法被ping通</h1><p>两种方案：</p>
+<h2 id="win防火墙开启后无法被ping通">6.4 &nbsp&nbsp<a href="#win防火墙开启后无法被ping通" class="headerlink" title="win防火墙开启后无法被ping通"></a>win防火墙开启后无法被ping通</h2><p>两种方案：</p>
 <ul>
 <li>关闭防火墙：控制面板-&gt;系统和安全-&gt;Windows Defender 防火墙-&gt;启用或关闭Windows Defender防火墙-&gt;全部选择关闭Windows Defender防火墙-&gt;点击确定即可。</li>
 <li>配置防火墙规则：控制面板-&gt;系统和安全-&gt;Windows Defender 防火墙-&gt;高级设置-&gt;入站规则-&gt;右键点击「虚拟机监控（回显请求）」所对应的两条记录（或者只启用ICMPv4-In，不启用ICMPv6-In）-&gt;点击启用规则。（如果仍然不行，继续启用「文件和打印机共享（回显请求）」，共四条）</li>
 </ul>
-<h2 id="网络抓包分析工具">7.1 &nbsp&nbsp<a href="#网络抓包分析工具" class="headerlink" title="网络抓包分析工具"></a>网络抓包分析工具</h2><ul>
+<h2 id="网络抓包分析工具">6.5 &nbsp&nbsp<a href="#网络抓包分析工具" class="headerlink" title="网络抓包分析工具"></a>网络抓包分析工具</h2><ul>
 <li>wireshark：抓包分析</li>
 <li>postman：分析接口</li>
 <li>nmap:扫描端口</li>
 </ul>
-<h2 id="空密码无密码账户远程桌面连接出错提示用户账户限制">7.2 &nbsp&nbsp<a href="#空密码无密码账户远程桌面连接出错提示用户账户限制" class="headerlink" title="空密码无密码账户远程桌面连接出错提示用户账户限制"></a>空密码无密码账户远程桌面连接出错提示用户账户限制</h2><p>使用远程桌面功能时，报错：&#96;用户账户限制(例如，时间限制)会阻止你登录。请与系统管理员或技术支持联系以获取帮助。</p>
+<h2 id="空密码无密码账户远程桌面连接出错提示用户账户限制">6.6 &nbsp&nbsp<a href="#空密码无密码账户远程桌面连接出错提示用户账户限制" class="headerlink" title="空密码无密码账户远程桌面连接出错提示用户账户限制"></a>空密码无密码账户远程桌面连接出错提示用户账户限制</h2><p>使用远程桌面功能时，报错：&#96;用户账户限制(例如，时间限制)会阻止你登录。请与系统管理员或技术支持联系以获取帮助。</p>
 <p>问题原因：因为被控端的远程系统的用户密码为空，且系统默认只允许空白密码的本地账户进行控制台登录。</p>
 <p>解决方式（在被控端操作）：</p>
 <ol>
@@ -3204,23 +3238,23 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>本地策略 -&gt; 安全选项：在右侧选中「帐户: 使用空白密码的本地帐户只允许进行控制台登录双击进行编辑」</li>
 <li>选择禁用选项确认。</li>
 </ol>
-<h2 id="win10开启远程桌面功能">7.3 &nbsp&nbsp<a href="#win10开启远程桌面功能" class="headerlink" title="win10开启远程桌面功能"></a>win10开启远程桌面功能</h2><p>设置&gt;系统&gt;远程桌面&gt;启用远程桌面</p>
+<h2 id="win10开启远程桌面功能">6.7 &nbsp&nbsp<a href="#win10开启远程桌面功能" class="headerlink" title="win10开启远程桌面功能"></a>win10开启远程桌面功能</h2><p>设置&gt;系统&gt;远程桌面&gt;启用远程桌面</p>
 <p>P.S. 本质上和win7的设置一样，只是在win10的设置中提供了一个接口设置。</p>
-<h2 id="win7启用远程桌面">7.4 &nbsp&nbsp<a href="#win7启用远程桌面" class="headerlink" title="win7启用远程桌面"></a>win7启用远程桌面</h2><p>系统&gt;设置&gt;远程设置&gt;允许远程协助连接这台计算机+允许运行任意版本远程桌面的计算机连接（较不安全）。</p>
+<h2 id="win7启用远程桌面">6.8 &nbsp&nbsp<a href="#win7启用远程桌面" class="headerlink" title="win7启用远程桌面"></a>win7启用远程桌面</h2><p>系统&gt;设置&gt;远程设置&gt;允许远程协助连接这台计算机+允许运行任意版本远程桌面的计算机连接（较不安全）。</p>
 <p>如果依旧被拦截，点击「选择用户」，将用户名加入。</p>
-<h2 id="删除远程桌面连接记录">7.5 &nbsp&nbsp<a href="#删除远程桌面连接记录" class="headerlink" title="删除远程桌面连接记录"></a>删除远程桌面连接记录</h2><ol>
+<h2 id="删除远程桌面连接记录">6.9 &nbsp&nbsp<a href="#删除远程桌面连接记录" class="headerlink" title="删除远程桌面连接记录"></a>删除远程桌面连接记录</h2><ol>
 <li>WIN+R键：regedit</li>
 <li>注册表编辑器的地址栏输入地址：<code>计算机\HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default</code></li>
 <li>删除不要的记录</li>
 </ol>
-<h2 id="win公用网络切换为专用网络">7.6 &nbsp&nbsp<a href="#win公用网络切换为专用网络" class="headerlink" title="win公用网络切换为专用网络"></a>win公用网络切换为专用网络</h2><p>部分情况「公用网络」的权限缩紧，不少端口都被屏蔽禁用。</p>
+<h2 id="win公用网络切换为专用网络">6.10 &nbsp&nbsp<a href="#win公用网络切换为专用网络" class="headerlink" title="win公用网络切换为专用网络"></a>win公用网络切换为专用网络</h2><p>部分情况「公用网络」的权限缩紧，不少端口都被屏蔽禁用。</p>
 <ol>
 <li>打开本地安全策略窗口：WIN+R：secpol.msc</li>
 <li>网络列表管理器策略</li>
 <li>找到需要修改的网路名称，属性窗口的网络位置标签</li>
 <li>选择位置类型为「专用（R）」，用户权限为「用户不可以更改位置（S）」</li>
 </ol>
-<h1 id="语言设置">8 &nbsp&nbsp<a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h1><h2 id="欢迎屏幕和程序界面语言乱码">8.1 &nbsp&nbsp<a href="#欢迎屏幕和程序界面语言乱码" class="headerlink" title="欢迎屏幕和程序界面语言乱码"></a>欢迎屏幕和程序界面语言乱码</h2><p>设置&gt;时间和语言&gt;语言&gt;管理语言设置。</p>
+<h1 id="语言设置">7 &nbsp&nbsp<a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h1><h2 id="欢迎屏幕和程序界面语言乱码">7.1 &nbsp&nbsp<a href="#欢迎屏幕和程序界面语言乱码" class="headerlink" title="欢迎屏幕和程序界面语言乱码"></a>欢迎屏幕和程序界面语言乱码</h2><p>设置&gt;时间和语言&gt;语言&gt;管理语言设置。</p>
 <ul>
 <li>欢迎屏幕乱码：复制设置。</li>
 <li>程序界面语言乱码：非Unicode程序的语言。</li>
@@ -3232,7 +3266,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <img data-src="/images/windows10-troubleshooting/setting-language-welcom-screen.webp">欢迎屏幕设置</div>
 </div>
 
+<h1 id="蓝屏重启故障">8 &nbsp&nbsp<a href="#蓝屏重启故障" class="headerlink" title="蓝屏重启故障"></a>蓝屏重启故障</h1><h2 id="蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败">8.1 &nbsp&nbsp<a href="#蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败" class="headerlink" title="蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败"></a>蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败</h2><p>查看：事件管理器-&gt;Windows日志-&gt;系统</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">警告	2023/10/13 22:24:23	Kernel-PnP	219	(212)</span><br><span class="line">为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败。</span><br><span class="line"></span><br><span class="line">关键	2023/10/13 22:24:23	Kernel-Power	41	(63)</span><br><span class="line">系统已在未先正常关机的情况下重新启动。如果系统停止响应、发生崩溃或意外断电，则可能会导致此错误。</span><br></pre></td></tr></table></figure>
 
+<p>原因：向日葵远程控制软件引起的故障。经过设备管理器查看向日葵模拟的显卡设备，是会调用Driver\WUDFRd（Windows 用户模式驱动程序框架）。</p>
+<p>疑似相关帖子：</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/456561684">为设备加载驱动程序 \Driver\WudfRd 失败，怎么解决？</a></li>
+<li><a href="https://blog.csdn.net/wnk1997/article/details/132630745">电脑莫名其妙重启 为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WUDFRd 失败</a></li>
+<li><a href="https://tieba.baidu.com/p/8467586463#147882518791l">官方进来看下，我每次异常重启的原因找到了！！！！</a></li>
+</ul>
 <h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[7] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[8] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[9] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[10]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[11] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.</p>
 ]]></content>
       <categories>
@@ -5797,9 +5840,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-bRvUqQPLtBFAsAlc" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-bRvUqQPLtBFAsAlc").style.height=document.getElementById("mmedia-bRvUqQPLtBFAsAlc").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-ysVFGSpjLtMqBtsG" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-ysVFGSpjLtMqBtsG").style.height=document.getElementById("mmedia-ysVFGSpjLtMqBtsG").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-bRvUqQPLtBFAsAlc").style.height=document.getElementById("mmedia-bRvUqQPLtBFAsAlc").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-ysVFGSpjLtMqBtsG").style.height=document.getElementById("mmedia-ysVFGSpjLtMqBtsG").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -5892,369 +5935,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>「批处理工具」使用手册</title>
-    <url>/works/software-works/batch-tools/index.html</url>
-    <content><![CDATA[<h1 id="准备工作">1 &nbsp&nbsp<a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="需要下载的文件">1.1 &nbsp&nbsp<a href="#需要下载的文件" class="headerlink" title="需要下载的文件"></a>需要下载的文件</h2><ul>
-<li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
-<li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
-<li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
-</ul>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/download_ffmpeg.webp">下载FFmpeg</div>
-<div class="flex-column">
-<img data-src="./images/download_git.webp">下载Git for Windows</div>
-<div class="flex-column">
-<img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
-</div>
-
-<h2 id="安装和环境配置">1.2 &nbsp&nbsp<a href="#安装和环境配置" class="headerlink" title="安装和环境配置"></a>安装和环境配置</h2><h3 id="FFmpeg配置">1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h3><ol>
-<li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
-<li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
-<li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
-</ol>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/1.1.webp">解压重命名放于C盘</div>
-<div class="flex-column">
-<img data-src="./images/1.2.webp">运行对话框</div>
-<div class="flex-column">
-<img data-src="./images/1.3.webp">打开高级系统设置</div>
-<div class="flex-column">
-<img data-src="./images/1.4.webp">打开环境变量</div>
-</div>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/1.5.webp">编辑系统变量Path</div>
-<div class="flex-column">
-<img data-src="./images/1.6.webp">添加一个新路径</div>
-<div class="flex-column">
-<img data-src="./images/1.7.webp">定位路径</div>
-<div class="flex-column">
-<img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
-</div>
-
-<h3 id="安装Git-for-Windows">1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h3><p>一路默认安装下去，终端使用Git Bash。</p>
-<h3 id="批处理工具配置">1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h3><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
-<div class="flex-column">
-<img data-src="./images/1.9.webp">批处理工具程序路径</div>
-
-<h1 id="使用方法">2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ol>
-<li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
-<li>输入批处理工具程序的路径，回车执行。</li>
-<li>按菜单提示选择对应功能。</li>
-<li>输入需要操作媒体文件的文件夹路径。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/2.1.webp">输入程序路径执行</div>
-<div class="flex-column">
-<img data-src="./images/2.2.webp">输入操作路径执行</div>
-]]></content>
-  </entry>
-  <entry>
-    <title>「切换语言」使用手册v1.5.1 - Blender 插件</title>
-    <url>/works/software-works/toggle-language/index.html</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">插件下载链接</th>
-<th align="center">项目代码仓库链接</th>
-<th align="center">离线文档 PDF 链接</th>
-<th align="center">文档 LaTeX 源码链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">点击跳转</a></td>
-<td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage">点击跳转</a></td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/releases/download/latex2pdf/toggle_language.pdf">点击跳转</a></td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/manuals/toggle_language">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一款 blender 插件，旨在通过一键快速、轻松地在两种语言之间切换用户界面，而非重复打开偏好设置。</p>
-<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在早期进行 blender 手册翻译工作时，因需要校对相关 UI 内容，本人频繁地在中英文之间切换软件的用户界面语言。但每次繁琐地使用偏好设置进行语言切换令人苦不堪言，索性就开发一款插件以简化这操作。</p>
-<h2 id="面向人群">1.2 &nbsp&nbsp<a href="#面向人群" class="headerlink" title="面向人群"></a>面向人群</h2><p>本插件主要面向需要频繁切换界面语言的人群，常见的有如下人群：</p>
-<ul>
-<li>翻译者：校对相关内容。</li>
-<li>CG 学习者：跟进外语教程。</li>
-</ul>
-<h2 id="插件目前实现的功能">1.3 &nbsp&nbsp<a href="#插件目前实现的功能" class="headerlink" title="插件目前实现的功能"></a>插件目前实现的功能</h2><ul>
-<li>一键切换 UI 语言（支持 17 种语言相互切换）</li>
-<li>一键打开用户偏好设置</li>
-<li>一键设置自定义的blender偏好设置——「加载我的设置」功能</li>
-<li>一键切换提示模式：默认模式和开发者模式（拥有切换当前UI提示级别的菜单）</li>
-<li>一键删除当前场景集合和物体</li>
-<li>一键添加视频进度条</li>
-</ul>
-<p><em>注：更多详细介绍请查看「<a href="#%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD">插件功能</a>」小节内容。</em></p>
-<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
-<li>插件下载地址：<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">点击跳转</a>，下载 ToggleLanguage.zip 文件。</li>
-<li>blender 版本要求：<a href="https://www.blender.org/download/">v2.83+</a></li>
-</ul>
-<p><em>注：blender v2.83默认是启用翻译功能，这也是本插件要求将v2.83作为最低版本的缘由。本插件也许在v2.83以下版本能够运行，但不推荐，因为没测试过。</em></p>
-<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
-<li>运行 Blender。</li>
-<li>打开「Preferences&#x2F;用户偏好设置」（Menu&#x2F;菜单 &gt;Edit&#x2F;编辑 &gt;Preferences&#x2F;用户偏好设置）。</li>
-<li>选择「Add‐ons&#x2F;插件」选项卡。</li>
-<li>点击「Install...&#x2F;安装」后，选择先前所下载好的 ToggleLanguage.zip 并点击确定。</li>
-<li>启用插件。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/installation.webp">图 1.1: 安装方法</div>
-    <div class="flex-column">
-    <img data-src="./images/enable_addon.webp">图 1.2: 启用插件</div>
-</div>
-
-<h2 id="插件-UI">2.2 &nbsp&nbsp<a href="#插件-UI" class="headerlink" title="插件 UI"></a>插件 UI</h2><p>如图 1.3 所示，启用插件后，可看见插件位于顶部菜单栏末尾处。插件 UI 从左往右看，有四个元素：</p>
-<ol>
-<li>语言切换按钮</li>
-<li>实用工具菜单</li>
-<li>插件的个性化设置菜单</li>
-<li>用户偏好设置按钮</li>
-</ol>
-<div class="flex-column">
-    <img data-src="./images/ui.webp">
-    图 1.3: 插件UI
-</div>
-
-<h2 id="插件功能">2.3 &nbsp&nbsp<a href="#插件功能" class="headerlink" title="插件功能"></a>插件功能</h2><p><em>注：以下按照 UI 排列位置进行功能介绍。 UI 排列位置详见「<a href="#%E6%8F%92%E4%BB%B6-UI">插件UI</a>」小节</em>。</p>
-<ol>
-<li>语言切换按钮（快捷键 F5）：在两种语言之间切换blender用户界面语言（支持 17 种语言相互切换）。</li>
-<li>实用工具菜单：一些实用工具集合<ol>
-<li>删除所有集合和物体：清空场景，即删除当前场景中的所有集合和物体。</li>
-<li>添加视频进度条：在VSE的频道顶部空白区域添加视频进度条，如图1.4和图1.5所示。视频进度条为一个复合片段，相关参数为：置于视频顶部，高度44px，透明度0.9，底部进度条颜色RGB（0.45, 0.45, 0.45），滚动进度条颜色RGB（0.255, 0.255, 0.255）。P.S. 后续会开发增设一个调整视频进度条参数的窗口。</li>
-</ol>
-</li>
-<li>设置菜单：插件的个性化设置。<ol>
-<li>UI 提示方案菜单：选择相应 UI 提示的方案。<ol>
-<li>默认模式：禁用「开发选项」「Python 工具提示」，如图 1.6 所示。</li>
-<li>开发者模式：启用「开发选项」「Python 工具提示」，如图 1.7 所示。</li>
-</ol>
-</li>
-<li>翻译新建数据块的名称按钮：启用&#x2F;禁用新建数据块名称的翻译功能<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，默认值为禁用，如图 1.8 所示，其对应在偏好设置中的选项如图 1.9 所示。在非英语界面环境中，启用该功能可使 blender 新建数据块的名称为当前语言，如图 1.10所示，新建平面的名称为「平面」，而非「plane」。</li>
-<li>加载我的设置按钮：部署我个人的偏好设置。所涉及的设置选项详见<a href="#%E6%88%91%E7%9A%84%E8%AE%BE%E7%BD%AE%EF%BC%88%E6%88%91%E6%9C%AC%E4%BA%BA%E7%9A%84%E4%B8%80%E4%BA%9B-blender-%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%89">我的设置</a>。该功能默认会覆盖你原有的 blender 设置（启动文件和偏好设置），请详细了解所涉及的设置项后再确认是否使用该功能。<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
-<li>加载初始设置按钮：加载初始的偏好设置和启动文件，即重置 blender，还原成初次安装blender时的状态。</li>
-</ol>
-</li>
-<li>用户偏好设置按钮（快捷键 Ctrl+Alt+U）：打开用户偏好设置窗口。</li>
-</ol>
-<h3 id="插件切换语言的设置">2.3.1 &nbsp&nbsp<a href="#插件切换语言的设置" class="headerlink" title="插件切换语言的设置"></a>插件切换语言的设置</h3><p>在本插件的偏好设置面板中，可以设置切换语言功能所需的语言项，如图 1.2 所示，两个语言项的默认值分别为简体中文和英语。两个语言项不分前后顺序，只要设置好两种不同语言，插件便可以在这两种语言之间切换 UI 界面。</p>
-<p>目前本插件支持 17 种语言<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>相互切换，详见下表：</p>
-<ul>
-<li>Simplified Chinese (简体中文)</li>
-<li>Traditional Chinese (繁體中文)</li>
-<li>English (English)</li>
-<li>Spanish (Español)</li>
-<li>Japanese (日本語)</li>
-<li>Slovak (Slovenčina)</li>
-<li>Ukrainian (Український)</li>
-<li>Vietnamese (tiếng Việt)</li>
-<li>Arabic (ﺔﻴﺑﺮﻌﻟﺍ)</li>
-<li>Czech (Český)</li>
-<li>German (Deutsch)</li>
-<li>French (Français)</li>
-<li>Italian (Italiano)</li>
-<li>Korean (한국 언어)</li>
-<li>Brazilian Portuguese (Português do Brasil)</li>
-<li>Portuguese (Português)</li>
-<li>Russian (Русский)</li>
-</ul>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/video_progress_bar_meta_strip.webp">图1.4：视频进度条-复合片段</div>
-    <div class="flex-column">
-    <img data-src="./images/video_progress_bar_child_strip.webp">图1.5：复合片段「视频进度条」内的子片段</div>
-</div>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/default_hint.webp">图 1.6: UI 提示方案菜单：默认模式</div>
-    <div class="flex-column">
-    <img data-src="./images/developer_hint.webp">图 1.7: UI 提示方案菜单：开发者模式</div>
-</div>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/translate_name_option_addon.webp">图 1.8: 插件中的翻译新建数据块名称的选项</div>
-    <div class="flex-column">
-    <img data-src="./images/translate_name_option_pref.webp">图 1.9: 偏好设置中的翻译新建数据块名称的选项</div>
-</div>
-<div class="flex-column">
-<img data-src="./images/translate_name_option_effect.webp">图 1.10: 翻译新建数据块名称的效果（图示界面语言为简中）</div>
-
-<h3 id="我的设置（我本人的一些-blender-设置参数）">2.3.2 &nbsp&nbsp<a href="#我的设置（我本人的一些-blender-设置参数）" class="headerlink" title="我的设置（我本人的一些 blender 设置参数）"></a>我的设置（我本人的一些 blender 设置参数）</h3><p>开发这个功能主要是为了方便我一键设置恢复个人的偏好设置，比如更换设备使用blender时，通过下载安装本插件就可以一键恢复设置，而无需拷贝配置文件。</p>
-<p>详细的设置参数情况如下：</p>
-<ol>
-<li>偏好设置部分：<ol>
-<li>界面 &gt; 分辨率缩放到 1.3</li>
-<li>界面&gt;编辑器&gt;状态栏&gt;启用「场景统计数据」「系统内存」「显存」（v2.90以上版本才有）</li>
-<li>主题 &gt; White</li>
-<li>插件 &gt; 启用插件 Node Wrangler、Cell Fracture、Auto Tile Size、Development: Icon Viewer（v3.0以上版本的不含有Auto Tile Size插件）</li>
-<li>视图切换 &gt; 启用「围绕选择物体选择」和「缩放至鼠标位置」</li>
-<li>键位映射 &gt; 启用「Pie Menu on Drag」和「Extra Shading Pie Menu Items」</li>
-<li>系统<ol>
-<li>Cycles 渲染设备 &gt; 有显卡设备时会自动选择启用显卡设备，无显卡时设置为默认 NONE（当检测到英伟达显卡时，若 OPTIX 可用时则优先选择。默认下仅启用显卡，不含 CPU，若需要 CPU 和 GPU 混合渲染，请在加载我的设置的设置参数中开启）</li>
-<li>内存和限额 &gt; 撤销次数 &gt;256</li>
-<li>声音 &gt; 音频设备 &gt; SDL（v2.83版本才有）</li>
-</ol>
-</li>
-<li>保存 &amp; 加载 &gt; 启用「压缩文件」、关闭「自动保存」</li>
-<li>文件路径<ol>
-<li>纹理：H:&#x2F;textures&#x2F;</li>
-<li>渲染输出：D:&#x2F;process&#x2F;</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>启动界面部分（注意：使用「我的偏好设置」功能，会同时将以下设置保存进启动界面文件）：<ol>
-<li>属性编辑器<ol>
-<li>渲染属性<ol>
-<li>渲染引擎 &gt; Cycles</li>
-<li>设备 &gt; GPU 计算（有GPU设备时会自动启用，无显卡则设置为CPU）</li>
-<li>采样 &gt; 启用「自适应采样」（v2.9 之后版本才有，包括 v2.9。v3.0 之后版本默认启用）</li>
-<li>采样&gt;启用「自适应采样」&gt;噪波阈值&gt; 0.1</li>
-<li>采样 &gt; 最大采样 &gt; 渲染设置为 250，视图设置为 1</li>
-<li>采样 &gt; 降噪 &gt; 通道 &gt; 反照和法向</li>
-<li>采样 &gt; 降噪 &gt; 降噪器（当 OPTIX 可用时优先选择，v2.9 系列版本设置为 NLM，其余为 OPEN IMAGEDENOISE，v2.83 是自带的其他降噪方法）</li>
-<li>采样 &gt; 路径引导（纯 CPU 渲染才有，v3.4 之后版本才有，包括 v3.4）</li>
-<li>性能 &gt; Auto Tile Size &gt; Target Tile Size &gt; 128（v3.0之前版本才有，不含v3.0，v3.0之后版本的不含有Auto Tile Size插件）</li>
-<li>性能 &gt; 内存  &gt; 平铺尺寸 &gt; 4096（v3.0之后版本才有，含v3.0，v3.0之前版本的没有分块渲染功能。设定值为4096是为了避免渲染4k图像时导致分块。）</li>
-<li>性能 &gt; 线程 &gt; 多线程模式 &gt; 固定</li>
-<li>性能 &gt; 线程 &gt; 线程 &gt; 总线程数量-2（自动检测总线程数量并计算设置，保留两个线程给系统。例如 CPU 总线程为 8，那么插件会设置为6）</li>
-<li>性能 &gt; 最终渲染 &gt; 持久数据</li>
-</ol>
-</li>
-<li>输出属性 &gt; 输出路径：D:&#x2F;process&#x2F;</li>
-</ol>
-</li>
-<li>顶部菜单栏&gt;文件&gt;外部数据&gt;自动打包资源</li>
-</ol>
-</li>
-</ol>
-<p>考虑到「加载我的设置」功能比较偏个性化，并非适合所有人，所以我专门又开发设计了一些设置值来控制其中部分功能。如果你想用「加载我的设置」功能，但又不喜欢其中所有功能，就可以通过这些设置值来单独控制。这些设置值位于插件偏好设置面板中，如图 1.11 所示，首先设置对应参数，再应用「加载我的设置」功能。</p>
-<p>关于「加载我的设置」的一些设置参数如下：</p>
-<ul>
-<li>禁用路径设置：禁用路径参数设置（默认不启用，即设置路径参数）。</li>
-<li>禁用主题设置：禁用主题参数设置（默认不启用，即设置个性化主题）。</li>
-<li>禁止保存启动文件：在应用「加载我的设置」时，禁止保存启动文件，因此所设置的参数不会写入启动文件中（默认不启用，即保存启动文件）。</li>
-<li>在 GPU 渲染设置中使用 CPU：Cycles 渲染设备中同时选择 CPU（默认不启用，即纯 GPU 渲染，不含 CPU 设备。启用后效果是 CPU 和 GPU 混合渲染）。</li>
-<li>预设主题：blender 主题（默认白色，当启用「禁用主题设置」后，该选项无效）。</li>
-</ul>
-<div class="flex-column">
-<img data-src="./images/settings_for_loading_my_settings.webp">图 1.11: 关于「加载我的设置」的一些设置参数</div>
-
-<h3 id="关于使用翻译新建数据块的名称按钮的说明">2.3.3 &nbsp&nbsp<a href="#关于使用翻译新建数据块的名称按钮的说明" class="headerlink" title="关于使用翻译新建数据块的名称按钮的说明"></a>关于使用翻译新建数据块的名称按钮的说明</h3><p>需要注意的是，翻译新建数据块的名称按钮设置值是无法随用户偏好设置自动保存。该功能的代码实现：其 property 属性值是注册在 bpy.types.Scene 中。因此，无法通过用户偏好设置中自动保存设置的功能进行存储。不像本插件偏好设置面板中的两种语言的属性值，后者是通过 bpy.types.AddonPreferences 类实现的，它可以通过用户偏好设置中自动保存设置的功能进行存储<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>。</p>
-<p>建议：若需要保存该功能的设置值，请保存一个工程文件<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>（.blend），该功能的设置值会保存在这个工程文件。</p>
-<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Kali Linux 2021.3 &#x2F; Mac<br>Blender: v2.83 ‑ v3.6.4</p>
-<h2 id="已知问题——加载初始设置按钮导致闪退">3.2 &nbsp&nbsp<a href="#已知问题——加载初始设置按钮导致闪退" class="headerlink" title="已知问题——加载初始设置按钮导致闪退"></a>已知问题——加载初始设置按钮导致闪退</h2><p>在未保存工程文件<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>（.blend）的情况下，加载初始设置功能会有机率引起异常码EXCEPTION_ACCESS_VIOLATION，从而导致 blender 闪退，目前暂未查明原因。在导致 blender 闪退时，重置功能的代码执行的不完整，一般是成功地加载初始偏好设置并保存，而初始启动文件并未成功加载并保存。因此，在该功能导致 blender 闪退后，还请用户自行重置偏好设置及启动文件。</p>
-<p>建议：在使用该功能之前，请先保存一个工程文件（.blend）。</p>
-<h2 id="更新历史">3.3 &nbsp&nbsp<a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><p>表 1.1 记录了本插件各个版本的更新历史。</p>
-<center>表 1.1: 插件的更新历史</center>
-
-<table>
-<thead>
-<tr>
-<th align="center">版本</th>
-<th align="center">更新日期</th>
-<th align="center">更新内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">v1.5.1</td>
-<td align="center">2023&#x2F;08&#x2F;23</td>
-<td align="center">修复：optix_exist 变量引用前未分配；优化：润色翻译</td>
-</tr>
-<tr>
-<td align="center">v1.5</td>
-<td align="center">2023&#x2F;04&#x2F;21</td>
-<td align="center">新增功能：添加视频进度条；新增功能：添加实用工具菜单……</td>
-</tr>
-<tr>
-<td align="center">v1.4</td>
-<td align="center">2023&#x2F;04&#x2F;16</td>
-<td align="center">新增功能：删除所有集合和物体；新增功能：添加复选框禁用保存启动文件……</td>
-</tr>
-<tr>
-<td align="center">v1.3.1</td>
-<td align="center">2023&#x2F;03&#x2F;29</td>
-<td align="center">更新文档链接</td>
-</tr>
-<tr>
-<td align="center">v1.3</td>
-<td align="center">2023&#x2F;01&#x2F;24</td>
-<td align="center">修复：optix_exist 变量引用前未分配；优化降噪设置⋯⋯</td>
-</tr>
-<tr>
-<td align="center">v1.2</td>
-<td align="center">2023&#x2F;01&#x2F;15</td>
-<td align="center">优化「加载我的设置」功能；优化「翻译新建数据块名称」 功能⋯⋯</td>
-</tr>
-<tr>
-<td align="center">v1.1</td>
-<td align="center">2022&#x2F;10&#x2F;16</td>
-<td align="center">修复偏好设置一直被修改导致无法消星的情况；移除keymaps.py中的注释代码……</td>
-</tr>
-<tr>
-<td align="center">v1.0</td>
-<td align="center">2022&#x2F;01&#x2F;12</td>
-<td align="center">移除F6快捷键的支持；paths路径统一为小写格式……</td>
-</tr>
-<tr>
-<td align="center">v0.9</td>
-<td align="center">2021&#x2F;11&#x2F;06</td>
-<td align="center">重构：拆分文件规范化开发；加载我的设置功能支持更多的系统和硬件平台……</td>
-</tr>
-<tr>
-<td align="center">v0.8</td>
-<td align="center">2021&#x2F;08&#x2F;30</td>
-<td align="center">支持切换更多语言；支持完整翻译插件 UI；为某些功能添加交互提示（信息框，确认框等）……</td>
-</tr>
-<tr>
-<td align="center">v0.7</td>
-<td align="center">2021&#x2F;07&#x2F;11</td>
-<td align="center">我的偏好设置支持 blender v2.93；重写 property 代码</td>
-</tr>
-<tr>
-<td align="center">v0.6</td>
-<td align="center">2021&#x2F;03&#x2F;10</td>
-<td align="center">添加布尔值按钮‐新数据翻译；支持快捷键；代码重构，插件翻译重构……</td>
-</tr>
-<tr>
-<td align="center">v0.5</td>
-<td align="center">2020&#x2F;12&#x2F;08</td>
-<td align="center">支持 blender v2.91；支持从.zip 文件安装插件……</td>
-</tr>
-<tr>
-<td align="center">v0.5‐beta</td>
-<td align="center">2020&#x2F;09&#x2F;20</td>
-<td align="center">添加菜单用以选择 UI 提示方案</td>
-</tr>
-<tr>
-<td align="center">v0.4</td>
-<td align="center">2020&#x2F;08&#x2F;03</td>
-<td align="center">代码项目重命名为 ToggleLanguage；按钮 UI 放置于最右端；添加新按钮以快速查看 preferences</td>
-</tr>
-<tr>
-<td align="center">v0.3</td>
-<td align="center">2020&#x2F;06&#x2F;05</td>
-<td align="center">更新至 blender 2.83 API；修改部分类名；添加文档链接；修改完善许可说明</td>
-</tr>
-<tr>
-<td align="center">v0.2</td>
-<td align="center">2020&#x2F;05&#x2F;21</td>
-<td align="center">清除未使用属性的报错</td>
-</tr>
-<tr>
-<td align="center">v0.1</td>
-<td align="center">2020&#x2F;05&#x2F;12</td>
-<td align="center">完成基础的功能设计「一键切换」</td>
-</tr>
-</tbody></table>
-<p><em>注：更多详细的信息，请查看 <a href="https://github.com/Mister-Kin/ToggleLanguage/releases">Release Notes</a> 。</em></p>
-<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">即 blender 内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:6" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
-  </entry>
-  <entry>
     <title>404 Not Found：该页无法显示</title>
     <url>//404.html</url>
     <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
@@ -6285,7 +5965,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-GMBWywygZqOIiuVY"></div><script> var GMBWywygZqOIiuVY_options = JSON.parse('{\"id\":\"mmedia-GMBWywygZqOIiuVY\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(GMBWywygZqOIiuVY_options); </script>
+<div id="mmedia-PTrTPxQoxXArQUUa"></div><script> var PTrTPxQoxXArQUUa_options = JSON.parse('{\"id\":\"mmedia-PTrTPxQoxXArQUUa\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(PTrTPxQoxXArQUUa_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6389,7 +6069,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#105;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x69;&#109;&#46;&#x6d;&#105;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#105;&#115;&#x74;&#101;&#x72;&#107;&#105;&#110;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x69;&#x6d;&#x2e;&#109;&#105;&#115;&#x74;&#101;&#x72;&#107;&#105;&#110;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -7051,5 +6731,368 @@ CGI&后期处理
 <button class="navigation-button-box">批处理工具</button></a>
 </div>
 ]]></content>
+  </entry>
+  <entry>
+    <title>「批处理工具」使用手册</title>
+    <url>/works/software-works/batch-tools/index.html</url>
+    <content><![CDATA[<h1 id="准备工作">1 &nbsp&nbsp<a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="需要下载的文件">1.1 &nbsp&nbsp<a href="#需要下载的文件" class="headerlink" title="需要下载的文件"></a>需要下载的文件</h2><ul>
+<li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
+<li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
+<li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
+</ul>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/download_ffmpeg.webp">下载FFmpeg</div>
+<div class="flex-column">
+<img data-src="./images/download_git.webp">下载Git for Windows</div>
+<div class="flex-column">
+<img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
+</div>
+
+<h2 id="安装和环境配置">1.2 &nbsp&nbsp<a href="#安装和环境配置" class="headerlink" title="安装和环境配置"></a>安装和环境配置</h2><h3 id="FFmpeg配置">1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h3><ol>
+<li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
+<li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
+<li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
+</ol>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/1.1.webp">解压重命名放于C盘</div>
+<div class="flex-column">
+<img data-src="./images/1.2.webp">运行对话框</div>
+<div class="flex-column">
+<img data-src="./images/1.3.webp">打开高级系统设置</div>
+<div class="flex-column">
+<img data-src="./images/1.4.webp">打开环境变量</div>
+</div>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/1.5.webp">编辑系统变量Path</div>
+<div class="flex-column">
+<img data-src="./images/1.6.webp">添加一个新路径</div>
+<div class="flex-column">
+<img data-src="./images/1.7.webp">定位路径</div>
+<div class="flex-column">
+<img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
+</div>
+
+<h3 id="安装Git-for-Windows">1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h3><p>一路默认安装下去，终端使用Git Bash。</p>
+<h3 id="批处理工具配置">1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h3><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
+<div class="flex-column">
+<img data-src="./images/1.9.webp">批处理工具程序路径</div>
+
+<h1 id="使用方法">2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ol>
+<li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
+<li>输入批处理工具程序的路径，回车执行。</li>
+<li>按菜单提示选择对应功能。</li>
+<li>输入需要操作媒体文件的文件夹路径。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/2.1.webp">输入程序路径执行</div>
+<div class="flex-column">
+<img data-src="./images/2.2.webp">输入操作路径执行</div>
+]]></content>
+  </entry>
+  <entry>
+    <title>「切换语言」使用手册v1.5.1 - Blender 插件</title>
+    <url>/works/software-works/toggle-language/index.html</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">插件下载链接</th>
+<th align="center">项目代码仓库链接</th>
+<th align="center">离线文档 PDF 链接</th>
+<th align="center">文档 LaTeX 源码链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">点击跳转</a></td>
+<td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage">点击跳转</a></td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/releases/download/latex2pdf/toggle_language.pdf">点击跳转</a></td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/manuals/toggle_language">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一款 blender 插件，旨在通过一键快速、轻松地在两种语言之间切换用户界面，而非重复打开偏好设置。</p>
+<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在早期进行 blender 手册翻译工作时，因需要校对相关 UI 内容，本人频繁地在中英文之间切换软件的用户界面语言。但每次繁琐地使用偏好设置进行语言切换令人苦不堪言，索性就开发一款插件以简化这操作。</p>
+<h2 id="面向人群">1.2 &nbsp&nbsp<a href="#面向人群" class="headerlink" title="面向人群"></a>面向人群</h2><p>本插件主要面向需要频繁切换界面语言的人群，常见的有如下人群：</p>
+<ul>
+<li>翻译者：校对相关内容。</li>
+<li>CG 学习者：跟进外语教程。</li>
+</ul>
+<h2 id="插件目前实现的功能">1.3 &nbsp&nbsp<a href="#插件目前实现的功能" class="headerlink" title="插件目前实现的功能"></a>插件目前实现的功能</h2><ul>
+<li>一键切换 UI 语言（支持 17 种语言相互切换）</li>
+<li>一键打开用户偏好设置</li>
+<li>一键设置自定义的blender偏好设置——「加载我的设置」功能</li>
+<li>一键切换提示模式：默认模式和开发者模式（拥有切换当前UI提示级别的菜单）</li>
+<li>一键删除当前场景集合和物体</li>
+<li>一键添加视频进度条</li>
+</ul>
+<p><em>注：更多详细介绍请查看「<a href="#%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD">插件功能</a>」小节内容。</em></p>
+<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
+<li>插件下载地址：<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">点击跳转</a>，下载 ToggleLanguage.zip 文件。</li>
+<li>blender 版本要求：<a href="https://www.blender.org/download/">v2.83+</a></li>
+</ul>
+<p><em>注：blender v2.83默认是启用翻译功能，这也是本插件要求将v2.83作为最低版本的缘由。本插件也许在v2.83以下版本能够运行，但不推荐，因为没测试过。</em></p>
+<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<li>运行 Blender。</li>
+<li>打开「Preferences&#x2F;用户偏好设置」（Menu&#x2F;菜单 &gt;Edit&#x2F;编辑 &gt;Preferences&#x2F;用户偏好设置）。</li>
+<li>选择「Add‐ons&#x2F;插件」选项卡。</li>
+<li>点击「Install...&#x2F;安装」后，选择先前所下载好的 ToggleLanguage.zip 并点击确定。</li>
+<li>启用插件。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/installation.webp">图 1.1: 安装方法</div>
+    <div class="flex-column">
+    <img data-src="./images/enable_addon.webp">图 1.2: 启用插件</div>
+</div>
+
+<h2 id="插件-UI">2.2 &nbsp&nbsp<a href="#插件-UI" class="headerlink" title="插件 UI"></a>插件 UI</h2><p>如图 1.3 所示，启用插件后，可看见插件位于顶部菜单栏末尾处。插件 UI 从左往右看，有四个元素：</p>
+<ol>
+<li>语言切换按钮</li>
+<li>实用工具菜单</li>
+<li>插件的个性化设置菜单</li>
+<li>用户偏好设置按钮</li>
+</ol>
+<div class="flex-column">
+    <img data-src="./images/ui.webp">
+    图 1.3: 插件UI
+</div>
+
+<h2 id="插件功能">2.3 &nbsp&nbsp<a href="#插件功能" class="headerlink" title="插件功能"></a>插件功能</h2><p><em>注：以下按照 UI 排列位置进行功能介绍。 UI 排列位置详见「<a href="#%E6%8F%92%E4%BB%B6-UI">插件UI</a>」小节</em>。</p>
+<ol>
+<li>语言切换按钮（快捷键 F5）：在两种语言之间切换blender用户界面语言（支持 17 种语言相互切换）。</li>
+<li>实用工具菜单：一些实用工具集合<ol>
+<li>删除所有集合和物体：清空场景，即删除当前场景中的所有集合和物体。</li>
+<li>添加视频进度条：在VSE的频道顶部空白区域添加视频进度条，如图1.4和图1.5所示。视频进度条为一个复合片段，相关参数为：置于视频顶部，高度44px，透明度0.9，底部进度条颜色RGB（0.45, 0.45, 0.45），滚动进度条颜色RGB（0.255, 0.255, 0.255）。P.S. 后续会开发增设一个调整视频进度条参数的窗口。</li>
+</ol>
+</li>
+<li>设置菜单：插件的个性化设置。<ol>
+<li>UI 提示方案菜单：选择相应 UI 提示的方案。<ol>
+<li>默认模式：禁用「开发选项」「Python 工具提示」，如图 1.6 所示。</li>
+<li>开发者模式：启用「开发选项」「Python 工具提示」，如图 1.7 所示。</li>
+</ol>
+</li>
+<li>翻译新建数据块的名称按钮：启用&#x2F;禁用新建数据块名称的翻译功能<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，默认值为禁用，如图 1.8 所示，其对应在偏好设置中的选项如图 1.9 所示。在非英语界面环境中，启用该功能可使 blender 新建数据块的名称为当前语言，如图 1.10所示，新建平面的名称为「平面」，而非「plane」。</li>
+<li>加载我的设置按钮：部署我个人的偏好设置。所涉及的设置选项详见<a href="#%E6%88%91%E7%9A%84%E8%AE%BE%E7%BD%AE%EF%BC%88%E6%88%91%E6%9C%AC%E4%BA%BA%E7%9A%84%E4%B8%80%E4%BA%9B-blender-%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%89">我的设置</a>。该功能默认会覆盖你原有的 blender 设置（启动文件和偏好设置），请详细了解所涉及的设置项后再确认是否使用该功能。<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+<li>加载初始设置按钮：加载初始的偏好设置和启动文件，即重置 blender，还原成初次安装blender时的状态。</li>
+</ol>
+</li>
+<li>用户偏好设置按钮（快捷键 Ctrl+Alt+U）：打开用户偏好设置窗口。</li>
+</ol>
+<h3 id="插件切换语言的设置">2.3.1 &nbsp&nbsp<a href="#插件切换语言的设置" class="headerlink" title="插件切换语言的设置"></a>插件切换语言的设置</h3><p>在本插件的偏好设置面板中，可以设置切换语言功能所需的语言项，如图 1.2 所示，两个语言项的默认值分别为简体中文和英语。两个语言项不分前后顺序，只要设置好两种不同语言，插件便可以在这两种语言之间切换 UI 界面。</p>
+<p>目前本插件支持 17 种语言<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>相互切换，详见下表：</p>
+<ul>
+<li>Simplified Chinese (简体中文)</li>
+<li>Traditional Chinese (繁體中文)</li>
+<li>English (English)</li>
+<li>Spanish (Español)</li>
+<li>Japanese (日本語)</li>
+<li>Slovak (Slovenčina)</li>
+<li>Ukrainian (Український)</li>
+<li>Vietnamese (tiếng Việt)</li>
+<li>Arabic (ﺔﻴﺑﺮﻌﻟﺍ)</li>
+<li>Czech (Český)</li>
+<li>German (Deutsch)</li>
+<li>French (Français)</li>
+<li>Italian (Italiano)</li>
+<li>Korean (한국 언어)</li>
+<li>Brazilian Portuguese (Português do Brasil)</li>
+<li>Portuguese (Português)</li>
+<li>Russian (Русский)</li>
+</ul>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/video_progress_bar_meta_strip.webp">图1.4：视频进度条-复合片段</div>
+    <div class="flex-column">
+    <img data-src="./images/video_progress_bar_child_strip.webp">图1.5：复合片段「视频进度条」内的子片段</div>
+</div>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/default_hint.webp">图 1.6: UI 提示方案菜单：默认模式</div>
+    <div class="flex-column">
+    <img data-src="./images/developer_hint.webp">图 1.7: UI 提示方案菜单：开发者模式</div>
+</div>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/translate_name_option_addon.webp">图 1.8: 插件中的翻译新建数据块名称的选项</div>
+    <div class="flex-column">
+    <img data-src="./images/translate_name_option_pref.webp">图 1.9: 偏好设置中的翻译新建数据块名称的选项</div>
+</div>
+<div class="flex-column">
+<img data-src="./images/translate_name_option_effect.webp">图 1.10: 翻译新建数据块名称的效果（图示界面语言为简中）</div>
+
+<h3 id="我的设置（我本人的一些-blender-设置参数）">2.3.2 &nbsp&nbsp<a href="#我的设置（我本人的一些-blender-设置参数）" class="headerlink" title="我的设置（我本人的一些 blender 设置参数）"></a>我的设置（我本人的一些 blender 设置参数）</h3><p>开发这个功能主要是为了方便我一键设置恢复个人的偏好设置，比如更换设备使用blender时，通过下载安装本插件就可以一键恢复设置，而无需拷贝配置文件。</p>
+<p>详细的设置参数情况如下：</p>
+<ol>
+<li>偏好设置部分：<ol>
+<li>界面 &gt; 分辨率缩放到 1.3</li>
+<li>界面&gt;编辑器&gt;状态栏&gt;启用「场景统计数据」「系统内存」「显存」（v2.90以上版本才有）</li>
+<li>主题 &gt; White</li>
+<li>插件 &gt; 启用插件 Node Wrangler、Cell Fracture、Auto Tile Size、Development: Icon Viewer（v3.0以上版本的不含有Auto Tile Size插件）</li>
+<li>视图切换 &gt; 启用「围绕选择物体选择」和「缩放至鼠标位置」</li>
+<li>键位映射 &gt; 启用「Pie Menu on Drag」和「Extra Shading Pie Menu Items」</li>
+<li>系统<ol>
+<li>Cycles 渲染设备 &gt; 有显卡设备时会自动选择启用显卡设备，无显卡时设置为默认 NONE（当检测到英伟达显卡时，若 OPTIX 可用时则优先选择。默认下仅启用显卡，不含 CPU，若需要 CPU 和 GPU 混合渲染，请在加载我的设置的设置参数中开启）</li>
+<li>内存和限额 &gt; 撤销次数 &gt;256</li>
+<li>声音 &gt; 音频设备 &gt; SDL（v2.83版本才有）</li>
+</ol>
+</li>
+<li>保存 &amp; 加载 &gt; 启用「压缩文件」、关闭「自动保存」</li>
+<li>文件路径<ol>
+<li>纹理：H:&#x2F;textures&#x2F;</li>
+<li>渲染输出：D:&#x2F;process&#x2F;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>启动界面部分（注意：使用「我的偏好设置」功能，会同时将以下设置保存进启动界面文件）：<ol>
+<li>属性编辑器<ol>
+<li>渲染属性<ol>
+<li>渲染引擎 &gt; Cycles</li>
+<li>设备 &gt; GPU 计算（有GPU设备时会自动启用，无显卡则设置为CPU）</li>
+<li>采样 &gt; 启用「自适应采样」（v2.9 之后版本才有，包括 v2.9。v3.0 之后版本默认启用）</li>
+<li>采样&gt;启用「自适应采样」&gt;噪波阈值&gt; 0.1</li>
+<li>采样 &gt; 最大采样 &gt; 渲染设置为 250，视图设置为 1</li>
+<li>采样 &gt; 降噪 &gt; 通道 &gt; 反照和法向</li>
+<li>采样 &gt; 降噪 &gt; 降噪器（当 OPTIX 可用时优先选择，v2.9 系列版本设置为 NLM，其余为 OPEN IMAGEDENOISE，v2.83 是自带的其他降噪方法）</li>
+<li>采样 &gt; 路径引导（纯 CPU 渲染才有，v3.4 之后版本才有，包括 v3.4）</li>
+<li>性能 &gt; Auto Tile Size &gt; Target Tile Size &gt; 128（v3.0之前版本才有，不含v3.0，v3.0之后版本的不含有Auto Tile Size插件）</li>
+<li>性能 &gt; 内存  &gt; 平铺尺寸 &gt; 4096（v3.0之后版本才有，含v3.0，v3.0之前版本的没有分块渲染功能。设定值为4096是为了避免渲染4k图像时导致分块。）</li>
+<li>性能 &gt; 线程 &gt; 多线程模式 &gt; 固定</li>
+<li>性能 &gt; 线程 &gt; 线程 &gt; 总线程数量-2（自动检测总线程数量并计算设置，保留两个线程给系统。例如 CPU 总线程为 8，那么插件会设置为6）</li>
+<li>性能 &gt; 最终渲染 &gt; 持久数据</li>
+</ol>
+</li>
+<li>输出属性 &gt; 输出路径：D:&#x2F;process&#x2F;</li>
+</ol>
+</li>
+<li>顶部菜单栏&gt;文件&gt;外部数据&gt;自动打包资源</li>
+</ol>
+</li>
+</ol>
+<p>考虑到「加载我的设置」功能比较偏个性化，并非适合所有人，所以我专门又开发设计了一些设置值来控制其中部分功能。如果你想用「加载我的设置」功能，但又不喜欢其中所有功能，就可以通过这些设置值来单独控制。这些设置值位于插件偏好设置面板中，如图 1.11 所示，首先设置对应参数，再应用「加载我的设置」功能。</p>
+<p>关于「加载我的设置」的一些设置参数如下：</p>
+<ul>
+<li>禁用路径设置：禁用路径参数设置（默认不启用，即设置路径参数）。</li>
+<li>禁用主题设置：禁用主题参数设置（默认不启用，即设置个性化主题）。</li>
+<li>禁止保存启动文件：在应用「加载我的设置」时，禁止保存启动文件，因此所设置的参数不会写入启动文件中（默认不启用，即保存启动文件）。</li>
+<li>在 GPU 渲染设置中使用 CPU：Cycles 渲染设备中同时选择 CPU（默认不启用，即纯 GPU 渲染，不含 CPU 设备。启用后效果是 CPU 和 GPU 混合渲染）。</li>
+<li>预设主题：blender 主题（默认白色，当启用「禁用主题设置」后，该选项无效）。</li>
+</ul>
+<div class="flex-column">
+<img data-src="./images/settings_for_loading_my_settings.webp">图 1.11: 关于「加载我的设置」的一些设置参数</div>
+
+<h3 id="关于使用翻译新建数据块的名称按钮的说明">2.3.3 &nbsp&nbsp<a href="#关于使用翻译新建数据块的名称按钮的说明" class="headerlink" title="关于使用翻译新建数据块的名称按钮的说明"></a>关于使用翻译新建数据块的名称按钮的说明</h3><p>需要注意的是，翻译新建数据块的名称按钮设置值是无法随用户偏好设置自动保存。该功能的代码实现：其 property 属性值是注册在 bpy.types.Scene 中。因此，无法通过用户偏好设置中自动保存设置的功能进行存储。不像本插件偏好设置面板中的两种语言的属性值，后者是通过 bpy.types.AddonPreferences 类实现的，它可以通过用户偏好设置中自动保存设置的功能进行存储<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>。</p>
+<p>建议：若需要保存该功能的设置值，请保存一个工程文件<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>（.blend），该功能的设置值会保存在这个工程文件。</p>
+<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Kali Linux 2021.3 &#x2F; Mac<br>Blender: v2.83 ‑ v3.6.4</p>
+<h2 id="已知问题——加载初始设置按钮导致闪退">3.2 &nbsp&nbsp<a href="#已知问题——加载初始设置按钮导致闪退" class="headerlink" title="已知问题——加载初始设置按钮导致闪退"></a>已知问题——加载初始设置按钮导致闪退</h2><p>在未保存工程文件<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>（.blend）的情况下，加载初始设置功能会有机率引起异常码EXCEPTION_ACCESS_VIOLATION，从而导致 blender 闪退，目前暂未查明原因。在导致 blender 闪退时，重置功能的代码执行的不完整，一般是成功地加载初始偏好设置并保存，而初始启动文件并未成功加载并保存。因此，在该功能导致 blender 闪退后，还请用户自行重置偏好设置及启动文件。</p>
+<p>建议：在使用该功能之前，请先保存一个工程文件（.blend）。</p>
+<h2 id="更新历史">3.3 &nbsp&nbsp<a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><p>表 1.1 记录了本插件各个版本的更新历史。</p>
+<center>表 1.1: 插件的更新历史</center>
+
+<table>
+<thead>
+<tr>
+<th align="center">版本</th>
+<th align="center">更新日期</th>
+<th align="center">更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">v1.5.1</td>
+<td align="center">2023&#x2F;08&#x2F;23</td>
+<td align="center">修复：optix_exist 变量引用前未分配；优化：润色翻译</td>
+</tr>
+<tr>
+<td align="center">v1.5</td>
+<td align="center">2023&#x2F;04&#x2F;21</td>
+<td align="center">新增功能：添加视频进度条；新增功能：添加实用工具菜单……</td>
+</tr>
+<tr>
+<td align="center">v1.4</td>
+<td align="center">2023&#x2F;04&#x2F;16</td>
+<td align="center">新增功能：删除所有集合和物体；新增功能：添加复选框禁用保存启动文件……</td>
+</tr>
+<tr>
+<td align="center">v1.3.1</td>
+<td align="center">2023&#x2F;03&#x2F;29</td>
+<td align="center">更新文档链接</td>
+</tr>
+<tr>
+<td align="center">v1.3</td>
+<td align="center">2023&#x2F;01&#x2F;24</td>
+<td align="center">修复：optix_exist 变量引用前未分配；优化降噪设置⋯⋯</td>
+</tr>
+<tr>
+<td align="center">v1.2</td>
+<td align="center">2023&#x2F;01&#x2F;15</td>
+<td align="center">优化「加载我的设置」功能；优化「翻译新建数据块名称」 功能⋯⋯</td>
+</tr>
+<tr>
+<td align="center">v1.1</td>
+<td align="center">2022&#x2F;10&#x2F;16</td>
+<td align="center">修复偏好设置一直被修改导致无法消星的情况；移除keymaps.py中的注释代码……</td>
+</tr>
+<tr>
+<td align="center">v1.0</td>
+<td align="center">2022&#x2F;01&#x2F;12</td>
+<td align="center">移除F6快捷键的支持；paths路径统一为小写格式……</td>
+</tr>
+<tr>
+<td align="center">v0.9</td>
+<td align="center">2021&#x2F;11&#x2F;06</td>
+<td align="center">重构：拆分文件规范化开发；加载我的设置功能支持更多的系统和硬件平台……</td>
+</tr>
+<tr>
+<td align="center">v0.8</td>
+<td align="center">2021&#x2F;08&#x2F;30</td>
+<td align="center">支持切换更多语言；支持完整翻译插件 UI；为某些功能添加交互提示（信息框，确认框等）……</td>
+</tr>
+<tr>
+<td align="center">v0.7</td>
+<td align="center">2021&#x2F;07&#x2F;11</td>
+<td align="center">我的偏好设置支持 blender v2.93；重写 property 代码</td>
+</tr>
+<tr>
+<td align="center">v0.6</td>
+<td align="center">2021&#x2F;03&#x2F;10</td>
+<td align="center">添加布尔值按钮‐新数据翻译；支持快捷键；代码重构，插件翻译重构……</td>
+</tr>
+<tr>
+<td align="center">v0.5</td>
+<td align="center">2020&#x2F;12&#x2F;08</td>
+<td align="center">支持 blender v2.91；支持从.zip 文件安装插件……</td>
+</tr>
+<tr>
+<td align="center">v0.5‐beta</td>
+<td align="center">2020&#x2F;09&#x2F;20</td>
+<td align="center">添加菜单用以选择 UI 提示方案</td>
+</tr>
+<tr>
+<td align="center">v0.4</td>
+<td align="center">2020&#x2F;08&#x2F;03</td>
+<td align="center">代码项目重命名为 ToggleLanguage；按钮 UI 放置于最右端；添加新按钮以快速查看 preferences</td>
+</tr>
+<tr>
+<td align="center">v0.3</td>
+<td align="center">2020&#x2F;06&#x2F;05</td>
+<td align="center">更新至 blender 2.83 API；修改部分类名；添加文档链接；修改完善许可说明</td>
+</tr>
+<tr>
+<td align="center">v0.2</td>
+<td align="center">2020&#x2F;05&#x2F;21</td>
+<td align="center">清除未使用属性的报错</td>
+</tr>
+<tr>
+<td align="center">v0.1</td>
+<td align="center">2020&#x2F;05&#x2F;12</td>
+<td align="center">完成基础的功能设计「一键切换」</td>
+</tr>
+</tbody></table>
+<p><em>注：更多详细的信息，请查看 <a href="https://github.com/Mister-Kin/ToggleLanguage/releases">Release Notes</a> 。</em></p>
+<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">即 blender 内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:6" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
   </entry>
 </search>
