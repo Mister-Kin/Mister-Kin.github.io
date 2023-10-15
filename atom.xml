@@ -42,13 +42,13 @@
     <category term="qt6-cpp-development-guide" scheme="https://mister-kin.github.io/categories/code-training/qt6-cpp-development-guide/"/>
     
     
-    <category term="C++" scheme="https://mister-kin.github.io/tags/C/"/>
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="qt" scheme="https://mister-kin.github.io/tags/qt/"/>
     
-    <category term="qt6" scheme="https://mister-kin.github.io/tags/qt6/"/>
+    <category term="C++" scheme="https://mister-kin.github.io/tags/C/"/>
     
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="qt6" scheme="https://mister-kin.github.io/tags/qt6/"/>
     
     <category term="开发" scheme="https://mister-kin.github.io/tags/%E5%BC%80%E5%8F%91/"/>
     
@@ -61,9 +61,9 @@
     <link href="https://mister-kin.github.io/code-training/qt6-cpp-development-guide/chap1/"/>
     <id>https://mister-kin.github.io/code-training/qt6-cpp-development-guide/chap1/</id>
     <published>2023-10-14T19:21:37.000Z</published>
-    <updated>2023-10-14T19:43:38.000Z</updated>
+    <updated>2023-10-15T18:31:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul><li>跨平台应用程序开发框架</li><li>首次发布于1995年5月</li><li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li></ul><h2 id="跨平台开发能力">1.2 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h2><table><thead><tr><th align="center">目标设备</th><th align="center">目标平台</th><th align="center">主机平台</th></tr></thead><tbody><tr><td align="center"></td><td align="center">桌面Linux</td><td align="center">桌面Linux</td></tr><tr><td align="center">计算机</td><td align="center">macOS</td><td align="center">macOS</td></tr><tr><td align="center"></td><td align="center">Windows</td><td align="center">Windows</td></tr><tr><td align="center"></td><td align="center">Android</td><td align="center">桌面Linux、 macOS、Windows</td></tr><tr><td align="center">移动设备</td><td align="center">iOS</td><td align="center">macOS</td></tr><tr><td align="center"></td><td align="center">手机Windows</td><td align="center">Windows</td></tr><tr><td align="center"></td><td align="center">嵌入式Linux</td><td align="center">桌面Linux</td></tr><tr><td align="center">嵌入式设备</td><td align="center">QNX</td><td align="center">桌面Linux、 Windows</td></tr><tr><td align="center"></td><td align="center">VxWorks</td><td align="center">桌面Linux、 Windows</td></tr><tr><td align="center"></td><td align="center">嵌入式Windows</td><td align="center">Windows</td></tr><tr><td align="center">单片机</td><td align="center">FreeRTOS或无操作系统</td><td align="center">Windows、 桌面Linux</td></tr></tbody></table><p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p><h2 id="Qt许可的类型">1.3 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h2><p>Qt 的许可类型</p><ul><li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li><li>开源许可：<ul><li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li><li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li></ul></li></ul><h2 id="安装包">1.4 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h2><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p><h2 id="Qt支持的开发语言">1.5 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h2><ol><li>C++ 和 QML<ul><li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li><li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li><li>C++和QML可以混合使用。</li></ul></li><li>Python<ul><li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li><li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li></ul></li></ol><h2 id="Qt6新特性">1.6 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h2><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p><ul><li>支持 C++ 17 标准。</li><li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li><li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li><li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li><li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul><li>跨平台应用程序开发框架</li><li>首次发布于1995年5月</li><li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li></ul><h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table><thead><tr><th align="center">目标设备</th><th align="center">目标平台</th><th align="center">主机平台</th></tr></thead><tbody><tr><td align="center"></td><td align="center">桌面Linux</td><td align="center">桌面Linux</td></tr><tr><td align="center">计算机</td><td align="center">macOS</td><td align="center">macOS</td></tr><tr><td align="center"></td><td align="center">Windows</td><td align="center">Windows</td></tr><tr><td align="center"></td><td align="center">Android</td><td align="center">桌面Linux、 macOS、Windows</td></tr><tr><td align="center">移动设备</td><td align="center">iOS</td><td align="center">macOS</td></tr><tr><td align="center"></td><td align="center">手机Windows</td><td align="center">Windows</td></tr><tr><td align="center"></td><td align="center">嵌入式Linux</td><td align="center">桌面Linux</td></tr><tr><td align="center">嵌入式设备</td><td align="center">QNX</td><td align="center">桌面Linux、 Windows</td></tr><tr><td align="center"></td><td align="center">VxWorks</td><td align="center">桌面Linux、 Windows</td></tr><tr><td align="center"></td><td align="center">嵌入式Windows</td><td align="center">Windows</td></tr><tr><td align="center">单片机</td><td align="center">FreeRTOS或无操作系统</td><td align="center">Windows、 桌面Linux</td></tr></tbody></table><p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p><h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p><ul><li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li><li>开源许可：<ul><li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li><li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li></ul></li></ul><h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p><h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol><li>C++ 和 QML<ul><li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li><li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li><li>C++和QML可以混合使用。</li></ul></li><li>Python<ul><li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li><li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li></ul></li></ol><h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p><ul><li>支持 C++ 17 标准。</li><li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li><li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li><li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li><li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li></ul><h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p></div><p>自Qt5.1.5起，Qt官方只提供在线安装包。</p><p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p><p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p><h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p><ul><li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li><li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li></ul><p>Qt Creator新建工程的一些总结：</p><ol><li>应用类型：<ul><li>Widgets：widget界面</li><li>Console：控制台程序</li><li>Quick：QML实现的界面</li></ul></li><li>base class基础类：<ul><li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li><li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li><li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li></ul></li><li>翻译文件：i18国际化语言</li></ol>]]></content>
     
     
       
@@ -81,13 +81,13 @@
     <category term="qt6-cpp-development-guide" scheme="https://mister-kin.github.io/categories/code-training/qt6-cpp-development-guide/"/>
     
     
-    <category term="第一章" scheme="https://mister-kin.github.io/tags/%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="qt" scheme="https://mister-kin.github.io/tags/qt/"/>
     
-    <category term="qt6" scheme="https://mister-kin.github.io/tags/qt6/"/>
+    <category term="第一章" scheme="https://mister-kin.github.io/tags/%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
     
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="qt6" scheme="https://mister-kin.github.io/tags/qt6/"/>
     
   </entry>
   
@@ -389,9 +389,9 @@
     <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
     
     
-    <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
-    
     <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
     
     <category term="arch" scheme="https://mister-kin.github.io/tags/arch/"/>
     
@@ -424,9 +424,9 @@
     <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
     
     
-    <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
-    
     <category term="系统" scheme="https://mister-kin.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="linux" scheme="https://mister-kin.github.io/tags/linux/"/>
     
     <category term="pve系统" scheme="https://mister-kin.github.io/tags/pve%E7%B3%BB%E7%BB%9F/"/>
     
