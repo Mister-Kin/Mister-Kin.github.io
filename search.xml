@@ -2394,7 +2394,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line">sudo nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line">sudo locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="VMware">2 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.</p>
+<h2 id="无法删除备份">1.3 &nbsp&nbsp<a href="#无法删除备份" class="headerlink" title="无法删除备份"></a>无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
+<h1 id="VMware">2 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3]  [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -2921,8 +2923,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>PC电源的保持时间只是提供一个缓冲的时间告诉各个硬件要断电了，具体的断电保护措施还是需要看硬件自身的设计。</p>
 <h1 id="屏幕">9 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
 <h2 id="AC97与HD-Audio前置音频连接针脚定义">9.1 &nbsp&nbsp<a href="#AC97与HD-Audio前置音频连接针脚定义" class="headerlink" title="AC97与HD-Audio前置音频连接针脚定义"></a>AC97与HD-Audio前置音频连接针脚定义</h2><p><a href="https://www.docin.com/p-2418893040.html">https://www.docin.com/p-2418893040.html</a></p>
-<h1 id="其它类别">10 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">10.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
-<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.<br>[4] zen3的whea18错误个人见解[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/7213032582#/">https://tieba.baidu.com/p/7213032582#/</a>.<br>[5] 网卡参数设置建议与各个网卡参数含义详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/Windgs_YF/article/details/104893741">https://blog.csdn.net/Windgs_YF/article/details/104893741</a>.</p>
+<h1 id="硬盘">10 &nbsp&nbsp<a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h1><h2 id="测试工具">10.1 &nbsp&nbsp<a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h2><p>固态：</p>
+<ul>
+<li><a href="https://crystalmark.info/en/software/crystaldiskinfo/">CrystalDiskInfo</a>和<a href="https://crystalmark.info/en/software/crystaldiskmark/">CrystalDiskMark</a></li>
+<li><a href="https://www.alex-is.de/PHP/fusion/infusions/downloads/downloads.php">AS SSD Benchmark</a></li>
+<li>三星固态：<a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">三星魔术师软件（Magician）</a></li>
+<li>系统自带工具winsat：测试C盘：<code>winsat disk -drive C</code>。WinSAT 工具运行整体系统测试命令：<code>winsat formal -v</code>。</li>
+</ul>
+<h1 id="其它类别">11 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">11.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.<br>[4] zen3的whea18错误个人见解[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/7213032582#/">https://tieba.baidu.com/p/7213032582#/</a>.<br>[5] 网卡参数设置建议与各个网卡参数含义详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/Windgs_YF/article/details/104893741">https://blog.csdn.net/Windgs_YF/article/details/104893741</a>.<br>[6] 无需三方工具，Windows 命令行轻松实现 SSD 测速[EB&#x2F;OL]. <a href="https://www.sysgeek.cn/windows-ssd-speed-test/">https://www.sysgeek.cn/windows-ssd-speed-test/</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -3210,18 +3219,36 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#109;">&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>输入<a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#109;">&#110;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
-<h1 id="微软商店应用">2 &nbsp&nbsp<a href="#微软商店应用" class="headerlink" title="微软商店应用"></a>微软商店应用</h1><h2 id="Win10-LTSC-2021安装微软商店MicrosoftStore">2.1 &nbsp&nbsp<a href="#Win10-LTSC-2021安装微软商店MicrosoftStore" class="headerlink" title="Win10 LTSC 2021安装微软商店MicrosoftStore"></a>Win10 LTSC 2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
-<h1 id="运行库">3 &nbsp&nbsp<a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>详看<a href="/troubleshooting/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a></p>
-<h1 id="硬件分区数据">4 &nbsp&nbsp<a href="#硬件分区数据" class="headerlink" title="硬件分区数据"></a>硬件分区数据</h1><h2 id="数据恢复">4.1 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000</p>
-<h1 id="注册表">5 &nbsp&nbsp<a href="#注册表" class="headerlink" title="注册表"></a>注册表</h1><p><a href="https://pecmd.net/thread-68.htm">教程：了解和掌握Windows操作系统注册表，包括在线和离线修改方法</a></p>
-<h1 id="网络">6 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="网络测试">6.1 &nbsp&nbsp<a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 验证本机 TCP/IP 协议是否安装好</span></span><br><span class="line">ping 127.0.0.1</span><br><span class="line"><span class="comment"># 验证本机 IP 地址是否配置完成或者网卡物理属性是否完好</span></span><br><span class="line">ping 192.168.1.55</span><br><span class="line"><span class="comment"># 验证从本机到网关的物理线路是否连通</span></span><br><span class="line">ping 192.168.1.1/192.168.0.1</span><br><span class="line"><span class="comment"># 目标地址查看电脑与目标机器工作是否正常。</span></span><br><span class="line">ping</span><br><span class="line"><span class="comment"># 目标地址跟踪数据包到达目的主机的路径，可以探测网络故障是发生在哪一个位置</span></span><br><span class="line">Tracert</span><br><span class="line"><span class="comment"># 首先 localhost 是一个域名，在过去它指向 127.0.0.1 这个 IP 地址。在操作系统支持 ipv6 后，它同时还指向 ipv6 的地址 [::1] 。</span></span><br></pre></td></tr></table></figure>
+<h1 id="微软账户">2 &nbsp&nbsp<a href="#微软账户" class="headerlink" title="微软账户"></a>微软账户</h1><h2 id="退出微软账号">2.1 &nbsp&nbsp<a href="#退出微软账号" class="headerlink" title="退出微软账号"></a>退出微软账号</h2><p>设置步骤：设置-&gt;设置-&gt;账户-&gt;你的信息-&gt;改用本地账户登录（停止登录）。</p>
+<h2 id="无法登录微软帐号或者出现0x80190001错误提示">2.2 &nbsp&nbsp<a href="#无法登录微软帐号或者出现0x80190001错误提示" class="headerlink" title="无法登录微软帐号或者出现0x80190001错误提示"></a>无法登录微软帐号或者出现0x80190001错误提示</h2><p>解决方法：</p>
+<ol>
+<li>打开网卡设置属性设置</li>
+<li>关闭ipv6</li>
+<li>ipv4的DNS设置<code>4.2.2.1</code>，备用<code>4.2.2.2</code></li>
+<li>cmd终端执行命令刷新dns缓存：<code>ipconfig /flushdns</code></li>
+<li>重启系统，重新尝试登录（<strong>登录成功后建议还原网络设置</strong>）</li>
+</ol>
+<h1 id="微软商店应用">3 &nbsp&nbsp<a href="#微软商店应用" class="headerlink" title="微软商店应用"></a>微软商店应用</h1><h2 id="下载微软商店应用离线安装包">3.1 &nbsp&nbsp<a href="#下载微软商店应用离线安装包" class="headerlink" title="下载微软商店应用离线安装包"></a>下载微软商店应用离线安装包</h2><p>微软商店应用下载地址解析站点（下载通道一般选默认的RP）：<a href="https://store.rg-adguard.net/">https://store.rg-adguard.net/</a></p>
+<p>微软商店应用在线链接：</p>
+<ul>
+<li>微软商店本体Windows Store：<a href="https://www.microsoft.com/store/productId/9WZDNCRFJBMP">https://www.microsoft.com/store/productId/9WZDNCRFJBMP</a></li>
+<li>Windows 计算器：<a href="https://apps.microsoft.com/detail/9WZDNCRFHVN5?hl=zh-CN&gl=US">https://apps.microsoft.com/detail/9WZDNCRFHVN5?hl=zh-CN&amp;gl=US</a></li>
+<li>应用安装程序：<a href="https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=zh-cn&gl=CN">https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=zh-cn&amp;gl=CN</a></li>
+<li>英伟达控制面板NVIDIA Control Panel：<a href="https://www.microsoft.com/zh-cn/p/nvidia-control-panel/9nf8h0h7wmlt?SilentAuth=1&wa=wsignin1.0&activetab=pivot:overviewtab">https://www.microsoft.com/zh-cn/p/nvidia-control-panel/9nf8h0h7wmlt?SilentAuth=1&amp;wa=wsignin1.0&amp;activetab=pivot%3Aoverviewtab</a></li>
+<li>华硕灯控软件奥创Armoury Crate：<a href="https://apps.microsoft.com/detail/armoury-crate/9PM9DFQRDH3F?hl=en-US&gl=US">https://apps.microsoft.com/detail/armoury-crate/9PM9DFQRDH3F?hl=en-US&amp;gl=US</a></li>
+</ul>
+<h2 id="Win10-LTSC-2021安装微软商店MicrosoftStore">3.2 &nbsp&nbsp<a href="#Win10-LTSC-2021安装微软商店MicrosoftStore" class="headerlink" title="Win10 LTSC 2021安装微软商店MicrosoftStore"></a>Win10 LTSC 2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
+<h1 id="运行库">4 &nbsp&nbsp<a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>详看<a href="/troubleshooting/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a></p>
+<h1 id="硬件分区数据">5 &nbsp&nbsp<a href="#硬件分区数据" class="headerlink" title="硬件分区数据"></a>硬件分区数据</h1><h2 id="数据恢复">5.1 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000</p>
+<h1 id="注册表">6 &nbsp&nbsp<a href="#注册表" class="headerlink" title="注册表"></a>注册表</h1><p><a href="https://pecmd.net/thread-68.htm">教程：了解和掌握Windows操作系统注册表，包括在线和离线修改方法</a></p>
+<h1 id="网络">7 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="网络测试">7.1 &nbsp&nbsp<a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 验证本机 TCP/IP 协议是否安装好</span></span><br><span class="line">ping 127.0.0.1</span><br><span class="line"><span class="comment"># 验证本机 IP 地址是否配置完成或者网卡物理属性是否完好</span></span><br><span class="line">ping 192.168.1.55</span><br><span class="line"><span class="comment"># 验证从本机到网关的物理线路是否连通</span></span><br><span class="line">ping 192.168.1.1/192.168.0.1</span><br><span class="line"><span class="comment"># 目标地址查看电脑与目标机器工作是否正常。</span></span><br><span class="line">ping</span><br><span class="line"><span class="comment"># 目标地址跟踪数据包到达目的主机的路径，可以探测网络故障是发生在哪一个位置</span></span><br><span class="line">Tracert</span><br><span class="line"><span class="comment"># 首先 localhost 是一个域名，在过去它指向 127.0.0.1 这个 IP 地址。在操作系统支持 ipv6 后，它同时还指向 ipv6 的地址 [::1] 。</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="win10-ssh客户端">6.2 &nbsp&nbsp<a href="#win10-ssh客户端" class="headerlink" title="win10 ssh客户端"></a>win10 ssh客户端</h2><p>win10 1803版本自带安装ssh客户端，可检查是否已启用。新版都自带安装客户端并自动启动。</p>
+<h2 id="win10-ssh客户端">7.2 &nbsp&nbsp<a href="#win10-ssh客户端" class="headerlink" title="win10 ssh客户端"></a>win10 ssh客户端</h2><p>win10 1803版本自带安装ssh客户端，可检查是否已启用。新版都自带安装客户端并自动启动。</p>
 <p>使用：<code>ssh username@ip</code></p>
-<h2 id="win10-ssh服务端并允许空密码连接登录">6.3 &nbsp&nbsp<a href="#win10-ssh服务端并允许空密码连接登录" class="headerlink" title="win10 ssh服务端并允许空密码连接登录"></a>win10 ssh服务端并允许空密码连接登录</h2><p>虽说新版win10已自带安装ssh客户端，但服务端需自行安装设置。</p>
+<h2 id="win10-ssh服务端并允许空密码连接登录">7.3 &nbsp&nbsp<a href="#win10-ssh服务端并允许空密码连接登录" class="headerlink" title="win10 ssh服务端并允许空密码连接登录"></a>win10 ssh服务端并允许空密码连接登录</h2><p>虽说新版win10已自带安装ssh客户端，但服务端需自行安装设置。</p>
 <ol>
 <li>设置&gt;应用&gt;应用和功能：可选功能</li>
 <li>添加功能：OpenSSH 服务器，选择安装</li>
@@ -3235,17 +3262,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>程序主目录：C:\Windows\System32\OpenSSH</li>
 <li>配置文件目录：%PROGRAMDATA%\ssh\sshd_config</li>
 </ul>
-<h2 id="win防火墙开启后无法被ping通">6.4 &nbsp&nbsp<a href="#win防火墙开启后无法被ping通" class="headerlink" title="win防火墙开启后无法被ping通"></a>win防火墙开启后无法被ping通</h2><p>两种方案：</p>
+<h2 id="win防火墙开启后无法被ping通">7.4 &nbsp&nbsp<a href="#win防火墙开启后无法被ping通" class="headerlink" title="win防火墙开启后无法被ping通"></a>win防火墙开启后无法被ping通</h2><p>两种方案：</p>
 <ul>
 <li>关闭防火墙：控制面板-&gt;系统和安全-&gt;Windows Defender 防火墙-&gt;启用或关闭Windows Defender防火墙-&gt;全部选择关闭Windows Defender防火墙-&gt;点击确定即可。</li>
 <li>配置防火墙规则：控制面板-&gt;系统和安全-&gt;Windows Defender 防火墙-&gt;高级设置-&gt;入站规则-&gt;右键点击「虚拟机监控（回显请求）」所对应的两条记录（或者只启用ICMPv4-In，不启用ICMPv6-In）-&gt;点击启用规则。（如果仍然不行，继续启用「文件和打印机共享（回显请求）」，共四条）</li>
 </ul>
-<h2 id="网络抓包分析工具">6.5 &nbsp&nbsp<a href="#网络抓包分析工具" class="headerlink" title="网络抓包分析工具"></a>网络抓包分析工具</h2><ul>
+<h2 id="网络抓包分析工具">7.5 &nbsp&nbsp<a href="#网络抓包分析工具" class="headerlink" title="网络抓包分析工具"></a>网络抓包分析工具</h2><ul>
 <li>wireshark：抓包分析</li>
 <li>postman：分析接口</li>
 <li>nmap:扫描端口</li>
 </ul>
-<h2 id="空密码无密码账户远程桌面连接出错提示用户账户限制">6.6 &nbsp&nbsp<a href="#空密码无密码账户远程桌面连接出错提示用户账户限制" class="headerlink" title="空密码无密码账户远程桌面连接出错提示用户账户限制"></a>空密码无密码账户远程桌面连接出错提示用户账户限制</h2><p>使用远程桌面功能时，报错：&#96;用户账户限制(例如，时间限制)会阻止你登录。请与系统管理员或技术支持联系以获取帮助。</p>
+<h2 id="空密码无密码账户远程桌面连接出错提示用户账户限制">7.6 &nbsp&nbsp<a href="#空密码无密码账户远程桌面连接出错提示用户账户限制" class="headerlink" title="空密码无密码账户远程桌面连接出错提示用户账户限制"></a>空密码无密码账户远程桌面连接出错提示用户账户限制</h2><p>使用远程桌面功能时，报错：&#96;用户账户限制(例如，时间限制)会阻止你登录。请与系统管理员或技术支持联系以获取帮助。</p>
 <p>问题原因：因为被控端的远程系统的用户密码为空，且系统默认只允许空白密码的本地账户进行控制台登录。</p>
 <p>解决方式（在被控端操作）：</p>
 <ol>
@@ -3253,23 +3280,23 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>本地策略 -&gt; 安全选项：在右侧选中「帐户: 使用空白密码的本地帐户只允许进行控制台登录双击进行编辑」</li>
 <li>选择禁用选项确认。</li>
 </ol>
-<h2 id="win10开启远程桌面功能">6.7 &nbsp&nbsp<a href="#win10开启远程桌面功能" class="headerlink" title="win10开启远程桌面功能"></a>win10开启远程桌面功能</h2><p>设置&gt;系统&gt;远程桌面&gt;启用远程桌面</p>
+<h2 id="win10开启远程桌面功能">7.7 &nbsp&nbsp<a href="#win10开启远程桌面功能" class="headerlink" title="win10开启远程桌面功能"></a>win10开启远程桌面功能</h2><p>设置&gt;系统&gt;远程桌面&gt;启用远程桌面</p>
 <p>P.S. 本质上和win7的设置一样，只是在win10的设置中提供了一个接口设置。</p>
-<h2 id="win7启用远程桌面">6.8 &nbsp&nbsp<a href="#win7启用远程桌面" class="headerlink" title="win7启用远程桌面"></a>win7启用远程桌面</h2><p>系统&gt;设置&gt;远程设置&gt;允许远程协助连接这台计算机+允许运行任意版本远程桌面的计算机连接（较不安全）。</p>
+<h2 id="win7启用远程桌面">7.8 &nbsp&nbsp<a href="#win7启用远程桌面" class="headerlink" title="win7启用远程桌面"></a>win7启用远程桌面</h2><p>系统&gt;设置&gt;远程设置&gt;允许远程协助连接这台计算机+允许运行任意版本远程桌面的计算机连接（较不安全）。</p>
 <p>如果依旧被拦截，点击「选择用户」，将用户名加入。</p>
-<h2 id="删除远程桌面连接记录">6.9 &nbsp&nbsp<a href="#删除远程桌面连接记录" class="headerlink" title="删除远程桌面连接记录"></a>删除远程桌面连接记录</h2><ol>
+<h2 id="删除远程桌面连接记录">7.9 &nbsp&nbsp<a href="#删除远程桌面连接记录" class="headerlink" title="删除远程桌面连接记录"></a>删除远程桌面连接记录</h2><ol>
 <li>WIN+R键：regedit</li>
 <li>注册表编辑器的地址栏输入地址：<code>计算机\HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default</code></li>
 <li>删除不要的记录</li>
 </ol>
-<h2 id="win公用网络切换为专用网络">6.10 &nbsp&nbsp<a href="#win公用网络切换为专用网络" class="headerlink" title="win公用网络切换为专用网络"></a>win公用网络切换为专用网络</h2><p>部分情况「公用网络」的权限缩紧，不少端口都被屏蔽禁用。</p>
+<h2 id="win公用网络切换为专用网络">7.10 &nbsp&nbsp<a href="#win公用网络切换为专用网络" class="headerlink" title="win公用网络切换为专用网络"></a>win公用网络切换为专用网络</h2><p>部分情况「公用网络」的权限缩紧，不少端口都被屏蔽禁用。</p>
 <ol>
 <li>打开本地安全策略窗口：WIN+R：secpol.msc</li>
 <li>网络列表管理器策略</li>
 <li>找到需要修改的网路名称，属性窗口的网络位置标签</li>
 <li>选择位置类型为「专用（R）」，用户权限为「用户不可以更改位置（S）」</li>
 </ol>
-<h1 id="语言设置">7 &nbsp&nbsp<a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h1><h2 id="欢迎屏幕和程序界面语言乱码">7.1 &nbsp&nbsp<a href="#欢迎屏幕和程序界面语言乱码" class="headerlink" title="欢迎屏幕和程序界面语言乱码"></a>欢迎屏幕和程序界面语言乱码</h2><p>设置&gt;时间和语言&gt;语言&gt;管理语言设置。</p>
+<h1 id="多语言设置">8 &nbsp&nbsp<a href="#多语言设置" class="headerlink" title="多语言设置"></a>多语言设置</h1><h2 id="欢迎屏幕和程序界面语言乱码">8.1 &nbsp&nbsp<a href="#欢迎屏幕和程序界面语言乱码" class="headerlink" title="欢迎屏幕和程序界面语言乱码"></a>欢迎屏幕和程序界面语言乱码</h2><p>设置&gt;时间和语言&gt;语言&gt;管理语言设置。</p>
 <ul>
 <li>欢迎屏幕乱码：复制设置。</li>
 <li>程序界面语言乱码：非Unicode程序的语言。</li>
@@ -3281,7 +3308,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <img data-src="/images/windows10-troubleshooting/setting-language-welcom-screen.webp">欢迎屏幕设置</div>
 </div>
 
-<h1 id="蓝屏重启故障">8 &nbsp&nbsp<a href="#蓝屏重启故障" class="headerlink" title="蓝屏重启故障"></a>蓝屏重启故障</h1><h2 id="蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败">8.1 &nbsp&nbsp<a href="#蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败" class="headerlink" title="蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败"></a>蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败</h2><p>查看：事件管理器-&gt;Windows日志-&gt;系统</p>
+<h1 id="蓝屏重启故障">9 &nbsp&nbsp<a href="#蓝屏重启故障" class="headerlink" title="蓝屏重启故障"></a>蓝屏重启故障</h1><h2 id="蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败">9.1 &nbsp&nbsp<a href="#蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败" class="headerlink" title="蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败"></a>蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败</h2><p>查看：事件管理器-&gt;Windows日志-&gt;系统</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">警告	2023/10/13 22:24:23	Kernel-PnP	219	(212)</span><br><span class="line">为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败。</span><br><span class="line"></span><br><span class="line">关键	2023/10/13 22:24:23	Kernel-Power	41	(63)</span><br><span class="line">系统已在未先正常关机的情况下重新启动。如果系统停止响应、发生崩溃或意外断电，则可能会导致此错误。</span><br></pre></td></tr></table></figure>
 
 <p>原因：向日葵远程控制软件引起的故障。经过设备管理器查看向日葵模拟的显卡设备，是会调用Driver\WUDFRd（Windows 用户模式驱动程序框架）。</p>
@@ -3291,7 +3318,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><a href="https://blog.csdn.net/wnk1997/article/details/132630745">电脑莫名其妙重启 为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WUDFRd 失败</a></li>
 <li><a href="https://tieba.baidu.com/p/8467586463#147882518791l">官方进来看下，我每次异常重启的原因找到了！！！！</a></li>
 </ul>
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[7] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[8] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[9] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[10]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[11] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.</p>
+<h1 id="封装系统">10 &nbsp&nbsp<a href="#封装系统" class="headerlink" title="封装系统"></a>封装系统</h1><h2 id="关于IT天空论坛工具的锁定主页的行为">10.1 &nbsp&nbsp<a href="#关于IT天空论坛工具的锁定主页的行为" class="headerlink" title="关于IT天空论坛工具的锁定主页的行为"></a>关于IT天空论坛工具的锁定主页的行为</h2><p>锁定情况：EasyImageX2是优启通里面的系统安装器，在优启通里面是去广告的，但是换到另一个pe运行它又是带广告的；万能驱动用it天空的系统封装软件封装后可以去广告，移出来运行又会有广告。</p>
+<p>实现原理：优启通启动的时候会在注册表生产一个当前机器的密钥字符串，然后EasyImageX2去解密判断，判断正确就免广告。同理万能驱动也是。注册表位置：<code>HKEY_LOCAL_MACHINE\SOFTWARE\EasyDrv7\</code>，但是仍然无法通过预先在系统中写入该注册表内容来去除推广包软件和主页绑定，因为是根据当前硬件信息生成一个key的。</p>
+<h2 id="万能驱动的精简">10.2 &nbsp&nbsp<a href="#万能驱动的精简" class="headerlink" title="万能驱动的精简"></a>万能驱动的精简</h2><p>精简思路：softext文件夹内的几个安装包和驱动的压缩包是可删的，但所有e7e文件不可删（softext的e7e若删除，则会报错篡改；驱动压缩包对应的e7e若删除，则会导致卡100%的问题）。一般，驱动文件删除显卡驱动即可，oem和通用的。这种精简方式只适合在部署阶段中调用，无法在桌面环境下运行（会报错文件不完整或者软件被篡改）。如果想要精简并同时可以在桌面环境中运行的话，需要用老版的主程序替代。</p>
+<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[7] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[8] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[9] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[10]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[11] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.<br>[12] Microsoft账户无法登录怎么办？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/449928889">https://www.zhihu.com/question/449928889</a>.<br>[13] 万能驱动 v7.23.925.3（2023.11.08 发布）[EB&#x2F;OL]. <a href="https://www.puresys.net/1147.html">https://www.puresys.net/1147.html</a>.<br>[14] 技术 | Windows 10 更新新版微软商城（Microsoft Store） [EB&#x2F;OL]. <a href="https://www.sizau.com/a/update-microsoft-store.html">https://www.sizau.com/a/update-microsoft-store.html</a>.<br>[15] WIN10安装NVIDIA面板两种方式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/144801155">https://zhuanlan.zhihu.com/p/144801155</a>.<br>[16] easyImageX2和万能驱动有种奇特的现象[EB&#x2F;OL]. <a href="http://wuyou.net/forum.php?mod=viewthread&tid=422066">http://wuyou.net/forum.php?mod=viewthread&amp;tid=422066</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -6020,9 +6050,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-sfvszUBkHGAxxVlE" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-sfvszUBkHGAxxVlE").style.height=document.getElementById("mmedia-sfvszUBkHGAxxVlE").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-lQNyYzhflbnTTRyq" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-lQNyYzhflbnTTRyq").style.height=document.getElementById("mmedia-lQNyYzhflbnTTRyq").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-sfvszUBkHGAxxVlE").style.height=document.getElementById("mmedia-sfvszUBkHGAxxVlE").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-lQNyYzhflbnTTRyq").style.height=document.getElementById("mmedia-lQNyYzhflbnTTRyq").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -6145,7 +6175,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-OKuAPWFPoegrJstY"></div><script> var OKuAPWFPoegrJstY_options = JSON.parse('{\"id\":\"mmedia-OKuAPWFPoegrJstY\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(OKuAPWFPoegrJstY_options); </script>
+<div id="mmedia-vhoTAHeoCrYhTBjL"></div><script> var vhoTAHeoCrYhTBjL_options = JSON.parse('{\"id\":\"mmedia-vhoTAHeoCrYhTBjL\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(vhoTAHeoCrYhTBjL_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6249,7 +6279,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#105;&#115;&#x74;&#101;&#x72;&#107;&#105;&#x6e;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x69;&#x6d;&#x2e;&#x6d;&#105;&#115;&#x74;&#101;&#x72;&#107;&#105;&#x6e;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
