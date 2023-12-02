@@ -1216,7 +1216,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>qtcreator-12.0.0\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\project.pro</li>
 </ul></div></div></div>
 
-<h2 id="修改项目CMakeLists-txt文件以正确生成翻译文件">4.2 &nbsp&nbsp<a href="#修改项目CMakeLists-txt文件以正确生成翻译文件" class="headerlink" title="修改项目CMakeLists.txt文件以正确生成翻译文件"></a>修改项目CMakeLists.txt文件以正确生成翻译文件</h2><p>打开CMakeLists.txt文件，找到<code>if($&#123;QT_VERSION_MAJOR&#125; GREATER_EQUAL 6)</code>语句，在该if语句内添加如下内容：</p>
+<h2 id="修改项目CMakeLists-txt文件以正确生成翻译文件">4.2 &nbsp&nbsp<a href="#修改项目CMakeLists-txt文件以正确生成翻译文件" class="headerlink" title="修改项目CMakeLists.txt文件以正确生成翻译文件"></a>修改项目CMakeLists.txt文件以正确生成翻译文件</h2><p>打开CMakeLists.txt文件，找到<code>if($&#123;QT_VERSION_MAJOR&#125; GREATER_EQUAL 6)</code>语句，在该if语句内添加如下内容，其中<code>untitled</code>为项目名称：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">qt_create_translation(QM_FILES $&#123;CMAKE_SOURCE_DIR&#125; $&#123;TS_FILES&#125;)</span><br><span class="line">qt_add_executable(untitled</span><br><span class="line">    MANUAL_FINALIZATION</span><br><span class="line">    $&#123;PROJECT_SOURCES&#125;</span><br><span class="line">    $&#123;TS_FILES&#125;</span><br><span class="line">    $&#123;QM_FILES&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h2 id="创建工程提示找不到合适的套件">4.3 &nbsp&nbsp<a href="#创建工程提示找不到合适的套件" class="headerlink" title="创建工程提示找不到合适的套件"></a>创建工程提示找不到合适的套件</h2><p>问题：安装Qt Creator之后，在创建工程提示<code>No suitable kits found</code>.</p>
@@ -3288,7 +3288,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>输入<a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;">&#110;&#111;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#117;&#x2e;&#99;&#x6f;&#109;">&#x6e;&#x6f;&#x40;&#x74;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#117;&#x2e;&#99;&#x6f;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="微软账户">2 &nbsp&nbsp<a href="#微软账户" class="headerlink" title="微软账户"></a>微软账户</h1><h2 id="退出微软账号">2.1 &nbsp&nbsp<a href="#退出微软账号" class="headerlink" title="退出微软账号"></a>退出微软账号</h2><p>设置步骤：设置-&gt;设置-&gt;账户-&gt;你的信息-&gt;改用本地账户登录（停止登录）。</p>
@@ -6122,9 +6122,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-qhXLyzbsEjixGfQj" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-qhXLyzbsEjixGfQj").style.height=document.getElementById("mmedia-qhXLyzbsEjixGfQj").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-mMMgyXbnVfzdXuYH" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-mMMgyXbnVfzdXuYH").style.height=document.getElementById("mmedia-mMMgyXbnVfzdXuYH").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-qhXLyzbsEjixGfQj").style.height=document.getElementById("mmedia-qhXLyzbsEjixGfQj").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-mMMgyXbnVfzdXuYH").style.height=document.getElementById("mmedia-mMMgyXbnVfzdXuYH").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -6247,7 +6247,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-BYlBEOlSwWGgAfaz"></div><script> var BYlBEOlSwWGgAfaz_options = JSON.parse('{\"id\":\"mmedia-BYlBEOlSwWGgAfaz\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(BYlBEOlSwWGgAfaz_options); </script>
+<div id="mmedia-WhUmtjIxHSvGJQBx"></div><script> var WhUmtjIxHSvGJQBx_options = JSON.parse('{\"id\":\"mmedia-WhUmtjIxHSvGJQBx\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(WhUmtjIxHSvGJQBx_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6351,7 +6351,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#x72;&#107;&#105;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#105;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#x72;&#107;&#105;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -7019,7 +7019,35 @@ CGI&后期处理
   <entry>
     <title>「批处理工具」使用手册</title>
     <url>/works/software-works/batch-tools/index.html</url>
-    <content><![CDATA[<h1 id="准备工作">1 &nbsp&nbsp<a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="需要下载的文件">1.1 &nbsp&nbsp<a href="#需要下载的文件" class="headerlink" title="需要下载的文件"></a>需要下载的文件</h2><ul>
+    <content><![CDATA[<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一些方便工作的批处理程序。</p>
+<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>TODO</p>
+<h2 id="程序目前实现的功能">1.2 &nbsp&nbsp<a href="#程序目前实现的功能" class="headerlink" title="程序目前实现的功能"></a>程序目前实现的功能</h2><ul>
+<li>ffmpeg.sh<ul>
+<li>个人工作：批量操作媒体资源</li>
+<li>压缩媒体资源</li>
+<li>图片转换器：图片格式互转</li>
+<li>视频转换器：视频格式互转</li>
+<li>音频转换器：音频格式互转</li>
+<li>音频元数据标签工具</li>
+<li>音频封面图工具：获取、添加、删除</li>
+<li>媒体资源工具：合并、分割、缩放</li>
+</ul>
+</li>
+<li>text.sh<ul>
+<li>合并文本文件</li>
+</ul>
+</li>
+<li>ffmpeg.bat（不再维护bat）<ul>
+<li>给图片添加版权水印并压缩</li>
+<li>图片压缩</li>
+<li>合并音视频</li>
+<li>视频转封装</li>
+<li>视频压缩：转 hevc 编码</li>
+<li>显卡加速图片序列合成视频</li>
+</ul>
+</li>
+</ul>
+<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
 <li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
 <li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
 <li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
@@ -7033,7 +7061,7 @@ CGI&后期处理
 <img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
 </div>
 
-<h2 id="安装和环境配置">1.2 &nbsp&nbsp<a href="#安装和环境配置" class="headerlink" title="安装和环境配置"></a>安装和环境配置</h2><h3 id="FFmpeg配置">1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h3><ol>
+<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="FFmpeg配置">2.1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h4><ol>
 <li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
 <li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
 <li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
@@ -7060,12 +7088,12 @@ CGI&后期处理
 <img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
 </div>
 
-<h3 id="安装Git-for-Windows">1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h3><p>一路默认安装下去，终端使用Git Bash。</p>
-<h3 id="批处理工具配置">1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h3><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
+<h4 id="安装Git-for-Windows">2.1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h4><p>一路默认安装下去，终端使用Git Bash。</p>
+<h4 id="批处理工具配置">2.1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h4><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
 <div class="flex-column">
 <img data-src="./images/1.9.webp">批处理工具程序路径</div>
 
-<h1 id="使用方法">2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><ol>
+<h2 id="使用方法">2.2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol>
 <li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
 <li>输入批处理工具程序的路径，回车执行。</li>
 <li>按菜单提示选择对应功能。</li>
@@ -7075,6 +7103,78 @@ CGI&后期处理
 <img data-src="./images/2.1.webp">输入程序路径执行</div>
 <div class="flex-column">
 <img data-src="./images/2.2.webp">输入操作路径执行</div>
+
+<h2 id="程序功能">2.3 &nbsp&nbsp<a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h2><ul>
+<li>ffmpeg.sh<ul>
+<li>个人工作：批量操作媒体资源<ul>
+<li>给图片添加版权文字水印并压缩</li>
+<li>给视频添加文字版权水印（libx264）</li>
+<li>图片序列导出mp4格式视频（libx264）</li>
+<li>重编码视频导出mp4格式视频（libx264）</li>
+<li>添加字幕（硬编码，libx264）</li>
+<li>显卡加速将图片序列合成为视频（不再维护该功能）</li>
+</ul>
+</li>
+<li>压缩媒体资源<ul>
+<li>压缩图片（原格式压缩或者转换为webp格式）</li>
+<li>压缩视频，转换为hevc编码的mp4格式（libx265）</li>
+</ul>
+</li>
+<li>图片转换器：图片格式互转<ul>
+<li>图片转png格式</li>
+</ul>
+</li>
+<li>视频转换器：视频格式互转<ul>
+<li>flv格式转mp4格式</li>
+</ul>
+</li>
+<li>音频转换器：音频格式互转<ul>
+<li>无损音频转m4a格式</li>
+</ul>
+</li>
+<li>音频元数据标签工具<ul>
+<li>根据元数据标签重命名音频文件</li>
+<li>根据音频文件名修改元数据标签</li>
+<li>设置音频文件的专辑名</li>
+<li>设置音频文件的歌曲名</li>
+<li>设置音频文件的歌手名</li>
+</ul>
+</li>
+<li>音频封面图工具：获取、添加、删除<ul>
+<li>获取音频封面图</li>
+<li>添加音频封面图</li>
+<li>删除音频封面图</li>
+</ul>
+</li>
+<li>媒体资源工具：合并、分割、缩放<ul>
+<li>合并音视频：mp4+m4a&#x2F;mp3</li>
+<li>分割视频</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>text.sh<ul>
+<li>合并文本文件<ul>
+<li>合并文本文件（文件首尾拼接）</li>
+<li>合并文本文件（逐行拼接合并）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ffmpeg.bat（不再维护bat）<ul>
+<li>给图片添加版权水印并压缩</li>
+<li>图片压缩：转 webp</li>
+<li>合并音视频：mp4 + m4a</li>
+<li>视频转封装：flv -&gt; mp4</li>
+<li>视频压缩：转 hevc 编码（libx265）</li>
+<li>显卡加速图片序列合成视频：普通录屏（jpg + wav -&gt; h264_nvenc + aac）</li>
+<li>显卡加速图片序列合成视频：CG（png + wav -&gt; h264_nvenc + aac）</li>
+</ul>
+</li>
+</ul>
+<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Arch Linux &#x2F; Mac<br>Shell: Git Bash &#x2F; Zsh</p>
+<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>批处理工具</strong> © Mr. Kin，所有文件均采用 <a href="https://github.com/Mister-Kin/BatchTools/blob/master/LICENSE">WTFPL</a> 许可协议进行发布。</p>
+<p>由 Mr. Kin 著作并维护。</p>
 ]]></content>
   </entry>
   <entry>
