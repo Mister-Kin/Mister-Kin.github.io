@@ -609,6 +609,21 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Hexo个人博客搭建踩坑记</title>
+    <url>/code/hexo/</url>
+    <content><![CDATA[<h1 id="npm淘宝镜像">1 &nbsp&nbsp<a href="#npm淘宝镜像" class="headerlink" title="npm淘宝镜像"></a>npm淘宝镜像</h1><p>当前有效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code><br>已失效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code></p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a></p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LaTeX语法总结笔记</title>
     <url>/code/latex/</url>
     <content><![CDATA[<h1 id="文档元素">1 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">1.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">1.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
@@ -2017,11 +2032,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
 </ol>
-<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="边框颜色修改问题">2.1 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
+<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
+<li>无任何数据的初始列：设置单元格式</li>
+<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
+</ul>
+<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
 <p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
 <h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
 <li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
 </ul>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -3288,7 +3308,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>输入<a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#111;&#109;">&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#111;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="微软账户">2 &nbsp&nbsp<a href="#微软账户" class="headerlink" title="微软账户"></a>微软账户</h1><h2 id="退出微软账号">2.1 &nbsp&nbsp<a href="#退出微软账号" class="headerlink" title="退出微软账号"></a>退出微软账号</h2><p>设置步骤：设置-&gt;设置-&gt;账户-&gt;你的信息-&gt;改用本地账户登录（停止登录）。</p>
@@ -6122,9 +6142,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-ZaBiSHmefJOdxSgh" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-ZaBiSHmefJOdxSgh").style.height=document.getElementById("mmedia-ZaBiSHmefJOdxSgh").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-SwIxpOpdFBalwKKH" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-SwIxpOpdFBalwKKH").style.height=document.getElementById("mmedia-SwIxpOpdFBalwKKH").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-ZaBiSHmefJOdxSgh").style.height=document.getElementById("mmedia-ZaBiSHmefJOdxSgh").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-SwIxpOpdFBalwKKH").style.height=document.getElementById("mmedia-SwIxpOpdFBalwKKH").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -6247,7 +6267,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-hCdmZRdXqdcsEKOk"></div><script> var hCdmZRdXqdcsEKOk_options = JSON.parse('{\"id\":\"mmedia-hCdmZRdXqdcsEKOk\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(hCdmZRdXqdcsEKOk_options); </script>
+<div id="mmedia-SMoMeLCImKsPUYaB"></div><script> var SMoMeLCImKsPUYaB_options = JSON.parse('{\"id\":\"mmedia-SMoMeLCImKsPUYaB\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(SMoMeLCImKsPUYaB_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6351,7 +6371,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#105;&#109;&#46;&#109;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#105;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
