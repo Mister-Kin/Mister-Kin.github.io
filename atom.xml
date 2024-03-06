@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2024-02-02T18:47:48.000Z</updated>
+  <updated>2024-03-06T19:37:13.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>路由排障总结</title>
+    <link href="https://mister-kin.github.io/troubleshooting/router-troubleshooting/"/>
+    <id>https://mister-kin.github.io/troubleshooting/router-troubleshooting/</id>
+    <published>2024-03-06T18:04:53.000Z</published>
+    <updated>2024-03-06T19:37:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;联通光猫&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#联通光猫&quot; class=&quot;headerlink&quot; title=&quot;联通光猫&quot;&gt;&lt;/a&gt;联通光猫&lt;/h1&gt;&lt;h2 id=&quot;烽火HG6142A获取超级管理员密码&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="troubleshooting" scheme="https://mister-kin.github.io/categories/troubleshooting/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo个人博客搭建踩坑记</title>
@@ -226,9 +251,9 @@
     <link href="https://mister-kin.github.io/cad/pcb/"/>
     <id>https://mister-kin.github.io/cad/pcb/</id>
     <published>2023-10-12T15:01:55.000Z</published>
-    <updated>2023-10-12T19:33:14.000Z</updated>
+    <updated>2024-03-06T19:37:13.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p><h1 id="常见接口引脚定义">2 &nbsp&nbsp<a href="#常见接口引脚定义" class="headerlink" title="常见接口引脚定义"></a>常见接口引脚定义</h1><p>USB协议官网：<a href="https://www.usb.org/">https://www.usb.org/</a></p><p>USB接口种类：<a href="https://zhuanlan.zhihu.com/p/447595295">https://zhuanlan.zhihu.com/p/447595295</a></p><p>常见USB引脚定义：<a href="https://zhuanlan.zhihu.com/p/364748197">https://zhuanlan.zhihu.com/p/364748197</a></p><h2 id="Type-C接口">2.1 &nbsp&nbsp<a href="#Type-C接口" class="headerlink" title="Type-C接口"></a>Type-C接口</h2><p><a href="https://blog.csdn.net/qlexcel/article/details/117431413">https://blog.csdn.net/qlexcel/article/details/117431413</a></p><h2 id="mini-usb接口">2.2 &nbsp&nbsp<a href="#mini-usb接口" class="headerlink" title="mini usb接口"></a>mini usb接口</h2><p><a href="https://blog.csdn.net/eddy_liu/article/details/8316140">https://blog.csdn.net/eddy_liu/article/details/8316140</a></p><table><thead><tr><th>针脚</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>名称</td><td>VCC</td><td>D-</td><td>D+</td><td>id</td><td>GND</td></tr><tr><td>作用</td><td>+5V电压</td><td>数据线负极</td><td>数据线正极</td><td>OTG功能</td><td>接地</td></tr><tr><td>接线颜色</td><td>红色</td><td>白色</td><td>绿色</td><td>&#x2F;</td><td>黑色</td></tr></tbody></table><h2 id="充电DC圆孔">2.3 &nbsp&nbsp<a href="#充电DC圆孔" class="headerlink" title="充电DC圆孔"></a>充电DC圆孔</h2><p>无论是公口或者母口，一般都是内正外负，不仅是5.5大小的，4、3.5、2.5等等的。不过有些厂家是对着干的，比如当年卡西欧和雅马哈电子琴所配的电源。</p><div class="flex-column"><img data-src="/images/cad/dc_pin.webp">DC接口引脚定义</div><h1 id="华硕主板灯控开发">3 &nbsp&nbsp<a href="#华硕主板灯控开发" class="headerlink" title="华硕主板灯控开发"></a>华硕主板灯控开发</h1><ul><li><a href="https://github.com/ProgramAndPoem/AacHal">https://github.com/ProgramAndPoem/AacHal</a></li><li><a href="https://blog.csdn.net/weixin_42349978/article/details/112128924">https://blog.csdn.net/weixin_42349978/article/details/112128924</a></li></ul><h1 id="锂电池">4 &nbsp&nbsp<a href="#锂电池" class="headerlink" title="锂电池"></a>锂电池</h1><p>串并联符号：串联s，并联p。3s1p：三串一并，一并实际就是没有并联。比如1s1p就是单一电池。</p><p>串联增压，并联增容。</p><h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p><h1 id="常见接口引脚定义">2 &nbsp&nbsp<a href="#常见接口引脚定义" class="headerlink" title="常见接口引脚定义"></a>常见接口引脚定义</h1><p>USB协议官网：<a href="https://www.usb.org/">https://www.usb.org/</a></p><p>USB接口种类：<a href="https://zhuanlan.zhihu.com/p/447595295">https://zhuanlan.zhihu.com/p/447595295</a></p><p>常见USB引脚定义：<a href="https://zhuanlan.zhihu.com/p/364748197">https://zhuanlan.zhihu.com/p/364748197</a></p><h2 id="Type-C接口">2.1 &nbsp&nbsp<a href="#Type-C接口" class="headerlink" title="Type-C接口"></a>Type-C接口</h2><p><a href="https://blog.csdn.net/qlexcel/article/details/117431413">https://blog.csdn.net/qlexcel/article/details/117431413</a></p><h2 id="mini-usb接口">2.2 &nbsp&nbsp<a href="#mini-usb接口" class="headerlink" title="mini usb接口"></a>mini usb接口</h2><p><a href="https://blog.csdn.net/eddy_liu/article/details/8316140">https://blog.csdn.net/eddy_liu/article/details/8316140</a></p><table><thead><tr><th>针脚</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>名称</td><td>VCC</td><td>D-</td><td>D+</td><td>id</td><td>GND</td></tr><tr><td>作用</td><td>+5V电压</td><td>数据线负极</td><td>数据线正极</td><td>OTG功能</td><td>接地</td></tr><tr><td>接线颜色</td><td>红色</td><td>白色</td><td>绿色</td><td>&#x2F;</td><td>黑色</td></tr></tbody></table><h2 id="充电DC圆孔">2.3 &nbsp&nbsp<a href="#充电DC圆孔" class="headerlink" title="充电DC圆孔"></a>充电DC圆孔</h2><p>无论是公口或者母口，一般都是内正外负，不仅是5.5大小的，4、3.5、2.5等等的。不过有些厂家是对着干的，比如当年卡西欧和雅马哈电子琴所配的电源。</p><div class="flex-column"><img data-src="/images/cad/dc_pin.webp">DC接口引脚定义</div><h1 id="华硕主板灯控开发">3 &nbsp&nbsp<a href="#华硕主板灯控开发" class="headerlink" title="华硕主板灯控开发"></a>华硕主板灯控开发</h1><ul><li><a href="https://github.com/ProgramAndPoem/AacHal">https://github.com/ProgramAndPoem/AacHal</a></li><li><a href="https://blog.csdn.net/weixin_42349978/article/details/112128924">https://blog.csdn.net/weixin_42349978/article/details/112128924</a></li></ul><h1 id="锂电池">4 &nbsp&nbsp<a href="#锂电池" class="headerlink" title="锂电池"></a>锂电池</h1><p>串并联符号：串联s，并联p。3s1p：三串一并，一并实际就是没有并联。比如1s1p就是单一电池。</p><p>串联增压，并联增容。</p><h1 id="FPC的断裂修复">5 &nbsp&nbsp<a href="#FPC的断裂修复" class="headerlink" title="FPC的断裂修复"></a>FPC的断裂修复</h1><p>刮表层，使用焊油连接金属触点。</p><h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
     
     
       
@@ -729,42 +754,6 @@
     <category term="编辑器" scheme="https://mister-kin.github.io/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
     <category term="链接" scheme="https://mister-kin.github.io/tags/%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站收藏夹</title>
-    <link href="https://mister-kin.github.io/bookmark/"/>
-    <id>https://mister-kin.github.io/bookmark/</id>
-    <published>2023-07-25T13:15:01.000Z</published>
-    <updated>2023-09-09T12:35:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第三方站点导航推荐">1 &nbsp&nbsp<a href="#第三方站点导航推荐" class="headerlink" title="第三方站点导航推荐"></a>第三方站点导航推荐</h1><ul><li><a href="https://arandintday.github.io/2020/02/28/goodwebsite/">个人收藏的良心网站（持续更新）</a></li></ul>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第三方站点导航推荐&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#第三方站点导航推荐&quot; class=&quot;headerlink&quot; title=&quot;第三方站点导航推荐&quot;&gt;&lt;/a&gt;第三方站点导航推荐&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="书签" scheme="https://mister-kin.github.io/tags/%E4%B9%A6%E7%AD%BE/"/>
-    
-    <category term="收藏夹" scheme="https://mister-kin.github.io/tags/%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
-    
-    <category term="网址" scheme="https://mister-kin.github.io/tags/%E7%BD%91%E5%9D%80/"/>
-    
-    <category term="站点" scheme="https://mister-kin.github.io/tags/%E7%AB%99%E7%82%B9/"/>
-    
-    <category term="导航" scheme="https://mister-kin.github.io/tags/%E5%AF%BC%E8%88%AA/"/>
-    
-    <category term="推荐" scheme="https://mister-kin.github.io/tags/%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
