@@ -9,6 +9,15 @@
 <h2 id="音乐-音效">1.2 &nbsp&nbsp<a href="#音乐-音效" class="headerlink" title="音乐&#x2F;音效"></a>音乐&#x2F;音效</h2><ul>
 <li><a href="https://freemusicarchive.org/music/alex-productions/">Alex-Productions</a>-免费商用</li>
 </ul>
+<h2 id="下载相关">1.3 &nbsp&nbsp<a href="#下载相关" class="headerlink" title="下载相关"></a>下载相关</h2><h3 id="在线下载">1.3.1 &nbsp&nbsp<a href="#在线下载" class="headerlink" title="在线下载"></a>在线下载</h3><ul>
+<li><a href="https://doget.nocsdn.com/">Doget（Github加速下载）</a></li>
+</ul>
+<h3 id="下载工具">1.3.2 &nbsp&nbsp<a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h3><ul>
+<li><a href="https://github.com/iyear/tdl/releases">tdl（Teleglam对话文件下载工具）</a><ul>
+<li><a href="https://docs.iyear.me/tdl/zh/">tdl使用手册</a></li>
+</ul>
+</li>
+</ul>
 <h1 id="第三方站点导航推荐">2 &nbsp&nbsp<a href="#第三方站点导航推荐" class="headerlink" title="第三方站点导航推荐"></a>第三方站点导航推荐</h1><ul>
 <li><a href="https://arandintday.github.io/2020/02/28/goodwebsite/">个人收藏的良心网站（持续更新）</a></li>
 </ul>
@@ -673,12 +682,37 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>LaTeX语法总结笔记</title>
     <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="文档元素">1 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">1.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">1.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
 <figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="宏包">2 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">2.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">3 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">3.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -2917,6 +2951,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="无法识别内存组件">6.2 &nbsp&nbsp<a href="#无法识别内存组件" class="headerlink" title="无法识别内存组件"></a>无法识别内存组件</h2><p>安装其他的内存灯控软件，比如芝奇灯控Trident Z Lighting Control。设置开机自启，然后奥创就可以识别。</p>
 <h2 id="无法识别正确的主板型号">6.3 &nbsp&nbsp<a href="#无法识别正确的主板型号" class="headerlink" title="无法识别正确的主板型号"></a>无法识别正确的主板型号</h2><p>故障原因：使用改机器码的工具修改了主板名称，比如AMIBIOS DMI EDITOR。</p>
 <p>解决方法：使用工具改回原来的值。</p>
+<h2 id="奥创同步海盗船内存灯光">6.4 &nbsp&nbsp<a href="#奥创同步海盗船内存灯光" class="headerlink" title="奥创同步海盗船内存灯光"></a>奥创同步海盗船内存灯光</h2><ol>
+<li>BIOS设置关闭SPD保护<ul>
+<li>BIOS高级模式（F7切换模式）-&gt;AI Tweaker&#x2F;Extreme Tweaker-&gt;Tweaker&#39;s Paradise-&gt;SPD Write Disable-&gt;FALSE</li>
+</ul>
+</li>
+<li>卸载奥创本体（如果提前有安装）</li>
+<li>安装iCue奥创插件</li>
+<li>安装iCue本体</li>
+<li>安装奥创本体</li>
+</ol>
 <h1 id="显卡">7 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="专业检测工具-MASTS">7.1 &nbsp&nbsp<a href="#专业检测工具-MASTS" class="headerlink" title="专业检测工具-MASTS"></a>专业检测工具-MASTS</h2><p>工具官方论坛链接：<a href="https://vlab.su/viewtopic.php?t=124090">MATS&#x2F;MODS 400&#x2F;455&#x2F;520 Тест видеопамяти nVidia для флешки</a></p>
 <p>直接下载最新的ISO镜像，用<a href="https://rufus.ie/zh/">Rufus</a>直接写入U盘即可。</p>
 <h1 id="无线网卡">8 &nbsp&nbsp<a href="#无线网卡" class="headerlink" title="无线网卡"></a>无线网卡</h1><h2 id="2-4GHz无线设备的频率干扰问题">8.1 &nbsp&nbsp<a href="#2-4GHz无线设备的频率干扰问题" class="headerlink" title="2.4GHz无线设备的频率干扰问题"></a>2.4GHz无线设备的频率干扰问题</h2><p>具体故障表现：无线鼠标会有停顿感，或是无线键盘输入的速度变慢或无反应，甚至是无线传输的距离缩短。</p>
@@ -3513,8 +3557,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>账户锁定方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
-<li>账户锁定方案2：输入<a href="mailto:&#49;&#x40;&#x31;&#46;&#x63;&#111;&#x6d;">&#49;&#x40;&#x31;&#46;&#x63;&#111;&#x6d;</a>，密码随便。</li>
+<li>账户锁定方案2：输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#110;&#x6b;&#121;&#111;&#117;&#x2e;&#99;&#x6f;&#x6d;">&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#110;&#x6b;&#121;&#111;&#117;&#x2e;&#99;&#x6f;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>账户锁定方案2：输入<a href="mailto:&#49;&#64;&#x31;&#x2e;&#99;&#x6f;&#x6d;">&#49;&#64;&#x31;&#x2e;&#99;&#x6f;&#x6d;</a>，密码随便。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="系统启动项">2 &nbsp&nbsp<a href="#系统启动项" class="headerlink" title="系统启动项"></a>系统启动项</h1><h2 id="Windows-Boot-Manager启动失败，硬盘Disk-0启动成功">2.1 &nbsp&nbsp<a href="#Windows-Boot-Manager启动失败，硬盘Disk-0启动成功" class="headerlink" title="Windows Boot Manager启动失败，硬盘Disk 0启动成功"></a>Windows Boot Manager启动失败，硬盘Disk 0启动成功</h2><p>故障原因：在操作重装uEFI系统之后，BCD（引导配置数据）条目未正确修改引起的故障。比如，重装系统之后，Windows Boot Manager中的&quot;device&quot;相关参数被删除，因此无法正确启动。</p>
@@ -3549,6 +3593,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>电影和电视：<a href="https://apps.microsoft.com/detail/9wzdncrfj3p2?hl=zh-cn&gl=CN">https://apps.microsoft.com/detail/9wzdncrfj3p2?hl=zh-cn&amp;gl=CN</a></li>
 <li>Microsoft 便笺：<a href="https://apps.microsoft.com/detail/9nblggh4qghw?hl=zh-cn&gl=CN">https://apps.microsoft.com/detail/9nblggh4qghw?hl=zh-cn&amp;gl=CN</a></li>
 <li>邮件和日历：<a href="https://apps.microsoft.com/detail/9wzdncrfhvqm?hl=zh-cn&gl=CN">https://apps.microsoft.com/detail/9wzdncrfhvqm?hl=zh-cn&amp;gl=CN</a></li>
+<li>反馈中心：<a href="https://apps.microsoft.com/detail/9nblggh4r32n?rtc=1&hl=zh-cn&gl=CN">https://apps.microsoft.com/detail/9nblggh4r32n?rtc=1&amp;hl=zh-cn&amp;gl=CN</a></li>
 <li>Paint（win10只有自带的画图，没有这个新应用）：<a href="https://apps.microsoft.com/detail/9pcfs5b6t72h?gl=CN&hl=zh-cn">https://apps.microsoft.com/detail/9pcfs5b6t72h?gl=CN&amp;hl=zh-cn</a></li>
 <li>英伟达控制面板NVIDIA Control Panel：<a href="https://www.microsoft.com/zh-cn/p/nvidia-control-panel/9nf8h0h7wmlt?SilentAuth=1&wa=wsignin1.0&activetab=pivot:overviewtab">https://www.microsoft.com/zh-cn/p/nvidia-control-panel/9nf8h0h7wmlt?SilentAuth=1&amp;wa=wsignin1.0&amp;activetab=pivot%3Aoverviewtab</a></li>
 <li>华硕灯控软件奥创Armoury Crate：<a href="https://apps.microsoft.com/detail/armoury-crate/9PM9DFQRDH3F?hl=en-US&gl=US">https://apps.microsoft.com/detail/armoury-crate/9PM9DFQRDH3F?hl=en-US&amp;gl=US</a></li>
@@ -5581,6 +5626,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
 <li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
 <li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
 </ul>
 </li>
 </ul>
@@ -5838,7 +5884,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
     <url>/code-training/qt6-cpp-development-guide/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：GUI程序设计基踹">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基踹" class="headerlink" title="第二章：GUI程序设计基踹"></a>第二章：GUI程序设计基踹</h1><p>项目目录文件结构：</p>
+    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
 <ul>
 <li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
 <li>main.cpp：主程序入口文件，实现main函数</li>
@@ -5870,6 +5916,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
 <ul>
 <li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -6460,9 +6507,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-JdaLYKxlPLPBfxaA" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-JdaLYKxlPLPBfxaA").style.height=document.getElementById("mmedia-JdaLYKxlPLPBfxaA").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-PuhjIiZBElmzxQNg" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-PuhjIiZBElmzxQNg").style.height=document.getElementById("mmedia-PuhjIiZBElmzxQNg").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-JdaLYKxlPLPBfxaA").style.height=document.getElementById("mmedia-JdaLYKxlPLPBfxaA").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-PuhjIiZBElmzxQNg").style.height=document.getElementById("mmedia-PuhjIiZBElmzxQNg").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -6585,7 +6632,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-iksaBLpVTAtlvuRJ"></div><script> var iksaBLpVTAtlvuRJ_options = JSON.parse('{\"id\":\"mmedia-iksaBLpVTAtlvuRJ\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(iksaBLpVTAtlvuRJ_options); </script>
+<div id="mmedia-TMYOMoeiCXjIgcrh"></div><script> var TMYOMoeiCXjIgcrh_options = JSON.parse('{\"id\":\"mmedia-TMYOMoeiCXjIgcrh\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(TMYOMoeiCXjIgcrh_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6689,7 +6736,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#x69;&#x73;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x69;&#x6d;&#x2e;&#109;&#x69;&#x73;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -7029,6 +7076,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a><center>2023</center></h1><div class="hang-retract">
 
+<p>2024-03-14：更新Github action的依赖：checkout从v3升级至v4；setup-node从v3升级至v4；node-version从18修改为20；cache从v3升级至v4。</p>
 <p>2023-12-27：hexo-theme-next从v8.19.0升级至v8.19.1。</p>
 <p>2023-12-03：hexo-theme-next从v8.18.2升级至v8.19.0；hexo-renderer-marked从v6.1.1升级至v6.2.0；本地开发环境：Node.js从v20.4.0升级至v21.3.0。</p>
 <p>2023-11-02：hexo从v6.3.0升级至v7.0.0。</p>

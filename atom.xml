@@ -128,16 +128,16 @@
     <link href="https://mister-kin.github.io/code-training/qt6-cpp-development-guide/chap2/"/>
     <id>https://mister-kin.github.io/code-training/qt6-cpp-development-guide/chap2/</id>
     <published>2023-10-14T19:46:15.000Z</published>
-    <updated>2024-03-09T21:19:36.000Z</updated>
+    <updated>2024-03-14T12:07:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第二章：GUI程序设计基踹">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基踹" class="headerlink" title="第二章：GUI程序设计基踹"></a>第二章：GUI程序设计基踹</h1><p>项目目录文件结构：</p><ul><li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li><li>main.cpp：主程序入口文件，实现main函数</li><li>widget.ui：使用XML格式描述元件及布局的界面文件</li><li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li><li>widget.cpp：是实现文件</li><li>res.qrc：资源文件</li></ul><p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure><p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p><ul><li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li><li>main.cpp：主程序入口文件，实现main函数</li><li>widget.ui：使用XML格式描述元件及布局的界面文件</li><li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li><li>widget.cpp：是实现文件</li><li>res.qrc：资源文件</li></ul><p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure><p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;第二章：GUI程序设计基踹&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#第二章：GUI程序设计基踹&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;第二章：GUI程序设计基础&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#第二章：GUI程序设计基础&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -163,9 +163,9 @@
     <link href="https://mister-kin.github.io/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/"/>
     <id>https://mister-kin.github.io/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</id>
     <published>2023-10-14T19:31:49.000Z</published>
-    <updated>2023-10-14T19:43:38.000Z</updated>
+    <updated>2024-03-14T12:07:01.000Z</updated>
     
-    <content type="html"><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p><p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p><ul><li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p><p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p><ul><li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li><li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li></ul>]]></content>
     
     
       
