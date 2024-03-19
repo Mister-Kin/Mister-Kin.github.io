@@ -24,7 +24,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="第三方站点导航推荐">2 &nbsp&nbsp<a href="#第三方站点导航推荐" class="headerlink" title="第三方站点导航推荐"></a>第三方站点导航推荐</h1><ul>
+<h1 id="搜索查询">2 &nbsp&nbsp<a href="#搜索查询" class="headerlink" title="搜索查询"></a>搜索查询</h1><h2 id="以图搜图">2.1 &nbsp&nbsp<a href="#以图搜图" class="headerlink" title="以图搜图"></a>以图搜图</h2><ul>
+<li><a href="https://yandex.com/images/">yandex</a></li>
+</ul>
+<h1 id="第三方站点导航推荐">3 &nbsp&nbsp<a href="#第三方站点导航推荐" class="headerlink" title="第三方站点导航推荐"></a>第三方站点导航推荐</h1><ul>
 <li><a href="https://arandintday.github.io/2020/02/28/goodwebsite/">个人收藏的良心网站（持续更新）</a></li>
 </ul>
 ]]></content>
@@ -3564,8 +3567,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">1.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>账户锁定方案2：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#x6d;">&#110;&#111;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#x6d;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
-<li>账户锁定方案2：输入<a href="mailto:&#x31;&#x40;&#x31;&#x2e;&#99;&#111;&#x6d;">&#x31;&#x40;&#x31;&#x2e;&#99;&#111;&#x6d;</a>，密码随便。</li>
+<li>账户锁定方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#109;">&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#109;</a> 触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。</li>
+<li>账户锁定方案2：输入<a href="mailto:&#49;&#64;&#49;&#46;&#x63;&#x6f;&#x6d;">&#49;&#64;&#49;&#46;&#x63;&#x6f;&#x6d;</a>，密码随便。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">1.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="系统启动项">2 &nbsp&nbsp<a href="#系统启动项" class="headerlink" title="系统启动项"></a>系统启动项</h1><h2 id="Windows-Boot-Manager启动失败，硬盘Disk-0启动成功">2.1 &nbsp&nbsp<a href="#Windows-Boot-Manager启动失败，硬盘Disk-0启动成功" class="headerlink" title="Windows Boot Manager启动失败，硬盘Disk 0启动成功"></a>Windows Boot Manager启动失败，硬盘Disk 0启动成功</h2><p>故障原因：在操作重装uEFI系统之后，BCD（引导配置数据）条目未正确修改引起的故障。比如，重装系统之后，Windows Boot Manager中的&quot;device&quot;相关参数被删除，因此无法正确启动。</p>
@@ -3689,22 +3692,36 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <img data-src="/images/windows10-troubleshooting/setting-language-welcom-screen.webp">欢迎屏幕设置</div>
 </div>
 
-<h1 id="蓝屏">10 &nbsp&nbsp<a href="#蓝屏" class="headerlink" title="蓝屏"></a>蓝屏</h1><h2 id="蓝屏代码">10.1 &nbsp&nbsp<a href="#蓝屏代码" class="headerlink" title="蓝屏代码"></a>蓝屏代码</h2><p>代码相关链接帖子：</p>
+<h1 id="蓝屏（BSOD）">10 &nbsp&nbsp<a href="#蓝屏（BSOD）" class="headerlink" title="蓝屏（BSOD）"></a>蓝屏（BSOD）</h1><p>内存转储文件存储路径：</p>
 <ul>
+<li>小型内存转储文件：<code>%SystemRoot%\Minidump\</code></li>
+<li>完整内存转储文件：<code>%SystemRoot%\Memory.dmp</code></li>
+</ul>
+<p>关于蓝屏内存转储文件的分析：WinDbg（微软商店搜索安装），文件-&gt;Open dump file-&gt;加载dmp文件，相关命令分析如下：</p>
+<ul>
+<li><code>!analyze -v</code>：立即查看是哪个程序搞的死机&#x2F;蓝屏&#x2F;重启（打开dmp文件就可以看到这个标蓝的命令，双击即可执行）</li>
+<li><code>!process 0 0</code>：列出系统内的所有进程</li>
+<li><a href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/analyzing-a-kernel-mode-dump-file-with-windbg">其他调试命令</a></li>
+</ul>
+<h2 id="蓝屏代码">10.1 &nbsp&nbsp<a href="#蓝屏代码" class="headerlink" title="蓝屏代码"></a>蓝屏代码</h2><p>代码相关链接帖子：</p>
+<ul>
+<li><a href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/bug-check-code-reference2">错误检查代码参考（微软官网文档）</a></li>
 <li><a href="https://www.cnblogs.com/zhaijiahui/p/10184146.html">win10蓝屏的一些解决办法</a></li>
 <li><a href="https://www.chinafix.com/thread-1345259-1-1.html">[系统故障] Windows蓝屏代码及解决方案最全合集</a></li>
 </ul>
 <h2 id="蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败">10.2 &nbsp&nbsp<a href="#蓝屏重启：为设备-ROOT-DISPLAY-0000-加载驱动程序-Driver-WudfRd-失败" class="headerlink" title="蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败"></a>蓝屏重启：为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败</h2><p>查看：事件管理器-&gt;Windows日志-&gt;系统</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">警告	2023/10/13 22:24:23	Kernel-PnP	219	(212)</span><br><span class="line">为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WudfRd 失败。</span><br><span class="line"></span><br><span class="line">关键	2023/10/13 22:24:23	Kernel-Power	41	(63)</span><br><span class="line">系统已在未先正常关机的情况下重新启动。如果系统停止响应、发生崩溃或意外断电，则可能会导致此错误。</span><br></pre></td></tr></table></figure>
 
-<p>原因：向日葵远程控制软件引起的故障。经过设备管理器查看向日葵模拟的显卡设备，是会调用Driver\WUDFRd（Windows 用户模式驱动程序框架）。</p>
+<p>原因：向日葵远程控制软件引起的故障。经过设备管理器查看向日葵模拟的显卡设备，是会调用Driver\WUDFRd（Windows 用户模式驱动程序框架）。从相关帖子反馈得知，AMD CPU的机器会出现蓝屏重启问题，Intel CPU机器则只会出现报错，但不会重启。</p>
 <p>疑似相关帖子：</p>
 <ul>
 <li><a href="https://www.zhihu.com/question/456561684">为设备加载驱动程序 \Driver\WudfRd 失败，怎么解决？</a></li>
 <li><a href="https://blog.csdn.net/wnk1997/article/details/132630745">电脑莫名其妙重启 为设备 ROOT\DISPLAY\0000 加载驱动程序 \Driver\WUDFRd 失败</a></li>
 <li><a href="https://tieba.baidu.com/p/8467586463#147882518791l">官方进来看下，我每次异常重启的原因找到了！！！！</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/667269889">最近电脑频繁蓝屏的解决方法-2023&#x2F;11&#x2F;16</a></li>
 </ul>
 <p><a href="https://www.cuanjibang.com/dngz/45261.html">可能的解决方法</a>：设置-&gt;安全-&gt;关闭「启用黑屏」。</p>
+<p>P.S. 向日葵还可能导致调用显卡设备异常，例如三维软件无法显示模型或者3d mark测试一直报错。详见<a href="https://www.bilibili.com/read/cv24627629/">关于（贝锐）向日葵远程可能导致显卡驱动失效的解决方案</a>。</p>
 <h1 id="显卡">11 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="任务管理器检测不到cuda引擎">11.1 &nbsp&nbsp<a href="#任务管理器检测不到cuda引擎" class="headerlink" title="任务管理器检测不到cuda引擎"></a>任务管理器检测不到cuda引擎</h2><p>若Windows10和Windows11中的任务管理器均检测不到cuda引擎（系统实际也是从Direct 3D接口读取），则是因为系统开启「硬件加速GPU计划」功能。</p>
 <p>解决方法：系统设置-&gt;系统-&gt;屏幕-&gt;图形设置-&gt;关闭「硬件加速GPU计划」。Windows11默认开启这个功能，Windows10默认禁用该功能。</p>
 <h1 id="屏幕">12 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><h2 id="多屏扩展模式的界面显示">12.1 &nbsp&nbsp<a href="#多屏扩展模式的界面显示" class="headerlink" title="多屏扩展模式的界面显示"></a>多屏扩展模式的界面显示</h2><p>通常所有的软件都是默认在主屏的界面打开，但在调整屏幕主次的之前，还有一个规则是优先出现在上一次显示的屏幕中。一般的调整方法如下：</p>
@@ -6520,9 +6537,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-XHWsesxipuBdxgSI" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-XHWsesxipuBdxgSI").style.height=document.getElementById("mmedia-XHWsesxipuBdxgSI").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-cOjTdtqiDwUXXeJn" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-cOjTdtqiDwUXXeJn").style.height=document.getElementById("mmedia-cOjTdtqiDwUXXeJn").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-XHWsesxipuBdxgSI").style.height=document.getElementById("mmedia-XHWsesxipuBdxgSI").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-cOjTdtqiDwUXXeJn").style.height=document.getElementById("mmedia-cOjTdtqiDwUXXeJn").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -6645,7 +6662,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-zHmgMvVCfCliNYtq"></div><script> var zHmgMvVCfCliNYtq_options = JSON.parse('{\"id\":\"mmedia-zHmgMvVCfCliNYtq\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(zHmgMvVCfCliNYtq_options); </script>
+<div id="mmedia-GipXulRlvVCCywMI"></div><script> var GipXulRlvVCCywMI_options = JSON.parse('{\"id\":\"mmedia-GipXulRlvVCCywMI\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(GipXulRlvVCCywMI_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6749,7 +6766,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#109;&#105;&#115;&#116;&#101;&#114;&#107;&#105;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#x69;&#x6d;&#46;&#109;&#105;&#115;&#116;&#101;&#114;&#107;&#105;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#x69;&#x73;&#x74;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#105;&#109;&#x2e;&#109;&#x69;&#x73;&#x74;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
