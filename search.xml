@@ -2955,11 +2955,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <url>/troubleshooting/hardware-troubleshooting/</url>
     <content><![CDATA[<h1 id="不开机">1 &nbsp&nbsp<a href="#不开机" class="headerlink" title="不开机"></a>不开机</h1><h2 id="内存接触不良导致自启后直接掉电">1.1 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，重新拔插（擦拭金手指）</p>
 <h1 id="CPU">2 &nbsp&nbsp<a href="#CPU" class="headerlink" title="CPU"></a>CPU</h1><h1 id="ZEN3的whea18错误">3 &nbsp&nbsp<a href="#ZEN3的whea18错误" class="headerlink" title="ZEN3的whea18错误"></a>ZEN3的whea18错误</h1><p>系列通病，也看批次，若测试频繁复现whea18，建议走售后换新。</p>
-<h1 id="内存">4 &nbsp&nbsp<a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="关于内存的术语">4.1 &nbsp&nbsp<a href="#关于内存的术语" class="headerlink" title="关于内存的术语"></a>关于内存的术语</h2><p>1DPC的意思是，每个通道1根内存<br>2DPC的意思是，每个通道2根内存<br>1R的意思是，单面颗粒内存<br>2R的意思是，双面颗粒内存</p>
-<h2 id="内存超频">4.2 &nbsp&nbsp<a href="#内存超频" class="headerlink" title="内存超频"></a>内存超频</h2><p><a href="https://zhuanlan.zhihu.com/p/77104030">原来内存超频这么简单——intel平台DDR4内存超频教程</a></p>
-<h1 id="主板">5 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">5.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
-<h1 id="华硕奥创">6 &nbsp&nbsp<a href="#华硕奥创" class="headerlink" title="华硕奥创"></a>华硕奥创</h1><p>关于系统残存的奥创配置影响吹雪主板的灯光闪烁，使用新系统的奥创配置先设置无灯光初始化硬件参数。</p>
-<h2 id="完整清除奥创的步骤">6.1 &nbsp&nbsp<a href="#完整清除奥创的步骤" class="headerlink" title="完整清除奥创的步骤"></a>完整清除奥创的步骤</h2><ol>
+<h1 id="Intel-13-14代高端U的缺陷">4 &nbsp&nbsp<a href="#Intel-13-14代高端U的缺陷" class="headerlink" title="Intel 13&#x2F;14代高端U的缺陷"></a>Intel 13&#x2F;14代高端U的缺陷</h1><p>详见<a href="https://www.chiphell.com/thread-2585702-1-1.html">[CPU] 英特尔第 13&#x2F;14 代处理器设备运行虚幻引擎游戏崩溃？原因找到了</a></p>
+<p>原因：RAD 公司隶属于 Epic Games 公司，负责开发 Bink 视频编解码器和 Oodle 数据压缩技术。RAD 公司表示，导致游戏崩溃的原因并非 Oodle 或 Unreal，而是过于乐观的 BIOS 设置，导致一小部分处理器在高负载情况下超出预设的时钟频率和功耗上限，并错误地执行指令。</p>
+<p>解决方法：需要锁倍频到54x或者53x。</p>
+<h1 id="内存">5 &nbsp&nbsp<a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="关于内存的术语">5.1 &nbsp&nbsp<a href="#关于内存的术语" class="headerlink" title="关于内存的术语"></a>关于内存的术语</h2><p>1DPC的意思是，每个通道1根内存<br>2DPC的意思是，每个通道2根内存<br>1R的意思是，单面颗粒内存<br>2R的意思是，双面颗粒内存</p>
+<h2 id="内存超频">5.2 &nbsp&nbsp<a href="#内存超频" class="headerlink" title="内存超频"></a>内存超频</h2><p><a href="https://zhuanlan.zhihu.com/p/77104030">原来内存超频这么简单——intel平台DDR4内存超频教程</a></p>
+<h1 id="主板">6 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">6.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
+<h1 id="华硕奥创">7 &nbsp&nbsp<a href="#华硕奥创" class="headerlink" title="华硕奥创"></a>华硕奥创</h1><p>关于系统残存的奥创配置影响吹雪主板的灯光闪烁，使用新系统的奥创配置先设置无灯光初始化硬件参数。</p>
+<h2 id="完整清除奥创的步骤">7.1 &nbsp&nbsp<a href="#完整清除奥创的步骤" class="headerlink" title="完整清除奥创的步骤"></a>完整清除奥创的步骤</h2><ol>
 <li>使用<a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/14Utilities/Armoury_Crate_Uninstall_Tool.zip?model=Armoury%20Crate">奥创官方卸载工具</a>执行卸载操作。</li>
 <li>手动移除奥创残留的服务进程和残留文件夹。</li>
 <li><code>regedit</code>打开注册表：搜索「Asus」（注意选择全字匹配），删除搜索到的结果项目。（BIOS选项底下和硬件底下都不用删除）</li>
@@ -2970,10 +2973,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>离线包安装没有主板选项可勾选（奥创扫描硬件信息并在注册表中保存，如果没清除干净，奥创安装会校验已有信息，认为之前已经安装过的）</li>
 <li>各种离奇的安装报错</li>
 </ul>
-<h2 id="无法识别内存组件">6.2 &nbsp&nbsp<a href="#无法识别内存组件" class="headerlink" title="无法识别内存组件"></a>无法识别内存组件</h2><p>安装其他的内存灯控软件，比如芝奇灯控Trident Z Lighting Control。设置开机自启，然后奥创就可以识别。</p>
-<h2 id="无法识别正确的主板型号">6.3 &nbsp&nbsp<a href="#无法识别正确的主板型号" class="headerlink" title="无法识别正确的主板型号"></a>无法识别正确的主板型号</h2><p>故障原因：使用改机器码的工具修改了主板名称，比如AMIBIOS DMI EDITOR。</p>
+<h2 id="无法识别内存组件">7.2 &nbsp&nbsp<a href="#无法识别内存组件" class="headerlink" title="无法识别内存组件"></a>无法识别内存组件</h2><p>安装其他的内存灯控软件，比如芝奇灯控Trident Z Lighting Control。设置开机自启，然后奥创就可以识别。</p>
+<h2 id="无法识别正确的主板型号">7.3 &nbsp&nbsp<a href="#无法识别正确的主板型号" class="headerlink" title="无法识别正确的主板型号"></a>无法识别正确的主板型号</h2><p>故障原因：使用改机器码的工具修改了主板名称，比如AMIBIOS DMI EDITOR。</p>
 <p>解决方法：使用工具改回原来的值。</p>
-<h2 id="奥创同步海盗船内存灯光">6.4 &nbsp&nbsp<a href="#奥创同步海盗船内存灯光" class="headerlink" title="奥创同步海盗船内存灯光"></a>奥创同步海盗船内存灯光</h2><ol>
+<h2 id="奥创同步海盗船内存灯光">7.4 &nbsp&nbsp<a href="#奥创同步海盗船内存灯光" class="headerlink" title="奥创同步海盗船内存灯光"></a>奥创同步海盗船内存灯光</h2><ol>
 <li>BIOS设置关闭SPD保护<ul>
 <li>BIOS高级模式（F7切换模式）-&gt;AI Tweaker&#x2F;Extreme Tweaker-&gt;Tweaker&#39;s Paradise-&gt;SPD Write Disable-&gt;FALSE</li>
 </ul>
@@ -2983,9 +2986,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>安装iCue本体</li>
 <li>安装奥创本体</li>
 </ol>
-<h1 id="显卡">7 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="专业检测工具-MASTS">7.1 &nbsp&nbsp<a href="#专业检测工具-MASTS" class="headerlink" title="专业检测工具-MASTS"></a>专业检测工具-MASTS</h2><p>工具官方论坛链接：<a href="https://vlab.su/viewtopic.php?t=124090">MATS&#x2F;MODS 400&#x2F;455&#x2F;520 Тест видеопамяти nVidia для флешки</a></p>
+<h1 id="显卡">8 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="专业检测工具-MASTS">8.1 &nbsp&nbsp<a href="#专业检测工具-MASTS" class="headerlink" title="专业检测工具-MASTS"></a>专业检测工具-MASTS</h2><p>工具官方论坛链接：<a href="https://vlab.su/viewtopic.php?t=124090">MATS&#x2F;MODS 400&#x2F;455&#x2F;520 Тест видеопамяти nVidia для флешки</a></p>
 <p>直接下载最新的ISO镜像，用<a href="https://rufus.ie/zh/">Rufus</a>直接写入U盘即可。</p>
-<h1 id="无线网卡">8 &nbsp&nbsp<a href="#无线网卡" class="headerlink" title="无线网卡"></a>无线网卡</h1><h2 id="2-4GHz无线设备的频率干扰问题">8.1 &nbsp&nbsp<a href="#2-4GHz无线设备的频率干扰问题" class="headerlink" title="2.4GHz无线设备的频率干扰问题"></a>2.4GHz无线设备的频率干扰问题</h2><p>具体故障表现：无线鼠标会有停顿感，或是无线键盘输入的速度变慢或无反应，甚至是无线传输的距离缩短。</p>
+<h1 id="无线网卡">9 &nbsp&nbsp<a href="#无线网卡" class="headerlink" title="无线网卡"></a>无线网卡</h1><h2 id="2-4GHz无线设备的频率干扰问题">9.1 &nbsp&nbsp<a href="#2-4GHz无线设备的频率干扰问题" class="headerlink" title="2.4GHz无线设备的频率干扰问题"></a>2.4GHz无线设备的频率干扰问题</h2><p>具体故障表现：无线鼠标会有停顿感，或是无线键盘输入的速度变慢或无反应，甚至是无线传输的距离缩短。</p>
 <p>可能存在的干扰源：</p>
 <ul>
 <li>主板附件的USB3.0设备（参阅<a href="https://rog.asus.com.cn/support/faq/1004004/">同时使用USB3.0和2.4GHz的USB无线设备可能会发生频率干扰的问题</a>和<a href="https://blog.csdn.net/civilman/article/details/52929755">USB 3.0 对无线鼠标的干扰问题</a>）<ul>
@@ -2998,7 +3001,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 </ul>
 <p>小记：在无线信号覆盖范围内的各种无线网络设备应该尽量使用不同的信道，以避免信号之间的干扰。</p>
-<h1 id="有线网卡">9 &nbsp&nbsp<a href="#有线网卡" class="headerlink" title="有线网卡"></a>有线网卡</h1><h2 id="常规网卡设置">9.1 &nbsp&nbsp<a href="#常规网卡设置" class="headerlink" title="常规网卡设置"></a>常规网卡设置</h2><table>
+<h1 id="有线网卡">10 &nbsp&nbsp<a href="#有线网卡" class="headerlink" title="有线网卡"></a>有线网卡</h1><h2 id="常规网卡设置">10.1 &nbsp&nbsp<a href="#常规网卡设置" class="headerlink" title="常规网卡设置"></a>常规网卡设置</h2><table>
 <thead>
 <tr>
 <th>网卡品牌</th>
@@ -3183,35 +3186,35 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </tr>
 </tbody></table>
 <p><em>Marvell网卡关闭中断模式后可能会出现客户机开机后出现白色箭头。但是由于每款主板或驱动可能会有细微差别，因此对于中断模式方面设置，建议保持默认。如果出现问题了，可以首先对该选项进行调整，例如关闭或开启。</em></p>
-<h1 id="电源">10 &nbsp&nbsp<a href="#电源" class="headerlink" title="电源"></a>电源</h1><h2 id="PC电源的保持时间">10.1 &nbsp&nbsp<a href="#PC电源的保持时间" class="headerlink" title="PC电源的保持时间"></a>PC电源的保持时间</h2><ul>
+<h1 id="电源">11 &nbsp&nbsp<a href="#电源" class="headerlink" title="电源"></a>电源</h1><h2 id="PC电源的保持时间">11.1 &nbsp&nbsp<a href="#PC电源的保持时间" class="headerlink" title="PC电源的保持时间"></a>PC电源的保持时间</h2><ul>
 <li>英特尔制定的ATX 12V规范，其要求PC电源在100%负载的情况下，各路输出保持时间不低于16毫秒</li>
 <li>SSI EPS12V 2.92服务器电源设计指导，其要求电源在75%的负载下各路输出的保持时间应该大于18毫秒，而Power-OK信号的保持时间则是大于17毫秒。</li>
 </ul>
-<h2 id="异常断电的硬盘断电保护措施">10.2 &nbsp&nbsp<a href="#异常断电的硬盘断电保护措施" class="headerlink" title="异常断电的硬盘断电保护措施"></a>异常断电的硬盘断电保护措施</h2><p>一般硬盘的断电保护通常是企业级的专利，部分消费级硬盘也具备断电保护，但只具备基本的保护功能，无法保护内存中的用户数据。</p>
+<h2 id="异常断电的硬盘断电保护措施">11.2 &nbsp&nbsp<a href="#异常断电的硬盘断电保护措施" class="headerlink" title="异常断电的硬盘断电保护措施"></a>异常断电的硬盘断电保护措施</h2><p>一般硬盘的断电保护通常是企业级的专利，部分消费级硬盘也具备断电保护，但只具备基本的保护功能，无法保护内存中的用户数据。</p>
 <p>PC电源的保持时间只是提供一个缓冲的时间告诉各个硬件要断电了，具体的断电保护措施还是需要看硬件自身的设计。</p>
-<h2 id="关于线材的拔插寿命">10.3 &nbsp&nbsp<a href="#关于线材的拔插寿命" class="headerlink" title="关于线材的拔插寿命"></a>关于线材的拔插寿命</h2><p>线材协议的制定者是PCI-SIG联盟，其相关测试寿命是在30次左右。其实8pin寿命也只有30次的，超过只是达不到初始稳定性，PCI SIG测试报告拔插超过40次可能就有风险。</p>
-<h1 id="屏幕">11 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
+<h2 id="关于线材的拔插寿命">11.3 &nbsp&nbsp<a href="#关于线材的拔插寿命" class="headerlink" title="关于线材的拔插寿命"></a>关于线材的拔插寿命</h2><p>线材协议的制定者是PCI-SIG联盟，其相关测试寿命是在30次左右。其实8pin寿命也只有30次的，超过只是达不到初始稳定性，PCI SIG测试报告拔插超过40次可能就有风险。</p>
+<h1 id="屏幕">12 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
 <p>屏幕的常见故障：</p>
 <ul>
 <li>竖线：一般是脱焊。</li>
 <li>束带：坏cof，压屏更换。</li>
 </ul>
-<h2 id="AC97与HD-Audio前置音频连接针脚定义">11.1 &nbsp&nbsp<a href="#AC97与HD-Audio前置音频连接针脚定义" class="headerlink" title="AC97与HD-Audio前置音频连接针脚定义"></a>AC97与HD-Audio前置音频连接针脚定义</h2><p><a href="https://www.docin.com/p-2418893040.html">https://www.docin.com/p-2418893040.html</a></p>
-<h1 id="硬盘">12 &nbsp&nbsp<a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h1><h2 id="测试工具">12.1 &nbsp&nbsp<a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h2><p>固态：</p>
+<h2 id="AC97与HD-Audio前置音频连接针脚定义">12.1 &nbsp&nbsp<a href="#AC97与HD-Audio前置音频连接针脚定义" class="headerlink" title="AC97与HD-Audio前置音频连接针脚定义"></a>AC97与HD-Audio前置音频连接针脚定义</h2><p><a href="https://www.docin.com/p-2418893040.html">https://www.docin.com/p-2418893040.html</a></p>
+<h1 id="硬盘">13 &nbsp&nbsp<a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h1><h2 id="测试工具">13.1 &nbsp&nbsp<a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h2><p>固态：</p>
 <ul>
 <li><a href="https://crystalmark.info/en/software/crystaldiskinfo/">CrystalDiskInfo</a>和<a href="https://crystalmark.info/en/software/crystaldiskmark/">CrystalDiskMark</a></li>
 <li><a href="https://www.alex-is.de/PHP/fusion/infusions/downloads/downloads.php">AS SSD Benchmark</a></li>
 <li>三星固态：<a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">三星魔术师软件（Magician）</a></li>
 <li>系统自带工具winsat：测试C盘：<code>winsat disk -drive C</code>。WinSAT 工具运行整体系统测试命令：<code>winsat formal -v</code>。</li>
 </ul>
-<h2 id="固件更新：">12.2 &nbsp&nbsp<a href="#固件更新：" class="headerlink" title="固件更新："></a>固件更新：</h2><ul>
+<h2 id="固件更新：">13.2 &nbsp&nbsp<a href="#固件更新：" class="headerlink" title="固件更新："></a>固件更新：</h2><ul>
 <li>三星固态<ul>
 <li><a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">三星魔术师</a></li>
 <li>U盘方案：<a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">下载ISO固件</a>，使用ventoy加载镜像。</li>
 </ul>
 </li>
 </ul>
-<h2 id="无分区直接使用硬盘">12.3 &nbsp&nbsp<a href="#无分区直接使用硬盘" class="headerlink" title="无分区直接使用硬盘"></a>无分区直接使用硬盘</h2><ul>
+<h2 id="无分区直接使用硬盘">13.3 &nbsp&nbsp<a href="#无分区直接使用硬盘" class="headerlink" title="无分区直接使用硬盘"></a>无分区直接使用硬盘</h2><ul>
 <li>windows10&#x2F;11：无法实现。</li>
 <li>linux：直接mkfs使用就是无分区格式化，并且常见win pe内部工具均无法识别这种形式的数据，会被认为无数据盘。</li>
 </ul>
@@ -3225,14 +3228,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>HDD - Hard Disk Drive，硬盘驱动器</li>
 <li>FDD - Floppy Disk Drive，软盘驱动器（软盘的0扇区就是PBR）</li>
 </ul>
-<h2 id="数据恢复">12.4 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000</p>
+<h2 id="数据恢复">13.4 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000</p>
 <ul>
 <li>机械盘：删除后无写入操作大多可正常恢复。</li>
 <li>ssd：因为存在trim机制。基本很难恢复。SSD TRIM一个过程，有助于随着时间的推移继续保持固态硬盘的性能。Trim的工作原理是定期擦除不再使用的数据块。标记TRIM后的数据并不总是直接删除，因为需要一个复杂的过程来确定何时删除（由硬盘GC机制控制）。而定期trim，不仅可以释放硬盘空间，还可以帮助SSD性能更好，寿命更长（固态的设计结构所致）。</li>
 </ul>
-<h1 id="打印机">13 &nbsp&nbsp<a href="#打印机" class="headerlink" title="打印机"></a>打印机</h1><h2 id="安装打印机驱动">13.1 &nbsp&nbsp<a href="#安装打印机驱动" class="headerlink" title="安装打印机驱动"></a>安装打印机驱动</h2><p>部分hp高端型号，比如打印机扫描机一体的大型机，安装驱动时，可以直接点击设置主页-&gt;设备-&gt;打印机和扫描机-&gt;添加打印机或者扫描机（windows会自动安装驱动，包括扫描机驱动）</p>
-<h1 id="其它类别">14 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">14.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
-<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.<br>[4] zen3的whea18错误个人见解[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/7213032582#/">https://tieba.baidu.com/p/7213032582#/</a>.<br>[5] 网卡参数设置建议与各个网卡参数含义详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/Windgs_YF/article/details/104893741">https://blog.csdn.net/Windgs_YF/article/details/104893741</a>.<br>[6] 无需三方工具，Windows 命令行轻松实现 SSD 测速[EB&#x2F;OL]. <a href="https://www.sysgeek.cn/windows-ssd-speed-test/">https://www.sysgeek.cn/windows-ssd-speed-test/</a>.<br>[7] 硬盘不分区，直接格式化，硬盘第一个扇区里面会变成什么样子？还存在分区表吗？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/531775025">https://www.zhihu.com/question/531775025</a>.<br>[8] [显卡] ATX3.0 16pin的供电线插拔寿命真的只有30次吗？[EB&#x2F;OL]. <a href="https://www.chiphell.com/thread-2453340-1-1.html">https://www.chiphell.com/thread-2453340-1-1.html</a>.<br>[9] 微星Z490-A PRO每个内存槽支持不同最高频率的疑惑. <a href="https://nga.178.com/read.php?tid=22378405&rand=676">https://nga.178.com/read.php?tid=22378405&amp;rand=676</a>.<br>[10] 华硕奥创软件重新安装无法识别主板问题解决.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/672994457">https://zhuanlan.zhihu.com/p/672994457</a>.<br>[11] 华硕奥创中心无法识别主板问题.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/576492004">https://zhuanlan.zhihu.com/p/576492004</a>.</p>
+<h1 id="打印机">14 &nbsp&nbsp<a href="#打印机" class="headerlink" title="打印机"></a>打印机</h1><h2 id="安装打印机驱动">14.1 &nbsp&nbsp<a href="#安装打印机驱动" class="headerlink" title="安装打印机驱动"></a>安装打印机驱动</h2><p>部分hp高端型号，比如打印机扫描机一体的大型机，安装驱动时，可以直接点击设置主页-&gt;设备-&gt;打印机和扫描机-&gt;添加打印机或者扫描机（windows会自动安装驱动，包括扫描机驱动）</p>
+<h1 id="其它类别">15 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">15.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.<br>[4] zen3的whea18错误个人见解[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/7213032582#/">https://tieba.baidu.com/p/7213032582#/</a>.<br>[5] 网卡参数设置建议与各个网卡参数含义详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/Windgs_YF/article/details/104893741">https://blog.csdn.net/Windgs_YF/article/details/104893741</a>.<br>[6] 无需三方工具，Windows 命令行轻松实现 SSD 测速[EB&#x2F;OL]. <a href="https://www.sysgeek.cn/windows-ssd-speed-test/">https://www.sysgeek.cn/windows-ssd-speed-test/</a>.<br>[7] 硬盘不分区，直接格式化，硬盘第一个扇区里面会变成什么样子？还存在分区表吗？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/531775025">https://www.zhihu.com/question/531775025</a>.<br>[8] [显卡] ATX3.0 16pin的供电线插拔寿命真的只有30次吗？[EB&#x2F;OL]. <a href="https://www.chiphell.com/thread-2453340-1-1.html">https://www.chiphell.com/thread-2453340-1-1.html</a>.<br>[9] 微星Z490-A PRO每个内存槽支持不同最高频率的疑惑. <a href="https://nga.178.com/read.php?tid=22378405&rand=676">https://nga.178.com/read.php?tid=22378405&amp;rand=676</a>.<br>[10] 华硕奥创软件重新安装无法识别主板问题解决.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/672994457">https://zhuanlan.zhihu.com/p/672994457</a>.<br>[11] 华硕奥创中心无法识别主板问题.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/576492004">https://zhuanlan.zhihu.com/p/576492004</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -3526,7 +3529,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><code>start explorer.exe</code></li>
 </ol>
 <p>事件来龙去脉分析：<a href="https://www.zhihu.com/question/642107690">https://www.zhihu.com/question/642107690</a></p>
-<h1 id="剪辑软件">5 &nbsp&nbsp<a href="#剪辑软件" class="headerlink" title="剪辑软件"></a>剪辑软件</h1><h2 id="剪映">5.1 &nbsp&nbsp<a href="#剪映" class="headerlink" title="剪映"></a>剪映</h2><h3 id="剪映电脑版（PC版）没有设置背景的选项？">5.1.1 &nbsp&nbsp<a href="#剪映电脑版（PC版）没有设置背景的选项？" class="headerlink" title="剪映电脑版（PC版）没有设置背景的选项？"></a>剪映电脑版（PC版）没有设置背景的选项？</h3><p>给视频加背景，需要将视频放入序列主轴上，才会出现背景选项。</p>
+<h1 id="剪映">5 &nbsp&nbsp<a href="#剪映" class="headerlink" title="剪映"></a>剪映</h1><h2 id="剪映电脑版（PC版）没有设置背景的选项？">5.1 &nbsp&nbsp<a href="#剪映电脑版（PC版）没有设置背景的选项？" class="headerlink" title="剪映电脑版（PC版）没有设置背景的选项？"></a>剪映电脑版（PC版）没有设置背景的选项？</h2><p>给视频加背景，需要将视频放入序列主轴上，才会出现背景选项。</p>
 <p>背景设置有4种方式：</p>
 <ol>
 <li>模糊：常见于画面无法填充满画布时，用来创建模糊背景填充空白地方。</li>
@@ -3543,7 +3546,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p>以往一种植入假体的解决方法：在系统盘的system32&#x2F;drivers文件夹下建立一个只读的假体，分别是ACE-BASE.sys和ACE-GAME.sys两个文件，设置只读，并禁用掉Administrator的继承权。该法实测无效，估计应该是作为bug很早就被修复过了，问题可能是这儿的。</p>
 <h2 id="关于腾讯机器码">6.2 &nbsp&nbsp<a href="#关于腾讯机器码" class="headerlink" title="关于腾讯机器码"></a>关于腾讯机器码</h2><p>参考文章：<a href="https://tieba.baidu.com/p/7808678958">https://tieba.baidu.com/p/7808678958</a></p>
-<h1 id="浏览器">7 &nbsp&nbsp<a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="视频网站产生大量的indexeddb-blob本地缓存">7.1 &nbsp&nbsp<a href="#视频网站产生大量的indexeddb-blob本地缓存" class="headerlink" title="视频网站产生大量的indexeddb.blob本地缓存"></a>视频网站产生大量的indexeddb.blob本地缓存</h2><p>故障表现：C盘中出现大量的indexeddb.blob本地缓存文件，急剧占用C盘系统盘空间。</p>
+<h1 id="Steam">7 &nbsp&nbsp<a href="#Steam" class="headerlink" title="Steam"></a>Steam</h1><h2 id="找回原有的steam安装的游戏（无需重新安装）">7.1 &nbsp&nbsp<a href="#找回原有的steam安装的游戏（无需重新安装）" class="headerlink" title="找回原有的steam安装的游戏（无需重新安装）"></a>找回原有的steam安装的游戏（无需重新安装）</h2><p>steam客户端-&gt;设置-&gt;存储空间-&gt;添加驱动器（点击盘符即可出现下拉选项弹窗）-&gt;添加新的Steam库文件夹（点击盘符即可出现下拉选项弹窗）</p>
+<p>P.S. 此法也可以定位到旧硬盘上的主steam程序本体路径下安装的游戏（非那种Steamlibrary目录），如果游戏较多较大，扫描时间会有点久，让它后台自行扫描。</p>
+<h1 id="浏览器">8 &nbsp&nbsp<a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="视频网站产生大量的indexeddb-blob本地缓存">8.1 &nbsp&nbsp<a href="#视频网站产生大量的indexeddb-blob本地缓存" class="headerlink" title="视频网站产生大量的indexeddb.blob本地缓存"></a>视频网站产生大量的indexeddb.blob本地缓存</h2><p>故障表现：C盘中出现大量的indexeddb.blob本地缓存文件，急剧占用C盘系统盘空间。</p>
 <p>目前遇到的平台：</p>
 <ul>
 <li>优酷网</li>
@@ -3554,7 +3559,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>使用spacesniffer应用查看具体文件占用的路径</li>
 <li>手动删除indexeddb.blob文件（目前没有浏览器选项可以控制，本人猜测是视频网站使用了该功能作为视频缓存功能，这个技术理论上可以无限制地生成文件）。</li>
 </ol>
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.</p>
+<h1 id="Autodesk-3ds-Max">9 &nbsp&nbsp<a href="#Autodesk-3ds-Max" class="headerlink" title="Autodesk 3ds Max"></a>Autodesk 3ds Max</h1><p>3ds max已停止工作或者打开工程文件卡死无响应或者操作渲染时画面假死</p>
+<ul>
+<li>解决方法1：删除&#96;C:\users\Administrator\AppData\Local\Autodesk\3dsmax&#39;：移除所有崩溃信息和设置文件，即初始化至初始设置。</li>
+<li>解决方法2：系统自带的非英输入法开启兼容性设置（不单只微软拼音有反馈记录，也有网友反馈日文输入法也同样遇到这种现象）</li>
+<li>解决方法3：3Ds MAX安装根目录的dlcomponents文件夹内，找到DlComponentList_x64文件或者DlComponentList文件，删除并用删除文件的名称创建文件夹（作用原理就是win系统无法再二次生成同名称的文件，因为前面创建的文件夹名称一样且已存在）</li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -3597,11 +3608,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#x6f;&#109;">&#110;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#x63;&#x6f;&#109;">&#49;&#x40;&#49;&#x2e;&#x63;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#x63;&#111;&#x6d;">&#x38;&#x40;&#x38;&#x2e;&#x63;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#x61;&#x6e;&#x6b;&#115;&#46;&#x63;&#111;&#x6d;">&#110;&#111;&#x40;&#116;&#104;&#x61;&#x6e;&#x6b;&#115;&#46;&#x63;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#109;">&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#56;&#64;&#56;&#46;&#x63;&#111;&#109;">&#56;&#64;&#56;&#46;&#x63;&#111;&#109;</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#115;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#115;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#x40;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#x40;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -3654,7 +3665,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="Win10-LTSC-2021安装微软商店MicrosoftStore">5.2 &nbsp&nbsp<a href="#Win10-LTSC-2021安装微软商店MicrosoftStore" class="headerlink" title="Win10 LTSC 2021安装微软商店MicrosoftStore"></a>Win10 LTSC 2021安装微软商店MicrosoftStore</h2><p>为Windows 10 Enterprise LTSC增加应用商店：使用Github脚本「<a href="https://github.com/GFOXSH/LTSC-Add-MicrosoftStore-2021">LTSC-Add-MicrosoftStore-2021</a>」</p>
 <h1 id="运行库">6 &nbsp&nbsp<a href="#运行库" class="headerlink" title="运行库"></a>运行库</h1><p>详看<a href="/troubleshooting/runtime-library-repair-on-windows">《Windows平台的运行库修复》</a></p>
-<h1 id="硬件分区数据">7 &nbsp&nbsp<a href="#硬件分区数据" class="headerlink" title="硬件分区数据"></a>硬件分区数据</h1><h2 id="数据恢复">7.1 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000</p>
+<h1 id="系统更新">7 &nbsp&nbsp<a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h1><h2 id="无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到-Internet">7.1 &nbsp&nbsp<a href="#无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到-Internet" class="headerlink" title="无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet"></a>无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet</h2><ul>
+<li>解决方法1：执行系统自带诊断程序：<code>C:\Windows\diagnostics\system\WindowsUpdate\DiagPackage.diagpkg</code></li>
+<li>解决方法2:<ol>
+<li>查看相关服务项是否正常开启：windows update，Cryptographic Services，Background Intelligent Transfer Service，Windows Installer。</li>
+<li>尝试将网络的dns修改至4.2.2.2或4.2.2.1。</li>
+<li>清理win更新缓存文件夹：先关闭windows update服务，删除<code>C:\Windows\SoftwareDistribution</code>目录下的Download和DataStore文件夹，然后重新开启windows update服务。</li>
+</ol>
+</li>
+</ul>
 <h1 id="注册表">8 &nbsp&nbsp<a href="#注册表" class="headerlink" title="注册表"></a>注册表</h1><p><a href="https://pecmd.net/thread-68.htm">教程：了解和掌握Windows操作系统注册表，包括在线和离线修改方法</a></p>
 <h2 id="查询程序对应修改前后的注册表项">8.1 &nbsp&nbsp<a href="#查询程序对应修改前后的注册表项" class="headerlink" title="查询程序对应修改前后的注册表项"></a>查询程序对应修改前后的注册表项</h2><p>参考文章：</p>
 <ul>
@@ -3821,7 +3840,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 </li>
 </ul>
-<h1 id="参考文献">19 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[7] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[8] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[9] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[10]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[11] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.<br>[12] Microsoft账户无法登录怎么办？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/449928889">https://www.zhihu.com/question/449928889</a>.<br>[13] 万能驱动 v7.23.925.3（2023.11.08 发布）[EB&#x2F;OL]. <a href="https://www.puresys.net/1147.html">https://www.puresys.net/1147.html</a>.<br>[14] 技术 | Windows 10 更新新版微软商城（Microsoft Store） [EB&#x2F;OL]. <a href="https://www.sizau.com/a/update-microsoft-store.html">https://www.sizau.com/a/update-microsoft-store.html</a>.<br>[15] WIN10安装NVIDIA面板两种方式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/144801155">https://zhuanlan.zhihu.com/p/144801155</a>.<br>[16] easyImageX2和万能驱动有种奇特的现象[EB&#x2F;OL]. <a href="http://wuyou.net/forum.php?mod=viewthread&tid=422066">http://wuyou.net/forum.php?mod=viewthread&amp;tid=422066</a>.<br>[17] 更新完显卡驱动，任务管理器里N卡的CUDA没了[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_45888599/article/details/119672852">https://blog.csdn.net/weixin_45888599/article/details/119672852</a>.<br>[18] Force DISM to unmount&#x2F;delete a mounted Windows WIM[EB&#x2F;OL]. <a href="https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim">https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim</a>.<br>[19] All In One 把该用到的都封到安装镜像中！[EB&#x2F;OL]. <a href="http://m.cfan.com.cn/pcarticle/128008">http://m.cfan.com.cn/pcarticle/128008</a>.<br>[20] User Profile Service 服务登录失败 无法加载用户配置文件[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/5e913b9cf74d">https://www.jianshu.com/p/5e913b9cf74d</a>.<br>[21] Windows10切换用户显示User Profile Service或ProfSvc服务登录失败[EB&#x2F;OL]. <a href="https://blog.csdn.net/Stand_Fast/article/details/119488113">https://blog.csdn.net/Stand_Fast/article/details/119488113</a>.<br>[22] 【经验之谈】“User Profile Service 服务未能登录,无法加载用户配置文件”实战历程[EB&#x2F;OL]. <a href="https://blog.51cto.com/weixiao43/506699">https://blog.51cto.com/weixiao43/506699</a>.<br>[23] Win10 电脑连接U盘&#x2F;移动硬盘失败解决方法分享，该设备的驱动程序未被安装。（代码28）[EB&#x2F;OL]. <a href="https://blog.csdn.net/XiaoMuiii/article/details/132660886">https://blog.csdn.net/XiaoMuiii/article/details/132660886</a>.<br>[24] Booting is unsuccessful from &quot;Windows Boot Manager&quot; on the top of boot order in EFI setup. The booting is successful from Disk 0.[EB&#x2F;OL]. <a href="https://www.veritas.com/support/en_US/article.100015603">https://www.veritas.com/support/en_US/article.100015603</a>.<br>[25] 蓝屏代码0x00000109 错误分析.[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_35206244/article/details/113805925">https://blog.csdn.net/qq_35206244/article/details/113805925</a>.<br>[26] [求助] (已解决)请问怎么关闭&quot;无法打开此ms-gamebar&quot;弹窗，谢谢？.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1972471-1-1.html">https://bbs.pcbeta.com/viewthread-1972471-1-1.html</a>.</p>
+<h1 id="参考文献">19 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[7] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[8] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[9] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[10]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[11] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.<br>[12] Microsoft账户无法登录怎么办？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/449928889">https://www.zhihu.com/question/449928889</a>.<br>[13] 万能驱动 v7.23.925.3（2023.11.08 发布）[EB&#x2F;OL]. <a href="https://www.puresys.net/1147.html">https://www.puresys.net/1147.html</a>.<br>[14] 技术 | Windows 10 更新新版微软商城（Microsoft Store） [EB&#x2F;OL]. <a href="https://www.sizau.com/a/update-microsoft-store.html">https://www.sizau.com/a/update-microsoft-store.html</a>.<br>[15] WIN10安装NVIDIA面板两种方式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/144801155">https://zhuanlan.zhihu.com/p/144801155</a>.<br>[16] easyImageX2和万能驱动有种奇特的现象[EB&#x2F;OL]. <a href="http://wuyou.net/forum.php?mod=viewthread&tid=422066">http://wuyou.net/forum.php?mod=viewthread&amp;tid=422066</a>.<br>[17] 更新完显卡驱动，任务管理器里N卡的CUDA没了[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_45888599/article/details/119672852">https://blog.csdn.net/weixin_45888599/article/details/119672852</a>.<br>[18] Force DISM to unmount&#x2F;delete a mounted Windows WIM[EB&#x2F;OL]. <a href="https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim">https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim</a>.<br>[19] All In One 把该用到的都封到安装镜像中！[EB&#x2F;OL]. <a href="http://m.cfan.com.cn/pcarticle/128008">http://m.cfan.com.cn/pcarticle/128008</a>.<br>[20] User Profile Service 服务登录失败 无法加载用户配置文件[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/5e913b9cf74d">https://www.jianshu.com/p/5e913b9cf74d</a>.<br>[21] Windows10切换用户显示User Profile Service或ProfSvc服务登录失败[EB&#x2F;OL]. <a href="https://blog.csdn.net/Stand_Fast/article/details/119488113">https://blog.csdn.net/Stand_Fast/article/details/119488113</a>.<br>[22] 【经验之谈】“User Profile Service 服务未能登录,无法加载用户配置文件”实战历程[EB&#x2F;OL]. <a href="https://blog.51cto.com/weixiao43/506699">https://blog.51cto.com/weixiao43/506699</a>.<br>[23] Win10 电脑连接U盘&#x2F;移动硬盘失败解决方法分享，该设备的驱动程序未被安装。（代码28）[EB&#x2F;OL]. <a href="https://blog.csdn.net/XiaoMuiii/article/details/132660886">https://blog.csdn.net/XiaoMuiii/article/details/132660886</a>.<br>[24] Booting is unsuccessful from &quot;Windows Boot Manager&quot; on the top of boot order in EFI setup. The booting is successful from Disk 0.[EB&#x2F;OL]. <a href="https://www.veritas.com/support/en_US/article.100015603">https://www.veritas.com/support/en_US/article.100015603</a>.<br>[25] 蓝屏代码0x00000109 错误分析.[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_35206244/article/details/113805925">https://blog.csdn.net/qq_35206244/article/details/113805925</a>.<br>[26] [求助] (已解决)请问怎么关闭&quot;无法打开此ms-gamebar&quot;弹窗，谢谢？.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1972471-1-1.html">https://bbs.pcbeta.com/viewthread-1972471-1-1.html</a>.<br>[27] Win11更新不能连接服务器的解决方法.[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/4c1edd1f08a8">https://www.jianshu.com/p/4c1edd1f08a8</a>.<br>[28] Windows11显示“无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet” .[EB&#x2F;OL]. <a href="https://answers.microsoft.com/zh-hans/windows/forum/all/windows11%E6%98%BE%E7%A4%BA%E6%97%A0%E6%B3%95/ebbafb81-7002-4f54-a565-cdc4a89f3c31">https://answers.microsoft.com/zh-hans/windows/forum/all/windows11%E6%98%BE%E7%A4%BA%E6%97%A0%E6%B3%95/ebbafb81-7002-4f54-a565-cdc4a89f3c31</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -6580,9 +6599,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-WnWNAYXqEEevtrgO" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-WnWNAYXqEEevtrgO").style.height=document.getElementById("mmedia-WnWNAYXqEEevtrgO").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-CcwJrZjKipbygCWG" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-CcwJrZjKipbygCWG").style.height=document.getElementById("mmedia-CcwJrZjKipbygCWG").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-WnWNAYXqEEevtrgO").style.height=document.getElementById("mmedia-WnWNAYXqEEevtrgO").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-CcwJrZjKipbygCWG").style.height=document.getElementById("mmedia-CcwJrZjKipbygCWG").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -6705,7 +6724,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-DYHKiORWhhSkxybc"></div><script> var DYHKiORWhhSkxybc_options = JSON.parse('{\"id\":\"mmedia-DYHKiORWhhSkxybc\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(DYHKiORWhhSkxybc_options); </script>
+<div id="mmedia-peboxGIUTPdYIVOt"></div><script> var peboxGIUTPdYIVOt_options = JSON.parse('{\"id\":\"mmedia-peboxGIUTPdYIVOt\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(peboxGIUTPdYIVOt_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -6809,7 +6828,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#x69;&#x73;&#116;&#101;&#114;&#x6b;&#x69;&#110;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#105;&#109;&#x2e;&#x6d;&#x69;&#x73;&#116;&#101;&#114;&#x6b;&#x69;&#110;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#105;&#109;&#46;&#109;&#105;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
