@@ -306,9 +306,9 @@
     <link href="https://mister-kin.github.io/code/css/"/>
     <id>https://mister-kin.github.io/code/css/</id>
     <published>2023-10-12T19:07:34.000Z</published>
-    <updated>2023-10-12T19:33:14.000Z</updated>
+    <updated>2024-03-31T20:12:18.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="开发记录">1 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>类名含有空格（浏览器F12检查元素）时，一般是包含多个类名，空格字符在类型中无效，实际上呈现出来的是分隔符，不是空格。CSS类名选择器一般选择第一个即可。</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="开发记录">1 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>类名含有空格（浏览器F12检查元素）时，一般是包含多个类名，空格字符在类型中无效，实际上呈现出来的是分隔符，不是空格。CSS类名选择器一般选择第一个即可。</p><h2 id="伪类的content不能被选中">1.1 &nbsp&nbsp<a href="#伪类的content不能被选中" class="headerlink" title="伪类的content不能被选中"></a>伪类的content不能被选中</h2><p>伪类不是真正的DOM，无DOM相关的属性和方法。</p><p><code>::before</code>和<code>::after</code>伪类的说明：</p><ul><li>默认display: inline</li><li>必须设置content属性，否则一切都是无用功</li><li>默认user-select: none，就是::before和::after的内容无法被用户选中的</li></ul><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CSS 魔法堂：一起玩透伪元素和 Content 属性[EB&#x2F;OL]. <a href="https://segmentfault.com/a/1190000016441049">https://segmentfault.com/a/1190000016441049</a>.</p>]]></content>
     
     
       
