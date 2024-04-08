@@ -97,9 +97,9 @@
     <link href="https://mister-kin.github.io/code/hexo/"/>
     <id>https://mister-kin.github.io/code/hexo/</id>
     <published>2024-02-02T09:21:50.000Z</published>
-    <updated>2024-02-02T18:47:48.000Z</updated>
+    <updated>2024-04-08T19:34:56.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="npm淘宝镜像">1 &nbsp&nbsp<a href="#npm淘宝镜像" class="headerlink" title="npm淘宝镜像"></a>npm淘宝镜像</h1><p>当前有效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code><br>已失效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code></p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="npm淘宝镜像">1 &nbsp&nbsp<a href="#npm淘宝镜像" class="headerlink" title="npm淘宝镜像"></a>npm淘宝镜像</h1><p>当前有效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code><br>已失效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code></p><h1 id="postinstall-npm-run-build-highlight-failed">2 &nbsp&nbsp<a href="#postinstall-npm-run-build-highlight-failed" class="headerlink" title="postinstall: npm run build:highlight failed"></a>postinstall: npm run build:highlight failed</h1><p>问题现象：在操作更新hexo-renderer-marked，在使用yarn执行构建时候，出现报错：<code>hexo-util: command failed. Command: npm run build:highlight</code>。经过尝试全局单独安装<code>hexo-util</code>排查发现，<code>&quot;npm&#39;is not recognized as an internal or external command.</code>。</p><p>问题原因：安装<code>node.js</code>，由于未勾选启用<code>npm</code>模块，导致系统安装的<code>node.js</code>环境缺失<code>npm</code>，但由于新依赖包直接在包构建命令里面新增并写死了<code>npm</code>命令，导致无法正常构建。</p><p>解决方法：重新双击<code>node.js</code>，选择「change」选项，启用<code>npm</code>模块。然后重新运行<code>yarn</code>构建。</p><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm 淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a>.<br>[2] postinstall: npm run build:highlight failes leaving full hexo install unusable...[EB&#x2F;OL]. <a href="https://github.com/hexojs/hexo%E2%80%91util/issues/9">https://github.com/hexojs/hexo‑util/issues/9</a>.</p>]]></content>
     
     
       
