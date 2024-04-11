@@ -3267,7 +3267,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <url>/troubleshooting/hardware-troubleshooting/</url>
     <content><![CDATA[<h1 id="不开机">1 &nbsp&nbsp<a href="#不开机" class="headerlink" title="不开机"></a>不开机</h1><h2 id="内存接触不良导致自启后直接掉电">1.1 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，重新拔插（擦拭金手指）</p>
 <h1 id="CPU">2 &nbsp&nbsp<a href="#CPU" class="headerlink" title="CPU"></a>CPU</h1><h1 id="ZEN3的whea18错误">3 &nbsp&nbsp<a href="#ZEN3的whea18错误" class="headerlink" title="ZEN3的whea18错误"></a>ZEN3的whea18错误</h1><p>系列通病，也看批次，若测试频繁复现whea18，建议走售后换新。</p>
-<h1 id="Intel-13-14代高端U的缺陷">4 &nbsp&nbsp<a href="#Intel-13-14代高端U的缺陷" class="headerlink" title="Intel 13&#x2F;14代高端U的缺陷"></a>Intel 13&#x2F;14代高端U的缺陷</h1><p>详见<a href="https://www.chiphell.com/thread-2585702-1-1.html">[CPU] 英特尔第 13&#x2F;14 代处理器设备运行虚幻引擎游戏崩溃？原因找到了</a></p>
+<h1 id="Intel-13-14代高端U的缺陷">4 &nbsp&nbsp<a href="#Intel-13-14代高端U的缺陷" class="headerlink" title="Intel 13&#x2F;14代高端U的缺陷"></a>Intel 13&#x2F;14代高端U的缺陷</h1><p>详见<a href="https://www.chiphell.com/thread-2585702-1-1.html">「[CPU] 英特尔第 13&#x2F;14 代处理器设备运行虚幻引擎游戏崩溃？原因找到了」</a>和<a href="https://www.techspot.com/news/102555-intel-finally-investigating-reports-high-end-13th-14th.html">「Intel is finally investigating reports of high-end 13th&#x2F;14th-gen CPUs causing game crashes」</a></p>
 <p>原因：RAD 公司隶属于 Epic Games 公司，负责开发 Bink 视频编解码器和 Oodle 数据压缩技术。RAD 公司表示，导致游戏崩溃的原因并非 Oodle 或 Unreal，而是过于乐观的 BIOS 设置，导致一小部分处理器在高负载情况下超出预设的时钟频率和功耗上限，并错误地执行指令。</p>
 <p>解决方法：需要锁倍频到54x或者53x。</p>
 <h1 id="内存">5 &nbsp&nbsp<a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="关于内存的术语">5.1 &nbsp&nbsp<a href="#关于内存的术语" class="headerlink" title="关于内存的术语"></a>关于内存的术语</h2><p>1DPC的意思是，每个通道1根内存<br>2DPC的意思是，每个通道2根内存<br>1R的意思是，单面颗粒内存<br>2R的意思是，双面颗粒内存</p>
@@ -3948,11 +3948,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;">&#110;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#99;&#111;&#x6d;">&#49;&#64;&#49;&#x2e;&#99;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#111;&#x6d;">&#x38;&#64;&#x38;&#x2e;&#99;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#115;&#x2e;&#x63;&#x6f;&#x6d;">&#110;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#115;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#x79;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;">&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#x79;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#99;&#111;&#109;">&#49;&#x40;&#49;&#x2e;&#99;&#111;&#109;</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#99;&#x6f;&#109;">&#x38;&#64;&#56;&#x2e;&#99;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#x6e;&#x6b;&#115;&#46;&#99;&#x6f;&#109;">&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#x6e;&#x6b;&#115;&#46;&#99;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -6950,9 +6950,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-oqCtiozmllRmpMMq" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-oqCtiozmllRmpMMq").style.height=document.getElementById("mmedia-oqCtiozmllRmpMMq").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-MYYDNPEnBWeqemDD" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-MYYDNPEnBWeqemDD").style.height=document.getElementById("mmedia-MYYDNPEnBWeqemDD").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-oqCtiozmllRmpMMq").style.height=document.getElementById("mmedia-oqCtiozmllRmpMMq").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-MYYDNPEnBWeqemDD").style.height=document.getElementById("mmedia-MYYDNPEnBWeqemDD").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -7075,7 +7075,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-LKWwSLtyqUquVTXe"></div><script> var LKWwSLtyqUquVTXe_options = JSON.parse('{\"id\":\"mmedia-LKWwSLtyqUquVTXe\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(LKWwSLtyqUquVTXe_options); </script>
+<div id="mmedia-iUkumXGKqZVHSAXp"></div><script> var iUkumXGKqZVHSAXp_options = JSON.parse('{\"id\":\"mmedia-iUkumXGKqZVHSAXp\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(iUkumXGKqZVHSAXp_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -7179,7 +7179,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#105;&#115;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#105;&#x6d;&#x2e;&#x6d;&#105;&#115;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -7515,7 +7515,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <p>2024-04-05：hexo-renderer-marked从v6.2.0升级至v6.3.0。</p>
 <p>2024-04-01：添加对「网站收藏夹」页面的样式支持。</p>
-<p>2024-03-14：更新Github action的依赖：checkout从v3升级至v4；setup-node从v3升级至v4；node-version从18修改为20；cache从v3升级至v4。</p>
+<p>2024-03-14：更新Github Action的依赖：checkout从v3升级至v4；setup-node从v3升级至v4；node-version从18修改为20；cache从v3升级至v4。</p>
 <p>2024-03-06：hexo-theme-next从v8.19.1升级至v8.19.2。</p>
 <p>2024-02-17：hexo从v7.0.0升级至v7.1.1。</p>
 </div>
