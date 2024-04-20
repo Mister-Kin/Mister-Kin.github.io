@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2024-03-09T21:19:36.000Z</updated>
+  <updated>2024-04-20T19:27:19.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Stable Diffusion</title>
+    <link href="https://mister-kin.github.io/software/stable-diffusion/"/>
+    <id>https://mister-kin.github.io/software/stable-diffusion/</id>
+    <published>2024-04-20T16:54:27.000Z</published>
+    <updated>2024-04-20T19:27:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Stable-Diffusion-Webui局域网多人共享">1 &nbsp&nbsp<a href="#Stable-Diffusion-Webui局域网多人共享" class="headerlink" title="Stable Diffusion Webui局域网多人共享"></a>Stable Diffusion Webui局域网多人共享</h1><p>默认情况下，Stable Diffusion Webui实现的局域网共享，无法实现多人队列提交，并且SD模型和VAE模型是全局设置，一人改变会导致后台改变，而网页端显示的值并未变化更新。</p><p>队列提交&#x2F;多人共享使用的一些插件实现：</p><ul><li><a href="https://github.com/ArtVentureX/sd-webui-agent-scheduler">sd-webui-agent-scheduler</a></li><li><a href="https://github.com/wolverinn/stable-diffusion-multi-user">stable-diffusion-multi-user</a></li></ul><p>多人共享使用的一些问题讨论：</p><ul><li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/11531">multiple users use it at the same time</a></li></ul><h1 id="Stable-Diffusion-Webui多卡算力">2 &nbsp&nbsp<a href="#Stable-Diffusion-Webui多卡算力" class="headerlink" title="Stable Diffusion Webui多卡算力"></a>Stable Diffusion Webui多卡算力</h1><p>当前Webui并未支持多卡同时加速计算，通过共享实例进程实现多人使用（队列提交）均衡多卡负载倒是可以实现。</p><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Accelerate doesn&#39;t use multi GPU with automatic1111[EB&#x2F;OL]. <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/13942">https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/13942</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Stable-Diffusion-Webui局域网多人共享&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#Stable-Diffusion-Webui局域网多人共享&quot; class=&quot;headerlink&quot; title=&quot;Stable Diffusion</summary>
+        
+      
+    
+    
+    
+    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
+    
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="SD" scheme="https://mister-kin.github.io/tags/SD/"/>
+    
+    <category term="stable diffusion" scheme="https://mister-kin.github.io/tags/stable-diffusion/"/>
+    
+    <category term="stable diffusion webui" scheme="https://mister-kin.github.io/tags/stable-diffusion-webui/"/>
+    
+    <category term="AIGC" scheme="https://mister-kin.github.io/tags/AIGC/"/>
+    
+    <category term="AI" scheme="https://mister-kin.github.io/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>yolo目标检测框架总结</title>
@@ -614,49 +651,6 @@
     <category term="编程" scheme="https://mister-kin.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
     <category term="python" scheme="https://mister-kin.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
-    <link href="https://mister-kin.github.io/software/blender/tranining/cg-boost-blender28-beginner-series/"/>
-    <id>https://mister-kin.github.io/software/blender/tranining/cg-boost-blender28-beginner-series/</id>
-    <published>2023-08-12T09:28:05.000Z</published>
-    <updated>2023-08-12T09:28:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p><h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>开始建模之前，要注意建模物体的尺寸。注意观察物体外形，思考用哪些基础网格mesh创建模型会更容易点。</p><p>查看当前物体的尺寸：右边侧边栏（快捷键N）&gt;item条目&gt;尺寸</p><p>设置当前场景的单位：属性编辑器&gt;场景属性&gt;单位。</p><p><img data-src="/1.1.png"></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;练习成果展示&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#练习成果展示&quot; class=&quot;headerlink&quot; title=&quot;练习成果展示&quot;&gt;&lt;/a&gt;练习成果展示&lt;/h1&gt;&lt;h1 id=&quot;前期工作&quot;&gt;2 &amp;nbsp&amp;nbsp&lt;a href=&quot;#前期工作&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
-    
-    <category term="blender" scheme="https://mister-kin.github.io/categories/software/blender/"/>
-    
-    <category term="tranining" scheme="https://mister-kin.github.io/categories/software/blender/tranining/"/>
-    
-    
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="blender" scheme="https://mister-kin.github.io/tags/blender/"/>
-    
-    <category term="教程" scheme="https://mister-kin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="练习" scheme="https://mister-kin.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="苹果" scheme="https://mister-kin.github.io/tags/%E8%8B%B9%E6%9E%9C/"/>
-    
-    <category term="小刀" scheme="https://mister-kin.github.io/tags/%E5%B0%8F%E5%88%80/"/>
-    
-    <category term="布料" scheme="https://mister-kin.github.io/tags/%E5%B8%83%E6%96%99/"/>
     
   </entry>
   
