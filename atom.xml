@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2024-04-20T19:27:19.000Z</updated>
+  <updated>2024-04-28T04:42:46.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Audacity总结</title>
+    <link href="https://mister-kin.github.io/software/audacity/"/>
+    <id>https://mister-kin.github.io/software/audacity/</id>
+    <published>2024-04-28T02:34:08.000Z</published>
+    <updated>2024-04-28T04:42:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p><p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;安装openvino-plugins-ai-audacity找不到组件&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#安装openvino-plugins-ai-audacity找不到组件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
+    
+    
+    <category term="audacity" scheme="https://mister-kin.github.io/tags/audacity/"/>
+    
+    <category term="音频" scheme="https://mister-kin.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
+    
+    <category term="后期处理" scheme="https://mister-kin.github.io/tags/%E5%90%8E%E6%9C%9F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Stable Diffusion</title>
@@ -618,39 +649,6 @@
     <category term="openwrt" scheme="https://mister-kin.github.io/tags/openwrt/"/>
     
     <category term="虚拟机" scheme="https://mister-kin.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python总结笔记</title>
-    <link href="https://mister-kin.github.io/code/python/"/>
-    <id>https://mister-kin.github.io/code/python/</id>
-    <published>2023-09-08T20:26:25.000Z</published>
-    <updated>2023-10-12T19:33:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，报名前面的小数点.是必要的，python3之后都是严格模式。</p><h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p><p>解决方法：安装路径直接按默认路径，不装program路径。</p><h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p><p>原因：python环境异常。</p><p>解决方法：重装python。</p><ol><li>直接删除python主安装路径的文件</li><li>运行安装程序repair</li><li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li></ol><h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div><h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure><h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p><h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p><p>基本的使用：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure><h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p><p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p><p>基本使用：</p><ul><li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li><li>创建setup.py文件：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li><li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li><li>安装twine并发布包到PyPI：<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure></li><li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li></ul><h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul><li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li></ul><h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Python-语法摘记&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#Python-语法摘记&quot; class=&quot;headerlink&quot; title=&quot;Python 语法摘记&quot;&gt;&lt;/a&gt;Python</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
-    
-    
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="笔记" scheme="https://mister-kin.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="编程" scheme="https://mister-kin.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="python" scheme="https://mister-kin.github.io/tags/python/"/>
     
   </entry>
   
