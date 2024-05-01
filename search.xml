@@ -28,7 +28,7 @@
     <p class="tag-open-source"></p>
     <p class="tag-mirror-site"></p>
     </div>
-    <a href="https://help.mirrors.cernet.edu.cn/">MirrorZ Help（镜像源整合）</a>
+    <a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像源</a>
 </div>
 
 <div class="text-box">
@@ -36,7 +36,7 @@
     <p class="tag-open-source"></p>
     <p class="tag-mirror-site"></p>
     </div>
-    <a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像源</a>
+    <a href="https://help.mirrors.cernet.edu.cn/">MirrorZ Help（镜像源整合）</a>
 </div>
 
 <div class="text-box">
@@ -3744,6 +3744,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h1 id="显卡">7 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="专业检测工具-MASTS">7.1 &nbsp&nbsp<a href="#专业检测工具-MASTS" class="headerlink" title="专业检测工具-MASTS"></a>专业检测工具-MASTS</h2><p>工具官方论坛链接：<a href="https://vlab.su/viewtopic.php?t=124090">MATS&#x2F;MODS 400&#x2F;455&#x2F;520 Тест видеопамяти nVidia для флешки</a></p>
 <p>直接下载最新的ISO镜像，用<a href="https://rufus.ie/zh/">Rufus</a>直接写入U盘即可。</p>
+<h2 id="13-14代酷睿CPU搭配显卡出现显卡驱动掉驱现象">7.2 &nbsp&nbsp<a href="#13-14代酷睿CPU搭配显卡出现显卡驱动掉驱现象" class="headerlink" title="13&#x2F;14代酷睿CPU搭配显卡出现显卡驱动掉驱现象"></a>13&#x2F;14代酷睿CPU搭配显卡出现显卡驱动掉驱现象</h2><p>故障原因：CPU的pcie控制器有瑕疵，导致显卡驱动掉驱现象。</p>
 <h1 id="无线网卡">8 &nbsp&nbsp<a href="#无线网卡" class="headerlink" title="无线网卡"></a>无线网卡</h1><h2 id="2-4GHz无线设备的频率干扰问题">8.1 &nbsp&nbsp<a href="#2-4GHz无线设备的频率干扰问题" class="headerlink" title="2.4GHz无线设备的频率干扰问题"></a>2.4GHz无线设备的频率干扰问题</h2><p>具体故障表现：无线鼠标会有停顿感，或是无线键盘输入的速度变慢或无反应，甚至是无线传输的距离缩短。</p>
 <p>可能存在的干扰源：</p>
 <ul>
@@ -4400,11 +4401,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#109;">&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#x2e;&#x63;&#111;&#109;">&#56;&#64;&#56;&#x2e;&#x63;&#111;&#109;</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#115;&#46;&#99;&#x6f;&#109;">&#110;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#115;&#46;&#99;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#x63;&#111;&#x6d;">&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#x63;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">&#49;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#46;&#x63;&#111;&#x6d;">&#x38;&#64;&#56;&#46;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#x6f;&#109;">&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#111;&#x6d;">&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#111;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -7506,9 +7507,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-rvYhXVCVRCGCsnZx" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-rvYhXVCVRCGCsnZx").style.height=document.getElementById("mmedia-rvYhXVCVRCGCsnZx").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-HGGRjvtjcSPSDXUM" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-HGGRjvtjcSPSDXUM").style.height=document.getElementById("mmedia-HGGRjvtjcSPSDXUM").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-rvYhXVCVRCGCsnZx").style.height=document.getElementById("mmedia-rvYhXVCVRCGCsnZx").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-HGGRjvtjcSPSDXUM").style.height=document.getElementById("mmedia-HGGRjvtjcSPSDXUM").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -7631,7 +7632,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-WXXzTDSyDHKWcMZA"></div><script> var WXXzTDSyDHKWcMZA_options = JSON.parse('{\"id\":\"mmedia-WXXzTDSyDHKWcMZA\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(WXXzTDSyDHKWcMZA_options); </script>
+<div id="mmedia-jAIItOQmcnpmyTQy"></div><script> var jAIItOQmcnpmyTQy_options = JSON.parse('{\"id\":\"mmedia-jAIItOQmcnpmyTQy\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(jAIItOQmcnpmyTQy_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -7735,7 +7736,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#105;&#x73;&#x74;&#x65;&#114;&#107;&#x69;&#110;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#105;&#109;&#x2e;&#x6d;&#105;&#x73;&#x74;&#x65;&#114;&#107;&#x69;&#110;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#115;&#x74;&#101;&#x72;&#x6b;&#x69;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#105;&#x6d;&#x2e;&#109;&#x69;&#115;&#x74;&#101;&#x72;&#x6b;&#x69;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -8069,6 +8070,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2024"><a href="#2024" class="headerlink" title="2024"></a><center>2024</center></h1><div class="hang-retract">
 
+<p>2024-05-02：hexo-theme-next从v8.19.2升级至v8.20.0。</p>
 <p>2024-04-26：hexo从v7.1.1升级至v7.2.0；hexo-word-counter从v0.1.0升级至v0.2.0。</p>
 <p>2024-04-05：hexo-renderer-marked从v6.2.0升级至v6.3.0。</p>
 <p>2024-04-01：添加对「网站收藏夹」页面的样式支持。</p>
