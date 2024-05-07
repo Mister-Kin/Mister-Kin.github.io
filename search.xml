@@ -96,6 +96,13 @@
     <a href="https://www.ypojie.com/">易破解（亿破姐）</a>
 </div>
 
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-official-site"></p>
+    </div>
+    <a href="https://zhuanlan.zhihu.com/p/98625180">全网最全绘画优秀书籍推荐（含PDF资源分享）</a>
+</div>
+
 </div>
 
 <h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><div class="text-box-container">
@@ -419,14 +426,6 @@
     <p class="tag-official-site"></p>
     </div>
     <a href="https://nodejs.org/en/download">Node.js</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-open-source"></p>
-    <p class="tag-free-commercial"></p>
-    <p class="tag-official-site"></p>
-    </div>
     <a href="https://classic.yarnpkg.com/lang/en/">Yarn</a>
 </div>
 
@@ -1977,10 +1976,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>执行封包</li>
 </ol>
 <p>缺点：使用Enigma Virtual Box打包的单文件，有可能会被杀毒软件识别为病毒，比如Windows Defender。</p>
-<h1 id="Qt-Creator的总结">4 &nbsp&nbsp<a href="#Qt-Creator的总结" class="headerlink" title="Qt Creator的总结"></a>Qt Creator的总结</h1><div class="note danger no-icon"><p>断网再打开Qt Creator的安装包，等跳过检测联网帐号的界面后就可以启用网络继续安装。</p>
+<h1 id="Qt-Creator的总结">4 &nbsp&nbsp<a href="#Qt-Creator的总结" class="headerlink" title="Qt Creator的总结"></a>Qt Creator的总结</h1><h2 id="下载">4.1 &nbsp&nbsp<a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qtcreator/">Qt Creator</a></li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/linguist_releases/">Qt Linguist</a></li>
+</ul>
+<div class="note danger no-icon"><p>断网再打开Qt Creator的安装包，等跳过检测联网帐号的界面后就可以启用网络继续安装。</p>
 </div>
 
-<h2 id="修改模板文件以便新建工程时默认支持C-20">4.1 &nbsp&nbsp<a href="#修改模板文件以便新建工程时默认支持C-20" class="headerlink" title="修改模板文件以便新建工程时默认支持C++20"></a>修改模板文件以便新建工程时默认支持C++20</h2><div class="tabs" id="template"><ul class="nav-tabs"><li class="tab active"><a href="#template-1">cmake</a></li><li class="tab"><a href="#template-2">qmake</a></li></ul><div class="tab-content"><div class="tab-pane active" id="template-1"><p>将以下文件中的<code>set(CMAKE_CXX_STANDARD 17)</code>修改为<code>set(CMAKE_CXX_STANDARD 20)</code></p>
+<h2 id="修改模板文件以便新建工程时默认支持C-20">4.2 &nbsp&nbsp<a href="#修改模板文件以便新建工程时默认支持C-20" class="headerlink" title="修改模板文件以便新建工程时默认支持C++20"></a>修改模板文件以便新建工程时默认支持C++20</h2><div class="tabs" id="template"><ul class="nav-tabs"><li class="tab active"><a href="#template-1">cmake</a></li><li class="tab"><a href="#template-2">qmake</a></li></ul><div class="tab-content"><div class="tab-pane active" id="template-1"><p>将以下文件中的<code>set(CMAKE_CXX_STANDARD 17)</code>修改为<code>set(CMAKE_CXX_STANDARD 20)</code></p>
 <ul>
 <li>qtcreator-13.0.0\share\qtcreator\templates\wizards\projects\consoleapp\CMakeLists.txt</li>
 <li>qtcreator-13.0.0\share\qtcreator\templates\wizards\projects\cpplibrary\CMakeLists.txt</li>
@@ -2006,11 +2009,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决：点击管理，手动设置构建套件kit的qt版本，这是通过选择qmake.exe或者qmake6.exe的路径确认。（不用重装，网上的教程都是重装或者安装在线版本包，但直接重装是无效）。</p>
 <h2 id="旧项目的套件配置文件中的CL编译器路径不正确">5.2 &nbsp&nbsp<a href="#旧项目的套件配置文件中的CL编译器路径不正确" class="headerlink" title="旧项目的套件配置文件中的CL编译器路径不正确"></a>旧项目的套件配置文件中的CL编译器路径不正确</h2><p>原因：更新MSVC CL后，老版本编译器就被删除了，旧项目的套件配置文件中的CL编译器路径仍然是老版本的路径，导致路径错误无法识别最新版本的编译器。</p>
 <p>解决方法：删除项目父路径中生成的构建配置文件夹，例如<code>build-untitled-x64-Release</code>，然后重新构建新的配置文件夹。</p>
-<h1 id="Qt源码编译">6 &nbsp&nbsp<a href="#Qt源码编译" class="headerlink" title="Qt源码编译"></a>Qt源码编译</h1><h2 id="下载">6.1 &nbsp&nbsp<a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<h1 id="Qt源码编译">6 &nbsp&nbsp<a href="#Qt源码编译" class="headerlink" title="Qt源码编译"></a>Qt源码编译</h1><h2 id="下载-1">6.1 &nbsp&nbsp<a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><ul>
 <li><a href="https://cmake.org/download/">CMake</a></li>
 <li><a href="https://github.com/ninja-build/ninja/releases">Ninja</a></li>
 <li><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a></li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/">Qt源码和Qt Creator</a>，以下是使用到的模块（按编译顺序列出）<ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qt/">Qt源码</a>，以下是使用到的模块（按编译顺序列出）<ul>
 <li>qtbase（基础库）</li>
 <li>qtshadertools（编译qtdeclarative所需的依赖库）</li>
 <li>qtdeclarative（qt quick）</li>
@@ -2860,10 +2863,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <content><![CDATA[<div class="note info no-icon"><p>推荐教程：张大妈网站的大佬-纵笔浮生的「<a href="https://search.smzdm.com/?c=home&s=%E3%80%8E%E8%BD%AF%E8%B7%AF%E7%94%B1%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97%E3%80%8F+&v=b">软路由踩坑指南</a>」系列文章。</p>
 </div>
 
-<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机，计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
+<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
 <h2 id="机器配置">1.1 &nbsp&nbsp<a href="#机器配置" class="headerlink" title="机器配置"></a>机器配置</h2><ul>
 <li>CPU：Intel(R) Pentium(R) CPU N3530</li>
-<li>内存：海力士DDR3L-8GB单根</li>
+<li>内存：海力士DDR3L-8GB单根（从老笔记本电脑上拆一根DDR3条子给它用）</li>
 <li>硬盘：海力士SH920 msata 256GB</li>
 <li>网卡：双网卡intel I211+Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
 </ul>
@@ -2873,7 +2876,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <h2 id="安装步骤">2.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
 <li>下载pve系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（我的情况就是需要下载pve 7.4的iso镜像文件）</li>
-<li>制作U盘启动项：ventoy。拷贝镜像iso文件到U盘，启动选择pve镜像进入，选择图形安装界面。</li>
+<li>制作U盘启动项：<a href="https://github.com/ventoy/Ventoy/releases">ventoy</a>。拷贝镜像iso文件到U盘，启动选择pve镜像进入，选择图形安装界面。</li>
 <li>同意协议。</li>
 <li>点击option按钮，选择硬盘和ext4格式（我的情况只有一个硬盘，不用设置option，直接下一步）</li>
 <li>国家选择china，时区会自动修改为上海，键盘布局不改。</li>
@@ -2952,7 +2955,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>刷新 initramfs：<code>update-initramfs -u -k all</code></li>
 <li>更新 grub：<code>update-grub</code></li>
 </ol>
-<h1 id="创建虚拟机">4 &nbsp&nbsp<a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h1><h2 id="PVE基础设置">4.1 &nbsp&nbsp<a href="#PVE基础设置" class="headerlink" title="PVE基础设置"></a>PVE基础设置</h2><ol>
+<h1 id="创建虚拟机">4 &nbsp&nbsp<a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h1><blockquote>
+<p>若机器硬件性能不太足够的话，不建议安装win系统，win系统极度消耗硬件性能（即便是空载待机状态也消耗很大），而这影响openwrt的性能。比如我的情况：安装了tiny10系统，千兆网线，宽带500M实测不到300Mbp&#x2F;s（这里是指用<a href="http://speed.unicomgd.com:8080/">广东联通宽带测速平台</a>测试的结果，实际ikuai主路由测试速率却又正常），局域网速率最高只能到700Mbp&#x2F;s的速率。关闭后tiny10后，实测宽带速率恢复正常，局域网速率跑到900Mbp&#x2F;s出头）</p>
+</blockquote>
+<h2 id="PVE基础设置">4.1 &nbsp&nbsp<a href="#PVE基础设置" class="headerlink" title="PVE基础设置"></a>PVE基础设置</h2><ol>
 <li>访问管理地址并登录：<a href="https://192.168.1.2:8006，帐号：root。">https://192.168.1.2:8006，帐号：root。</a></li>
 <li>根据硬件网卡情况，添加并设置好虚拟网桥Linux Bridge：创建&gt;Linux Bridge&gt;桥接接口填写物理网口地址名称。以我的机器为例，机器三个物理网口，PVE新建5个网桥，前三个网桥和物理网口绑定，第四个网桥用作iKuai和OpenWrt之间的传输，第五个网桥用作其他虚拟机系统的传输。</li>
 </ol>
@@ -3313,7 +3319,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="VirtualBox无法删除备份">1.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
 <p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="VMware">2 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.</p>
+<h1 id="VMware">2 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -4392,11 +4398,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;">&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#99;&#111;&#109;">&#x31;&#64;&#x31;&#x2e;&#99;&#111;&#109;</a></li>
-<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#x6f;&#109;">&#56;&#64;&#x38;&#x2e;&#99;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#109;">&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;">&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#x63;&#x6f;&#109;">&#49;&#64;&#49;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;">&#56;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#x61;&#x6e;&#107;&#115;&#x2e;&#99;&#111;&#x6d;">&#110;&#111;&#x40;&#116;&#104;&#x61;&#x6e;&#107;&#115;&#x2e;&#99;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -4692,8 +4698,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <ol>
 <li><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code></li>
 <li><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></li>
-<li><code>wsl --set-default-version 2</code></li>
 <li>重启系统</li>
+<li><code>wsl --set-default-version 2</code></li>
 </ol>
 <h1 id="封装系统">20 &nbsp&nbsp<a href="#封装系统" class="headerlink" title="封装系统"></a>封装系统</h1><h2 id="关于IT天空论坛工具的锁定主页的行为">20.1 &nbsp&nbsp<a href="#关于IT天空论坛工具的锁定主页的行为" class="headerlink" title="关于IT天空论坛工具的锁定主页的行为"></a>关于IT天空论坛工具的锁定主页的行为</h2><p>锁定情况：EasyImageX2是优启通里面的系统安装器，在优启通里面是去广告的，但是换到另一个pe运行它又是带广告的；万能驱动用it天空的系统封装软件封装后可以去广告，移出来运行又会有广告。</p>
 <p>实现原理：优启通启动的时候会在注册表生产一个当前机器的密钥字符串，然后EasyImageX2去解密判断，判断正确就免广告。同理万能驱动也是。注册表位置：<code>HKEY_LOCAL_MACHINE\SOFTWARE\EasyDrv7\</code>，但是仍然无法通过预先在系统中写入该注册表内容来去除推广包软件和主页绑定，因为是根据当前硬件信息生成一个key的。</p>
@@ -7498,9 +7504,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-KRFkcGxeaVvtdJmS" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-KRFkcGxeaVvtdJmS").style.height=document.getElementById("mmedia-KRFkcGxeaVvtdJmS").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-grwhNdPjZRSHrhVQ" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-grwhNdPjZRSHrhVQ").style.height=document.getElementById("mmedia-grwhNdPjZRSHrhVQ").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-KRFkcGxeaVvtdJmS").style.height=document.getElementById("mmedia-KRFkcGxeaVvtdJmS").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-grwhNdPjZRSHrhVQ").style.height=document.getElementById("mmedia-grwhNdPjZRSHrhVQ").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -7623,7 +7629,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-jwltxBYnFYSyXWxF"></div><script> var jwltxBYnFYSyXWxF_options = JSON.parse('{\"id\":\"mmedia-jwltxBYnFYSyXWxF\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(jwltxBYnFYSyXWxF_options); </script>
+<div id="mmedia-aWCbviakStWQHvBt"></div><script> var aWCbviakStWQHvBt_options = JSON.parse('{\"id\":\"mmedia-aWCbviakStWQHvBt\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(aWCbviakStWQHvBt_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -7727,7 +7733,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#x73;&#116;&#101;&#114;&#107;&#105;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x69;&#109;&#x2e;&#109;&#x69;&#x73;&#116;&#101;&#114;&#107;&#105;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#105;&#x73;&#116;&#101;&#x72;&#107;&#105;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#105;&#x6d;&#46;&#109;&#105;&#x73;&#116;&#101;&#x72;&#107;&#105;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
