@@ -994,6 +994,126 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>笔记本硬件基础</title>
+    <url>/cad/laptop-fundamental/</url>
+    <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
+<thead>
+<tr>
+<th align="center">外型</th>
+<th align="center">A壳</th>
+<th align="center">B壳</th>
+<th align="center">C壳</th>
+<th align="center">D壳</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">位置</td>
+<td align="center">顶面的壳</td>
+<td align="center">屏幕面的外框</td>
+<td align="center">键盘面的壳</td>
+<td align="center">底面的壳</td>
+</tr>
+</tbody></table>
+<h1 id="部件介绍">2 &nbsp&nbsp<a href="#部件介绍" class="headerlink" title="部件介绍"></a>部件介绍</h1><h2 id="PCB（印刷电路板）">2.1 &nbsp&nbsp<a href="#PCB（印刷电路板）" class="headerlink" title="PCB（印刷电路板）"></a>PCB（印刷电路板）</h2><p>笔记本PCB集成度高，一般6层以上，比如6(较少)，8，10...，不像1或2层板，无法跑线。板层数越多，EMI性能越好，成本也越高。</p>
+<p>PCBA是指PCB上装配按照设定规则指定元件的成品功能板。（元件：电阻，电容，芯片，接口...）</p>
+<div class="note default no-icon"><p>注：PCB, Printed Circuit Board; PCBA, Printed Circuit Board Assembly; EMI, Electromagnetic Interference</p>
+</div>
+
+<h2 id="Chipset（芯片组）">2.2 &nbsp&nbsp<a href="#Chipset（芯片组）" class="headerlink" title="Chipset（芯片组）"></a>Chipset（芯片组）</h2><p>一般指南北桥。（目前北桥已逐渐淘汰）</p>
+<p>常见厂商有：AMD，INTEL，NVDIA，VIA，SIS。</p>
+<p>南桥：North Bridge Chipset，INTEL的为输出&#x2F;输入控制器中心（Input&#x2F;Output Controller Hub，ICH），NVIDIA的为MCP，ATI的称为IXP&#x2F;SB，AMD的为FCH。</p>
+<p>北桥：North Bridge Chipset，INTEL的为GMCH，Graphics &amp; Memory controller hub，带G有集显，无G的无集显。</p>
+<h2 id="CPU（中央处理器）">2.3 &nbsp&nbsp<a href="#CPU（中央处理器）" class="headerlink" title="CPU（中央处理器）"></a>CPU（中央处理器）</h2><p>常见厂商：AMD，INTEL。龙芯，VIA，IBM，Transmeta。</p>
+<p>不同芯片组对应不同的Intel CPU座（针脚不同）</p>
+<p>注：CPU, Center Processor Unit</p>
+<h2 id="Battery（电池）">2.4 &nbsp&nbsp<a href="#Battery（电池）" class="headerlink" title="Battery（电池）"></a>Battery（电池）</h2><ul>
+<li>组成：外壳+控制板+电芯。</li>
+<li>类型：圆柱型、方型、聚合物</li>
+<li>电芯：常见18650型锂离子电芯。单个电压3.7V，充电电压4.2V，电容量为2400mAH。三串两并：电压为3*3.7V，容量为2*2400mAH。</li>
+</ul>
+<h2 id="Adapter（适配器）">2.5 &nbsp&nbsp<a href="#Adapter（适配器）" class="headerlink" title="Adapter（适配器）"></a>Adapter（适配器）</h2><p>输入100~240V的AC（50&#x2F;60Hz），输出16~20V居多。（华硕EPC有9.5V和12V的输出）</p>
+<h1 id="笔记本和台式机的区别">3 &nbsp&nbsp<a href="#笔记本和台式机的区别" class="headerlink" title="笔记本和台式机的区别"></a>笔记本和台式机的区别</h1><ul>
+<li>笔记本自带显示系统（LCD&#x2F;LED，专用屏线接口，自带高压板，灯管）</li>
+<li>笔记本电源统一只由一个电压转出，常见16~20。台式主板由ATX电源提供12V、5V、3.3V等电压。\这个是最大区别，笔记本的工作电压是由板子转换完成（16-20V主供电输入，经PWM电路降压处理，提供待机电压等工作电压），台式主板电源完成（多种方式，不只PWM）。</li>
+<li>笔记本有充放电的电路，可用电池做替代电源。</li>
+<li>为保证笔记本移动性和续航，CPU低功率、节能设计。</li>
+<li>笔记本的保护电路多，过热保护，过电压保护。</li>
+<li>笔记本内置鼠标设备，如指点杆，触摸板。</li>
+<li>笔记本元件集成度高，MOS管多为8脚贴片。专用IC也多。（芯片功能作用原理类似，供电不是太复杂。）</li>
+<li>笔记本6-8层板，夹层中也有信号线。台式主板4层，一般只在正反面有信号线。</li>
+<li>笔记本引入EC（多功能芯片）概念，类似台式主板的IO，但功能更多，因为处理键盘的各种信号（亮度调节，声音调节等快捷键）。部分EC里会带有程序，其脚位功能由程序决定。</li>
+<li>笔记本的时序概念很重要，电压和功能的实现，都由时序控制。环环相扣，前面条件未完成，后面动作就不会执行。</li>
+<li>笔记本维修对电路图依赖很强，需要电路图分析陌生元件，且需要点位图对照。无这些的话，只能维修一些通病。（信号复杂，板子小，整合度高）</li>
+</ul>
+<h1 id="笔记本板号">4 &nbsp&nbsp<a href="#笔记本板号" class="headerlink" title="笔记本板号"></a>笔记本板号</h1><p>板号：板子型号。即工程代号，Project Code</p>
+<p>笔记本大规模的代工厂：广达（quanta），仁宝（compal），纬创（wistron），英业达（inventec），和硕联合（pegatron）。<br>二线代工厂：神达（mitac），蓝天（clevo），大众（fic），微星（msi），精英（ecs）</p>
+<p>OEM代工：品牌商设计，代工厂生产。如苹果，联想（thinkpad）。成本高<br>ODM代工：设计和生产都是代工厂。</p>
+<p>广达：DAO+板号+mb，一般为3个字，如ch3，zq5<br>仁宝：la-xxxxp<br>纬创：板号+mb（有白框）<br>华硕（asus）： 板号+main board（没有位置号，PCB丝印层无标记，若无点位图无法分析）<br>英业达：板号（很长）+mb，一般给hp做得多<br>微星：ms-板号<br>富士康：代工索尼</p>
+<h1 id="主板板子元件">5 &nbsp&nbsp<a href="#主板板子元件" class="headerlink" title="主板板子元件"></a>主板板子元件</h1><p>CPU座，北桥，南桥，内存插槽，独立显卡，显存，SPI BIOS，pice，电池接口，适配器插头，时钟芯片，ec，LCD接口，硬盘接口，键盘接口，光驱接口，读卡器槽。</p>
+<h1 id="笔记本主板架构">6 &nbsp&nbsp<a href="#笔记本主板架构" class="headerlink" title="笔记本主板架构"></a>笔记本主板架构</h1><p>修接口。供电维修看架构没用。</p>
+<p>intel双桥架构：</p>
+<ul>
+<li>CPU管理北桥。</li>
+<li>北桥管内存，独显，显示接口，与cpu的连接的总线---FSB前端总线。北桥与南桥的总线---DMI+CLINK</li>
+<li>南桥管理周边设备，网卡，迷你卡，USB，摄像头，EC，光驱，硬盘等，南桥和EC连接的总线--LPC总线，7根重要信号：LAD0，LAD1，LAD2，LAD3，LFRAME#，LCLK，LRESET#。（诊断卡接9根，外加VCC、GND）</li>
+<li>EC管理键盘，触控板，鼠标，部分挂BIOS（SPI ROM）</li>
+</ul>
+<p>intel单桥架构（无北桥）：</p>
+<ul>
+<li>CPU管理显卡，内存。CPU不管显示接口，通过PCH桥到显示接口（cpu里有集成显卡，通过FDI总线输出）</li>
+<li>pch（管理原来南桥的功能）相比原南桥，增加了显示接口（VGA，LVDS，HDMI等）管理，可能也直接管理SPI rom（BIOS）</li>
+<li>EC管理键盘，温控芯片，触摸板，挂BIOS</li>
+</ul>
+<p>AMD（ATI）双桥架构：</p>
+<ul>
+<li>CPU管内存</li>
+<li>北桥管理所有PCIE，显示接口。网卡（1000M，走PCIE）</li>
+<li>南桥管理USB，网卡（100M，走PCI。），硬盘光驱等</li>
+</ul>
+<p>AMD单桥架构：</p>
+<ul>
+<li>CPU管理内存，显卡，显示接口（这个是与intel的区别）</li>
+<li>桥（fch）管理网卡，mini-pcie，硬盘光驱，USB，EC，声卡等</li>
+<li>EC管键盘，鼠标</li>
+</ul>
+<p>intel和AMD单桥架构无时钟芯片，集成在桥。nvidia的双桥和amd相同。nvidia单桥：CPU管内存，桥管其他。</p>
+<h1 id="名词解释">7 &nbsp&nbsp<a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>复位和PG都是测电压，时钟是测频率（无示波器时，可测电压，33MHz大概1.6V，100MHz大概0.4V）。</p>
+<h2 id="供电和信号">7.1 &nbsp&nbsp<a href="#供电和信号" class="headerlink" title="供电和信号"></a>供电和信号</h2><p>供电一个可以输出电流的电压，电流较大。工作过程中，这个电压不能置高或拉低。供电被拉低，就是短路。一般，也不许置高。（动力来源）。</p>
+<p>常见有19，12，5（往上大电压给接口），3.3（给芯片），2.5，1.8，1.5，1.25，1.05，1.2，1.1，0.9，0.75V。CPU供电0.7-1.5V</p>
+<p>名称一般为：VCC，VDD，VCC3，VDDQ，VTT，VBAT，5VALW，+3VO等（有V字）。苹果的供电特殊，例如PP0V75_s3_mem</p>
+<p>符号为一个圆圈，T型，三角形。表示固定的电压，不允许置高和拉低。信号电压（例如19V）与1.5V（供电）碰在一起会变为1.5V。</p>
+<h2 id="接地">7.2 &nbsp&nbsp<a href="#接地" class="headerlink" title="接地"></a>接地</h2><p>接地是给供电构成回路。有接地，才会有电流流过设备。</p>
+<p>名称一般为：VSS、GND。</p>
+<p>符号：三角形（数字地）；倒三角形多横线（模拟地）。避免数字和模拟连在一起相互干扰。例子：数字地和模拟地通过一个0欧姆电阻PR170(值0_6)，实际测量是通路，但信号不一样。如果这个0欧姆电阻坏了，可能导致烧元件。压差相对值不一样。</p>
+<h2 id="信号">7.3 &nbsp&nbsp<a href="#信号" class="headerlink" title="信号"></a>信号</h2><p>理论上，电压信号值考虑电压变化，电流很小。在工作过程中，可根据需要置高或者拉低。电路图中的信号的箭头不完全代表信号的流向，因为画图人员的随意性。<br>信号方向考经验判断：例如PWRBTN#给南桥的；slp_s3#南桥出来的；therm_stp#温控信号看情况：过温时，温控芯片吧温控信号拉低。</p>
+<h2 id="高低电平">7.4 &nbsp&nbsp<a href="#高低电平" class="headerlink" title="高低电平"></a>高低电平</h2><p>数字逻辑电路中，高电平表示1，低电平表示0。一般规定：低电平为0-0.25V，高电平为3.5-5V。</p>
+<p>主板中，1V以上为高电平，0.7以下为低电平。</p>
+<p>结论：根据电路判断高低电平，非限定特定值。有些电路0.5就是高，有的电路1.1还是低。但0肯定是地，3.3肯定是高。</p>
+<h2 id="脉冲和跳变">7.5 &nbsp&nbsp<a href="#脉冲和跳变" class="headerlink" title="脉冲和跳变"></a>脉冲和跳变</h2><p>上升沿，下降沿。</p>
+<p>类型：高电平跳变为低电平；低电平跳变为高电平；高跳变为低再跳变为高。</p>
+<h2 id="时钟信号">7.6 &nbsp&nbsp<a href="#时钟信号" class="headerlink" title="时钟信号"></a>时钟信号</h2><p>时钟信号CLK（Clock的简写）。为数字电路工作提供一个基准，使各个相连设备统一步调工作。单位Hz。南桥晶振323.768KHz。</p>
+<p>主板上都有一个主时钟产生电路，给所有设备提供时钟，送出到cpu的频率为100MHz以上，送给PCI的是33MHz，送给PCIE的是100MHz，送给USB控制器（集成在南桥内部）的为48MHz。</p>
+<p>相连的两个设备需要相同的时钟频率和电压才能通信，如内存和北桥。</p>
+<p>时钟信号需要在主板正常通电后且时钟芯片工作正常才能测量到，用示波器和万用表（测电压?）测。100M的示波器一般测不了CPU的频率。</p>
+<h2 id="复位信号">7.7 &nbsp&nbsp<a href="#复位信号" class="headerlink" title="复位信号"></a>复位信号</h2><p>复位信号RST（RESET的简写）。复位都是从高电平向低电平跳变再回到高电平，如PCI的复位是从3.3V向0V跳变再回到3.3V就是一个正常的复位跳变。</p>
+<p>名称一般为：xxxRST#，如PCIRST#、CPURST#、IDERST#等。复位只能是瞬间低电平，主板正常工作时复位都是高电平。但不是恒高电平，不能直接接到供电上。如台式机reset键，复位开关弹不起来就一直为低电平，就不行。</p>
+<p>平常说没复位，通常指没复位电压，即复位信号测量点电压为0V。维修一般都是把复位电压修出来。</p>
+<p>所有设备的复位信号，如EC，北桥等，都是由南桥发出。开机的瞬间，便会对设备清零，使其重新工作。</p>
+<h2 id="PG信号">7.8 &nbsp&nbsp<a href="#PG信号" class="headerlink" title="PG信号"></a>PG信号</h2><p>电源好信号PG（powergood的缩写），用来描述供电正常的信号。一般高电平有效。如cpu供电芯片，只有在正常发出cpu电压后，才会发出PG信号。</p>
+<p>名称一般为：PG、PWRGD、PWROK、POK、PWRG、VTTPWRGD、CPUPWRGD等。</p>
+<h2 id="开启信号">7.9 &nbsp&nbsp<a href="#开启信号" class="headerlink" title="开启信号"></a>开启信号</h2><p>开启信号。有的芯片叫EN（enable），使能，高电平时表示开启信号。有的芯片叫SHDN#（shutdown），#表示低电平有效。综合名称和#来看，意思是低电平时关闭芯片，高电平开启。所以一般shutdown信号一般要维持高电平。</p>
+<p>注：信号带#时（低电平有效），一定要结合信号的英文全程去理解。有的带#，为低电平时主板可以正常工作。例如：VT_PWRGD_CK410#信号是cpu供电正常后发出低电平开启时钟信号。1999_SHDN#信号是低电平关闭MAX1999的控制信号，即为高电平时，主板才能正常工作。</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>硬件</tag>
+        <tag>笔记本</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PCB设计</title>
     <url>/cad/pcb/</url>
     <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
@@ -1078,9 +1198,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cad</category>
       </categories>
       <tags>
+        <tag>总结</tag>
         <tag>维修</tag>
         <tag>工具</tag>
-        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -1327,42 +1447,115 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
 <li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
 </ul>
-<h1 id="linux和windows之间的换行符">2 &nbsp&nbsp<a href="#linux和windows之间的换行符" class="headerlink" title="linux和windows之间的换行符"></a>linux和windows之间的换行符</h1><p>windows中的换行符（dos）是\r\n，而linux中的换行符（unix）是\n。若不转换，git可能会视作为被更改的文件，从而造成大量无意义的commit。此外，windows中bat脚本文件要求换行符为\r\n，否则cmd解释器无法正确解析，导致无法正确执行脚本。</p>
-<h2 id="单文件转换">2.1 &nbsp&nbsp<a href="#单文件转换" class="headerlink" title="单文件转换"></a>单文件转换</h2><ul>
+<h1 id="linux和windows之间的文件换行符">2 &nbsp&nbsp<a href="#linux和windows之间的文件换行符" class="headerlink" title="linux和windows之间的文件换行符"></a>linux和windows之间的文件换行符</h1><p>windows中的换行符（dos）是\r\n，而linux中的换行符（unix）是\n。若不转换，git可能会视作为被更改的文件，从而造成大量无意义的commit。此外，windows中bat脚本文件要求换行符为\r\n，否则cmd解释器无法正确解析，导致无法正确执行脚本。</p>
+<p>单文件转换：</p>
+<ul>
 <li>\r\n转\n：<code>dos2unix test.c</code></li>
 <li>\n转\r\n：<code>unix2dos test.c</code></li>
 </ul>
-<h2 id="批量转换">2.2 &nbsp&nbsp<a href="#批量转换" class="headerlink" title="批量转换"></a>批量转换</h2><ul>
+<p>批量转换：</p>
+<ul>
 <li>\r\n转\n：<code>find . -type f -exec dos2unix &#123;&#125; \;</code></li>
 <li>\n转\r\n：<code>find . -type f -exec unix2dos &#123;&#125; \;</code></li>
 </ul>
 <p>详细命令解释：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find .: Find anything in this directory, including its subdirectories, and anything in those subdirectories as well (recursion)</span><br><span class="line">-type f: Only return &#x27;regular file&#x27; names. Exclude folder names from the results.</span><br><span class="line">-exec: Execute the following command for every result. Everything beyond this point should be treated as part of that command until the ; character is found.</span><br><span class="line">dos2unix: dos2unix will be executed with the following options...</span><br><span class="line">-k: Keep the date stamp of the output file the same as the input file</span><br><span class="line">-s: Skip binary files (images, archives, etc.). This option is included by default, but I use it anyway in case that default were different on some systems (e.g. OS X v. Debian v. CentOS v. Ubuntu v. ...).</span><br><span class="line">-o: Write the changes directly to the file, rather than creating a new file with the data in the new format.</span><br><span class="line">&#123;&#125;: This tells find to insert the filename it has found as a parameter of the dos2unix call.</span><br><span class="line">&#x27;;&#x27;: Tell find that the params for dos2unix have ended. Anything beyond this point will again be treated as a parameter of find. 反斜杠\是用于转移分号;</span><br><span class="line">&#x27;&#123;&#125;&#x27; is a placeholder which indicates where in the command you want the filename(s) to be inserted, and &#x27;+&#x27; terminates the said command. You can also run dos2unix once for each filename (by changing &#x27;+&#x27; with &#x27;;&#x27;), but since dos2unix accepts an arbitrary number of input arguments, it’s better to use it (as it avoids spawning many processes).</span><br></pre></td></tr></table></figure>
 
-<h1 id="wget从Github仓库下载特定的文件夹">3 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
+<h2 id="换行符问题导致git同步错误">2.1 &nbsp&nbsp<a href="#换行符问题导致git同步错误" class="headerlink" title="换行符问题导致git同步错误"></a>换行符问题导致git同步错误</h2><p>若出现本地仓库文件和远程仓库文件出现crlf和lf不相同的问题，会导致git代码同步报错。</p>
+<p>解决方法：使用editorconfig文件规定文档。</p>
+<h1 id="Git配置">3 &nbsp&nbsp<a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><h2 id="编辑git特定的config项">3.1 &nbsp&nbsp<a href="#编辑git特定的config项" class="headerlink" title="编辑git特定的config项"></a>编辑git特定的config项</h2><p>打开<code>%USERPROFILE%\.gitconfig</code>文件，编辑特定的设置项即可。</p>
+<h2 id="代理设置">3.2 &nbsp&nbsp<a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br><span class="line">git config --global http.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line">git config --global https.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
 
-<h1 id="克隆">4 &nbsp&nbsp<a href="#克隆" class="headerlink" title="克隆"></a>克隆</h1><h2 id="克隆特定分支">4.1 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br></pre></td></tr></table></figure>
+<h2 id="关于git的重命名操作">3.3 &nbsp&nbsp<a href="#关于git的重命名操作" class="headerlink" title="关于git的重命名操作"></a>关于git的重命名操作</h2><p>git默认对大小写不敏感，一般可通过两种方式避免git未识别大小写操作。</p>
+<p>方式1：中间文件方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git mv（重命名索引，文件夹直接大小写重命名可能无法成功，可以用tmp做中间处理，文件直接大小写无问题）</span></span><br><span class="line">git <span class="built_in">mv</span> myfolder tmp</span><br><span class="line">git <span class="built_in">mv</span> tmp MyFolder</span><br></pre></td></tr></table></figure>
 
-<h1 id="克隆远程仓库中的指定文件或者文件夹">5 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h1><p>以克隆blender手册翻译的简中为例：</p>
+<p>方式2：设置git配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="pull（拉取）">4 &nbsp&nbsp<a href="#pull（拉取）" class="headerlink" title="pull（拉取）"></a>pull（拉取）</h1><h2 id="github从远程仓库拉取">4.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="github从上游拉取未并入主干的拉取请求-pull-request">4.2 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
+
+<h1 id="clone（克隆）">5 &nbsp&nbsp<a href="#clone（克隆）" class="headerlink" title="clone（克隆）"></a>clone（克隆）</h1><h2 id="常规克隆">5.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><p>git clone http链接（可以不包含.git后缀）</p>
+<h2 id="wget从Github仓库下载特定的文件夹">5.2 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
+
+<h2 id="克隆特定分支">5.3 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br><span class="line">git <span class="built_in">clone</span> --recursive -b branch—name url</span><br></pre></td></tr></table></figure>
+
+<h2 id="克隆远程仓库中的指定文件或者文件夹">5.4 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h2><p>以克隆blender手册翻译的简中为例：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line"><span class="comment"># 为当前目录初始化一个git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加上游git链接</span></span><br><span class="line">git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line"><span class="comment"># 设置稀疏检出的筛选目录，sparse-checkout文件里写入要拉取的文件或者文件夹。匹配规则类似.gitignore</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout</span><br><span class="line"><span class="comment"># 或者使用sparse-checkout set命令设置设置稀疏检出的筛选目录</span></span><br><span class="line">git sparse-checkout <span class="built_in">set</span> <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"><span class="comment"># 开启稀疏检出</span></span><br><span class="line">git config core.sparsecheckout <span class="literal">true</span></span><br><span class="line"><span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
 
-<h1 id="Github-LFS">6 &nbsp&nbsp<a href="#Github-LFS" class="headerlink" title="Github LFS"></a>Github LFS</h1><p>Github LFS是收费产品，免费账户只有1G的存储空间和带宽流量（本人已弃用）。</p>
-<p>仓库一旦使用LFS存储，无法直接通过wget或者curl工具下载原文件，只会下载到一个文本指针文件，指向LFS的存储云地址。</p>
-<h2 id="为Git启用LFS">6.1 &nbsp&nbsp<a href="#为Git启用LFS" class="headerlink" title="为Git启用LFS"></a>为Git启用LFS</h2><p>Windows Git LFS大文件管理：windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code>。</p>
-<p>ubuntu安装LFS包：<code>sudo apt install git-lfs</code>。</p>
-<h2 id="LFS基本使用">6.2 &nbsp&nbsp<a href="#LFS基本使用" class="headerlink" title="LFS基本使用"></a>LFS基本使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加LFS需要管理的大文件，如果文件名就是*.txt，则需要用双引号&quot;&quot;包含</span></span><br><span class="line"><span class="comment"># 若无引号，通配符*会被shell扩展，导致LFS跟踪所有txt文件</span></span><br><span class="line">git lfs track test.txt</span><br><span class="line">git lfs track *.txt</span><br><span class="line">git lfs track <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 取消LFS跟踪文件</span></span><br><span class="line">git lfs untrack *.txt</span><br><span class="line"><span class="comment"># 常规git操作都可以处理LFS文件，显式指定lfs命令可提高速度</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line">git pull origin main</span><br><span class="line"><span class="comment"># git lfs clone是检出（checkout）完成后再批量下载所有必需的 Git LFS 文件。利用并行下载的优势，显著减少产生的 HTTP 请求和进程的数量</span></span><br><span class="line">git lfs <span class="built_in">clone</span></span><br><span class="line"><span class="comment"># 同样地，lfs提供拉取速度</span></span><br><span class="line">git lfs pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除lfs，然后手动删除.gitattribute中关于lfs的条目</span></span><br><span class="line">git lfs uninstall</span><br><span class="line"><span class="comment"># 重组织所有文件，可以使标记为lfs文件恢复到正常状态，但不会影响到不关联的文件。</span></span><br><span class="line">git add --renormalize .</span><br><span class="line"><span class="comment"># 重新提交</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<h1 id="commit（提交）">6 &nbsp&nbsp<a href="#commit（提交）" class="headerlink" title="commit（提交）"></a>commit（提交）</h1><h2 id="commit信息的规范化">6.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
+<ul>
+<li>chore</li>
+<li>fix</li>
+<li>feat</li>
+<li>docs</li>
+</ul>
+<h1 id="release（发布）">7 &nbsp&nbsp<a href="#release（发布）" class="headerlink" title="release（发布）"></a>release（发布）</h1><h2 id="常规发布">7.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
+<h2 id="release-note的规范化">7.2 &nbsp&nbsp<a href="#release-note的规范化" class="headerlink" title="release note的规范化"></a>release note的规范化</h2><ul>
+<li>Breaking Changes</li>
+<li>Changes</li>
+<li>New Features</li>
+<li>Features</li>
+<li>Bug Fixes</li>
+<li>Improvements</li>
+<li>Documentation（可缩写 Docs）</li>
+</ul>
+<blockquote>
+<p>注：支持……版本，英文用 Support for …… 表示</p>
+</blockquote>
+<h1 id="添加子仓库">8 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="添加子仓库">7 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="重写历史">9 &nbsp&nbsp<a href="#重写历史" class="headerlink" title="重写历史"></a>重写历史</h1><h2 id="删除所有commit">9.1 &nbsp&nbsp<a href="#删除所有commit" class="headerlink" title="删除所有commit"></a>删除所有commit</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf .git</span><br><span class="line">git init</span><br><span class="line">git remote add origin url（仓库地址） <span class="comment"># git remote -v</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;commit message&#x27;</span></span><br><span class="line">git push --force origin master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意如果使用这种方式，强制推送到远程github仓库的话，实际查看github网站的信息，貌似并没有缩小，可能数据更新有延迟。</p>
+</blockquote>
+<p>还有另外一种方式，在github网站上删除该reop，并重新建立同名repo再推送。</p>
+<h2 id="从所有commit中清除特定文件">9.2 &nbsp&nbsp<a href="#从所有commit中清除特定文件" class="headerlink" title="从所有commit中清除特定文件"></a>从所有commit中清除特定文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --index-filter <span class="string">&#x27;git rm --cached --ignore-unmatch filename&#x27;</span> HEAD <span class="comment">#（*.pdf）</span></span><br><span class="line"><span class="built_in">rm</span> -rf .git/refs/original <span class="comment">#删除git的备份</span></span><br><span class="line">git reflog expire --all --expire=now  <span class="comment">#使所有散落的object失效</span></span><br><span class="line">git fsck --unreachable <span class="comment">#检查是否有散落的object, 验证数据库中对象的连接性和有效性</span></span><br><span class="line">git gc --aggressive --prune=now <span class="comment">#git的垃圾清理车最终删除那些对象, --aggressive 此选项将导致git gc更积极地优化存储库</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="github从上游拉取未并入主干的拉取请求-pull-request">8 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h1><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
+<h1 id="分支管理">10 &nbsp&nbsp<a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="常规操作">10.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="分支管理">9 &nbsp&nbsp<a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="常规分支管理项目">9.1 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
+<h2 id="多人协作的工作流">10.2 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h2><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。</p>
+<h2 id="常规分支管理项目">10.3 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Switched to a new branch &quot;dev&quot;</span></span><br><span class="line">git checkout -b dev</span><br><span class="line"><span class="comment"># Switched to a new branch &quot;hotfix&quot;</span></span><br><span class="line">git checkout -b hotfix</span><br><span class="line"><span class="comment"># 切换到主分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># 合并hotfix分支</span></span><br><span class="line">git merge hotfix</span><br><span class="line"><span class="comment"># 删除hotfix分支</span></span><br><span class="line">git branch -d hotfix</span><br></pre></td></tr></table></figure>
 
-<h2 id="重命名分支并推送到远程仓库">9.2 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="切换分支时有未提交的文件">11 &nbsp&nbsp<a href="#切换分支时有未提交的文件" class="headerlink" title="切换分支时有未提交的文件"></a>切换分支时有未提交的文件</h1><p>应用场景：在dev分支进行开发编写，突然发现master分支有bug，想checkout分支（切换分支），但此时dev分支上有未提交的文件，并且也并不想现在提交。</p>
+<p>解决方案：</p>
+<ol>
+<li>在dev分支上git stash，储藏当前工作区</li>
+<li>checkout到master分支进行bug修复（新建bugfix分支时，完成后合并，删除）</li>
+<li>checkout到dev分支，git stash list</li>
+<li>git stash pop，恢复工作区（该方式恢复的同时也把stash内容删除）。（另一种方式是git stash apply（恢复）后git stash drop（删除））</li>
+</ol>
+<h1 id="远程仓库">12 &nbsp&nbsp<a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="重命名分支并推送到远程仓库">12.1 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="多人协作的工作流">10 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h1><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。重复繁琐的工作交予自动CI&#x2F;CD完成。</p>
-<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.<br>[6] How to run dos2unix on all files with all extensions in a directory and its sun-directories?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun">https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun</a>.<br>[7] How to pull a pull request from upstream in github[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github">https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github</a>.<br>[8] 详解 Git 大文件存储（Git LFS）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/146683392">https://zhuanlan.zhihu.com/p/146683392</a>.<br>[9] Git Sparse Checkout使用指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/shelutai/article/details/123116973">https://blog.csdn.net/shelutai/article/details/123116973</a>.<br>[10] git-sparse-checkout[EB&#x2F;OL]. <a href="https://www.git-scm.com/docs/git-sparse-checkout">https://www.git-scm.com/docs/git-sparse-checkout</a>.<br>[11] Simple steps to uninstall Git LFS from your repository[EB&#x2F;OL]. <a href="https://github.com/git-lfs/git-lfs/issues/3026">https://github.com/git-lfs/git-lfs/issues/3026</a>.<br>[12] zh-cn 与 zh-hans 是什么关系、有什么区别？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/21980689">https://www.zhihu.com/question/21980689</a>.</p>
+<h2 id="删除已经推送到远程仓库中的包含在-gitignore中的文件">12.2 &nbsp&nbsp<a href="#删除已经推送到远程仓库中的包含在-gitignore中的文件" class="headerlink" title="删除已经推送到远程仓库中的包含在.gitignore中的文件"></a>删除已经推送到远程仓库中的包含在.gitignore中的文件</h2><p>.gitignore文件中添加新的文件过滤，但是该文件在之前已经提交到远程仓库分支里，我们需要将远程分支代码中的这个文件移除。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.为避免冲突，同步已下远程仓库最新代码</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.在本地项目目录下删除git缓存</span></span><br><span class="line">git <span class="built_in">rm</span> -r --cached .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.add所有文件：输入以下命令，再次将项目中所有文件添加到本地仓库缓存中</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.本地commit</span></span><br><span class="line">git commit -m <span class="string">&quot;filter new files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.push到远程仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<h2 id="unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054">12.3 &nbsp&nbsp<a href="#unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054"></a>unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>这是由于Http协议错误，刷新缓存即可解决</p>
+<div class="tabs" id="flush_dns"><ul class="nav-tabs"><li class="tab active"><a href="#flush_dns-1">Windows</a></li><li class="tab"><a href="#flush_dns-2">Mac</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flush_dns-1"><p>使用终端命令窗口运行命令：</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="flush_dns-2"><p>使用终端命令窗口运行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br><span class="line">sudo dscacheutil -flushcache</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="更改已提交到远程仓库的commit消息（修改错别字或添加信息）">12.4 &nbsp&nbsp<a href="#更改已提交到远程仓库的commit消息（修改错别字或添加信息）" class="headerlink" title="更改已提交到远程仓库的commit消息（修改错别字或添加信息）"></a>更改已提交到远程仓库的commit消息（修改错别字或添加信息）</h2><ol>
+<li>git rebase -i HEAD~n(N为最近n个提交)</li>
+<li>git会生成一个文件在编辑器打开，在需要修改的commit那一行中，将pick修改为reword，保存关闭</li>
+<li>之后会弹出一个文件，在编辑器修改后保存关闭</li>
+<li>之后强制push到远程仓库</li>
+</ol>
+<h2 id="RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8">12.5 &nbsp&nbsp<a href="#RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8" class="headerlink" title="RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)"></a>RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)</h2><p>因为git文件过大造成的错误，默认缓冲区是1M大小。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000 <span class="comment"># 设置为500M</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Github-LFS">13 &nbsp&nbsp<a href="#Github-LFS" class="headerlink" title="Github LFS"></a>Github LFS</h1><p>Github LFS是收费产品，免费账户只有1G的存储空间和带宽流量（本人已弃用）。</p>
+<p>仓库一旦使用LFS存储，无法直接通过wget或者curl工具下载原文件，只会下载到一个文本指针文件，指向LFS的存储云地址。</p>
+<h2 id="为Git启用LFS">13.1 &nbsp&nbsp<a href="#为Git启用LFS" class="headerlink" title="为Git启用LFS"></a>为Git启用LFS</h2><p>Windows Git LFS大文件管理：windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code>。</p>
+<p>ubuntu安装LFS包：<code>sudo apt install git-lfs</code>。</p>
+<h2 id="LFS基本使用">13.2 &nbsp&nbsp<a href="#LFS基本使用" class="headerlink" title="LFS基本使用"></a>LFS基本使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加LFS需要管理的大文件，如果文件名就是*.txt，则需要用双引号&quot;&quot;包含</span></span><br><span class="line"><span class="comment"># 若无引号，通配符*会被shell扩展，导致LFS跟踪所有txt文件</span></span><br><span class="line">git lfs track test.txt</span><br><span class="line">git lfs track *.txt</span><br><span class="line">git lfs track <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 取消LFS跟踪文件</span></span><br><span class="line">git lfs untrack *.txt</span><br><span class="line"><span class="comment"># 常规git操作都可以处理LFS文件，显式指定lfs命令可提高速度</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line">git pull origin main</span><br><span class="line"><span class="comment"># git lfs clone是检出（checkout）完成后再批量下载所有必需的 Git LFS 文件。利用并行下载的优势，显著减少产生的 HTTP 请求和进程的数量</span></span><br><span class="line">git lfs <span class="built_in">clone</span></span><br><span class="line"><span class="comment"># 同样地，lfs提供拉取速度</span></span><br><span class="line">git lfs pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除lfs，然后手动删除.gitattribute中关于lfs的条目</span></span><br><span class="line">git lfs uninstall</span><br><span class="line"><span class="comment"># 重组织所有文件，可以使标记为lfs文件恢复到正常状态，但不会影响到不关联的文件。</span></span><br><span class="line">git add --renormalize .</span><br><span class="line"><span class="comment"># 重新提交</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h1 id="CI-CD">14 &nbsp&nbsp<a href="#CI-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h1><p>重复繁琐的工作交予自动CI&#x2F;CD完成。</p>
+<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.<br>[6] How to run dos2unix on all files with all extensions in a directory and its sun-directories?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun">https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun</a>.<br>[7] How to pull a pull request from upstream in github[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github">https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github</a>.<br>[8] 详解 Git 大文件存储（Git LFS）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/146683392">https://zhuanlan.zhihu.com/p/146683392</a>.<br>[9] Git Sparse Checkout使用指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/shelutai/article/details/123116973">https://blog.csdn.net/shelutai/article/details/123116973</a>.<br>[10] git-sparse-checkout[EB&#x2F;OL]. <a href="https://www.git-scm.com/docs/git-sparse-checkout">https://www.git-scm.com/docs/git-sparse-checkout</a>.<br>[11] Simple steps to uninstall Git LFS from your repository[EB&#x2F;OL]. <a href="https://github.com/git-lfs/git-lfs/issues/3026">https://github.com/git-lfs/git-lfs/issues/3026</a>.<br>[12] zh-cn 与 zh-hans 是什么关系、有什么区别？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/21980689">https://www.zhihu.com/question/21980689</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -2445,8 +2638,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>系统PATH</li>
 <li>c_cpp_properties.json</li>
 </ul>
-<h1 id="Codeium的帐号token获取">3 &nbsp&nbsp<a href="#Codeium的帐号token获取" class="headerlink" title="Codeium的帐号token获取"></a>Codeium的帐号token获取</h1><p>一般直接通过帐号登录Codeium即可，但如果想要通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token的话，首先需要获取token，获取方式：<a href="https://www.codeium.com/profile?response_type=token&redirect_uri=vim-show-auth-token&state=a&scope=openid%20profile%20email&redirect_parameters_type=query">官网直链获取</a></p>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [Question] How can I get codeium auth token[EB&#x2F;OL]. <a href="https://github.com/Exafunction/codeium.vim/issues/150">https://github.com/Exafunction/codeium.vim/issues/150</a>.</p>
+<h1 id="源代码管理">3 &nbsp&nbsp<a href="#源代码管理" class="headerlink" title="源代码管理"></a>源代码管理</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，第一次用vs code进行commit时，若使用「同步更改」命令提示说找不到远程仓库时，可以直接使用「推送到」命令。</p>
+<h1 id="Codeium的帐号token获取">4 &nbsp&nbsp<a href="#Codeium的帐号token获取" class="headerlink" title="Codeium的帐号token获取"></a>Codeium的帐号token获取</h1><p>一般直接通过帐号登录Codeium即可，但如果想要通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token的话，首先需要获取token，获取方式：<a href="https://www.codeium.com/profile?response_type=token&redirect_uri=vim-show-auth-token&state=a&scope=openid%20profile%20email&redirect_parameters_type=query">官网直链获取</a></p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [Question] How can I get codeium auth token[EB&#x2F;OL]. <a href="https://github.com/Exafunction/codeium.vim/issues/150">https://github.com/Exafunction/codeium.vim/issues/150</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -2457,6 +2651,409 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>vscode</tag>
         <tag>编辑器</tag>
         <tag>链接</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英文词典常用缩写</title>
+    <url>/english/abbr/</url>
+    <content><![CDATA[<ul>
+<li>abbr. abbreviations 缩写</li>
+<li>v. verb 动词</li>
+<li>vt. transitive verb 及物动词</li>
+<li>vi. intransitive verb 不及物动词</li>
+<li>n. noun 名词</li>
+<li>adj. adjective 形容词</li>
+<li>adv. adverb 副词</li>
+<li>prep. preposition 介词</li>
+<li>pron. pronoun 代词</li>
+<li>conj. conjunction 连词</li>
+<li>abbr. abbreviation 缩写</li>
+<li>det. determiner 限定词</li>
+<li>sing. singular 单数</li>
+<li>pl. plural 复数</li>
+<li>exclamation 感叹词</li>
+<li>symb. symbol 符号</li>
+<li>opp. opposite 反义词</li>
+<li>syn. synonym 同义词</li>
+<li>fig. figurative 比喻的</li>
+<li>derog. derogatie 贬义的</li>
+<li>fml. formal 用于正式文体</li>
+<li>infml. informal 用于非正式文体</li>
+<li>BrE 英国英语</li>
+<li>AmE 美国英语</li>
+<li>C countable 可数名词</li>
+<li>U uncountable 不可数名词</li>
+<li>sb. somebody 某人</li>
+<li>sth. something 某事物</li>
+<li>pt past tense 过去时</li>
+<li>pp past participle 过去分词</li>
+<li>[计] 计算机</li>
+<li>[物] 物理</li>
+<li>[电] 电路</li>
+<li>[医] 医学</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>词典</tag>
+        <tag>缩写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编程英文术语</title>
+    <url>/english/code/</url>
+    <content><![CDATA[<ul>
+<li>crud 增删改查（create&#x2F;retrieve&#x2F;update&#x2F;delete）</li>
+<li>功能特性相关<ul>
+<li>feature 特性，指事物有鲜明特征方面的属性，对应到产品或解决方案所具有的特征<ul>
+<li>feature-&gt;what&#39;s the difference?</li>
+</ul>
+</li>
+<li>function 功能，强调产品的目的和用途<ul>
+<li>目前许多数字产品的特点也正好是其所包含的多种功能，传统产品中则较容易区分这二者。介绍一个全新开发的且无人认识的产品时，应该先介绍function。</li>
+<li>以手机为例，手机的function是用来打电话，不同手机的feature在于系统或者硬件配置上的差别。</li>
+<li>function-&gt;what&#39;s this?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>密码相关<ul>
+<li>passphrase: a string that is formed a memorable phrase, by selecting certain characters.<ul>
+<li>比如: 密码是IAtEaBurger@2pm. I ate a burger at 2 pm.</li>
+<li>方便人们记忆，也保证了密码的复杂度.</li>
+</ul>
+</li>
+<li>password: a sequence of characters that the user knows.<ul>
+<li>密码泛指人们所知道的一系列的由字符组成的. 比如普通的密码.</li>
+</ul>
+</li>
+<li>passcode: a sequence of numbers.<ul>
+<li>比如four-digit PIN.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>改动&#x2F;重构相关<ul>
+<li>这三个指改动，希望改动能够达到最好的效果（一般是在已存在的软件中发现一些问题时做出改动），但不保证其能改善任何东西。<ul>
+<li>architecture 指软件项目规模很大<ul>
+<li>rearchitecturing 大规模代码改动修复严重问题</li>
+</ul>
+</li>
+<li>design 指软件架构，规模较小，通常用于指APIs和UI组件<ul>
+<li>redesigning API改动和用户交互层的改动</li>
+</ul>
+</li>
+<li>rewriting 通常也指小规模的改动<ul>
+<li>例如rewrite一个函数，用更好的代码替换它</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>refactoring 更加具体，快速开发中，这些改动覆盖于单元测试refactoring不改动程序的行为（不破坏任何单元测试），但从维护的观点上看，改动的代码改善了软件。</li>
+<li>refactoring用于改写还行，但不建议用rearchitecturing、redesigning、rewriting（red flags），可能User Ineterface用redesign算个例外。</li>
+</ul>
+</li>
+<li>数据单位相关<ul>
+<li>1 kB(kilobyte) &#x3D; 1000 bytes</li>
+<li>1 KiB(kibibyte, kilo binary byte) &#x3D; 1024 bytes</li>
+</ul>
+</li>
+<li>undifined behavior 未定义行为，编程语言标准中没有定义它，编译器爱怎么做都行，执行的结果就是不可预料的。</li>
+<li>进制相关<ul>
+<li>binary</li>
+<li>octal &#x2F;ˈɒkt(ə)l&#x2F;　adj.八进制的</li>
+<li>decimal adj. 十进制的</li>
+<li>hexadecimal adj. 十六进制的</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>英文</tag>
+        <tag>术语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英文词汇日常总结</title>
+    <url>/english/daily/</url>
+    <content><![CDATA[<ul>
+<li>anode &#x2F;ˈænəʊd&#x2F;　n.阳极，（电解池）正极</li>
+<li>cathode &#x2F;ˈkæθəʊd&#x2F;　n.阴极，（电解池）负极<ul>
+<li>同kathode</li>
+</ul>
+</li>
+<li>recursive adj.递归的，循环</li>
+<li>melancholy &#x2F;ˈmelənkəli&#x2F;　n.忧郁，伤悲 adj.（令人）悲哀的，沮丧的</li>
+<li>melody n.旋律；曲调；（尤指）主旋律</li>
+<li>remark n.注意 v.察觉</li>
+<li>introspection n.内省；反省</li>
+<li>one..., the other...（总数量两个）<ul>
+<li>one..., another...（总数量两个以上，another在此处自身代指的事物就表明超过一个）</li>
+</ul>
+</li>
+<li>sugar buns infml.(主要美国和加拿大) 感情用语，同sweatheart</li>
+<li>get it 明白了一些之前不明白的事情</li>
+<li>got it 明白了某件事情的表达（事情的传达）</li>
+<li>get wasted 喝醉了，烂醉如泥的<ul>
+<li>形容微醺：tipsy buzzed</li>
+<li>形容大醉：hammered blasted get plastered shit-faced（语气较重，看场合用）</li>
+</ul>
+</li>
+<li>make yourself useful 让对方别闲着，干点事情</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电力专业英文术语</title>
+    <url>/english/electrical-pro/</url>
+    <content><![CDATA[<h1 id="电路基础（Fundamentals-of-Electronic-Circuits）">1 &nbsp&nbsp<a href="#电路基础（Fundamentals-of-Electronic-Circuits）" class="headerlink" title="电路基础（Fundamentals of Electronic Circuits）"></a>电路基础（Fundamentals of Electronic Circuits）</h1><h2 id="电路原理（Circuit-Theory）">1.1 &nbsp&nbsp<a href="#电路原理（Circuit-Theory）" class="headerlink" title="电路原理（Circuit Theory）"></a>电路原理（Circuit Theory）</h2><ul>
+<li>element n.成分，元件</li>
+<li>interconnect vt.使互相连接</li>
+<li>node n.节点</li>
+<li>branch n.树枝，分枝，分部，支流，支脉 v.出现分岐</li>
+<li>loop n.环，循环，线圈（绳），弯曲部分，回路，回线 vt.使成环，使成圈，以环相连 vi.打环，翻筋斗</li>
+<li>topology n.拓扑，布局，拓扑学</li>
+<li>configuration n.构造，结构，配置，外形</li>
+<li>terminal n.终点站，终端，接线端</li>
+<li>resistor n.[电]电阻器</li>
+<li>independent n.独立自主者，无党派者 adj.独立自主的，不受约束的</li>
+<li>series n.连续，系列，级数，串联</li>
+<li>parallel adj.平行的，相同的，类似的，并联的 n.平行线，平行面，相似物 v.相应，平行</li>
+<li>impedance n.[电&#x2F;物]阻抗，[物]全电阻</li>
+<li>theorem n.定理，法则（数）</li>
+</ul>
+<h2 id="模电和数电（Analog-and-Digital-Circuits）">1.2 &nbsp&nbsp<a href="#模电和数电（Analog-and-Digital-Circuits）" class="headerlink" title="模电和数电（Analog and Digital Circuits）"></a>模电和数电（Analog and Digital Circuits）</h2><ul>
+<li>analog n.(AmE)类似物；模拟 adj.(AmE)模拟的，指针式的<ul>
+<li>analogue n.&#x2F;adj.(BrE)同上</li>
+</ul>
+</li>
+<li>digital n.数字，数字式 adj.数字的，数位的</li>
+<li>thermometer n.温度计，体温计</li>
+<li>Fahrenheit n.华氏温度计 adj.华氏温度计的</li>
+<li>drum n.鼓，鼓声，鼓形圆筒 vt.打鼓奏 vi.击鼓，做鼓声</li>
+<li>discrete adj.不连续的，离散的</li>
+<li>original adj.最初的，原始的，独创的，新颖的 n.原物，原作</li>
+<li>remote adj.遥远的，偏僻的，细微的</li>
+<li>bulb n.鳞茎，球形物</li>
+<li>Morse code 莫尔斯电码</li>
+<li>pulse n.脉搏，脉冲</li>
+<li>buzzer n.蜂鸣器，信号手，嗡嗡作声的东西</li>
+<li>manipulate vt.(熟练地)操作，使用（机器），操纵（人或市场、市场），利用，应付</li>
+<li>destination n.目的地，[计]目的文件，目的单元格</li>
+<li>humidity n.湿气，潮湿，湿度</li>
+<li>comparator n.比较仪</li>
+<li>trigger vt.引发，引起，触发 vi.转义，换车 n.扳机</li>
+<li>sequence n.次序，顺序，序列</li>
+<li>parallel n.平行的，相同的，类似的，并联的 n.平行线，平行面，相似物 v.相应，平行</li>
+<li>serial adj.连续的，串行的，顺次</li>
+<li>decoder n.解码器</li>
+<li>reassemble vt.重新召集 vi.重新集合</li>
+</ul>
+<h2 id="三相电（Three-Phase-Circuits）">1.3 &nbsp&nbsp<a href="#三相电（Three-Phase-Circuits）" class="headerlink" title="三相电（Three-Phase Circuits）"></a>三相电（Three-Phase Circuits）</h2><ul>
+<li>transformer n.变压器</li>
+<li>single-phase 单相</li>
+<li>pulsate vi.脉动</li>
+<li>three-phase power 三相电源</li>
+<li>three-phase circiut 三相电路</li>
+<li>the parallelogram method 平行四边形法则</li>
+<li>wye connection 星形连接</li>
+<li>delta connection 三角形连接</li>
+<li>phase voltage 相电压</li>
+<li>line voltage 线电压</li>
+<li>confuse vt.使混乱，使更难于理解，使困窘，使困惑 vi.使糊涂</li>
+<li>voltmeter n.电压表</li>
+<li>ammeter n.电流表</li>
+<li>clamp-on ammeter 钳式安培表</li>
+</ul>
+<h1 id="电力电子（Power-Electronics）">2 &nbsp&nbsp<a href="#电力电子（Power-Electronics）" class="headerlink" title="电力电子（Power Electronics）"></a>电力电子（Power Electronics）</h1><ul>
+<li>solid-state adj.固态的</li>
+<li>computation n.计算，估计</li>
+<li>integration n.结合，整合，一体化</li>
+<li>dynamic adj.动态的，充满活力的，不断变化的 n.动态，动力学，活力</li>
+<li>mercury-arc [医]汞弧<ul>
+<li>Mercury n.水星</li>
+</ul>
+</li>
+<li>valve n.阀，真空管，活栓 vt.装阀（于），以活门调节</li>
+<li>semiconductor n.[物理]半导体</li>
+<li>switching n.开关，转换，交换，配电 v.转换</li>
+<li>diode n.二极管</li>
+<li>inverter n.逆变器（反用换流器），变极器</li>
+<li>thyristor n.半导体闸流管，硅可控整流器</li>
+<li>inverter thyristor 晶体管逆变器，可控硅环流器，可控硅逆变器</li>
+<li>transistor n.晶体管，晶体管收音机，半导体收音机</li>
+<li>transmission n.播送，传送，信息，传动装置</li>
+<li>substantial adj.结实的，牢固的，重大的 n.本质，重要材料</li>
+<li>fluorescent lamp ballast 荧光灯镇流器</li>
+<li>mercury n.水银，汞</li>
+<li>therminoic adj.[物]热电子的，热离子的</li>
+<li>HVDC transmission system 高压直流输电系统</li>
+<li>induction motor 感应电动机</li>
+<li>vacuum n.真空，空间 adj.真空的 vt.用真空吸尘器打扫</li>
+<li>dissipate v.驱散，使（云&#x2F;雾&#x2F;疑虑）消散</li>
+<li>rectifier n.纠正者，整顿者，整流器</li>
+<li>triggered adj.触发的</li>
+<li>thyratron n.[电]闸流管</li>
+<li>ignitron n.引燃管，放电管</li>
+<li>cycloconverter n.周波变换器，循环换流器，双向离子变频器</li>
+<li>traic n.[电]三端双向可控硅开关元件</li>
+<li>a scope of 一个范围</li>
+<li>spectrum n.谱，光谱，范围，系列，幅度</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>英文</tag>
+        <tag>术语</tag>
+        <tag>电力</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件英文</title>
+    <url>/english/software/</url>
+    <content><![CDATA[<h1 id="CG术语">1 &nbsp&nbsp<a href="#CG术语" class="headerlink" title="CG术语"></a>CG术语</h1><ul>
+<li>CG Computer Graphic 计算机图像</li>
+<li>CGer 指使用计算机生成图像的用户</li>
+<li>CGI Computer Graphic Image 计算机图像</li>
+<li>DDC Digital Content Creation(Creating) 数字内容创作<ul>
+<li>What is your favorite DCC tool?</li>
+<li>What is the DCC tools you use?</li>
+</ul>
+</li>
+<li>AOVs Arbitrary Output Variables 任意输出变量<ul>
+<li>渲染分层：AO、渲染属性、灯光、速度、景深、法线、IDs、自定义的属性等（根据渲染和后期的实际需要）</li>
+</ul>
+</li>
+</ul>
+<h1 id="Blender-2-80-Fundamentals-Official-Video">2 &nbsp&nbsp<a href="#Blender-2-80-Fundamentals-Official-Video" class="headerlink" title="Blender 2.80 Fundamentals - Official Video"></a>Blender 2.80 Fundamentals - Official Video</h1><h2 id="第一集">2.1 &nbsp&nbsp<a href="#第一集" class="headerlink" title="第一集"></a>第一集</h2><ul>
+<li>fantastic adj.出色的；极好的；很大的；怪诞的</li>
+<li>be mostly known for sth. 以...而闻名；最出名的是...</li>
+<li>modeling capabilities 建模能力</li>
+<li>feature films 故事片</li>
+<li>TV series 电视剧</li>
+<li>a bunch of 一群；一束；一堆（许多）</li>
+<li>as from... &#x2F;as of... 自...起（起始时间或日期）<ul>
+<li>and as of recently 2d animation and real-time rendering（还有最近的2d动画和实时渲染）</li>
+</ul>
+</li>
+<li>video series 视频系列</li>
+<li>serve as 充当，担任<ul>
+<li>serve as an encyclopedia of sorts for fundamentals of blender（作为一本blender各种基础知识的百科全书）</li>
+</ul>
+</li>
+<li>veteran &#x2F;ˈvetərən&#x2F;　adj.老手，经验丰富的</li>
+<li>centain adj.某事，某种，某人（不提及细节）<ul>
+<li>I&#39;ll be going over cetain topics that should be helpful for both beginners and veteran blener users, especially with the recent update.（我将会仔细研究某些话题，应该会对新手和经验丰富的blender用户有所帮助，特别是在最近的更新下。）</li>
+</ul>
+</li>
+</ul>
+<h2 id="第二集">2.2 &nbsp&nbsp<a href="#第二集" class="headerlink" title="第二集"></a>第二集</h2><ul>
+<li>intimidating adj.吓人的，令人胆怯的<ul>
+<li>seem intimidating</li>
+</ul>
+</li>
+<li>arguably adv.按理，可论证地</li>
+<li>handy adj.易使用的；便利的 n.显示，显像（计算机屏幕）</li>
+<li>gizmo n.小装置，小玩意儿（个人理解为控件widget）</li>
+<li>axis n.轴，坐标轴，对称中心轴</li>
+<li>respond to 响应，作出反应<ul>
+<li>notice how it responds to our cursor floating above each axis（注意它是如何对鼠标浮动在每个坐标上面作出反应）</li>
+</ul>
+</li>
+<li>indicator n.指针，指示器；指示信号，标志</li>
+<li>perspective adj.透视的 n.视角，景观；透视法；态度；客观判断力</li>
+<li>orthographic adj.正交的</li>
+<li>snap v.移到某位置，打开，关上 exclamation 真巧（对于两件相同事物惊讶）</li>
+<li>corresponding adj.符合的，相关的</li>
+<li>achieve v.达到；完成<ul>
+<li>achieve the same effect 达到相同效果</li>
+<li>accomplish the same task</li>
+</ul>
+</li>
+<li>cursor n.光标，游标（计算机屏幕）</li>
+<li>pivot n.中心点，核心 v.使在枢轴上旋转</li>
+<li>around adv. 围绕，环绕；周围，四周；出现；大约</li>
+<li>particular adj.特指的；特别的</li>
+<li>point n. 某地方，地点 v.指，指向<ul>
+<li>point out 指出</li>
+</ul>
+</li>
+<li>center&#x2F;centre v. 把...放在中央</li>
+<li>frame v. 给...做框；给...镶边<ul>
+<li>reframe your perspective to focus on the object or objects you have selected（重新构建视角以专注于选择的一个或多个物体）</li>
+</ul>
+</li>
+<li>period n. 句点；周期；一段时间<ul>
+<li>period key 句点键</li>
+</ul>
+</li>
+<li>number pad&#x2F;numpad 数字键</li>
+<li>self-explanatory adj.无须解释的；一目了然的</li>
+<li>magnifying glass 放大镜</li>
+<li>scroll n.卷轴 v.滚动<ul>
+<li>scroll wheel 滑轮，滚轮</li>
+</ul>
+</li>
+<li>plus n.加号；优势 adj.多，余；好的；零度以上 prep.加 conj.此外，况且</li>
+<li>minus n.减号 adj.负的 prep.减去；零下，欠缺</li>
+<li>bring you into the eyes of your camera 带你进入摄像机视角</li>
+<li>eventually adv.最后，终于</li>
+<li>alternatively adv.或者</li>
+<li>go ahead 发生，进行；先走，走在前面<ul>
+<li>I went ahead and setup up a scene here to maka it more obvious to you（在这里我提前设置好了一个场景，让你更容易理解）</li>
+</ul>
+</li>
+<li>take sth. into account&#x2F;take account of sth. 考虑到...，顾及...</li>
+<li>flatten v.变平，把...弄平</li>
+<li>angle v.斜置，斜移</li>
+<li>immensely adv. 极端地，非常，极大地</li>
+<li>accurate adj. 准确的</li>
+<li>in relation to (事物间)关系，关联（翻译常为「关于...」「在...方面」）<ul>
+<li>say v. 比方说，假设</li>
+<li>this is an unrealistic view but helps immensely with making models accurate especially in relation to say a 2d concept sketch（这不是一个真实视图，但对于制作精确模型有很大帮助，尤其是在2d概念草图方面）</li>
+</ul>
+</li>
+</ul>
+<h2 id="第三集">2.3 &nbsp&nbsp<a href="#第三集" class="headerlink" title="第三集"></a>第三集</h2><ul>
+<li>flexible adj.灵活的，可变动的，柔韧的<ul>
+<li>can be flexible enough to fit the workflow you need</li>
+</ul>
+</li>
+<li>go over sth. 反复研究，仔细琢磨；仔细检查...</li>
+<li>interpret v.领会；说明；口译；演绎（角色&#x2F;音乐）</li>
+<li>interact v.相互作用，相互影响；交流，沟通，合作<ul>
+<li>interact with sth. 与...互动</li>
+</ul>
+</li>
+<li>let&#39;s go over some of the basics on how to interpret and interact with blender&#39;s UI. （让我们一起仔细研究一些关于如何领会及与blender UI交互的基础）</li>
+<li>informative adj.提供有用信息的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -3009,12 +3606,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>笔记</tag>
+        <tag>软件</tag>
         <tag>office</tag>
         <tag>excel</tag>
         <tag>word</tag>
         <tag>ppt</tag>
         <tag>powerpoint</tag>
-        <tag>软件</tag>
         <tag>操作</tag>
       </tags>
   </entry>
@@ -3828,8 +4425,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>troubleshooting</category>
       </categories>
       <tags>
-        <tag>维修</tag>
         <tag>总结</tag>
+        <tag>维修</tag>
         <tag>系统</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
@@ -4181,13 +4778,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>troubleshooting</category>
       </categories>
       <tags>
-        <tag>维修</tag>
+        <tag>硬件</tag>
         <tag>总结</tag>
+        <tag>维修</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-        <tag>硬件</tag>
       </tags>
   </entry>
   <entry>
@@ -4361,8 +4958,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>troubleshooting</category>
       </categories>
       <tags>
-        <tag>维修</tag>
         <tag>总结</tag>
+        <tag>维修</tag>
         <tag>系统</tag>
         <tag>linux</tag>
         <tag>终端</tag>
@@ -4540,8 +5137,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>troubleshooting</category>
       </categories>
       <tags>
-        <tag>维修</tag>
         <tag>总结</tag>
+        <tag>维修</tag>
         <tag>软件</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
@@ -4577,11 +5174,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#121;&#x6f;&#x75;&#x2e;&#99;&#111;&#109;">&#110;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#121;&#x6f;&#x75;&#x2e;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;">&#49;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;">&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x73;&#x2e;&#x63;&#111;&#x6d;">&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x73;&#x2e;&#x63;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#104;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#109;">&#110;&#111;&#64;&#116;&#104;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#46;&#x63;&#x6f;&#109;">&#49;&#64;&#49;&#46;&#x63;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#56;&#64;&#x38;&#46;&#x63;&#111;&#x6d;">&#56;&#64;&#x38;&#46;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#107;&#x73;&#46;&#99;&#111;&#x6d;">&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#107;&#x73;&#46;&#99;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -4937,8 +5534,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>troubleshooting</category>
       </categories>
       <tags>
-        <tag>维修</tag>
         <tag>总结</tag>
+        <tag>维修</tag>
         <tag>系统</tag>
         <tag>windows</tag>
         <tag>计算机</tag>
@@ -7117,6 +7714,247 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>IELTS雅思词汇圣经：6分词汇</title>
+    <url>/english/IELTS/score6/</url>
+    <content><![CDATA[<h1 id="list1"><a href="#list1" class="headerlink" title="list1"></a>list1</h1><ul>
+<li>abstract adj.抽象的 n.摘要，概要<ul>
+<li>thinking in abstract terms 抽象思维</li>
+<li>同 theoretical 反 concrete</li>
+</ul>
+</li>
+<li>abundance n.大量,充足<ul>
+<li>an abundance of sth. 大量的……</li>
+<li>同 sufficiency 反lack</li>
+</ul>
+</li>
+<li>abuse v.滥用，妄用；虐待（尤指性）n.滥用[U,sing.]，虐待[U,pl.]<ul>
+<li>abuse sb.&#x2F;sth. 虐待……&#x2F;滥用……</li>
+<li>abuse of power 滥用职权</li>
+<li>child abuse 儿童虐待</li>
+<li>同 misapply, make ill use of; ill-treat</li>
+</ul>
+</li>
+<li>baggage n.(AmE)行李<ul>
+<li>同 luggage</li>
+</ul>
+</li>
+<li>candidate n.候选人，申请人（竞选&#x2F;求职）<ul>
+<li>candidate for sth. ……的候选人</li>
+<li>同 applicant, seeker</li>
+</ul>
+</li>
+<li>canteen n.食堂，餐厅</li>
+<li>capable adj.有能力的，有才能的<ul>
+<li>be capable of doing 有能力做……</li>
+<li>同 able,competent 反 incapable</li>
+</ul>
+</li>
+<li>capacity n.容量；能力<ul>
+<li>a capacity of num+单位 有……的容量</li>
+<li>同 ability</li>
+</ul>
+</li>
+<li>capital n.资本，资金；首都；大写字母</li>
+<li>data n.资料，数据</li>
+<li>date n.日期，日子；年份 v.存在，追溯<ul>
+<li>date back to medieval times 始于中世纪</li>
+<li>date back hundreds of years 追溯到几百年前</li>
+<li>date from the 17th century 自17世纪起</li>
+</ul>
+</li>
+<li>economy n.经济</li>
+<li>edition n.版本（出版）<ul>
+<li>同 version</li>
+</ul>
+</li>
+<li>facilitate v.促进，促使，使便利<ul>
+<li>同 ease</li>
+</ul>
+</li>
+<li>facilities n.设施，设备<ul>
+<li>sporting facilities 运动设施</li>
+</ul>
+</li>
+<li>gamble v.赌博（用钱）<ul>
+<li>gamble sth away 赌掉xx</li>
+<li>gamble on sth.&#x2F;on doing sth. 冒……的风险&#x2F;碰……的运气</li>
+<li>同 bet, try one&#39;s luck</li>
+</ul>
+</li>
+<li>gang n.一群，一伙（闹事青少年）</li>
+<li>hairdresser n.理发师</li>
+<li>identification n.身份证明<ul>
+<li>同 recognition</li>
+</ul>
+</li>
+<li>identify v.确认、证明<ul>
+<li>identify sb.&#x2F;sth. 鉴别出……</li>
+<li>identify sb. with sth. 把某人视为……</li>
+<li>同 determine</li>
+</ul>
+</li>
+<li>idiom n.习语，成语，惯用语</li>
+<li>idle adj.闲散的，无工作的 v.无所事事；闲荡<ul>
+<li>idle sb.&#x2F;sth. (暂时性)关闭工厂，使工人闲着</li>
+<li>近 inactive,lazy 反 busy（adj.&#x2F;n.）</li>
+<li>idle和busy&#x2F;load也常用于计算机</li>
+</ul>
+</li>
+<li>jar n.广口瓶</li>
+<li>jealous adj.嫉羡的，羡慕的<ul>
+<li>be jealous of sb.&#x2F;sth. 妒忌……</li>
+<li>近 envious</li>
+</ul>
+</li>
+<li>labour n.劳动，劳力 v.努力做（困难的事）；干苦力活<ul>
+<li>labour to do sth. 努力做……</li>
+<li>近 work</li>
+</ul>
+</li>
+<li>lack v.没有（某事物），缺乏，缺少，不足<ul>
+<li>近 need（provide assistance in need 提供帮助）（need指缺乏，食物、钱、生活来源）</li>
+</ul>
+</li>
+<li>magnify v.放大；夸张，夸大<ul>
+<li>同 enlarge 反 minify</li>
+</ul>
+</li>
+<li>naive adj.缺乏经验的，幼稚无知的；天真的<ul>
+<li>同 innocent, simple</li>
+</ul>
+</li>
+<li>overview n.(fml.)综览，概观，概述</li>
+<li>pension n.养老金，抚恤金，退休金 v.发送养老金<ul>
+<li>pension sb. off 准许&#x2F;强迫某人退休(并发送养老金)</li>
+</ul>
+</li>
+<li>perceive v.理解，认为；意识到，注意到<ul>
+<li>sb.&#x2F;sth. be perceived to be&#x2F;have sth.人们认为某人某物……（常用被动）</li>
+<li>同 detect</li>
+</ul>
+</li>
+<li>percent n.百分之…… adj.每一百中</li>
+<li>percentage n.百分比；利润的分成，提成</li>
+<li>responsible adj.有责任的，承担义务的，负责<ul>
+<li>be responsible for doing&#x2F;sb.&#x2F;sth. 对……有责任</li>
+<li>be responsible to sb.&#x2F;sth. （向上级）负责，承担责任</li>
+<li>同 accountable</li>
+</ul>
+</li>
+<li>restore v.回复（某种情况&#x2F;感受）<ul>
+<li>restore sb.&#x2F;sth. to sth. 使……复原……</li>
+<li>同 recover</li>
+</ul>
+</li>
+<li>restrain v.制止，管制（武力）；约束，控制<ul>
+<li>restrain yourself from doing&#x2F;sth. 约束自己不做……</li>
+<li>同 inhibit</li>
+</ul>
+</li>
+<li>setback n.挫折，阻碍</li>
+<li>severe adj.严格的，苛刻的，纪律严明的；十分严重的；艰难的；过于简朴的<ul>
+<li>be severe with sb. 对……严格</li>
+</ul>
+</li>
+<li>shabby adj.因使用过久或管理不善而破旧；不公正的，不合理的</li>
+<li>shallow adj.浅的；肤浅的，浅薄的<ul>
+<li>同 superficial 反 deep</li>
+</ul>
+</li>
+<li>yield v.出产（作物），产生（效益）；屈服，让步；放弃，缴出；变形，弯曲；给……让路 n.产量，产出，利润<ul>
+<li>yield to sb.&#x2F;sth. 屈服于……（不情愿同意）</li>
+<li>yield to the demands 不情愿同意要求</li>
+<li>yield sb.&#x2F;sth. (up)(to sb) 放弃&#x2F;缴出……</li>
+<li>yield up the gun 缴枪</li>
+<li>yield to oncoming traffic 会车让行</li>
+</ul>
+</li>
+<li>youngster n.(infml.)年轻人，少年，儿童<ul>
+<li>同 juvenile</li>
+</ul>
+</li>
+</ul>
+<h1 id="list2"><a href="#list2" class="headerlink" title="list2"></a>list2</h1><ul>
+<li>abandon v.离弃，舍弃<ul>
+<li>同 desert,forsake 反reclaim</li>
+</ul>
+</li>
+<li>abnormal adj.反常的，变态的<ul>
+<li>反normal</li>
+</ul>
+</li>
+<li>absorb v.吸收<ul>
+<li>同give out</li>
+</ul>
+</li>
+<li>bacteria n.(pl.)细菌<ul>
+<li>sing. bacterium</li>
+</ul>
+</li>
+<li>badminton n.羽毛球运动</li>
+<li>cafeteria n.自助餐厅，自助食堂<ul>
+<li>同 coffee shop, lunchroom</li>
+</ul>
+</li>
+<li>calculate v.计算，推算<ul>
+<li>同 compute, estimate</li>
+</ul>
+</li>
+<li>calendar n.日历，挂历<ul>
+<li>同 programme</li>
+</ul>
+</li>
+<li>campus n.校园，校区（大学、学院的）</li>
+<li>cancel v.取消，撤销<ul>
+<li>同 drop, call off</li>
+</ul>
+</li>
+<li>damage n.&#x2F;v.损失，损害，损毁<ul>
+<li>同 ingury&#x2F;ingure</li>
+</ul>
+</li>
+<li>damp n.不完全干燥的，潮湿的<ul>
+<li>反 dry</li>
+</ul>
+</li>
+<li>dash v.猛冲，突进<ul>
+<li>同 rush</li>
+</ul>
+</li>
+<li>ease n.容易，不费劲<ul>
+<li>反 burden</li>
+</ul>
+</li>
+<li>ecology n.生态关系，生态学</li>
+<li>fabric n.织物，布料<ul>
+<li>同 material</li>
+</ul>
+</li>
+<li>fabulous adj.极好的，绝妙的<ul>
+<li>同 wonderful</li>
+</ul>
+</li>
+<li>gallery n.走廊，柱廊</li>
+<li>habitat n.自然环境（动&#x2F;植物的），栖息地</li>
+<li>ideal adj.理想的，完美的；最合适的 n.完美的人或事物<ul>
+<li>同 flawless,perfect</li>
+</ul>
+</li>
+<li>idealism n.理想主义者，唯心论</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+        <category>IELTS</category>
+      </categories>
+      <tags>
+        <tag>英文</tag>
+        <tag>雅思</tag>
+        <tag>IELTS</tag>
+        <tag>词汇</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -7691,9 +8529,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-TbXfGQBiYIBKojED" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-TbXfGQBiYIBKojED").style.height=document.getElementById("mmedia-TbXfGQBiYIBKojED").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-CAUquEHLzNdxNpkn" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-CAUquEHLzNdxNpkn").style.height=document.getElementById("mmedia-CAUquEHLzNdxNpkn").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-TbXfGQBiYIBKojED").style.height=document.getElementById("mmedia-TbXfGQBiYIBKojED").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-CAUquEHLzNdxNpkn").style.height=document.getElementById("mmedia-CAUquEHLzNdxNpkn").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -7816,7 +8654,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-xmWeQAJrQvapsZCW"></div><script> var xmWeQAJrQvapsZCW_options = JSON.parse('{\"id\":\"mmedia-xmWeQAJrQvapsZCW\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(xmWeQAJrQvapsZCW_options); </script>
+<div id="mmedia-hkwHWzkBUiIqFSZR"></div><script> var hkwHWzkBUiIqFSZR_options = JSON.parse('{\"id\":\"mmedia-hkwHWzkBUiIqFSZR\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(hkwHWzkBUiIqFSZR_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -7919,7 +8757,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#105;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x69;&#109;&#46;&#109;&#105;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x69;&#109;&#46;&#109;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -8052,7 +8890,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 </ul>
 <h1 id="编程总结">2 &nbsp&nbsp<a href="#编程总结" class="headerlink" title="编程总结"></a>编程总结</h1><ul>
 <li><a href="/code/bash">Bash</a></li>
-<li><a href="/code/bat">Bat批处理</a></li>
+<li><a href="/code/bat">Bat</a></li>
 <li><a href="/code/powershell">Powershell</a></li>
 <li><a href="/code/database">数据库</a></li>
 <li><a href="/code/c">C</a></li>
