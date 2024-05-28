@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2024-05-13T00:33:35.000Z</updated>
+  <updated>2024-05-28T19:13:44.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker</title>
+    <link href="https://mister-kin.github.io/code/docker/"/>
+    <id>https://mister-kin.github.io/code/docker/</id>
+    <published>2024-05-28T18:32:33.000Z</published>
+    <updated>2024-05-28T19:13:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Docker-Desktop">1 &nbsp&nbsp<a href="#Docker-Desktop" class="headerlink" title="Docker Desktop"></a>Docker Desktop</h1><h2 id="Docker-Unexpected-error">1.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p><p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p><p>解决方法：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Docker-Desktop&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#Docker-Desktop&quot; class=&quot;headerlink&quot; title=&quot;Docker Desktop&quot;&gt;&lt;/a&gt;Docker Desktop&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>日常生活</title>
@@ -600,37 +625,6 @@
     <category term="powershell" scheme="https://mister-kin.github.io/tags/powershell/"/>
     
     <category term="脚本" scheme="https://mister-kin.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Audacity总结</title>
-    <link href="https://mister-kin.github.io/software/audacity/"/>
-    <id>https://mister-kin.github.io/software/audacity/</id>
-    <published>2024-04-28T02:34:08.000Z</published>
-    <updated>2024-04-28T04:42:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p><p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;安装openvino-plugins-ai-audacity找不到组件&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#安装openvino-plugins-ai-audacity找不到组件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
-    
-    
-    <category term="audacity" scheme="https://mister-kin.github.io/tags/audacity/"/>
-    
-    <category term="音频" scheme="https://mister-kin.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
-    
-    <category term="后期处理" scheme="https://mister-kin.github.io/tags/%E5%90%8E%E6%9C%9F%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
