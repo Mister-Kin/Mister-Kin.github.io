@@ -490,6 +490,21 @@
     <div class="tag-align">
     <p class="tag-official-site"></p>
     </div>
+    <a href="https://dl.bobpony.com/software/vmware/workstation/VMware-workstation-full-17.5.2-23775571.zip">VMware full版BobPony镜像（v17.5.2）</a>
+    <a href="https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/windows/">VMware full版官链（需注册登录博通账号）</a>
+    <a href="https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/windows/">VMware core版官链</a>
+    <a href="https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/windows/packages/">VMware core版补全工具官链</a>
+    <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+    <a href="https://www.proxmox.com/en/downloads">Proxmox VE</a>
+    <a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">virtio-win for Proxmox VE</a>
+    <a href="https://www.qemu.org/download/">QEMU</a>
+    <a href="https://www.android-x86.org/">Android-x86</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-official-site"></p>
+    </div>
     <a href="https://winscp.net/eng/download.php">WinSCP</a>
     <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>
 </div>
@@ -553,6 +568,46 @@
     <a href="https://www.catalog.update.microsoft.com/Home.aspx">Windows Update Catalog官方下载</a>
     <a href="https://hellowindows.cn/">HelloWindows下载仓储站</a>
     <a href="https://archive.org/details/tiny-10-23-h2">tiny10 23H2</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-official-site"></p>
+    </div>
+    <a href="https://archlinux.org/download/">Arch Linux</a>
+    <a href="https://ubuntu.com/download">Ubuntu Linux</a>
+    <a href="https://www.deepin.org/zh/download/">deepin Linux</a>
+    <a href="https://manjaro.org/download/">Manjaro Linux</a>
+    <a href="https://linuxmint.com/download.php">Linux Mint</a>
+    <a href="http://www.tinycorelinux.net/downloads.html">Tiny Core Linux</a>
+
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-official-site"></p>
+    </div>
+    <a href="https://www.kali.org/get-kali/#kali-platforms">Kali Linux</a>
+    <a href="https://www.kali.org/tools/">Kali Tools</a>
+    <a href="https://pentestbox.org/zh/">PentestBox</a>
+    <a href="https://www.tamos.com/download/main/ca">CommView® for WiFi</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-official-site"></p>
+    </div>
+    <a href="https://freedos.org/download/">FreeDOS</a>
+    <a href="https://www.dosbox.com/">DOSBox</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-official-site"></p>
+    </div>
+    <a href="https://www.ikuai8.com/component/download">iKuaiOS</a>
+    <a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>
+    <a href="https://www.ikuai8.com/component/download">OpenWrt eSir GDQ 高大全</a>
 </div>
 
 </div>
@@ -1365,7 +1420,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Bat语法总结笔记</title>
     <url>/code/bat/</url>
-    <content><![CDATA[<h1 id="chcp代码页标识符">1 &nbsp&nbsp<a href="#chcp代码页标识符" class="headerlink" title="chcp代码页标识符"></a>chcp代码页标识符</h1><p>微软文档<a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">代码页标识符</a></p>
+    <content><![CDATA[<h1 id="推荐链接">1 &nbsp&nbsp<a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1><ul>
+<li>微软文档<a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">代码页标识符（chcp）</a></li>
+<li><a href="https://ss64.com/nt/">CMD命令例程索引</a>：这个三方教程索引，比官方文档好用。</li>
+</ul>
 <h1 id="检测并获取管理员权限">2 &nbsp&nbsp<a href="#检测并获取管理员权限" class="headerlink" title="检测并获取管理员权限"></a>检测并获取管理员权限</h1><h2 id="方式一：使用cacls工具检测权限">2.1 &nbsp&nbsp<a href="#方式一：使用cacls工具检测权限" class="headerlink" title="方式一：使用cacls工具检测权限"></a>方式一：使用cacls工具检测权限</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off &amp; <span class="built_in">title</span> 自动激活系统 &amp; <span class="built_in">color</span> F0</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 查询当前终端窗口的列数大小</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">2</span> delims=: &quot; <span class="variable">%%c</span> <span class="keyword">in</span> (&#x27;<span class="built_in">mode</span> <span class="built_in">con</span> ^| <span class="built_in">findstr</span> Columns&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> cols=<span class="variable">%%c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 局部环境设置打印的符号和数量，并传递到全局环境draw_line变量中</span></span><br><span class="line"><span class="built_in">setlocal</span> enabledelayedexpansion</span><br><span class="line"><span class="built_in">set</span> &quot;char==&quot;</span><br><span class="line"><span class="built_in">set</span> /a &quot;count=<span class="variable">%cols%</span>&quot;</span><br><span class="line"><span class="built_in">set</span> &quot;line=&quot;</span><br><span class="line"><span class="keyword">for</span> /l <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">1</span>,<span class="variable">%count%</span>) <span class="keyword">do</span> <span class="built_in">set</span> &quot;line=<span class="variable">!line!</span><span class="variable">%char%</span>&quot;</span><br><span class="line"><span class="built_in">endlocal</span> &amp; <span class="built_in">set</span> &quot;draw_line=<span class="variable">%line%</span>&quot;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%draw_line%</span></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 检测权限：根据系统版本尝试访问系统文件路径</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%PROCESSOR_ARCHITECTURE%</span>&quot; <span class="keyword">equ</span> &quot;amd64&quot; (</span><br><span class="line">    &quot;<span class="variable">%SYSTEMROOT%</span>\SysWOW64\<span class="built_in">cacls</span>.exe&quot; &quot;<span class="variable">%SYSTEMROOT%</span>\SysWOW64\config\system&quot; &gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    &quot;<span class="variable">%SYSTEMROOT%</span>\system32\<span class="built_in">cacls</span>.exe&quot; &quot;<span class="variable">%SYSTEMROOT%</span>\system32\config\system&quot; &gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 根据权限情况跳转标签</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%errorlevel%</span>&quot; <span class="keyword">neq</span> &quot;<span class="number">0</span>&quot; (</span><br><span class="line">    <span class="built_in">echo</span> 当前检测无管理员权限。正在请求管理员权限...</span><br><span class="line">    <span class="built_in">echo</span>.</span><br><span class="line">    <span class="keyword">goto</span> uac_prompt</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    <span class="keyword">goto</span> got_admin</span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 获取管理员权限</span></span><br><span class="line">:uac_prompt</span><br><span class="line">powershell -Command &quot;<span class="built_in">Start</span>-Process -Verb RunAs -FilePath &#x27;%<span class="number">0</span>&#x27; -ArgumentList &#x27;am_admin&#x27;&quot;</span><br><span class="line"><span class="keyword">exit</span> /b</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM &quot;已获取管理员权限，存储当前目录并切换到脚本程序目录&quot;</span></span><br><span class="line">:got_admin</span><br><span class="line"><span class="built_in">pushd</span> &quot;<span class="variable">%cd%</span>&quot;</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
@@ -2504,19 +2562,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p><em>注意不能使用ninja直接构建源码，会报错：build.ninja not found。<strong>构建是使用CMake。</strong></em></p>
 <p>编译步骤：</p>
 <ol>
-<li>将源码解压到分区的根目录下，例如：<code>G:\qtbase-everywhere-src-6.7.0</code></li>
+<li>将源码解压到分区的根目录下，例如：<code>G:\qtbase-everywhere-src-6.7.1</code></li>
 <li>在源码文件夹外新建一个文件夹，如<code>qtbasebuild</code>，拷贝该编译脚本进文件夹，打开cmd窗口，执行该脚本（不建议直接双击运行编译脚本，因为脚本编译出错或者执行完毕都会关闭窗口，这样无法得知编译详情）。</li>
 <li>编译完成后添加环境变量PATH配置：<code>C:\Qt\qt6release\bin</code></li>
 </ol>
 <h2 id="单模块逐个编译的BAT脚本">6.3 &nbsp&nbsp<a href="#单模块逐个编译的BAT脚本" class="headerlink" title="单模块逐个编译的BAT脚本"></a>单模块逐个编译的BAT脚本</h2><p>附加编译子模块的方式：运行Qt安装路径下的&#x2F;bin&#x2F;qt-configure-module.bat + 附件模块源码解压路径。</p>
 <p>一般普通开发编译release版本即可，debug版本是是编译用来开发调试qt源码的。</p>
-<h3 id="编译release版本">6.3.1 &nbsp&nbsp<a href="#编译release版本" class="headerlink" title="编译release版本"></a>编译release版本</h3><h4 id="编译qtbase-release">6.3.1.1 &nbsp&nbsp<a href="#编译qtbase-release" class="headerlink" title="编译qtbase(release)"></a>编译qtbase(release)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">7</span>.<span class="number">0</span>\configure.bat -prefix C:\Qt\qt6release -c++std c++<span class="number">20</span> -release -optimize-size -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
+<h3 id="编译release版本">6.3.1 &nbsp&nbsp<a href="#编译release版本" class="headerlink" title="编译release版本"></a>编译release版本</h3><h4 id="编译qtbase-release">6.3.1.1 &nbsp&nbsp<a href="#编译qtbase-release" class="headerlink" title="编译qtbase(release)"></a>编译qtbase(release)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">7</span>.<span class="number">1</span>\configure.bat -prefix C:\Qt\qt6release -c++std c++<span class="number">20</span> -release -optimize-size -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
 
-<h4 id="附加编译其他子模块（release）">6.3.1.2 &nbsp&nbsp<a href="#附加编译其他子模块（release）" class="headerlink" title="附加编译其他子模块（release）"></a>附加编译其他子模块（release）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6release</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> <span class="title">G</span>:\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.7.0 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
+<h4 id="附加编译其他子模块（release）">6.3.1.2 &nbsp&nbsp<a href="#附加编译其他子模块（release）" class="headerlink" title="附加编译其他子模块（release）"></a>附加编译其他子模块（release）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6release</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> <span class="title">G</span>:\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.7.1 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="编译debug版本">6.3.2 &nbsp&nbsp<a href="#编译debug版本" class="headerlink" title="编译debug版本"></a>编译debug版本</h3><h4 id="编译qtbase-debug">6.3.2.1 &nbsp&nbsp<a href="#编译qtbase-debug" class="headerlink" title="编译qtbase(debug)"></a>编译qtbase(debug)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">7</span>.<span class="number">0</span>\configure.bat -prefix C:\Qt\qt6debug -c++std c++<span class="number">20</span> -debug -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
+<h3 id="编译debug版本">6.3.2 &nbsp&nbsp<a href="#编译debug版本" class="headerlink" title="编译debug版本"></a>编译debug版本</h3><h4 id="编译qtbase-debug">6.3.2.1 &nbsp&nbsp<a href="#编译qtbase-debug" class="headerlink" title="编译qtbase(debug)"></a>编译qtbase(debug)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">7</span>.<span class="number">1</span>\configure.bat -prefix C:\Qt\qt6debug -c++std c++<span class="number">20</span> -debug -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
 
-<h4 id="附加编译其他子模块（debug）">6.3.2.2 &nbsp&nbsp<a href="#附加编译其他子模块（debug）" class="headerlink" title="附加编译其他子模块（debug）"></a>附加编译其他子模块（debug）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6debug</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> ..\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.7.0 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
+<h4 id="附加编译其他子模块（debug）">6.3.2.2 &nbsp&nbsp<a href="#附加编译其他子模块（debug）" class="headerlink" title="附加编译其他子模块（debug）"></a>附加编译其他子模块（debug）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6debug</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> ..\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.7.1 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -2527,7 +2585,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h3 id="找不到qtshadertools-qsb-工具">6.4.3 &nbsp&nbsp<a href="#找不到qtshadertools-qsb-工具" class="headerlink" title="找不到qtshadertools &#39;qsb&#39;工具"></a>找不到qtshadertools &#39;qsb&#39;工具</h3><p>报错信息：<code>Note: Qt Quick modules not built due to not finding the qtshadertools &#39;qsb&#39; tool.</code></p>
 <p>解决方法：qtdeclarative模块依赖于qtshadertools模块，需要先编译安装好qtshadertools，之后再编译安装qtdeclarative。</p>
 <h3 id="optimize-size选项导致编译中断">6.4.4 &nbsp&nbsp<a href="#optimize-size选项导致编译中断" class="headerlink" title="optimize_size选项导致编译中断"></a>optimize_size选项导致编译中断</h3><p>报错信息：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">Feature</span> &quot;<span class="title">optimize_size</span>&quot;: <span class="title">Forcing</span> <span class="title">to</span> &quot;<span class="title">ON</span>&quot; <span class="title">breaks</span> <span class="title">its</span> <span class="title">condition</span>:</span></span><br><span class="line"><span class="function">    <span class="title">NOT</span> <span class="title">QT_FEATURE_debug</span> <span class="title">OR</span> <span class="title">QT_FEATURE_debug_and_release</span></span></span><br><span class="line"><span class="function"><span class="title">Condition</span> <span class="title">values</span> <span class="title">dump</span>:</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug</span> = &quot;<span class="title">ON</span>&quot;</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug_and_release</span> = &quot;<span class="title">OFF</span>&quot;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:194 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">Check</span> <span class="title">the</span> <span class="title">configuration</span> <span class="title">messages</span> <span class="title">for</span> <span class="title">an</span> <span class="title">error</span> <span class="title">that</span> <span class="title">has</span> <span class="title">occurred</span>.</span></span><br><span class="line"><span class="function"><span class="title">Call</span> <span class="title">Stack</span> (<span class="title">most</span> <span class="title">recent</span> <span class="title">call</span> <span class="title">first</span>):</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:24 (<span class="title">qt_configure_print_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInternals</span>/<span class="title">QtBuildInternalsConfig.cmake</span>:548 (<span class="title">qt_print_feature_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">CMakeLists.txt</span>:198 (<span class="title">qt_build_repo_end</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">-- <span class="title">Configuring</span> <span class="title">incomplete</span>, <span class="title">errors</span> <span class="title">occurred</span>!</span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">G</span>:/<span class="title">qtbase</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.7.0/<span class="title">cmake</span>/<span class="title">QtProcessConfigureArgs.cmake</span>:995 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">CMake</span> <span class="title">exited</span> <span class="title">with</span> <span class="title">code</span> 1.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">Feature</span> &quot;<span class="title">optimize_size</span>&quot;: <span class="title">Forcing</span> <span class="title">to</span> &quot;<span class="title">ON</span>&quot; <span class="title">breaks</span> <span class="title">its</span> <span class="title">condition</span>:</span></span><br><span class="line"><span class="function">    <span class="title">NOT</span> <span class="title">QT_FEATURE_debug</span> <span class="title">OR</span> <span class="title">QT_FEATURE_debug_and_release</span></span></span><br><span class="line"><span class="function"><span class="title">Condition</span> <span class="title">values</span> <span class="title">dump</span>:</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug</span> = &quot;<span class="title">ON</span>&quot;</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug_and_release</span> = &quot;<span class="title">OFF</span>&quot;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:194 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">Check</span> <span class="title">the</span> <span class="title">configuration</span> <span class="title">messages</span> <span class="title">for</span> <span class="title">an</span> <span class="title">error</span> <span class="title">that</span> <span class="title">has</span> <span class="title">occurred</span>.</span></span><br><span class="line"><span class="function"><span class="title">Call</span> <span class="title">Stack</span> (<span class="title">most</span> <span class="title">recent</span> <span class="title">call</span> <span class="title">first</span>):</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:24 (<span class="title">qt_configure_print_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInternals</span>/<span class="title">QtBuildInternalsConfig.cmake</span>:548 (<span class="title">qt_print_feature_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">CMakeLists.txt</span>:198 (<span class="title">qt_build_repo_end</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">-- <span class="title">Configuring</span> <span class="title">incomplete</span>, <span class="title">errors</span> <span class="title">occurred</span>!</span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">G</span>:/<span class="title">qtbase</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.7.1/<span class="title">cmake</span>/<span class="title">QtProcessConfigureArgs.cmake</span>:995 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">CMake</span> <span class="title">exited</span> <span class="title">with</span> <span class="title">code</span> 1.</span></span><br></pre></td></tr></table></figure>
 
 <p>解决方法：这是因为在64位的系统上选择x32的编译器引起的错误。根据自己的平台选择对应的编译器，例如，MSVC CL编译器的x64环境，否则启用optimize_size选项有相关报错信息。当然，不启用该选项的话，可正常编译，但得不偿失。</p>
 <h3 id="链接lib文件出现错误LNK2019">6.4.5 &nbsp&nbsp<a href="#链接lib文件出现错误LNK2019" class="headerlink" title="链接lib文件出现错误LNK2019"></a>链接lib文件出现错误LNK2019</h3><p>问题：链接lib文件报错，error LNK2019: 无法解析的外部符号。</p>
@@ -2722,7 +2780,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>正则表达式总结笔记</title>
     <url>/code/regular-expressions/</url>
-    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
+    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
+<li>[\u4e00-\u9fa5] 匹配中文字符</li>
+<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
+</ul>
+<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
 <h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>code</category>
@@ -4296,12 +4358,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>虚拟机总结</title>
     <url>/software/virtual-machine/</url>
-    <content><![CDATA[<h1 id="VirtualBox">1 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">1.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
-<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">1.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
+<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
 <p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line">sudo nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line">sudo locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">1.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
+<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
 <p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
 <p>解决方法：</p>
 <ol>
@@ -4316,9 +4378,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
 </ol>
-<h2 id="VirtualBox无法删除备份">1.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
 <p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="VMware">2 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
+<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
+<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
+<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
+<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
+<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
+<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
+<li><a href="https://github.com/intel/haxm">haxm</a></li>
+</ul>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -5404,11 +5474,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;">&#110;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#46;&#x63;&#x6f;&#x6d;">&#49;&#x40;&#49;&#46;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#99;&#x6f;&#109;">&#56;&#x40;&#x38;&#x2e;&#99;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#97;&#110;&#107;&#115;&#46;&#x63;&#111;&#109;">&#x6e;&#111;&#64;&#x74;&#x68;&#97;&#110;&#107;&#115;&#46;&#x63;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#109;">&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#46;&#99;&#x6f;&#109;">&#49;&#64;&#x31;&#46;&#99;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#99;&#x6f;&#x6d;">&#x38;&#x40;&#56;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#97;&#110;&#107;&#115;&#46;&#99;&#111;&#x6d;">&#x6e;&#111;&#64;&#116;&#104;&#97;&#110;&#107;&#115;&#46;&#99;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;</a></li>
 </ul>
 </li>
 </ul>
@@ -8395,6 +8465,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
 <li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
 </ul>
+<h1 id="插件升级功能">3 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
+<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
+<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>software</category>
@@ -8838,9 +8912,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-JbkUPcTXKyMcmzHz" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-JbkUPcTXKyMcmzHz").style.height=document.getElementById("mmedia-JbkUPcTXKyMcmzHz").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-gDJvIGvdvHsVbpxe" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-gDJvIGvdvHsVbpxe").style.height=document.getElementById("mmedia-gDJvIGvdvHsVbpxe").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-JbkUPcTXKyMcmzHz").style.height=document.getElementById("mmedia-JbkUPcTXKyMcmzHz").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-gDJvIGvdvHsVbpxe").style.height=document.getElementById("mmedia-gDJvIGvdvHsVbpxe").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -8963,7 +9037,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-tNYdEtoXwlkBtMYS"></div><script> var tNYdEtoXwlkBtMYS_options = JSON.parse('{\"id\":\"mmedia-tNYdEtoXwlkBtMYS\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(tNYdEtoXwlkBtMYS_options); </script>
+<div id="mmedia-DgXznkeZFtzXhlrP"></div><script> var DgXznkeZFtzXhlrP_options = JSON.parse('{\"id\":\"mmedia-DgXznkeZFtzXhlrP\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(DgXznkeZFtzXhlrP_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9066,7 +9140,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#101;&#x72;&#x6b;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#101;&#x72;&#x6b;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#110;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#105;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#110;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
