@@ -948,28 +948,87 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>闪存驱动器设计</title>
     <url>/cad/flash-disk/</url>
-    <content><![CDATA[<h1 id="颗粒芯片资料查询链接">1 &nbsp&nbsp<a href="#颗粒芯片资料查询链接" class="headerlink" title="颗粒芯片资料查询链接"></a>颗粒芯片资料查询链接</h1><ul>
-<li><a href="https://www.flashinfo.top/">https://www.flashinfo.top/</a></li>
-<li><a href="https://fm-us.xfjportal.com/">https://fm-us.xfjportal.com/</a></li>
+    <content><![CDATA[<h1 id="主控和颗粒的选择">1 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
+<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
 </ul>
-<h1 id="开卡工具链接">2 &nbsp&nbsp<a href="#开卡工具链接" class="headerlink" title="开卡工具链接"></a>开卡工具链接</h1><ul>
-<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/</a></li>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+<h2 id="部分颗粒总结">1.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li><p>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，132BGA封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</p>
+</li>
+<li><p>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，132BGA封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。</p>
+<ul>
+<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
+</ul>
+</li>
+<li><p>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。</p>
+<ul>
+<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
+</ul>
+</li>
+<li><p>THGBMFG9C4LBAIR：64GB</p>
+<ul>
+<li>颗粒从酷派平板拆出来</li>
+</ul>
+</li>
+<li><p><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></p>
+</li>
+<li><p><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></p>
+</li>
+</ul>
+<h1 id="颗粒芯片资料查询">2 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
+<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
+</ul>
+<h1 id="开卡量产工具">3 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
+<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
 <li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
 </ul>
-<h1 id="关于开卡设定参数的帖子链接">3 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
-<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<h1 id="测试架资料">4 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
+<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
+<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
 </ul>
-<h1 id="IS903资料">4 &nbsp&nbsp<a href="#IS903资料" class="headerlink" title="IS903资料"></a>IS903资料</h1><ul>
+<h1 id="主控芯片资料">5 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
+<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
+<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
+<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
+</ul>
+<h1 id="IS903">6 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><h2 id="量产开卡步骤">6.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<li>焊接颗粒到主控盘，插上电脑</li>
+<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
+<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
+<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
+<li>「量产测试」标签页点击「开始」就会开始量产</li>
+</ol>
+<h2 id="部分资料">6.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
 <li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
 <li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
 <li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
 <li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
 </ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+<h1 id="关于开卡设定参数的帖子链接">7 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
+<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
+<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
+</ul>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>cad</category>
       </categories>
+      <tags>
+        <tag>量产</tag>
+        <tag>U盘</tag>
+        <tag>固态</tag>
+        <tag>开卡</tag>
+        <tag>测试架</tag>
+        <tag>主控</tag>
+        <tag>颗粒</tag>
+      </tags>
   </entry>
   <entry>
     <title>笔记本硬件基础</title>
@@ -1229,11 +1288,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Bat&amp;Powershell语法总结笔记</title>
     <url>/code/bat-powershell/</url>
-    <content><![CDATA[<h1 id="推荐链接">1 &nbsp&nbsp<a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1><ul>
-<li>微软文档<a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">代码页标识符（chcp）</a></li>
-<li><a href="https://ss64.com/nt/">CMD命令例程索引</a>：这个三方教程索引，比官方文档好用。</li>
+    <content><![CDATA[<div class="note danger"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
+</div>
+
+<h1 id="推荐链接">1 &nbsp&nbsp<a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1><ul>
+<li>微软文档：<a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">代码页标识符（chcp）</a></li>
+<li><a href="https://ss64.com/nt/">CMD命令例程索引</a>：该网站的教程索引比微软官方文档好用。</li>
 </ul>
-<h1 id="检测并获取管理员权限">2 &nbsp&nbsp<a href="#检测并获取管理员权限" class="headerlink" title="检测并获取管理员权限"></a>检测并获取管理员权限</h1><h2 id="方式一：使用cacls工具检测权限">2.1 &nbsp&nbsp<a href="#方式一：使用cacls工具检测权限" class="headerlink" title="方式一：使用cacls工具检测权限"></a>方式一：使用cacls工具检测权限</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off &amp; <span class="built_in">title</span> 自动激活系统 &amp; <span class="built_in">color</span> F0</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 查询当前终端窗口的列数大小</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">2</span> delims=: &quot; <span class="variable">%%c</span> <span class="keyword">in</span> (&#x27;<span class="built_in">mode</span> <span class="built_in">con</span> ^| <span class="built_in">findstr</span> Columns&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> cols=<span class="variable">%%c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 局部环境设置打印的符号和数量，并传递到全局环境draw_line变量中</span></span><br><span class="line"><span class="built_in">setlocal</span> enabledelayedexpansion</span><br><span class="line"><span class="built_in">set</span> &quot;char==&quot;</span><br><span class="line"><span class="built_in">set</span> /a &quot;count=<span class="variable">%cols%</span>&quot;</span><br><span class="line"><span class="built_in">set</span> &quot;line=&quot;</span><br><span class="line"><span class="keyword">for</span> /l <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">1</span>,<span class="variable">%count%</span>) <span class="keyword">do</span> <span class="built_in">set</span> &quot;line=<span class="variable">!line!</span><span class="variable">%char%</span>&quot;</span><br><span class="line"><span class="built_in">endlocal</span> &amp; <span class="built_in">set</span> &quot;draw_line=<span class="variable">%line%</span>&quot;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%draw_line%</span></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 检测权限：根据系统版本尝试访问系统文件路径</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%PROCESSOR_ARCHITECTURE%</span>&quot; <span class="keyword">equ</span> &quot;amd64&quot; (</span><br><span class="line">    &quot;<span class="variable">%SYSTEMROOT%</span>\SysWOW64\<span class="built_in">cacls</span>.exe&quot; &quot;<span class="variable">%SYSTEMROOT%</span>\SysWOW64\config\system&quot; &gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    &quot;<span class="variable">%SYSTEMROOT%</span>\system32\<span class="built_in">cacls</span>.exe&quot; &quot;<span class="variable">%SYSTEMROOT%</span>\system32\config\system&quot; &gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 根据权限情况跳转标签</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%errorlevel%</span>&quot; <span class="keyword">neq</span> &quot;<span class="number">0</span>&quot; (</span><br><span class="line">    <span class="built_in">echo</span> 当前检测无管理员权限。正在请求管理员权限...</span><br><span class="line">    <span class="built_in">echo</span>.</span><br><span class="line">    <span class="keyword">goto</span> uac_prompt</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    <span class="keyword">goto</span> got_admin</span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 获取管理员权限</span></span><br><span class="line">:uac_prompt</span><br><span class="line">powershell -Command &quot;<span class="built_in">Start</span>-Process -Verb RunAs -FilePath &#x27;%<span class="number">0</span>&#x27; -ArgumentList &#x27;am_admin&#x27;&quot;</span><br><span class="line"><span class="keyword">exit</span> /b</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM &quot;已获取管理员权限，存储当前目录并切换到脚本程序目录&quot;</span></span><br><span class="line">:got_admin</span><br><span class="line"><span class="built_in">pushd</span> &quot;<span class="variable">%cd%</span>&quot;</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="检测并获取管理员权限">2 &nbsp&nbsp<a href="#检测并获取管理员权限" class="headerlink" title="检测并获取管理员权限"></a>检测并获取管理员权限</h1><h2 id="方式一：使用cacls工具检测权限">2.1 &nbsp&nbsp<a href="#方式一：使用cacls工具检测权限" class="headerlink" title="方式一：使用cacls工具检测权限"></a>方式一：使用cacls工具检测权限</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 检测权限：根据系统版本尝试访问系统文件路径</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%PROCESSOR_ARCHITECTURE%</span>&quot; <span class="keyword">equ</span> &quot;amd64&quot; (</span><br><span class="line">    &quot;<span class="variable">%SYSTEMROOT%</span>\SysWOW64\<span class="built_in">cacls</span>.exe&quot; &quot;<span class="variable">%SYSTEMROOT%</span>\SysWOW64\config\system&quot; &gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    &quot;<span class="variable">%SYSTEMROOT%</span>\system32\<span class="built_in">cacls</span>.exe&quot; &quot;<span class="variable">%SYSTEMROOT%</span>\system32\config\system&quot; &gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 根据权限情况跳转标签</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%errorlevel%</span>&quot; <span class="keyword">neq</span> &quot;<span class="number">0</span>&quot; (</span><br><span class="line">    <span class="built_in">echo</span> 当前检测无管理员权限。正在请求管理员权限...</span><br><span class="line">    <span class="built_in">echo</span>.</span><br><span class="line">    <span class="keyword">goto</span> uac_prompt</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    <span class="keyword">goto</span> got_admin</span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 获取管理员权限</span></span><br><span class="line">:uac_prompt</span><br><span class="line">powershell -Command &quot;<span class="built_in">Start</span>-Process -Verb RunAs -FilePath &#x27;%<span class="number">0</span>&#x27; -ArgumentList &#x27;am_admin&#x27;&quot;</span><br><span class="line"><span class="keyword">exit</span> /b</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM &quot;已获取管理员权限，存储当前目录并切换到脚本程序目录&quot;</span></span><br><span class="line">:got_admin</span><br><span class="line"><span class="built_in">pushd</span> &quot;<span class="variable">%cd%</span>&quot;</span><br><span class="line"><span class="built_in">cd</span> /d &quot;%~dp0&quot;</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -1243,42 +1305,53 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h1 id="提权并传递参数">3 &nbsp&nbsp<a href="#提权并传递参数" class="headerlink" title="提权并传递参数"></a>提权并传递参数</h1><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 提权之前先保存当前的命令行参数</span></span><br><span class="line"><span class="comment">@REM 保存命令行参数到txt文件</span></span><br><span class="line"><span class="built_in">set</span> commandline_argument=%*</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%commandline_argument%</span> &gt; &quot;__temp__argument.txt&quot;</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 提权代码《检测并获取管理员权限》</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 重新读取参数</span></span><br><span class="line"><span class="comment">@REM 读取txt文件中的首个参数</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">1</span>&quot; <span class="variable">%%c</span> <span class="keyword">in</span> (__temp__argument.txt) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">set</span> get_argument=<span class="variable">%%c</span></span><br><span class="line">    <span class="keyword">goto</span> activate</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<h1 id="字符串的处理">4 &nbsp&nbsp<a href="#字符串的处理" class="headerlink" title="字符串的处理"></a>字符串的处理</h1><h2 id="字符串的截取">4.1 &nbsp&nbsp<a href="#字符串的截取" class="headerlink" title="字符串的截取"></a>字符串的截取</h2><p><code>%variable:~n,m%</code></p>
+<h1 id="打印输出">4 &nbsp&nbsp<a href="#打印输出" class="headerlink" title="打印输出"></a>打印输出</h1><h2 id="打印输出分割线">4.1 &nbsp&nbsp<a href="#打印输出分割线" class="headerlink" title="打印输出分割线"></a>打印输出分割线</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">:draw_line</span><br><span class="line"><span class="comment">@REM 局部环境设置打印的符号和数量，并传递到全局环境draw_line_chars变量中</span></span><br><span class="line"><span class="built_in">setlocal</span> enabledelayedexpansion</span><br><span class="line"><span class="comment">@REM 查询当前终端窗口的列数大小，delims后面:之后没有空格，或者有多个空格都是一样的效果，它无法trim多余的空格。并且:后面不能单独加一个空格，否则无法正确获取。</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">2</span> delims=:&quot; <span class="variable">%%c</span> <span class="keyword">in</span> (&#x27;<span class="built_in">mode</span> <span class="built_in">con</span> ^| <span class="built_in">findstr</span> &quot;列&quot;&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> cols=<span class="variable">%%c</span></span><br><span class="line"><span class="comment">@REM 移除变量中左边多余的空格</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=* delims=: &quot; <span class="variable">%%c</span> <span class="keyword">in</span> (&#x27;<span class="built_in">echo</span> <span class="variable">%cols%</span>&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> cols=<span class="variable">%%c</span></span><br><span class="line"><span class="built_in">set</span> &quot;char=%~<span class="number">1</span>&quot;</span><br><span class="line"><span class="built_in">set</span> /a &quot;count=<span class="variable">%cols%</span>&quot;</span><br><span class="line"><span class="built_in">set</span> &quot;line=&quot;</span><br><span class="line"><span class="keyword">for</span> /l <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">1</span>,<span class="variable">%count%</span>) <span class="keyword">do</span> <span class="built_in">set</span> &quot;line=<span class="variable">!line!</span><span class="variable">%char%</span>&quot;</span><br><span class="line"><span class="built_in">endlocal</span> &amp; <span class="built_in">set</span> &quot;draw_line_chars=<span class="variable">%line%</span>&quot;</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%draw_line_chars%</span></span><br><span class="line"><span class="keyword">exit</span> /b</span><br></pre></td></tr></table></figure>
+
+<h2 id="打印输出当前时间">4.2 &nbsp&nbsp<a href="#打印输出当前时间" class="headerlink" title="打印输出当前时间"></a>打印输出当前时间</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">:log</span><br><span class="line"><span class="built_in">setlocal</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">1</span>-<span class="number">3</span> delims=/ &quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;<span class="built_in">date</span> /t&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;yy=<span class="variable">%%a</span>&quot; &amp; <span class="built_in">set</span> &quot;mm=<span class="variable">%%b</span>&quot; &amp; <span class="built_in">set</span> &quot;dd=<span class="variable">%%c</span>&quot;)</span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">1</span>-<span class="number">3</span> delims=:.&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&#x27;<span class="built_in">echo</span> <span class="variable">%time%</span>&#x27;) <span class="keyword">do</span> (<span class="built_in">set</span> &quot;hh=<span class="variable">%%a</span>&quot; &amp; <span class="built_in">set</span> &quot;mn=<span class="variable">%%b</span>&quot; &amp; <span class="built_in">set</span> &quot;ss=<span class="variable">%%c</span>&quot;)</span><br><span class="line"><span class="built_in">set</span> time_stamp=<span class="variable">%yy%</span>-<span class="variable">%mm%</span>-<span class="variable">%dd%</span>T<span class="variable">%hh%</span>:<span class="variable">%mn%</span>:<span class="variable">%ss%</span>+<span class="number">08</span>:<span class="number">00</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%time_stamp%</span> %~<span class="number">1</span></span><br><span class="line"><span class="built_in">endlocal</span></span><br><span class="line"><span class="keyword">exit</span> /b</span><br></pre></td></tr></table></figure>
+
+<h1 id="特殊字符">5 &nbsp&nbsp<a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h1><p>bat中有部分特殊字符，例如<code>()&lt;&gt;&amp;|</code>之类的，若需要输出打印特殊字符到终端控制台，则需要转义符号<code>^</code>。如果传递变量值时需要转义的话，以<code>&amp;</code>符号为例，一般写法为<code>^^^&amp;</code>，<code>^^</code>转义为<code>^</code>，<code>^&amp;</code>转义为<code>&amp;</code>。</p>
+<p>在本人代码实践中，如果使用使用双引号去设置变量的话，例如<code>set &quot;val=Mr. Kin ^^^&lt;im.misterkin@gmail.com^^^&gt;&quot;</code>，传递过程中仍会出现解析异常，导致运行错误。如果不用双引号，直接使用单<code>^</code>符号直接转义，例如<code>set val=^&lt;im.misterkin@gmail.com^&gt;</code>则完全没问题。这点令人十分困扰。</p>
+<h1 id="字符串的处理">6 &nbsp&nbsp<a href="#字符串的处理" class="headerlink" title="字符串的处理"></a>字符串的处理</h1><h2 id="字符串的截取">6.1 &nbsp&nbsp<a href="#字符串的截取" class="headerlink" title="字符串的截取"></a>字符串的截取</h2><p><code>%variable:~n,m%</code></p>
 <ul>
 <li>n：开始截取字符串的偏移量；如果为正数，则从左边开始；如果没有为负数，则从右边开始</li>
 <li>m：要截取字符的个数。如果没有指定个数，则采用默认值，即变量数值的余数（余数指剩余个数，如：%variable:~-5% 当前偏移量为倒数第6，将剩下的字符全部截取）。如果两个数字 (偏移量和长度) 都是负数，使用的数字则是字符串长度加上指定的偏移量或长度（参见实例2）。<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> ifo=abcdefghijklmnopqrstuvwxyz0123456789</span><br><span class="line"><span class="built_in">echo</span> 原字符串：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem abcde</span></span><br><span class="line"><span class="built_in">echo</span> 截取前<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~0,5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem fghijklmnopqrstuvwxyz0123456789</span></span><br><span class="line"><span class="built_in">echo</span> 截取第六个字符直到最后一个字符</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem 56789</span></span><br><span class="line"><span class="built_in">echo</span> 截取最后<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~-5%</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~-5,5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem abcdefghijklmnopqrstuvwxyz01234</span></span><br><span class="line"><span class="built_in">echo</span> 截取第一个到倒数第<span class="number">6</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~0,-5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem defgh</span></span><br><span class="line"><span class="built_in">echo</span> 从第<span class="number">4</span>个字符开始，截取<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~3,5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem wxyz0</span></span><br><span class="line"><span class="built_in">echo</span> 从倒数第<span class="number">14</span>个字符开始，截取<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~-14,5%</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="字符串的字符替换">4.2 &nbsp&nbsp<a href="#字符串的字符替换" class="headerlink" title="字符串的字符替换"></a>字符串的字符替换</h2><p>BAT语法：<code>%variable:str1=str2%</code>，缺陷：用以文本文件中整行处理中可能无法处理一些特殊字符，导致丢失某些内容。</p>
+<h2 id="字符串的字符替换">6.2 &nbsp&nbsp<a href="#字符串的字符替换" class="headerlink" title="字符串的字符替换"></a>字符串的字符替换</h2><p>BAT语法：<code>%variable:str1=str2%</code>，缺陷：用以文本文件中整行处理中可能无法处理一些特殊字符，导致丢失某些内容。</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 替换str中的xxx为yyy</span></span><br><span class="line"><span class="built_in">set</span> str2=<span class="variable">%str:xxx=yyy%</span></span><br></pre></td></tr></table></figure>
 
 <p>POWERSHELL语法：<code>(Get-Content -Path &#39;%file_path%&#39;) -replace &#39;%search_string%&#39;, &#39;%replace_string%&#39; | Set-Content -Path &#39;%file_path%&#39;</code>，缺陷：用以文本文件中整行处理中可能无法处理一些特殊字符，导致丢失某些内容。不过比BAT语法使用起来更简单，而且无需特殊处理也能保留空格和换行符。推荐只修改特定字符串，<code>%search_string%</code>无需填入过多的字符，例如将17改为20，只需搜索17字符串即可。</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">powershell -Command &quot;(Get-Content -<span class="built_in">Path</span> &#x27;<span class="variable">%file_path%</span>&#x27;) -<span class="built_in">replace</span> &#x27;<span class="variable">%search_string%</span>&#x27;, &#x27;<span class="variable">%replace_string%</span>&#x27; | <span class="built_in">Set</span>-Content -<span class="built_in">Path</span> &#x27;<span class="variable">%file_path%</span>&#x27;&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="去掉变量字符串中的空格">4.3 &nbsp&nbsp<a href="#去掉变量字符串中的空格" class="headerlink" title="去掉变量字符串中的空格"></a>去掉变量字符串中的空格</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> abc=                          aaabbbccc</span><br><span class="line">:delleft</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%abc:~0,1%</span>&quot;==&quot; &quot; <span class="built_in">set</span> abc=<span class="variable">%abc:~1%</span>&amp;&amp;<span class="keyword">goto</span> delleft</span><br><span class="line"><span class="built_in">echo</span> 去掉左边空格:<span class="variable">%abc%</span></span><br><span class="line"><span class="built_in">set</span> abc=aaabbbccc</span><br><span class="line">:delright</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%abc:~-1%</span>&quot;==&quot; &quot; <span class="built_in">set</span> abc=<span class="variable">%abc:~0,-1%</span>&amp;&amp;<span class="keyword">goto</span> delright</span><br><span class="line"><span class="built_in">echo</span> 去掉右边空格:<span class="variable">%abc%</span></span><br><span class="line"><span class="comment">@REM 去除所有空格，使用的方式就是字符替换</span></span><br><span class="line"><span class="built_in">set</span> abc=        aaa     bbb       ccc</span><br><span class="line"><span class="built_in">set</span> &quot;abc=%abc: =%&quot;</span><br><span class="line"><span class="built_in">echo</span> 去掉所有空格:<span class="variable">%abc%</span></span><br></pre></td></tr></table></figure>
+<h2 id="去掉变量字符串中的空格">6.3 &nbsp&nbsp<a href="#去掉变量字符串中的空格" class="headerlink" title="去掉变量字符串中的空格"></a>去掉变量字符串中的空格</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> abc=                          aaabbbccc</span><br><span class="line">:delleft</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%abc:~0,1%</span>&quot;==&quot; &quot; <span class="built_in">set</span> abc=<span class="variable">%abc:~1%</span>&amp;&amp;<span class="keyword">goto</span> delleft</span><br><span class="line"><span class="built_in">echo</span> 去掉左边空格:<span class="variable">%abc%</span></span><br><span class="line"><span class="built_in">set</span> abc=aaabbbccc</span><br><span class="line">:delright</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%abc:~-1%</span>&quot;==&quot; &quot; <span class="built_in">set</span> abc=<span class="variable">%abc:~0,-1%</span>&amp;&amp;<span class="keyword">goto</span> delright</span><br><span class="line"><span class="built_in">echo</span> 去掉右边空格:<span class="variable">%abc%</span></span><br><span class="line"><span class="comment">@REM 去除所有空格，使用的方式就是字符替换</span></span><br><span class="line"><span class="built_in">set</span> abc=        aaa     bbb       ccc</span><br><span class="line"><span class="built_in">set</span> &quot;abc=%abc: =%&quot;</span><br><span class="line"><span class="built_in">echo</span> 去掉所有空格:<span class="variable">%abc%</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="读取内容">5 &nbsp&nbsp<a href="#读取内容" class="headerlink" title="读取内容"></a>读取内容</h1><p>“<code>for /f</code>”常用来解析文本，读取字符串。</p>
+<h1 id="读取内容">7 &nbsp&nbsp<a href="#读取内容" class="headerlink" title="读取内容"></a>读取内容</h1><p>“<code>for /f</code>”常用来解析文本，读取字符串。</p>
 <ul>
 <li><code>delims</code>参数负责切分字符串，指定分隔符。内容会根据实际分隔符分隔开。</li>
-<li><code>tokens</code>负责提取字符串，指提取的列数。例如<code>tokens=12-4</code>，表示提取第1列，第2列至第4列的内容，有多少列就要有多少个输出变量，并且各变量中的字母存在先后顺序。第一个变量字母是自己定义的，推荐是使用<code>%%a</code>，这样第二个列就是用<code>%%b</code>来表示。</li>
+<li><code>tokens</code>负责提取字符串，指提取的列数。例如<code>tokens=12-4</code>，表示提取第1列，第2列至第4列的内容，有多少列就要有多少个输出变量，并且各变量中的字母存在先后顺序。第一个变量字母是自己定义的，推荐是使用<code>%%a</code>，这样第二个列就是用<code>%%b</code>来表示。<code>m*</code>表示提取第m列和第m列之后的所有字符。</li>
 </ul>
-<h2 id="读取首行内容">5.1 &nbsp&nbsp<a href="#读取首行内容" class="headerlink" title="读取首行内容"></a>读取首行内容</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> /f &quot;usebackq delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&quot;<span class="variable">!drive!</span>\<span class="variable">!config_file!</span>&quot;) <span class="keyword">do</span> <span class="built_in">set</span> &quot;image_name=<span class="variable">%%a</span>&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="读取首行内容">7.1 &nbsp&nbsp<a href="#读取首行内容" class="headerlink" title="读取首行内容"></a>读取首行内容</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> /f &quot;usebackq delims=&quot; <span class="variable">%%a</span> <span class="keyword">in</span> (&quot;<span class="variable">!drive!</span>\<span class="variable">!config_file!</span>&quot;) <span class="keyword">do</span> <span class="built_in">set</span> &quot;image_name=<span class="variable">%%a</span>&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="读取特定行数内容">5.2 &nbsp&nbsp<a href="#读取特定行数内容" class="headerlink" title="读取特定行数内容"></a>读取特定行数内容</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> /f &quot;tokens=* delims=&quot; <span class="variable">%%i</span> <span class="keyword">in</span> (&#x27;diskpart /s auto_partition_opts ^| <span class="built_in">findstr</span> /n &quot;^&quot; ^| <span class="built_in">findstr</span> &quot;^<span class="number">9</span>:&quot;&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> disk_model_name=<span class="variable">%%i</span></span><br></pre></td></tr></table></figure>
+<h2 id="读取特定行数内容">7.2 &nbsp&nbsp<a href="#读取特定行数内容" class="headerlink" title="读取特定行数内容"></a>读取特定行数内容</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> /f &quot;tokens=* delims=&quot; <span class="variable">%%i</span> <span class="keyword">in</span> (&#x27;diskpart /s auto_partition_opts ^| <span class="built_in">findstr</span> /n &quot;^&quot; ^| <span class="built_in">findstr</span> &quot;^<span class="number">9</span>:&quot;&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> disk_model_name=<span class="variable">%%i</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="判断网络连通状态执行不同命令">6 &nbsp&nbsp<a href="#判断网络连通状态执行不同命令" class="headerlink" title="判断网络连通状态执行不同命令"></a>判断网络连通状态执行不同命令</h1><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ping</span> www.baidu.com -n <span class="number">3</span> | <span class="built_in">findstr</span> &quot;TTL&quot; &gt;<span class="built_in">nul</span> &amp;&amp; <span class="keyword">goto</span> network_well || <span class="keyword">goto</span> network_bad</span><br></pre></td></tr></table></figure>
+<h2 id="读取全部内容">7.3 &nbsp&nbsp<a href="#读取全部内容" class="headerlink" title="读取全部内容"></a>读取全部内容</h2><p><code>FOR /F</code>默认是不会返回空行，因为该命令本身设计就是如此。</p>
+<p>若想实现完全读取，可以使用findstr对文本内容先赋予一个行号，再逐行读取。</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">::preserve blank lines using <span class="built_in">FIND</span>, assume no line starts with ]</span><br><span class="line">::long lines are truncated</span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">1</span>* delims=]&quot; <span class="variable">%%A</span> <span class="keyword">in</span> (&#x27;<span class="built_in">type</span> &quot;file.txt&quot; ^| <span class="built_in">find</span> /n /v &quot;&quot;&#x27;) <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">%%B</span></span><br><span class="line"></span><br><span class="line">::preserve blank lines using <span class="built_in">FINDSTR</span>, assume no line starts with :</span><br><span class="line">::long lines &gt; <span class="number">8191</span> bytes are lost</span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">1</span>* delims=:&quot; <span class="variable">%%A</span> <span class="keyword">in</span> (&#x27;<span class="built_in">type</span> &quot;file.txt&quot; ^| <span class="built_in">findstr</span> /n &quot;^&quot;&#x27;) <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">%%B</span></span><br><span class="line"></span><br><span class="line">::<span class="built_in">FINDSTR</span> variant that preserves long lines</span><br><span class="line"><span class="built_in">type</span> &quot;file.txt&quot; &gt; &quot;file.txt.tmp&quot;</span><br><span class="line"><span class="keyword">for</span> /f &quot;tokens=<span class="number">1</span>* delims=:&quot; <span class="variable">%%A</span> <span class="keyword">in</span> (&#x27;<span class="built_in">findstr</span> /n &quot;^&quot; &quot;file.txt.tmp&quot;&#x27;) <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">%%B</span></span><br><span class="line"><span class="built_in">del</span> &quot;file.txt.tmp&quot;</span><br></pre></td></tr></table></figure>
 
-<h1 id="将批处理运行结果显示并保存到文件">7 &nbsp&nbsp<a href="#将批处理运行结果显示并保存到文件" class="headerlink" title="将批处理运行结果显示并保存到文件"></a>将批处理运行结果显示并保存到文件</h1><h2 id="wtee方案">7.1 &nbsp&nbsp<a href="#wtee方案" class="headerlink" title="wtee方案"></a>wtee方案</h2><p>linux上有tee命令可以实现这个目的，wtee程序则是windows实现的tee版本。</p>
+
+<h1 id="判断网络连通状态执行不同命令">8 &nbsp&nbsp<a href="#判断网络连通状态执行不同命令" class="headerlink" title="判断网络连通状态执行不同命令"></a>判断网络连通状态执行不同命令</h1><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ping</span> www.baidu.com -n <span class="number">3</span> | <span class="built_in">findstr</span> &quot;TTL&quot; &gt;<span class="built_in">nul</span> &amp;&amp; <span class="keyword">goto</span> network_well || <span class="keyword">goto</span> network_bad</span><br></pre></td></tr></table></figure>
+
+<h1 id="将批处理运行结果显示并保存到文件">9 &nbsp&nbsp<a href="#将批处理运行结果显示并保存到文件" class="headerlink" title="将批处理运行结果显示并保存到文件"></a>将批处理运行结果显示并保存到文件</h1><h2 id="wtee方案">9.1 &nbsp&nbsp<a href="#wtee方案" class="headerlink" title="wtee方案"></a>wtee方案</h2><p>linux上有tee命令可以实现这个目的，wtee程序则是windows实现的tee版本。</p>
 <ul>
 <li><a href="https://code.google.com/archive/p/wintee/downloads">wintee</a></li>
 <li><a href="https://code.google.com/archive/p/wintee/wikis/FAQ.wiki">wintee 文档</a></li>
 </ul>
-<h2 id="临时文件中转方案">7.2 &nbsp&nbsp<a href="#临时文件中转方案" class="headerlink" title="临时文件中转方案"></a>临时文件中转方案</h2><p>原理：使用call将想要输出结果输出到临时文件，之后进行：</p>
+<h2 id="临时文件中转方案">9.2 &nbsp&nbsp<a href="#临时文件中转方案" class="headerlink" title="临时文件中转方案"></a>临时文件中转方案</h2><p>原理：使用call将想要输出结果输出到临时文件，之后进行：</p>
 <ol>
 <li>先清屏，将临时文本内容显示，实现窗口显示的本次运行结果的功能。</li>
 <li>将临时文本内容追加到日志文件用于保存。</li>
 <li>删除临时文件。<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">call</span> a.bat &gt; log2.txt</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="keyword">for</span> /f &quot;delims=&quot; <span class="variable">%%i</span> <span class="keyword">in</span> (log2.txt) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">%%i</span></span><br><span class="line">)</span><br><span class="line"><span class="built_in">type</span> log2.txt &gt;&gt; log.txt</span><br><span class="line"><span class="built_in">del</span> log2.txt</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="数组">8 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>创建数组：<code>set a[0]=1</code></p>
+<h1 id="数组">10 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>创建数组：<code>set a[0]=1</code></p>
 <p>定义值列表并遍历值列表：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> list=<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line">(<span class="keyword">for</span> <span class="variable">%%a</span> <span class="keyword">in</span> (<span class="variable">%list%</span>) <span class="keyword">do</span> (</span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">%%a</span></span><br><span class="line">))</span><br></pre></td></tr></table></figure>
 
@@ -1291,11 +1364,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>数组结构体：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> obj[<span class="number">0</span>].Name=Joe</span><br><span class="line"><span class="built_in">set</span> obj[<span class="number">0</span>].ID=<span class="number">1</span></span><br><span class="line"><span class="built_in">set</span> obj[<span class="number">1</span>].Name=Mark</span><br><span class="line"><span class="built_in">set</span> obj[<span class="number">1</span>].ID=<span class="number">2</span></span><br><span class="line"><span class="built_in">set</span> obj[<span class="number">2</span>].Name=Mohan</span><br><span class="line"><span class="built_in">set</span> obj[<span class="number">2</span>].ID=<span class="number">3</span></span><br><span class="line"><span class="keyword">FOR</span> /L <span class="variable">%%i</span> <span class="keyword">IN</span> (<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>) <span class="keyword">DO</span>  (</span><br><span class="line">   <span class="keyword">call</span> <span class="built_in">echo</span> Name = <span class="variable">%%o</span>bj[<span class="variable">%%i</span>].Name<span class="variable">%%</span></span><br><span class="line"><span class="variable"></span>   <span class="keyword">call</span> <span class="built_in">echo</span> Value = <span class="variable">%%o</span>bj[<span class="variable">%%i</span>].ID<span class="variable">%%</span></span><br><span class="line"><span class="variable"></span>)</span><br></pre></td></tr></table></figure>
 
-<h1 id="setlocal和endlocal的作用域">9 &nbsp&nbsp<a href="#setlocal和endlocal的作用域" class="headerlink" title="setlocal和endlocal的作用域"></a>setlocal和endlocal的作用域</h1><p>在setlocal和endlocal语句内的set变量，是属于局部变量。</p>
+<h1 id="setlocal和endlocal的作用域">11 &nbsp&nbsp<a href="#setlocal和endlocal的作用域" class="headerlink" title="setlocal和endlocal的作用域"></a>setlocal和endlocal的作用域</h1><p>在setlocal和endlocal语句内的set变量，是属于局部变量。</p>
 <p>如果用setlocal enabledelayedexpansion设置了延迟环境变量扩展，需要使用<code>!variable!</code>来引用变量。</p>
-<h1 id="生成特定命令的批处理帮助文件">10 &nbsp&nbsp<a href="#生成特定命令的批处理帮助文件" class="headerlink" title="生成特定命令的批处理帮助文件"></a>生成特定命令的批处理帮助文件</h1><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> on</span><br><span class="line">:z</span><br><span class="line">@<span class="built_in">cls</span></span><br><span class="line">@<span class="built_in">set</span> /p &quot;d=输入要BAT指令:&quot;</span><br><span class="line">@ <span class="variable">%d%</span> /? &gt; <span class="variable">%d%</span>.txt</span><br><span class="line"><span class="keyword">goto</span> z</span><br></pre></td></tr></table></figure>
+<h1 id="生成特定命令的批处理帮助文件">12 &nbsp&nbsp<a href="#生成特定命令的批处理帮助文件" class="headerlink" title="生成特定命令的批处理帮助文件"></a>生成特定命令的批处理帮助文件</h1><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> on</span><br><span class="line">:z</span><br><span class="line">@<span class="built_in">cls</span></span><br><span class="line">@<span class="built_in">set</span> /p &quot;d=输入要BAT指令:&quot;</span><br><span class="line">@ <span class="variable">%d%</span> /? &gt; <span class="variable">%d%</span>.txt</span><br><span class="line"><span class="keyword">goto</span> z</span><br></pre></td></tr></table></figure>
 
-<h1 id="字符集引起的“is-not-recognized-as-an-internal-or-external-command”">11 &nbsp&nbsp<a href="#字符集引起的“is-not-recognized-as-an-internal-or-external-command”" class="headerlink" title="字符集引起的“is not recognized as an internal or external command”"></a>字符集引起的“is not recognized as an internal or external command”</h1><p>知识背景：系统终端默认的字符集是ANSI，但ANSI并非某一种特定的字符编码，在不同的系统中，ANSI表示不同的编码。比如原生英文系统的ANSI编码是ASCII编码，原生中文系统的ANSI编码是GBK编码。（code page实际是由系统的「区域和语言」控制的）</p>
+<h1 id="字符集引起的“is-not-recognized-as-an-internal-or-external-command”">13 &nbsp&nbsp<a href="#字符集引起的“is-not-recognized-as-an-internal-or-external-command”" class="headerlink" title="字符集引起的“is not recognized as an internal or external command”"></a>字符集引起的“is not recognized as an internal or external command”</h1><p>知识背景：系统终端默认的字符集是ANSI，但ANSI并非某一种特定的字符编码，在不同的系统中，ANSI表示不同的编码。比如原生英文系统的ANSI编码是ASCII编码，原生中文系统的ANSI编码是GBK编码。（code page实际是由系统的「区域和语言」控制的）</p>
 <p>问题现象：当bat程序脚本文件本身用默认的utf-8编码保存，并且使用命令<code>@chcp 65001&gt;nul</code>切换代码页，仍然有概率执行是会导致<code>echo</code>命令在输出中文出现解析错误，提示“is not recognized as an internal or external command”，比如使用注释命令<code>@rem 中文注释</code>之后，再使用<code>echo</code>打印输出中文时就出现解析错乱。</p>
 <p>问题原因：具体引起的原因未知，目前猜测是当脚本程序执行不少命令之后，环境变量可能会出现错乱，导致部分命令解析失败。</p>
 <p>解决方法有两种：</p>
@@ -1303,19 +1376,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>在<code>@rem 中文注释</code>命令之后重新执行<code>@chcp 65001&gt;nul</code>即可确保后面的命令正确解析执行。</li>
 <li>将所有文件编码改为ANSI编码，比如简中系统，使用GBK编码。</li>
 </ul>
-<h1 id="在命令提示符中运行-PowerShell-命令">12 &nbsp&nbsp<a href="#在命令提示符中运行-PowerShell-命令" class="headerlink" title="在命令提示符中运行 PowerShell 命令"></a>在命令提示符中运行 PowerShell 命令</h1><p>命令形式：<code>powershell -command &quot;xxx&quot;</code></p>
+<h1 id="在命令提示符中运行-PowerShell-命令">14 &nbsp&nbsp<a href="#在命令提示符中运行-PowerShell-命令" class="headerlink" title="在命令提示符中运行 PowerShell 命令"></a>在命令提示符中运行 PowerShell 命令</h1><p>命令形式：<code>powershell -command &quot;xxx&quot;</code></p>
 <p>如果命令中有双引号，记得使用反斜杠转义双引号字符，避免最外层的双引号和里面的双引号一起被匹配解析。在PowerShell语法中，双引号 &quot;&quot; 视为文字字符串值的。因此需要确保符号被正确解析。</p>
-<h1 id="语法问题">13 &nbsp&nbsp<a href="#语法问题" class="headerlink" title="语法问题"></a>语法问题</h1><h2 id="与equ的对比区别">13.1 &nbsp&nbsp<a href="#与equ的对比区别" class="headerlink" title="==与equ的对比区别"></a><code>==</code>与<code>equ</code>的对比区别</h2><ul>
+<h1 id="语法问题">15 &nbsp&nbsp<a href="#语法问题" class="headerlink" title="语法问题"></a>语法问题</h1><h2 id="与equ的对比区别">15.1 &nbsp&nbsp<a href="#与equ的对比区别" class="headerlink" title="==与equ的对比区别"></a><code>==</code>与<code>equ</code>的对比区别</h2><ul>
 <li><code>==</code>是用来比较相同的，即比较字符串是否完全相同的。</li>
 <li><code>EQU</code>是比较运算符，含有运算的功能，换句话说，是可以在比较之前转换数字为对应的数值，然后再比较。</li>
 </ul>
 <p>数值是指十进制的数字，在前缀加 <code>0×</code> （这里x忽略大小写）则表示十六进制数字，加 <code>0</code> 则表示八进制数字。因此，<code>0x12</code> 与 <code>18</code> 相同，也与 <code>022</code> 相同，八进制表示法容易引起混淆。例如，<code>08</code> 和 <code>09</code> 不是有效数字，因为 <code>8</code> 和 <code>9</code> 不是有效的八进制数字。</p>
 <p>所以，在使用 <code>==</code> 比较时，<code>0x12</code>、<code>022</code>和<code>18</code>是不相等的，但在使用<code>EQU</code>比较时，他们是相等的，因为他们对应的数值都是<code>18</code>！</p>
-<h1 id="ps脚本无法运行">14 &nbsp&nbsp<a href="#ps脚本无法运行" class="headerlink" title="ps脚本无法运行"></a>ps脚本无法运行</h1><p>出于安全考虑，默认的 Windows PowerShell 策略不允许执行脚本。</p>
+<h1 id="ps脚本无法运行">16 &nbsp&nbsp<a href="#ps脚本无法运行" class="headerlink" title="ps脚本无法运行"></a>ps脚本无法运行</h1><p>出于安全考虑，默认的 Windows PowerShell 策略不允许执行脚本。</p>
 <p>设置运行策略：</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> unrestricted</span><br><span class="line"><span class="comment"># Restricted：默认设置，不允许运行任何脚本</span></span><br><span class="line"><span class="comment"># AllSigned：仅运行受信任脚本</span></span><br><span class="line"><span class="comment"># RemoteSigned：运行本地脚本，不管这些脚本是否受信任</span></span><br><span class="line"><span class="comment"># Unrestricted：允许运行所有脚本，甚至是不受信任的</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How to request Administrator access inside a batch file[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1894967/how%E2%80%91to%E2%80%91request%E2%80%91administrator%E2%80%91access%E2%80%91inside%E2%80%91a%E2%80%91batch%E2%80%91file">https://stackoverflow.com/questions/1894967/how‑to‑request‑administrator‑access‑inside‑a‑batch‑file</a>.<br>[2] How to write a batch file can run parameters as command with administrative privi‑leges?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/38364617/how%E2%80%91to%E2%80%91write%E2%80%91a%E2%80%91batch%E2%80%91file%E2%80%91can%E2%80%91run%E2%80%91parameters%E2%80%91as%E2%80%91command%E2%80%91with%E2%80%91administrative%E2%80%91priv">https://stackoverflow.com/questions/38364617/how‑to‑write‑a‑batch‑file‑can‑run‑parameters‑as‑command‑with‑administrative‑priv</a>.<br>[3] 批处理通过 ping 判断网络[EB&#x2F;OL]. <a href="https://www.52pojie.cn/thread-1021861-1-1.html">https://www.52pojie.cn/thread-1021861-1-1.html</a>.<br>[4] 批处理 ping命令判断是否可以连接到一个网站[EB&#x2F;OL]. <a href="https://lanlan2017.github.io/blog/318f3e6b/">https://lanlan2017.github.io/blog/318f3e6b/</a>.<br>[5] Windows10一句话从administrator权限提升到system权限[EB&#x2F;OL]. <a href="https://blog.csdn.net/mochu7777777/article/details/106842901">https://blog.csdn.net/mochu7777777/article/details/106842901</a>.<br>[6] 在命令提示符中运行 PowerShell 命令[EB&#x2F;OL]. <a href="https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/">https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/</a>.<br>[7] [系统相关] [已解决]批处理if中，&#x3D;&#x3D; 与equ 这2个，在什么情况下会有区别？[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-15170-1-1.html">http://www.bathome.net/thread-15170-1-1.html</a>.<br>[8] cmd 字符串替换[EB&#x2F;OL]. <a href="https://blog.csdn.net/scimence/article/details/52816878">https://blog.csdn.net/scimence/article/details/52816878</a>.<br>[9] Bat 去掉变量字符串中的空格[EB&#x2F;OL]. <a href="https://blog.csdn.net/a71468293a/article/details/127747191">https://blog.csdn.net/a71468293a/article/details/127747191</a>.<br>[10] 字符串截取操作[EB&#x2F;OL]. <a href="https://www.hxstrive.com/subject/windows_bat/122.htm">https://www.hxstrive.com/subject/windows_bat/122.htm</a>.<br>[11] 在使用bat 批处理 时将运行结果显示并保存到文件中 echo[EB&#x2F;OL]. <a href="https://www.cnblogs.com/qiyuexin/p/11701362.html">https://www.cnblogs.com/qiyuexin/p/11701362.html</a>.<br>[12] for &#x2F;f命令之—Delims和Tokens用法&amp;总结[EB&#x2F;OL]. <a href="https://blog.csdn.net/kagurawill/article/details/114982328">https://blog.csdn.net/kagurawill/article/details/114982328</a>.<br>[13] 批处理（bat）中的数组问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_34414530/article/details/117839838">https://blog.csdn.net/qq_34414530/article/details/117839838</a>.<br>[14] BAT批处理文件 setlocal,endlocal命令详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/csqxy547/article/details/89856034">https://blog.csdn.net/csqxy547/article/details/89856034</a>.<br>[15] [数值计算] [已解决]批处理()嵌套的变量延时与endlocal作用域问题[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-32880-1-1.html">http://www.bathome.net/thread-32880-1-1.html</a>.<br>[16] How can I replace every occurrence of a String in a file with PowerShell?. <a href="https://stackoverflow.com/questions/17144355/how-can-i-replace-every-occurrence-of-a-string-in-a-file-with-powershell">https://stackoverflow.com/questions/17144355/how-can-i-replace-every-occurrence-of-a-string-in-a-file-with-powershell</a>.</p>
+<h1 id="参考文献">17 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How to request Administrator access inside a batch file[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1894967/how%E2%80%91to%E2%80%91request%E2%80%91administrator%E2%80%91access%E2%80%91inside%E2%80%91a%E2%80%91batch%E2%80%91file">https://stackoverflow.com/questions/1894967/how‑to‑request‑administrator‑access‑inside‑a‑batch‑file</a>.<br>[2] How to write a batch file can run parameters as command with administrative privi‑leges?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/38364617/how%E2%80%91to%E2%80%91write%E2%80%91a%E2%80%91batch%E2%80%91file%E2%80%91can%E2%80%91run%E2%80%91parameters%E2%80%91as%E2%80%91command%E2%80%91with%E2%80%91administrative%E2%80%91priv">https://stackoverflow.com/questions/38364617/how‑to‑write‑a‑batch‑file‑can‑run‑parameters‑as‑command‑with‑administrative‑priv</a>.<br>[3] 批处理通过 ping 判断网络[EB&#x2F;OL]. <a href="https://www.52pojie.cn/thread-1021861-1-1.html">https://www.52pojie.cn/thread-1021861-1-1.html</a>.<br>[4] 批处理 ping命令判断是否可以连接到一个网站[EB&#x2F;OL]. <a href="https://lanlan2017.github.io/blog/318f3e6b/">https://lanlan2017.github.io/blog/318f3e6b/</a>.<br>[5] Windows10一句话从administrator权限提升到system权限[EB&#x2F;OL]. <a href="https://blog.csdn.net/mochu7777777/article/details/106842901">https://blog.csdn.net/mochu7777777/article/details/106842901</a>.<br>[6] 在命令提示符中运行 PowerShell 命令[EB&#x2F;OL]. <a href="https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/">https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/</a>.<br>[7] [系统相关] [已解决]批处理if中，&#x3D;&#x3D; 与equ 这2个，在什么情况下会有区别？[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-15170-1-1.html">http://www.bathome.net/thread-15170-1-1.html</a>.<br>[8] cmd 字符串替换[EB&#x2F;OL]. <a href="https://blog.csdn.net/scimence/article/details/52816878">https://blog.csdn.net/scimence/article/details/52816878</a>.<br>[9] Bat 去掉变量字符串中的空格[EB&#x2F;OL]. <a href="https://blog.csdn.net/a71468293a/article/details/127747191">https://blog.csdn.net/a71468293a/article/details/127747191</a>.<br>[10] 字符串截取操作[EB&#x2F;OL]. <a href="https://www.hxstrive.com/subject/windows_bat/122.htm">https://www.hxstrive.com/subject/windows_bat/122.htm</a>.<br>[11] 在使用bat 批处理 时将运行结果显示并保存到文件中 echo[EB&#x2F;OL]. <a href="https://www.cnblogs.com/qiyuexin/p/11701362.html">https://www.cnblogs.com/qiyuexin/p/11701362.html</a>.<br>[12] for &#x2F;f命令之—Delims和Tokens用法&amp;总结[EB&#x2F;OL]. <a href="https://blog.csdn.net/kagurawill/article/details/114982328">https://blog.csdn.net/kagurawill/article/details/114982328</a>.<br>[13] 批处理（bat）中的数组问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_34414530/article/details/117839838">https://blog.csdn.net/qq_34414530/article/details/117839838</a>.<br>[14] BAT批处理文件 setlocal,endlocal命令详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/csqxy547/article/details/89856034">https://blog.csdn.net/csqxy547/article/details/89856034</a>.<br>[15] [数值计算] [已解决]批处理()嵌套的变量延时与endlocal作用域问题[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-32880-1-1.html">http://www.bathome.net/thread-32880-1-1.html</a>.<br>[16] How can I replace every occurrence of a String in a file with PowerShell?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/17144355/how-can-i-replace-every-occurrence-of-a-string-in-a-file-with-powershell">https://stackoverflow.com/questions/17144355/how-can-i-replace-every-occurrence-of-a-string-in-a-file-with-powershell</a>.<br>[17] DOS batch FOR loop with FIND.exe is stripping out blank lines?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/8811992/dos-batch-for-loop-with-find-exe-is-stripping-out-blank-lines">https://stackoverflow.com/questions/8811992/dos-batch-for-loop-with-find-exe-is-stripping-out-blank-lines</a>.<br>[18] Special Characters in Batch File[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/37333620/special-characters-in-batch-file">https://stackoverflow.com/questions/37333620/special-characters-in-batch-file</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4621,7 +4694,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>Intel官方公告：</p>
 <ul>
 <li><a href="https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113">July 2024 Update on Instability Reports on Intel Core 13th and 14th Gen Desktop Processors</a></li>
-<li><a href="https://community.intel.com/t5/Processors/Additional-Warranty-Updates-on-Intel-Core-13th-14th-Gen-Desktop/m-p/1620853">Additional Warranty Updates on Intel Core 13th&#x2F;14th Gen Desktop Processors</a>：盒装延长2年质保的公告</li>
+<li><a href="https://community.intel.com/t5/Processors/Additional-Warranty-Updates-on-Intel-Core-13th-14th-Gen-Desktop/m-p/1620853">Additional Warranty Updates on Intel Core 13th&#x2F;14th Gen Desktop Processors</a>：延长2年质保的公告（包括盒装、散片、OEM）</li>
 </ul>
 <p>相关网络报道：</p>
 <ul>
@@ -5342,11 +5415,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">&#110;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#99;&#x6f;&#x6d;">&#49;&#x40;&#x31;&#x2e;&#99;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#x2e;&#99;&#111;&#109;">&#56;&#64;&#56;&#x2e;&#99;&#111;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;">&#x6e;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;">&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#99;&#111;&#109;">&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#111;&#109;">&#x31;&#64;&#49;&#46;&#x63;&#111;&#109;</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;">&#x38;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;">&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;">&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;</a></li>
 </ul>
 </li>
 </ul>
@@ -8753,36 +8826,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender常见问题总结——Q&amp;A</title>
-    <url>/software/blender/q-a/</url>
-    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
-<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
-<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
-<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
-<ul>
-<li>CPU比GPU性能差很多</li>
-<li>渲染Volumetrics场景</li>
-</ul>
-<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-JHyGcniFEaAXhYgT" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-JHyGcniFEaAXhYgT").style.height=document.getElementById("mmedia-JHyGcniFEaAXhYgT").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-PPNZCKJMuAGgGaQY" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-PPNZCKJMuAGgGaQY").style.height=document.getElementById("mmedia-PPNZCKJMuAGgGaQY").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-JHyGcniFEaAXhYgT").style.height=document.getElementById("mmedia-JHyGcniFEaAXhYgT").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-PPNZCKJMuAGgGaQY").style.height=document.getElementById("mmedia-PPNZCKJMuAGgGaQY").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -8830,6 +8879,30 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>动画</tag>
         <tag>动画电影</tag>
         <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
       </tags>
   </entry>
   <entry>
@@ -8905,7 +8978,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-yKvTcALZHZkPvlnp"></div><script> var yKvTcALZHZkPvlnp_options = JSON.parse('{\"id\":\"mmedia-yKvTcALZHZkPvlnp\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(yKvTcALZHZkPvlnp_options); </script>
+<div id="mmedia-xpVMmYohFEFJwsky"></div><script> var xpVMmYohFEFJwsky_options = JSON.parse('{\"id\":\"mmedia-xpVMmYohFEFJwsky\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(xpVMmYohFEFJwsky_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9008,7 +9081,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#105;&#115;&#116;&#101;&#114;&#107;&#105;&#110;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#105;&#109;&#46;&#x6d;&#105;&#115;&#116;&#101;&#114;&#107;&#105;&#110;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#105;&#x73;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x69;&#x6d;&#x2e;&#x6d;&#105;&#x73;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
