@@ -1200,7 +1200,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Bash总结笔记</title>
+    <title>Bash Shell总结笔记</title>
     <url>/code/bash/</url>
     <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
 <p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p>
@@ -1227,8 +1227,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Bat语法总结笔记</title>
-    <url>/code/bat/</url>
+    <title>Bat&amp;Powershell语法总结笔记</title>
+    <url>/code/bat-powershell/</url>
     <content><![CDATA[<h1 id="推荐链接">1 &nbsp&nbsp<a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1><ul>
 <li>微软文档<a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">代码页标识符（chcp）</a></li>
 <li><a href="https://ss64.com/nt/">CMD命令例程索引</a>：这个三方教程索引，比官方文档好用。</li>
@@ -1248,8 +1248,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>n：开始截取字符串的偏移量；如果为正数，则从左边开始；如果没有为负数，则从右边开始</li>
 <li>m：要截取字符的个数。如果没有指定个数，则采用默认值，即变量数值的余数（余数指剩余个数，如：%variable:~-5% 当前偏移量为倒数第6，将剩下的字符全部截取）。如果两个数字 (偏移量和长度) 都是负数，使用的数字则是字符串长度加上指定的偏移量或长度（参见实例2）。<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> ifo=abcdefghijklmnopqrstuvwxyz0123456789</span><br><span class="line"><span class="built_in">echo</span> 原字符串：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem abcde</span></span><br><span class="line"><span class="built_in">echo</span> 截取前<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~0,5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem fghijklmnopqrstuvwxyz0123456789</span></span><br><span class="line"><span class="built_in">echo</span> 截取第六个字符直到最后一个字符</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem 56789</span></span><br><span class="line"><span class="built_in">echo</span> 截取最后<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~-5%</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~-5,5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem abcdefghijklmnopqrstuvwxyz01234</span></span><br><span class="line"><span class="built_in">echo</span> 截取第一个到倒数第<span class="number">6</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~0,-5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem defgh</span></span><br><span class="line"><span class="built_in">echo</span> 从第<span class="number">4</span>个字符开始，截取<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~3,5%</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem wxyz0</span></span><br><span class="line"><span class="built_in">echo</span> 从倒数第<span class="number">14</span>个字符开始，截取<span class="number">5</span>个字符：</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%ifo:~-14,5%</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="字符串的字符替换">4.2 &nbsp&nbsp<a href="#字符串的字符替换" class="headerlink" title="字符串的字符替换"></a>字符串的字符替换</h2><p><code>%variable:str1=str2%</code></p>
+<h2 id="字符串的字符替换">4.2 &nbsp&nbsp<a href="#字符串的字符替换" class="headerlink" title="字符串的字符替换"></a>字符串的字符替换</h2><p>BAT语法：<code>%variable:str1=str2%</code>，缺陷：用以文本文件中整行处理中可能无法处理一些特殊字符，导致丢失某些内容。</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 替换str中的xxx为yyy</span></span><br><span class="line"><span class="built_in">set</span> str2=<span class="variable">%str:xxx=yyy%</span></span><br></pre></td></tr></table></figure>
+
+<p>POWERSHELL语法：<code>(Get-Content -Path &#39;%file_path%&#39;) -replace &#39;%search_string%&#39;, &#39;%replace_string%&#39; | Set-Content -Path &#39;%file_path%&#39;</code>，缺陷：用以文本文件中整行处理中可能无法处理一些特殊字符，导致丢失某些内容。不过比BAT语法使用起来更简单，而且无需特殊处理也能保留空格和换行符。推荐只修改特定字符串，<code>%search_string%</code>无需填入过多的字符，例如将17改为20，只需搜索17字符串即可。</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">powershell -Command &quot;(Get-Content -<span class="built_in">Path</span> &#x27;<span class="variable">%file_path%</span>&#x27;) -<span class="built_in">replace</span> &#x27;<span class="variable">%search_string%</span>&#x27;, &#x27;<span class="variable">%replace_string%</span>&#x27; | <span class="built_in">Set</span>-Content -<span class="built_in">Path</span> &#x27;<span class="variable">%file_path%</span>&#x27;&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="去掉变量字符串中的空格">4.3 &nbsp&nbsp<a href="#去掉变量字符串中的空格" class="headerlink" title="去掉变量字符串中的空格"></a>去掉变量字符串中的空格</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> abc=                          aaabbbccc</span><br><span class="line">:delleft</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%abc:~0,1%</span>&quot;==&quot; &quot; <span class="built_in">set</span> abc=<span class="variable">%abc:~1%</span>&amp;&amp;<span class="keyword">goto</span> delleft</span><br><span class="line"><span class="built_in">echo</span> 去掉左边空格:<span class="variable">%abc%</span></span><br><span class="line"><span class="built_in">set</span> abc=aaabbbccc</span><br><span class="line">:delright</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%abc:~-1%</span>&quot;==&quot; &quot; <span class="built_in">set</span> abc=<span class="variable">%abc:~0,-1%</span>&amp;&amp;<span class="keyword">goto</span> delright</span><br><span class="line"><span class="built_in">echo</span> 去掉右边空格:<span class="variable">%abc%</span></span><br><span class="line"><span class="comment">@REM 去除所有空格，使用的方式就是字符替换</span></span><br><span class="line"><span class="built_in">set</span> abc=        aaa     bbb       ccc</span><br><span class="line"><span class="built_in">set</span> &quot;abc=%abc: =%&quot;</span><br><span class="line"><span class="built_in">echo</span> 去掉所有空格:<span class="variable">%abc%</span></span><br></pre></td></tr></table></figure>
 
@@ -1308,7 +1311,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p>数值是指十进制的数字，在前缀加 <code>0×</code> （这里x忽略大小写）则表示十六进制数字，加 <code>0</code> 则表示八进制数字。因此，<code>0x12</code> 与 <code>18</code> 相同，也与 <code>022</code> 相同，八进制表示法容易引起混淆。例如，<code>08</code> 和 <code>09</code> 不是有效数字，因为 <code>8</code> 和 <code>9</code> 不是有效的八进制数字。</p>
 <p>所以，在使用 <code>==</code> 比较时，<code>0x12</code>、<code>022</code>和<code>18</code>是不相等的，但在使用<code>EQU</code>比较时，他们是相等的，因为他们对应的数值都是<code>18</code>！</p>
-<h1 id="参考文献">14 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How to request Administrator access inside a batch file[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1894967/how%E2%80%91to%E2%80%91request%E2%80%91administrator%E2%80%91access%E2%80%91inside%E2%80%91a%E2%80%91batch%E2%80%91file">https://stackoverflow.com/questions/1894967/how‑to‑request‑administrator‑access‑inside‑a‑batch‑file</a>.<br>[2] How to write a batch file can run parameters as command with administrative privi‑leges?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/38364617/how%E2%80%91to%E2%80%91write%E2%80%91a%E2%80%91batch%E2%80%91file%E2%80%91can%E2%80%91run%E2%80%91parameters%E2%80%91as%E2%80%91command%E2%80%91with%E2%80%91administrative%E2%80%91priv">https://stackoverflow.com/questions/38364617/how‑to‑write‑a‑batch‑file‑can‑run‑parameters‑as‑command‑with‑administrative‑priv</a>.<br>[3] 批处理通过 ping 判断网络[EB&#x2F;OL]. <a href="https://www.52pojie.cn/thread-1021861-1-1.html">https://www.52pojie.cn/thread-1021861-1-1.html</a>.<br>[4] 批处理 ping命令判断是否可以连接到一个网站[EB&#x2F;OL]. <a href="https://lanlan2017.github.io/blog/318f3e6b/">https://lanlan2017.github.io/blog/318f3e6b/</a>.<br>[5] Windows10一句话从administrator权限提升到system权限[EB&#x2F;OL]. <a href="https://blog.csdn.net/mochu7777777/article/details/106842901">https://blog.csdn.net/mochu7777777/article/details/106842901</a>.<br>[6] 在命令提示符中运行 PowerShell 命令[EB&#x2F;OL]. <a href="https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/">https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/</a>.<br>[7] [系统相关] [已解决]批处理if中，&#x3D;&#x3D; 与equ 这2个，在什么情况下会有区别？[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-15170-1-1.html">http://www.bathome.net/thread-15170-1-1.html</a>.<br>[8] cmd 字符串替换[EB&#x2F;OL]. <a href="https://blog.csdn.net/scimence/article/details/52816878">https://blog.csdn.net/scimence/article/details/52816878</a>.<br>[9] Bat 去掉变量字符串中的空格[EB&#x2F;OL]. <a href="https://blog.csdn.net/a71468293a/article/details/127747191">https://blog.csdn.net/a71468293a/article/details/127747191</a>.<br>[10] 字符串截取操作[EB&#x2F;OL]. <a href="https://www.hxstrive.com/subject/windows_bat/122.htm">https://www.hxstrive.com/subject/windows_bat/122.htm</a>.<br>[11] 在使用bat 批处理 时将运行结果显示并保存到文件中 echo[EB&#x2F;OL]. <a href="https://www.cnblogs.com/qiyuexin/p/11701362.html">https://www.cnblogs.com/qiyuexin/p/11701362.html</a>.<br>[12] for &#x2F;f命令之—Delims和Tokens用法&amp;总结[EB&#x2F;OL]. <a href="https://blog.csdn.net/kagurawill/article/details/114982328">https://blog.csdn.net/kagurawill/article/details/114982328</a>.<br>[13] 批处理（bat）中的数组问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_34414530/article/details/117839838">https://blog.csdn.net/qq_34414530/article/details/117839838</a>.<br>[14] BAT批处理文件 setlocal,endlocal命令详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/csqxy547/article/details/89856034">https://blog.csdn.net/csqxy547/article/details/89856034</a>.<br>[15] [数值计算] [已解决]批处理()嵌套的变量延时与endlocal作用域问题[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-32880-1-1.html">http://www.bathome.net/thread-32880-1-1.html</a>.</p>
+<h1 id="ps脚本无法运行">14 &nbsp&nbsp<a href="#ps脚本无法运行" class="headerlink" title="ps脚本无法运行"></a>ps脚本无法运行</h1><p>出于安全考虑，默认的 Windows PowerShell 策略不允许执行脚本。</p>
+<p>设置运行策略：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> unrestricted</span><br><span class="line"><span class="comment"># Restricted：默认设置，不允许运行任何脚本</span></span><br><span class="line"><span class="comment"># AllSigned：仅运行受信任脚本</span></span><br><span class="line"><span class="comment"># RemoteSigned：运行本地脚本，不管这些脚本是否受信任</span></span><br><span class="line"><span class="comment"># Unrestricted：允许运行所有脚本，甚至是不受信任的</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How to request Administrator access inside a batch file[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1894967/how%E2%80%91to%E2%80%91request%E2%80%91administrator%E2%80%91access%E2%80%91inside%E2%80%91a%E2%80%91batch%E2%80%91file">https://stackoverflow.com/questions/1894967/how‑to‑request‑administrator‑access‑inside‑a‑batch‑file</a>.<br>[2] How to write a batch file can run parameters as command with administrative privi‑leges?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/38364617/how%E2%80%91to%E2%80%91write%E2%80%91a%E2%80%91batch%E2%80%91file%E2%80%91can%E2%80%91run%E2%80%91parameters%E2%80%91as%E2%80%91command%E2%80%91with%E2%80%91administrative%E2%80%91priv">https://stackoverflow.com/questions/38364617/how‑to‑write‑a‑batch‑file‑can‑run‑parameters‑as‑command‑with‑administrative‑priv</a>.<br>[3] 批处理通过 ping 判断网络[EB&#x2F;OL]. <a href="https://www.52pojie.cn/thread-1021861-1-1.html">https://www.52pojie.cn/thread-1021861-1-1.html</a>.<br>[4] 批处理 ping命令判断是否可以连接到一个网站[EB&#x2F;OL]. <a href="https://lanlan2017.github.io/blog/318f3e6b/">https://lanlan2017.github.io/blog/318f3e6b/</a>.<br>[5] Windows10一句话从administrator权限提升到system权限[EB&#x2F;OL]. <a href="https://blog.csdn.net/mochu7777777/article/details/106842901">https://blog.csdn.net/mochu7777777/article/details/106842901</a>.<br>[6] 在命令提示符中运行 PowerShell 命令[EB&#x2F;OL]. <a href="https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/">https://www.delftstack.com/zh/howto/powershell/running-powershell-commands-in-cmd/</a>.<br>[7] [系统相关] [已解决]批处理if中，&#x3D;&#x3D; 与equ 这2个，在什么情况下会有区别？[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-15170-1-1.html">http://www.bathome.net/thread-15170-1-1.html</a>.<br>[8] cmd 字符串替换[EB&#x2F;OL]. <a href="https://blog.csdn.net/scimence/article/details/52816878">https://blog.csdn.net/scimence/article/details/52816878</a>.<br>[9] Bat 去掉变量字符串中的空格[EB&#x2F;OL]. <a href="https://blog.csdn.net/a71468293a/article/details/127747191">https://blog.csdn.net/a71468293a/article/details/127747191</a>.<br>[10] 字符串截取操作[EB&#x2F;OL]. <a href="https://www.hxstrive.com/subject/windows_bat/122.htm">https://www.hxstrive.com/subject/windows_bat/122.htm</a>.<br>[11] 在使用bat 批处理 时将运行结果显示并保存到文件中 echo[EB&#x2F;OL]. <a href="https://www.cnblogs.com/qiyuexin/p/11701362.html">https://www.cnblogs.com/qiyuexin/p/11701362.html</a>.<br>[12] for &#x2F;f命令之—Delims和Tokens用法&amp;总结[EB&#x2F;OL]. <a href="https://blog.csdn.net/kagurawill/article/details/114982328">https://blog.csdn.net/kagurawill/article/details/114982328</a>.<br>[13] 批处理（bat）中的数组问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_34414530/article/details/117839838">https://blog.csdn.net/qq_34414530/article/details/117839838</a>.<br>[14] BAT批处理文件 setlocal,endlocal命令详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/csqxy547/article/details/89856034">https://blog.csdn.net/csqxy547/article/details/89856034</a>.<br>[15] [数值计算] [已解决]批处理()嵌套的变量延时与endlocal作用域问题[EB&#x2F;OL]. <a href="http://www.bathome.net/thread-32880-1-1.html">http://www.bathome.net/thread-32880-1-1.html</a>.<br>[16] How can I replace every occurrence of a String in a file with PowerShell?. <a href="https://stackoverflow.com/questions/17144355/how-can-i-replace-every-occurrence-of-a-string-in-a-file-with-powershell">https://stackoverflow.com/questions/17144355/how-can-i-replace-every-occurrence-of-a-string-in-a-file-with-powershell</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -1321,6 +1328,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>语法</tag>
         <tag>笔记</tag>
         <tag>windows</tag>
+        <tag>运维</tag>
+        <tag>powershell</tag>
+        <tag>脚本</tag>
       </tags>
   </entry>
   <entry>
@@ -2239,24 +2249,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Powershell总结</title>
-    <url>/code/powershell/</url>
-    <content><![CDATA[<h1 id="ps脚本无法运行">1 &nbsp&nbsp<a href="#ps脚本无法运行" class="headerlink" title="ps脚本无法运行"></a>ps脚本无法运行</h1><p>出于安全考虑，默认的 Windows PowerShell 策略不允许执行脚本。</p>
-<p>设置运行策略：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> unrestricted</span><br><span class="line"><span class="comment"># Restricted：默认设置，不允许运行任何脚本</span></span><br><span class="line"><span class="comment"># AllSigned：仅运行受信任脚本</span></span><br><span class="line"><span class="comment"># RemoteSigned：运行本地脚本，不管这些脚本是否受信任</span></span><br><span class="line"><span class="comment"># Unrestricted：允许运行所有脚本，甚至是不受信任的</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>运维</tag>
-        <tag>powershell</tag>
-        <tag>脚本</tag>
       </tags>
   </entry>
   <entry>
@@ -5140,6 +5132,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>路由排障总结</title>
+    <url>/troubleshooting/router-troubleshooting/</url>
+    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+  </entry>
+  <entry>
     <title>运行库修复（Windows平台）</title>
     <url>/troubleshooting/runtime-library-repair-on-windows/</url>
     <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
@@ -5202,17 +5205,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>NET Framework</tag>
         <tag>Microsoft Visual C++ Runtime</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>路由排障总结</title>
-    <url>/troubleshooting/router-troubleshooting/</url>
-    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
   </entry>
   <entry>
     <title>计算机软件排障总结</title>
@@ -5349,11 +5341,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#97;&#110;&#107;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#116;&#104;&#97;&#110;&#107;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#x6d;">&#x31;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#x6f;&#x6d;">&#x38;&#x40;&#x38;&#46;&#99;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#115;&#46;&#99;&#111;&#x6d;">&#110;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#115;&#46;&#99;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#111;&#109;">&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#111;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#x63;&#111;&#109;">&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#x63;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#x31;&#x2e;&#99;&#111;&#109;">&#x31;&#x40;&#x31;&#x2e;&#99;&#111;&#109;</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#x63;&#111;&#x6d;">&#x38;&#64;&#x38;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#x6d;">&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -8787,9 +8779,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-mfRxjPaiOUuejtHz" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-mfRxjPaiOUuejtHz").style.height=document.getElementById("mmedia-mfRxjPaiOUuejtHz").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-rTsHXJKlLZnUtLZu" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-rTsHXJKlLZnUtLZu").style.height=document.getElementById("mmedia-rTsHXJKlLZnUtLZu").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-mfRxjPaiOUuejtHz").style.height=document.getElementById("mmedia-mfRxjPaiOUuejtHz").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-rTsHXJKlLZnUtLZu").style.height=document.getElementById("mmedia-rTsHXJKlLZnUtLZu").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -8912,7 +8904,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-QtNxnDVhvfAVxVJe"></div><script> var QtNxnDVhvfAVxVJe_options = JSON.parse('{\"id\":\"mmedia-QtNxnDVhvfAVxVJe\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(QtNxnDVhvfAVxVJe_options); </script>
+<div id="mmedia-HHddziHYeapWbhtl"></div><script> var HHddziHYeapWbhtl_options = JSON.parse('{\"id\":\"mmedia-HHddziHYeapWbhtl\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(HHddziHYeapWbhtl_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9015,7 +9007,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#x69;&#109;&#x2e;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#105;&#115;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#105;&#109;&#46;&#x6d;&#105;&#115;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -9147,9 +9139,8 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><a href="/software/server">服务器</a></li>
 </ul>
 <h1 id="编程总结">2 &nbsp&nbsp<a href="#编程总结" class="headerlink" title="编程总结"></a>编程总结</h1><ul>
-<li><a href="/code/bash">Bash</a></li>
-<li><a href="/code/bat">Bat</a></li>
-<li><a href="/code/powershell">Powershell</a></li>
+<li><a href="/code/bash">Bash Shell</a></li>
+<li><a href="/code/bat-powershell">Bat&amp;Powershell</a></li>
 <li><a href="/code/database">数据库</a></li>
 <li><a href="/code/c">C</a></li>
 <li><a href="/code/css">CSS</a></li>

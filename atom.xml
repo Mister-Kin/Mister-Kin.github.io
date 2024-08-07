@@ -596,35 +596,33 @@
   </entry>
   
   <entry>
-    <title>Powershell总结</title>
-    <link href="https://mister-kin.github.io/code/powershell/"/>
-    <id>https://mister-kin.github.io/code/powershell/</id>
-    <published>2024-05-11T15:07:18.000Z</published>
-    <updated>2024-05-11T17:26:31.000Z</updated>
+    <title>Audacity总结</title>
+    <link href="https://mister-kin.github.io/software/audacity/"/>
+    <id>https://mister-kin.github.io/software/audacity/</id>
+    <published>2024-04-28T02:34:08.000Z</published>
+    <updated>2024-04-28T04:42:46.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ps脚本无法运行">1 &nbsp&nbsp<a href="#ps脚本无法运行" class="headerlink" title="ps脚本无法运行"></a>ps脚本无法运行</h1><p>出于安全考虑，默认的 Windows PowerShell 策略不允许执行脚本。</p><p>设置运行策略：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> unrestricted</span><br><span class="line"><span class="comment"># Restricted：默认设置，不允许运行任何脚本</span></span><br><span class="line"><span class="comment"># AllSigned：仅运行受信任脚本</span></span><br><span class="line"><span class="comment"># RemoteSigned：运行本地脚本，不管这些脚本是否受信任</span></span><br><span class="line"><span class="comment"># Unrestricted：允许运行所有脚本，甚至是不受信任的</span></span><br></pre></td></tr></table></figure><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p><p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;ps脚本无法运行&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#ps脚本无法运行&quot; class=&quot;headerlink&quot; title=&quot;ps脚本无法运行&quot;&gt;&lt;/a&gt;ps脚本无法运行&lt;/h1&gt;&lt;p&gt;出于安全考虑，默认的 Windows PowerShell</summary>
+    <summary type="html">&lt;h1 id=&quot;安装openvino-plugins-ai-audacity找不到组件&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#安装openvino-plugins-ai-audacity找不到组件&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
+    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
     
     
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="audacity" scheme="https://mister-kin.github.io/tags/audacity/"/>
     
-    <category term="运维" scheme="https://mister-kin.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    <category term="音频" scheme="https://mister-kin.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
     
-    <category term="powershell" scheme="https://mister-kin.github.io/tags/powershell/"/>
-    
-    <category term="脚本" scheme="https://mister-kin.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    <category term="后期处理" scheme="https://mister-kin.github.io/tags/%E5%90%8E%E6%9C%9F%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
