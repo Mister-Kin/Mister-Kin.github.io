@@ -3526,14 +3526,27 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>DPI：Dots Per Inch，即每英寸点数，也可以理解成点&#x2F;英寸（dots&#x2F;inch）<br>一般打印时，可认为图片ppi&#x3D;dpi。</li>
 </ul>
 <h2 id="快捷键">1.3 &nbsp&nbsp<a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>手绘笔刷工具：B（橡皮擦也归类为笔刷）</li>
+<li>手绘笔刷工具：B（橡皮擦也归类为笔刷）。按住V可以临时切换到直线工具拉直线。</li>
 <li>调整笔刷大小：Shift+左右拖动</li>
+<li>笔刷橡皮擦模式：E。把当前笔刷切换到橡皮擦模式，然后用来擦除。但不是橡皮擦，Krita中橡皮檫是笔刷。</li>
+<li>切换到上一个使用的笔刷：&#x2F;。反复切换可在上一个和当前笔刷中切换。</li>
+<li>调暗笔刷颜色：K</li>
+<li>调亮笔刷颜色：L</li>
+<li>降低不透明度：I</li>
+<li>提高不透明度：O</li>
+<li>临时吸色到前景色：Ctrl+左键</li>
 <li>裁剪工具：C（也可以用于扩大&#x2F;缩小画布，确保勾选应用到图像，而不是图层）</li>
 <li>撤销：Ctrl+Z</li>
 <li>重做：Ctrl+Shift+Z</li>
 <li>旋转画布：Shift+鼠标中键+移动（数字键：左旋4右旋6重置旋转5）</li>
-<li>缩放画布：Ctrl+中键+上下移动</li>
+<li>缩放画布：Ctrl+中键+上下移动。100%大小：1。缩放到视图大小：2。</li>
 <li>移动画布：<code>按一下空格+按住左键拖动</code>&#x2F;<code>中键+移动</code></li>
+<li>镜像显示：M</li>
+<li>工具的右键功能<ul>
+<li>手绘笔刷工具：有笔刷选择、拾色器、缩放、旋转、镜像显示等。</li>
+<li>选区工具：有全选，取消选择，反选等。</li>
+</ul>
+</li>
 <li>图层操作<ul>
 <li>通过点击内容反向选中图层：按住R+点击内容（Shift+R可以连续选择多个）</li>
 <li>新增颜料图层：Ins</li>
@@ -3541,16 +3554,34 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>取消图层编组：Ctrl+Alt+G</li>
 <li>向下合并图层：Ctrl+E</li>
 <li>删除图层：Shift+Del</li>
+<li>选择图层不透明区域：Ctrl+点击图层缩略图</li>
+<li>建立剪贴编组（继承透明度）：Ctrl+Shift+G</li>
+<li>单独显示图层&#x2F;图层组：右键图层，单独显示图层，然后选择对应图层即为该图层。</li>
 </ul>
 </li>
 <li>选区（<strong>选区建立后只能在选区中绘制</strong>）<ul>
+<li>矩形选区工具：Ctrl+R</li>
+<li>多边形选区（多边形套索）</li>
+<li>手绘轮廓选区（套索）：手绘轮廓选区中按住 Ctrl 后提起笔尖在下笔会临时切换到多边形选区</li>
 <li>增加选区：按住 Shift 在已有选区上添加</li>
 <li>减少选区：按住 Alt 在已有选区上减少</li>
-<li>留下相交部分：按住 Shift+Alt 在已有选区上留下相交部分</li>
+<li>保留选区相交部分：按住 Shift+Alt 在已有选区上留下相交部分</li>
 <li>反向选择：Ctrl+Shift+I</li>
 <li>取消选择：Ctrl+Shift+A</li>
 </ul>
 </li>
+<li>变形（调整已绘制好内容）：Ctrl+T，可用来移动<ul>
+<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
+<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
+<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
+<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
+<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
+</ul>
+</li>
+<li>移动图层：T</li>
+<li>搜索功能：Ctrl+Enter</li>
+<li>填充工具：F</li>
+<li>删除当前选中内容：Del（若存在选区，则仅对选区内操作）</li>
 </ul>
 <h2 id="多功能右键">1.4 &nbsp&nbsp<a href="#多功能右键" class="headerlink" title="多功能右键"></a>多功能右键</h2><p>右键面板功能：</p>
 <ul>
@@ -3586,8 +3617,43 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>通过点击内容反向选中图层：按住R+点击内容</li>
 <li>切换到手绘轮廓选区工具选中想要调整的部分（若手绘选区不能形成一个封闭区，该工具可自行连接选区）</li>
 <li>切换到变形工具（Ctrl+T）对选中部分进行调整（右键选区-变形-变形工具）</li>
+<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
+<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
+<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
+<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
+<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
+<li>调整好后需要切换回手绘笔刷工具（B）才能继续绘画。</li>
 </ol>
-<h1 id="Krita优化设置">2 &nbsp&nbsp<a href="#Krita优化设置" class="headerlink" title="Krita优化设置"></a>Krita优化设置</h1><ul>
+<h2 id="线稿与填色技巧">1.7 &nbsp&nbsp<a href="#线稿与填色技巧" class="headerlink" title="线稿与填色技巧"></a>线稿与填色技巧</h2><ul>
+<li>让线条平滑<ul>
+<li>手绘笔刷工具的防抖和笔画平滑，笔刷选项中默认为「基本-只平滑笔画棱角」。</li>
+<li>绘制长线条或者使用鼠标的时候，可以选则后两种，有额外的细调选项可调整。</li>
+</ul>
+</li>
+<li>给线稿填色<ul>
+<li>线稿无缺口：需确保线稿无缺口，有缺口会导致填充至外部。<ol>
+<li>新建图层并命名</li>
+<li>将线稿图层置顶，线稿图层置顶有助于获得良好的线稿效果</li>
+<li>切换到填充工具（F）</li>
+<li>调整填充工具选项以获得良好填充效果：<ul>
+<li>采样图层：分图层进行填充时，推荐切换为所有图层</li>
+<li>扩大&#x2F;缩小填充区域：1px或者更高的扩大数值让线稿边缘在填充后不会出现灰杂色。线稿不能非常细，否则这个会导致填充到线稿外面。</li>
+<li>色差阈值：控制忽略颜色差异的程度，数值越大越把类似颜色当做一样的处理，例如数值越大，灰色线条和白色底色当做同色处理。</li>
+</ul>
+</li>
+<li>选取想要使用的颜色对底色图层进行填充。</li>
+<li>在底色填充完之后，新建图层进行相关细化，例如绘制阴影亮部之类细节。</li>
+</ol>
+</li>
+<li>线稿有缺口：若想对存在缺口的线稿进行填充，可使用智能填色蒙版工具。</li>
+</ul>
+</li>
+</ul>
+<h1 id="快捷键优化设置">2 &nbsp&nbsp<a href="#快捷键优化设置" class="headerlink" title="快捷键优化设置"></a>快捷键优化设置</h1><ul>
+<li>压感笔设置：鼠标右键，鼠标中键。</li>
+<li></li>
+</ul>
+<h1 id="Krita优化设置">3 &nbsp&nbsp<a href="#Krita优化设置" class="headerlink" title="Krita优化设置"></a>Krita优化设置</h1><ul>
 <li>软件的UI比例异常<ul>
 <li>Windows系统设置-&gt;显示-&gt;缩放与布局</li>
 <li>设置-&gt;配置 krita-&gt;常规-&gt;窗口-&gt;启用高分辨率（Hi-DPI）支持（该项目启用即代表同步Windows的缩放设置）</li>
@@ -3601,7 +3667,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h1 id="实战案例">3 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="白底黑图片转透明底白图片">3.1 &nbsp&nbsp<a href="#白底黑图片转透明底白图片" class="headerlink" title="白底黑图片转透明底白图片"></a>白底黑图片转透明底白图片</h2><ol>
+<h1 id="实战案例">4 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="白底黑图片转透明底白图片">4.1 &nbsp&nbsp<a href="#白底黑图片转透明底白图片" class="headerlink" title="白底黑图片转透明底白图片"></a>白底黑图片转透明底白图片</h2><ol>
 <li>导入图片</li>
 <li>菜单&gt;滤镜&gt;颜色&gt;颜色转为透明度（不做遮罩，否则不好反相）</li>
 <li>菜单&gt;滤镜&gt;调整&gt;反相</li>
@@ -4538,6 +4604,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>翻译规划（作废）</title>
     <url>/translations/translation-roadmap/</url>
     <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
@@ -4774,240 +4890,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>维护</tag>
         <tag>故障</tag>
         <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux系统排障总结</title>
-    <url>/troubleshooting/linux-troubleshooting/</url>
-    <content><![CDATA[<h1 id="Bash终端">1 &nbsp&nbsp<a href="#Bash终端" class="headerlink" title="Bash终端"></a>Bash终端</h1><h2 id="符号输入控制">1.1 &nbsp&nbsp<a href="#符号输入控制" class="headerlink" title="符号输入控制"></a>符号输入控制</h2><ul>
-<li>ctrl+c：停止</li>
-<li>ctrl+z：停止输入</li>
-</ul>
-<h1 id="基础命令">2 &nbsp&nbsp<a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
-<li>关机：<ul>
-<li><code>poweroff</code>（也是调用shutdown工具链实现）</li>
-<li><code>halt</code>（实际调用shutdown -h）</li>
-<li><code>shutdown -h now</code></li>
-<li><code>init 0</code>（init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一。它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程，shutdown就是使用这种机制。init定义了8个运行级别(runlevel)，init 0为关机，init 1为重启。）</li>
-</ul>
-</li>
-<li>重启<ul>
-<li><code>reboot</code></li>
-<li><code>shutdown -r now</code>（root权限可使用）</li>
-<li><code>init 1</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="包管理器">3 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">3.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">3.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
-
-<h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">4.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
-
-<h2 id="源码编译的程序的安装和卸载">4.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>卸载方式：</p>
-<ul>
-<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
-<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
-<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
-<li>debian系列linux可尝试使用auto-apt 和 checkinstall：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="普通用户导致的编译问题">4.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
-<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
-<h2 id="常见编译错误">4.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
-<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
-<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
-</ul>
-<h1 id="账户管理">5 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="自动root登录">5.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
-
-<h2 id="重置密码（ubuntu为例）">5.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
-<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
-<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
-<li>exit退出shell，选择resume回到正常启动中。</li>
-</ol>
-<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">5.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
-<h3 id="etc-passwd">5.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
-<ol>
-<li>账号名称</li>
-<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
-<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
-<li>GID，也就是群组ID</li>
-<li>关于账号的一些说明信息（暂时可以忽略）</li>
-<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
-<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
-</ol>
-<h3 id="etc-shadow">5.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
-<ol>
-<li>账户名称（密码需要与账户对应的）</li>
-<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
-<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
-<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
-<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
-<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
-<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
-<li>账号失效日期，过了这个日期账号就不能用了</li>
-<li>保留未使用</li>
-</ol>
-<h3 id="etc-shadow文件中密码的加密方式">5.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
-<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
-<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
-<div class="note "><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
-</div>
-
-<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
-<h1 id="硬盘和分区管理">6 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">6.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk    <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh    <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l    <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb    <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb    <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan    <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载</span></span><br><span class="line">/dev/sdb    /mnt/pan    ext4    defaults    0    0</span><br></pre></td></tr></table></figure>
-
-<h2 id="将-home目录挂载到新分区（或新硬盘）">6.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="查看硬盘是不是固态硬盘（SSD）">6.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
-
-<h1 id="网络">7 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">7.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
-<ul>
-<li>windows：ipconfig &#x2F;a</li>
-<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
-</ul>
-<p>网卡名称解析：</p>
-<ul>
-<li>lo：表示local</li>
-<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
-<li>en：表示ethernet以太网</li>
-<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
-</ul>
-<p>例子：</p>
-<ul>
-<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
-<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
-</ul>
-<h2 id="ubuntu配置网卡">7.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.10/24</span><br><span class="line">      gateway4: 192.168.1.1</span><br><span class="line">      nameservers:</span><br><span class="line">        addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="ssh登录远程服务器">7.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note "><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
-</div>
-<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
-<p>查看ssh版本：<code>ssh -V</code></p>
-<h3 id="Ubuntu开启ssh服务及允许root登录">7.3.1 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root登录" class="headerlink" title="Ubuntu开启ssh服务及允许root登录"></a>Ubuntu开启ssh服务及允许root登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="系统自启ssh服务">7.3.1.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用scp传递文件">7.3.2 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
-</div>
-<ol>
-<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
-<li>在PuTTY安装路径中打开终端窗口</li>
-<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
-</ol>
-<h2 id="arch-linux安装远程软件">7.4 &nbsp&nbsp<a href="#arch-linux安装远程软件" class="headerlink" title="arch linux安装远程软件"></a>arch linux安装远程软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
-<ul>
-<li>安装teamviewer<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure></li>
-<li>安装todesk<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure></li>
-<li>安装向日葵<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
-<h1 id="开机排障">8 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">8.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
-<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
-<ul>
-<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
-<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
-</ul>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ubuntu紧急模式">8.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
-<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<h2 id="开机出现initramfs-requires-a-manual-fsck">8.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
-<ul>
-<li>异常断电或者关机引起文件数据损坏</li>
-<li>系统无法启动</li>
-<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
-</ul>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
-
-
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>linux</tag>
-        <tag>终端</tag>
-        <tag>笔记</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>命令</tag>
       </tags>
   </entry>
   <entry>
@@ -5406,6 +5288,190 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Linux系统排障总结</title>
+    <url>/troubleshooting/linux-troubleshooting/</url>
+    <content><![CDATA[<h1 id="Bash终端">1 &nbsp&nbsp<a href="#Bash终端" class="headerlink" title="Bash终端"></a>Bash终端</h1><h2 id="符号输入控制">1.1 &nbsp&nbsp<a href="#符号输入控制" class="headerlink" title="符号输入控制"></a>符号输入控制</h2><ul>
+<li>ctrl+c：停止</li>
+<li>ctrl+z：停止输入</li>
+</ul>
+<h1 id="基础命令">2 &nbsp&nbsp<a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
+<li>关机：<ul>
+<li><code>poweroff</code>（也是调用shutdown工具链实现）</li>
+<li><code>halt</code>（实际调用shutdown -h）</li>
+<li><code>shutdown -h now</code></li>
+<li><code>init 0</code>（init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一。它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程，shutdown就是使用这种机制。init定义了8个运行级别(runlevel)，init 0为关机，init 1为重启。）</li>
+</ul>
+</li>
+<li>重启<ul>
+<li><code>reboot</code></li>
+<li><code>shutdown -r now</code>（root权限可使用）</li>
+<li><code>init 1</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="包管理器">3 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">3.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">3.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
+
+<h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">4.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
+
+<h2 id="源码编译的程序的安装和卸载">4.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>卸载方式：</p>
+<ul>
+<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
+<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
+<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
+<li>debian系列linux可尝试使用auto-apt 和 checkinstall：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="普通用户导致的编译问题">4.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
+<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
+<h2 id="常见编译错误">4.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
+<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
+<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
+</ul>
+<h1 id="账户管理">5 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自动root登录">5.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
+
+<h2 id="重置密码（ubuntu为例）">5.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
+<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
+<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
+<li>exit退出shell，选择resume回到正常启动中。</li>
+</ol>
+<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">5.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
+<h3 id="etc-passwd">5.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
+<ol>
+<li>账号名称</li>
+<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
+<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
+<li>GID，也就是群组ID</li>
+<li>关于账号的一些说明信息（暂时可以忽略）</li>
+<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
+<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
+</ol>
+<h3 id="etc-shadow">5.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
+<ol>
+<li>账户名称（密码需要与账户对应的）</li>
+<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
+<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
+<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
+<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
+<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
+<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
+<li>账号失效日期，过了这个日期账号就不能用了</li>
+<li>保留未使用</li>
+</ol>
+<h3 id="etc-shadow文件中密码的加密方式">5.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
+<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
+<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
+<div class="note "><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
+</div>
+
+<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
+<h1 id="硬盘和分区管理">6 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">6.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk    <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh    <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l    <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb    <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb    <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan    <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载</span></span><br><span class="line">/dev/sdb    /mnt/pan    ext4    defaults    0    0</span><br></pre></td></tr></table></figure>
+
+<h2 id="将-home目录挂载到新分区（或新硬盘）">6.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="查看硬盘是不是固态硬盘（SSD）">6.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
+
+<h1 id="网络">7 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">7.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
+<ul>
+<li>windows：ipconfig &#x2F;a</li>
+<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
+</ul>
+<p>网卡名称解析：</p>
+<ul>
+<li>lo：表示local</li>
+<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
+<li>en：表示ethernet以太网</li>
+<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
+</ul>
+<p>例子：</p>
+<ul>
+<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
+<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
+</ul>
+<h2 id="ubuntu配置网卡">7.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.10/24</span><br><span class="line">      gateway4: 192.168.1.1</span><br><span class="line">      nameservers:</span><br><span class="line">        addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="ssh登录远程服务器">7.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note "><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
+</div>
+<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
+<p>查看ssh版本：<code>ssh -V</code></p>
+<h3 id="Ubuntu开启ssh服务及允许root登录">7.3.1 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root登录" class="headerlink" title="Ubuntu开启ssh服务及允许root登录"></a>Ubuntu开启ssh服务及允许root登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="系统自启ssh服务">7.3.1.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用scp传递文件">7.3.2 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
+</div>
+<ol>
+<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
+<li>在PuTTY安装路径中打开终端窗口</li>
+<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
+</ol>
+<h2 id="arch-linux安装远程软件">7.4 &nbsp&nbsp<a href="#arch-linux安装远程软件" class="headerlink" title="arch linux安装远程软件"></a>arch linux安装远程软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
+<ul>
+<li>安装teamviewer<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure></li>
+<li>安装todesk<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure></li>
+<li>安装向日葵<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
+<h1 id="开机排障">8 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">8.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
+<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
+<ul>
+<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
+<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
+</ul>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ubuntu紧急模式">8.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
+<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<h2 id="开机出现initramfs-requires-a-manual-fsck">8.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
+<ul>
+<li>异常断电或者关机引起文件数据损坏</li>
+<li>系统无法启动</li>
+<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
+</ul>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+        <tag>笔记</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>路由排障总结</title>
     <url>/troubleshooting/router-troubleshooting/</url>
     <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
@@ -5615,11 +5681,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#111;&#109;">&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#46;&#99;&#111;&#x6d;">&#49;&#x40;&#x31;&#46;&#99;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#111;&#109;">&#56;&#64;&#x38;&#x2e;&#99;&#111;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;">&#x6e;&#111;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#99;&#111;&#109;">&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#99;&#111;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#109;">&#110;&#x6f;&#64;&#x74;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;">&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#109;">&#110;&#x6f;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;">&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a></li>
 </ul>
 </li>
 </ul>
@@ -9389,9 +9455,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-yZQacLiPEyRSebld" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-yZQacLiPEyRSebld").style.height=document.getElementById("mmedia-yZQacLiPEyRSebld").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-fFdEeszrxuYVZCjf" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-fFdEeszrxuYVZCjf").style.height=document.getElementById("mmedia-fFdEeszrxuYVZCjf").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-yZQacLiPEyRSebld").style.height=document.getElementById("mmedia-yZQacLiPEyRSebld").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-fFdEeszrxuYVZCjf").style.height=document.getElementById("mmedia-fFdEeszrxuYVZCjf").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9514,7 +9580,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-HFptWbMlHrFxvmuF"></div><script> var HFptWbMlHrFxvmuF_options = JSON.parse('{\"id\":\"mmedia-HFptWbMlHrFxvmuF\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(HFptWbMlHrFxvmuF_options); </script>
+<div id="mmedia-gXsqjPdfRFQbYTbj"></div><script> var gXsqjPdfRFQbYTbj_options = JSON.parse('{\"id\":\"mmedia-gXsqjPdfRFQbYTbj\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(gXsqjPdfRFQbYTbj_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9617,7 +9683,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#x69;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#x69;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#x74;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x69;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#x74;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
