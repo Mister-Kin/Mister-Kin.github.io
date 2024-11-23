@@ -475,8 +475,8 @@
     </div>
     <a href="https://www.uupdump.cn/">（推荐）UUP dump（cn域名，不忘初心中文站）</a>
     <a href="https://uupdump.net/">（不推荐）UUP dump（net域名）</a>
-    <a href="https://next.itellyou.cn/">NEXT, ITELLYOU</a>
-    <a href="https://msdn.itellyou.cn/">MSDN, itellyou</a>
+    <a href="https://next.itellyou.cn/">NEXT, ITELLYOU（新站点）</a>
+    <a href="https://msdn.itellyou.cn/">MSDN, itellyou（旧站点）</a>
     <a href="https://www.microsoft.com/zh-cn/software-download/">Windows官方下载</a>
     <a href="https://www.catalog.update.microsoft.com/Home.aspx">Windows Update Catalog官方下载</a>
     <a href="https://hellowindows.cn/">HelloWindows下载仓储站</a>
@@ -1315,6 +1315,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><a href="https://www.52audio.com/archives/107686.html">OPPO Enco Air2</a></li>
 </ul>
 <h1 id="焊接总结">7 &nbsp&nbsp<a href="#焊接总结" class="headerlink" title="焊接总结"></a>焊接总结</h1><ul>
+<li>USB接口固定引脚的加固：一般的USB接口有两个的固定引脚，如果只在一侧加焊的话，USB接口的固定引脚仍有可能会因为长期的拔插使用导致断裂（是在没有焊点的那侧断裂的）。因此加固建议是在无焊点那侧加焊，即固定引脚两侧都有焊点。</li>
 <li>5V3针灯条的串接，上下相叠起来才能吃锡</li>
 <li>BGA封装的植球焊接<ul>
 <li>使用锡泥植球时，使用热风枪加热到锡泥变亮即加热成功（这个阶段一般不需要加焊油）。</li>
@@ -1322,7 +1323,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+<h1 id="U盘的拆解">8 &nbsp&nbsp<a href="#U盘的拆解" class="headerlink" title="U盘的拆解"></a>U盘的拆解</h1><h2 id="推拉U盘的拆解">8.1 &nbsp&nbsp<a href="#推拉U盘的拆解" class="headerlink" title="推拉U盘的拆解"></a>推拉U盘的拆解</h2><div class="flex-column">
+<img data-src="/images/cad/ktc-usb.webp">金士顿推拉U盘示意图</div>
+
+<p>大部分推拉U盘的拆解，直接将推拉外壳往外使劲一拉就能拆掉。但这种拆卸方法可能会导致外壳内侧的突起卡扣点被破坏，从而导致安装回去的推拉外壳内侧没有卡点导致失去原来的推拉限位功能。</p>
+<p>有帖子教学无损拆解，是使用订书钉或者回形针（钳子拉直）插到外壳两侧的条形凹槽，然后将推拉外壳退回最内侧，使长针卡进外壳内侧，然后将外壳往外使劲一拉。</p>
+<p>在拆掉推拉外壳之后，内部塑料壳就是基础的四侧卡扣结构，直接从USB口那侧用撬片撬开<code>人</code>字形后，就可取出U盘的PCB板。</p>
+<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>cad</category>
       </categories>
@@ -4201,7 +4208,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>若机器硬件性能不太足够的话，不建议安装win系统，win系统极度消耗硬件性能（即便是空载待机状态也消耗很大），而这影响openwrt的性能。比如我的情况：安装了tiny10系统，千兆网线，宽带500M实测不到300Mbp&#x2F;s（这里是指用<a href="http://speed.unicomgd.com:8080/">广东联通宽带测速平台</a>测试的结果，实际ikuai主路由测试速率却又正常），局域网速率最高只能到700Mbp&#x2F;s的速率。关闭后tiny10后，实测宽带速率恢复正常，局域网速率跑到900Mbp&#x2F;s出头）</p>
 </blockquote>
 <h2 id="PVE基础设置">5.1 &nbsp&nbsp<a href="#PVE基础设置" class="headerlink" title="PVE基础设置"></a>PVE基础设置</h2><ol>
-<li>访问管理地址并登录：<a href="https://192.168.1.2:8006，帐号：root。">https://192.168.1.2:8006，帐号：root。</a></li>
+<li>访问管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>，帐号：root。</li>
 <li>根据硬件网卡情况，添加并设置好虚拟网桥Linux Bridge：创建&gt;Linux Bridge&gt;桥接接口填写物理网口地址名称。以我的机器为例，机器三个物理网口，PVE新建5个网桥，前三个网桥和物理网口绑定，第四个网桥用作iKuai和OpenWrt之间的传输，第五个网桥用作其他虚拟机系统的传输。</li>
 </ol>
 <h2 id="安装iKuai">5.2 &nbsp&nbsp<a href="#安装iKuai" class="headerlink" title="安装iKuai"></a>安装iKuai</h2><ol>
@@ -4215,7 +4222,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>点击启动虚拟机，完成安装即可。</li>
 <li>iKuai内识别的第一个网卡设置为lan1。</li>
 <li>输入字母o回车进入其「其他选项」，开启外网访问web。</li>
-<li>访问管理地址并登录：<a href="https://192.168.1.1:80。默认用户：admin。默认密码：admin。">https://192.168.1.1:80。默认用户：admin。默认密码：admin。</a></li>
+<li>访问管理地址并登录：<a href="https://192.168.1.1:80/">https://192.168.1.1:80</a>。默认用户：admin。默认密码：admin。</li>
 </ol>
 <h2 id="安装OpenWrt">5.3 &nbsp&nbsp<a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h2><h3 id="OpenWrt镜像的选择">5.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
 <li><a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>：推荐。内置SmartDNS，软件包空间设置为1G，剩余五百多兆。</li>
@@ -4233,7 +4240,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>在选项标签页中把「开机自启动」开启，启动顺序设置为2，引导顺序只开disk‘xxxx’磁盘，把网络启动关掉。</li>
 <li>点击启动虚拟机。</li>
 <li>pve中用shell：<code>vi /etc/config/network</code>，将lan口ip改为<code>192.168.1.3</code>，<code>reboot</code>重启。vim编辑：按i进入修改模式，按esc退出编辑模式，输入 :wq回车保存修改。</li>
-<li>访问管理地址并登录：<a href="https://192.168.1.3。默认用户：root。默认密码：password。">https://192.168.1.3。默认用户：root。默认密码：password。</a></li>
+<li>访问管理地址并登录：<a href="https://192.168.1.3/">https://192.168.1.3</a>。默认用户：root。默认密码：password。</li>
 </ol>
 <h2 id="创建虚拟机遇到的坑">5.4 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.4.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
 <p>解决方法：创建EFI磁盘时，取消勾选添加密钥。</p>
@@ -4407,7 +4414,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>保存&amp;应用</li>
 </ul>
-<h3 id="OpenClash">6.2.6 &nbsp&nbsp<a href="#OpenClash" class="headerlink" title="OpenClash"></a>OpenClash</h3><div class="note danger"><p>实测，Meta内核因DNS转发问题，导致无法正常上网。例如GOOGLE可能会出现证书异常的问题，YOUTUBE点击视频后会存在一直转圈圈的情况，无法加载视频。现阶段稳定工作的模式为：Fake-IP的普通TUN模式，模型模式可调TUN或者混合。代理模式使用规则上网即可。</p>
+<h3 id="OpenClash">6.2.6 &nbsp&nbsp<a href="#OpenClash" class="headerlink" title="OpenClash"></a>OpenClash</h3><div class="note danger"><p>实测，Meta内核因DNS转发问题，导致无法正常上网。例如GOOGLE可能会出现证书异常的问题，YOUTUBE点击视频后会存在一直转圈圈的情况，无法加载视频。现阶段稳定工作的模式为：Fake-IP的普通TUN模式，模型模式可调TUN或者混合（TUN模式需要有TUN内核支持）。代理模式使用规则上网即可。</p>
+</div>
+
+<div class="note info"><p><a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.014-beta">v0.46.014-beta</a>是最后一版支持TUN内核的版本，往后一版的<a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.031-beta">v0.46.031-beta</a>版本就开始移除Dev和TUN内核的支持，如果手动操作更新OpenClash版本，会自动移除Dev和TUN内核文件。即使手动通过WinSCP上传Dev和TUN内核文件，软件内也是无法识别到的。</p>
 </div>
 
 <h4 id="更新客户端">6.2.6.1 &nbsp&nbsp<a href="#更新客户端" class="headerlink" title="更新客户端"></a>更新客户端</h4><ol>
@@ -4928,12 +4938,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <url>/troubleshooting/hardware-troubleshooting/</url>
     <content><![CDATA[<h1 id="PC组件常见品牌质保信息查询">1 &nbsp&nbsp<a href="#PC组件常见品牌质保信息查询" class="headerlink" title="PC组件常见品牌质保信息查询"></a>PC组件常见品牌质保信息查询</h1><ul>
 <li><a href="https://www.asus.com.cn/support/article/642/">华硕-质保条款</a></li>
-<li><a href="https://www.asus.com.cn/support/warranty-status-inquiry/">华硕-质保期限查询</a></li>
+<li><a href="https://www.asus.com.cn/support/warranty-status-inquiry/">华硕-质保期限查询</a>：若主板已注册一年换新，则无法通过该渠道查询，需要在注册一年换新入口查询。</li>
+<li><a href="https://www.asus.com.cn/support/repair-status-inquiry/">华硕-查询维修进度</a></li>
 <li><a href="https://www.coolermaster.com/zh-hk/warranty/">酷冷至尊-质保条款</a></li>
 <li><a href="https://account.coolermaster.com/warrantycheck.aspx">酷冷至尊-质保期限查询</a></li>
 </ul>
 <h1 id="PC组件常见品牌驱动下载">2 &nbsp&nbsp<a href="#PC组件常见品牌驱动下载" class="headerlink" title="PC组件常见品牌驱动下载"></a>PC组件常见品牌驱动下载</h1><ul>
-<li><a href="https://www.nvidia.com/Download/Find.aspx">Nvidia驱动</a></li>
+<li><a href="https://www.nvidia.cn/drivers/lookup/">Nvidia驱动</a></li>
 <li><a href="https://developer.nvidia.com/cuda-downloads">Nvidia CUDA Toolkit</a></li>
 <li><a href="https://www.asus.com.cn/support/download-center/">华硕下载</a></li>
 </ul>
@@ -4969,7 +4980,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>CPU Core Current Limit：CPU核心电流限制。对于超频来说，一样，有多大调多大。</li>
 </ul>
 <h2 id="ZEN3的whea18错误">3.2 &nbsp&nbsp<a href="#ZEN3的whea18错误" class="headerlink" title="ZEN3的whea18错误"></a>ZEN3的whea18错误</h2><p>系列通病，也看批次，若测试频繁复现whea18，建议走售后换新。</p>
-<h1 id="Intel-13-14代高端U的缺陷">4 &nbsp&nbsp<a href="#Intel-13-14代高端U的缺陷" class="headerlink" title="Intel 13&#x2F;14代高端U的缺陷"></a>Intel 13&#x2F;14代高端U的缺陷</h1><p>关于问题原因可详看Intel官方公告内容。</p>
+<h2 id="Intel-13-14代高端U的缺陷">3.3 &nbsp&nbsp<a href="#Intel-13-14代高端U的缺陷" class="headerlink" title="Intel 13&#x2F;14代高端U的缺陷"></a>Intel 13&#x2F;14代高端U的缺陷</h2><p>关于问题原因可详看Intel官方公告内容。</p>
 <p>Intel官方公告：</p>
 <ul>
 <li><a href="https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113">July 2024 Update on Instability Reports on Intel Core 13th and 14th Gen Desktop Processors</a></li>
@@ -4985,34 +4996,38 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p><del>原因：RAD 公司隶属于 Epic Games 公司，负责开发 Bink 视频编解码器和 Oodle 数据压缩技术。RAD 公司表示，导致游戏崩溃的原因并非 Oodle 或 Unreal，而是过于乐观的 BIOS 设置，导致一小部分处理器在高负载情况下超出预设的时钟频率和功耗上限，并错误地执行指令。</del></p>
 <p>解决方法：需要锁倍频到54x或者53x。（非最终解决手段，原因可详看Intel官方公告内容）</p>
-<h1 id="内存">5 &nbsp&nbsp<a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="关于内存的术语">5.1 &nbsp&nbsp<a href="#关于内存的术语" class="headerlink" title="关于内存的术语"></a>关于内存的术语</h2><p>1DPC的意思是，每个通道1根内存<br>2DPC的意思是，每个通道2根内存<br>1R的意思是，单面颗粒内存<br>2R的意思是，双面颗粒内存</p>
-<h2 id="内存超频">5.2 &nbsp&nbsp<a href="#内存超频" class="headerlink" title="内存超频"></a>内存超频</h2><p><a href="https://zhuanlan.zhihu.com/p/77104030">原来内存超频这么简单——intel平台DDR4内存超频教程</a></p>
-<h2 id="AM5平台内存自检慢">5.3 &nbsp&nbsp<a href="#AM5平台内存自检慢" class="headerlink" title="AM5平台内存自检慢"></a>AM5平台内存自检慢</h2><p>主要问题是在于memory context restore这个选项，大部分主板默认是disable。</p>
+<h1 id="内存">4 &nbsp&nbsp<a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="关于内存的术语">4.1 &nbsp&nbsp<a href="#关于内存的术语" class="headerlink" title="关于内存的术语"></a>关于内存的术语</h2><p>1DPC的意思是，每个通道1根内存<br>2DPC的意思是，每个通道2根内存<br>1R的意思是，单面颗粒内存<br>2R的意思是，双面颗粒内存</p>
+<h2 id="内存超频">4.2 &nbsp&nbsp<a href="#内存超频" class="headerlink" title="内存超频"></a>内存超频</h2><p><a href="https://zhuanlan.zhihu.com/p/77104030">原来内存超频这么简单——intel平台DDR4内存超频教程</a></p>
+<h2 id="AM4-AM5平台内存自检慢">4.3 &nbsp&nbsp<a href="#AM4-AM5平台内存自检慢" class="headerlink" title="AM4&#x2F;AM5平台内存自检慢"></a>AM4&#x2F;AM5平台内存自检慢</h2><p>主要问题是在于memory context restore这个选项，大部分主板默认是disable。</p>
 <p>解决方法：一般是设置开启「memory context restore」即可，如有异常或者华硕主板，可能需要设置「power down enable」（华硕主板设置memory context restore时会自动设置power down enable）。以下是微星AMD主板的设置位置：</p>
 <ul>
 <li>overclocking-&gt;memory context restore&#x3D;auto改为enabled</li>
 <li>overclocking-&gt;advanced dram configuration-&gt;misc item-&gt;power down enable&#x3D;auto改为enabled</li>
 </ul>
 <p>P.S. 以MAG B650M MORTAR WIFI主板实测，「power down enable」不设置，保持「auto」自动值使用也未遇到问题。</p>
-<h1 id="不开机-自检不过">6 &nbsp&nbsp<a href="#不开机-自检不过" class="headerlink" title="不开机&#x2F;自检不过"></a>不开机&#x2F;自检不过</h1><h2 id="华硕主板Power-LED功能排查自检状况">6.1 &nbsp&nbsp<a href="#华硕主板Power-LED功能排查自检状况" class="headerlink" title="华硕主板Power LED功能排查自检状况"></a>华硕主板Power LED功能排查自检状况</h2><ul>
+<h1 id="不开机-自检不过">5 &nbsp&nbsp<a href="#不开机-自检不过" class="headerlink" title="不开机&#x2F;自检不过"></a>不开机&#x2F;自检不过</h1><h2 id="华硕主板Power-LED功能排查自检状况">5.1 &nbsp&nbsp<a href="#华硕主板Power-LED功能排查自检状况" class="headerlink" title="华硕主板Power LED功能排查自检状况"></a>华硕主板Power LED功能排查自检状况</h2><ul>
 <li>开机后Power LED快闪,1秒闪烁4次（提示没有内存或内存错误）</li>
 <li>开机后Power LED慢闪,2秒闪烁1次（提示没有显示适配器或显示适配器错误）</li>
 <li>开机后Power LED超慢闪,灯亮4秒，灯灭4秒（提示无开机设备或开机设备错误）</li>
 </ul>
-<h2 id="部分华硕混血ROG主板的自动掉电状态">6.2 &nbsp&nbsp<a href="#部分华硕混血ROG主板的自动掉电状态" class="headerlink" title="部分华硕混血ROG主板的自动掉电状态"></a>部分华硕混血ROG主板的自动掉电状态</h2><p>部分华硕混血ROG主板搭配华硕雷神&#x2F;雷鹰电源系列，可能出现突然掉电，按开机键无任何反应。甚至于拔电源线，扣电池都无任何反应（cmos设置甚至都无法清除，拔插24pin供电恢复正常供电后可观测到CMOS设置无变化）。</p>
+<h2 id="部分华硕混血ROG主板的自动掉电状态">5.2 &nbsp&nbsp<a href="#部分华硕混血ROG主板的自动掉电状态" class="headerlink" title="部分华硕混血ROG主板的自动掉电状态"></a>部分华硕混血ROG主板的自动掉电状态</h2><p>部分华硕混血ROG主板搭配华硕雷神&#x2F;雷鹰电源系列，可能出现突然掉电，按开机键无任何反应。甚至于拔电源线，扣电池都无任何反应（cmos设置甚至都无法清除，拔插24pin供电恢复正常供电后可观测到CMOS设置无变化）。</p>
 <p>解决方法：若拔电源线扣电池都无任何反应的话，可尝试拔插主板24pin。拔插后主板即可恢复正常上电。</p>
 <p>目前观测到存在该现象的主板型号：</p>
 <ul>
 <li>z790-h</li>
 <li>z790-a s</li>
 </ul>
-<h2 id="内存接触不良导致自启后直接掉电">6.3 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，可尝试重新拔插（擦拭金手指）</p>
-<h2 id="机箱前置IO跳线反接引起的无线重启，无法通过主板自检">6.4 &nbsp&nbsp<a href="#机箱前置IO跳线反接引起的无线重启，无法通过主板自检" class="headerlink" title="机箱前置IO跳线反接引起的无线重启，无法通过主板自检"></a>机箱前置IO跳线反接引起的无线重启，无法通过主板自检</h2><p>部分机箱前置IO跳线设计方面不合理，前置重启键跳线一旦反接（即文字丝印朝上），可能会引起主板无线重启，无法正常通过自检，在华硕主板的powerled功能上可观测到电源指示灯表现为：开机后Power LED快闪，1秒闪烁4次，闪烁4次后会灭灯停顿约半秒，之后重复这个闪烁状态（有点类似无内存自检不过的情况）。</p>
+<h2 id="内存接触不良导致自启后直接掉电">5.3 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，可尝试重新拔插（擦拭金手指）</p>
+<h2 id="机箱前置IO跳线反接引起的无线重启，无法通过主板自检">5.4 &nbsp&nbsp<a href="#机箱前置IO跳线反接引起的无线重启，无法通过主板自检" class="headerlink" title="机箱前置IO跳线反接引起的无线重启，无法通过主板自检"></a>机箱前置IO跳线反接引起的无线重启，无法通过主板自检</h2><p>部分机箱前置IO跳线设计方面不合理，前置重启键跳线一旦反接（即文字丝印朝上），可能会引起主板无线重启，无法正常通过自检，在华硕主板的powerled功能上可观测到电源指示灯表现为：开机后Power LED快闪，1秒闪烁4次，闪烁4次后会灭灯停顿约半秒，之后重复这个闪烁状态（有点类似无内存自检不过的情况）。</p>
 <p>解决方法：按照正规方式，连接前置IO跳线，即文字丝印朝下。</p>
-<h2 id="走M-2-插槽-Key-E-通道的无线网卡短路引起主板无法通过自检开机">6.5 &nbsp&nbsp<a href="#走M-2-插槽-Key-E-通道的无线网卡短路引起主板无法通过自检开机" class="headerlink" title="走M.2 插槽 (Key E)通道的无线网卡短路引起主板无法通过自检开机"></a>走M.2 插槽 (Key E)通道的无线网卡短路引起主板无法通过自检开机</h2><p>部份主板提供一个 M.2 插槽 (Key E)，可支持 2230 Wi-Fi&#x2F;BT 和 Intel® CNVi (集成 Wi-Fi&#x2F;BT) 模块，例如Intel Wireless-AC 9560（M.2 2230）模块，当该网卡发生短路时，会导致主板无法开机黑屏，具体会卡在自检阶段中的外设检测阶段，例如Power LED超慢闪,灯亮4秒，灯灭4秒（提示无开机设备或开机设备错误）。</p>
-<h1 id="主板">7 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">7.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
-<h1 id="华硕奥创">8 &nbsp&nbsp<a href="#华硕奥创" class="headerlink" title="华硕奥创"></a>华硕奥创</h1><p>关于系统残存的奥创配置影响吹雪主板的灯光闪烁，使用新系统的奥创配置（比如利用新硬盘的系统）先设置无灯光初始化硬件参数。</p>
-<h2 id="完整清除奥创的步骤">8.1 &nbsp&nbsp<a href="#完整清除奥创的步骤" class="headerlink" title="完整清除奥创的步骤"></a>完整清除奥创的步骤</h2><ol>
+<h2 id="走M-2-插槽-Key-E-通道的无线网卡短路引起主板无法通过自检开机">5.5 &nbsp&nbsp<a href="#走M-2-插槽-Key-E-通道的无线网卡短路引起主板无法通过自检开机" class="headerlink" title="走M.2 插槽 (Key E)通道的无线网卡短路引起主板无法通过自检开机"></a>走M.2 插槽 (Key E)通道的无线网卡短路引起主板无法通过自检开机</h2><p>部份主板提供一个 M.2 插槽 (Key E)，可支持 2230 Wi-Fi&#x2F;BT 和 Intel® CNVi (集成 Wi-Fi&#x2F;BT) 模块，例如Intel Wireless-AC 9560（M.2 2230）模块，当该网卡发生短路时，会导致主板无法开机黑屏，具体会卡在自检阶段中的外设检测阶段，例如Power LED超慢闪,灯亮4秒，灯灭4秒（提示无开机设备或开机设备错误）。</p>
+<h1 id="主板">6 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">6.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A，电压12V，因此支持最大功率为12W。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
+<h2 id="华硕主板可寻址第二代LED接针">6.2 &nbsp&nbsp<a href="#华硕主板可寻址第二代LED接针" class="headerlink" title="华硕主板可寻址第二代LED接针"></a>华硕主板可寻址第二代LED接针</h2><p>可寻址第二代LED接针可用来个别连接可寻址RGB（ARBG）WS2812B指示灯条或基于WS2812的指示灯条。6-Pin可寻第二代LED接针连接1对2ARGB分接线，可连接最多2条LED灯条。</p>
+<p>可寻址第二代LED接针支持可寻址RGB指示灯条（5V&#x2F;Data&#x2F;Groud），灯条总输出电流限制为3A（5V），因此支持最大功率为15W。可寻址接针在Gen1模式下可支持每个接针最多120颗LED灯，在Gen2模式下可支持最多500颗LED灯。</p>
+<p>大约实际表现为最多可支持串联5个外设设备灯条（例如风扇和水冷头），如果超过5个设备的话，基本上都会出现供电电流不足，导致灯条在白光模式下变淡或者某些设备灯条出现绿光或者橙光。有些主板用料批次可能次一些，导致一个5V接针接口串接4个或者5个设备灯光就会出现供电电流不足的情况了。</p>
+<h1 id="华硕奥创">7 &nbsp&nbsp<a href="#华硕奥创" class="headerlink" title="华硕奥创"></a>华硕奥创</h1><p>关于系统残存的奥创配置影响吹雪主板的灯光闪烁，使用新系统的奥创配置（比如利用新硬盘的系统）先设置无灯光初始化硬件参数。</p>
+<h2 id="在非华硕主板上安装华硕奥创软件">7.1 &nbsp&nbsp<a href="#在非华硕主板上安装华硕奥创软件" class="headerlink" title="在非华硕主板上安装华硕奥创软件"></a>在非华硕主板上安装华硕奥创软件</h2><p>在非华硕主板上安装华硕奥创软件，除了无法接管主板之外，其余组件或者外设，诸如内存，水冷都是能被检测识别并控制。一般地，安装华硕奥创软件之后，内存的灯控接管权会被奥创抢夺，其他灯控软件则无法对其控制了。</p>
+<h2 id="完整清除奥创的步骤">7.2 &nbsp&nbsp<a href="#完整清除奥创的步骤" class="headerlink" title="完整清除奥创的步骤"></a>完整清除奥创的步骤</h2><ol>
 <li>使用<a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/14Utilities/Armoury_Crate_Uninstall_Tool.zip?model=Armoury%20Crate">奥创官方卸载工具</a>执行卸载操作。</li>
 <li>手动移除奥创残留的服务进程和残留文件夹。</li>
 <li><code>regedit</code>打开注册表：搜索「Asus」（注意选择全字匹配），删除搜索到的结果项目。（BIOS选项底下和硬件底下都不用删除）</li>
@@ -5023,10 +5038,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>离线包安装没有主板选项可勾选（奥创扫描硬件信息并在注册表中保存，如果没清除干净，奥创安装会校验已有信息，认为之前已经安装过的）</li>
 <li>各种离奇的安装报错</li>
 </ul>
-<h2 id="无法识别内存组件">8.2 &nbsp&nbsp<a href="#无法识别内存组件" class="headerlink" title="无法识别内存组件"></a>无法识别内存组件</h2><p>安装其他的内存灯控软件，比如芝奇灯控<a href="https://www.gskill.com/download/1502180912/1551690847/Trident-Z--Trident-Z5--Ripjaws-M5-RGB-Family">Trident Z Lighting Control</a>。设置开机自启，然后奥创就可以识别。</p>
-<h2 id="无法识别正确的主板型号">8.3 &nbsp&nbsp<a href="#无法识别正确的主板型号" class="headerlink" title="无法识别正确的主板型号"></a>无法识别正确的主板型号</h2><p>故障原因：使用改机器码的工具修改了主板名称，比如AMIBIOS DMI EDITOR。</p>
+<h2 id="无法识别内存组件">7.3 &nbsp&nbsp<a href="#无法识别内存组件" class="headerlink" title="无法识别内存组件"></a>无法识别内存组件</h2><p>安装其他的内存灯控软件，比如芝奇灯控<a href="https://www.gskill.com/download/1502180912/1551690847/Trident-Z--Trident-Z5--Ripjaws-M5-RGB-Family">Trident Z Lighting Control</a>。设置开机自启，然后奥创就可以识别。</p>
+<h2 id="无法识别正确的主板型号">7.4 &nbsp&nbsp<a href="#无法识别正确的主板型号" class="headerlink" title="无法识别正确的主板型号"></a>无法识别正确的主板型号</h2><p>故障原因：使用改机器码的工具修改了主板名称，比如AMIBIOS DMI EDITOR。</p>
 <p>解决方法：使用工具改回原来的值。</p>
-<h2 id="奥创同步海盗船内存灯光">8.4 &nbsp&nbsp<a href="#奥创同步海盗船内存灯光" class="headerlink" title="奥创同步海盗船内存灯光"></a>奥创同步海盗船内存灯光</h2><ol>
+<h2 id="奥创同步海盗船内存灯光">7.5 &nbsp&nbsp<a href="#奥创同步海盗船内存灯光" class="headerlink" title="奥创同步海盗船内存灯光"></a>奥创同步海盗船内存灯光</h2><ol>
 <li>BIOS设置关闭SPD保护<ul>
 <li>BIOS高级模式（F7切换模式）-&gt;AI Tweaker&#x2F;Extreme Tweaker-&gt;Tweaker&#39;s Paradise-&gt;SPD Write Disable-&gt;FALSE</li>
 </ul>
@@ -5036,9 +5051,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>安装iCue本体</li>
 <li>安装奥创本体</li>
 </ol>
-<h1 id="显卡">9 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="专业检测工具-MASTS">9.1 &nbsp&nbsp<a href="#专业检测工具-MASTS" class="headerlink" title="专业检测工具-MASTS"></a>专业检测工具-MASTS</h2><p>工具官方论坛链接：<a href="https://vlab.su/viewtopic.php?t=124090">MATS&#x2F;MODS 400&#x2F;455&#x2F;520 Тест видеопамяти nVidia для флешки</a></p>
+<h1 id="显卡">8 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="专业检测工具-MASTS">8.1 &nbsp&nbsp<a href="#专业检测工具-MASTS" class="headerlink" title="专业检测工具-MASTS"></a>专业检测工具-MASTS</h2><p>工具官方论坛链接：<a href="https://vlab.su/viewtopic.php?t=124090">MATS&#x2F;MODS 400&#x2F;455&#x2F;520 Тест видеопамяти nVidia для флешки</a></p>
 <p>直接下载最新的ISO镜像，用<a href="https://rufus.ie/zh/">Rufus</a>直接写入U盘即可。</p>
-<h2 id="13-14代酷睿CPU搭配显卡出现显卡驱动掉驱现象">9.2 &nbsp&nbsp<a href="#13-14代酷睿CPU搭配显卡出现显卡驱动掉驱现象" class="headerlink" title="13&#x2F;14代酷睿CPU搭配显卡出现显卡驱动掉驱现象"></a>13&#x2F;14代酷睿CPU搭配显卡出现显卡驱动掉驱现象</h2><p>故障原因：CPU的pcie控制器有瑕疵，导致显卡驱动掉驱现象。</p>
+<h2 id="13-14代酷睿CPU搭配显卡出现显卡驱动掉驱现象">8.2 &nbsp&nbsp<a href="#13-14代酷睿CPU搭配显卡出现显卡驱动掉驱现象" class="headerlink" title="13&#x2F;14代酷睿CPU搭配显卡出现显卡驱动掉驱现象"></a>13&#x2F;14代酷睿CPU搭配显卡出现显卡驱动掉驱现象</h2><p>故障原因：CPU的pcie控制器有瑕疵，导致显卡驱动掉驱现象。</p>
+<h1 id="声卡">9 &nbsp&nbsp<a href="#声卡" class="headerlink" title="声卡"></a>声卡</h1><h2 id="插前置3-5mm音频接口，Realtek声卡无音频输出">9.1 &nbsp&nbsp<a href="#插前置3-5mm音频接口，Realtek声卡无音频输出" class="headerlink" title="插前置3.5mm音频接口，Realtek声卡无音频输出"></a>插前置3.5mm音频接口，Realtek声卡无音频输出</h2><p>故障情况：常见于<code>ROG STRIX Z790-H GAMING WIFI</code>主板的声卡驱动，将耳机插入前置3.5mm音频接口，Realtek声卡无音频输出。</p>
+<p>故障原因：Realtek设置的插孔检测设置引起的问题。</p>
+<p>解决方法：</p>
+<ol>
+<li>若如果是首次安装好官网原版的声卡驱动，先重启系统。</li>
+<li>打开UWP应用<code>Realtek Audio Control</code>。</li>
+<li>禁用前面板插孔检测-&gt;设置为“开”</li>
+<li>前面板插孔设置-&gt;将绿色的插孔设置从“耳机”切换为“前喇叭”。</li>
+<li>设置完成后即可测试音频输出。</li>
+</ol>
 <h1 id="无线网卡">10 &nbsp&nbsp<a href="#无线网卡" class="headerlink" title="无线网卡"></a>无线网卡</h1><h2 id="2-4GHz无线设备的频率干扰问题">10.1 &nbsp&nbsp<a href="#2-4GHz无线设备的频率干扰问题" class="headerlink" title="2.4GHz无线设备的频率干扰问题"></a>2.4GHz无线设备的频率干扰问题</h2><p>具体故障表现：无线鼠标会有停顿感，或是无线键盘输入的速度变慢或无反应，甚至是无线传输的距离缩短。</p>
 <p>可能存在的干扰源：</p>
 <ul>
@@ -5647,7 +5672,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="关于腾讯机器码">6.2 &nbsp&nbsp<a href="#关于腾讯机器码" class="headerlink" title="关于腾讯机器码"></a>关于腾讯机器码</h2><p>参考文章：<a href="https://tieba.baidu.com/p/7808678958">https://tieba.baidu.com/p/7808678958</a></p>
 <h1 id="Steam">7 &nbsp&nbsp<a href="#Steam" class="headerlink" title="Steam"></a>Steam</h1><h2 id="找回原有的steam安装的游戏（无需重新安装）">7.1 &nbsp&nbsp<a href="#找回原有的steam安装的游戏（无需重新安装）" class="headerlink" title="找回原有的steam安装的游戏（无需重新安装）"></a>找回原有的steam安装的游戏（无需重新安装）</h2><p>steam客户端-&gt;设置-&gt;存储空间-&gt;添加驱动器（点击盘符即可出现下拉选项弹窗）-&gt;添加新的Steam库文件夹（点击盘符即可出现下拉选项弹窗）</p>
 <p>P.S. 此法也可以定位到旧硬盘上的主steam程序本体路径下安装的游戏（非那种Steamlibrary目录），如果游戏较多较大，扫描时间会有点久，让它后台自行扫描。</p>
-<h1 id="浏览器">8 &nbsp&nbsp<a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="视频网站产生大量的indexeddb-blob本地缓存">8.1 &nbsp&nbsp<a href="#视频网站产生大量的indexeddb-blob本地缓存" class="headerlink" title="视频网站产生大量的indexeddb.blob本地缓存"></a>视频网站产生大量的indexeddb.blob本地缓存</h2><p>故障表现：C盘中出现大量的indexeddb.blob本地缓存文件，急剧占用C盘系统盘空间。</p>
+<h1 id="CS2">8 &nbsp&nbsp<a href="#CS2" class="headerlink" title="CS2"></a>CS2</h1><h2 id="CS2添加启动参数调出启动项选择国服-国际服">8.1 &nbsp&nbsp<a href="#CS2添加启动参数调出启动项选择国服-国际服" class="headerlink" title="CS2添加启动参数调出启动项选择国服&#x2F;国际服"></a>CS2添加启动参数调出启动项选择国服&#x2F;国际服</h2><p>游戏-&gt;属性-&gt;通用-&gt;启动选项：<code>-promptperfectworld</code></p>
+<h1 id="浏览器">9 &nbsp&nbsp<a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="视频网站产生大量的indexeddb-blob本地缓存">9.1 &nbsp&nbsp<a href="#视频网站产生大量的indexeddb-blob本地缓存" class="headerlink" title="视频网站产生大量的indexeddb.blob本地缓存"></a>视频网站产生大量的indexeddb.blob本地缓存</h2><p>故障表现：C盘中出现大量的indexeddb.blob本地缓存文件，急剧占用C盘系统盘空间。</p>
 <p>目前遇到的平台：</p>
 <ul>
 <li>优酷网</li>
@@ -5658,20 +5684,20 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>使用spacesniffer应用查看具体文件占用的路径</li>
 <li>手动删除indexeddb.blob文件（目前没有浏览器选项可以控制，本人猜测是视频网站使用了该功能作为视频缓存功能，这个技术理论上可以无限制地生成文件）。</li>
 </ol>
-<h1 id="Autodesk-3ds-Max">9 &nbsp&nbsp<a href="#Autodesk-3ds-Max" class="headerlink" title="Autodesk 3ds Max"></a>Autodesk 3ds Max</h1><p>3ds max已停止工作或者打开工程文件卡死无响应或者操作渲染时画面假死</p>
+<h1 id="Autodesk-3ds-Max">10 &nbsp&nbsp<a href="#Autodesk-3ds-Max" class="headerlink" title="Autodesk 3ds Max"></a>Autodesk 3ds Max</h1><p>3ds max已停止工作或者打开工程文件卡死无响应或者操作渲染时画面假死</p>
 <ul>
 <li>解决方法1：删除&#96;C:\users\Administrator\AppData\Local\Autodesk\3dsmax&#39;：移除所有崩溃信息和设置文件，即初始化至初始设置。</li>
 <li>解决方法2：系统自带的非英输入法开启兼容性设置（不单只微软拼音有反馈记录，也有网友反馈日文输入法也同样遇到这种现象）</li>
 <li>解决方法3：3Ds MAX安装根目录的dlcomponents文件夹内，找到DlComponentList_x64文件或者DlComponentList文件，删除并用删除文件的名称创建文件夹（作用原理就是win系统无法再二次生成同名称的文件，因为前面创建的文件夹名称一样且已存在）</li>
 </ul>
-<h1 id="企业微信">10 &nbsp&nbsp<a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h1><h2 id="在线表格报错：文档状态有更新-40036">10.1 &nbsp&nbsp<a href="#在线表格报错：文档状态有更新-40036" class="headerlink" title="在线表格报错：文档状态有更新(40036)"></a>在线表格报错：文档状态有更新(40036)</h2><p>故障表现：</p>
+<h1 id="企业微信">11 &nbsp&nbsp<a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h1><h2 id="在线表格报错：文档状态有更新-40036">11.1 &nbsp&nbsp<a href="#在线表格报错：文档状态有更新-40036" class="headerlink" title="在线表格报错：文档状态有更新(40036)"></a>在线表格报错：文档状态有更新(40036)</h2><p>故障表现：</p>
 <ol>
 <li>首先弹出提示「文档已在另一个标签页中打开离线编辑，请关闭对应标签页后再重新加载。」</li>
 <li>然后弹出报错「文档状态有更新(40036)」</li>
 </ol>
 <p>原因：qtCef缓存数据异常。</p>
 <p>解决方法：打开企业微信的设置页面，查看具体数据保存路径。关闭企微，找到路径，删除里面的qtCef文件夹，让程序重新运行自动生成。例如，默认路径为<code>C:\Users\User name\Documents\WXWork\qtCef</code>。</p>
-<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -5714,11 +5740,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#49;&#46;&#99;&#111;&#x6d;">&#49;&#64;&#49;&#46;&#99;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;">&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#109;">&#110;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#109;">&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#99;&#111;&#x6d;">&#x31;&#x40;&#x31;&#46;&#99;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#111;&#x6d;">&#x38;&#x40;&#x38;&#46;&#99;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;">&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -9491,9 +9517,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-PsTincVBOmvcDNCF" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-PsTincVBOmvcDNCF").style.height=document.getElementById("mmedia-PsTincVBOmvcDNCF").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-OhwWuXMpBlJGVaZK" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-OhwWuXMpBlJGVaZK").style.height=document.getElementById("mmedia-OhwWuXMpBlJGVaZK").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-PsTincVBOmvcDNCF").style.height=document.getElementById("mmedia-PsTincVBOmvcDNCF").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-OhwWuXMpBlJGVaZK").style.height=document.getElementById("mmedia-OhwWuXMpBlJGVaZK").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9616,15 +9642,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-lmyQgdROZsEUovQi"></div><script> var lmyQgdROZsEUovQi_options = JSON.parse('{\"id\":\"mmedia-lmyQgdROZsEUovQi\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(lmyQgdROZsEUovQi_options); </script>
+<div id="mmedia-wzUjngbpaWIvRsGg"></div><script> var wzUjngbpaWIvRsGg_options = JSON.parse('{\"id\":\"mmedia-wzUjngbpaWIvRsGg\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(wzUjngbpaWIvRsGg_options); </script>
 </div></div>
 </center>
 ]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于我</title>
@@ -9724,7 +9745,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x69;&#109;&#x2e;&#x6d;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -9832,6 +9853,11 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 }
 </style>
 ]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>知识总结手册</title>
