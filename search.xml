@@ -531,7 +531,7 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">内存</p>
     </div>
-    <a href="https://zentimings.com/">内存时序：ZENTIMINGS</a>
+    <a href="https://zentimings.com/">内存时序：ZENTIMINGS（AMD平台）</a>
 </div>
 
 <div class="text-box">
@@ -4995,9 +4995,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p>P.S. 以MAG B650M MORTAR WIFI主板实测，「power down enable」不设置，保持「auto」自动值使用也未遇到问题。</p>
 <h1 id="不开机-自检不过">6 &nbsp&nbsp<a href="#不开机-自检不过" class="headerlink" title="不开机&#x2F;自检不过"></a>不开机&#x2F;自检不过</h1><h2 id="华硕主板Power-LED功能排查自检状况">6.1 &nbsp&nbsp<a href="#华硕主板Power-LED功能排查自检状况" class="headerlink" title="华硕主板Power LED功能排查自检状况"></a>华硕主板Power LED功能排查自检状况</h2><ul>
-<li>开机后Power LED快闪,1秒闪烁4次(提示没有内存或内存错误)</li>
-<li>开机后Power LED慢闪,2秒闪烁1次(提示没有显示适配器或显示适配器错误)</li>
-<li>开机后Power LED超慢闪,灯亮4秒，灯灭4秒(提示无开机设备或开机设备错误)</li>
+<li>开机后Power LED快闪,1秒闪烁4次（提示没有内存或内存错误）</li>
+<li>开机后Power LED慢闪,2秒闪烁1次（提示没有显示适配器或显示适配器错误）</li>
+<li>开机后Power LED超慢闪,灯亮4秒，灯灭4秒（提示无开机设备或开机设备错误）</li>
 </ul>
 <h2 id="部分华硕混血ROG主板的自动掉电状态">6.2 &nbsp&nbsp<a href="#部分华硕混血ROG主板的自动掉电状态" class="headerlink" title="部分华硕混血ROG主板的自动掉电状态"></a>部分华硕混血ROG主板的自动掉电状态</h2><p>部分华硕混血ROG主板搭配华硕雷神&#x2F;雷鹰电源系列，可能出现突然掉电，按开机键无任何反应。甚至于拔电源线，扣电池都无任何反应（cmos设置甚至都无法清除，拔插24pin供电恢复正常供电后可观测到CMOS设置无变化）。</p>
 <p>解决方法：若拔电源线扣电池都无任何反应的话，可尝试拔插主板24pin。拔插后主板即可恢复正常上电。</p>
@@ -5009,6 +5009,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="内存接触不良导致自启后直接掉电">6.3 &nbsp&nbsp<a href="#内存接触不良导致自启后直接掉电" class="headerlink" title="内存接触不良导致自启后直接掉电"></a>内存接触不良导致自启后直接掉电</h2><p>老式机子不亮机：大多是内存条接触不良引起，可尝试重新拔插（擦拭金手指）</p>
 <h2 id="机箱前置IO跳线反接引起的无线重启，无法通过主板自检">6.4 &nbsp&nbsp<a href="#机箱前置IO跳线反接引起的无线重启，无法通过主板自检" class="headerlink" title="机箱前置IO跳线反接引起的无线重启，无法通过主板自检"></a>机箱前置IO跳线反接引起的无线重启，无法通过主板自检</h2><p>部分机箱前置IO跳线设计方面不合理，前置重启键跳线一旦反接（即文字丝印朝上），可能会引起主板无线重启，无法正常通过自检，在华硕主板的powerled功能上可观测到电源指示灯表现为：开机后Power LED快闪，1秒闪烁4次，闪烁4次后会灭灯停顿约半秒，之后重复这个闪烁状态（有点类似无内存自检不过的情况）。</p>
 <p>解决方法：按照正规方式，连接前置IO跳线，即文字丝印朝下。</p>
+<h2 id="走M-2-插槽-Key-E-通道的无线网卡短路引起主板无法通过自检开机">6.5 &nbsp&nbsp<a href="#走M-2-插槽-Key-E-通道的无线网卡短路引起主板无法通过自检开机" class="headerlink" title="走M.2 插槽 (Key E)通道的无线网卡短路引起主板无法通过自检开机"></a>走M.2 插槽 (Key E)通道的无线网卡短路引起主板无法通过自检开机</h2><p>部份主板提供一个 M.2 插槽 (Key E)，可支持 2230 Wi-Fi&#x2F;BT 和 Intel® CNVi (集成 Wi-Fi&#x2F;BT) 模块，例如Intel Wireless-AC 9560（M.2 2230）模块，当该网卡发生短路时，会导致主板无法开机黑屏，具体会卡在自检阶段中的外设检测阶段，例如Power LED超慢闪,灯亮4秒，灯灭4秒（提示无开机设备或开机设备错误）。</p>
 <h1 id="主板">7 &nbsp&nbsp<a href="#主板" class="headerlink" title="主板"></a>主板</h1><h2 id="华硕主板的CPU-FAN接口和CPU-OPT接口的区别">7.1 &nbsp&nbsp<a href="#华硕主板的CPU-FAN接口和CPU-OPT接口的区别" class="headerlink" title="华硕主板的CPU_FAN接口和CPU_OPT接口的区别"></a>华硕主板的CPU_FAN接口和CPU_OPT接口的区别</h2><p>CPU_FAN是CPU风扇，CPU_OPT则是备选接口，一般是给双风扇散热器的第二个风扇使用（例如双风扇的塔式风冷，而且没有一分二线）。CPU_FAN和CPU_OPT的转速策略是相同的，共享控制，OPT是optional（可选）的缩写，OPT的转速不能单独设置，在Q-Fan控制中，都是由CPU_FAN接管设置，详见《ROG MAXIMUS Z790 HERO 用户手册》的P29。备选的也可以插水冷头的供电，但是一般来说这两个口的供电都只有1A。部分高端主板会有W_PUMP接口，这个是专门给水冷头用的，能提供3A的供电。</p>
 <h1 id="华硕奥创">8 &nbsp&nbsp<a href="#华硕奥创" class="headerlink" title="华硕奥创"></a>华硕奥创</h1><p>关于系统残存的奥创配置影响吹雪主板的灯光闪烁，使用新系统的奥创配置（比如利用新硬盘的系统）先设置无灯光初始化硬件参数。</p>
 <h2 id="完整清除奥创的步骤">8.1 &nbsp&nbsp<a href="#完整清除奥创的步骤" class="headerlink" title="完整清除奥创的步骤"></a>完整清除奥创的步骤</h2><ol>
@@ -5713,11 +5714,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#109;">&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#64;&#49;&#46;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#x63;&#111;&#109;">&#56;&#x40;&#x38;&#46;&#x63;&#111;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#115;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#115;&#x2e;&#99;&#x6f;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#46;&#99;&#111;&#x6d;">&#49;&#64;&#49;&#46;&#99;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;">&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#109;">&#110;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -9490,9 +9491,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-YVryaIeqwlOAhias" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-YVryaIeqwlOAhias").style.height=document.getElementById("mmedia-YVryaIeqwlOAhias").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-PsTincVBOmvcDNCF" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-PsTincVBOmvcDNCF").style.height=document.getElementById("mmedia-PsTincVBOmvcDNCF").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-YVryaIeqwlOAhias").style.height=document.getElementById("mmedia-YVryaIeqwlOAhias").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-PsTincVBOmvcDNCF").style.height=document.getElementById("mmedia-PsTincVBOmvcDNCF").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9615,10 +9616,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-VTqCJqbeDHvZNEpw"></div><script> var VTqCJqbeDHvZNEpw_options = JSON.parse('{\"id\":\"mmedia-VTqCJqbeDHvZNEpw\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(VTqCJqbeDHvZNEpw_options); </script>
+<div id="mmedia-lmyQgdROZsEUovQi"></div><script> var lmyQgdROZsEUovQi_options = JSON.parse('{\"id\":\"mmedia-lmyQgdROZsEUovQi\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(lmyQgdROZsEUovQi_options); </script>
 </div></div>
 </center>
 ]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于我</title>
@@ -9718,7 +9724,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#x69;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;">&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#x69;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -9826,11 +9832,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 }
 </style>
 ]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>知识总结手册</title>
