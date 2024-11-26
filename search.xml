@@ -1056,17 +1056,26 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>闪存驱动器设计</title>
     <url>/cad/flash-disk/</url>
     <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
-<h1 id="主控和颗粒的选择">2 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+</blockquote>
+<p><strong>店铺总结（个人购买经验总结）：</strong></p>
+<ul>
+<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
+<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
+<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
+</ul>
+<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
 <li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
 <li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
 </ul>
-<p>部分店铺的网评：大树推荐，翼浪排除</p>
-<h2 id="部分颗粒总结">2.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
-<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，132BGA封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
-<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，132BGA封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
+<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
+<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
 <li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
 </ul>
 </li>
+<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
 <li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
 <li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
 </ul>
@@ -1081,47 +1090,47 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
 <li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
 </ul>
-<h1 id="颗粒芯片资料查询">3 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
 <li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
 <li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
 </ul>
-<h1 id="开卡量产工具">4 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
 <li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
 <li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
 <li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
 </ul>
-<h1 id="测试架资料">5 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
 <li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
 <li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
 <li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
 </ul>
-<h1 id="主控芯片资料">6 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
 <li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
 <li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
 <li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
 <li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
 <li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
 </ul>
-<h1 id="IS903">7 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><h2 id="量产开卡步骤">7.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
 <li>焊接颗粒到主控盘，插上电脑</li>
 <li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
 <li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
 <li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
 <li>「量产测试」标签页点击「开始」就会开始量产</li>
 </ol>
-<h2 id="部分资料">7.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
+<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
 <li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
 <li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
 <li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
 <li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
 </ul>
-<h1 id="关于开卡设定参数的帖子链接">8 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
 <li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
 <li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
 <li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
 <li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
 </ul>
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>cad</category>
       </categories>
@@ -1317,6 +1326,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="焊接总结">7 &nbsp&nbsp<a href="#焊接总结" class="headerlink" title="焊接总结"></a>焊接总结</h1><ul>
 <li>USB接口固定引脚的加固：一般的USB接口有两个的固定引脚，如果只在一侧加焊的话，USB接口的固定引脚仍有可能会因为长期的拔插使用导致断裂（是在没有焊点的那侧断裂的）。因此加固建议是在无焊点那侧加焊，即固定引脚两侧都有焊点。</li>
 <li>5V3针灯条的串接，上下相叠起来才能吃锡</li>
+<li>芯片主控板焊盘不需要值球（若买的成品焊盘已有值球的话，清理干净再上芯片），芯片需要值球。推荐吹焊前，先在焊盘均匀涂抹少许焊油。</li>
 <li>BGA封装的植球焊接<ul>
 <li>使用锡泥植球时，使用热风枪加热到锡泥变亮即加热成功（这个阶段一般不需要加焊油）。</li>
 <li>倘若锡泥涂抹过多，导致加热后锡球不好脱离钢网的话，可以使用镊子夹起钢网，再重新加热，并利用重力让锡球脱离钢网。</li>
@@ -2447,7 +2457,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Python总结笔记</title>
     <url>/code/python/</url>
-    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，报名前面的小数点.是必要的，python3之后都是严格模式。</p>
+    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
 <h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
 <p>解决方法：安装路径直接按默认路径，不装program路径。</p>
 <h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
@@ -4939,7 +4949,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <content><![CDATA[<h1 id="PC组件常见品牌质保信息查询">1 &nbsp&nbsp<a href="#PC组件常见品牌质保信息查询" class="headerlink" title="PC组件常见品牌质保信息查询"></a>PC组件常见品牌质保信息查询</h1><ul>
 <li><a href="https://www.asus.com.cn/support/article/642/">华硕-质保条款</a></li>
 <li><a href="https://www.asus.com.cn/support/warranty-status-inquiry/">华硕-质保期限查询</a>：若主板已注册一年换新，则无法通过该渠道查询，需要在注册一年换新入口查询。</li>
-<li><a href="https://www.asus.com.cn/support/repair-status-inquiry/">华硕-查询维修进度</a></li>
+<li><a href="https://www.asus.com.cn/support/repair-status-inquiry/">华硕-查询维修进度</a>：该项服务在微信公众号「ASUS华硕服务」也可找到。</li>
 <li>华硕-主板一年换新：微信公众号「ASUS华硕服务」-&gt;增值服务-&gt;主板一年换新</li>
 <li><a href="https://www.coolermaster.com/zh-hk/warranty/">酷冷至尊-质保条款</a></li>
 <li><a href="https://account.coolermaster.com/warrantycheck.aspx">酷冷至尊-质保期限查询</a></li>
@@ -5061,7 +5071,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <ol>
 <li>若如果是首次安装好官网原版的声卡驱动，先重启系统。</li>
 <li>打开UWP应用<code>Realtek Audio Control</code>。</li>
-<li>禁用前面板插孔检测-&gt;设置为“开”</li>
+<li>禁用前面板插孔检测-&gt;设置为“开”（即禁用前面板插孔检测）</li>
 <li>前面板插孔设置-&gt;将绿色的插孔设置从“耳机”切换为“前喇叭”。</li>
 <li>设置完成后即可测试音频输出。</li>
 </ol>
@@ -5078,7 +5088,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 </ul>
 <p>小记：在无线信号覆盖范围内的各种无线网络设备应该尽量使用不同的信道，以避免信号之间的干扰。</p>
-<h1 id="有线网卡">11 &nbsp&nbsp<a href="#有线网卡" class="headerlink" title="有线网卡"></a>有线网卡</h1><h2 id="常规网卡设置">11.1 &nbsp&nbsp<a href="#常规网卡设置" class="headerlink" title="常规网卡设置"></a>常规网卡设置</h2><table>
+<h2 id="板载或PCIE无线网卡无法识别">10.2 &nbsp&nbsp<a href="#板载或PCIE无线网卡无法识别" class="headerlink" title="板载或PCIE无线网卡无法识别"></a>板载或PCIE无线网卡无法识别</h2><h1 id="有线网卡">11 &nbsp&nbsp<a href="#有线网卡" class="headerlink" title="有线网卡"></a>有线网卡</h1><h2 id="常规网卡设置">11.1 &nbsp&nbsp<a href="#常规网卡设置" class="headerlink" title="常规网卡设置"></a>常规网卡设置</h2><table>
 <thead>
 <tr>
 <th>网卡品牌</th>
@@ -5741,11 +5751,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#x6d;">&#110;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#99;&#111;&#x6d;">&#x31;&#64;&#x31;&#x2e;&#99;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#x6f;&#x6d;">&#x38;&#64;&#x38;&#46;&#99;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#x63;&#111;&#109;">&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#x63;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#64;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#46;&#x63;&#111;&#x6d;">&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#64;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#46;&#x63;&#111;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;">&#x6e;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#x63;&#111;&#109;">&#x31;&#x40;&#49;&#x2e;&#x63;&#111;&#109;</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#46;&#x63;&#111;&#x6d;">&#56;&#x40;&#56;&#46;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#x6d;">&#110;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a></li>
 </ul>
 </li>
 </ul>
@@ -9518,9 +9528,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-zIaybeiSQUAOnSgd" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-zIaybeiSQUAOnSgd").style.height=document.getElementById("mmedia-zIaybeiSQUAOnSgd").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-yEATVDCxIpVdMnUf" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-yEATVDCxIpVdMnUf").style.height=document.getElementById("mmedia-yEATVDCxIpVdMnUf").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-zIaybeiSQUAOnSgd").style.height=document.getElementById("mmedia-zIaybeiSQUAOnSgd").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-yEATVDCxIpVdMnUf").style.height=document.getElementById("mmedia-yEATVDCxIpVdMnUf").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9643,7 +9653,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-uoNfPphVHjUAKZvh"></div><script> var uoNfPphVHjUAKZvh_options = JSON.parse('{\"id\":\"mmedia-uoNfPphVHjUAKZvh\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(uoNfPphVHjUAKZvh_options); </script>
+<div id="mmedia-ZkIclqdDrVvVzWPp"></div><script> var ZkIclqdDrVvVzWPp_options = JSON.parse('{\"id\":\"mmedia-ZkIclqdDrVvVzWPp\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(ZkIclqdDrVvVzWPp_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9746,7 +9756,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x69;&#109;&#46;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -10636,7 +10646,7 @@ CGI&后期处理
 </ul>
 <p><em>注：更多详细介绍请查看「<a href="#%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD">插件功能</a>」小节内容。</em></p>
 <h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><blockquote>
-<p>若想获取插件的最新功能，请下载<a href="https://github.com/Mister-Kin/ToggleLanguage/archive/refs/heads/master.zip">项目代码master分支</a>的最新代码，然后参照本地安装步骤进行安装即可。</p>
+<p>若想获取插件的最新功能，请下载<a href="https://github.com/Mister-Kin/ToggleLanguage/archive/refs/heads/master.zip">项目代码master分支</a>的最新代码，然后参照<a href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85">本地安装</a>步骤进行安装即可。</p>
 </blockquote>
 <h2 id="下载及安装（v4-2-）">2.1 &nbsp&nbsp<a href="#下载及安装（v4-2-）" class="headerlink" title="下载及安装（v4.2+）"></a>下载及安装（v4.2+）</h2><h3 id="在线安装">2.1.1 &nbsp&nbsp<a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>blender v4.2之后版本（含v4.2）上线了extensions插件功能，允许从官方维护的扩展平台中直接安装扩展插件。本插件已上架官方扩展平台，可以直接搜索「toggle language」进行安装。</p>
 <p>安装步骤：</p>
