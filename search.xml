@@ -5845,11 +5845,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#x6d;">&#110;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#109;">&#49;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#x2e;&#99;&#111;&#x6d;">&#56;&#x40;&#56;&#x2e;&#99;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#111;&#109;">&#x6e;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#64;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#64;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#x63;&#111;&#109;">&#x31;&#x40;&#49;&#x2e;&#x63;&#111;&#109;</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#99;&#x6f;&#109;">&#56;&#x40;&#x38;&#x2e;&#99;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#115;&#46;&#99;&#111;&#109;">&#110;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#115;&#46;&#99;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;">&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;</a></li>
 </ul>
 </li>
 </ul>
@@ -9154,9 +9154,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>二次代码开发</title>
+    <title>Blender二次开发总结</title>
     <url>/software/blender/code-development/</url>
-    <content><![CDATA[<h1 id="开发技巧">1 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
+    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
+<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
+</ul>
+<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
 <li>cycles API直接查看cycles源码，properties.py</li>
 <li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
 <li>blender排错cmd工具：blender_debug_log.bat</li>
@@ -9168,14 +9171,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
 <p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
 <p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
-<h1 id="常见API总结">2 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
+<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
 <li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
 <li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
 <li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
 <li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
 <li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
 </ul>
-<h1 id="插件升级功能">3 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
+<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
 <li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
 <li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
 </ul>
@@ -9622,9 +9625,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-vRTbZOHDahmonIhH" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-vRTbZOHDahmonIhH").style.height=document.getElementById("mmedia-vRTbZOHDahmonIhH").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-kkdSRUCpURVmqWLk" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-kkdSRUCpURVmqWLk").style.height=document.getElementById("mmedia-kkdSRUCpURVmqWLk").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-vRTbZOHDahmonIhH").style.height=document.getElementById("mmedia-vRTbZOHDahmonIhH").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-kkdSRUCpURVmqWLk").style.height=document.getElementById("mmedia-kkdSRUCpURVmqWLk").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9747,7 +9750,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-buJeGrIbSWCAdSGK"></div><script> var buJeGrIbSWCAdSGK_options = JSON.parse('{\"id\":\"mmedia-buJeGrIbSWCAdSGK\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(buJeGrIbSWCAdSGK_options); </script>
+<div id="mmedia-caBkTaDPdmMpbadA"></div><script> var caBkTaDPdmMpbadA_options = JSON.parse('{\"id\":\"mmedia-caBkTaDPdmMpbadA\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(caBkTaDPdmMpbadA_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9850,7 +9853,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#x69;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x69;&#x6d;&#x2e;&#109;&#x69;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#105;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x69;&#109;&#x2e;&#x6d;&#105;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -10709,15 +10712,13 @@ CGI&后期处理
     <content><![CDATA[<table>
 <thead>
 <tr>
-<th align="center">插件下载链接1（官方在线扩展插件平台）</th>
-<th align="center">插件下载链接2（Github Release）</th>
+<th align="center">插件下载链接（Github Release）</th>
 <th align="center">项目代码仓库链接</th>
 <th align="center">离线文档 PDF 链接</th>
 <th align="center">文档 LaTeX 源码链接</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><a href="https://extensions.blender.org/add-ons/toggle-language/">点击跳转</a></td>
 <td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">点击跳转</a></td>
 <td align="center"><a href="https://github.com/Mister-Kin/ToggleLanguage">点击跳转</a></td>
 <td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/releases/download/latex2pdf/toggle_language.pdf">点击跳转</a></td>
@@ -10746,8 +10747,22 @@ CGI&后期处理
 <blockquote>
 <p>最新代码可能会存在运行不稳定的情况，请自行选择是否使用最新版本。</p>
 </blockquote>
-<h2 id="下载及安装（v4-2-）">2.1 &nbsp&nbsp<a href="#下载及安装（v4-2-）" class="headerlink" title="下载及安装（v4.2+）"></a>下载及安装（v4.2+）</h2><h3 id="在线安装">2.1.1 &nbsp&nbsp<a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>blender v4.2之后版本（含v4.2）上线了extensions插件功能，允许从官方维护的扩展平台中直接安装扩展插件。本插件已上架官方扩展平台，可以直接搜索「toggle language」进行安装。</p>
-<p>安装步骤：</p>
+<h2 id="下载及安装（v4-2-）">2.1 &nbsp&nbsp<a href="#下载及安装（v4-2-）" class="headerlink" title="下载及安装（v4.2+）"></a>下载及安装（v4.2+）</h2><h3 id="本地安装">2.1.1 &nbsp&nbsp<a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h3><p>blender v4.2之后版本（含v4.2）的本地安装方式和blender v4.2之前版本类似，「Get Extensions&#x2F;获取扩展」和「Add‐ons&#x2F;插件」选项卡均有「Install from Disk...&#x2F;从磁盘安装...」的选项，如图1.3和图1.4。具体安装步骤可以参见<a href="#%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85%EF%BC%88v2-83-v4-1-1%EF%BC%89">「下载及安装（v2.83-v4.1.1）」</a>，从本地安装成功后，插件会自行启动。</p>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/tab_get_extensions.webp">图1.1: 获取扩展选项卡</div>
+    <div class="flex-column">
+    <img data-src="./images/tab_addon.webp">图1.2: 插件选项卡</div>
+</div>
+
+<h3 id="在线安装">2.1.2 &nbsp&nbsp<a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><div class="note danger"><p><strong>因「<a href="https://extensions.blender.org/">Blender Extension平台</a>」网站管理员认为本插件存在多项功能并不符合插件名称，管理员称这不符合规范，故本人已选择删除<a href="https://id.blender.org/">Blender ID</a>帐号。自2024-12-26起，不再支持插件以「官方在线扩展插件平台】方式来在线安装。—— Mr. Kin，2024-12-26</strong></p>
+</div>
+
+<div class="note info"><p><strong>后续版本将会基于<a href="https://github.com/Mister-Kin/ToggleLanguage/releases">GitHub Rleases</a>开发实现支持自动检查版本和自动更新功能，敬请期待！—— Mr. Kin，2024-12-26</strong></p>
+</div>
+
+<p><del>blender v4.2之后版本（含v4.2）上线了extensions插件功能，允许从官方维护的扩展平台中直接安装扩展插件。本插件已上架官方扩展平台，可以直接搜索「toggle language」进行安装。</del></p>
+<p>（<strong>该步骤已不再支持！！！</strong>）安装步骤：</p>
 <ol>
 <li>运行 Blender。</li>
 <li>打开「Preferences&#x2F;用户偏好设置」（Menu&#x2F;菜单 &gt;Edit&#x2F;编辑 &gt;Preferences&#x2F;用户偏好设置）。</li>
@@ -10758,22 +10773,13 @@ CGI&后期处理
 </ol>
 <div class="flex-row">
     <div class="flex-column">
-    <img data-src="./images/online_install_step12.webp">图1.1: 在线安装步骤1&2</div>
+    <img data-src="./images/online_install_step12.webp">图1.3: 在线安装步骤1&2</div>
     <div class="flex-column">
-    <img data-src="./images/online_install_step34.webp">图1.2: 在线安装步骤3&4</div>
-</div>
-
-<h3 id="本地安装">2.1.2 &nbsp&nbsp<a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h3><p>blender v4.2之后版本（含v4.2）的本地安装方式和blender v4.2之前版本类似，「Get Extensions&#x2F;获取扩展」和「Add‐ons&#x2F;插件」选项卡均有「Install from Disk...&#x2F;从磁盘安装...」的选项，如图1.3和图1.4。具体安装步骤可以参见<a href="#%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85%EF%BC%88v2-83-v4-1-1%EF%BC%89">「下载及安装（v2.83-v4.1.1）」</a>，从本地安装成功后，插件会自行启动。</p>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/tab_get_extensions.webp">图1.3: 获取扩展选项卡</div>
-    <div class="flex-column">
-    <img data-src="./images/tab_addon.webp">图1.4: 插件选项卡</div>
+    <img data-src="./images/online_install_step34.webp">图1.4: 在线安装步骤3&4</div>
 </div>
 
 <h2 id="下载及安装（v2-83-v4-1-1）">2.2 &nbsp&nbsp<a href="#下载及安装（v2-83-v4-1-1）" class="headerlink" title="下载及安装（v2.83-v4.1.1）"></a>下载及安装（v2.83-v4.1.1）</h2><h3 id="下载步骤">2.2.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
-<li>插件下载链接1：<a href="https://extensions.blender.org/add-ons/toggle-language/">官方在线扩展插件平台</a>，点击<code>Get Add-on</code>下载 ToggleLanguage.zip 文件。</li>
-<li>插件下载链接2：<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">Github Release</a>，在<code>Assets</code>资产中下载 ToggleLanguage.zip 文件。</li>
+<li>插件下载链接：<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/latest">Github Release</a>，在<code>Assets</code>资产中下载 ToggleLanguage.zip 文件。</li>
 <li>blender 版本要求：<a href="https://www.blender.org/download/">v2.83+</a></li>
 </ul>
 <p><em>注：blender v2.83默认是启用翻译功能，这也是本插件要求将v2.83作为最低版本的缘由。本插件也许在v2.83以下版本能够运行，但不推荐，因为没测试过。</em></p>
