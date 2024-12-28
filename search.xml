@@ -4226,14 +4226,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>CPU：Intel(R) Pentium(R) CPU N3530</li>
 <li>内存：海力士DDR3L-8GB单根（从老笔记本电脑上拆一根DDR3条子给它用）</li>
 <li>硬盘：海力士SH920 msata 256GB</li>
-<li>网卡：千兆双网卡intel I211+千兆网卡Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
+<li>网卡：千兆双网卡Intel I211+千兆网卡Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
 </ul>
 <h1 id="安装pve">3 &nbsp&nbsp<a href="#安装pve" class="headerlink" title="安装pve"></a>安装pve</h1><h2 id="机器BIOS的优化设置">3.1 &nbsp&nbsp<a href="#机器BIOS的优化设置" class="headerlink" title="机器BIOS的优化设置"></a>机器BIOS的优化设置</h2><ul>
 <li>设置来电自启</li>
 <li>开启快速启动</li>
 </ul>
 <h2 id="安装步骤">3.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li>下载pve系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（我的情况就是需要下载pve 7.4的iso镜像文件）</li>
+<li>下载PVE系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（我的情况就是需要下载pve 7.4的iso镜像文件）</li>
 <li>制作U盘启动项：<a href="https://github.com/ventoy/Ventoy/releases">ventoy</a>。拷贝镜像iso文件到U盘，启动选择pve镜像进入，选择图形安装界面。</li>
 <li>同意协议。</li>
 <li>点击option按钮，选择硬盘和ext4格式（我的情况只有一个硬盘，不用设置option，直接下一步）</li>
@@ -4241,7 +4241,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>设置密码，邮箱随意。</li>
 <li>管理网口，默认第一个做管理（enp1s0，pve系统里面识别的第一个网口，靠近hdmi接口的rj45），第二个做wan口（方便后续维护）。域名hostname设置为pve.lan（这项随便填写都行，有能用的域名可填写上去，可解析到机器用域名管理pve虚拟机）；ip：192.168.1.2；掩码：255.255.255.0；网关：192.168.1.1（留给ikuai的地址），DNS：223.5.5.5。</li>
 <li>查看确认已设置的内容（弹窗），确认安装。</li>
-<li>访问管理地址并登录：<a href="https://192.168.1.2:8006。">https://192.168.1.2:8006。</a></li>
+<li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>。账户：root。密码：[前面步骤设置的密码]。</li>
 <li>设置网卡并确保pve能联网。</li>
 </ol>
 <h2 id="升级步骤（7-4-8-0）">3.3 &nbsp&nbsp<a href="#升级步骤（7-4-8-0）" class="headerlink" title="升级步骤（7.4-&gt;8.0）"></a>升级步骤（7.4-&gt;8.0）</h2><ol>
@@ -4265,7 +4265,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="安装遇到的坑">3.4 &nbsp&nbsp<a href="#安装遇到的坑" class="headerlink" title="安装遇到的坑"></a>安装遇到的坑</h2><h3 id="安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">3.4.1 &nbsp&nbsp<a href="#安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bootloader setup errors:</span><br><span class="line">- failed to prepare EFI boot using Grub on &#x27;/dev/sda2&#x27;: unable to install the EFI boot loader on &#x27;/dev/sda&#x27;</span><br></pre></td></tr></table></figure>
 
-<p>原因：pve 8.0版本镜像īso不兼容此台机器，估计是bug。参考其他帖子说的只保留usb的uefi设备，依旧也会报错。并且因为机器的bios设置也比较繁琐，我反复尝试将其设置为csm模式，机器始终无法以csm模式启动，估计该主板的bios也是魔改过有bug的。因此导致也无法以csm模式安装pve。</p>
+<p>原因：PVE 8.0版本镜像īso不兼容此台机器，估计是bug。参考其他帖子说的只保留usb的uefi设备，依旧也会报错。并且因为机器的bios设置也比较繁琐，我反复尝试将其设置为csm模式，机器始终无法以csm模式启动，估计该主板的bios也是魔改过有bug的。因此导致也无法以csm模式安装pve。</p>
 <p>解决方法：安装pve 7.4版本，再升级到pve 8.x。</p>
 <h3 id="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应">3.4.2 &nbsp&nbsp<a href="#USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应" class="headerlink" title="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应"></a>USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应</h3><p>原因：估计是BIOS的驱动BUG。</p>
 <p>解决方法：先不插键盘启动机器，看屏幕等待主板自检代码走到99阶段，快速插上键盘，摁DEL键。</p>
@@ -4277,7 +4277,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">watchgod: watchdog0: watchdog did<span class="string">&#x27;t did not stop!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">systemd-shutdown: Failed to finalzie DM services, ignorening.</span></span><br></pre></td></tr></table></figure>
 
 <p>解决方法：无法解决，只能长时间等待完成重启或者强制关机重开。</p>
-<h1 id="硬件直通">4 &nbsp&nbsp<a href="#硬件直通" class="headerlink" title="硬件直通"></a>硬件直通</h1><p>IOMMU允许系统设备在虚拟内存中进行寻址，也就是将虚拟内存地址映射为物理内存地址，让实体设备可以在虚拟的内存环境中工作，这样可以帮助系统扩充内存容量，提升性能。</p>
+<h1 id="PVE硬件直通">4 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><p>IOMMU允许系统设备在虚拟内存中进行寻址，也就是将虚拟内存地址映射为物理内存地址，让实体设备可以在虚拟的内存环境中工作，这样可以帮助系统扩充内存容量，提升性能。</p>
 <p>换而言之，IOMMU可以使VM虚拟机能够接入一些物理设备，比如PCIe中的网卡、声卡、显卡，VM虚拟机可以直接或间接使用这些设备。</p>
 <blockquote>
 <p>在创建虚拟机时，芯片组一定要q35。因为Q35，才能PCIE直通，否则就是PCI直通。</p>
@@ -4290,8 +4290,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note danger no-icon"><p>如果没有VT-d或者IOMMU功能选项，则主板不支持虚拟机直通硬件。intel要b75以上芯片组才支持，即需要从intel 4代酷睿处理器开始才支持。</p>
 </div>
 
-<h2 id="pve提示No-IOMMU-detected">4.2 &nbsp&nbsp<a href="#pve提示No-IOMMU-detected" class="headerlink" title="pve提示No IOMMU detected"></a>pve提示<code>No IOMMU detected</code></h2><p>当pve未启用IOMMU或者硬件不支持直通（已启用IOMMU）时，在ProxmoxVE(PVE)的VM&#x2F;VPS中添加PCI设备时候提示：<code>No IOMMU detected, please activate it.See Documentation for further information</code>.</p>
-<h2 id="pve启用IOMMU">4.3 &nbsp&nbsp<a href="#pve启用IOMMU" class="headerlink" title="pve启用IOMMU"></a>pve启用IOMMU</h2><div class="note info no-icon"><p>内核版本为5.15或之前的，在ProxmoxVE(PVE)系统内核中，需要手动启用IOMMU。5.15版本以后的ProxmoxVE(PVE)系统内核自带默认开启了IOMMU支持。</p>
+<h2 id="PVE提示No-IOMMU-detected">4.2 &nbsp&nbsp<a href="#PVE提示No-IOMMU-detected" class="headerlink" title="PVE提示No IOMMU detected"></a>PVE提示<code>No IOMMU detected</code></h2><p>当pve未启用IOMMU或者硬件不支持直通（已启用IOMMU）时，在ProxmoxVE(PVE)的VM&#x2F;VPS中添加PCI设备时候提示：<code>No IOMMU detected, please activate it.See Documentation for further information</code>.</p>
+<h2 id="PVE启用IOMMU">4.3 &nbsp&nbsp<a href="#PVE启用IOMMU" class="headerlink" title="PVE启用IOMMU"></a>PVE启用IOMMU</h2><div class="note info no-icon"><p>内核版本为5.15或之前的，在ProxmoxVE(PVE)系统内核中，需要手动启用IOMMU。5.15版本以后的ProxmoxVE(PVE)系统内核自带默认开启了IOMMU支持。</p>
 <p>但我的硬件本身不支持VT-d，因此并未自动启用IOMMU，也可能是因为从7.4升级到8.0的缘故。</p>
 </div>
 
@@ -4307,7 +4307,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol></div></div></div>
 
 <p>验证IOMMU是否启用：<code>dmesg | grep -e DMAR -e IOMMU</code>。输出显示<code>DMAR: IOMMU enabled</code>证明已启用，虚拟机分配PCI设备时可见。若无输出，需排查故障。</p>
-<h2 id="pve启用PT模式">4.4 &nbsp&nbsp<a href="#pve启用PT模式" class="headerlink" title="pve启用PT模式"></a>pve启用PT模式</h2><div class="note info no-icon"><p>PT模式：会在IOMMU需要使用时候才启动，适配器不需要使用 DMA 转换到内存，因此可以提高其他没有分配过设备的性能。</p>
+<h2 id="PVE启用PT模式">4.4 &nbsp&nbsp<a href="#PVE启用PT模式" class="headerlink" title="PVE启用PT模式"></a>PVE启用PT模式</h2><div class="note info no-icon"><p>PT模式：会在IOMMU需要使用时候才启动，适配器不需要使用 DMA 转换到内存，因此可以提高其他没有分配过设备的性能。</p>
 </div>
 
 <ol>
@@ -4322,7 +4322,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>若机器硬件性能不太足够的话，不建议安装win系统，win系统极度消耗硬件性能（即便是空载待机状态也消耗很大），而这影响openwrt的性能。比如我的情况：安装了tiny10系统，千兆网线，宽带500M实测不到300Mbp&#x2F;s（这里是指用<a href="http://speed.unicomgd.com:8080/">广东联通宽带测速平台</a>测试的结果，实际ikuai主路由测试速率却又正常），局域网速率最高只能到700Mbp&#x2F;s的速率。关闭后tiny10后，实测宽带速率恢复正常，局域网速率跑到900Mbp&#x2F;s出头）</p>
 </blockquote>
 <h2 id="PVE基础设置">5.1 &nbsp&nbsp<a href="#PVE基础设置" class="headerlink" title="PVE基础设置"></a>PVE基础设置</h2><ol>
-<li>访问管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>，帐号：root。</li>
+<li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>，账户：root。密码：[前面安装步骤设置的密码]。</li>
 <li>根据硬件网卡情况，添加并设置好虚拟网桥Linux Bridge：创建&gt;Linux Bridge&gt;桥接接口填写物理网口地址名称。以我的机器为例，机器三个物理网口，PVE新建5个网桥，前三个网桥和物理网口绑定，第四个网桥用作iKuai和OpenWrt之间的传输，第五个网桥用作其他虚拟机系统的传输。</li>
 </ol>
 <h2 id="安装爱快iKuai">5.2 &nbsp&nbsp<a href="#安装爱快iKuai" class="headerlink" title="安装爱快iKuai"></a>安装爱快iKuai</h2><ol>
@@ -4336,7 +4336,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>点击启动虚拟机，完成安装即可。</li>
 <li>iKuai内识别的第一个网卡设置为lan1。</li>
 <li>输入字母o回车进入其「其他选项」，开启外网访问web。</li>
-<li>访问WEB管理地址并登录：<a href="http://192.168.1.1/">http://192.168.1.1:80</a>。默认用户：admin。默认密码：admin。</li>
+<li>访问WEB管理地址并登录：<a href="http://192.168.1.1/">http://192.168.1.1:80</a>。默认账户：admin。默认密码：admin。</li>
 </ol>
 <h2 id="安装OpenWrt">5.3 &nbsp&nbsp<a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h2><h3 id="OpenWrt镜像的选择">5.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
 <li><a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>：推荐（本教程使用该固件）。内置SmartDNS，软件包空间设置为1G，剩余五百多兆。</li>
@@ -4354,7 +4354,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>在选项标签页中把「开机自启动」开启，启动顺序设置为2，引导顺序只开disk‘xxxx’磁盘，把网络启动关掉。</li>
 <li>点击启动虚拟机。</li>
 <li>pve中用shell：<code>vi /etc/config/network</code>，将lan口ip改为<code>192.168.1.3</code>，<code>reboot</code>重启。vim编辑：按i进入修改模式，按esc退出编辑模式，输入 :wq回车保存修改。</li>
-<li>访问WEB管理地址并登录：<a href="http://192.168.1.3/">http://192.168.1.3</a>。默认用户：root。默认密码：password。</li>
+<li>访问WEB管理地址并登录：<a href="http://192.168.1.3/">http://192.168.1.3</a>。默认账户：root。默认密码：password。</li>
 </ol>
 <h2 id="安装飞牛私有云fnOS">5.4 &nbsp&nbsp<a href="#安装飞牛私有云fnOS" class="headerlink" title="安装飞牛私有云fnOS"></a>安装飞牛私有云fnOS</h2><ol>
 <li>下载飞牛私有云fnOS镜像：<a href="https://www.fnnas.com/download">点击跳转</a></li>
@@ -4375,7 +4375,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>安装完成后，点击确认开始重启。摁<code>ESC</code>键，进入虚拟机BIOS设置界面，重新选择硬盘分区作为启动项启动。（否则默认启动CD）</li>
 <li>出现<code>Debian GNU/Linux</code>系统引导选项就是安装成功了</li>
 <li>进入到传统Linux登录界面（无GUI），这里能看到WEB管理地址。若需要固定IP地址，在<code>ikuai</code>中找到对应MAC地址加入静态分配表即可。</li>
-<li>访问WEB管理地址并登录（这里是假设初次登录的WEB管理地址）：<a href="http://192.168.1.5:5666/">http://192.168.1.5:5666/</a>。首次访问会提示创建NAS<code>设备名称``超级管理员账号``密码``确认密码</code>。</li>
+<li>访问WEB管理地址并登录：<a href="http://192.168.1.5:5666/">http://192.168.1.5:5666/</a>。首次访问会提示创建NAS<code>设备名称``超级管理员账号``密码``确认密码</code>。</li>
 </ol>
 <h2 id="创建虚拟机遇到的坑">5.5 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.5.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
 <p>解决方法：创建EFI磁盘时，取消勾选添加密钥。</p>
@@ -5930,11 +5930,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#99;&#111;&#x6d;">&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#99;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#x63;&#111;&#x6d;">&#49;&#x40;&#49;&#x2e;&#x63;&#111;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#64;&#x38;&#x2e;&#x63;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#x73;&#46;&#99;&#111;&#109;">&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#x73;&#46;&#99;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#117;&#46;&#99;&#111;&#109;">&#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#117;&#46;&#99;&#111;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#x31;&#46;&#99;&#x6f;&#109;">&#x31;&#64;&#x31;&#46;&#99;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#x63;&#111;&#x6d;">&#56;&#x40;&#x38;&#46;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#x6b;&#115;&#46;&#x63;&#111;&#109;">&#110;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#x6b;&#115;&#46;&#x63;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -9733,9 +9733,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-SuhOTjVDzzRqlzUD" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-SuhOTjVDzzRqlzUD").style.height=document.getElementById("mmedia-SuhOTjVDzzRqlzUD").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-pQHJkkaYVxGcDSIm" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-pQHJkkaYVxGcDSIm").style.height=document.getElementById("mmedia-pQHJkkaYVxGcDSIm").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-SuhOTjVDzzRqlzUD").style.height=document.getElementById("mmedia-SuhOTjVDzzRqlzUD").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-pQHJkkaYVxGcDSIm").style.height=document.getElementById("mmedia-pQHJkkaYVxGcDSIm").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9858,7 +9858,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-ycBUvyKqTADYmEiE"></div><script> var ycBUvyKqTADYmEiE_options = JSON.parse('{\"id\":\"mmedia-ycBUvyKqTADYmEiE\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(ycBUvyKqTADYmEiE_options); </script>
+<div id="mmedia-JcsyfprJmJXpHIpA"></div><script> var JcsyfprJmJXpHIpA_options = JSON.parse('{\"id\":\"mmedia-JcsyfprJmJXpHIpA\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(JcsyfprJmJXpHIpA_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9961,7 +9961,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#105;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#105;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
