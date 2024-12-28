@@ -2907,7 +2907,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>下载：<a href="https://code.visualstudio.com/Download">VSCode System Installer</a></li>
 <li>安装：默认路径安装，选项额外添选上下文菜单（文件和目录）</li>
 </ul>
-<p>镜像下载的方法：将下载链接URL中的<code>stable</code>之前的字符全部改为<code>https://vscode.cdn.azure.cn/</code>即可。</p>
+<p>镜像加速下载的方法：将下载链接URL中的<code>stable</code>之前的字符全部改为<code>https://vscode.cdn.azure.cn/</code>即可。</p>
 <h1 id="配置C-C-开发环境">2 &nbsp&nbsp<a href="#配置C-C-开发环境" class="headerlink" title="配置C&#x2F;C++开发环境"></a>配置C&#x2F;C++开发环境</h1><h2 id="MSVC-CL编译器的安装和环境设置">2.1 &nbsp&nbsp<a href="#MSVC-CL编译器的安装和环境设置" class="headerlink" title="MSVC CL编译器的安装和环境设置"></a>MSVC CL编译器的安装和环境设置</h2><ol>
 <li>下载：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a></li>
 <li>安装「Visual Studio 2022 生成工具」，然后勾选对应包下载安装<ol>
@@ -4219,14 +4219,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>PVE+iKuai+OpenWrt虚拟机折腾记录</title>
+    <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
 <h1 id="机器配置">2 &nbsp&nbsp<a href="#机器配置" class="headerlink" title="机器配置"></a>机器配置</h1><ul>
 <li>CPU：Intel(R) Pentium(R) CPU N3530</li>
 <li>内存：海力士DDR3L-8GB单根（从老笔记本电脑上拆一根DDR3条子给它用）</li>
 <li>硬盘：海力士SH920 msata 256GB</li>
-<li>网卡：双网卡intel I211+Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
+<li>网卡：千兆双网卡intel I211+千兆网卡Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
 </ul>
 <h1 id="安装pve">3 &nbsp&nbsp<a href="#安装pve" class="headerlink" title="安装pve"></a>安装pve</h1><h2 id="机器BIOS的优化设置">3.1 &nbsp&nbsp<a href="#机器BIOS的优化设置" class="headerlink" title="机器BIOS的优化设置"></a>机器BIOS的优化设置</h2><ul>
 <li>设置来电自启</li>
@@ -4325,42 +4325,63 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>访问管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>，帐号：root。</li>
 <li>根据硬件网卡情况，添加并设置好虚拟网桥Linux Bridge：创建&gt;Linux Bridge&gt;桥接接口填写物理网口地址名称。以我的机器为例，机器三个物理网口，PVE新建5个网桥，前三个网桥和物理网口绑定，第四个网桥用作iKuai和OpenWrt之间的传输，第五个网桥用作其他虚拟机系统的传输。</li>
 </ol>
-<h2 id="安装iKuai">5.2 &nbsp&nbsp<a href="#安装iKuai" class="headerlink" title="安装iKuai"></a>安装iKuai</h2><ol>
+<h2 id="安装爱快iKuai">5.2 &nbsp&nbsp<a href="#安装爱快iKuai" class="headerlink" title="安装爱快iKuai"></a>安装爱快iKuai</h2><ol>
 <li>下载iKuai镜像：<a href="https://www.ikuai8.com/component/download">点击跳转</a></li>
-<li>local-内容-上传：iKuai的安装镜像。</li>
+<li>local-内容-上传：iKuai的安装镜像文件。</li>
 <li>创建虚拟机，命名虚拟机名称ikuai，VM编号100。</li>
 <li>CD&#x2F;DVD光盘镜像文件选择刚上传的ISO镜像。</li>
-<li>硬盘分配2G，添加EFI磁盘（不勾选添加密钥），CPU给4核（KVM64），内存分配4G（64位iKuai要求4G内存），网卡模型选择VirtIO（半虚拟化）。</li>
+<li>主硬盘分配2G，额外添加EFI磁盘（不勾选添加密钥），CPU给4核（KVM64），内存分配4G（64位iKuai要求4G内存），网卡模型选择VirtIO（半虚拟化）。</li>
 <li>完成新建后，在硬件标签页中继续完成添加所有网桥，网桥的防火墙全部关掉（使用iKuai的），模型都选择半虚拟化。</li>
 <li>在选项标签页中把「开机自启动」开启，启动顺序设置为1，引导顺序只开disk‘xxxx’磁盘，把网络启动关掉，CD启动上移到第一位。</li>
 <li>点击启动虚拟机，完成安装即可。</li>
 <li>iKuai内识别的第一个网卡设置为lan1。</li>
 <li>输入字母o回车进入其「其他选项」，开启外网访问web。</li>
-<li>访问管理地址并登录：<a href="https://192.168.1.1:80/">https://192.168.1.1:80</a>。默认用户：admin。默认密码：admin。</li>
+<li>访问WEB管理地址并登录：<a href="http://192.168.1.1/">http://192.168.1.1:80</a>。默认用户：admin。默认密码：admin。</li>
 </ol>
 <h2 id="安装OpenWrt">5.3 &nbsp&nbsp<a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h2><h3 id="OpenWrt镜像的选择">5.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
-<li><a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>：推荐。内置SmartDNS，软件包空间设置为1G，剩余五百多兆。</li>
+<li><a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>：推荐（本教程使用该固件）。内置SmartDNS，软件包空间设置为1G，剩余五百多兆。</li>
 <li><a href="https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1">eSir GDQ 高大全</a>：eSir的高大全固件。不推荐。没有内置SmartDNS拓展（我测试时安装SmartDNS并未出现有服务项，无效）。并且相较于Blench版本，较为繁琐。软件包空间只剩余几兆，需自己手动扩盘。</li>
 </ul>
 <h3 id="安装步骤-1">5.3.2 &nbsp&nbsp<a href="#安装步骤-1" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
 <li>创建虚拟机，命名虚拟机名称openwrt，VM编号101。</li>
 <li>CD&#x2F;DVD光盘镜像文件设置为无介质。</li>
-<li>硬盘随便分配（后续会删除），添加EFI磁盘（不勾选添加密钥），CPU给4核（KVM64），内存分配4G，网卡模型选择VirtIO（半虚拟化）。</li>
+<li>主硬盘随便分配（后续会删除），额外添加EFI磁盘（不勾选添加密钥），CPU给4核（KVM64），内存分配4G，网卡模型选择VirtIO（半虚拟化）。</li>
 <li>网桥只选择第四个网桥（用作iKuai和OpenWrt之间的传输），网卡的防火墙全部关掉（使用iKuai的），模型选择半虚拟化。</li>
 <li>下载OpenWrt镜像：<a href="#OpenWrt%E9%95%9C%E5%83%8F%E7%9A%84%E9%80%89%E6%8B%A9">见上一小节</a></li>
-<li>local-内容-上传：OpenWrt的镜像。</li>
+<li>local-内容-上传：OpenWrt的镜像文件。</li>
 <li>向虚拟机导入OpenWrt镜像：<code>qm importdisk 101 /var/lib/vz/template/iso/bleach-plus-20230826-openwrt-x86-64-generic-squashfs-combined-efi.img local-lvm</code>。（直接写盘即可，无需安装）。</li>
 <li>在pve管理页面中，加载刚才导入镜像生成的磁盘。</li>
 <li>在选项标签页中把「开机自启动」开启，启动顺序设置为2，引导顺序只开disk‘xxxx’磁盘，把网络启动关掉。</li>
 <li>点击启动虚拟机。</li>
 <li>pve中用shell：<code>vi /etc/config/network</code>，将lan口ip改为<code>192.168.1.3</code>，<code>reboot</code>重启。vim编辑：按i进入修改模式，按esc退出编辑模式，输入 :wq回车保存修改。</li>
-<li>访问管理地址并登录：<a href="https://192.168.1.3/">https://192.168.1.3</a>。默认用户：root。默认密码：password。</li>
+<li>访问WEB管理地址并登录：<a href="http://192.168.1.3/">http://192.168.1.3</a>。默认用户：root。默认密码：password。</li>
 </ol>
-<h2 id="创建虚拟机遇到的坑">5.4 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.4.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
+<h2 id="安装飞牛私有云fnOS">5.4 &nbsp&nbsp<a href="#安装飞牛私有云fnOS" class="headerlink" title="安装飞牛私有云fnOS"></a>安装飞牛私有云fnOS</h2><ol>
+<li>下载飞牛私有云fnOS镜像：<a href="https://www.fnnas.com/download">点击跳转</a></li>
+<li>local-内容-上传：fnOS的安装镜像文件。</li>
+<li>创建虚拟机，命名虚拟机名称fnOS，VM编号102。</li>
+<li>CD&#x2F;DVD光盘镜像文件选择刚上传的ISO镜像。</li>
+<li>主硬盘分配64G，额外添加EFI磁盘（不勾选添加密钥），CPU给4核（KVM64），内存分配6G（fnOS系统内存需求还是有点大的），网卡模型选择VirtIO（半虚拟化）。<ul>
+<li>其他硬盘后续自行根据需求添加。</li>
+</ul>
+</li>
+<li>网桥只选择第五个网桥（用作iKuai和fnOS之间的传输），网卡的防火墙全部关掉（使用iKuai的），模型选择半虚拟化。</li>
+<li>在选项标签页中把「开机自启动」开启，启动顺序设置为3，引导顺序只开disk‘xxxx’磁盘，把网络启动关掉，CD启动上移到第一位。</li>
+<li>点击启动虚拟机。</li>
+<li>选择<code>Graphical Install</code>进行图形化安装流程。</li>
+<li>选择系统主硬盘进行安装。</li>
+<li>系统分区大小：64GB；Swap大小：0GB。（有论坛帖子反馈开启<code>Swap cache</code>时，某些下载应用例如<code>QBittorrent</code>可能会引导硬盘持续读取和CPU的异常占用。永久禁用Swap还需要修改fstab文件。）</li>
+<li>点击确认安装，选择网卡界面，直接默认选项确认即可。</li>
+<li>安装完成后，点击确认开始重启。摁<code>ESC</code>键，进入虚拟机BIOS设置界面，重新选择硬盘分区作为启动项启动。（否则默认启动CD）</li>
+<li>出现<code>Debian GNU/Linux</code>系统引导选项就是安装成功了</li>
+<li>进入到传统Linux登录界面（无GUI），这里能看到WEB管理地址。若需要固定IP地址，在<code>ikuai</code>中找到对应MAC地址加入静态分配表即可。</li>
+<li>访问WEB管理地址并登录（这里是假设初次登录的WEB管理地址）：<a href="http://192.168.1.5:5666/">http://192.168.1.5:5666/</a>。首次访问会提示创建NAS<code>设备名称``超级管理员账号``密码``确认密码</code>。</li>
+</ol>
+<h2 id="创建虚拟机遇到的坑">5.5 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.5.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
 <p>解决方法：创建EFI磁盘时，取消勾选添加密钥。</p>
-<h3 id="安装windows镜像，无法识别找到磁盘">5.4.2 &nbsp&nbsp<a href="#安装windows镜像，无法识别找到磁盘" class="headerlink" title="安装windows镜像，无法识别找到磁盘"></a>安装windows镜像，无法识别找到磁盘</h3><p>原因：scsi不适合windows镜像，windows安装解决识别不到硬盘。</p>
+<h3 id="安装windows镜像，无法识别找到磁盘">5.5.2 &nbsp&nbsp<a href="#安装windows镜像，无法识别找到磁盘" class="headerlink" title="安装windows镜像，无法识别找到磁盘"></a>安装windows镜像，无法识别找到磁盘</h3><p>原因：scsi不适合windows镜像，windows安装解决识别不到硬盘。</p>
 <p>解决方法：创建硬盘时，总线&#x2F;设备选择：sata硬盘或者IDE。</p>
-<h3 id="安装windows镜像，网卡无驱动">5.4.3 &nbsp&nbsp<a href="#安装windows镜像，网卡无驱动" class="headerlink" title="安装windows镜像，网卡无驱动"></a>安装windows镜像，网卡无驱动</h3><p>现象：当网卡设置为virtio模型时，安装并进入到windows系统后，网卡无驱动。</p>
+<h3 id="安装windows镜像，网卡无驱动">5.5.3 &nbsp&nbsp<a href="#安装windows镜像，网卡无驱动" class="headerlink" title="安装windows镜像，网卡无驱动"></a>安装windows镜像，网卡无驱动</h3><p>现象：当网卡设置为virtio模型时，安装并进入到windows系统后，网卡无驱动。</p>
 <p>原因：windows系统自带的驱动无此虚拟硬件的驱动。</p>
 <p>解决方式：加载virtio镜像，并运行x64程序安装驱动即可。</p>
 <p>VirtIO镜像下载地址：<a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">点击跳转</a></p>
@@ -4468,8 +4489,32 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>上游服务器（添加DNS的设置里面可以设置服务器组）<ul>
-<li>服务器组名称：china（10条左右，包含iKuai路由宽带拨号返回的两个宽带供应商提供的DNS）</li>
-<li>服务器组名称：oversea（10条左右）</li>
+<li>服务器组名称：china（10条左右，包含iKuai路由宽带拨号返回的两个宽带供应商提供的DNS）<ol>
+<li>iKuai路由宽带拨号返回的宽带供应商提供的DNS1，udp协议</li>
+<li>iKuai路由宽带拨号返回的宽带供应商提供的DNS2，udp协议</li>
+<li>114dns，114.114.114.114，udp协议</li>
+<li>114dns，114.114.115.115，udp协议</li>
+<li>opener dns，42.120.21.30，udp协议</li>
+<li>阿里dns，223.5.5.5，udp协议</li>
+<li>阿里dns，223.6.6.6，udp协议</li>
+<li>腾讯dns，119.29.29.29，udp协议</li>
+<li>百度dns，180.76.76.76，udp协议</li>
+<li>华为dns，122.112.208.1，udp协议</li>
+</ol>
+</li>
+<li>服务器组名称：oversea（10条左右）<ol>
+<li>google dns，8.8.8.8，udp协议</li>
+<li>google dns，8.8.4.4，tls协议</li>
+<li>CloudFlare，1.1.1.1，udp协议</li>
+<li>IBM Quad9，9.9.9.9，udp协议</li>
+<li>Norton ConnectSafe，199.85.126.10，udp协议</li>
+<li>Norton ConnectSafe，199.85.127.10，udp协议</li>
+<li>OpenDNS，208.67.222.222，tls协议</li>
+<li>OpenDNS，208.67.220.220，udp协议</li>
+<li>V2EX DNS，199.91.73.222，tls协议</li>
+<li>V2EX DNS，178.79.131.110，tls协议</li>
+</ol>
+</li>
 </ul>
 </li>
 <li>域名规则<ul>
@@ -4592,12 +4637,26 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>重启openwrt虚拟机，检查扩容情况。</li>
 <li>根据情况可能需手动移除之前挂载的<code>/mnt/sda3</code>状态。</li>
 </ol>
-<h1 id="后记">7 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><del>这光猫还是有断流情况，估计是过热导致掉线，后续考虑下加装小风扇。</del></p>
-<p>断流降速故障已查明：虚拟网卡模型设置为Intel E1000导致的故障，重设为virtio半虚拟化即可解决。</p>
+<h1 id="飞牛私有云fnOS（NAS总结）">7 &nbsp&nbsp<a href="#飞牛私有云fnOS（NAS总结）" class="headerlink" title="飞牛私有云fnOS（NAS总结）"></a>飞牛私有云fnOS（NAS总结）</h1><h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">7.1 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
+<p>解决方法：永久禁用<code>Swap cache</code>功能。</p>
+<ol>
+<li>访问fnOS虚拟机控制台。</li>
+<li>登录fnOS账户。</li>
+<li><code>sudo vim /etc/fstab</code></li>
+<li>摁<code>I</code>键进入vim编辑器编辑模式</li>
+<li>找到<code>/swapfile none swap sw 0 0</code>一行内容并注释掉，即在行头加上<code>#</code>。</li>
+<li>摁<code>ESC</code>键，摁<code>:</code>键然后输入<code>wq!</code>保存退出。</li>
+<li><code>cat /etc/fstab</code>可以查看文件内容是否修改成功，输出内容如下：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">UUID=ea545bcc-cd3f-479f-902a-ab2b02db25 / ext4 errors=remount-ro 0 1</span><br><span class="line"><span class="comment"># /swapfile none swap sw 0 0</span></span><br><span class="line">UUID=676D-A1AF /boot/efi vfat <span class="built_in">umask</span>=0077 0 1</span><br></pre></td></tr></table></figure></li>
+</ol>
 <h1 id="宽带网络总结">8 &nbsp&nbsp<a href="#宽带网络总结" class="headerlink" title="宽带网络总结"></a>宽带网络总结</h1><h2 id="会话数（连接数）">8.1 &nbsp&nbsp<a href="#会话数（连接数）" class="headerlink" title="会话数（连接数）"></a>会话数（连接数）</h2><p>会话数（连接数）在线测试工具：<a href="https://qps.itzmx.com/">https://qps.itzmx.com</a></p>
 <p>连接数为应用产生的网络连接数，例如在爱快首页上看到连接数。并发连接数为 qps ，即每秒发起请求，等于在同一秒内，产生了 250 个请求。</p>
 <p>会话数（连接数）的限制，一般普通线路带宽会有会话数限制，专线则没有该限制。触发限制的常见现象为：超过并发连接数上限后，此前已建立连接数的软件和网络请求可正常通信，并且期间ping一切正常，延迟没有任何抖动现象，但是新开软件则连不上网络。</p>
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.</p>
+<h1 id="后记">9 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><del>这光猫还是有断流情况，估计是过热导致掉线，后续考虑下加装小风扇。</del></p>
+<p>断流降速故障已查明：虚拟网卡模型设置为<code>Intel E1000</code>导致的故障，重设为<code>VirtIO (半虚拟化)</code>即可解决。</p>
+<div class="note info no-icon"><p>在这台工控机上实际使用openwrt内网测速工具发现，虚拟机网卡模型设置为<code>Intel E1000</code>或者<code>Realtek RTL8139</code>都无法正常发挥网卡的性能，<code>Intel E1000</code>大约测试性能为100Mbps~300Mbps不等，<code>Realtek RTL8139</code>模型是最为拉跨的，直接为10Mbps。使用<code>VirtIO (半虚拟化)</code>模型内网测速才能恢复到900Mbps以上的正常速度。</p>
+</div>
+
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -5871,11 +5930,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">&#110;&#111;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;">&#49;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#x63;&#111;&#109;">&#x38;&#x40;&#x38;&#46;&#x63;&#111;&#109;</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#115;&#x2e;&#99;&#111;&#109;">&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#115;&#x2e;&#99;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#109;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#99;&#111;&#x6d;">&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#99;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#x63;&#111;&#x6d;">&#49;&#x40;&#49;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#64;&#x38;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#x73;&#46;&#99;&#111;&#109;">&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#x73;&#46;&#99;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -9674,9 +9733,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-APjQvkuAQFAICvTA" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-APjQvkuAQFAICvTA").style.height=document.getElementById("mmedia-APjQvkuAQFAICvTA").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-SuhOTjVDzzRqlzUD" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-SuhOTjVDzzRqlzUD").style.height=document.getElementById("mmedia-SuhOTjVDzzRqlzUD").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-APjQvkuAQFAICvTA").style.height=document.getElementById("mmedia-APjQvkuAQFAICvTA").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-SuhOTjVDzzRqlzUD").style.height=document.getElementById("mmedia-SuhOTjVDzzRqlzUD").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9799,7 +9858,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-nwQGjQoHPrHdLgJW"></div><script> var nwQGjQoHPrHdLgJW_options = JSON.parse('{\"id\":\"mmedia-nwQGjQoHPrHdLgJW\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(nwQGjQoHPrHdLgJW_options); </script>
+<div id="mmedia-ycBUvyKqTADYmEiE"></div><script> var ycBUvyKqTADYmEiE_options = JSON.parse('{\"id\":\"mmedia-ycBUvyKqTADYmEiE\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(ycBUvyKqTADYmEiE_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9902,7 +9961,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#x73;&#x74;&#101;&#114;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x69;&#109;&#46;&#x6d;&#x69;&#x73;&#x74;&#101;&#114;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#105;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -10062,7 +10121,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><a href="/troubleshooting/router-troubleshooting">路由排障总结</a></li>
 </ul>
 <h1 id="系统安装">4 &nbsp&nbsp<a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><ul>
-<li><a href="/software/pve">PVE+iKuai+OpenWrt虚拟机折腾记录</a></li>
+<li><a href="/software/pve">PVE+iKuai+OpenWrt+fnOS 虚拟机折腾记录</a></li>
 <li><a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a></li>
 <li><a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a></li>
 </ul>
