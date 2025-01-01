@@ -566,7 +566,7 @@
     <a href="https://www.fnnas.com/download">飞牛私有云 fnOS</a>
     <a href="https://archive.synology.cn/download/Os/DSM">群晖系统DSM</a>
     <a href="https://www.truenas.com/truenas-community-edition/">TrueNAS Community</a>
-    <a href="https://www.openmediavault.org/download.html">openmediavault</a>
+    <a href="https://www.openmediavault.org/download.html">OpenMediaVault</a>
     <a href="https://www.home-assistant.io/installation/">Home Assistant</a>
 </div>
 
@@ -4225,77 +4225,197 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
-<h1 id="机器配置">2 &nbsp&nbsp<a href="#机器配置" class="headerlink" title="机器配置"></a>机器配置</h1><ul>
+<h1 id="N3530工控机配置">2 &nbsp&nbsp<a href="#N3530工控机配置" class="headerlink" title="N3530工控机配置"></a>N3530工控机配置</h1><ul>
 <li>CPU：Intel(R) Pentium(R) CPU N3530</li>
 <li>内存：海力士DDR3L-8GB单根（从老笔记本电脑上拆一根DDR3条子给它用）</li>
 <li>硬盘：海力士SH920 msata 256GB</li>
-<li>网卡：千兆双网卡Intel I211+千兆网卡Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
+<li>网卡：千兆网卡Intel I211 *2+千兆网卡Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
 </ul>
-<h1 id="安装pve">3 &nbsp&nbsp<a href="#安装pve" class="headerlink" title="安装pve"></a>安装pve</h1><h2 id="机器BIOS的优化设置">3.1 &nbsp&nbsp<a href="#机器BIOS的优化设置" class="headerlink" title="机器BIOS的优化设置"></a>机器BIOS的优化设置</h2><ul>
-<li>设置来电自启</li>
-<li>开启快速启动</li>
+<h1 id="All-in-One-All-in-Boom-机器硬件选型总结">3 &nbsp&nbsp<a href="#All-in-One-All-in-Boom-机器硬件选型总结" class="headerlink" title="All in One (All in Boom) 机器硬件选型总结"></a>All in One (All in Boom) 机器硬件选型总结</h1><h2 id="CPU选型对比">3.1 &nbsp&nbsp<a href="#CPU选型对比" class="headerlink" title="CPU选型对比"></a>CPU选型对比</h2><div class="note primary no-icon"><p>All in One用途大多是使用虚拟机方案实现各子系统，其中虚拟化直通硬件方案需要CPU中一个很重要的功能才能实现。对于Intel CPU来说，就是VT-d（该功能可以在Intel官方每个CPU SKU规格页面查看是否支持）；对于AMD CPU来说，就是IOMMU，也称AMD-Vi（暂未找到AMD官方资料特性说明，根据维基百科资料所言，所有 Ryzen 处理器均支持该功能）。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th align="center">CPU型号</th>
+<th align="center">内核&#x2F;线程</th>
+<th align="center">功耗&#x2F;W</th>
+<th align="center">频率&#x2F;GHz</th>
+<th align="center">核显最大分辨率</th>
+<th align="center">最大内存规格&#x2F;GB</th>
+<th align="center">VT-x</th>
+<th align="center">VT-d</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/78867/intel-celeron-processor-j1900-2m-cache-up-to-2-42-ghz/specifications.html">赛扬®J1900</a></td>
+<td align="center">4&#x2F;4</td>
+<td align="center">10</td>
+<td align="center">2~2.42</td>
+<td align="center">未知</td>
+<td align="center">2×8 DDR3L 1333MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">不支持</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/81074/intel-pentium-processor-n3530-2m-cache-up-to-2-58-ghz/specifications.html">奔腾®N3530</a></td>
+<td align="center">4&#x2F;4</td>
+<td align="center">4.5~7.5</td>
+<td align="center">2.16~2.58</td>
+<td align="center">未知</td>
+<td align="center">2×8 DDR3L 1333MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">不支持</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/95591/intel-pentium-processor-j4205-2m-cache-up-to-2-60-ghz/specifications.html">奔腾®J4205</a></td>
+<td align="center">4&#x2F;4</td>
+<td align="center">10</td>
+<td align="center">1.5~2.6</td>
+<td align="center">未知</td>
+<td align="center">2×8 LPDDR4 2400 MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/197305/intel-celeron-processor-j4125-4m-cache-up-to-2-70-ghz/specifications.html">赛扬®J4125</a></td>
+<td align="center">4&#x2F;4</td>
+<td align="center">10</td>
+<td align="center">2~2.7</td>
+<td align="center">4096x2160@30Hz</td>
+<td align="center">2×8 DDR4&#x2F;LPDDR4 2400MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/214758/intel-celeron-processor-j6412-1-5m-cache-up-to-2-60-ghz/specifications.html">赛扬®J6412</a></td>
+<td align="center">4&#x2F;4</td>
+<td align="center">10</td>
+<td align="center">2~2.6</td>
+<td align="center">4096x2160@ 60Hz</td>
+<td align="center">4x32 LPDDR4&#x2F;x 3733MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html">N100</a></td>
+<td align="center">4&#x2F;4</td>
+<td align="center">6</td>
+<td align="center">3.4</td>
+<td align="center">4096 x 2160@60Hz</td>
+<td align="center">16 DDR5&#x2F;LPDDR5 4800 MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/226259/intel-core-i71255u-processor-12m-cache-up-to-4-70-ghz/specifications.html">酷睿™ i7-1255U</a></td>
+<td align="center">10&#x2F;12</td>
+<td align="center">12~55</td>
+<td align="center">E核3.5&#x2F;P核4.7</td>
+<td align="center">7680 x 4320 @ 60Hz</td>
+<td align="center">64 LPDDR5 5200 MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+</tbody></table>
+<div class="note default no-icon"><p>BUG处理器的折腾性思考：小黄鱼上面流通不少Intel 12代ES测试版处理器，不同步进版本存在不同问题，例如CPU没有内建直连独立显卡的PCI-E通道，会导致所有主板上第一根直连独立显卡的PCI-E X16插槽无效。这类BUG CPU虽然价格看着很诱惑，但可能实际运行不稳定，因此不纳入All in One硬件选型考虑范围。</p>
+</div>
+
+<h2 id="主板选型对比">3.2 &nbsp&nbsp<a href="#主板选型对比" class="headerlink" title="主板选型对比"></a>主板选型对比</h2><p>TODO</p>
+<h1 id="安装PVE">4 &nbsp&nbsp<a href="#安装PVE" class="headerlink" title="安装PVE"></a>安装PVE</h1><h2 id="N3530工控机BIOS的优化设置">4.1 &nbsp&nbsp<a href="#N3530工控机BIOS的优化设置" class="headerlink" title="N3530工控机BIOS的优化设置"></a>N3530工控机BIOS的优化设置</h2><p>该N3530工控机BIOS是采用经典的<code>American Megatrends</code>方案。</p>
+<ul>
+<li>设置来电自启：<code>Chipset-&gt;North Bridge-&gt;Restore AC Power Loss-&gt;Power on</code></li>
+<li>启用CPU内置温度传感器：<code>Advanced-&gt;CPU Configuration-&gt;CPU Thermal Configuration-&gt;DTS-&gt;Enabled</code></li>
+<li>启用VT-x：<code>Advanced-&gt;CPU Configuration-&gt;Intel Virtualization Technology-&gt;Enabled</code></li>
+<li>设置自定义功率模式：<code>Advanced-&gt;CPU Configuration-&gt;Power Technology-&gt;Custom</code>。（默认是Efficient节能模式）</li>
 </ul>
-<h2 id="安装步骤">3.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li>下载PVE系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（我的情况就是需要下载pve 7.4的iso镜像文件）</li>
+<h2 id="PVE安装步骤">4.2 &nbsp&nbsp<a href="#PVE安装步骤" class="headerlink" title="PVE安装步骤"></a>PVE安装步骤</h2><ol>
+<li>下载PVE系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（我的情况就是需要下载pve 7.4的iso镜像文件，因为安装pve 8.x会引起<code>bootloader setup errors</code>报错而导致安装PVE系统失败）</li>
 <li>制作U盘启动项：<a href="https://github.com/ventoy/Ventoy/releases">ventoy</a>。拷贝镜像iso文件到U盘，启动选择pve镜像进入，选择图形安装界面。</li>
 <li>同意协议。</li>
 <li>点击option按钮，选择硬盘和ext4格式（我的情况只有一个硬盘，不用设置option，直接下一步）</li>
 <li>国家选择china，时区会自动修改为上海，键盘布局不改。</li>
 <li>设置密码，邮箱随意。</li>
-<li>管理网口，默认第一个做管理（enp1s0，pve系统里面识别的第一个网口，靠近hdmi接口的rj45），第二个做wan口（方便后续维护）。域名hostname设置为pve.lan（这项随便填写都行，有能用的域名可填写上去，可解析到机器用域名管理pve虚拟机）；ip：192.168.1.2；掩码：255.255.255.0；网关：192.168.1.1（留给ikuai的地址），DNS：223.5.5.5。</li>
+<li>管理网口，默认第一个做管理（enp1s0，pve系统里面识别的第一个网口，N3530工控机中靠近hdmi接口的rj45），第二个做wan口（方便后续维护）。域名hostname设置为pve.lan（这项随便填写都行，有能用的域名可填写上去，可解析到机器用域名管理pve虚拟机）；ip：192.168.1.2；掩码：255.255.255.0；网关：192.168.1.1（留给ikuai的地址），DNS：223.5.5.5。</li>
 <li>查看确认已设置的内容（弹窗），确认安装。</li>
 <li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>。账户：root。密码：[前面步骤设置的密码]。</li>
 <li>设置网卡并确保pve能联网。</li>
 </ol>
-<h2 id="升级步骤（7-4-8-0）">3.3 &nbsp&nbsp<a href="#升级步骤（7-4-8-0）" class="headerlink" title="升级步骤（7.4-&gt;8.0）"></a>升级步骤（7.4-&gt;8.0）</h2><ol>
-<li>替换软件源和企业软件源（国内镜像）<div class="tabs" id="74sources"><ul class="nav-tabs"><li class="tab active"><a href="#74sources-1">7.4软件源</a></li><li class="tab"><a href="#74sources-2">7.4企业软件源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sources-1"><p>&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#deb http://ftp.debian.org/debian bullseye main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"># security updates</span><br><span class="line">#deb http://security.debian.org bullseye-security main contrib</span><br><span class="line">deb [trusted=yes] https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74sources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
+<h2 id="PVE升级步骤（7-4-8-x）">4.3 &nbsp&nbsp<a href="#PVE升级步骤（7-4-8-x）" class="headerlink" title="PVE升级步骤（7.4-&gt;8.x）"></a>PVE升级步骤（7.4-&gt;8.x）</h2><ol>
+<li>替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像）<div class="tabs" id="74sources"><ul class="nav-tabs"><li class="tab active"><a href="#74sources-1">PVE 7.4的Debian系统软件源</a></li><li class="tab"><a href="#74sources-2">PVE 7.4的PVE软件源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sources-1"><p>&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#deb http://ftp.debian.org/debian bullseye main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"># security updates</span><br><span class="line">#deb http://security.debian.org bullseye-security main contrib</span><br><span class="line">deb https://security.debian.org/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74sources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
 <p>&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;pve-no-subscription.list</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt/sources.list.d</span><br><span class="line">mv pve-enterprise.list pve-enterprise.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></li>
-<li>升级到7.4最新的版本<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line"></span><br><span class="line">sed -i_orig &quot;s/data.status === &#x27;Active&#x27;/true/g&quot; /usr/share/pve-manager/js/pvemanagerlib.js</span><br><span class="line">sed -i_orig &quot;s/<span class="keyword">if</span> (res === null || res === undefined || \!res || res/<span class="keyword">if</span>(/g&quot; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i_orig &quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">systemctl restart pveproxy</span><br><span class="line"></span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure></li>
+<li>升级到7.4最新的版本<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure></li>
 <li>检查兼容性：<code>pve7to8</code></li>
-<li>替换8.0软件源和企业软件源（国内镜像）<div class="tabs" id="80sources"><ul class="nav-tabs"><li class="tab active"><a href="#80sources-1">8.0软件源</a></li><li class="tab"><a href="#80sources-2">8.0企业软件源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="80sources-1"><p>&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># deb http://ftp.debian.org/debian bookworm main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free</span><br><span class="line"></span><br><span class="line"># deb http://ftp.debian.org/debian bookworm-updates main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free</span><br><span class="line"># security updates</span><br><span class="line"># deb http://security.debian.org bookworm-security main contrib</span><br><span class="line">deb [trusted=yes] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="80sources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
+<li>替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像）<div class="tabs" id="8xsources"><ul class="nav-tabs"><li class="tab active"><a href="#8xsources-1">PVE 8.x的Debian系统软件源</a></li><li class="tab"><a href="#8xsources-2">PVE 8.x的PVE软件源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xsources-1"><p>&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># deb http://ftp.debian.org/debian bookworm main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"># deb http://ftp.debian.org/debian bookworm-updates main contrib</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"># security updates</span><br><span class="line"># deb http://security.debian.org bookworm-security main contrib</span><br><span class="line">deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xsources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
 <p>&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;pve-no-subscription.list</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apt/sources.list.d</span><br><span class="line">mv pve-enterprise.list pve-enterprise.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></li>
 <li>开始正式升级<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt dist-upgrade</span><br></pre></td></tr></table></figure>
 升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/issue -&gt; Proxmox VE will auto-generate this file on boot, and it has only cosmetic effects on the login console.</span><br><span class="line">Using the default &quot;No&quot; (keep your currently-installed version) is safe here.</span><br><span class="line"></span><br><span class="line">/etc/lvm/lvm.conf -&gt; Changes relevant for Proxmox VE will be updated, and a newer config version might be useful.</span><br><span class="line">If you did not make extra changes yourself and are unsure it&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;s version) here.</span><br><span class="line"></span><br><span class="line">/etc/ssh/sshd_config -&gt; If you have not changed this file manually, the only differences should be a replacement of ChallengeResponseAuthentication no with KbdInteractiveAuthentication no and some irrelevant changes in comments (lines starting with #).</span><br><span class="line">If this is the case, both options are safe, though we would recommend installing the package maintainer&#x27;s version in order to move away from the deprecated ChallengeResponseAuthentication option. If there are other changes, we suggest to inspect them closely and decide accordingly.</span><br><span class="line"></span><br><span class="line">/etc/default/grub -&gt; Here you may want to take special care, as this is normally only asked for if you changed it manually, e.g., for adding some kernel command line option.</span><br><span class="line">It&#x27;s recommended to check the difference for any relevant change, note that changes in comments (lines starting with #) are not relevant.</span><br><span class="line">If unsure, we suggested to selected &quot;No&quot; (keep your currently-installed version)</span><br></pre></td></tr></table></figure></li>
 <li>去除未订阅提示<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">sed -i_orig &quot;s/data.status === &#x27;Active&#x27;/true/g&quot; /usr/share/pve-manager/js/pvemanagerlib.js</span><br><span class="line">sed -i_orig &quot;s/<span class="keyword">if</span> (res === null || res === undefined || \!res || res/<span class="keyword">if</span>(/g&quot; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i_orig &quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot; /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure></li>
+<li>后续PVE系统日常更新：<code>apt update -y &amp;&amp; apt dist-upgrade -y</code></li>
 </ol>
 <div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
 </div>
 
-<h2 id="安装遇到的坑">3.4 &nbsp&nbsp<a href="#安装遇到的坑" class="headerlink" title="安装遇到的坑"></a>安装遇到的坑</h2><h3 id="安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">3.4.1 &nbsp&nbsp<a href="#安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
+<h2 id="PVE安装遇到的坑">4.4 &nbsp&nbsp<a href="#PVE安装遇到的坑" class="headerlink" title="PVE安装遇到的坑"></a>PVE安装遇到的坑</h2><h3 id="PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">4.4.1 &nbsp&nbsp<a href="#PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bootloader setup errors:</span><br><span class="line">- failed to prepare EFI boot using Grub on &#x27;/dev/sda2&#x27;: unable to install the EFI boot loader on &#x27;/dev/sda&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>原因：PVE 8.0版本镜像īso不兼容此台机器，估计是bug。参考其他帖子说的只保留usb的uefi设备，依旧也会报错。并且因为机器的bios设置也比较繁琐，我反复尝试将其设置为csm模式，机器始终无法以csm模式启动，估计该主板的bios也是魔改过有bug的。因此导致也无法以csm模式安装pve。</p>
 <p>解决方法：安装pve 7.4版本，再升级到pve 8.x。</p>
-<h3 id="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应">3.4.2 &nbsp&nbsp<a href="#USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应" class="headerlink" title="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应"></a>USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应</h3><p>原因：估计是BIOS的驱动BUG。</p>
-<p>解决方法：先不插键盘启动机器，看屏幕等待主板自检代码走到99阶段，快速插上键盘，摁DEL键。</p>
-<h3 id="hdmi屏幕不显bios">3.4.3 &nbsp&nbsp<a href="#hdmi屏幕不显bios" class="headerlink" title="hdmi屏幕不显bios"></a>hdmi屏幕不显bios</h3><p>主板BIOS驱动不支持普通HDMI小屏幕，自检阶段和BIOS界面显示白屏或者花屏，接大屏驱动板兼容性好点。</p>
-<h3 id="后面加装的RTL8211网卡不识别">3.4.4 &nbsp&nbsp<a href="#后面加装的RTL8211网卡不识别" class="headerlink" title="后面加装的RTL8211网卡不识别"></a>后面加装的RTL8211网卡不识别</h3><p>原因：因为安装pve系统之前未加装好螃蟹卡RTL8211，因此后续加装之后，pve系统并未识别到。</p>
+<h3 id="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应">4.4.2 &nbsp&nbsp<a href="#USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应" class="headerlink" title="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应"></a>USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应</h3><p>原因：推测为BIOS的驱动BUG。</p>
+<p>解决方法：先不插键盘启动机器，看屏幕右下角等待主板自检代码走到99阶段，快速插上键盘，摁DEL键。如果一次不成功，就使用<code>CTRL+ALT+DELETE</code>强制重启，继续尝试该操作。</p>
+<h3 id="hdmi屏幕不显bios">4.4.3 &nbsp&nbsp<a href="#hdmi屏幕不显bios" class="headerlink" title="hdmi屏幕不显bios"></a>hdmi屏幕不显bios</h3><p>主板BIOS内置驱动对普通HDMI小屏幕兼容性不好，只有成功启动PVE系统后才会正常显示画面，而在自检阶段和BIOS界面只会显示白屏或者花屏，接大屏驱动板兼容性好点。</p>
+<h3 id="后面加装的RTL8211网卡不识别">4.4.4 &nbsp&nbsp<a href="#后面加装的RTL8211网卡不识别" class="headerlink" title="后面加装的RTL8211网卡不识别"></a>后面加装的RTL8211网卡不识别</h3><p>原因：因为安装pve系统之前未加装好螃蟹卡RTL8211，因此后续加装之后，pve系统并未识别到。</p>
 <p>解决方法：重装pve系统。（驱动源码编译方案，也有编译报错，不好解决，推荐是重装pve，让pve自动打驱动）</p>
-<h3 id="pve重启bug，看门狗导致重启很长时间">3.4.5 &nbsp&nbsp<a href="#pve重启bug，看门狗导致重启很长时间" class="headerlink" title="pve重启bug，看门狗导致重启很长时间"></a>pve重启bug，看门狗导致重启很长时间</h3><p>原因：未查明，只要一重启，就会长时间卡在看门狗的错误提示。</p>
+<h3 id="工控机重启bug，看门狗导致重启很长时间">4.4.5 &nbsp&nbsp<a href="#工控机重启bug，看门狗导致重启很长时间" class="headerlink" title="工控机重启bug，看门狗导致重启很长时间"></a>工控机重启bug，看门狗导致重启很长时间</h3><p>原因：未查明，只要一重启，就会长时间卡在看门狗的错误提示。</p>
 <p>错误提示：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">watchgod: watchdog0: watchdog did<span class="string">&#x27;t did not stop!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">systemd-shutdown: Failed to finalzie DM services, ignorening.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">watchgod: watchdog0: watchdog did<span class="string">&#x27;t did not stop!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">systemd-shutdown: Failed to finalzie DM services, ignorening.</span></span><br></pre></td></tr></table></figure>
 
 <p>解决方法：无法解决，只能长时间等待完成重启或者强制关机重开。</p>
-<h1 id="PVE硬件直通">4 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><p>IOMMU允许系统设备在虚拟内存中进行寻址，也就是将虚拟内存地址映射为物理内存地址，让实体设备可以在虚拟的内存环境中工作，这样可以帮助系统扩充内存容量，提升性能。</p>
+<p><strong>P.S. 尝试在主板BIOS中主动启用看门狗计时器设置<code>Advanced-&gt;SIO MISC Configuration-&gt;Watchdog Dog Timer-&gt;Enabled</code>仍无法解决，该问题暂未查明原因。</strong></p>
+<h3 id="Repository-Debian-bookworm-changed-its-non-free-component-value-from-non-free-to-non-free-non-free-firmware">4.4.6 &nbsp&nbsp<a href="#Repository-Debian-bookworm-changed-its-non-free-component-value-from-non-free-to-non-free-non-free-firmware" class="headerlink" title="Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;"></a>Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;</h3><p>问题现象：运行<code>apt update</code>出现报错：Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;</p>
+<p>问题原因：Debian 12版本（bookworm）的非自有固件包（如硬件驱动程序）不再放在non-free目录中，而是non-free-firmware目录。</p>
+<p>解决方法1（修正<code>/etc/apt/sources.list</code>软件源）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 确保软件源中添加了non-free-firmware目录，而不仅仅只有non-free目录</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
+
+<p>解决方法2（直接屏蔽该错误）：<br>创建一个文件<code>/etc/apt/apt.conf.d/no-bookworm-firmware.conf</code>，写入内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">APT::Get::Update::SourceListWarnings::NonFreeFirmware <span class="string">&quot;false&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="PVE硬件直通">5 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><div class="note default no-icon"><p>如果机器本身就支持VT-X和VT-d等CPU虚拟化和直通硬件功能，则PVE启用IOMMU方面不需要额外设置。只需要设置好主板BIOS对应的CPU虚拟化和直通硬件功能即可，因为安装PVE系统阶段就会自动设置好启动IOMMU。</p>
+</div>
+
+<p>IOMMU允许系统设备在虚拟内存中进行寻址，也就是将虚拟内存地址映射为物理内存地址，让实体设备可以在虚拟的内存环境中工作，这样可以帮助系统扩充内存容量，提升性能。</p>
 <p>换而言之，IOMMU可以使VM虚拟机能够接入一些物理设备，比如PCIe中的网卡、声卡、显卡，VM虚拟机可以直接或间接使用这些设备。</p>
 <blockquote>
 <p>在创建虚拟机时，芯片组一定要q35。因为Q35，才能PCIE直通，否则就是PCI直通。</p>
 </blockquote>
-<h2 id="检查硬件是否支持直通（BIOS内查看Advanced高级选项）">4.1 &nbsp&nbsp<a href="#检查硬件是否支持直通（BIOS内查看Advanced高级选项）" class="headerlink" title="检查硬件是否支持直通（BIOS内查看Advanced高级选项）"></a>检查硬件是否支持直通（BIOS内查看Advanced高级选项）</h2><ol>
+<h2 id="检查硬件是否支持直通（BIOS内查看Advanced高级选项）">5.1 &nbsp&nbsp<a href="#检查硬件是否支持直通（BIOS内查看Advanced高级选项）" class="headerlink" title="检查硬件是否支持直通（BIOS内查看Advanced高级选项）"></a>检查硬件是否支持直通（BIOS内查看Advanced高级选项）</h2><ol>
 <li>开启CPU虚拟化：Intel: VT-X(Intel Virtual Technology)。AMD: AMD-V(SVM, Secure Virtual Machine)。</li>
-<li>为CPU开启硬件虚拟功能：Intel: Intel VT-d。AMD: IOMMU。</li>
+<li>开启硬件直通功能：Intel: Intel VT-d。AMD: IOMMU。</li>
 <li>部分主板会有和Intel VT-d&#x2F;IOMMU相关联的<code>Memory Remap Feature</code>设置。</li>
 </ol>
-<div class="note danger no-icon"><p>如果没有VT-d或者IOMMU功能选项，则主板不支持虚拟机直通硬件。intel要b75以上芯片组才支持，即需要从intel 4代酷睿处理器开始才支持。</p>
+<div class="note danger no-icon"><p>如果主板BIOS中没有VT-d或者IOMMU功能选项，则很可能不支持直通硬件功能。一般确认CPU是否支持该特性即可，例如确认Intel CPU是否支持VT-d，请查询Intel 官方CPU SKU规格页面资料即可。</p>
 </div>
 
-<h2 id="PVE提示No-IOMMU-detected">4.2 &nbsp&nbsp<a href="#PVE提示No-IOMMU-detected" class="headerlink" title="PVE提示No IOMMU detected"></a>PVE提示<code>No IOMMU detected</code></h2><p>当pve未启用IOMMU或者硬件不支持直通（已启用IOMMU）时，在ProxmoxVE(PVE)的VM&#x2F;VPS中添加PCI设备时候提示：<code>No IOMMU detected, please activate it.See Documentation for further information</code>.</p>
-<h2 id="PVE启用IOMMU">4.3 &nbsp&nbsp<a href="#PVE启用IOMMU" class="headerlink" title="PVE启用IOMMU"></a>PVE启用IOMMU</h2><div class="note info no-icon"><p>内核版本为5.15或之前的，在ProxmoxVE(PVE)系统内核中，需要手动启用IOMMU。5.15版本以后的ProxmoxVE(PVE)系统内核自带默认开启了IOMMU支持。</p>
-<p>但我的硬件本身不支持VT-d，因此并未自动启用IOMMU，也可能是因为从7.4升级到8.0的缘故。</p>
+<div class="note info no-icon"><p>若机器CPU明确支持VT-d特性，但在主板BIOS中却找不到该选项的话，则很可能是机器主板BIOS默认设置关闭，并隐藏了该设置选项。</p>
+<p>解决方法：使用<code>UniversalAMDFormBrowser</code>工具查看隐藏设定并开启。</p>
+<ol>
+<li>下载<code>UniversalAMDFormBrowser</code>工具<ul>
+<li><strong>方案1（推荐）</strong>：<a href="https://github.com/mio-19/UniversalAMDFormBrowser-Ventoy">UniversalAMDFormBrowser-Ventoy</a>的<code>UniversalAMDFormBrowser.img</code>文件：该方案只需要将img文件拷贝到ventoy引导盘即可。</li>
+<li>方案2：<a href="https://github.com/DavidS95/Smokeless_UMAF">Smokeless_UMAF</a>的<code>UniversalAMDFormBrowser.zip</code>文件：该方案需要制作FAT32分区格式的U盘制作引导盘。</li>
+</ul>
+</li>
+<li>重启机器，选择U盘启动项，引导加载<code>UniversalAMDFormBrowser</code>镜像。</li>
+<li>在<code>UniversalAMDFormBrowser</code>中查看隐藏设定，例如隐藏的VT-d选项或者解除功耗限制选项等。</li>
+</ol>
+</div>
+
+<h2 id="PVE提示No-IOMMU-detected">5.2 &nbsp&nbsp<a href="#PVE提示No-IOMMU-detected" class="headerlink" title="PVE提示No IOMMU detected"></a>PVE提示<code>No IOMMU detected</code></h2><p>当pve未启用IOMMU或者硬件不支持直通（即使手动设置PVE开启IOMMU）时，在ProxmoxVE(PVE)的VM&#x2F;VPS中添加PCI设备时候提示：<code>No IOMMU detected, please activate it.See Documentation for further information</code>.</p>
+<p>解决方法：请确认自己的机器是否支持VT-X和VT-d等CPU虚拟化和直通硬件功能，并是否已开启IOMMU。若硬件不支持，建议更换支持这些功能特性的硬件设备。</p>
+<h2 id="PVE启用IOMMU">5.3 &nbsp&nbsp<a href="#PVE启用IOMMU" class="headerlink" title="PVE启用IOMMU"></a>PVE启用IOMMU</h2><div class="note info no-icon"><p>内核版本为5.15或之前的，在ProxmoxVE(PVE)系统内核中，需要手动启用IOMMU。5.15版本以后的ProxmoxVE(PVE)系统内核自带默认开启了IOMMU支持。</p>
+<p>但我的硬件（N3530工控机）本身不支持VT-d功能（<a href="https://www.intel.cn/content/www/cn/zh/products/sku/81074/intel-pentium-processor-n3530-2m-cache-up-to-2-58-ghz/specifications.html">N3530 SKU规格页面明确写到不支持VT-d</a>），因此安装PVE时并未自动启用IOMMU。</p>
 </div>
 
 <div class="tabs" id="引导类型"><ul class="nav-tabs"><li class="tab active"><a href="#引导类型-1">GRUD引导类型（PVE默认引导方式）</a></li><li class="tab"><a href="#引导类型-2">systemd-boot引导类型（非PVE现行版本常见引导方式）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="引导类型-1"><ol>
@@ -4309,8 +4429,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>根据CPU类型在第一行末尾添加：<div class="tabs" id="systemd-boot-cpu类型"><ul class="nav-tabs"><li class="tab active"><a href="#systemd-boot-cpu类型-1">Intel CPU</a></li><li class="tab"><a href="#systemd-boot-cpu类型-2">AMD CPU</a></li></ul><div class="tab-content"><div class="tab-pane active" id="systemd-boot-cpu类型-1"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">quiet intel_iommu=on</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="systemd-boot-cpu类型-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">quiet amd_iommu=on</span><br></pre></td></tr></table></figure></div></div></div></li>
 </ol></div></div></div>
 
-<p>验证IOMMU是否启用：<code>dmesg | grep -e DMAR -e IOMMU</code>。输出显示<code>DMAR: IOMMU enabled</code>证明已启用，虚拟机分配PCI设备时可见。若无输出，需排查故障。</p>
-<h2 id="PVE启用PT模式">4.4 &nbsp&nbsp<a href="#PVE启用PT模式" class="headerlink" title="PVE启用PT模式"></a>PVE启用PT模式</h2><div class="note info no-icon"><p>PT模式：会在IOMMU需要使用时候才启动，适配器不需要使用 DMA 转换到内存，因此可以提高其他没有分配过设备的性能。</p>
+<h2 id="验证PVE的IOMMU是否启用">5.4 &nbsp&nbsp<a href="#验证PVE的IOMMU是否启用" class="headerlink" title="验证PVE的IOMMU是否启用"></a>验证PVE的IOMMU是否启用</h2><ol>
+<li>查询命令：<code>dmesg | grep -e DMAR -e IOMMU</code>。输出显示<code>DMAR: IOMMU enabled</code>或者<code>DMAR: Intel(R) Virtualization Technology for Directed I/O</code>证明已启用。</li>
+<li>实操验证：虚拟机分配PCI设备时可见。</li>
+</ol>
+<h2 id="PVE启用PT模式">5.5 &nbsp&nbsp<a href="#PVE启用PT模式" class="headerlink" title="PVE启用PT模式"></a>PVE启用PT模式</h2><div class="note info no-icon"><p>PT模式：会在IOMMU需要使用时候启动，适配器不需要使用 DMA 转换到内存，因此可以提高其他没有分配过设备的性能。</p>
 </div>
 
 <ol>
@@ -4321,14 +4444,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>刷新 initramfs：<code>update-initramfs -u -k all</code></li>
 <li>更新 grub：<code>update-grub</code></li>
 </ol>
-<h1 id="创建PVE虚拟机">5 &nbsp&nbsp<a href="#创建PVE虚拟机" class="headerlink" title="创建PVE虚拟机"></a>创建PVE虚拟机</h1><blockquote>
+<h1 id="创建PVE虚拟机">6 &nbsp&nbsp<a href="#创建PVE虚拟机" class="headerlink" title="创建PVE虚拟机"></a>创建PVE虚拟机</h1><blockquote>
 <p>若机器硬件性能不太足够的话，不建议安装win系统，win系统极度消耗硬件性能（即便是空载待机状态也消耗很大），而这影响openwrt的性能。比如我的情况：安装了tiny10系统，千兆网线，宽带500M实测不到300Mbp&#x2F;s（这里是指用<a href="http://speed.unicomgd.com:8080/">广东联通宽带测速平台</a>测试的结果，实际ikuai主路由测试速率却又正常），局域网速率最高只能到700Mbp&#x2F;s的速率。关闭后tiny10后，实测宽带速率恢复正常，局域网速率跑到900Mbp&#x2F;s出头）</p>
 </blockquote>
-<h2 id="PVE基础设置">5.1 &nbsp&nbsp<a href="#PVE基础设置" class="headerlink" title="PVE基础设置"></a>PVE基础设置</h2><ol>
+<h2 id="PVE基础设置">6.1 &nbsp&nbsp<a href="#PVE基础设置" class="headerlink" title="PVE基础设置"></a>PVE基础设置</h2><ol>
 <li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>，账户：root。密码：[前面安装步骤设置的密码]。</li>
 <li>根据硬件网卡情况，添加并设置好虚拟网桥Linux Bridge：创建&gt;Linux Bridge&gt;桥接接口填写物理网口地址名称。以我的机器为例，机器三个物理网口，PVE新建5个网桥，前三个网桥和物理网口绑定，第四个网桥用作iKuai和OpenWrt之间的传输，第五个网桥用作其他虚拟机系统的传输。</li>
 </ol>
-<h2 id="安装爱快iKuai">5.2 &nbsp&nbsp<a href="#安装爱快iKuai" class="headerlink" title="安装爱快iKuai"></a>安装爱快iKuai</h2><ol>
+<h2 id="安装爱快iKuai">6.2 &nbsp&nbsp<a href="#安装爱快iKuai" class="headerlink" title="安装爱快iKuai"></a>安装爱快iKuai</h2><ol>
 <li>下载iKuai镜像：<a href="https://www.ikuai8.com/component/download">点击跳转</a></li>
 <li>local-内容-上传：iKuai的安装镜像文件。</li>
 <li>创建虚拟机，命名虚拟机名称ikuai，VM编号100。</li>
@@ -4341,11 +4464,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>输入字母o回车进入其「其他选项」，开启外网访问web。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.1/">http://192.168.1.1:80</a>。默认账户：admin。默认密码：admin。</li>
 </ol>
-<h2 id="安装OpenWrt">5.3 &nbsp&nbsp<a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h2><h3 id="OpenWrt镜像的选择">5.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
+<h2 id="安装OpenWrt">6.3 &nbsp&nbsp<a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h2><h3 id="OpenWrt镜像的选择">6.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
 <li><a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>：推荐（本教程使用该固件）。内置SmartDNS，软件包空间设置为1G，剩余五百多兆。</li>
 <li><a href="https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1">eSir GDQ 高大全</a>：eSir的高大全固件。不推荐。没有内置SmartDNS拓展（我测试时安装SmartDNS并未出现有服务项，无效）。并且相较于Blench版本，较为繁琐。软件包空间只剩余几兆，需自己手动扩盘。</li>
 </ul>
-<h3 id="安装步骤-1">5.3.2 &nbsp&nbsp<a href="#安装步骤-1" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<h3 id="安装步骤">6.3.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
 <li>创建虚拟机，命名虚拟机名称openwrt，VM编号101。</li>
 <li>CD&#x2F;DVD光盘镜像文件设置为无介质。</li>
 <li>主硬盘随便分配（后续会删除），额外添加EFI磁盘（不勾选添加密钥），CPU给4核（KVM64），内存分配4G，网卡模型选择VirtIO（半虚拟化）。</li>
@@ -4359,7 +4482,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>pve中用shell：<code>vi /etc/config/network</code>，将lan口ip改为<code>192.168.1.3</code>，<code>reboot</code>重启。vim编辑：按i进入修改模式，按esc退出编辑模式，输入 :wq回车保存修改。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.3/">http://192.168.1.3</a>。默认账户：root。默认密码：password。</li>
 </ol>
-<h2 id="安装飞牛私有云fnOS">5.4 &nbsp&nbsp<a href="#安装飞牛私有云fnOS" class="headerlink" title="安装飞牛私有云fnOS"></a>安装飞牛私有云fnOS</h2><ol>
+<h2 id="安装飞牛私有云fnOS">6.4 &nbsp&nbsp<a href="#安装飞牛私有云fnOS" class="headerlink" title="安装飞牛私有云fnOS"></a>安装飞牛私有云fnOS</h2><ol>
 <li>下载飞牛私有云fnOS镜像：<a href="https://www.fnnas.com/download">点击跳转</a></li>
 <li>local-内容-上传：fnOS的安装镜像文件。</li>
 <li>创建虚拟机，命名虚拟机名称fnOS，VM编号102。</li>
@@ -4380,17 +4503,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>进入到传统Linux登录界面（无GUI），这里能看到WEB管理地址。若需要固定IP地址，在<code>ikuai</code>中找到对应MAC地址加入静态分配表即可。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.5:5666/">http://192.168.1.5:5666/</a>。首次访问会提示创建NAS<code>设备名称``超级管理员账号``密码``确认密码</code>。</li>
 </ol>
-<h2 id="创建虚拟机遇到的坑">5.5 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.5.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
+<h2 id="创建虚拟机遇到的坑">6.5 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">6.5.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
 <p>解决方法：创建EFI磁盘时，取消勾选添加密钥。</p>
-<h3 id="安装windows镜像，无法识别找到磁盘">5.5.2 &nbsp&nbsp<a href="#安装windows镜像，无法识别找到磁盘" class="headerlink" title="安装windows镜像，无法识别找到磁盘"></a>安装windows镜像，无法识别找到磁盘</h3><p>原因：scsi不适合windows镜像，windows安装解决识别不到硬盘。</p>
-<p>解决方法：创建硬盘时，总线&#x2F;设备选择：sata硬盘或者IDE。</p>
-<h3 id="安装windows镜像，网卡无驱动">5.5.3 &nbsp&nbsp<a href="#安装windows镜像，网卡无驱动" class="headerlink" title="安装windows镜像，网卡无驱动"></a>安装windows镜像，网卡无驱动</h3><p>现象：当网卡设置为virtio模型时，安装并进入到windows系统后，网卡无驱动。</p>
+<h3 id="安装windows镜像，无法识别找到磁盘">6.5.2 &nbsp&nbsp<a href="#安装windows镜像，无法识别找到磁盘" class="headerlink" title="安装windows镜像，无法识别找到磁盘"></a>安装windows镜像，无法识别找到磁盘</h3><p>原因：scsi不适合windows镜像，windows安装解决识别不到硬盘。</p>
+<p>解决方法：创建硬盘时，总线&#x2F;设备选择：SATA硬盘或者IDE。</p>
+<h3 id="安装windows镜像，网卡无驱动">6.5.3 &nbsp&nbsp<a href="#安装windows镜像，网卡无驱动" class="headerlink" title="安装windows镜像，网卡无驱动"></a>安装windows镜像，网卡无驱动</h3><p>现象：当网卡设置为virtio模型时，安装并进入到windows系统后，网卡无驱动。</p>
 <p>原因：windows系统自带的驱动无此虚拟硬件的驱动。</p>
 <p>解决方式：加载virtio镜像，并运行x64程序安装驱动即可。</p>
 <p>VirtIO镜像下载地址：<a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">点击跳转</a></p>
-<h1 id="iKuai-OpenWRT-做旁路由网络拓扑">6 &nbsp&nbsp<a href="#iKuai-OpenWRT-做旁路由网络拓扑" class="headerlink" title="iKuai +OpenWRT 做旁路由网络拓扑"></a>iKuai +OpenWRT 做旁路由网络拓扑</h1><p>iKuai作为主路由，负责拨号及DHCP，OpenWRT做旁路由。SmartDNS+AdGuardHome设置分流与去广告。SmartDNS作为DNS管理并提供DNS缓存，实现国内国外DNS分流，彻底解决DNS污染问题、实现秒开网页。同时搭配AdGuardHome实现整个局域网去广告。</p>
+<h1 id="iKuai-OpenWRT-做旁路由网络拓扑">7 &nbsp&nbsp<a href="#iKuai-OpenWRT-做旁路由网络拓扑" class="headerlink" title="iKuai +OpenWRT 做旁路由网络拓扑"></a>iKuai +OpenWRT 做旁路由网络拓扑</h1><p>iKuai作为主路由，负责拨号及DHCP，OpenWRT做旁路由。SmartDNS+AdGuardHome设置分流与去广告。SmartDNS作为DNS管理并提供DNS缓存，实现国内国外DNS分流，彻底解决DNS污染问题、实现秒开网页。同时搭配AdGuardHome实现整个局域网去广告。</p>
 <p>DNS转发流程：设置最核心的部分就是DNS转发端口的衔接，就是把DNSMASQ、Adguardhome、SmartDNS三个插件里的DNS服务器功能分成三个层级，实现层层转发。依次是第一级DNSMASQ，第二级Adguardhome，第三级SmartDNS，第四级OpenClash。</p>
-<h2 id="iKuai的设置">6.1 &nbsp&nbsp<a href="#iKuai的设置" class="headerlink" title="iKuai的设置"></a>iKuai的设置</h2><ul>
+<h2 id="iKuai的设置">7.1 &nbsp&nbsp<a href="#iKuai的设置" class="headerlink" title="iKuai的设置"></a>iKuai的设置</h2><ul>
 <li><del>系统设置&gt;重启关机&gt;添加一个重启计划：每天05:00时重启。</del></li>
 <li>网络设置&gt;内外网设置<ul>
 <li>外网接口（选择iKuai识别到的第二个网口）：填入宽带拨号信息。</li>
@@ -4441,8 +4564,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h2 id="OpenWrt设置">6.2 &nbsp&nbsp<a href="#OpenWrt设置" class="headerlink" title="OpenWrt设置"></a>OpenWrt设置</h2><h3 id="定时重启">6.2.1 &nbsp&nbsp<a href="#定时重启" class="headerlink" title="定时重启"></a><del>定时重启</del></h3><p><del>系统&gt;定时重启：启用，设置每天05:00。</del></p>
-<h3 id="网络">6.2.2 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="接口-LAN">6.2.2.1 &nbsp&nbsp<a href="#接口-LAN" class="headerlink" title="接口&gt;LAN"></a>接口&gt;LAN</h4><ul>
+<h2 id="OpenWrt设置">7.2 &nbsp&nbsp<a href="#OpenWrt设置" class="headerlink" title="OpenWrt设置"></a>OpenWrt设置</h2><h3 id="定时重启">7.2.1 &nbsp&nbsp<a href="#定时重启" class="headerlink" title="定时重启"></a><del>定时重启</del></h3><p><del>系统&gt;定时重启：启用，设置每天05:00。</del></p>
+<h3 id="网络">7.2.2 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="接口-LAN">7.2.2.1 &nbsp&nbsp<a href="#接口-LAN" class="headerlink" title="接口&gt;LAN"></a>接口&gt;LAN</h4><ul>
 <li>IPv4地址：192.168.1.3。管理OpenWrt的地址。</li>
 <li>和ikuai一致保证同一个网段。</li>
 <li>IPv4网关：指向iKuai的网关。保证OpenWrt的上网数据传输到iKuai再传输到外网。</li>
@@ -4452,8 +4575,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>物理设置：桥接接口。（因为选用的也是）</li>
 <li>lan高级设置：不勾选IPv6，勾选【开启开机自动运行】和【强制链路】。</li>
 </ul>
-<h4 id="Turbo-ACC-加速">6.2.2.2 &nbsp&nbsp<a href="#Turbo-ACC-加速" class="headerlink" title="Turbo ACC 加速"></a>Turbo ACC 加速</h4><p>只开启前三个即可，DNS缓存后面由SmartDNS来管理。</p>
-<h4 id="防火墙设置">6.2.2.3 &nbsp&nbsp<a href="#防火墙设置" class="headerlink" title="防火墙设置"></a>防火墙设置</h4><ul>
+<h4 id="Turbo-ACC-加速">7.2.2.2 &nbsp&nbsp<a href="#Turbo-ACC-加速" class="headerlink" title="Turbo ACC 加速"></a>Turbo ACC 加速</h4><p>只开启前三个即可，DNS缓存后面由SmartDNS来管理。</p>
+<h4 id="防火墙设置">7.2.2.3 &nbsp&nbsp<a href="#防火墙设置" class="headerlink" title="防火墙设置"></a>防火墙设置</h4><ul>
 <li>SYN-flood 防御：关闭（此项开启关闭都行）</li>
 <li>丢弃无效数据包：启用（此项开启关闭都行）</li>
 <li>启用FullCone-NAT：高性能模式</li>
@@ -4461,7 +4584,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>lan口开启：IP 动态伪装（只保留lan口的规格，其他接口全部删除）</li>
 <li>防火墙自定义规则（一般默认就有前四条规则，没有需加上）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iptables -t nat -A PREROUTING -p udp —dport 53 -j REDIRECT —to-ports 53</span><br><span class="line">iptables -t nat -A PREROUTING -p tcp —dport 53 -j REDIRECT —to-ports 53</span><br><span class="line">[ -n “$(command -v ip6tables)” ] &amp;&amp; ip6tables -t nat -A PREROUTING -p udp —dport 53 -j REDIRECT —to-ports 53</span><br><span class="line">[ -n “$(command -v ip6tables)” ] &amp;&amp; ip6tables -t nat -A PREROUTING -p tcp —dport 53 -j REDIRECT —to-ports 53</span><br><span class="line">iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="SmartDNS">6.2.3 &nbsp&nbsp<a href="#SmartDNS" class="headerlink" title="SmartDNS"></a>SmartDNS</h3><div class="note info no-icon"><p>Bleach OpenWrt固件自带SmartDNS，eSir GDQ高大全固件需自行手动安装。</p>
+<h3 id="SmartDNS">7.2.3 &nbsp&nbsp<a href="#SmartDNS" class="headerlink" title="SmartDNS"></a>SmartDNS</h3><div class="note info no-icon"><p>Bleach OpenWrt固件自带SmartDNS，eSir GDQ高大全固件需自行手动安装。</p>
 </div>
 
 <ul>
@@ -4528,7 +4651,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>自定义设置（只设置两条，其他全部注释掉）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bind:6053 -group china</span><br><span class="line">bind:5335 -group oversea</span><br></pre></td></tr></table></figure></li>
 <li>保存&amp;应用</li>
 </ul>
-<h3 id="AdGuard-Home">6.2.4 &nbsp&nbsp<a href="#AdGuard-Home" class="headerlink" title="AdGuard Home"></a>AdGuard Home</h3><h4 id="手动更新内核">6.2.4.1 &nbsp&nbsp<a href="#手动更新内核" class="headerlink" title="手动更新内核"></a>手动更新内核</h4><ol>
+<h3 id="AdGuard-Home">7.2.4 &nbsp&nbsp<a href="#AdGuard-Home" class="headerlink" title="AdGuard Home"></a>AdGuard Home</h3><h4 id="手动更新内核">7.2.4.1 &nbsp&nbsp<a href="#手动更新内核" class="headerlink" title="手动更新内核"></a>手动更新内核</h4><ol>
 <li>下载最新的AdGuardHome内核（AdGuardHome_linux_amd64.tar.gz）：<a href="https://github.com/AdguardTeam/AdGuardHome/releases">点击跳转</a></li>
 <li>解压获取「AdGuardHome」文件。</li>
 <li>使用WinSCP登录openwrt虚拟机，进入到路径<code>/usr/bin/AdGuardHome/</code>，上传「AdGuardHome」文件。右击属性，分配权限0755（rwxr-xr-x）。</li>
@@ -4536,7 +4659,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note info no-icon"><p>能科学上网时，点击检查更新，直接更新核心即可。</p>
 </div>
 
-<h4 id="设置AdGuard-Home">6.2.4.2 &nbsp&nbsp<a href="#设置AdGuard-Home" class="headerlink" title="设置AdGuard Home"></a>设置AdGuard Home</h4><ul>
+<h4 id="设置AdGuard-Home">7.2.4.2 &nbsp&nbsp<a href="#设置AdGuard-Home" class="headerlink" title="设置AdGuard Home"></a>设置AdGuard Home</h4><ul>
 <li>启用</li>
 <li>AdGuardHome重定向模式：作为dnsmasq的上游服务器</li>
 <li>详细日志</li>
@@ -4564,7 +4687,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>设置&gt;过滤器&gt;DNS黑名单设置（将阻止匹配 DNS 拦截清单的域名）：综合性的规则列表启用几个即可。</li>
 </ul>
-<h3 id="DNSMASQ设置">6.2.5 &nbsp&nbsp<a href="#DNSMASQ设置" class="headerlink" title="DNSMASQ设置"></a>DNSMASQ设置</h3><p>打开网络&gt;DHCP&#x2F;DNS。主要是解除DNSMASQ的DNS功能，只保留转发功能，让DNSMASQ作为AdGuard Home的下级服务生效。</p>
+<h3 id="DNSMASQ设置">7.2.5 &nbsp&nbsp<a href="#DNSMASQ设置" class="headerlink" title="DNSMASQ设置"></a>DNSMASQ设置</h3><p>打开网络&gt;DHCP&#x2F;DNS。主要是解除DNSMASQ的DNS功能，只保留转发功能，让DNSMASQ作为AdGuard Home的下级服务生效。</p>
 <ul>
 <li>DNS转发：<code>127.0.0.1#5351</code>。如果未自动设置成这个，手动强制改成这个。</li>
 <li>HOSTS 和解析文件：忽略掉解析文件，不用DNSMASQ的解析。</li>
@@ -4576,17 +4699,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>保存&amp;应用</li>
 </ul>
-<h3 id="OpenClash">6.2.6 &nbsp&nbsp<a href="#OpenClash" class="headerlink" title="OpenClash"></a>OpenClash</h3><div class="note danger"><p>实测，Meta内核因DNS转发问题，导致无法正常上网。例如GOOGLE可能会出现证书异常的问题，YOUTUBE点击视频后会存在一直转圈圈的情况，无法加载视频。现阶段稳定工作的模式为：Fake-IP的普通TUN模式，模型模式可调TUN或者混合（TUN模式需要有TUN内核支持）。代理模式使用规则上网即可。</p>
+<h3 id="OpenClash">7.2.6 &nbsp&nbsp<a href="#OpenClash" class="headerlink" title="OpenClash"></a>OpenClash</h3><div class="note danger"><p>实测，Meta内核因DNS转发问题，导致无法正常上网。例如GOOGLE可能会出现证书异常的问题，YOUTUBE点击视频后会存在一直转圈圈的情况，无法加载视频。现阶段稳定工作的模式为：Fake-IP的普通TUN模式，模型模式可调TUN或者混合（TUN模式需要有TUN内核支持）。代理模式使用规则上网即可。</p>
 </div>
 
 <div class="note info"><p><a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.014-beta">v0.46.014-beta</a>是最后一版支持TUN内核的版本，往后一版的<a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.031-beta">v0.46.031-beta</a>版本就开始移除Dev和TUN内核的支持，如果手动操作更新OpenClash版本，会自动移除Dev和TUN内核文件。即使手动通过WinSCP上传Dev和TUN内核文件，软件内也是无法识别到的。</p>
 </div>
 
-<h4 id="更新客户端">6.2.6.1 &nbsp&nbsp<a href="#更新客户端" class="headerlink" title="更新客户端"></a>更新客户端</h4><ol>
+<h4 id="更新客户端">7.2.6.1 &nbsp&nbsp<a href="#更新客户端" class="headerlink" title="更新客户端"></a>更新客户端</h4><ol>
 <li>下载客户端安装包：<a href="https://github.com/vernesong/OpenClash/releases">点击跳转</a></li>
 <li>使用WinSCP登录openwrt虚拟机，进入到路径家目录home，上传安装包，运行安装<code>opkg install ./luci-app-openclash_0.46.014-beta_all.ipk</code>。如果报错，尝试<code>opkg update</code>。</li>
 </ol>
-<h4 id="手动更新内核-1">6.2.6.2 &nbsp&nbsp<a href="#手动更新内核-1" class="headerlink" title="手动更新内核"></a>手动更新内核</h4><p>内核下载地址：</p>
+<h4 id="手动更新内核-1">7.2.6.2 &nbsp&nbsp<a href="#手动更新内核-1" class="headerlink" title="手动更新内核"></a>手动更新内核</h4><p>内核下载地址：</p>
 <ul>
 <li>老的Release页面<ul>
 <li><a href="https://github.com/vernesong/OpenClash/releases/tag/Clash">Dev 内核</a></li>
@@ -4618,7 +4741,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>Tun 内核: clash_tun</li>
 <li>Meta 内核: clash_meta</li>
 </ul>
-<h4 id="OpenClash设置">6.2.6.3 &nbsp&nbsp<a href="#OpenClash设置" class="headerlink" title="OpenClash设置"></a>OpenClash设置</h4><ul>
+<h4 id="OpenClash设置">7.2.6.3 &nbsp&nbsp<a href="#OpenClash设置" class="headerlink" title="OpenClash设置"></a>OpenClash设置</h4><ul>
 <li>运行状态：启动OPENCLASH</li>
 <li>插件设置<ul>
 <li>模式设置&gt;运行模式：Fake-IP（TUN-混合）模式【UDP-TUN，TCP-转发】</li>
@@ -4629,7 +4752,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>配置订阅：设置自动更新，更新间隔60分钟</li>
 </ul>
-<h3 id="扩容Overlay软件安装空间">6.2.7 &nbsp&nbsp<a href="#扩容Overlay软件安装空间" class="headerlink" title="扩容Overlay软件安装空间"></a>扩容Overlay软件安装空间</h3><ol>
+<h3 id="扩容Overlay软件安装空间">7.2.7 &nbsp&nbsp<a href="#扩容Overlay软件安装空间" class="headerlink" title="扩容Overlay软件安装空间"></a>扩容Overlay软件安装空间</h3><ol>
 <li>关闭openwrt虚拟机。</li>
 <li>硬件&gt;硬盘&gt;更多，调整磁盘大小（只能增加大小，按需增加所需硬盘的空间大小）。</li>
 <li>打开openwrt虚拟机。</li>
@@ -4640,7 +4763,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>重启openwrt虚拟机，检查扩容情况。</li>
 <li>根据情况可能需手动移除之前挂载的<code>/mnt/sda3</code>状态。</li>
 </ol>
-<h1 id="飞牛私有云fnOS（NAS总结）">7 &nbsp&nbsp<a href="#飞牛私有云fnOS（NAS总结）" class="headerlink" title="飞牛私有云fnOS（NAS总结）"></a>飞牛私有云fnOS（NAS总结）</h1><h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">7.1 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
+<h1 id="飞牛私有云fnOS（NAS总结）">8 &nbsp&nbsp<a href="#飞牛私有云fnOS（NAS总结）" class="headerlink" title="飞牛私有云fnOS（NAS总结）"></a>飞牛私有云fnOS（NAS总结）</h1><h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">8.1 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
 <p>解决方法：永久禁用<code>Swap cache</code>功能。</p>
 <ol>
 <li>访问fnOS虚拟机控制台。</li>
@@ -4651,15 +4774,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>摁<code>ESC</code>键，摁<code>:</code>键然后输入<code>wq!</code>保存退出。</li>
 <li><code>cat /etc/fstab</code>可以查看文件内容是否修改成功，输出内容如下：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">UUID=ea545bcc-cd3f-479f-902a-ab2b02db25 / ext4 errors=remount-ro 0 1</span><br><span class="line"><span class="comment"># /swapfile none swap sw 0 0</span></span><br><span class="line">UUID=676D-A1AF /boot/efi vfat <span class="built_in">umask</span>=0077 0 1</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="宽带网络总结">8 &nbsp&nbsp<a href="#宽带网络总结" class="headerlink" title="宽带网络总结"></a>宽带网络总结</h1><h2 id="会话数（连接数）">8.1 &nbsp&nbsp<a href="#会话数（连接数）" class="headerlink" title="会话数（连接数）"></a>会话数（连接数）</h2><p>会话数（连接数）在线测试工具：<a href="https://qps.itzmx.com/">https://qps.itzmx.com</a></p>
+<h1 id="宽带网络总结">9 &nbsp&nbsp<a href="#宽带网络总结" class="headerlink" title="宽带网络总结"></a>宽带网络总结</h1><h2 id="会话数（连接数）">9.1 &nbsp&nbsp<a href="#会话数（连接数）" class="headerlink" title="会话数（连接数）"></a>会话数（连接数）</h2><p>会话数（连接数）在线测试工具：<a href="https://qps.itzmx.com/">https://qps.itzmx.com</a></p>
 <p>连接数为应用产生的网络连接数，例如在爱快首页上看到连接数。并发连接数为 qps ，即每秒发起请求，等于在同一秒内，产生了 250 个请求。</p>
 <p>会话数（连接数）的限制，一般普通线路带宽会有会话数限制，专线则没有该限制。触发限制的常见现象为：超过并发连接数上限后，此前已建立连接数的软件和网络请求可正常通信，并且期间ping一切正常，延迟没有任何抖动现象，但是新开软件则连不上网络。</p>
-<h1 id="后记">9 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><del>这光猫还是有断流情况，估计是过热导致掉线，后续考虑下加装小风扇。</del></p>
+<h1 id="后记">10 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><del>这光猫还是有断流情况，估计是过热导致掉线，后续考虑下加装小风扇。</del></p>
 <p>断流降速故障已查明：虚拟网卡模型设置为<code>Intel E1000</code>导致的故障，重设为<code>VirtIO (半虚拟化)</code>即可解决。</p>
 <div class="note info no-icon"><p>在这台工控机上实际使用openwrt内网测速工具发现，虚拟机网卡模型设置为<code>Intel E1000</code>或者<code>Realtek RTL8139</code>都无法正常发挥网卡的性能，<code>Intel E1000</code>大约测试性能为100Mbps~300Mbps不等，<code>Realtek RTL8139</code>模型是最为拉跨的，直接为10Mbps。使用<code>VirtIO (半虚拟化)</code>模型内网测速才能恢复到900Mbps以上的正常速度。</p>
 </div>
 
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.</p>
+<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -5933,11 +6056,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;">&#x6e;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#x2e;&#99;&#x6f;&#x6d;">&#x31;&#x40;&#x31;&#x2e;&#99;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;">&#x38;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#x6d;">&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#64;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#64;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#x63;&#111;&#109;">&#56;&#64;&#x38;&#x2e;&#x63;&#111;&#109;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#99;&#x6f;&#x6d;">&#110;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#99;&#x6f;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#99;&#111;&#x6d;">&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#99;&#111;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -9292,7 +9415,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>具体context override代码的使用例子：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 v1.6.2 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="http://localhost:4000/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">http://localhost:4000/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -9736,9 +9859,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-ILbMQewcpDyXXXII" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-ILbMQewcpDyXXXII").style.height=document.getElementById("mmedia-ILbMQewcpDyXXXII").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-MpDbbXCgzMPWYcfJ" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").style.height=document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-ILbMQewcpDyXXXII").style.height=document.getElementById("mmedia-ILbMQewcpDyXXXII").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").style.height=document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9861,7 +9984,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-UnourJlCyomQmRby"></div><script> var UnourJlCyomQmRby_options = JSON.parse('{\"id\":\"mmedia-UnourJlCyomQmRby\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(UnourJlCyomQmRby_options); </script>
+<div id="mmedia-beZlwKRVzZBGkAoO"></div><script> var beZlwKRVzZBGkAoO_options = JSON.parse('{\"id\":\"mmedia-beZlwKRVzZBGkAoO\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(beZlwKRVzZBGkAoO_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -9964,7 +10087,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
