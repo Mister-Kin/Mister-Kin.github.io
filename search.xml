@@ -920,7 +920,7 @@
   <entry>
     <title>搜索引擎</title>
     <url>/search-engine/</url>
-    <content><![CDATA[<div class="note info"><p>搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。</p>
+    <content><![CDATA[<div class="note info no-icon"><p>搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。</p>
 </div>
 
 <h1 id="常见搜索需求">1 &nbsp&nbsp<a href="#常见搜索需求" class="headerlink" title="常见搜索需求"></a>常见搜索需求</h1><ul>
@@ -1504,7 +1504,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>Bat&amp;Powershell语法总结笔记</title>
     <url>/code/bat-powershell/</url>
-    <content><![CDATA[<div class="note danger"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
+    <content><![CDATA[<div class="note danger no-icon"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
 </div>
 
 <h1 id="推荐链接">1 &nbsp&nbsp<a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1><ul>
@@ -3840,7 +3840,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
   <entry>
     <title>英伟达Jetson开发板踩坑记录总结</title>
     <url>/software/nvidia-jetson/</url>
-    <content><![CDATA[<div class="note "><p>文章推荐：<a href="https://www.guyuehome.com/42097">Jetson nano 系统安装</a></p>
+    <content><![CDATA[<div class="note info no-icon"><p>文章推荐：<a href="https://www.guyuehome.com/42097">Jetson nano 系统安装</a></p>
 </div>
 
 <div class="note danger no-icon"><p>本文绝大部分命令都是在<code>sudo -i</code>切换到root权限后操作的。</p>
@@ -4042,7 +4042,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h1 id="安装pytorch和pytorch-vision">12 &nbsp&nbsp<a href="#安装pytorch和pytorch-vision" class="headerlink" title="安装pytorch和pytorch vision"></a>安装pytorch和pytorch vision</h1><h2 id="pyton3-6-1">12.1 &nbsp&nbsp<a href="#pyton3-6-1" class="headerlink" title="pyton3.6"></a>pyton3.6</h2><h3 id="为python3-6安装pytorch">12.1.1 &nbsp&nbsp<a href="#为python3-6安装pytorch" class="headerlink" title="为python3.6安装pytorch"></a>为python3.6安装pytorch</h3><p>pyton3.6直接访问<a href="https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048">nvidia官网PyTorch for Jetson帖子</a>下载官方编译提供的版本：<a href="https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl">点击跳转下载whl</a>，安装命令：<code>pip3.6 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl</code></p>
 <h3 id="为python3-6编译torchvision">12.1.2 &nbsp&nbsp<a href="#为python3-6编译torchvision" class="headerlink" title="为python3.6编译torchvision"></a>为python3.6编译torchvision</h3><p>同<a href="#%E4%B8%BApython3-7%E7%BC%96%E8%AF%91torchvision">为python3.7编译torchvision</a></p>
-<h2 id="pyton3-7-1">12.2 &nbsp&nbsp<a href="#pyton3-7-1" class="headerlink" title="pyton3.7"></a>pyton3.7</h2><h3 id="为python3-7编译pytorch">12.2.1 &nbsp&nbsp<a href="#为python3-7编译pytorch" class="headerlink" title="为python3.7编译pytorch"></a>为python3.7编译pytorch</h3><div class="note danger"><p>注意：编译过程十分耗时，请耐心等待！我测试的机器型号为TX2 NX，编译耗时23个小时（大部分时间都是停留在编译caffe2仓库）。</p>
+<h2 id="pyton3-7-1">12.2 &nbsp&nbsp<a href="#pyton3-7-1" class="headerlink" title="pyton3.7"></a>pyton3.7</h2><h3 id="为python3-7编译pytorch">12.2.1 &nbsp&nbsp<a href="#为python3-7编译pytorch" class="headerlink" title="为python3.7编译pytorch"></a>为python3.7编译pytorch</h3><div class="note danger no-icon"><p>注意：编译过程十分耗时，请耐心等待！我测试的机器型号为TX2 NX，编译耗时23个小时（大部分时间都是停留在编译caffe2仓库）。</p>
 </div>
 
 <p>由于英伟达官方只提供python3.6版本的pytorch安装包，并且<a href="https://download.pytorch.org/whl/torch_stable.html">torch库官方下载站</a>也没有arm芯片（aarch）的cu102版whl安装包，cpu版倒是有提供，因此pyton3.7的cuda版pytorch需要自行从源码编译。</p>
@@ -4699,10 +4699,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>保存&amp;应用</li>
 </ul>
-<h3 id="OpenClash">7.2.6 &nbsp&nbsp<a href="#OpenClash" class="headerlink" title="OpenClash"></a>OpenClash</h3><div class="note danger"><p>实测，Meta内核因DNS转发问题，导致无法正常上网。例如GOOGLE可能会出现证书异常的问题，YOUTUBE点击视频后会存在一直转圈圈的情况，无法加载视频。现阶段稳定工作的模式为：Fake-IP的普通TUN模式，模型模式可调TUN或者混合（TUN模式需要有TUN内核支持）。代理模式使用规则上网即可。</p>
+<h3 id="OpenClash">7.2.6 &nbsp&nbsp<a href="#OpenClash" class="headerlink" title="OpenClash"></a>OpenClash</h3><div class="note danger no-icon"><p>实测，Meta内核因DNS转发问题，导致无法正常上网。例如GOOGLE可能会出现证书异常的问题，YOUTUBE点击视频后会存在一直转圈圈的情况，无法加载视频。现阶段稳定工作的模式为：Fake-IP的普通TUN模式，模型模式可调TUN或者混合（TUN模式需要有TUN内核支持）。代理模式使用规则上网即可。</p>
 </div>
 
-<div class="note info"><p><a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.014-beta">v0.46.014-beta</a>是最后一版支持TUN内核的版本，往后一版的<a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.031-beta">v0.46.031-beta</a>版本就开始移除Dev和TUN内核的支持，如果手动操作更新OpenClash版本，会自动移除Dev和TUN内核文件。即使手动通过WinSCP上传Dev和TUN内核文件，软件内也是无法识别到的。</p>
+<div class="note info no-icon"><p><a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.014-beta">v0.46.014-beta</a>是最后一版支持TUN内核的版本，往后一版的<a href="https://github.com/vernesong/OpenClash/releases/tag/v0.46.031-beta">v0.46.031-beta</a>版本就开始移除Dev和TUN内核的支持，如果手动操作更新OpenClash版本，会自动移除Dev和TUN内核文件。即使手动通过WinSCP上传Dev和TUN内核文件，软件内也是无法识别到的。</p>
 </div>
 
 <h4 id="更新客户端">7.2.6.1 &nbsp&nbsp<a href="#更新客户端" class="headerlink" title="更新客户端"></a>更新客户端</h4><ol>
@@ -5733,7 +5733,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h3 id="etc-shadow文件中密码的加密方式">5.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
 <p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
 <p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
-<div class="note "><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
+<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
 </div>
 
 <p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
@@ -5763,7 +5763,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="ubuntu配置网卡">7.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.10/24</span><br><span class="line">      gateway4: 192.168.1.1</span><br><span class="line">      nameservers:</span><br><span class="line">        addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="ssh登录远程服务器">7.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note "><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
+<h2 id="ssh登录远程服务器">7.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
 </div>
 <p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
 <p>查看ssh版本：<code>ssh -V</code></p>
@@ -6044,7 +6044,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <p>一般常见于将镜像作为PE启动盘或者直接在系统内运行。</p>
 <p>P.S.在win7-win11系统上都可以直接运行安装（一般我都是用这个方法进行大版本的更新），只不过在WinPE中我们可以删除和格式化系统分区。如果WinPE中无法运行Setup.exe，换一个未深度精简过的PE再尝试。</p>
-<div class="note "><p>注意：在WinPE中或者直接作为启动盘，GPT分区注意要启用BIOS的UEFI启动模式，MBR分区启用BIOS的Legacy启动模式。</p>
+<div class="note info no-icon"><p>注意：在WinPE中或者直接作为启动盘，GPT分区注意要启用BIOS的UEFI启动模式，MBR分区启用BIOS的Legacy启动模式。</p>
 </div>
 
 <h2 id="PE中使用Dism安装系统镜像">2.3 &nbsp&nbsp<a href="#PE中使用Dism安装系统镜像" class="headerlink" title="PE中使用Dism安装系统镜像"></a>PE中使用Dism安装系统镜像</h2><ol>
@@ -6056,11 +6056,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#x6d;">&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#x63;&#111;&#109;">&#56;&#64;&#x38;&#x2e;&#x63;&#111;&#109;</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#99;&#x6f;&#x6d;">&#110;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#99;&#x6f;&#x6d;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#99;&#111;&#x6d;">&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#99;&#111;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;">&#110;&#111;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;">&#49;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#56;&#64;&#56;&#46;&#x63;&#x6f;&#x6d;">&#56;&#64;&#56;&#46;&#x63;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#115;&#46;&#x63;&#x6f;&#109;">&#x6e;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#115;&#46;&#x63;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;</a></li>
 </ul>
 </li>
 </ul>
@@ -6221,7 +6221,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>找到需要修改的网路名称，属性窗口的网络位置标签</li>
 <li>选择位置类型为「专用（R）」，用户权限为「用户不可以更改位置（S）」</li>
 </ol>
-<h1 id="多语言设置">10 &nbsp&nbsp<a href="#多语言设置" class="headerlink" title="多语言设置"></a>多语言设置</h1><h2 id="切换系统显示语言（包括欢迎屏幕）">10.1 &nbsp&nbsp<a href="#切换系统显示语言（包括欢迎屏幕）" class="headerlink" title="切换系统显示语言（包括欢迎屏幕）"></a>切换系统显示语言（包括欢迎屏幕）</h2><div class="note danger"><p>这个设置并非完美的，像是设置&gt;游戏设置界面就有可能存在部分元素没法正确切换第二种语言。但99%的系统界面元素基本是能正常切换的。最完美的方案其实还是使用对应语言的系统镜像文件，进行全新安装。</p>
+<h1 id="多语言设置">10 &nbsp&nbsp<a href="#多语言设置" class="headerlink" title="多语言设置"></a>多语言设置</h1><h2 id="切换系统显示语言（包括欢迎屏幕）">10.1 &nbsp&nbsp<a href="#切换系统显示语言（包括欢迎屏幕）" class="headerlink" title="切换系统显示语言（包括欢迎屏幕）"></a>切换系统显示语言（包括欢迎屏幕）</h2><div class="note danger no-icon"><p>这个设置并非完美的，像是设置&gt;游戏设置界面就有可能存在部分元素没法正确切换第二种语言。但99%的系统界面元素基本是能正常切换的。最完美的方案其实还是使用对应语言的系统镜像文件，进行全新安装。</p>
 </div>
 
 <p>设置界面入口：设置&gt;时间和语言&gt;语言</p>
@@ -9859,9 +9859,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-MpDbbXCgzMPWYcfJ" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").style.height=document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-DfzKZlRCrFUTFwUb" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-DfzKZlRCrFUTFwUb").style.height=document.getElementById("mmedia-DfzKZlRCrFUTFwUb").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").style.height=document.getElementById("mmedia-MpDbbXCgzMPWYcfJ").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-DfzKZlRCrFUTFwUb").style.height=document.getElementById("mmedia-DfzKZlRCrFUTFwUb").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9984,7 +9984,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-beZlwKRVzZBGkAoO"></div><script> var beZlwKRVzZBGkAoO_options = JSON.parse('{\"id\":\"mmedia-beZlwKRVzZBGkAoO\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(beZlwKRVzZBGkAoO_options); </script>
+<div id="mmedia-UsaBPDBYAMLxvONk"></div><script> var UsaBPDBYAMLxvONk_options = JSON.parse('{\"id\":\"mmedia-UsaBPDBYAMLxvONk\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(UsaBPDBYAMLxvONk_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -10087,7 +10087,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#115;&#x74;&#101;&#114;&#107;&#105;&#110;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#105;&#x6d;&#46;&#109;&#x69;&#115;&#x74;&#101;&#114;&#107;&#105;&#110;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -10383,7 +10383,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。还望诸君发现错误后能够<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
 <h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请与我<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系</a>进行处理，谢谢！—— Mr. Kin</p>
 <h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据<strong>中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”</strong>本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
-<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
+<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
 </div>
 
 <h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
@@ -10398,7 +10398,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
 </ul>
 <p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
-<div class="note info"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
+<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
 </div>
 
 <p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
@@ -10426,7 +10426,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
   <entry>
     <title>更新日志</title>
     <url>/about/logs/index.html</url>
-    <content><![CDATA[<div class="note info"><p>注：本页面用来记录本博客的建设日志。（从2021&#x2F;11&#x2F;11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
+    <content><![CDATA[<div class="note info no-icon"><p>注：本页面用来记录本博客的建设日志。（从2021&#x2F;11&#x2F;11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
 </div>
 
 <h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a><center>2025</center></h1><div class="hang-retract">
@@ -10637,7 +10637,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
 <li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
 </ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
 </div>
 
 <p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
@@ -10647,7 +10647,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
 
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
 </div>
 
 <p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
@@ -10667,7 +10667,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
 </div>
 
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
 </div>
 
 <h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
@@ -11000,10 +11000,10 @@ CGI&后期处理
     <img data-src="./images/tab_addon.webp">图1.2: 插件选项卡</div>
 </div>
 
-<h3 id="在线安装">2.1.2 &nbsp&nbsp<a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><div class="note danger"><p><strong>因「<a href="https://extensions.blender.org/">Blender Extension平台</a>」网站管理员认为本插件存在多项功能并不符合插件名称，管理员称这不符合规范，故本人已选择删除<a href="https://id.blender.org/">Blender ID</a>帐号。自2024-12-26起，不再支持插件以「官方在线扩展插件平台】方式来在线安装。—— Mr. Kin，2024-12-26</strong></p>
+<h3 id="在线安装">2.1.2 &nbsp&nbsp<a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><div class="note danger no-icon"><p><strong>因「<a href="https://extensions.blender.org/">Blender Extension平台</a>」网站管理员认为本插件存在多项功能并不符合插件名称，管理员称这不符合规范，故本人已选择删除<a href="https://id.blender.org/">Blender ID</a>帐号。自2024-12-26起，不再支持插件以「官方在线扩展插件平台】方式来在线安装。—— Mr. Kin，2024-12-26</strong></p>
 </div>
 
-<div class="note info"><p><strong>后续版本将会基于<a href="https://github.com/Mister-Kin/ToggleLanguage/releases">GitHub Rleases</a>开发实现支持自动检查版本和自动更新功能，敬请期待！—— Mr. Kin，2024-12-26</strong></p>
+<div class="note info no-icon"><p><strong>后续版本将会基于<a href="https://github.com/Mister-Kin/ToggleLanguage/releases">GitHub Rleases</a>开发实现支持自动检查版本和自动更新功能，敬请期待！—— Mr. Kin，2024-12-26</strong></p>
 </div>
 
 <p><del>blender v4.2之后版本（含v4.2）上线了extensions插件功能，允许从官方维护的扩展平台中直接安装扩展插件。本插件已上架官方扩展平台，可以直接搜索「toggle language」进行安装。</del></p>
