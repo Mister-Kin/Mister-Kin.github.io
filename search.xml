@@ -1950,7 +1950,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="tabs" id="install_hexo"><ul class="nav-tabs"><li class="tab active"><a href="#install_hexo-1">全局安装hexo-cli</a></li><li class="tab"><a href="#install_hexo-2">本地安装hexo-cli</a></li></ul><div class="tab-content"><div class="tab-pane active" id="install_hexo-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn global add hexo-cli <span class="comment"># 全局安装hexo-cli脚手架</span></span><br><span class="line">hexo init <span class="comment"># 初始化hexo，克隆hexo-starter和默认landscape主题仓库</span></span><br><span class="line">hexo s <span class="comment"># hexo server，启用本地服务器，见：http://localhost:4000/</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="install_hexo-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add hexo-cli</span><br><span class="line">node_modules/.bin/hexo.cmd init blog <span class="comment"># init需要空文件夹，所以另外用文件夹「blog」来初始化hexo</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">yarn add <span class="comment"># 一般hexo init之后都会自动安装相关依赖。若没有自动安装时，则需要执行该条命令以手动安装依赖。</span></span><br><span class="line">node_modules/.bin/hexo.cmd s</span><br></pre></td></tr></table></figure></div></div></div>
 
 <h1 id="hexo配置">2 &nbsp&nbsp<a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h1><h2 id="config-yml">2.1 &nbsp&nbsp<a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>注：language根据主题设置，注意新版Next主题已经没有zh-Hans语言配置文件，设置中文简体请用zh-CN参数。<br>注：新版Next主题主仓库已从 iissnan 名下迁移至 theme-next 组织。<br>注：现阶段新版Next支持Font Awesome 5.13.0，而5.1.4旧版Next版本只支持Font Awesome 4.7.0</p>
-<h2 id="live2d的修正处理">2.2 &nbsp&nbsp<a href="#live2d的修正处理" class="headerlink" title="live2d的修正处理"></a>live2d的修正处理</h2><p>参考链接：<a href="https://github.com/xiazeyu/live2d-widget.js/issues/62">&quot;idle&quot; 设置多个动作时每次加载只会执行其中一个动作，不会随机到别的动作</a></p>
+<h2 id="为Next主题引入Giscus评论系统">2.2 &nbsp&nbsp<a href="#为Next主题引入Giscus评论系统" class="headerlink" title="为Next主题引入Giscus评论系统"></a>为Next主题引入Giscus评论系统</h2><ol>
+<li>前置条件准备：<ol>
+<li>点击安装<a href="https://github.com/apps/giscus">Giscus APP</a>，选择安装到自己Github账户下的博客仓库<code>github.io</code>（不用勾选全部仓库）。</li>
+<li>启用博客仓库<code>github.io</code>中的<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Discussions功能</a>。</li>
+</ol>
+</li>
+<li>安装<code>hexo-next-giscus</code>插件：<code>yarn add hexo-next-giscus</code></li>
+<li>在博客配置文件<code>_config.yml</code>中添加<code>giscus</code>配置项，具体配置项参数值可以通过<a href="https://giscus.app/zh-CN">Giscus官方配置页面</a>查看（填好仓库地址，页面会检查该仓库地址是否符合要求）。选好各项配置项后，在<code>启用 giscus</code>小节中可以看到最终生成的配置项参数值，例如<code>repo_id</code>和<code>category_id</code>。<code>页面 ↔️ discussion 映射关系（mapping）</code>设置为<code>pathname</code>即可，该选项是用来控制创建<code>discussion</code>的名字，<code>pathname</code>就是博文在博客中的路径值。<code>Discussion 分类（category）</code>设置<code>Announcements</code>类型即可，该类型只有管理员（项目维护者）有权限管理操作。<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">Mister-Kin/Mister-Kin.github.io</span> <span class="comment"># 请填入自己实际的博客仓库 # Github repository name</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="comment"># 请填入自己实际的id # Github repository id</span></span><br><span class="line">  <span class="attr">category:</span> <span class="string">Announcements</span> <span class="comment"># Github discussion category</span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="comment"># 请填入自己实际的id # Github discussion category id</span></span><br><span class="line">  <span class="comment"># Available values: pathname | url | title | og:title</span></span><br><span class="line">  <span class="attr">mapping:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="comment"># Available values: 0 | 1</span></span><br><span class="line">  <span class="attr">reactions_enabled:</span> <span class="number">1</span></span><br><span class="line">   <span class="comment"># Available values: 0 | 1</span></span><br><span class="line">  <span class="attr">emit_metadata:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | preferred_color_scheme | transparent_dark | noborder_light | noborder_dark | noborder_gray | cobalt | purple_dark</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">  <span class="comment"># Available values: en | zh-CN</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="comment"># Place the comment box above the comments: top | bottom</span></span><br><span class="line">  <span class="attr">input_position:</span> <span class="string">top</span></span><br><span class="line">  <span class="comment"># Load the comments lazily</span></span><br><span class="line">  <span class="attr">loading:</span> <span class="string">lazy</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="live2d的修正处理">2.3 &nbsp&nbsp<a href="#live2d的修正处理" class="headerlink" title="live2d的修正处理"></a>live2d的修正处理</h2><p>参考链接：<a href="https://github.com/xiazeyu/live2d-widget.js/issues/62">&quot;idle&quot; 设置多个动作时每次加载只会执行其中一个动作，不会随机到别的动作</a></p>
 <p>关于适配自动构建的两个解决方法：</p>
 <ul>
 <li>Github Action自动构建需要相应修改命令（比较繁琐，因此放弃）</li>
@@ -1977,7 +1986,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>问题原因：安装<code>node.js</code>，由于未勾选启用<code>npm</code>模块，导致系统安装的<code>node.js</code>环境缺失<code>npm</code>，但由于新依赖包直接在包构建命令里面新增并写死了<code>npm</code>命令，导致无法正常构建。</p>
 <p>解决方法：重新运行<code>node.js</code>安装包，选择「change」选项，启用<code>npm</code>模块。然后重新运行<code>yarn</code>构建。</p>
 <h2 id="Stylus-for-Node-v14-Accessing-non-existent-property-errors">4.2 &nbsp&nbsp<a href="#Stylus-for-Node-v14-Accessing-non-existent-property-errors" class="headerlink" title="Stylus for Node v14 &#39;Accessing non-existent property&#39; errors"></a>Stylus for Node v14 &#39;Accessing non-existent property&#39; errors</h2><p><del>注 ：Node版本选择v12，避免Stylus for Node v14 &#39;Accessing non-existent property&#39; errors。</del></p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm 淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a>.<br>[2] postinstall: npm run build:highlight failes leaving full hexo install unusable...[EB&#x2F;OL]. <a href="https://github.com/hexojs/hexo%E2%80%91util/issues/9">https://github.com/hexojs/hexo‑util/issues/9</a>.<br>[3] Step-by-step[EB&#x2F;OL]. <a href="https://yarnpkg.com/migration/guide">https://yarnpkg.com/migration/guide</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm 淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a>.<br>[2] postinstall: npm run build:highlight failes leaving full hexo install unusable...[EB&#x2F;OL]. <a href="https://github.com/hexojs/hexo%E2%80%91util/issues/9">https://github.com/hexojs/hexo‑util/issues/9</a>.<br>[3] Step-by-step[EB&#x2F;OL]. <a href="https://yarnpkg.com/migration/guide">https://yarnpkg.com/migration/guide</a>.<br>[4] giscus[EB&#x2F;OL]. <a href="https://giscus.app/zh-CN">https://giscus.app/zh-CN</a>.<br>[5] Hexo评论系统对比推荐[EB&#x2F;OL]. <a href="https://yzs020220.github.io/posts/44102">https://yzs020220.github.io/posts/44102</a>.<br>[6] Hugo 博客引入 Giscus 评论系统[EB&#x2F;OL]. <a href="https://www.lixueduan.com/posts/blog/02-add-giscus-comment">https://www.lixueduan.com/posts/blog/02-add-giscus-comment</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -6062,11 +6071,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#x75;&#46;&#x63;&#x6f;&#x6d;">&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#x75;&#46;&#x63;&#x6f;&#x6d;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#x63;&#x6f;&#109;">&#x31;&#64;&#x31;&#x2e;&#x63;&#x6f;&#109;</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#99;&#x6f;&#x6d;">&#x38;&#x40;&#56;&#x2e;&#99;&#x6f;&#x6d;</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#x6e;&#107;&#x73;&#x2e;&#x63;&#x6f;&#109;">&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#x6e;&#107;&#x73;&#x2e;&#x63;&#x6f;&#109;</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#46;&#99;&#x6f;&#x6d;">&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;">&#110;&#x6f;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#x63;&#111;&#x6d;">&#49;&#64;&#49;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;">&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#x63;&#111;&#109;">&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#x63;&#111;&#109;</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;</a></li>
 </ul>
 </li>
 </ul>
@@ -9865,9 +9874,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-SxCstZrzKbCjxQqS" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-SxCstZrzKbCjxQqS").style.height=document.getElementById("mmedia-SxCstZrzKbCjxQqS").scrollWidth*0.76+"px";
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><style>.bbplayer{width: 100%; max-width: auto; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-tPhzNSaTWeOOcVPG" src="https://player.bilibili.com/player.html?bvid=1eS4y1j7ay&page=1&high_quality=1&danmaku=false&autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-tPhzNSaTWeOOcVPG").style.height=document.getElementById("mmedia-tPhzNSaTWeOOcVPG").scrollWidth*0.76+"px";
     window.onresize = function(){
-      document.getElementById("mmedia-SxCstZrzKbCjxQqS").style.height=document.getElementById("mmedia-SxCstZrzKbCjxQqS").scrollWidth*0.76+"px";
+      document.getElementById("mmedia-tPhzNSaTWeOOcVPG").style.height=document.getElementById("mmedia-tPhzNSaTWeOOcVPG").scrollWidth*0.76+"px";
     }; </script>
 
 <h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
@@ -9990,7 +9999,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div style="text-align: center; width: 50%;">
 以下是鄙人常听的一些歌曲，可以听听，稍作休息~
 <div style="text-align: left">
-<div id="mmedia-nfJBWlyoyBmFUnbZ"></div><script> var nfJBWlyoyBmFUnbZ_options = JSON.parse('{\"id\":\"mmedia-nfJBWlyoyBmFUnbZ\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(nfJBWlyoyBmFUnbZ_options); </script>
+<div id="mmedia-HpcWoEfsqrJBcxoW"></div><script> var HpcWoEfsqrJBcxoW_options = JSON.parse('{\"id\":\"mmedia-HpcWoEfsqrJBcxoW\",\"data\":{\"metin\":\"meting\",\"id\":\"2857648889\",\"server\":\"netease\",\"type\":\"playlist\",\"listmaxheight\":\"340px\",\"preload\":\"auto\",\"theme\":\"#ad7a86\"}}'); HEXO_MMEDIA_DATA.css.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js");HEXO_MMEDIA_DATA.js.push("https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js");HEXO_MMEDIA_DATA.metingData.push(HpcWoEfsqrJBcxoW_options); </script>
 </div></div>
 </center>
 ]]></content>
@@ -10093,7 +10102,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#x69;&#x73;&#x74;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x69;&#x6d;&#46;&#x6d;&#x69;&#x73;&#x74;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#105;&#115;&#116;&#101;&#x72;&#107;&#x69;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x69;&#x6d;&#x2e;&#x6d;&#105;&#115;&#116;&#101;&#x72;&#107;&#x69;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -10437,6 +10446,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a><center>2025</center></h1><div class="hang-retract">
 
+<p>2025-01-04：引入<a href="https://giscus.app/zh-CN">Giscus评论系统</a>（基于<a href="https://github.com/next-theme/hexo-next-giscus">hexo-next-giscus</a>插件）。</p>
 <p>2025-01-01：hexo-theme-next从v8.22.1升级至v8.22.0。取消「移除菜单元素激活后的样式内容（移除小灰点）」，该问题<a href="https://github.com/next-theme/hexo-theme-next/commit/58004e8180584fd7507d5f7817f9c2b063b10fe3">已被修复</a>。</p>
 </div>
 
