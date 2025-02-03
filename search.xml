@@ -2173,56 +2173,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown语法总结笔记</title>
     <url>/code/markdown/</url>
     <content><![CDATA[<h1 id="标题">1 &nbsp&nbsp<a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -2722,6 +2672,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -3613,6 +3613,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Audacity总结</title>
+    <url>/software/audacity/</url>
+    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
+<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>audacity</tag>
+        <tag>音频</tag>
+        <tag>后期处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装Arch Linux的踩坑记录总结</title>
     <url>/software/arch-linux/</url>
     <content><![CDATA[<h1 id="安装arch系统镜像">1 &nbsp&nbsp<a href="#安装arch系统镜像" class="headerlink" title="安装arch系统镜像"></a>安装arch系统镜像</h1><ol>
@@ -3720,22 +3736,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>arch</tag>
         <tag>virtualbox</tag>
         <tag>pve</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Audacity总结</title>
-    <url>/software/audacity/</url>
-    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
-<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>audacity</tag>
-        <tag>音频</tag>
-        <tag>后期处理</tag>
       </tags>
   </entry>
   <entry>
@@ -4455,6 +4455,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Perforce Helix Core版本控制</title>
+    <url>/software/perforce/</url>
+    <content><![CDATA[<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
+<h1 id="安装">2 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Office总结笔记</title>
     <url>/software/office/</url>
     <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
@@ -4525,16 +4535,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>powerpoint</tag>
         <tag>操作</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Perforce Helix Core版本控制</title>
-    <url>/software/perforce/</url>
-    <content><![CDATA[<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
-<h1 id="安装">2 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
   </entry>
   <entry>
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
@@ -6437,11 +6437,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
 <li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#115;&#46;&#99;&#111;&#109;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -6561,24 +6561,28 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <h1 id="网络">10 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="网络测试">10.1 &nbsp&nbsp<a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 验证本机 TCP/IP 协议是否安装好</span></span><br><span class="line">ping 127.0.0.1</span><br><span class="line"><span class="comment"># 验证本机 IP 地址是否配置完成或者网卡物理属性是否完好</span></span><br><span class="line">ping 192.168.1.55</span><br><span class="line"><span class="comment"># 验证从本机到网关的物理线路是否连通</span></span><br><span class="line">ping 192.168.1.1/192.168.0.1</span><br><span class="line"><span class="comment"># 目标地址查看电脑与目标机器工作是否正常。</span></span><br><span class="line">ping</span><br><span class="line"><span class="comment"># 目标地址跟踪数据包到达目的主机的路径，可以探测网络故障是发生在哪一个位置</span></span><br><span class="line">Tracert</span><br><span class="line"><span class="comment"># 首先 localhost 是一个域名，在过去它指向 127.0.0.1 这个 IP 地址。在操作系统支持 ipv6 后，它同时还指向 ipv6 的地址 [::1] 。</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="win10-ssh客户端">10.2 &nbsp&nbsp<a href="#win10-ssh客户端" class="headerlink" title="win10 ssh客户端"></a>win10 ssh客户端</h2><p>win10 1803版本自带安装ssh客户端，可检查是否已启用。新版都自带安装客户端并自动启动。</p>
+<h2 id="win10-ssh客户端">10.2 &nbsp&nbsp<a href="#win10-ssh客户端" class="headerlink" title="win10 ssh客户端"></a>win10 ssh客户端</h2><p>win10 1803之后版本自带安装ssh客户端并自动启用，可检查是否已正确设置启用。</p>
 <p>使用：<code>ssh username@ip</code></p>
 <h2 id="win10-ssh服务端并允许空密码连接登录">10.3 &nbsp&nbsp<a href="#win10-ssh服务端并允许空密码连接登录" class="headerlink" title="win10 ssh服务端并允许空密码连接登录"></a>win10 ssh服务端并允许空密码连接登录</h2><p>虽说新版win10已自带安装ssh客户端，但服务端需自行安装设置。</p>
 <ol>
-<li>设置&gt;应用&gt;应用和功能：可选功能</li>
-<li>添加功能：OpenSSH 服务器，选择安装</li>
-<li>管理员权限终端，开启sshd服务</li>
-</ol>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> sshd  # 开启</span><br><span class="line"><span class="built_in">net</span> stop sshd   # 关闭</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>设置ssh服务自启：任务管理器&gt;服务&gt;打开服务，将「OpenSSH SSH Server」服务设置为「开机自启」</li>
-<li>编辑文件：C:\ProgramData\ssh\sshd_config，修改如下参数，允许空密码登录：<br>修改前：</li>
-</ol>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># To disable tunneled clear text passwords, change to no here!</span><br><span class="line">#PasswordAuthentication yes</span><br><span class="line">#PermitEmptyPasswords no</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># To disable tunneled clear text passwords, change to no here!</span><br><span class="line">PasswordAuthentication yes</span><br><span class="line">PermitEmptyPasswords yes</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li>打开本地安全策略窗口，WIN+R：secpol.msc。本地策略 -&gt; 安全选项：在右侧选中「帐户: 使用空白密码的本地帐户只允许进行控制台登录双击进行编辑」。选择禁用选项确认。</li>
+<li><p>设置&gt;应用&gt;应用和功能：可选功能</p>
+</li>
+<li><p>添加功能：OpenSSH 服务器，选择安装</p>
+</li>
+<li><p>编辑文件：C:\ProgramData\ssh\sshd_config，修改如下参数，允许空密码登录：</p>
+<blockquote>
+<p>若在修改<code>sshd_config</code>之前，已启动了ssh服务。记得在修改好文件后，关闭并重新开启ssh服务，否则修改的设置无法生效。</p>
+</blockquote>
+<p> 修改前：</p>
+ <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># To disable tunneled clear text passwords, change to no here!</span><br><span class="line">#PasswordAuthentication yes</span><br><span class="line">#PermitEmptyPasswords no</span><br></pre></td></tr></table></figure>
+<p> 修改后：</p>
+ <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># To disable tunneled clear text passwords, change to no here!</span><br><span class="line">PasswordAuthentication yes</span><br><span class="line">PermitEmptyPasswords yes</span><br></pre></td></tr></table></figure></li>
+<li><p>打开本地安全策略窗口，WIN+R：secpol.msc。本地策略 -&gt; 安全选项：在右侧选中「帐户: 使用空白密码的本地帐户只允许进行控制台登录双击进行编辑」。选择禁用选项确认。</p>
+</li>
+<li><p>管理员权限终端，开启sshd服务</p>
+ <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> sshd  # 开启</span><br><span class="line"><span class="built_in">net</span> stop sshd   # 关闭</span><br></pre></td></tr></table></figure></li>
+<li><p>设置ssh服务自启：任务管理器&gt;服务&gt;打开服务，将「OpenSSH SSH Server」服务设置为「开机自启」</p>
+</li>
 </ol>
 <ul>
 <li>程序主目录：C:\Windows\System32\OpenSSH</li>
@@ -6667,6 +6671,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p><a href="https://www.cuanjibang.com/dngz/45261.html">可能的解决方法</a>：设置-&gt;安全-&gt;关闭「启用黑屏」。</p>
 <p>P.S. 向日葵还可能导致调用显卡设备异常，例如三维软件无法显示模型或者3d mark测试一直报错。详见<a href="https://www.bilibili.com/read/cv24627629/">关于（贝锐）向日葵远程可能导致显卡驱动失效的解决方案</a>。</p>
+<h2 id="双显卡笔记本（Intel核显-NVIDIA独显）卸载核显驱动后无限蓝屏，无法正常启动系统">12.3 &nbsp&nbsp<a href="#双显卡笔记本（Intel核显-NVIDIA独显）卸载核显驱动后无限蓝屏，无法正常启动系统" class="headerlink" title="双显卡笔记本（Intel核显+NVIDIA独显）卸载核显驱动后无限蓝屏，无法正常启动系统"></a>双显卡笔记本（Intel核显+NVIDIA独显）卸载核显驱动后无限蓝屏，无法正常启动系统</h2><p>故障现象：如果在已有Intel核显驱动和NVIDIA独显驱动的情况下，在仅卸载Intel核显之后，会导致Windows 10&#x2F;11系统无限蓝屏，无法正常启动系统。</p>
+<p>问题原因：在部份型号较老的笔记本中，例如联想<code>erazer z500</code>，推测BIOS固件都是调用核显处理屏幕的显示，缺少核显驱动会导致冲突异常。</p>
+<p>解决方法：让Windows系统自行尝试修复，等提示修复失败之后，通过交互菜单进入高级启动选项，进入安全模式。然后使用DDU工具完整清除NVIDIA独显驱动，然后重启就可以正常启动系统了。正常启动后，先安装Intel核显驱动，再安装NVIDIA独显驱动。</p>
 <h1 id="显卡">13 &nbsp&nbsp<a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><h2 id="任务管理器检测不到cuda引擎">13.1 &nbsp&nbsp<a href="#任务管理器检测不到cuda引擎" class="headerlink" title="任务管理器检测不到cuda引擎"></a>任务管理器检测不到cuda引擎</h2><p>若Windows10和Windows11中的任务管理器均检测不到cuda引擎（系统实际也是从Direct 3D接口读取），则是因为系统开启「硬件加速GPU计划」功能。</p>
 <p>解决方法：系统设置-&gt;系统-&gt;屏幕-&gt;图形设置-&gt;关闭「硬件加速GPU计划」。Windows11默认开启这个功能，Windows10默认禁用该功能。</p>
 <h1 id="屏幕">14 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><h2 id="多屏扩展模式的界面显示">14.1 &nbsp&nbsp<a href="#多屏扩展模式的界面显示" class="headerlink" title="多屏扩展模式的界面显示"></a>多屏扩展模式的界面显示</h2><p>通常所有的软件都是默认在主屏的界面打开，但在调整屏幕主次的之前，还有一个规则是优先出现在上一次显示的屏幕中。一般的调整方法如下：</p>
@@ -6831,6 +6838,101 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ Primer 第五版：第一章「开始」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap1/</url>
     <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
@@ -6973,11 +7075,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -7462,11 +7564,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -7761,10 +7863,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -8508,10 +8610,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -8679,10 +8781,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -9011,10 +9113,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -9041,106 +9143,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -10487,7 +10494,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#105;&#110;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#101;&#114;&#x6b;&#105;&#110;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
