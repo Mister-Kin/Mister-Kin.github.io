@@ -2173,6 +2173,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法总结笔记</title>
     <url>/code/markdown/</url>
     <content><![CDATA[<h1 id="标题">1 &nbsp&nbsp<a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -2675,56 +2725,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python总结笔记</title>
     <url>/code/python/</url>
     <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
@@ -2816,17 +2816,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="修改模板文件以便新建工程时默认支持C-20">4.2 &nbsp&nbsp<a href="#修改模板文件以便新建工程时默认支持C-20" class="headerlink" title="修改模板文件以便新建工程时默认支持C++20"></a>修改模板文件以便新建工程时默认支持C++20</h2><p>使用程序完成批量修改：<a href="https://github.com/Mister-Kin/BatchTools/blob/master/modify_qt_creator_template_files_to_support_c%2B%2B20.bat">modify_qt_creator_template_files_to_support_c++20.bat</a></p>
 <div class="tabs" id="template"><ul class="nav-tabs"><li class="tab active"><a href="#template-1">cmake</a></li><li class="tab"><a href="#template-2">qmake</a></li></ul><div class="tab-content"><div class="tab-pane active" id="template-1"><p>将以下文件中的<code>set(CMAKE_CXX_STANDARD 17)</code>修改为<code>set(CMAKE_CXX_STANDARD 20)</code></p>
 <ul>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\consoleapp\CMakeLists.txt</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\cpplibrary\CMakeLists.txt</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\plaincpp\CMakeLists.txt</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\qtquickapplication_compat\CMakeLists.txt</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\CMakeLists.txt</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\consoleapp\CMakeLists.txt</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\cpplibrary\CMakeLists.txt</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\plaincpp\CMakeLists.txt</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\qtquickapplication_compat\CMakeLists.txt</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\CMakeLists.txt</li>
 </ul></div><div class="tab-pane" id="template-2"><p>将以下文件中的<code>CONFIG += c++17</code>修改为<code>CONFIG += c++20</code></p>
 <ul>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\consoleapp\file.pro</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\cpplibrary\project.pro</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\plaincpp\file.pro</li>
-<li>qtcreator-15.0.0\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\project.pro</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\consoleapp\file.pro</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\cpplibrary\project.pro</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\plaincpp\file.pro</li>
+<li>qtcreator-15.0.1\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\project.pro</li>
 </ul></div></div></div>
 
 <h1 id="Qt国际化多语言的总结">5 &nbsp&nbsp<a href="#Qt国际化多语言的总结" class="headerlink" title="Qt国际化多语言的总结"></a>Qt国际化多语言的总结</h1><p>QT官方多语言编程wiki参考：<a href="https://wiki.qt.io/How_to_create_a_multi_language_application#Add_translations_to_the_project">How to create a multi language application</a></p>
@@ -2843,10 +2843,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决：点击管理，手动设置构建套件kit的qt版本，这是通过选择qmake.exe或者qmake6.exe的路径确认。（不用重装，网上的教程都是重装或者安装在线版本包，但直接重装是无效）。</p>
 <h2 id="旧项目的套件配置文件中的CL编译器路径不正确">5.2 &nbsp&nbsp<a href="#旧项目的套件配置文件中的CL编译器路径不正确" class="headerlink" title="旧项目的套件配置文件中的CL编译器路径不正确"></a>旧项目的套件配置文件中的CL编译器路径不正确</h2><p>原因：更新MSVC CL后，老版本编译器就被删除了，旧项目的套件配置文件中的CL编译器路径仍然是老版本的路径，导致路径错误无法识别最新版本的编译器。</p>
 <p>解决方法：删除项目父路径中生成的构建配置文件夹，例如<code>build-untitled-x64-Release</code>，然后重新构建新的配置文件夹。</p>
-<h1 id="Qt源码编译">6 &nbsp&nbsp<a href="#Qt源码编译" class="headerlink" title="Qt源码编译"></a>Qt源码编译</h1><h2 id="下载-1">6.1 &nbsp&nbsp<a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><ul>
-<li><a href="https://cmake.org/download/">CMake</a></li>
-<li><a href="https://github.com/ninja-build/ninja/releases">Ninja</a></li>
-<li><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a></li>
+<h1 id="Qt源码编译">6 &nbsp&nbsp<a href="#Qt源码编译" class="headerlink" title="Qt源码编译"></a>Qt源码编译</h1><h2 id="下载-1">6.1 &nbsp&nbsp<a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><div class="note info no-icon"><p><code>CMake</code>和<code>Ninja</code>可以不用单独下载安装，<code>MSVC CL</code>编译器的<code>Visual Studio Installer</code>管理器可以统一管理下载和更新。关于如何详细设置，可以参见<a href="/code/vscode/#MSVC-CL%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE">MSVC CL编译器的安装和环境设置</a>。</p>
+</div>
+<ul>
+<li><del><a href="https://cmake.org/download/">CMake</a></del></li>
+<li><del><a href="https://github.com/ninja-build/ninja/releases">Ninja</a></del></li>
+<li><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a>：<code>所有下载</code>-&gt;<code>用于 Visual Studio 的工具</code>-&gt;<code>Visual Studio 2022 生成工具</code>。</li>
 <li><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qt/">Qt源码</a>，以下是我个人使用到的模块（按编译顺序列出）<ul>
 <li>qtbase（基础库）</li>
 <li>qtshadertools（编译qtdeclarative所需的依赖库）</li>
@@ -2862,19 +2864,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p><em>注意不能使用ninja直接构建源码，会报错：build.ninja not found。<strong>构建是使用CMake。</strong></em></p>
 <p>编译步骤：</p>
 <ol>
-<li>将源码解压到分区的根目录下，例如：<code>G:\qtbase-everywhere-src-6.8.1</code></li>
+<li>将源码解压到分区的根目录下，例如：<code>G:\qtbase-everywhere-src-6.8.2</code></li>
 <li>在源码文件夹外新建一个文件夹，如<code>qtbasebuild</code>，拷贝该编译脚本进文件夹，打开cmd窗口，执行该脚本（不建议直接双击运行编译脚本，因为脚本编译出错或者执行完毕都会关闭窗口，这样无法得知编译详情）。</li>
 <li>编译完成后添加环境变量PATH配置：<code>C:\Qt\qt6release\bin</code></li>
 </ol>
 <h2 id="单模块逐个编译的BAT脚本">6.3 &nbsp&nbsp<a href="#单模块逐个编译的BAT脚本" class="headerlink" title="单模块逐个编译的BAT脚本"></a>单模块逐个编译的BAT脚本</h2><p>附加编译子模块的方式：运行Qt安装路径下的&#x2F;bin&#x2F;qt-configure-module.bat + 附件模块源码解压路径。</p>
 <p>一般普通开发编译release版本即可，debug版本是是编译用来开发调试qt源码的。</p>
-<h3 id="编译release版本">6.3.1 &nbsp&nbsp<a href="#编译release版本" class="headerlink" title="编译release版本"></a>编译release版本</h3><h4 id="编译qtbase-release">6.3.1.1 &nbsp&nbsp<a href="#编译qtbase-release" class="headerlink" title="编译qtbase(release)"></a>编译qtbase(release)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">8</span>.<span class="number">1</span>\configure.bat -prefix C:\Qt\qt6release -c++std c++<span class="number">20</span> -release -optimize-size -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
+<h3 id="编译release版本">6.3.1 &nbsp&nbsp<a href="#编译release版本" class="headerlink" title="编译release版本"></a>编译release版本</h3><h4 id="编译qtbase-release">6.3.1.1 &nbsp&nbsp<a href="#编译qtbase-release" class="headerlink" title="编译qtbase(release)"></a>编译qtbase(release)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">8</span>.<span class="number">2</span>\configure.bat -prefix C:\Qt\qt6release -c++std c++<span class="number">20</span> -release -optimize-size -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
 
-<h4 id="附加编译其他子模块（release）">6.3.1.2 &nbsp&nbsp<a href="#附加编译其他子模块（release）" class="headerlink" title="附加编译其他子模块（release）"></a>附加编译其他子模块（release）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6release</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> <span class="title">G</span>:\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.1 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
+<h4 id="附加编译其他子模块（release）">6.3.1.2 &nbsp&nbsp<a href="#附加编译其他子模块（release）" class="headerlink" title="附加编译其他子模块（release）"></a>附加编译其他子模块（release）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6release</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> <span class="title">G</span>:\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.2 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="编译debug版本">6.3.2 &nbsp&nbsp<a href="#编译debug版本" class="headerlink" title="编译debug版本"></a>编译debug版本</h3><h4 id="编译qtbase-debug">6.3.2.1 &nbsp&nbsp<a href="#编译qtbase-debug" class="headerlink" title="编译qtbase(debug)"></a>编译qtbase(debug)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">8</span>.<span class="number">1</span>\configure.bat -prefix C:\Qt\qt6debug -c++std c++<span class="number">20</span> -debug -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
+<h3 id="编译debug版本">6.3.2 &nbsp&nbsp<a href="#编译debug版本" class="headerlink" title="编译debug版本"></a>编译debug版本</h3><h4 id="编译qtbase-debug">6.3.2.1 &nbsp&nbsp<a href="#编译qtbase-debug" class="headerlink" title="编译qtbase(debug)"></a>编译qtbase(debug)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">8</span>.<span class="number">2</span>\configure.bat -prefix C:\Qt\qt6debug -c++std c++<span class="number">20</span> -debug -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
 
-<h4 id="附加编译其他子模块（debug）">6.3.2.2 &nbsp&nbsp<a href="#附加编译其他子模块（debug）" class="headerlink" title="附加编译其他子模块（debug）"></a>附加编译其他子模块（debug）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6debug</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> ..\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.1 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
+<h4 id="附加编译其他子模块（debug）">6.3.2.2 &nbsp&nbsp<a href="#附加编译其他子模块（debug）" class="headerlink" title="附加编译其他子模块（debug）"></a>附加编译其他子模块（debug）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6debug</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> ..\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.2 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -2885,7 +2887,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h3 id="找不到qtshadertools-qsb-工具">6.4.3 &nbsp&nbsp<a href="#找不到qtshadertools-qsb-工具" class="headerlink" title="找不到qtshadertools &#39;qsb&#39;工具"></a>找不到qtshadertools &#39;qsb&#39;工具</h3><p>报错信息：<code>Note: Qt Quick modules not built due to not finding the qtshadertools &#39;qsb&#39; tool.</code></p>
 <p>解决方法：qtdeclarative模块依赖于qtshadertools模块，需要先编译安装好qtshadertools，之后再编译安装qtdeclarative。</p>
 <h3 id="optimize-size选项导致编译中断">6.4.4 &nbsp&nbsp<a href="#optimize-size选项导致编译中断" class="headerlink" title="optimize_size选项导致编译中断"></a>optimize_size选项导致编译中断</h3><p>报错信息：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">Feature</span> &quot;<span class="title">optimize_size</span>&quot;: <span class="title">Forcing</span> <span class="title">to</span> &quot;<span class="title">ON</span>&quot; <span class="title">breaks</span> <span class="title">its</span> <span class="title">condition</span>:</span></span><br><span class="line"><span class="function">    <span class="title">NOT</span> <span class="title">QT_FEATURE_debug</span> <span class="title">OR</span> <span class="title">QT_FEATURE_debug_and_release</span></span></span><br><span class="line"><span class="function"><span class="title">Condition</span> <span class="title">values</span> <span class="title">dump</span>:</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug</span> = &quot;<span class="title">ON</span>&quot;</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug_and_release</span> = &quot;<span class="title">OFF</span>&quot;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:194 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">Check</span> <span class="title">the</span> <span class="title">configuration</span> <span class="title">messages</span> <span class="title">for</span> <span class="title">an</span> <span class="title">error</span> <span class="title">that</span> <span class="title">has</span> <span class="title">occurred</span>.</span></span><br><span class="line"><span class="function"><span class="title">Call</span> <span class="title">Stack</span> (<span class="title">most</span> <span class="title">recent</span> <span class="title">call</span> <span class="title">first</span>):</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:24 (<span class="title">qt_configure_print_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInternals</span>/<span class="title">QtBuildInternalsConfig.cmake</span>:548 (<span class="title">qt_print_feature_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">CMakeLists.txt</span>:198 (<span class="title">qt_build_repo_end</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">-- <span class="title">Configuring</span> <span class="title">incomplete</span>, <span class="title">errors</span> <span class="title">occurred</span>!</span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">G</span>:/<span class="title">qtbase</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.1/<span class="title">cmake</span>/<span class="title">QtProcessConfigureArgs.cmake</span>:995 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">CMake</span> <span class="title">exited</span> <span class="title">with</span> <span class="title">code</span> 1.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">Feature</span> &quot;<span class="title">optimize_size</span>&quot;: <span class="title">Forcing</span> <span class="title">to</span> &quot;<span class="title">ON</span>&quot; <span class="title">breaks</span> <span class="title">its</span> <span class="title">condition</span>:</span></span><br><span class="line"><span class="function">    <span class="title">NOT</span> <span class="title">QT_FEATURE_debug</span> <span class="title">OR</span> <span class="title">QT_FEATURE_debug_and_release</span></span></span><br><span class="line"><span class="function"><span class="title">Condition</span> <span class="title">values</span> <span class="title">dump</span>:</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug</span> = &quot;<span class="title">ON</span>&quot;</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug_and_release</span> = &quot;<span class="title">OFF</span>&quot;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:194 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">Check</span> <span class="title">the</span> <span class="title">configuration</span> <span class="title">messages</span> <span class="title">for</span> <span class="title">an</span> <span class="title">error</span> <span class="title">that</span> <span class="title">has</span> <span class="title">occurred</span>.</span></span><br><span class="line"><span class="function"><span class="title">Call</span> <span class="title">Stack</span> (<span class="title">most</span> <span class="title">recent</span> <span class="title">call</span> <span class="title">first</span>):</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:24 (<span class="title">qt_configure_print_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInternals</span>/<span class="title">QtBuildInternalsConfig.cmake</span>:548 (<span class="title">qt_print_feature_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">CMakeLists.txt</span>:198 (<span class="title">qt_build_repo_end</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">-- <span class="title">Configuring</span> <span class="title">incomplete</span>, <span class="title">errors</span> <span class="title">occurred</span>!</span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">G</span>:/<span class="title">qtbase</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.2/<span class="title">cmake</span>/<span class="title">QtProcessConfigureArgs.cmake</span>:995 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">CMake</span> <span class="title">exited</span> <span class="title">with</span> <span class="title">code</span> 1.</span></span><br></pre></td></tr></table></figure>
 
 <p>解决方法：这是因为在64位的系统上选择x32的编译器引起的错误。根据自己的平台选择对应的编译器，例如，MSVC CL编译器的x64环境，否则启用optimize_size选项有相关报错信息。当然，不启用该选项的话，可正常编译，但得不偿失。</p>
 <h3 id="链接lib文件出现错误LNK2019">6.4.5 &nbsp&nbsp<a href="#链接lib文件出现错误LNK2019" class="headerlink" title="链接lib文件出现错误LNK2019"></a>链接lib文件出现错误LNK2019</h3><p>问题：链接lib文件报错，error LNK2019: 无法解析的外部符号。</p>
@@ -3105,11 +3107,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <p>镜像加速下载的方法：将下载链接URL中的<code>stable</code>之前的字符全部改为<code>https://vscode.cdn.azure.cn/</code>即可。</p>
 <h1 id="配置C-C-开发环境">2 &nbsp&nbsp<a href="#配置C-C-开发环境" class="headerlink" title="配置C&#x2F;C++开发环境"></a>配置C&#x2F;C++开发环境</h1><h2 id="MSVC-CL编译器的安装和环境设置">2.1 &nbsp&nbsp<a href="#MSVC-CL编译器的安装和环境设置" class="headerlink" title="MSVC CL编译器的安装和环境设置"></a>MSVC CL编译器的安装和环境设置</h2><ol>
-<li>下载：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a></li>
+<li>下载：<a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a>，<code>所有下载</code>-&gt;<code>用于 Visual Studio 的工具</code>-&gt;<code>Visual Studio 2022 生成工具</code>。</li>
 <li>安装「Visual Studio 2022 生成工具」，然后勾选对应包下载安装<ol>
 <li>工作负荷：使用C++的桌面开发<ul>
-<li>MSVC v143 - VS 2022 C++ x64&#x2F;x8 6生成工具(最新)</li>
-<li>Windows 11 SDK (10.0.22621.0)：建议选择最新的系统版本号</li>
+<li>MSVC v143 - VS 2022 C++ x64&#x2F;x86生成工具(最新)</li>
+<li>Windows 11 SDK (10.0.26100.0)：建议选择最新的系统版本号</li>
 <li>用于 Windows 的 C++ CMake 工具（包含CMake和Ninja）</li>
 </ul>
 </li>
@@ -3613,22 +3615,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Audacity总结</title>
-    <url>/software/audacity/</url>
-    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
-<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>audacity</tag>
-        <tag>音频</tag>
-        <tag>后期处理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装Arch Linux的踩坑记录总结</title>
     <url>/software/arch-linux/</url>
     <content><![CDATA[<h1 id="安装arch系统镜像">1 &nbsp&nbsp<a href="#安装arch系统镜像" class="headerlink" title="安装arch系统镜像"></a>安装arch系统镜像</h1><ol>
@@ -3736,6 +3722,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>arch</tag>
         <tag>virtualbox</tag>
         <tag>pve</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Audacity总结</title>
+    <url>/software/audacity/</url>
+    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
+<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>audacity</tag>
+        <tag>音频</tag>
+        <tag>后期处理</tag>
       </tags>
   </entry>
   <entry>
@@ -4455,16 +4457,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Perforce Helix Core版本控制</title>
-    <url>/software/perforce/</url>
-    <content><![CDATA[<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
-<h1 id="安装">2 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Office总结笔记</title>
     <url>/software/office/</url>
     <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
@@ -4535,6 +4527,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>powerpoint</tag>
         <tag>操作</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Perforce Helix Core版本控制</title>
+    <url>/software/perforce/</url>
+    <content><![CDATA[<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
+<h1 id="安装">2 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
   </entry>
   <entry>
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
@@ -6437,11 +6439,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#x79;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#46;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#46;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -6838,101 +6840,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ Primer 第五版：第一章「开始」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap1/</url>
     <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
@@ -7075,11 +6982,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -7564,11 +7471,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -7863,10 +7770,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -8610,10 +8517,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -8781,10 +8688,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -9113,10 +9020,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -9143,11 +9050,106 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -10494,7 +10496,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#101;&#114;&#x6b;&#105;&#110;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#105;&#x73;&#116;&#x65;&#x72;&#107;&#x69;&#110;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
