@@ -539,7 +539,7 @@
     <p class="tag-bookmark-page">数据库</p>
     </div>
     <a href="https://dev.mysql.com/downloads/mysql/">MySQL Community版</a>
-    <a href="https://download.navicat.com/download/navicat170_premium_lite_cs_x64.exe">Navicat Premium Lite（绝版v17.0.13无需帐号）</a>
+    <a href="https://download.navicat.com/download/navicat170_premium_lite_cs_x64.exe">Navicat Premium Lite（v17.0.13无需帐号）</a>
     <a href="https://www.navicat.com.cn/download/navicat-premium-lite">Navicat Premium Lite（需帐号登录）</a>
     <a href="https://www.jetbrains.com/datagrip/">JetBrains DataGrip</a>
 </div>
@@ -2225,56 +2225,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown语法总结笔记</title>
     <url>/code/markdown/</url>
     <content><![CDATA[<h1 id="标题">1 &nbsp&nbsp<a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -2777,6 +2727,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python总结笔记</title>
     <url>/code/python/</url>
     <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
@@ -3153,6 +3153,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>正则表达式总结笔记</title>
+    <url>/code/regular-expressions/</url>
+    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
+<li>[\u4e00-\u9fa5] 匹配中文字符</li>
+<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
+</ul>
+<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>正则表达式</tag>
+        <tag>正则</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VSCode配置总结笔记</title>
     <url>/code/vscode/</url>
     <content><![CDATA[<h1 id="下载及安装VSCode">1 &nbsp&nbsp<a href="#下载及安装VSCode" class="headerlink" title="下载及安装VSCode"></a>下载及安装VSCode</h1><ul>
@@ -3223,25 +3242,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>vscode</tag>
         <tag>编辑器</tag>
         <tag>链接</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式总结笔记</title>
-    <url>/code/regular-expressions/</url>
-    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
-<li>[\u4e00-\u9fa5] 匹配中文字符</li>
-<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
-</ul>
-<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>正则表达式</tag>
-        <tag>正则</tag>
       </tags>
   </entry>
   <entry>
@@ -6518,11 +6518,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#x2e;&#x63;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#46;&#x63;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#x73;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#x74;&#104;&#97;&#x6e;&#107;&#x79;&#111;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -6956,6 +6956,101 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>第二章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第一章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ Primer 第五版：第一章「开始」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap1/</url>
     <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
@@ -7098,11 +7193,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>第一章</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -7587,11 +7682,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
+        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>第二章</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -7886,10 +7981,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -8633,10 +8728,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -8804,41 +8899,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
       </tags>
   </entry>
   <entry>
@@ -9165,107 +9231,41 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
 <ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <categories>
         <category>code-training</category>
-        <category>head-first-html-css-v2</category>
+        <category>cpp-primer-v5</category>
       </categories>
       <tags>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>第五版</tag>
       </tags>
   </entry>
   <entry>
@@ -9704,59 +9704,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -9956,6 +9903,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>blender</tag>
         <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -10612,7 +10612,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#105;&#x73;&#116;&#x65;&#x72;&#107;&#105;&#110;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
