@@ -797,6 +797,7 @@
 <div class="text-box">
     <div class="tag-align">
     <p class="tag-bookmark-page">网卡驱动</p>
+    </div>
     <a href="https://downloadcenter.intel.com">英特尔下载中心</a>
     <a href="https://www.mediatek.com/products/networking-and-connectivity/broadband-wifi">联发科下载中心</a>
     <a href="https://www.realtek.com/Download/Index?cate_id=194&menu_id=368">Realtek通讯网络ICs下载中心</a>
@@ -2897,25 +2898,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>正则表达式总结笔记</title>
-    <url>/code/regular-expressions/</url>
-    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
-<li>[\u4e00-\u9fa5] 匹配中文字符</li>
-<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
-</ul>
-<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>正则表达式</tag>
-        <tag>正则</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt总结笔记</title>
     <url>/code/qt/</url>
     <content><![CDATA[<h1 id="Qt语法">1 &nbsp&nbsp<a href="#Qt语法" class="headerlink" title="Qt语法"></a>Qt语法</h1><p><a href="https://www.cnblogs.com/jfzhu/p/13501678.html">Qt信号与槽使用方法最完整总结</a></p>
@@ -3232,6 +3214,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>源码</tag>
         <tag>qt creator</tag>
         <tag>界面开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式总结笔记</title>
+    <url>/code/regular-expressions/</url>
+    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
+<li>[\u4e00-\u9fa5] 匹配中文字符</li>
+<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
+</ul>
+<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>正则表达式</tag>
+        <tag>正则</tag>
       </tags>
   </entry>
   <entry>
@@ -6583,11 +6584,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#46;&#x63;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#x75;&#46;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#99;&#x6f;&#109;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -10544,42 +10545,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>404 Not Found：该页无法显示</title>
-    <url>//404.html</url>
-    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
-
-<div class="navigation-border">
-<center>
-<a href="/navigation-announcement">
-<button class="navigation-button-box">站点导航和公告</button></a>
-<a href="/">
-<button class="navigation-button-box">回主页</button></a>
-</center></div>
-
-<div class="navigation-border">
-<center>
-<a href="/archives">
-<button class="navigation-button-box">所有文章</button></a>
-<a href="/about#联系方式">
-<button class="navigation-button-box">联系我</button></a>
-<a href="/about">
-<button class="navigation-button-box">关于我</button></a>
-<a href="/about/about-site/">
-<button class="navigation-button-box">关于本站</button></a>
-</center></div>
-
-<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
-
-<center>
-<div style="text-align: center; width: 50%;">
-可以听歌，稍作休息~
-<div style="text-align: left">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
-</div></div>
-</center>
-]]></content>
-  </entry>
-  <entry>
     <title>关于我</title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -10677,7 +10642,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#105;&#115;&#x74;&#101;&#x72;&#107;&#x69;&#x6e;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#x72;&#x6b;&#x69;&#110;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -10790,6 +10755,42 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>404 Not Found：该页无法显示</title>
+    <url>//404.html</url>
+    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
+
+<div class="navigation-border">
+<center>
+<a href="/navigation-announcement">
+<button class="navigation-button-box">站点导航和公告</button></a>
+<a href="/">
+<button class="navigation-button-box">回主页</button></a>
+</center></div>
+
+<div class="navigation-border">
+<center>
+<a href="/archives">
+<button class="navigation-button-box">所有文章</button></a>
+<a href="/about#联系方式">
+<button class="navigation-button-box">联系我</button></a>
+<a href="/about">
+<button class="navigation-button-box">关于我</button></a>
+<a href="/about/about-site/">
+<button class="navigation-button-box">关于本站</button></a>
+</center></div>
+
+<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
+
+<center>
+<div style="text-align: center; width: 50%;">
+可以听歌，稍作休息~
+<div style="text-align: left">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
+</div></div>
+</center>
+]]></content>
   </entry>
   <entry>
     <title>知识总结手册</title>
@@ -11377,18 +11378,6 @@ CGI&后期处理
 ]]></content>
   </entry>
   <entry>
-    <title>软件作品</title>
-    <url>/works/software-works/index.html</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/works/software-works/toggle-language">
-<button class="navigation-button-box">切换语言</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/batch-tools">
-<button class="navigation-button-box">批处理工具</button></a>
-</div>
-]]></content>
-  </entry>
-  <entry>
     <title>「批处理工具」使用手册</title>
     <url>/works/software-works/batch-tools/index.html</url>
     <content><![CDATA[<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一些方便工作的批处理程序。</p>
@@ -11547,6 +11536,18 @@ CGI&后期处理
 <h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Arch Linux &#x2F; Mac<br>Shell: Git Bash &#x2F; Zsh</p>
 <h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>批处理工具</strong> © Mr. Kin，所有文件均采用 <a href="https://github.com/Mister-Kin/BatchTools/blob/master/LICENSE">WTFPL</a> 许可协议进行发布。</p>
 <p>由 Mr. Kin 著作并维护。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>软件作品</title>
+    <url>/works/software-works/index.html</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/works/software-works/toggle-language">
+<button class="navigation-button-box">切换语言</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/batch-tools">
+<button class="navigation-button-box">批处理工具</button></a>
+</div>
 ]]></content>
   </entry>
   <entry>
