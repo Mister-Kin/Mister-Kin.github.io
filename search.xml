@@ -1315,102 +1315,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>闪存驱动器设计</title>
-    <url>/cad/flash-disk/</url>
-    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
-<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
-<p>部分店铺的网评：大树推荐，翼浪排除</p>
-</blockquote>
-<p><strong>店铺总结（个人购买经验总结）：</strong></p>
-<ul>
-<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
-<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
-<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
-</ul>
-<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
-<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
-<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
-</ul>
-<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
-<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
-<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
-<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
-</ul>
-</li>
-<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
-<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
-<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
-</ul>
-</li>
-<li>THGBMFG9C4LBAIR：64GB<ul>
-<li>颗粒从酷派平板拆出来</li>
-</ul>
-</li>
-</ul>
-<p>颗粒的部分资料：</p>
-<ul>
-<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
-</ul>
-<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
-<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
-<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
-<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
-<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
-</ul>
-<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
-<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
-<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
-<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
-</ul>
-<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
-<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
-<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
-</ul>
-<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
-<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
-<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
-<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
-</ul>
-<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
-<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
-<li>焊接颗粒到主控盘，插上电脑</li>
-<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
-<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
-<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
-<li>「量产测试」标签页点击「开始」就会开始量产</li>
-</ol>
-<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
-<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
-<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
-<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
-<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
-</ul>
-<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
-<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
-<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
-<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>量产</tag>
-        <tag>U盘</tag>
-        <tag>固态</tag>
-        <tag>开卡</tag>
-        <tag>测试架</tag>
-        <tag>主控</tag>
-        <tag>颗粒</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>笔记本硬件基础</title>
     <url>/cad/laptop-fundamental/</url>
     <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
@@ -1528,6 +1432,102 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>硬件</tag>
         <tag>笔记本</tag>
         <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>闪存驱动器设计</title>
+    <url>/cad/flash-disk/</url>
+    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
+<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+</blockquote>
+<p><strong>店铺总结（个人购买经验总结）：</strong></p>
+<ul>
+<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
+<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
+<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
+</ul>
+<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
+<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
+</ul>
+<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
+<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
+<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
+</ul>
+</li>
+<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
+<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
+<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
+</ul>
+</li>
+<li>THGBMFG9C4LBAIR：64GB<ul>
+<li>颗粒从酷派平板拆出来</li>
+</ul>
+</li>
+</ul>
+<p>颗粒的部分资料：</p>
+<ul>
+<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
+</ul>
+<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
+<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
+<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
+<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
+</ul>
+<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
+<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
+<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
+<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
+</ul>
+<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
+<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
+<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
+</ul>
+<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
+<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
+<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
+<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
+</ul>
+<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
+<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<li>焊接颗粒到主控盘，插上电脑</li>
+<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
+<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
+<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
+<li>「量产测试」标签页点击「开始」就会开始量产</li>
+</ol>
+<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
+<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
+<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
+<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
+<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
+</ul>
+<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
+<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
+<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>量产</tag>
+        <tag>U盘</tag>
+        <tag>固态</tag>
+        <tag>开卡</tag>
+        <tag>测试架</tag>
+        <tag>主控</tag>
+        <tag>颗粒</tag>
       </tags>
   </entry>
   <entry>
@@ -1930,20 +1930,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>docker</title>
-    <url>/code/docker/</url>
-    <content><![CDATA[<h1 id="Docker-Desktop">1 &nbsp&nbsp<a href="#Docker-Desktop" class="headerlink" title="Docker Desktop"></a>Docker Desktop</h1><h2 id="Docker-Unexpected-error">1.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
-<p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数据库技术总结笔记</title>
     <url>/code/database/</url>
     <content><![CDATA[<h1 id="常见数据库">1 &nbsp&nbsp<a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h1><ul>
@@ -1984,6 +1970,20 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>mongodb</tag>
         <tag>sql</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>docker</title>
+    <url>/code/docker/</url>
+    <content><![CDATA[<h1 id="Docker-Desktop">1 &nbsp&nbsp<a href="#Docker-Desktop" class="headerlink" title="Docker Desktop"></a>Docker Desktop</h1><h2 id="Docker-Unexpected-error">1.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
+<p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
   </entry>
   <entry>
     <title>Git总结笔记</title>
@@ -2904,25 +2904,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>正则表达式总结笔记</title>
-    <url>/code/regular-expressions/</url>
-    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
-<li>[\u4e00-\u9fa5] 匹配中文字符</li>
-<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
-</ul>
-<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>正则表达式</tag>
-        <tag>正则</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt总结笔记</title>
     <url>/code/qt/</url>
     <content><![CDATA[<h1 id="Qt语法">1 &nbsp&nbsp<a href="#Qt语法" class="headerlink" title="Qt语法"></a>Qt语法</h1><p><a href="https://www.cnblogs.com/jfzhu/p/13501678.html">Qt信号与槽使用方法最完整总结</a></p>
@@ -3239,6 +3220,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>源码</tag>
         <tag>qt creator</tag>
         <tag>界面开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式总结笔记</title>
+    <url>/code/regular-expressions/</url>
+    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
+<li>[\u4e00-\u9fa5] 匹配中文字符</li>
+<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
+</ul>
+<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>正则表达式</tag>
+        <tag>正则</tag>
       </tags>
   </entry>
   <entry>
@@ -3778,56 +3778,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>翻译规划（作废）</title>
     <url>/translations/translation-roadmap/</url>
     <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
@@ -4060,6 +4010,72 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Audacity总结</title>
+    <url>/software/audacity/</url>
+    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
+<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>audacity</tag>
+        <tag>音频</tag>
+        <tag>后期处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装Arch Linux的踩坑记录总结</title>
     <url>/software/arch-linux/</url>
     <content><![CDATA[<h1 id="安装arch系统镜像">1 &nbsp&nbsp<a href="#安装arch系统镜像" class="headerlink" title="安装arch系统镜像"></a>安装arch系统镜像</h1><ol>
@@ -4170,20 +4186,31 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Audacity总结</title>
-    <url>/software/audacity/</url>
-    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
-<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
+    <title>FFmpeg</title>
+    <url>/software/ffmpeg/</url>
+    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
+<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
+
+<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
+
+<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
+<li>yuv420p的p代表planar</li>
+<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
+<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
+<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
+<li>aac编码：网络视频128k；高质量192k</li>
+</ul>
+<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
+<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
+<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
+<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
+<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
 ]]></content>
       <categories>
         <category>software</category>
       </categories>
-      <tags>
-        <tag>audacity</tag>
-        <tag>音频</tag>
-        <tag>后期处理</tag>
-      </tags>
   </entry>
   <entry>
     <title>CG基础</title>
@@ -4212,33 +4239,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>CG</tag>
         <tag>基础</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>FFmpeg</title>
-    <url>/software/ffmpeg/</url>
-    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
-<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
-
-<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
-
-<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
-<li>yuv420p的p代表planar</li>
-<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
-<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
-<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
-<li>aac编码：网络视频128k；高质量192k</li>
-</ul>
-<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
-<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
-<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
-<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
-<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
   </entry>
   <entry>
     <title>Inkscape总结</title>
@@ -6617,11 +6617,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#99;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#x63;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#115;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -7052,6 +7052,156 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
+<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
+<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
+<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
+<p>bash: <code>echo $?</code>，输出127</p>
+<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
+<p>编写程序，在标准输出上打印 Hello, World。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
+<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
+<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
+<p>解释下面程序片段是否合法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
+</blockquote>
+<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
+<p>修正方式1：二三行添加cout对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>修正方式2：删除一二行多余的分号</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
+<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
+<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
+</blockquote>
+<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
+<p>编写程序，使用while循环将50到100的整数相加。</p>
+</blockquote>
+<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
+<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
+</blockquote>
+<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
+<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
+</blockquote>
+<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
+<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
+
+<p>从-100加到100，sum的终值为0。</p>
+<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
+<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
+</blockquote>
+<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
+<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
+</blockquote>
+<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
+<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
+<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
+<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
+</blockquote>
+<p>编译器可检查的错误：</p>
+<ol>
+<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
+<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
+<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
+</ol>
+<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
+<p>编写程序，从cin读取一组数，输出其和。</p>
+</blockquote>
+<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
+<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
+<ul>
+<li>Windows：ctrl+z</li>
+<li>UNIX（包括Mac OS X）：ctrl+d</li>
+</ul>
+<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
+<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
+</blockquote>
+<ol>
+<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
+<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
+</ol>
+<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
+<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
+</blockquote>
+<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
+<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
+</blockquote>
+<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
+<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
+</blockquote>
+<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
+<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
+</blockquote>
+<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
+<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
+</blockquote>
+<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
+<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
+</blockquote>
+<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
+<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
+</blockquote>
+<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
+<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -7538,159 +7688,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第二章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
-<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
-<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
-<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
-<p>bash: <code>echo $?</code>，输出127</p>
-<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
-<p>编写程序，在标准输出上打印 Hello, World。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
-<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
-<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
-<p>解释下面程序片段是否合法。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
-</blockquote>
-<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
-<p>修正方式1：二三行添加cout对象</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>修正方式2：删除一二行多余的分号</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
-<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
-<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
-</blockquote>
-<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
-<p>编写程序，使用while循环将50到100的整数相加。</p>
-</blockquote>
-<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
-<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
-</blockquote>
-<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
-<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
-</blockquote>
-<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
-<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
-
-<p>从-100加到100，sum的终值为0。</p>
-<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
-<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
-</blockquote>
-<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
-<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
-</blockquote>
-<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
-<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
-<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
-<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
-</blockquote>
-<p>编译器可检查的错误：</p>
-<ol>
-<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
-<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
-<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
-</ol>
-<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
-<p>编写程序，从cin读取一组数，输出其和。</p>
-</blockquote>
-<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
-<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
-<ul>
-<li>Windows：ctrl+z</li>
-<li>UNIX（包括Mac OS X）：ctrl+d</li>
-</ul>
-<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
-<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
-</blockquote>
-<ol>
-<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
-<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
-</ol>
-<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
-<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
-</blockquote>
-<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
-<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
-</blockquote>
-<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
-<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
-</blockquote>
-<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
-<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
-</blockquote>
-<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
-<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
-</blockquote>
-<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
-<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
-</blockquote>
-<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
-<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
-</blockquote>
-<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
-<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第一章</tag>
       </tags>
   </entry>
   <entry>
@@ -9244,6 +9244,35 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -9272,41 +9301,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>head-first-html-css-v2</category>
       </categories>
       <tags>
+        <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>第一章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
       </tags>
   </entry>
   <entry>
@@ -9337,9 +9337,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>head-first-html-css-v2</category>
       </categories>
       <tags>
-        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>第二章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
@@ -9559,6 +9559,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>qt6</tag>
         <tag>开发</tag>
         <tag>第一版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -9800,59 +9853,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -10711,7 +10711,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#x69;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#x65;&#x72;&#x6b;&#x69;&#x6e;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -11059,6 +11059,7 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 
 <h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a><center>2025</center></h1><div class="hang-retract">
 
+<p>2025-02-21：重新启用<code>hexo-theme-next</code>主题的<code>动画效果</code>和<code>页面加载进度样式</code>，以改善页面浏览体验。</p>
 <p>2025-01-13：移除<code>hexo-tag-mmedia</code>（该插件已久不更新，选择弃用，相关功能改用<code>&lt;iframe&gt;</code>标签实现）。</p>
 <p>2025-01-11：移除依赖包<code>js-yaml</code>：已经不存在<a href="https://github.com/hexojs/hexo/issues/4917">YAMLException</a>错误。</p>
 <p>2025-01-10：修复插件<code>hexo-heading-index</code>：<a href="https://github.com/Mister-Kin/hexo-heading-index/commit/50ed3f449bb8d43e998ca31a6af01ac7c33ace22">fix: sometimes render blank content for post excerpt and cheerio always still decodes html entities</a>。</p>
