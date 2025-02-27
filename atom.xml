@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2025-01-19T19:23:02.000Z</updated>
+  <updated>2025-02-27T16:00:50.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI总结</title>
+    <link href="https://mister-kin.github.io/software/ai/"/>
+    <id>https://mister-kin.github.io/software/ai/</id>
+    <published>2025-02-27T15:56:16.000Z</published>
+    <updated>2025-02-27T16:00:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Stable-Diffusion">1 &nbsp&nbsp<a href="#Stable-Diffusion" class="headerlink" title="Stable Diffusion"></a>Stable Diffusion</h1><h2 id="Stable-Diffusion-Webui局域网多人共享">1.1 &nbsp&nbsp<a href="#Stable-Diffusion-Webui局域网多人共享" class="headerlink" title="Stable Diffusion Webui局域网多人共享"></a>Stable Diffusion Webui局域网多人共享</h2><p>默认情况下，Stable Diffusion Webui实现的局域网共享，无法实现多人队列提交，并且SD模型和VAE模型是全局设置，一人改变会导致后台改变，而网页端显示的值并未变化更新。</p><p>队列提交&#x2F;多人共享使用的一些插件实现：</p><ul><li><a href="https://github.com/ArtVentureX/sd-webui-agent-scheduler">sd-webui-agent-scheduler</a></li><li><a href="https://github.com/wolverinn/stable-diffusion-multi-user">stable-diffusion-multi-user</a></li></ul><p>多人共享使用的一些问题讨论：</p><ul><li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/11531">multiple users use it at the same time</a></li></ul><h2 id="Stable-Diffusion-Webui多卡算力">1.2 &nbsp&nbsp<a href="#Stable-Diffusion-Webui多卡算力" class="headerlink" title="Stable Diffusion Webui多卡算力"></a>Stable Diffusion Webui多卡算力</h2><p>当前Webui并未支持多卡同时加速计算，通过共享实例进程实现多人使用（队列提交）均衡多卡负载倒是可以实现。</p><h1 id="Yolo目标检测框架">2 &nbsp&nbsp<a href="#Yolo目标检测框架" class="headerlink" title="Yolo目标检测框架"></a>Yolo目标检测框架</h1><h2 id="毛囊检测">2.1 &nbsp&nbsp<a href="#毛囊检测" class="headerlink" title="毛囊检测"></a>毛囊检测</h2><ul><li>数据集：<ul><li><a href="https://universe.roboflow.com/project-0iwdt/hair-tootr/dataset/3">hair Image Dataset</a></li><li><a href="https://drive.google.com/file/d/1rMw8OzgxuTOSqKD8EBPN_BYXW18q9d3H/view">FDU_HairFollicleDataset.zip</a></li></ul></li><li>论文资料<ul><li><a href="https://dl.acm.org/doi/abs/10.1007/978-3-031-44207-0_4">A New Dataset for Hair Follicle Recognition and Classification in Robot-Aided Hair Transplantation</a></li><li>上一篇论文镜像链接（附有数据集下载链接，已明写在上一小节）<a href="https://link.springer.com/chapter/10.1007/978-3-031-44207-0_4">A New Dataset for Hair Follicle Recognition and Classification in Robot-Aided Hair Transplantation</a></li></ul></li></ul><h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Accelerate doesn&#39;t use multi GPU with automatic1111[EB&#x2F;OL]. <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/13942">https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/13942</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Stable-Diffusion&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#Stable-Diffusion&quot; class=&quot;headerlink&quot; title=&quot;Stable Diffusion&quot;&gt;&lt;/a&gt;Stable Diffusion&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
+    
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="SD" scheme="https://mister-kin.github.io/tags/SD/"/>
+    
+    <category term="stable diffusion" scheme="https://mister-kin.github.io/tags/stable-diffusion/"/>
+    
+    <category term="stable diffusion webui" scheme="https://mister-kin.github.io/tags/stable-diffusion-webui/"/>
+    
+    <category term="AIGC" scheme="https://mister-kin.github.io/tags/AIGC/"/>
+    
+    <category term="AI" scheme="https://mister-kin.github.io/tags/AI/"/>
+    
+    <category term="yolo" scheme="https://mister-kin.github.io/tags/yolo/"/>
+    
+  </entry>
   
   <entry>
     <title>开发总结</title>
@@ -46,9 +85,9 @@
     <link href="https://mister-kin.github.io/code/data-structure/"/>
     <id>https://mister-kin.github.io/code/data-structure/</id>
     <published>2025-01-16T18:09:44.000Z</published>
-    <updated>2025-01-19T19:23:02.000Z</updated>
+    <updated>2025-02-27T16:00:50.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul><li>集合的定义：由一个或多个确定的元素所构成的整体。</li><li>集合的特性：<ul><li>集合里的元素类型不一定相同</li><li>集合里的元素没有顺序</li></ul></li><li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul><li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li><li>列表最常见的表现形式：数组和链表<ul><li>C++和Java中，数组中的元素类型必须保持一致。</li><li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li></ul></li><li>特殊类型的列表：栈和队列</li></ul></li><li>列表和数组的区别<ul><li>数组<ul><li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li><li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li></ul></li><li>列表<ul><li>列表没有<code>索引</code>。</li><li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li></ul></li></ul></li></ul><h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><ul><li>读取元素</li></ul><h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul><li>集合的定义：由一个或多个确定的元素所构成的整体。</li><li>集合的特性：<ul><li>集合里的元素类型不一定相同</li><li>集合里的元素没有顺序</li></ul></li><li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul><li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li><li>列表最常见的表现形式：数组和链表<ul><li>C++和Java中，数组中的元素类型必须保持一致。</li><li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li></ul></li><li>特殊类型的列表：栈和队列</li></ul></li><li>列表和数组的区别<ul><li>数组<ul><li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li><li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li></ul></li><li>列表<ul><li>列表没有<code>索引</code>。</li><li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li></ul></li></ul></li></ul><h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p><ul><li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul><li>时间复杂度：O(1)</li></ul></li><li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul><li>时间复杂度：O(N)</li></ul></li><li>插入元素<ul><li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li><li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li></ul></li><li>删除元素：与插入元素类似<ul><li>末尾删除：只需要一步</li><li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li><li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li></ul></li></ul><h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>]]></content>
     
     
       
@@ -574,44 +613,6 @@
     <category term="英文" scheme="https://mister-kin.github.io/tags/%E8%8B%B1%E6%96%87/"/>
     
     <category term="术语" scheme="https://mister-kin.github.io/tags/%E6%9C%AF%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>英文词典常用缩写</title>
-    <link href="https://mister-kin.github.io/english/abbr/"/>
-    <id>https://mister-kin.github.io/english/abbr/</id>
-    <published>2024-05-11T19:38:46.000Z</published>
-    <updated>2024-05-12T07:49:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>abbr. abbreviations 缩写</li><li>v. verb 动词</li><li>vt. transitive verb 及物动词</li><li>vi. intransitive verb 不及物动词</li><li>n. noun 名词</li><li>adj. adjective 形容词</li><li>adv. adverb 副词</li><li>prep. preposition 介词</li><li>pron. pronoun 代词</li><li>conj. conjunction 连词</li><li>abbr. abbreviation 缩写</li><li>det. determiner 限定词</li><li>sing. singular 单数</li><li>pl. plural 复数</li><li>exclamation 感叹词</li><li>symb. symbol 符号</li><li>opp. opposite 反义词</li><li>syn. synonym 同义词</li><li>fig. figurative 比喻的</li><li>derog. derogatie 贬义的</li><li>fml. formal 用于正式文体</li><li>infml. informal 用于非正式文体</li><li>BrE 英国英语</li><li>AmE 美国英语</li><li>C countable 可数名词</li><li>U uncountable 不可数名词</li><li>sb. somebody 某人</li><li>sth. something 某事物</li><li>pt past tense 过去时</li><li>pp past participle 过去分词</li><li>[计] 计算机</li><li>[物] 物理</li><li>[电] 电路</li><li>[医] 医学</li></ul>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;abbr. abbreviations 缩写&lt;/li&gt;
-&lt;li&gt;v. verb 动词&lt;/li&gt;
-&lt;li&gt;vt. transitive verb 及物动词&lt;/li&gt;
-&lt;li&gt;vi. intransitive verb 不及物动词&lt;/li&gt;
-&lt;li&gt;n. noun</summary>
-        
-      
-    
-    
-    
-    <category term="english" scheme="https://mister-kin.github.io/categories/english/"/>
-    
-    
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="英文" scheme="https://mister-kin.github.io/tags/%E8%8B%B1%E6%96%87/"/>
-    
-    <category term="词典" scheme="https://mister-kin.github.io/tags/%E8%AF%8D%E5%85%B8/"/>
-    
-    <category term="缩写" scheme="https://mister-kin.github.io/tags/%E7%BC%A9%E5%86%99/"/>
     
   </entry>
   
