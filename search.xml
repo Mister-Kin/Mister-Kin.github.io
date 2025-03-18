@@ -785,6 +785,7 @@
     <a href="https://www.backblaze.com/blog/backblaze-drive-stats-for-2024/">Backblaze Drive Stats</a>
     <a href="https://www.chiphell.com/thread-2568242-1-1.html">硬盘SMART信息解读</a>
     <a href="https://hdd.by/Victoria/">Victoria HDD/SSD</a>
+    <a href="https://sourceforge.net/projects/iometer/files/iometer-stable/">IOmeter </a>
     <a href="https://www.techpowerup.com/download/atto-disk-benchmark/">ATTO Disk Benchmark</a>
     <a href="https://www.hdtune.com/download.html">HD Tune Pro</a>
     <a href="https://crystalmark.info/en/software/crystaldiskinfo/">CrystalDiskInfo</a>
@@ -794,6 +795,21 @@
     <a href="https://www.52pojie.cn/thread-1658820-1-1.html">TXBench汉化版</a>
     <a href="https://www.texim.jp/txbench.html">TXBench官链</a>
     <a href="https://www.texim.jp/dl/txbench098b_eng.zip">0.98 Beta版TXBench官链</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">硬盘Harddisk游戏基准测试</p>
+    </div>
+    <a href="https://na.finalfantasyxiv.com/benchmark/">最终幻想 14：基准测试官链</a>
+    <a href="https://download.finalfantasyxiv.com/Z27rsYvWfCa3iTaM/ffxiv-dawntrail-bench_v11.zip">最终幻想 14：黄金的遗产 v7.0 第二版</a>
+    <a href="https://download.finalfantasyxiv.com/s9qmq6SJfMMqYM4o/ffxiv-dawntrail-bench.zip">最终幻想 14：黄金的遗产 v7.0</a>
+    <a href="https://download.finalfantasyxiv.com/ys8glaimvmykn88p/ffxiv-endwalker-bench.zip">最终幻想 14：晓月之终途 v6.0</a>
+    <a href="http://gdl.square-enix.com/ffxiv/nr2xkhecw9vrkuqy/ffxiv-shadowbringers-bench.zip">最终幻想 14：暗影之逆焰 v5.0</a>
+    <a href="http://gdl.square-enix.com/ffxiv/ga61lwajq3g5r2qb/ffxiv-stormblood-bench.zip">最终幻想 14：红莲之狂潮 v4.0</a>
+    <a href="http://gdl.square-enix.com/ffxiv/inst/ffxiv-heavensward-bench.zip">最终幻想 14：苍穹之禁城 v3.0</a>
+    <a href="http://gdl.square-enix.com/ffxiv/inst/FFXIV-ARR-Bench-Character.zip">最终幻想 14 v2.0</a>
+    <a href="http://http.download.nvidia.com/downloads/nZone/demos/FFXIVBenchmark.zip">最终幻想 14 v1.0</a>
 </div>
 
 <div class="text-box">
@@ -2047,6 +2063,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机安全</title>
     <url>/code/computer-security/</url>
     <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
@@ -2063,19 +2092,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>计算机安全</tag>
         <tag>信息安全</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
   </entry>
   <entry>
     <title>css总结笔记</title>
@@ -3985,6 +4001,24 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Aegisub总结</title>
+    <url>/software/aegisub/</url>
+    <content><![CDATA[<p>油管的中英双语字幕，要先合并之后再导入aeg</p>
+<p>自己自制的双语，可先将中文打轴，之后复制行，并将翻译好的英文从复制的起始处开始粘贴。</p>
+<p>如果同一个样式的呈现的大小不一致，请重设分辨率再从样式库调用样式。</p>
+<p>时间轴批量置零，全选，在设置框将开始时间、结束时间、持续时间全部置零</p>
+<p>aegisub的频率模式（软件已经默认设置好缩放参数，即默认显示出来是人声频率左右的范围）</p>
+<h1 id="字幕格式设置">1 &nbsp&nbsp<a href="#字幕格式设置" class="headerlink" title="字幕格式设置"></a>字幕格式设置</h1><p>双语主：思源黑体，粗体，黑色，大小56，边框1，阴影1.8，垂直边距75<br>双语次：思源黑体，非粗体，#EBA862，大小36，边框1，阴影1.8，垂直边距40<br>单字幕：双语主，取垂直边距50。样式修改时，和「双语主」同步，先复制一份，再改垂直边距50</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>aegisub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AI总结</title>
     <url>/software/ai/</url>
     <content><![CDATA[<h1 id="LLM大模型">1 &nbsp&nbsp<a href="#LLM大模型" class="headerlink" title="LLM大模型"></a>LLM大模型</h1><h2 id="Ollama安装教程">1.1 &nbsp&nbsp<a href="#Ollama安装教程" class="headerlink" title="Ollama安装教程"></a>Ollama安装教程</h2><ol>
@@ -4049,24 +4083,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>AIGC</tag>
         <tag>AI</tag>
         <tag>yolo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Aegisub总结</title>
-    <url>/software/aegisub/</url>
-    <content><![CDATA[<p>油管的中英双语字幕，要先合并之后再导入aeg</p>
-<p>自己自制的双语，可先将中文打轴，之后复制行，并将翻译好的英文从复制的起始处开始粘贴。</p>
-<p>如果同一个样式的呈现的大小不一致，请重设分辨率再从样式库调用样式。</p>
-<p>时间轴批量置零，全选，在设置框将开始时间、结束时间、持续时间全部置零</p>
-<p>aegisub的频率模式（软件已经默认设置好缩放参数，即默认显示出来是人声频率左右的范围）</p>
-<h1 id="字幕格式设置">1 &nbsp&nbsp<a href="#字幕格式设置" class="headerlink" title="字幕格式设置"></a>字幕格式设置</h1><p>双语主：思源黑体，粗体，黑色，大小56，边框1，阴影1.8，垂直边距75<br>双语次：思源黑体，非粗体，#EBA862，大小36，边框1，阴影1.8，垂直边距40<br>单字幕：双语主，取垂直边距50。样式修改时，和「双语主」同步，先复制一份，再改垂直边距50</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>aegisub</tag>
       </tags>
   </entry>
   <entry>
@@ -6010,6 +6026,31 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Android系统排障总结</title>
+    <url>/troubleshooting/android-troubleshooting/</url>
+    <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
+<h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol>
+<li>更新到提示你“立即安装”这一步，先不要点</li>
+<li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li>
+<li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li>
+</ol>
+<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机硬件排障总结</title>
     <url>/troubleshooting/hardware-troubleshooting/</url>
     <content><![CDATA[<h1 id="PC组件常见品牌质保信息查询">1 &nbsp&nbsp<a href="#PC组件常见品牌质保信息查询" class="headerlink" title="PC组件常见品牌质保信息查询"></a>PC组件常见品牌质保信息查询</h1><p>见「<a href="/bookmark/#%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6%E5%93%81%E7%89%8C%E8%B4%A8%E4%BF%9D%E6%9F%A5%E8%AF%A2">电脑硬件品牌质保查询</a>」</p>
@@ -6626,31 +6667,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Android系统排障总结</title>
-    <url>/troubleshooting/android-troubleshooting/</url>
-    <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
-<h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol>
-<li>更新到提示你“立即安装”这一步，先不要点</li>
-<li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li>
-<li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li>
-</ol>
-<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>路由排障总结</title>
     <url>/troubleshooting/router-troubleshooting/</url>
     <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
@@ -6880,11 +6896,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">2.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#46;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#x6e;&#107;&#x73;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案2：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#99;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#115;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -8259,177 +8275,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：第五章「语句」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap5/</url>
-    <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
-<p>什么是空语句？什么时候会用到空语句？</p>
-</blockquote>
-<p>只含有一个单独的分号的语句是空语句。如：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">;</span><br></pre></td></tr></table></figure>
-<p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，此时应该使用空语句。（建议做好注释说明空语句作用）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重复读入数据直至到达文件末尾或某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (cin &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-2"><a href="#练习5-2" class="headerlink" title="练习5.2"></a>练习5.2</h2><blockquote>
-<p>什么是块？什么时候会用到块？</p>
-</blockquote>
-<p>用花括号括起来的语句和声明的序列就是块。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果在程序的某个地方，逻辑上需要多条语句，而语法上只能容纳一条语句，此时应该使用块。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">    ++val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-3"><a href="#练习5-3" class="headerlink" title="练习5.3"></a>练习5.3</h2><blockquote>
-<p>使用逗号运算符重写（参见4.10节，第140页）1.4.1节的 while 循环，使它不再需要块，观察改写之后的代码可读性提高了还是降低了。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>)</span><br><span class="line">    sum += val, ++val;</span><br></pre></td></tr></table></figure>
-<p>代码的可读性降低了。</p>
-<h2 id="练习5-4"><a href="#练习5-4" class="headerlink" title="练习5.4"></a>练习5.4</h2><blockquote>
-<p>说明下列例子的含义，如果存在问题，试着修改它。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">while</span> (string::iterator iter != s.<span class="built_in">end</span>()) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">(b) <span class="keyword">while</span> (<span class="type">bool</span> status = <span class="built_in">find</span>(word)) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">        <span class="keyword">if</span> (!status) &#123; <span class="comment">/* . . . */</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 这个循环试图用迭代器遍历string，但是变量的定义应该放在循环的外面，目前每次循环都会重新定义一个变量，明显是错误的。</li>
-<li>(b) 这个循环的 while 和 if 是两个独立的语句，if 语句中无法访问 status 变量，正确的做法是应该将 if 语句包含在 while 里面，</li>
-</ul>
-<h2 id="练习5-5"><a href="#练习5-5" class="headerlink" title="练习5.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_5.cpp">练习5.5</a></h2><blockquote>
-<p>写一段自己的程序，使用if else 语句实现把数字转换为字母成绩的要求。</p>
-</blockquote>
-<h2 id="练习5-6"><a href="#练习5-6" class="headerlink" title="练习5.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_6.cpp">练习5.6</a></h2><blockquote>
-<p>改写上一题的程序，使用条件运算符（参见4.7节，第134页）代替if else语句。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="练习5-7"><a href="#练习5-7" class="headerlink" title="练习5.7"></a>练习5.7</h2><blockquote>
-<p>改写下列代码段中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">if</span> (ival1 != ival2)</span><br><span class="line">        ival1 = ival2</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ival1 = ival2 = <span class="number">0</span>;</span><br><span class="line">(b) <span class="keyword">if</span> (ival &lt; minval)</span><br><span class="line">        minval = ival;</span><br><span class="line">        occurs = <span class="number">1</span>;</span><br><span class="line">(c) <span class="keyword">if</span> (<span class="type">int</span> ival = <span class="built_in">get_value</span>())</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = &quot;</span> &lt;&lt; ival &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (!ival)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = 0\n&quot;</span>;</span><br><span class="line">(d) <span class="keyword">if</span> (ival = <span class="number">0</span>)</span><br><span class="line">        ival = <span class="built_in">get_value</span>();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) <code>ival1 = ival2</code> 后面少了分号。</li>
-<li>(b) 应该用花括号括起来。</li>
-<li>(c) <code>if (!ival)</code> 应该改为 <code>else</code>。</li>
-<li>(d) <code>if (ival = 0)</code> 应该改为 <code>if (ival == 0)</code>。</li>
-</ul>
-<h2 id="练习5-8"><a href="#练习5-8" class="headerlink" title="练习5.8"></a>练习5.8</h2><blockquote>
-<p>什么是“悬垂else”？C++语言是如何处理else子句的？</p>
-</blockquote>
-<p>C++语言规定else与它最近的尚未匹配的if匹配。</p>
-<h2 id="练习5-9"><a href="#练习5-9" class="headerlink" title="练习5.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_9.cpp">练习5.9</a></h2><blockquote>
-<p>编写一段程序，使用一系列if语句统计从cin读入的文本中有多少元音字母。</p>
-</blockquote>
-<h2 id="练习5-10"><a href="#练习5-10" class="headerlink" title="练习5.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_10.cpp">练习5.10</a></h2><blockquote>
-<p>我们之前实现的统计元音字母的程序存在一个问题：如果元音字母以大写形式出现，不会被统计在内。编写一段程序，既统计元音字母的小写形式，也统计大写形式，也就是说，新程序遇到&#39;a&#39;和&#39;A&#39;都应该递增 aCnt 的值，以此类推。</p>
-</blockquote>
-<h2 id="练习5-11"><a href="#练习5-11" class="headerlink" title="练习5.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_11.cpp">练习5.11</a></h2><blockquote>
-<p>修改统计元音字母的程序，使其也能统计空格、制表符、和换行符的数量。</p>
-</blockquote>
-<h2 id="练习5-12"><a href="#练习5-12" class="headerlink" title="练习5.12"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_12.cpp">练习5.12</a></h2><blockquote>
-<p>修改统计元音字母的程序，使其能统计以下含有两个字符的字符序列的数量：ff、fl和fi。</p>
-</blockquote>
-<h2 id="练习5-13"><a href="#练习5-13" class="headerlink" title="练习5.13"></a>练习5.13</h2><blockquote>
-<p>下面显示的每个程序都含有一个常见的编程错误，指出错误在哪里，然后修改它们。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line">    <span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++;</span><br><span class="line">        <span class="keyword">default</span>: iouCnt++;</span><br><span class="line">    &#125;</span><br><span class="line">(b) <span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line">    <span class="keyword">switch</span> (index) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="type">int</span> ix = <span class="built_in">get_value</span>();</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            ix = ivec.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">    &#125;</span><br><span class="line">(c) <span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>:</span><br><span class="line">            oddcnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>:</span><br><span class="line">            evencnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">(d) <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line">    <span class="type">unsigned</span> bufsize;</span><br><span class="line">    <span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line">    <span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">        <span class="keyword">case</span> ival:</span><br><span class="line">            bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> jval:</span><br><span class="line">            bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kval:</span><br><span class="line">            bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 少了 break语句。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line"><span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: iouCnt++; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>switch内部的控制流：如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非程序显式地中断了这一过程，比如添加break语句，否则直到switch的结尾处才会停下来。</p>
-<ul>
-<li>(b) 在 default 分支当中，ix 未定义。应该在外部定义ix。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line"><span class="type">int</span> ix;</span><br><span class="line"><span class="keyword">switch</span> (index) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ix = <span class="built_in">get_value</span>();</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ix = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(ivec.<span class="built_in">size</span>())<span class="number">-1</span>;</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(c) case 后面应该用冒号而不是逗号。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line"><span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">5</span>: <span class="keyword">case</span> <span class="number">7</span>: <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        oddcnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">6</span>: <span class="keyword">case</span> <span class="number">8</span>: <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        evencnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(d) case 标签必须是整型常量表达式。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line"><span class="type">unsigned</span> bufsize;</span><br><span class="line"><span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line"><span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">    <span class="keyword">case</span> ival:</span><br><span class="line">        bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> jval:</span><br><span class="line">        bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> kval:</span><br><span class="line">        bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-14"><a href="#练习5-14" class="headerlink" title="练习5.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_14.cpp">练习5.14</a></h2><blockquote>
-<p>编写一段程序，从标准输入中读取若干string对象并查找连续重复出现的单词，所谓连续重复出现的意思是：一个单词后面紧跟着这个单词本身。要求记录连续重复出现的最大次数以及对应的单词。如果这样的单词存在，输出重复出现的最大次数；如果不存在，输出一条信息说明任何单词都没有连续出现过。例如：如果输入是：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">how now now now brown cow cow</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>那么输出应该表明单词now连续出现了3次。</p>
-</blockquote>
-<p>本题编程中使用了<code>std::pair</code>，<code>std::pair</code>是类模板，提供在一个单元存储两个相异类型对象的途径。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T1</span>,</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T2</span></span><br><span class="line">&gt; <span class="keyword">struct</span> <span class="title class_">pair</span>;</span><br></pre></td></tr></table></figure>
-<p>总共有两个成员对象：first和second。</p>
-<p>示例：<code>std::pair&lt;std::string, float&gt;(&quot;aa&quot;, 1.1);</code></p>
-<h2 id="练习5-15"><a href="#练习5-15" class="headerlink" title="练习5.15"></a>练习5.15</h2><blockquote>
-<p>说明下列循环的含义并改正其中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix, ++sz) &#123; <span class="comment">/*...*/</span> &#125;</span><br></pre></td></tr></table></figure>
-<p>修正如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix = <span class="number">0</span>; ix != sz; ++ix)  &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">    <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/*...*/</span> &#125; <span class="comment">//如果首次判断ix不等于sz，执行++sz将导致死循环。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-16"><a href="#练习5-16" class="headerlink" title="练习5.16"></a>练习5.16</h2><blockquote>
-<p>while 循环特别适用于那种条件不变、反复执行操作的情况，例如，当未达到文件末尾时不断读取下一个值。for 循环则更像是在按步骤迭代，它的索引值在某个范围内依次变化。根据每种循环的习惯各自编写一段程序，然后分别用另一种循环改写。如果只能使用一种循环，你倾向于使用哪种呢？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// while循环读取输入</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; i )</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环读取输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; cin &gt;&gt; i;)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环遍历</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != size; ++i)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// while循环遍历</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i != size)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果只能用一种循环，我会更倾向使用while循环，因为while的代码可读性更强。</p>
-<h2 id="练习5-17"><a href="#练习5-17" class="headerlink" title="练习5.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_17.cpp">练习5.17</a></h2><blockquote>
-<p>假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2 和 0、1、1、2、3、5、8，则程序的返回结果为真。</p>
-</blockquote>
-<h2 id="练习5-18"><a href="#练习5-18" class="headerlink" title="练习5.18"></a>练习5.18</h2><blockquote>
-<p>说明下列循环的含义并改正其中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
-<p>修正如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span> &#123; <span class="comment">// 应该添加花括号</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    &#125;<span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-19"><a href="#练习5-19" class="headerlink" title="练习5.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_19.cpp">练习5.19</a></h2><blockquote>
-<p>编写一段程序，使用do while 循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。</p>
-</blockquote>
-<h2 id="练习5-20"><a href="#练习5-20" class="headerlink" title="练习5.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_20.cpp">练习5.20</a></h2><blockquote>
-<p>编写一段程序，从标准输入中读取string对象的序列直到连续出现两个相同的单词或者所有的单词都读完为止。使用while循环一次读取一个单词，当一个单词连续出现两次时使用break语句终止循环。输出连续重复出现的单词，或者输出一个消息说明没有任何单词是连续重复出现的。</p>
-</blockquote>
-<h2 id="练习5-21"><a href="#练习5-21" class="headerlink" title="练习5.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_21.cpp">练习5.21</a></h2><blockquote>
-<p>修改5.5.1节（第171页）练习题的程序，使其找到的重复单词必须以大写字母开头。</p>
-</blockquote>
-<h2 id="练习5-22"><a href="#练习5-22" class="headerlink" title="练习5.22"></a>练习5.22</h2><blockquote>
-<p>本节的最后一个例子跳回到 begin，其实使用循环能更好的完成该任务，重写这段代码，注意不再使用goto语句。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 向后跳过一个带初始化的变量定义是合法的</span></span><br><span class="line">begin:</span><br><span class="line">    <span class="type">int</span> sz = <span class="built_in">get_size</span>();</span><br><span class="line">    <span class="keyword">if</span> (sz &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> begin;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>用 <code>for</code> 循环修改效果如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> sz = <span class="built_in">get_size</span>(); sz &lt;=<span class="number">0</span>; sz = <span class="built_in">get_size</span>())</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-23"><a href="#练习5-23" class="headerlink" title="练习5.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_23.cpp">练习5.23</a></h2><blockquote>
-<p>编写一段程序，从标准输入读取两个整数，输出第一个数除以第二个数的结果。</p>
-</blockquote>
-<h2 id="练习5-24"><a href="#练习5-24" class="headerlink" title="练习5.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_24.cpp">练习5.24</a></h2><blockquote>
-<p>修改你的程序，使得当第二个数是0时抛出异常。先不要设定catch子句，运行程序并真的为除数输入0，看看会发生什么？</p>
-</blockquote>
-<h2 id="练习5-25"><a href="#练习5-25" class="headerlink" title="练习5.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_25.cpp">练习5.25</a></h2><blockquote>
-<p>修改上一题的程序，使用try语句块去捕获异常。catch子句应该为用户输出一条提示信息，询问其是否输入新数并重新执行try语句块的内容。</p>
-</blockquote>
-<p>异常处理（try-throw-catch）：</p>
-<ul>
-<li>将错误处理代码和正常代码分离开：传统的错误处理代码中都会使用一系列的 if-else 条件判断来处理错误。这些条件判断代码和错误处理代码会混在正常的程序流中，降低代码的可读性和可维护性。使用 try&#x2F;catch 块则能够将错误处理与正常流程分开。</li>
-<li>个人理解：更像是一个高级goto语法。</li>
-</ul>
-<p>大致的使用形式：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 被保护的代码</span></span><br><span class="line">    <span class="keyword">throw</span>  <span class="comment">// 抛出异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> ()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五章</tag>
-        <tag>语句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ Primer 第五版：第四章「表达式」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap4/</url>
     <content><![CDATA[<h1 id="第四章：表达式"><a href="#第四章：表达式" class="headerlink" title="第四章：表达式"></a>第四章：表达式</h1><h2 id="练习4-1"><a href="#练习4-1" class="headerlink" title="练习4.1"></a>练习4.1</h2><blockquote>
@@ -9172,6 +9017,177 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>练习总结</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第五章「语句」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap5/</url>
+    <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
+<p>什么是空语句？什么时候会用到空语句？</p>
+</blockquote>
+<p>只含有一个单独的分号的语句是空语句。如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">;</span><br></pre></td></tr></table></figure>
+<p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，此时应该使用空语句。（建议做好注释说明空语句作用）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重复读入数据直至到达文件末尾或某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (cin &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-2"><a href="#练习5-2" class="headerlink" title="练习5.2"></a>练习5.2</h2><blockquote>
+<p>什么是块？什么时候会用到块？</p>
+</blockquote>
+<p>用花括号括起来的语句和声明的序列就是块。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果在程序的某个地方，逻辑上需要多条语句，而语法上只能容纳一条语句，此时应该使用块。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">    ++val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-3"><a href="#练习5-3" class="headerlink" title="练习5.3"></a>练习5.3</h2><blockquote>
+<p>使用逗号运算符重写（参见4.10节，第140页）1.4.1节的 while 循环，使它不再需要块，观察改写之后的代码可读性提高了还是降低了。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>)</span><br><span class="line">    sum += val, ++val;</span><br></pre></td></tr></table></figure>
+<p>代码的可读性降低了。</p>
+<h2 id="练习5-4"><a href="#练习5-4" class="headerlink" title="练习5.4"></a>练习5.4</h2><blockquote>
+<p>说明下列例子的含义，如果存在问题，试着修改它。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">while</span> (string::iterator iter != s.<span class="built_in">end</span>()) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">(b) <span class="keyword">while</span> (<span class="type">bool</span> status = <span class="built_in">find</span>(word)) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">        <span class="keyword">if</span> (!status) &#123; <span class="comment">/* . . . */</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 这个循环试图用迭代器遍历string，但是变量的定义应该放在循环的外面，目前每次循环都会重新定义一个变量，明显是错误的。</li>
+<li>(b) 这个循环的 while 和 if 是两个独立的语句，if 语句中无法访问 status 变量，正确的做法是应该将 if 语句包含在 while 里面，</li>
+</ul>
+<h2 id="练习5-5"><a href="#练习5-5" class="headerlink" title="练习5.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_5.cpp">练习5.5</a></h2><blockquote>
+<p>写一段自己的程序，使用if else 语句实现把数字转换为字母成绩的要求。</p>
+</blockquote>
+<h2 id="练习5-6"><a href="#练习5-6" class="headerlink" title="练习5.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_6.cpp">练习5.6</a></h2><blockquote>
+<p>改写上一题的程序，使用条件运算符（参见4.7节，第134页）代替if else语句。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="练习5-7"><a href="#练习5-7" class="headerlink" title="练习5.7"></a>练习5.7</h2><blockquote>
+<p>改写下列代码段中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">if</span> (ival1 != ival2)</span><br><span class="line">        ival1 = ival2</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ival1 = ival2 = <span class="number">0</span>;</span><br><span class="line">(b) <span class="keyword">if</span> (ival &lt; minval)</span><br><span class="line">        minval = ival;</span><br><span class="line">        occurs = <span class="number">1</span>;</span><br><span class="line">(c) <span class="keyword">if</span> (<span class="type">int</span> ival = <span class="built_in">get_value</span>())</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = &quot;</span> &lt;&lt; ival &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (!ival)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = 0\n&quot;</span>;</span><br><span class="line">(d) <span class="keyword">if</span> (ival = <span class="number">0</span>)</span><br><span class="line">        ival = <span class="built_in">get_value</span>();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) <code>ival1 = ival2</code> 后面少了分号。</li>
+<li>(b) 应该用花括号括起来。</li>
+<li>(c) <code>if (!ival)</code> 应该改为 <code>else</code>。</li>
+<li>(d) <code>if (ival = 0)</code> 应该改为 <code>if (ival == 0)</code>。</li>
+</ul>
+<h2 id="练习5-8"><a href="#练习5-8" class="headerlink" title="练习5.8"></a>练习5.8</h2><blockquote>
+<p>什么是“悬垂else”？C++语言是如何处理else子句的？</p>
+</blockquote>
+<p>C++语言规定else与它最近的尚未匹配的if匹配。</p>
+<h2 id="练习5-9"><a href="#练习5-9" class="headerlink" title="练习5.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_9.cpp">练习5.9</a></h2><blockquote>
+<p>编写一段程序，使用一系列if语句统计从cin读入的文本中有多少元音字母。</p>
+</blockquote>
+<h2 id="练习5-10"><a href="#练习5-10" class="headerlink" title="练习5.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_10.cpp">练习5.10</a></h2><blockquote>
+<p>我们之前实现的统计元音字母的程序存在一个问题：如果元音字母以大写形式出现，不会被统计在内。编写一段程序，既统计元音字母的小写形式，也统计大写形式，也就是说，新程序遇到&#39;a&#39;和&#39;A&#39;都应该递增 aCnt 的值，以此类推。</p>
+</blockquote>
+<h2 id="练习5-11"><a href="#练习5-11" class="headerlink" title="练习5.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_11.cpp">练习5.11</a></h2><blockquote>
+<p>修改统计元音字母的程序，使其也能统计空格、制表符、和换行符的数量。</p>
+</blockquote>
+<h2 id="练习5-12"><a href="#练习5-12" class="headerlink" title="练习5.12"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_12.cpp">练习5.12</a></h2><blockquote>
+<p>修改统计元音字母的程序，使其能统计以下含有两个字符的字符序列的数量：ff、fl和fi。</p>
+</blockquote>
+<h2 id="练习5-13"><a href="#练习5-13" class="headerlink" title="练习5.13"></a>练习5.13</h2><blockquote>
+<p>下面显示的每个程序都含有一个常见的编程错误，指出错误在哪里，然后修改它们。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line">    <span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++;</span><br><span class="line">        <span class="keyword">default</span>: iouCnt++;</span><br><span class="line">    &#125;</span><br><span class="line">(b) <span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line">    <span class="keyword">switch</span> (index) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="type">int</span> ix = <span class="built_in">get_value</span>();</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            ix = ivec.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">    &#125;</span><br><span class="line">(c) <span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>:</span><br><span class="line">            oddcnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>:</span><br><span class="line">            evencnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">(d) <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line">    <span class="type">unsigned</span> bufsize;</span><br><span class="line">    <span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line">    <span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">        <span class="keyword">case</span> ival:</span><br><span class="line">            bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> jval:</span><br><span class="line">            bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kval:</span><br><span class="line">            bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 少了 break语句。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line"><span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: iouCnt++; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>switch内部的控制流：如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非程序显式地中断了这一过程，比如添加break语句，否则直到switch的结尾处才会停下来。</p>
+<ul>
+<li>(b) 在 default 分支当中，ix 未定义。应该在外部定义ix。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line"><span class="type">int</span> ix;</span><br><span class="line"><span class="keyword">switch</span> (index) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ix = <span class="built_in">get_value</span>();</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ix = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(ivec.<span class="built_in">size</span>())<span class="number">-1</span>;</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(c) case 后面应该用冒号而不是逗号。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line"><span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">5</span>: <span class="keyword">case</span> <span class="number">7</span>: <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        oddcnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">6</span>: <span class="keyword">case</span> <span class="number">8</span>: <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        evencnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(d) case 标签必须是整型常量表达式。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line"><span class="type">unsigned</span> bufsize;</span><br><span class="line"><span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line"><span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">    <span class="keyword">case</span> ival:</span><br><span class="line">        bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> jval:</span><br><span class="line">        bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> kval:</span><br><span class="line">        bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-14"><a href="#练习5-14" class="headerlink" title="练习5.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_14.cpp">练习5.14</a></h2><blockquote>
+<p>编写一段程序，从标准输入中读取若干string对象并查找连续重复出现的单词，所谓连续重复出现的意思是：一个单词后面紧跟着这个单词本身。要求记录连续重复出现的最大次数以及对应的单词。如果这样的单词存在，输出重复出现的最大次数；如果不存在，输出一条信息说明任何单词都没有连续出现过。例如：如果输入是：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">how now now now brown cow cow</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>那么输出应该表明单词now连续出现了3次。</p>
+</blockquote>
+<p>本题编程中使用了<code>std::pair</code>，<code>std::pair</code>是类模板，提供在一个单元存储两个相异类型对象的途径。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T1</span>,</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T2</span></span><br><span class="line">&gt; <span class="keyword">struct</span> <span class="title class_">pair</span>;</span><br></pre></td></tr></table></figure>
+<p>总共有两个成员对象：first和second。</p>
+<p>示例：<code>std::pair&lt;std::string, float&gt;(&quot;aa&quot;, 1.1);</code></p>
+<h2 id="练习5-15"><a href="#练习5-15" class="headerlink" title="练习5.15"></a>练习5.15</h2><blockquote>
+<p>说明下列循环的含义并改正其中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix, ++sz) &#123; <span class="comment">/*...*/</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>修正如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix = <span class="number">0</span>; ix != sz; ++ix)  &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">    <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/*...*/</span> &#125; <span class="comment">//如果首次判断ix不等于sz，执行++sz将导致死循环。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-16"><a href="#练习5-16" class="headerlink" title="练习5.16"></a>练习5.16</h2><blockquote>
+<p>while 循环特别适用于那种条件不变、反复执行操作的情况，例如，当未达到文件末尾时不断读取下一个值。for 循环则更像是在按步骤迭代，它的索引值在某个范围内依次变化。根据每种循环的习惯各自编写一段程序，然后分别用另一种循环改写。如果只能使用一种循环，你倾向于使用哪种呢？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// while循环读取输入</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; i )</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环读取输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; cin &gt;&gt; i;)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环遍历</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != size; ++i)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// while循环遍历</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i != size)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果只能用一种循环，我会更倾向使用while循环，因为while的代码可读性更强。</p>
+<h2 id="练习5-17"><a href="#练习5-17" class="headerlink" title="练习5.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_17.cpp">练习5.17</a></h2><blockquote>
+<p>假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2 和 0、1、1、2、3、5、8，则程序的返回结果为真。</p>
+</blockquote>
+<h2 id="练习5-18"><a href="#练习5-18" class="headerlink" title="练习5.18"></a>练习5.18</h2><blockquote>
+<p>说明下列循环的含义并改正其中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
+<p>修正如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span> &#123; <span class="comment">// 应该添加花括号</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    &#125;<span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-19"><a href="#练习5-19" class="headerlink" title="练习5.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_19.cpp">练习5.19</a></h2><blockquote>
+<p>编写一段程序，使用do while 循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。</p>
+</blockquote>
+<h2 id="练习5-20"><a href="#练习5-20" class="headerlink" title="练习5.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_20.cpp">练习5.20</a></h2><blockquote>
+<p>编写一段程序，从标准输入中读取string对象的序列直到连续出现两个相同的单词或者所有的单词都读完为止。使用while循环一次读取一个单词，当一个单词连续出现两次时使用break语句终止循环。输出连续重复出现的单词，或者输出一个消息说明没有任何单词是连续重复出现的。</p>
+</blockquote>
+<h2 id="练习5-21"><a href="#练习5-21" class="headerlink" title="练习5.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_21.cpp">练习5.21</a></h2><blockquote>
+<p>修改5.5.1节（第171页）练习题的程序，使其找到的重复单词必须以大写字母开头。</p>
+</blockquote>
+<h2 id="练习5-22"><a href="#练习5-22" class="headerlink" title="练习5.22"></a>练习5.22</h2><blockquote>
+<p>本节的最后一个例子跳回到 begin，其实使用循环能更好的完成该任务，重写这段代码，注意不再使用goto语句。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 向后跳过一个带初始化的变量定义是合法的</span></span><br><span class="line">begin:</span><br><span class="line">    <span class="type">int</span> sz = <span class="built_in">get_size</span>();</span><br><span class="line">    <span class="keyword">if</span> (sz &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> begin;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 <code>for</code> 循环修改效果如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> sz = <span class="built_in">get_size</span>(); sz &lt;=<span class="number">0</span>; sz = <span class="built_in">get_size</span>())</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-23"><a href="#练习5-23" class="headerlink" title="练习5.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_23.cpp">练习5.23</a></h2><blockquote>
+<p>编写一段程序，从标准输入读取两个整数，输出第一个数除以第二个数的结果。</p>
+</blockquote>
+<h2 id="练习5-24"><a href="#练习5-24" class="headerlink" title="练习5.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_24.cpp">练习5.24</a></h2><blockquote>
+<p>修改你的程序，使得当第二个数是0时抛出异常。先不要设定catch子句，运行程序并真的为除数输入0，看看会发生什么？</p>
+</blockquote>
+<h2 id="练习5-25"><a href="#练习5-25" class="headerlink" title="练习5.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_25.cpp">练习5.25</a></h2><blockquote>
+<p>修改上一题的程序，使用try语句块去捕获异常。catch子句应该为用户输出一条提示信息，询问其是否输入新数并重新执行try语句块的内容。</p>
+</blockquote>
+<p>异常处理（try-throw-catch）：</p>
+<ul>
+<li>将错误处理代码和正常代码分离开：传统的错误处理代码中都会使用一系列的 if-else 条件判断来处理错误。这些条件判断代码和错误处理代码会混在正常的程序流中，降低代码的可读性和可维护性。使用 try&#x2F;catch 块则能够将错误处理与正常流程分开。</li>
+<li>个人理解：更像是一个高级goto语法。</li>
+</ul>
+<p>大致的使用形式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 被保护的代码</span></span><br><span class="line">    <span class="keyword">throw</span>  <span class="comment">// 抛出异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> ()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五章</tag>
+        <tag>语句</tag>
       </tags>
   </entry>
   <entry>
@@ -10268,6 +10284,102 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender二次代码开发总结</title>
+    <url>/software/blender/code-development/</url>
+    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
+<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
+</ul>
+<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
+<li>cycles API直接查看cycles源码，properties.py</li>
+<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
+<li>blender排错cmd工具：blender_debug_log.bat</li>
+</ul>
+<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
+<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
+<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
+<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
+<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
+<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
+<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
+<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
+<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
+<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
+<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
+</ul>
+<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
+<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
+<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
+</ul>
+<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
+</div>
+<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
+<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
+<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
+<p>具体context override代码的使用例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Blender界面工具操作总结</title>
     <url>/software/blender/interface-tools-operation/</url>
     <content><![CDATA[<h1 id="3D-视窗（3D-Viewport）">1 &nbsp&nbsp<a href="#3D-视窗（3D-Viewport）" class="headerlink" title="3D 视窗（3D Viewport）"></a>3D 视窗（3D Viewport）</h1><p>3D视图用于和3D场景交互，例如建模、动画、纹理绘制等。</p>
@@ -10626,57 +10738,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Blender常见问题总结——Q&amp;A</title>
     <url>/software/blender/q-a/</url>
     <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
@@ -10699,51 +10760,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>问题总结</tag>
         <tag>Q&amp;A</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Blender二次代码开发总结</title>
-    <url>/software/blender/code-development/</url>
-    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
-<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
-</ul>
-<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
-<li>cycles API直接查看cycles源码，properties.py</li>
-<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
-<li>blender排错cmd工具：blender_debug_log.bat</li>
-</ul>
-<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
-<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
-<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
-<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
-<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
-<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
-<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
-<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
-<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
-<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
-<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
-</ul>
-<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
-<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
-<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
-</ul>
-<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
-</div>
-<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
-<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
-<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
-<p>具体context override代码的使用例子：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
   </entry>
   <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
@@ -10974,7 +10990,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#105;&#115;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#105;&#115;&#116;&#101;&#114;&#107;&#x69;&#110;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
