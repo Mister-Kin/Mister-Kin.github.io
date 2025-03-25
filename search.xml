@@ -847,7 +847,8 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">显卡驱动</p>
     </div>
-    <a href="https://www.nvidia.cn/drivers/lookup/">Nvidia驱动</a>
+    <a href="https://www.nvidia.com/en-us/drivers/">Nvidia驱动（US域名）</a>
+    <a href="https://www.nvidia.cn/drivers/lookup/">Nvidia驱动（CN域名）</a>
     <a href="https://nvidia.custhelp.com/app/answers/list/kw/hotfix/search/">Nvidia驱动（热修复）</a>
     <a href="https://developer.nvidia.com/cuda-toolkit-archive">Nvidia CUDA Toolkit</a>
     <a href="https://www.nvidia.com/en-us/drivers/nv-uefi-update-x64/">NVIDIA Graphics Firmware</a>
@@ -1900,6 +1901,34 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Programming Ability Test (PAT)</title>
+    <url>/code-training/pat/</url>
+    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
+<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
+<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
+<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
+<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
+<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>PAT</tag>
+        <tag>PTA</tag>
+        <tag>编程</tag>
+        <tag>练习</tag>
+        <tag>题库</tag>
+        <tag>题目</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bash Shell总结笔记</title>
     <url>/code/bash/</url>
     <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
@@ -2067,9 +2096,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
+        <tag>编程</tag>
         <tag>笔记</tag>
         <tag>c</tag>
-        <tag>编程</tag>
         <tag>语言</tag>
       </tags>
   </entry>
@@ -3164,8 +3193,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>编程</tag>
+        <tag>笔记</tag>
         <tag>python</tag>
       </tags>
   </entry>
@@ -3581,34 +3610,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Programming Ability Test (PAT)</title>
-    <url>/code-training/pat/</url>
-    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
-<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
-<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
-<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
-<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
-<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>编程</tag>
-        <tag>PAT</tag>
-        <tag>PTA</tag>
-        <tag>练习</tag>
-        <tag>题库</tag>
-        <tag>题目</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英文词典常用缩写</title>
     <url>/english/abbr/</url>
     <content><![CDATA[<ul>
@@ -4009,302 +4010,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -5333,6 +5038,50 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>虚拟机总结</title>
+    <url>/software/virtual-machine/</url>
+    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
+<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
+<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
+<p>解决方法：</p>
+<ol>
+<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
+<li>Containers</li>
+<li>Hyper-V</li>
+<li>Virtual Machine Platform</li>
+<li>Windows Hypervisor Platform</li>
+<li>Windows Sandbox</li>
+<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
+</ul>
+</li>
+<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
+</ol>
+<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
+<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
+<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
+<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
+<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
+<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
+<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
+<li><a href="https://github.com/intel/haxm">haxm</a></li>
+</ul>
+<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
+<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
@@ -5955,6 +5704,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">支持</td>
 </tr>
 <tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/230575/intel-core-i313100-processor-12m-cache-up-to-4-50-ghz/specifications.html">酷睿™ i3-13100</a></td>
+<td align="center">4&#x2F;8</td>
+<td align="center">60~110</td>
+<td align="center">无E核 <br> P核3.4~4.5</td>
+<td align="center">DP：7680 x 4320 @ 60Hz <br> HDMI：4096 x 2160 @ 60Hz <br> eDP：5120 x 3200 @ 120Hz</td>
+<td align="center">192 DDR5 4800 MT&#x2F;s <br> 192 DDR4 3200 MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
 <td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/236774/intel-core-i3-processor-14100-12m-cache-up-to-4-70-ghz/specifications.html">酷睿™ i3-14100</a></td>
 <td align="center">4&#x2F;8</td>
 <td align="center">60~110</td>
@@ -6006,48 +5765,300 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>虚拟机总结</title>
-    <url>/software/virtual-machine/</url>
-    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
-<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
-<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
-<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
-<p>解决方法：</p>
-<ol>
-<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
-<li>Containers</li>
-<li>Hyper-V</li>
-<li>Virtual Machine Platform</li>
-<li>Windows Hypervisor Platform</li>
-<li>Windows Sandbox</li>
-<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
 </ul>
-</li>
-<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
-</ol>
-<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
-<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
-<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
-<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
-<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
-<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
-<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
-<li><a href="https://github.com/intel/haxm">haxm</a></li>
-</ul>
-<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
-<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
 ]]></content>
       <categories>
-        <category>software</category>
+        <category>translations</category>
       </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android系统排障总结</title>
@@ -6490,6 +6501,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>路由排障总结</title>
+    <url>/troubleshooting/router-troubleshooting/</url>
+    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Linux系统排障总结</title>
     <url>/troubleshooting/linux-troubleshooting/</url>
     <content><![CDATA[<h1 id="Bash终端">1 &nbsp&nbsp<a href="#Bash终端" class="headerlink" title="Bash终端"></a>Bash终端</h1><h2 id="符号输入控制">1.1 &nbsp&nbsp<a href="#符号输入控制" class="headerlink" title="符号输入控制"></a>符号输入控制</h2><ul>
@@ -6691,17 +6713,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>路由排障总结</title>
-    <url>/troubleshooting/router-troubleshooting/</url>
-    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-  </entry>
-  <entry>
     <title>运行库修复（Windows平台）</title>
     <url>/troubleshooting/runtime-library-repair-on-windows/</url>
     <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
@@ -6890,156 +6901,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
-<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
-<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
-<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
-<p>bash: <code>echo $?</code>，输出127</p>
-<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
-<p>编写程序，在标准输出上打印 Hello, World。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
-<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
-<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
-<p>解释下面程序片段是否合法。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
-</blockquote>
-<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
-<p>修正方式1：二三行添加cout对象</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>修正方式2：删除一二行多余的分号</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
-<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
-<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
-</blockquote>
-<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
-<p>编写程序，使用while循环将50到100的整数相加。</p>
-</blockquote>
-<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
-<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
-</blockquote>
-<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
-<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
-</blockquote>
-<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
-<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
-
-<p>从-100加到100，sum的终值为0。</p>
-<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
-<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
-</blockquote>
-<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
-<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
-</blockquote>
-<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
-<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
-<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
-<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
-</blockquote>
-<p>编译器可检查的错误：</p>
-<ol>
-<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
-<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
-<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
-</ol>
-<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
-<p>编写程序，从cin读取一组数，输出其和。</p>
-</blockquote>
-<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
-<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
-<ul>
-<li>Windows：ctrl+z</li>
-<li>UNIX（包括Mac OS X）：ctrl+d</li>
-</ul>
-<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
-<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
-</blockquote>
-<ol>
-<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
-<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
-</ol>
-<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
-<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
-</blockquote>
-<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
-<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
-</blockquote>
-<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
-<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
-</blockquote>
-<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
-<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
-</blockquote>
-<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
-<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
-</blockquote>
-<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
-<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
-</blockquote>
-<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
-<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
-</blockquote>
-<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
-<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -7550,11 +7411,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">22.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
 <li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#115;&#46;&#99;&#111;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;">example@example.com</a></li>
+<li>方案2：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#x63;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#x61;&#x6e;&#x6b;&#115;&#46;&#99;&#x6f;&#x6d;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
+<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 </ul>
@@ -7641,6 +7502,156 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
+<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
+<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
+<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
+<p>bash: <code>echo $?</code>，输出127</p>
+<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
+<p>编写程序，在标准输出上打印 Hello, World。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
+<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
+<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
+<p>解释下面程序片段是否合法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
+</blockquote>
+<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
+<p>修正方式1：二三行添加cout对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>修正方式2：删除一二行多余的分号</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
+<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
+<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
+</blockquote>
+<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
+<p>编写程序，使用while循环将50到100的整数相加。</p>
+</blockquote>
+<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
+<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
+</blockquote>
+<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
+<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
+</blockquote>
+<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
+<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
+
+<p>从-100加到100，sum的终值为0。</p>
+<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
+<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
+</blockquote>
+<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
+<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
+</blockquote>
+<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
+<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
+<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
+<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
+</blockquote>
+<p>编译器可检查的错误：</p>
+<ol>
+<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
+<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
+<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
+</ol>
+<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
+<p>编写程序，从cin读取一组数，输出其和。</p>
+</blockquote>
+<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
+<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
+<ul>
+<li>Windows：ctrl+z</li>
+<li>UNIX（包括Mac OS X）：ctrl+d</li>
+</ul>
+<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
+<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
+</blockquote>
+<ol>
+<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
+<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
+</ol>
+<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
+<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
+</blockquote>
+<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
+<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
+</blockquote>
+<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
+<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
+</blockquote>
+<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
+<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
+</blockquote>
+<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
+<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
+</blockquote>
+<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
+<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
+</blockquote>
+<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
+<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
+</blockquote>
+<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
+<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -10242,59 +10253,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -10975,6 +10933,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -11150,7 +11161,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#x69;&#x73;&#x74;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#x69;&#110;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
