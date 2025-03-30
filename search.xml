@@ -3219,126 +3219,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>正则表达式总结笔记</title>
-    <url>/code/regular-expressions/</url>
-    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
-<li>[\u4e00-\u9fa5] 匹配中文字符</li>
-<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
-</ul>
-<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>正则表达式</tag>
-        <tag>正则</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode配置总结笔记</title>
-    <url>/code/vscode/</url>
-    <content><![CDATA[<h1 id="下载及安装VSCode">1 &nbsp&nbsp<a href="#下载及安装VSCode" class="headerlink" title="下载及安装VSCode"></a>下载及安装VSCode</h1><ul>
-<li>下载：<a href="https://code.visualstudio.com/Download">VSCode System Installer</a></li>
-<li>安装：默认路径安装，选项额外添选上下文菜单（文件和目录）</li>
-</ul>
-<p>镜像加速下载的方法：将下载链接URL中的<code>stable</code>之前的字符全部改为<code>https://vscode.cdn.azure.cn/</code>即可。</p>
-<h1 id="配置C-C-开发环境">2 &nbsp&nbsp<a href="#配置C-C-开发环境" class="headerlink" title="配置C&#x2F;C++开发环境"></a>配置C&#x2F;C++开发环境</h1><h2 id="MSVC-CL编译器的安装和环境设置">2.1 &nbsp&nbsp<a href="#MSVC-CL编译器的安装和环境设置" class="headerlink" title="MSVC CL编译器的安装和环境设置"></a>MSVC CL编译器的安装和环境设置</h2><ol>
-<li>下载（<code>CMake</code>和<code>Ninja</code>可以不用单独下载安装，<code>MSVC CL</code>编译器的<code>Visual Studio Installer</code>管理器可以统一管理下载和更新）<ul>
-<li><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a>，<code>所有下载</code>-&gt;<code>用于 Visual Studio 的工具</code>-&gt;<code>Visual Studio 2022 生成工具</code>。</li>
-<li><del><a href="https://cmake.org/download/">CMake</a></del></li>
-<li><del><a href="https://github.com/ninja-build/ninja/releases">Ninja</a></del></li>
-</ul>
-</li>
-<li>安装「Visual Studio 2022 生成工具」，然后勾选对应包下载安装<ol>
-<li>工作负荷：使用C++的桌面开发<ul>
-<li>MSVC v143 - VS 2022 C++ x64&#x2F;x86生成工具(最新)</li>
-<li>Windows 11 SDK (10.0.26100.0)：建议选择最新的系统版本号</li>
-<li>用于 Windows 的 C++ CMake 工具（包含CMake和Ninja）</li>
-</ul>
-</li>
-<li>单个组件<ul>
-<li>对 LLVM(clang-cl)工具集的 MSBuild 支持</li>
-<li>适用于 Windows 的C++ Clang 编译器(18.1.8)</li>
-<li>MSVC v143 - VS 2022 C++ x64&#x2F;x86 Spectre 缓解库（最新）</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>分别添加程序路径到系统环境变量<code>Path</code><ul>
-<li>MSVC CL编译器路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\bin\Hostx64\x64</code></li>
-<li>LLVM CLANG编译器路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin</code></li>
-<li>CMake路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin</code></li>
-<li>Ninja路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja</code></li>
-</ul>
-</li>
-<li>拷贝<code>.vscode</code>配置文件夹</li>
-</ol>
-<h2 id="更新MSVC后找不到CL命令">2.2 &nbsp&nbsp<a href="#更新MSVC后找不到CL命令" class="headerlink" title="更新MSVC后找不到CL命令"></a>更新MSVC后找不到CL命令</h2><p>使用<code>Visual Studio Installer</code>更新MSVC后，编译器版本号可能会变更，如果在终端运行cl命令后提示找不到程序，需要手动更新两处地方的CL编译器路径：</p>
-<ul>
-<li>系统环境变量<code>Path</code></li>
-<li><code>.vscode</code>配置文件夹中的<code>c_cpp_properties.json</code></li>
-</ul>
-<h1 id="VSCode源代码管理">3 &nbsp&nbsp<a href="#VSCode源代码管理" class="headerlink" title="VSCode源代码管理"></a>VSCode源代码管理</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，第一次用vs code进行commit时，若使用「同步更改」命令提示说找不到远程仓库时，可以直接使用「推送到」命令。</p>
-<h1 id="Codeium扩展插件的帐号token获取及使用">4 &nbsp&nbsp<a href="#Codeium扩展插件的帐号token获取及使用" class="headerlink" title="Codeium扩展插件的帐号token获取及使用"></a>Codeium扩展插件的帐号token获取及使用</h1><p>一般直接通过Codeium Auth登录帐号即可使用扩展插件。</p>
-<h2 id="token获取">4.1 &nbsp&nbsp<a href="#token获取" class="headerlink" title="token获取"></a>token获取</h2><p>如果不想登录帐号，而是想要通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token的话。首先需要获取token，获取方式：</p>
-<ul>
-<li>方式一：<a href="https://www.codeium.com/profile?response_type=token&redirect_uri=vim-show-auth-token&state=a&scope=openid%20profile%20email&redirect_parameters_type=query">官网直链获取</a>（此直链是会提示关联vim扩展，但token都是通用的，同样适用于VSCode的扩展），直接在该网址中登录帐号即可获取「Provide Authentication Token」</li>
-<li>方式二：参考<a href="#token%E4%BD%BF%E7%94%A8">token使用</a>的1-4步骤。</li>
-</ul>
-<h2 id="token使用">4.2 &nbsp&nbsp<a href="#token使用" class="headerlink" title="token使用"></a>token使用</h2><ol>
-<li>VSCode安装好Codeium扩展插件。</li>
-<li>左下角，点击Codeium Auth登录按钮，首先插件会弹窗请求跳转到网页输入帐号登录。</li>
-<li>直接关闭打开的网页，点击右下角「在线帐号登录」的cancel按钮。</li>
-<li>之后插件会弹窗请求跳转到网页输入帐号登录，这个在线网址则是获取「Provide Authentication Token」。（如果已经提前获取到token，这里可以不登录网页帐号，直接关闭网页）</li>
-<li>最后通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token即可正常登录。</li>
-</ol>
-<h1 id="拓展插件">5 &nbsp&nbsp<a href="#拓展插件" class="headerlink" title="拓展插件"></a>拓展插件</h1><h2 id="LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found">5.1 &nbsp&nbsp<a href="#LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found" class="headerlink" title="LaTeX-Workshop报错提示command &#39;latex-workshop.onEnterKey&#39; not found"></a><code>LaTeX-Workshop</code>报错提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code></h2><p>问题现象：在<code>tex</code>文件中使用<code>Enter</code>键会出现报错信息，提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code>，只有<code>Ctrl+Enter</code>键才能正常输入回车。</p>
-<p>解决方案：卸载<code>LaTeX-Workshop</code>扩展插件，关闭<code>VSCode</code>程序，确保<code>VSCode</code>正常移除插件的缓存文件。然后重新打开<code>VSCode</code>，重新安装<code>LaTeX-Workshop</code>。</p>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [Question] How can I get codeium auth token[EB&#x2F;OL]. <a href="https://github.com/Exafunction/codeium.vim/issues/150">https://github.com/Exafunction/codeium.vim/issues/150</a>.<br>[2] VsCode下载，使用国内镜像秒下载[EB&#x2F;OL]. <a href="https://blog.csdn.net/bielaiwuyang1999/article/details/117814237">https://blog.csdn.net/bielaiwuyang1999/article/details/117814237</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>编译</tag>
-        <tag>vsc</tag>
-        <tag>vscode</tag>
-        <tag>编辑器</tag>
-        <tag>链接</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Programming Ability Test (PAT)</title>
-    <url>/code-training/pat/</url>
-    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
-<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
-<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
-<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
-<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
-<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>编程</tag>
-        <tag>PAT</tag>
-        <tag>PTA</tag>
-        <tag>练习</tag>
-        <tag>题库</tag>
-        <tag>题目</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt总结笔记</title>
     <url>/code/qt/</url>
     <content><![CDATA[<h1 id="Qt语法">1 &nbsp&nbsp<a href="#Qt语法" class="headerlink" title="Qt语法"></a>Qt语法</h1><p><a href="https://www.cnblogs.com/jfzhu/p/13501678.html">Qt信号与槽使用方法最完整总结</a></p>
@@ -3655,6 +3535,126 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>源码</tag>
         <tag>qt creator</tag>
         <tag>界面开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式总结笔记</title>
+    <url>/code/regular-expressions/</url>
+    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
+<li>[\u4e00-\u9fa5] 匹配中文字符</li>
+<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
+</ul>
+<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>正则表达式</tag>
+        <tag>正则</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode配置总结笔记</title>
+    <url>/code/vscode/</url>
+    <content><![CDATA[<h1 id="下载及安装VSCode">1 &nbsp&nbsp<a href="#下载及安装VSCode" class="headerlink" title="下载及安装VSCode"></a>下载及安装VSCode</h1><ul>
+<li>下载：<a href="https://code.visualstudio.com/Download">VSCode System Installer</a></li>
+<li>安装：默认路径安装，选项额外添选上下文菜单（文件和目录）</li>
+</ul>
+<p>镜像加速下载的方法：将下载链接URL中的<code>stable</code>之前的字符全部改为<code>https://vscode.cdn.azure.cn/</code>即可。</p>
+<h1 id="配置C-C-开发环境">2 &nbsp&nbsp<a href="#配置C-C-开发环境" class="headerlink" title="配置C&#x2F;C++开发环境"></a>配置C&#x2F;C++开发环境</h1><h2 id="MSVC-CL编译器的安装和环境设置">2.1 &nbsp&nbsp<a href="#MSVC-CL编译器的安装和环境设置" class="headerlink" title="MSVC CL编译器的安装和环境设置"></a>MSVC CL编译器的安装和环境设置</h2><ol>
+<li>下载（<code>CMake</code>和<code>Ninja</code>可以不用单独下载安装，<code>MSVC CL</code>编译器的<code>Visual Studio Installer</code>管理器可以统一管理下载和更新）<ul>
+<li><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a>，<code>所有下载</code>-&gt;<code>用于 Visual Studio 的工具</code>-&gt;<code>Visual Studio 2022 生成工具</code>。</li>
+<li><del><a href="https://cmake.org/download/">CMake</a></del></li>
+<li><del><a href="https://github.com/ninja-build/ninja/releases">Ninja</a></del></li>
+</ul>
+</li>
+<li>安装「Visual Studio 2022 生成工具」，然后勾选对应包下载安装<ol>
+<li>工作负荷：使用C++的桌面开发<ul>
+<li>MSVC v143 - VS 2022 C++ x64&#x2F;x86生成工具(最新)</li>
+<li>Windows 11 SDK (10.0.26100.0)：建议选择最新的系统版本号</li>
+<li>用于 Windows 的 C++ CMake 工具（包含CMake和Ninja）</li>
+</ul>
+</li>
+<li>单个组件<ul>
+<li>对 LLVM(clang-cl)工具集的 MSBuild 支持</li>
+<li>适用于 Windows 的C++ Clang 编译器(18.1.8)</li>
+<li>MSVC v143 - VS 2022 C++ x64&#x2F;x86 Spectre 缓解库（最新）</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>分别添加程序路径到系统环境变量<code>Path</code><ul>
+<li>MSVC CL编译器路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\bin\Hostx64\x64</code></li>
+<li>LLVM CLANG编译器路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin</code></li>
+<li>CMake路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin</code></li>
+<li>Ninja路径：<code>C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja</code></li>
+</ul>
+</li>
+<li>拷贝<code>.vscode</code>配置文件夹</li>
+</ol>
+<h2 id="更新MSVC后找不到CL命令">2.2 &nbsp&nbsp<a href="#更新MSVC后找不到CL命令" class="headerlink" title="更新MSVC后找不到CL命令"></a>更新MSVC后找不到CL命令</h2><p>使用<code>Visual Studio Installer</code>更新MSVC后，编译器版本号可能会变更，如果在终端运行cl命令后提示找不到程序，需要手动更新两处地方的CL编译器路径：</p>
+<ul>
+<li>系统环境变量<code>Path</code></li>
+<li><code>.vscode</code>配置文件夹中的<code>c_cpp_properties.json</code></li>
+</ul>
+<h1 id="VSCode源代码管理">3 &nbsp&nbsp<a href="#VSCode源代码管理" class="headerlink" title="VSCode源代码管理"></a>VSCode源代码管理</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，第一次用vs code进行commit时，若使用「同步更改」命令提示说找不到远程仓库时，可以直接使用「推送到」命令。</p>
+<h1 id="Codeium扩展插件的帐号token获取及使用">4 &nbsp&nbsp<a href="#Codeium扩展插件的帐号token获取及使用" class="headerlink" title="Codeium扩展插件的帐号token获取及使用"></a>Codeium扩展插件的帐号token获取及使用</h1><p>一般直接通过Codeium Auth登录帐号即可使用扩展插件。</p>
+<h2 id="token获取">4.1 &nbsp&nbsp<a href="#token获取" class="headerlink" title="token获取"></a>token获取</h2><p>如果不想登录帐号，而是想要通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token的话。首先需要获取token，获取方式：</p>
+<ul>
+<li>方式一：<a href="https://www.codeium.com/profile?response_type=token&redirect_uri=vim-show-auth-token&state=a&scope=openid%20profile%20email&redirect_parameters_type=query">官网直链获取</a>（此直链是会提示关联vim扩展，但token都是通用的，同样适用于VSCode的扩展），直接在该网址中登录帐号即可获取「Provide Authentication Token」</li>
+<li>方式二：参考<a href="#token%E4%BD%BF%E7%94%A8">token使用</a>的1-4步骤。</li>
+</ul>
+<h2 id="token使用">4.2 &nbsp&nbsp<a href="#token使用" class="headerlink" title="token使用"></a>token使用</h2><ol>
+<li>VSCode安装好Codeium扩展插件。</li>
+<li>左下角，点击Codeium Auth登录按钮，首先插件会弹窗请求跳转到网页输入帐号登录。</li>
+<li>直接关闭打开的网页，点击右下角「在线帐号登录」的cancel按钮。</li>
+<li>之后插件会弹窗请求跳转到网页输入帐号登录，这个在线网址则是获取「Provide Authentication Token」。（如果已经提前获取到token，这里可以不登录网页帐号，直接关闭网页）</li>
+<li>最后通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token即可正常登录。</li>
+</ol>
+<h1 id="拓展插件">5 &nbsp&nbsp<a href="#拓展插件" class="headerlink" title="拓展插件"></a>拓展插件</h1><h2 id="LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found">5.1 &nbsp&nbsp<a href="#LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found" class="headerlink" title="LaTeX-Workshop报错提示command &#39;latex-workshop.onEnterKey&#39; not found"></a><code>LaTeX-Workshop</code>报错提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code></h2><p>问题现象：在<code>tex</code>文件中使用<code>Enter</code>键会出现报错信息，提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code>，只有<code>Ctrl+Enter</code>键才能正常输入回车。</p>
+<p>解决方案：卸载<code>LaTeX-Workshop</code>扩展插件，关闭<code>VSCode</code>程序，确保<code>VSCode</code>正常移除插件的缓存文件。然后重新打开<code>VSCode</code>，重新安装<code>LaTeX-Workshop</code>。</p>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [Question] How can I get codeium auth token[EB&#x2F;OL]. <a href="https://github.com/Exafunction/codeium.vim/issues/150">https://github.com/Exafunction/codeium.vim/issues/150</a>.<br>[2] VsCode下载，使用国内镜像秒下载[EB&#x2F;OL]. <a href="https://blog.csdn.net/bielaiwuyang1999/article/details/117814237">https://blog.csdn.net/bielaiwuyang1999/article/details/117814237</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>编译</tag>
+        <tag>vsc</tag>
+        <tag>vscode</tag>
+        <tag>编辑器</tag>
+        <tag>链接</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Programming Ability Test (PAT)</title>
+    <url>/code-training/pat/</url>
+    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
+<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
+<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
+<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
+<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
+<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>编程</tag>
+        <tag>PAT</tag>
+        <tag>PTA</tag>
+        <tag>练习</tag>
+        <tag>题库</tag>
+        <tag>题目</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -5988,6 +5988,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">支持</td>
 </tr>
 <tr>
+<td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/134586/intel-core-i512400-processor-18m-cache-up-to-4-40-ghz/specifications.html">酷睿™ i5-12400</a></td>
+<td align="center">6&#x2F;12</td>
+<td align="center">65~117</td>
+<td align="center">无E核 <br> P核2.5~4.4</td>
+<td align="center">DP：7680 x 4320 @ 60Hz <br> HDMI：4096 x 2160 @ 60Hz <br> eDP：5120 x 3200 @ 120Hz</td>
+<td align="center">128 DDR5 4800 MT&#x2F;s <br> 128 DDR4 3200 MT&#x2F;s</td>
+<td align="center">支持</td>
+<td align="center">支持</td>
+</tr>
+<tr>
 <td align="center"><a href="https://www.intel.cn/content/www/cn/zh/products/sku/230575/intel-core-i313100-processor-12m-cache-up-to-4-50-ghz/specifications.html">酷睿™ i3-13100</a></td>
 <td align="center">4&#x2F;8</td>
 <td align="center">60~110</td>
@@ -6031,7 +6041,32 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note default no-icon"><p>BUG处理器的折腾性思考：小黄鱼上面流通不少Intel 12代ES测试版处理器，不同步进版本存在不同问题，例如CPU没有内建直连独立显卡的PCI-E通道，会导致所有主板上第一根直连独立显卡的PCI-E X16插槽无效。这类BUG CPU虽然价格看着很诱惑，但可能实际运行不稳定，因此不纳入All in One硬件选型考虑范围。</p>
 </div>
 
-<h2 id="主板选型对比">12.2 &nbsp&nbsp<a href="#主板选型对比" class="headerlink" title="主板选型对比"></a>主板选型对比</h2><p>TODO</p>
+<h2 id="主板选型对比">12.2 &nbsp&nbsp<a href="#主板选型对比" class="headerlink" title="主板选型对比"></a>主板选型对比</h2><table>
+<thead>
+<tr>
+<th align="center">主板型号</th>
+<th align="center">内存插槽</th>
+<th align="center">供电</th>
+<th align="center">网口情况</th>
+<th align="center">SATA支持</th>
+<th align="center">M.2支持</th>
+<th align="center">PCIe通道</th>
+<th align="center">显示接口</th>
+<th align="center">PCB设计板层</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">云星Matx-Z690 NAS主板</td>
+<td align="center">4 x DDR4内存槽<br>最大支持4 x 32G&#x3D;128G</td>
+<td align="center">8+1+1相</td>
+<td align="center">4 x Intel I226-V 2.5G</td>
+<td align="center">8 x SATA 3.0</td>
+<td align="center">2 x PCIe4.0 x4正面<br>2 x PCIe3.0 x4反面</td>
+<td align="center">2 x PCIe4.0 x16插槽（x8带宽）<br>PCIe4.0 x4插槽（x4带宽）</td>
+<td align="center">HDMI2.0<br>DP1.4</td>
+<td align="center">6层</td>
+</tr>
+</tbody></table>
 <h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.</p>
 ]]></content>
       <categories>
@@ -7468,14 +7503,24 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>重启机器</li>
 </ol>
 <h2 id="win11-OOBE安装跳过强制登录帐号">22.4 &nbsp&nbsp<a href="#win11-OOBE安装跳过强制登录帐号" class="headerlink" title="win11 OOBE安装跳过强制登录帐号"></a>win11 OOBE安装跳过强制登录帐号</h2><ul>
-<li>方案1：拔掉网线，Shift+F10调出cmd窗口：运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。（微软似乎通过云端修改策略，该法可能无效，并且要求插网线）</li>
-<li>方案2：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#46;&#99;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#x6f;&#109;">no@thanks.com</a>（微软时不时会通过云封杀该账户）</li>
-<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#x40;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;">example@example.com</a></li>
+<li>方案1：拔掉网线，Shift+F10调出cmd窗口，运行：<code>oobe\BypassNRO.cmd</code>，重启继续走OOBE流程，到登录账户页面时会多出一个暂时跳过的选项。<ul>
+<li>bypassnro.cmd在26200.5516预览版更新已确认被移除，该方法在后期正式版将无法使用。</li>
 </ul>
 </li>
+<li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#x6b;&#121;&#x6f;&#117;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#99;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;">example@example.com</a></li>
+</ul>
+</li>
+<li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
+<li>适用系统范围：Windows 11 家庭版和专业版系列 (包括专业版、专业工作站版和专业教育版)</li>
+</ul>
+</li>
+<li>方案5：无人值守文件unattended.xml自动化脚本。</li>
 </ul>
 <h2 id="新主板安装win7启动报错蓝屏0x000000a5">22.5 &nbsp&nbsp<a href="#新主板安装win7启动报错蓝屏0x000000a5" class="headerlink" title="新主板安装win7启动报错蓝屏0x000000a5"></a>新主板安装win7启动报错蓝屏0x000000a5</h2><p>问题：理论上1-13代酷睿都可以安装，本质上就是驱动的支持问题（锐龙芯片也是一样）。intel酷睿芯片原生支持win7的是6代，789代可通过注入驱动方式安装（可稳定用），10代及10代以后的也可以装，十分麻烦，需要特别处理BIOS和驱动问题（否则就是无限的a5蓝屏），而且不知道能否稳定用。一般导致a5蓝屏常见也是acpi.sys驱动问题。</p>
 <h1 id="系统启动项">23 &nbsp&nbsp<a href="#系统启动项" class="headerlink" title="系统启动项"></a>系统启动项</h1><h2 id="EFI-NVRAM启动项">23.1 &nbsp&nbsp<a href="#EFI-NVRAM启动项" class="headerlink" title="EFI NVRAM启动项"></a>EFI NVRAM启动项</h2><p>具有EFI的硬件，启动项是存储在NVRAM介质中的，EFI固件类似于BIOS固件。在UEFI v2.3.1及之后的版本，可以使用这些工具编辑EFI启动项：</p>
@@ -11219,7 +11264,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#x69;&#x73;&#x74;&#x65;&#114;&#x6b;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#101;&#x72;&#x6b;&#x69;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
