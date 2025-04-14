@@ -2153,6 +2153,37 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机安全</title>
+    <url>/code/computer-security/</url>
+    <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
+<li>wep：几乎都能破解，注入包一分钟即可</li>
+<li>wpa&#x2F;wpa2、混合、pin：暴力破解</li>
+</ul>
+<h1 id="关于代理服务器和跳板攻击">2 &nbsp&nbsp<a href="#关于代理服务器和跳板攻击" class="headerlink" title="关于代理服务器和跳板攻击"></a>关于代理服务器和跳板攻击</h1><p>通过代理跳板，跳板越多，主机链越长（若有路由器或者交换机，可删除保存在flash内的登录日志，消除痕迹），可做到防止被攻击（隐藏IP），突破一些网址的限制访问（墙或者请求次数），隐藏身份进行攻击。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>计算机安全</tag>
+        <tag>信息安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css总结笔记</title>
     <url>/code/css/</url>
     <content><![CDATA[<h1 id="开发记录">1 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>类名含有空格（浏览器F12检查元素）时，一般是包含多个类名，空格字符在类型中无效，实际上呈现出来的是分隔符，不是空格。CSS类名选择器一般选择第一个即可。</p>
@@ -2173,19 +2204,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>css</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
   </entry>
   <entry>
     <title>数据结构</title>
@@ -3231,25 +3249,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>正则表达式总结笔记</title>
-    <url>/code/regular-expressions/</url>
-    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
-<li>[\u4e00-\u9fa5] 匹配中文字符</li>
-<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
-</ul>
-<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>正则表达式</tag>
-        <tag>正则</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt总结笔记</title>
     <url>/code/qt/</url>
     <content><![CDATA[<h1 id="Qt语法">1 &nbsp&nbsp<a href="#Qt语法" class="headerlink" title="Qt语法"></a>Qt语法</h1><p><a href="https://www.cnblogs.com/jfzhu/p/13501678.html">Qt信号与槽使用方法最完整总结</a></p>
@@ -3566,6 +3565,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>源码</tag>
         <tag>qt creator</tag>
         <tag>界面开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式总结笔记</title>
+    <url>/code/regular-expressions/</url>
+    <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
+<li>[\u4e00-\u9fa5] 匹配中文字符</li>
+<li>[\u4e00-\u9fa5]+ 匹配中文字符组成的字符串</li>
+</ul>
+<h1 id="在编辑器中删除空行">2 &nbsp&nbsp<a href="#在编辑器中删除空行" class="headerlink" title="在编辑器中删除空行"></a>在编辑器中删除空行</h1><p>Ctrl+H键，输入<code>^(\s)*$\n</code>，替换为空即可。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>正则表达式</tag>
+        <tag>正则</tag>
       </tags>
   </entry>
   <entry>
@@ -4070,302 +4088,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -6194,6 +5916,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android系统排障总结</title>
     <url>/troubleshooting/android-troubleshooting/</url>
     <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
@@ -6216,207 +6234,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>维护</tag>
         <tag>故障</tag>
         <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux系统排障总结</title>
-    <url>/troubleshooting/linux-troubleshooting/</url>
-    <content><![CDATA[<h1 id="Bash终端">1 &nbsp&nbsp<a href="#Bash终端" class="headerlink" title="Bash终端"></a>Bash终端</h1><h2 id="符号输入控制">1.1 &nbsp&nbsp<a href="#符号输入控制" class="headerlink" title="符号输入控制"></a>符号输入控制</h2><ul>
-<li>ctrl+c：停止</li>
-<li>ctrl+z：停止输入</li>
-</ul>
-<h1 id="基础命令">2 &nbsp&nbsp<a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
-<li>关机：<ul>
-<li><code>poweroff</code>（也是调用shutdown工具链实现）</li>
-<li><code>halt</code>（实际调用shutdown -h）</li>
-<li><code>shutdown -h now</code></li>
-<li><code>init 0</code>（init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一。它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程，shutdown就是使用这种机制。init定义了8个运行级别(runlevel)，init 0为关机，init 1为重启。）</li>
-</ul>
-</li>
-<li>重启<ul>
-<li><code>reboot</code></li>
-<li><code>shutdown -r now</code>（root权限可使用）</li>
-<li><code>init 1</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="包管理器">3 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">3.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">3.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
-
-<h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">4.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
-
-<h2 id="源码编译的程序的安装和卸载">4.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>卸载方式：</p>
-<ul>
-<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
-<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
-<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
-<li>debian系列linux可尝试使用auto-apt 和 checkinstall：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure>
-
-<h2 id="普通用户导致的编译问题">4.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
-<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
-<h2 id="常见编译错误">4.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
-<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
-<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
-</ul>
-<h1 id="账户管理">5 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="自动root登录">5.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
-
-<h2 id="重置密码（ubuntu为例）">5.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
-<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
-<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
-<li>exit退出shell，选择resume回到正常启动中。</li>
-</ol>
-<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">5.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
-<h3 id="etc-passwd">5.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
-<ol>
-<li>账号名称</li>
-<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
-<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
-<li>GID，也就是群组ID</li>
-<li>关于账号的一些说明信息（暂时可以忽略）</li>
-<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
-<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
-</ol>
-<h3 id="etc-shadow">5.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
-<ol>
-<li>账户名称（密码需要与账户对应的）</li>
-<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
-<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
-<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
-<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
-<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
-<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
-<li>账号失效日期，过了这个日期账号就不能用了</li>
-<li>保留未使用</li>
-</ol>
-<h3 id="etc-shadow文件中密码的加密方式">5.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
-<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
-<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
-<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
-</div>
-
-<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
-<h1 id="硬盘和分区管理">6 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">6.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk    <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh    <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l    <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb    <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb    <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan    <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载</span></span><br><span class="line">/dev/sdb    /mnt/pan    ext4    defaults    0    0</span><br></pre></td></tr></table></figure>
-
-<h2 id="将-home目录挂载到新分区（或新硬盘）">6.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="查看硬盘是不是固态硬盘（SSD）">6.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
-
-<h1 id="网络">7 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">7.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
-<ul>
-<li>windows：ipconfig &#x2F;a</li>
-<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
-</ul>
-<p>网卡名称解析：</p>
-<ul>
-<li>lo：表示local</li>
-<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
-<li>en：表示ethernet以太网</li>
-<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
-</ul>
-<p>例子：</p>
-<ul>
-<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
-<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
-</ul>
-<h2 id="ubuntu配置网卡">7.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.10/24</span><br><span class="line">      gateway4: 192.168.1.1</span><br><span class="line">      nameservers:</span><br><span class="line">        addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="ssh登录远程服务器">7.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
-</div>
-<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
-<p>查看ssh版本：<code>ssh -V</code></p>
-<h3 id="Ubuntu开启ssh服务及允许root登录">7.3.1 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root登录" class="headerlink" title="Ubuntu开启ssh服务及允许root登录"></a>Ubuntu开启ssh服务及允许root登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="系统自启ssh服务">7.3.1.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用scp传递文件">7.3.2 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
-</div>
-<ol>
-<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
-<li>在PuTTY安装路径中打开终端窗口</li>
-<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
-</ol>
-<h1 id="远程控制软件">8 &nbsp&nbsp<a href="#远程控制软件" class="headerlink" title="远程控制软件"></a>远程控制软件</h1><h2 id="ubuntu-linux安装远程控制软件">8.1 &nbsp&nbsp<a href="#ubuntu-linux安装远程控制软件" class="headerlink" title="ubuntu linux安装远程控制软件"></a>ubuntu linux安装远程控制软件</h2><ul>
-<li>根据系统类型下载<a href="https://www.todesk.com/linux.html">官方安装包</a></li>
-<li>安装命令：<code>sudo apt-get install ./todesk-v4.7.2.0-amd64.deb</code></li>
-<li>运行命令：<code>todesk</code></li>
-</ul>
-<h2 id="arch-linux安装远程控制软件">8.2 &nbsp&nbsp<a href="#arch-linux安装远程控制软件" class="headerlink" title="arch linux安装远程控制软件"></a>arch linux安装远程控制软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
-<ul>
-<li>安装todesk：亦可下载<a href="https://www.todesk.com/linux.html">官方安装包</a>手动执行安装</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装teamviewer</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装向日葵</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure>
-
-<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
-<h1 id="开机排障">9 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">9.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
-<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
-<ul>
-<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
-<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
-</ul>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ubuntu紧急模式">9.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
-<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<h2 id="开机出现initramfs-requires-a-manual-fsck">9.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
-<ul>
-<li>异常断电或者关机引起文件数据损坏</li>
-<li>系统无法启动</li>
-<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
-</ul>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
-
-
-<h1 id="显卡驱动">10 &nbsp&nbsp<a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h1><h2 id="ubuntu-20-04安装英伟达nvidia闭源驱动">10.1 &nbsp&nbsp<a href="#ubuntu-20-04安装英伟达nvidia闭源驱动" class="headerlink" title="ubuntu 20.04安装英伟达nvidia闭源驱动"></a>ubuntu 20.04安装英伟达nvidia闭源驱动</h2><h3 id="运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version">10.1.1 &nbsp&nbsp<a href="#运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version" class="headerlink" title="运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version"></a>运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version</h3><p>故障原因：系统检测到驱动和NVML版本不一致的原因导致的。</p>
-<p>解决方法：<code>sudo reboot</code>重启系统即可。</p>
-<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.<br>[20] 【已解决】Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version: 535.161[EB&#x2F;OL]. <a href="https://blog.csdn.net/BetrayFree/article/details/137608544">https://blog.csdn.net/BetrayFree/article/details/137608544</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>linux</tag>
-        <tag>终端</tag>
-        <tag>笔记</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>命令</tag>
       </tags>
   </entry>
   <entry>
@@ -6835,6 +6652,218 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Linux系统排障总结</title>
+    <url>/troubleshooting/linux-troubleshooting/</url>
+    <content><![CDATA[<h1 id="Bash终端">1 &nbsp&nbsp<a href="#Bash终端" class="headerlink" title="Bash终端"></a>Bash终端</h1><h2 id="符号输入控制">1.1 &nbsp&nbsp<a href="#符号输入控制" class="headerlink" title="符号输入控制"></a>符号输入控制</h2><ul>
+<li>ctrl+c：停止</li>
+<li>ctrl+z：停止输入</li>
+</ul>
+<h1 id="基础命令">2 &nbsp&nbsp<a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul>
+<li>关机：<ul>
+<li><code>poweroff</code>（也是调用shutdown工具链实现）</li>
+<li><code>halt</code>（实际调用shutdown -h）</li>
+<li><code>shutdown -h now</code></li>
+<li><code>init 0</code>（init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一。它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程，shutdown就是使用这种机制。init定义了8个运行级别(runlevel)，init 0为关机，init 1为重启。）</li>
+</ul>
+</li>
+<li>重启<ul>
+<li><code>reboot</code></li>
+<li><code>shutdown -r now</code>（root权限可使用）</li>
+<li><code>init 1</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="包管理器">3 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">3.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">3.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
+
+<h1 id="编译问题">4 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">4.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
+
+<h2 id="源码编译的程序的安装和卸载">4.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>卸载方式：</p>
+<ul>
+<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
+<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
+<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
+<li>debian系列linux可尝试使用auto-apt 和 checkinstall：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure>
+
+<h2 id="普通用户导致的编译问题">4.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
+<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
+<h2 id="常见编译错误">4.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
+<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
+<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
+</ul>
+<h1 id="账户管理">5 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">5.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自动root登录">5.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
+
+<h2 id="重置密码（ubuntu为例）">5.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
+<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
+<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
+<li>exit退出shell，选择resume回到正常启动中。</li>
+</ol>
+<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">5.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
+<h3 id="etc-passwd">5.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
+<ol>
+<li>账号名称</li>
+<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
+<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
+<li>GID，也就是群组ID</li>
+<li>关于账号的一些说明信息（暂时可以忽略）</li>
+<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
+<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
+</ol>
+<h3 id="etc-shadow">5.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
+<ol>
+<li>账户名称（密码需要与账户对应的）</li>
+<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
+<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
+<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
+<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
+<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
+<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
+<li>账号失效日期，过了这个日期账号就不能用了</li>
+<li>保留未使用</li>
+</ol>
+<h3 id="etc-shadow文件中密码的加密方式">5.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
+<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
+<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
+<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
+</div>
+
+<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
+<h1 id="硬盘和分区管理">6 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">6.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk    <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh    <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l    <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb    <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb    <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan    <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载</span></span><br><span class="line">/dev/sdb    /mnt/pan    ext4    defaults    0    0</span><br></pre></td></tr></table></figure>
+
+<h2 id="将-home目录挂载到新分区（或新硬盘）">6.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="查看硬盘是不是固态硬盘（SSD）">6.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
+
+<h1 id="网络">7 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">7.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
+<ul>
+<li>windows：ipconfig &#x2F;a</li>
+<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
+</ul>
+<p>网卡名称解析：</p>
+<ul>
+<li>lo：表示local</li>
+<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
+<li>en：表示ethernet以太网</li>
+<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
+</ul>
+<p>例子：</p>
+<ul>
+<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
+<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
+</ul>
+<h2 id="ubuntu配置网卡">7.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.10/24</span><br><span class="line">      gateway4: 192.168.1.1</span><br><span class="line">      nameservers:</span><br><span class="line">        addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">    eth0:</span><br><span class="line">      dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="ssh登录远程服务器">7.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
+</div>
+<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
+<p>查看ssh版本：<code>ssh -V</code></p>
+<h3 id="Ubuntu开启ssh服务及允许root登录">7.3.1 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root登录" class="headerlink" title="Ubuntu开启ssh服务及允许root登录"></a>Ubuntu开启ssh服务及允许root登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="系统自启ssh服务">7.3.1.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用scp传递文件">7.3.2 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
+</div>
+<ol>
+<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
+<li>在PuTTY安装路径中打开终端窗口</li>
+<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
+</ol>
+<h1 id="远程控制软件">8 &nbsp&nbsp<a href="#远程控制软件" class="headerlink" title="远程控制软件"></a>远程控制软件</h1><h2 id="ubuntu-linux安装远程控制软件">8.1 &nbsp&nbsp<a href="#ubuntu-linux安装远程控制软件" class="headerlink" title="ubuntu linux安装远程控制软件"></a>ubuntu linux安装远程控制软件</h2><ul>
+<li>根据系统类型下载<a href="https://www.todesk.com/linux.html">官方安装包</a></li>
+<li>安装命令：<code>sudo apt-get install ./todesk-v4.7.2.0-amd64.deb</code></li>
+<li>运行命令：<code>todesk</code></li>
+</ul>
+<h2 id="arch-linux安装远程控制软件">8.2 &nbsp&nbsp<a href="#arch-linux安装远程控制软件" class="headerlink" title="arch linux安装远程控制软件"></a>arch linux安装远程控制软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
+<ul>
+<li>安装todesk：亦可下载<a href="https://www.todesk.com/linux.html">官方安装包</a>手动执行安装</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装teamviewer</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装向日葵</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure>
+
+<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
+<h1 id="开机排障">9 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">9.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
+<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
+<ul>
+<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
+<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
+</ul>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ubuntu紧急模式">9.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
+<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<h2 id="开机出现initramfs-requires-a-manual-fsck">9.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
+<ul>
+<li>异常断电或者关机引起文件数据损坏</li>
+<li>系统无法启动</li>
+<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
+</ul>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="显卡驱动">10 &nbsp&nbsp<a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h1><h2 id="ubuntu-20-04安装英伟达nvidia闭源驱动">10.1 &nbsp&nbsp<a href="#ubuntu-20-04安装英伟达nvidia闭源驱动" class="headerlink" title="ubuntu 20.04安装英伟达nvidia闭源驱动"></a>ubuntu 20.04安装英伟达nvidia闭源驱动</h2><h3 id="运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version">10.1.1 &nbsp&nbsp<a href="#运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version" class="headerlink" title="运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version"></a>运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version</h3><p>故障原因：系统检测到驱动和NVML版本不一致的原因导致的。</p>
+<p>解决方法：<code>sudo reboot</code>重启系统即可。</p>
+<h1 id="参考文献">11 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.<br>[20] 【已解决】Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version: 535.161[EB&#x2F;OL]. <a href="https://blog.csdn.net/BetrayFree/article/details/137608544">https://blog.csdn.net/BetrayFree/article/details/137608544</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+        <tag>笔记</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路由排障总结</title>
+    <url>/troubleshooting/router-troubleshooting/</url>
+    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+  </entry>
+  <entry>
     <title>运行库修复（Windows平台）</title>
     <url>/troubleshooting/runtime-library-repair-on-windows/</url>
     <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
@@ -7029,17 +7058,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>维护</tag>
         <tag>故障</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>路由排障总结</title>
-    <url>/troubleshooting/router-troubleshooting/</url>
-    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
   </entry>
   <entry>
     <title>Windows系统排障总结</title>
@@ -7553,12 +7571,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#49;&#46;&#x63;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#x2e;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x73;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#46;&#x63;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -7650,101 +7668,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -7890,11 +7813,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -8379,11 +8302,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -8678,10 +8601,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -9425,10 +9348,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -9596,10 +9519,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -9928,10 +9851,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -9958,11 +9881,106 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -10134,6 +10152,29 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>qt</tag>
         <tag>第二章</tag>
         <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
       </tags>
   </entry>
   <entry>
@@ -10375,82 +10416,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -11134,6 +11099,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -11173,24 +11191,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>教程</tag>
         <tag>Blender</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机安全</title>
-    <url>/code/computer-security/</url>
-    <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
-<li>wep：几乎都能破解，注入包一分钟即可</li>
-<li>wpa&#x2F;wpa2、混合、pin：暴力破解</li>
-</ul>
-<h1 id="关于代理服务器和跳板攻击">2 &nbsp&nbsp<a href="#关于代理服务器和跳板攻击" class="headerlink" title="关于代理服务器和跳板攻击"></a>关于代理服务器和跳板攻击</h1><p>通过代理跳板，跳板越多，主机链越长（若有路由器或者交换机，可删除保存在flash内的登录日志，消除痕迹），可做到防止被攻击（隐藏IP），突破一些网址的限制访问（墙或者请求次数），隐藏身份进行攻击。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>计算机安全</tag>
-        <tag>信息安全</tag>
       </tags>
   </entry>
   <entry>
@@ -11327,7 +11327,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#105;&#x73;&#116;&#101;&#114;&#107;&#x69;&#x6e;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#x69;&#115;&#116;&#101;&#114;&#x6b;&#x69;&#x6e;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -11669,69 +11669,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
-    <url>/about/post-offline-download/index.html</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
-<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
-<ul>
-<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
-<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
-<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
-</ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
-</div>
-
-<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
-<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
-<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
-<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
-</div>
-
-<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
-<ol>
-<li>打开火狐浏览器。</li>
-<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
-<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
-<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
-<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
-    <div class="flex-column">
-    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
-</div>
-
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
-</div>
-
-<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
-<li>保存压缩包到本地即可。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
-
-<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
-<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
-<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>更新日志</title>
     <url>/about/logs/index.html</url>
     <content><![CDATA[<div class="note info no-icon"><p>注：本页面用来记录本博客的建设日志。（从2021&#x2F;11&#x2F;11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
@@ -11946,6 +11883,69 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
+    <url>/about/post-offline-download/index.html</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
+<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
+<ul>
+<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
+<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
+<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
+</ul>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+</div>
+
+<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
+<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
+<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+</div>
+
+<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
+<ol>
+<li>打开火狐浏览器。</li>
+<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
+<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
+<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
+<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
+    <div class="flex-column">
+    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
+</div>
+
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+</div>
+
+<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
+<li>保存压缩包到本地即可。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
+
+<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
+<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
+<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>第三方开源许可声明</title>
     <url>/about/third-party-declaration/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -12021,15 +12021,15 @@ CGI&后期处理
     <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/live2d_models/umaru/umaru.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
+  </entry>
+  <entry>
     <title>艺术作品</title>
     <url>/works/artworks/index.html</url>
     <content><![CDATA[<p>TODO</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d_models/umaru/umaru.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
   <entry>
     <title>软件作品</title>
@@ -12252,7 +12252,7 @@ CGI&后期处理
 <blockquote>
 <p>最新代码可能会存在运行不稳定的情况，请自行选择是否使用最新版本。</p>
 </blockquote>
-<h2 id="下载及安装（Blender-v4-2-）">2.1 &nbsp&nbsp<a href="#下载及安装（Blender-v4-2-）" class="headerlink" title="下载及安装（Blender v4.2+）"></a>下载及安装（Blender v4.2+）</h2><h3 id="在线更新安装（Blender-v4-2-）">2.1.1 &nbsp&nbsp<a href="#在线更新安装（Blender-v4-2-）" class="headerlink" title="在线更新安装（Blender v4.2+）"></a>在线更新安装（Blender v4.2+）</h3><div class="note info no-icon"><p><strong>TL插件自<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/tag/v1.6.3">v1.6.3</a>版本起，插件内置基于<a href="https://github.com/Mister-Kin/ToggleLanguage/releases">GitHub Rleases</a>的版本信息自动检查最新版本和自动下载更新的功能。—— Mr. Kin，2025-03-28</strong></p>
+<h2 id="下载及安装（Blender-v4-2-）">2.1 &nbsp&nbsp<a href="#下载及安装（Blender-v4-2-）" class="headerlink" title="下载及安装（Blender v4.2+）"></a>下载及安装（Blender v4.2+）</h2><h3 id="在线更新安装（Blender-v4-2-）">2.1.1 &nbsp&nbsp<a href="#在线更新安装（Blender-v4-2-）" class="headerlink" title="在线更新安装（Blender v4.2+）"></a>在线更新安装（Blender v4.2+）</h3><div class="note info no-icon"><p><strong>自<a href="https://github.com/Mister-Kin/ToggleLanguage/releases/tag/v1.6.3">v1.6.3</a>版本起，TL插件内置基于<a href="https://github.com/Mister-Kin/ToggleLanguage/releases">GitHub Rleases</a>的版本信息自动检查最新版本和自动下载更新的功能。—— Mr. Kin，2025-03-28</strong></p>
 </div>
 
 <div class="note danger no-icon"><p><strong>因「<a href="https://extensions.blender.org/">Blender Extension平台</a>」网站管理员认为本插件存在多项功能并不符合插件名称，管理员称这不符合规范，故本人已选择删除<a href="https://id.blender.org/">Blender ID</a>帐号。自2024-12-26起，不再支持插件以「Blender在线扩展插件平台】方式来在线安装。—— Mr. Kin，2024-12-26</strong></p>
