@@ -2406,6 +2406,139 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>docker</title>
+    <url>/code/docker/</url>
+    <content><![CDATA[<ul>
+<li><a href="https://www.runoob.com/docker/docker-resources.html">Docker 命令大全</a></li>
+</ul>
+<h1 id="docker的基础命令操作">1 &nbsp&nbsp<a href="#docker的基础命令操作" class="headerlink" title="docker的基础命令操作"></a>docker的基础命令操作</h1><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">功能</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">docker ps</td>
+<td align="center">列出当前正在运行的容器</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker ps -a</td>
+<td align="center">列出所有容器（包括已停止的容器）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker logs container_name</td>
+<td align="center">查看指定容器的日志</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker inspect container_name&#x2F;image</td>
+<td align="center">获取指定容器或镜像的详细信息</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker exec -it container_name &#x2F;bin&#x2F;bash</td>
+<td align="center">进入指定容器的交互式终端</td>
+<td align="center">-i: 交互式操作<br>-t: 终端<br>-it：以交互式终端运行容器，例如 docker exec -it container_name bash</td>
+</tr>
+<tr>
+<td align="center">docker stop container_name</td>
+<td align="center">停止一个或多个容器</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker rm container_name</td>
+<td align="center">删除一个或多个容器</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker rmi image-name:tag</td>
+<td align="center">删除一个或多个镜像</td>
+<td align="center">不加tag则会删除所有</td>
+</tr>
+<tr>
+<td align="center">docker run image-name --name container_name -d</td>
+<td align="center">启动一个新的容器并运行命令</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker start container_name</td>
+<td align="center">启动已停止的容器</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker restart container_name</td>
+<td align="center">重启一个容器</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker version</td>
+<td align="center">显示 Docker 客户端和守护进程的版本信息</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker network ls</td>
+<td align="center">列出所有 Docker 网络</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker volume ls</td>
+<td align="center">列出所有 Docker 卷</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker images ls</td>
+<td align="center">列出本地存储的所有镜像</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker compose -f docker-compose.yml up -d</td>
+<td align="center">启动多容器应用（从 docker-compose.yml 文件）</td>
+<td align="center">-d：后台运行容器，例如 docker run -d ubuntu</td>
+</tr>
+<tr>
+<td align="center">docker compose down</td>
+<td align="center">停止并删除由 docker-compose 启动的容器、网络等</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker info</td>
+<td align="center">显示 Docker 系统的详细信息</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">docker stats</td>
+<td align="center">显示容器的实时资源使用情况</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="使用apt仓库为Debian安装docker">2 &nbsp&nbsp<a href="#使用apt仓库为Debian安装docker" class="headerlink" title="使用apt仓库为Debian安装docker"></a>使用apt仓库为Debian安装docker</h1><h2 id="添加Docker的官方GPG密钥">2.1 &nbsp&nbsp<a href="#添加Docker的官方GPG密钥" class="headerlink" title="添加Docker的官方GPG密钥"></a>添加Docker的官方GPG密钥</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install ca-certificates -y</span><br><span class="line">install -m 0755 -d /etc/apt/keyrings</span><br><span class="line"><span class="comment"># 可能下载会出现ssl验证错误，多重复执行几次wget下载就能成功下载</span></span><br><span class="line">wget https://download.docker.com/linux/debian/gpg -O /etc/apt/keyrings/docker.asc</span><br><span class="line"><span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.asc</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加Docker的官方仓库">2.2 &nbsp&nbsp<a href="#添加Docker的官方仓库" class="headerlink" title="添加Docker的官方仓库"></a>添加Docker的官方仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \</span></span><br><span class="line"><span class="string">  <span class="subst">$(. /etc/os-release &amp;&amp; echo <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)</span> stable&quot;</span> | \</span><br><span class="line">  <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Docker">2.3 &nbsp&nbsp<a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="验证Docker版本">2.4 &nbsp&nbsp<a href="#验证Docker版本" class="headerlink" title="验证Docker版本"></a>验证Docker版本</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker version</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改Docker镜像源">2.5 &nbsp&nbsp<a href="#修改Docker镜像源" class="headerlink" title="修改Docker镜像源"></a>修改Docker镜像源</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line"><span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">  &quot;registry-mirrors&quot;: [</span></span><br><span class="line"><span class="string">    &quot;https://docker.1ms.run&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.mybacc.com&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://dytt.online&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://lispy.org&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.xiaogenban1993.com&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.yomansunter.com&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://aicarbon.xyz&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://666860.xyz&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.zhai.cm&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://a.ussh.net&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://hub.littlediary.cn&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://hub.rat.dev&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.m.daocloud.io&quot;</span></span><br><span class="line"><span class="string">  ]</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="重启相关服务">2.6 &nbsp&nbsp<a href="#重启相关服务" class="headerlink" title="重启相关服务"></a>重启相关服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="Docker-Desktop（Windows）">3 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">3.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
+<p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Git总结笔记</title>
     <url>/code/git/</url>
     <content><![CDATA[<h1 id="语言编码的区别">1 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><ul>
@@ -2541,139 +2674,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>代码管理</tag>
         <tag>版本控制</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>docker</title>
-    <url>/code/docker/</url>
-    <content><![CDATA[<ul>
-<li><a href="https://www.runoob.com/docker/docker-resources.html">Docker 命令大全</a></li>
-</ul>
-<h1 id="docker的基础命令操作">1 &nbsp&nbsp<a href="#docker的基础命令操作" class="headerlink" title="docker的基础命令操作"></a>docker的基础命令操作</h1><table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">功能</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">docker ps</td>
-<td align="center">列出当前正在运行的容器</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker ps -a</td>
-<td align="center">列出所有容器（包括已停止的容器）</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker logs container_name</td>
-<td align="center">查看指定容器的日志</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker inspect container_name&#x2F;image</td>
-<td align="center">获取指定容器或镜像的详细信息</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker exec -it container_name &#x2F;bin&#x2F;bash</td>
-<td align="center">进入指定容器的交互式终端</td>
-<td align="center">-i: 交互式操作<br>-t: 终端<br>-it：以交互式终端运行容器，例如 docker exec -it container_name bash</td>
-</tr>
-<tr>
-<td align="center">docker stop container_name</td>
-<td align="center">停止一个或多个容器</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker rm container_name</td>
-<td align="center">删除一个或多个容器</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker rmi image-name:tag</td>
-<td align="center">删除一个或多个镜像</td>
-<td align="center">不加tag则会删除所有</td>
-</tr>
-<tr>
-<td align="center">docker run image-name --name container_name -d</td>
-<td align="center">启动一个新的容器并运行命令</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker start container_name</td>
-<td align="center">启动已停止的容器</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker restart container_name</td>
-<td align="center">重启一个容器</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker version</td>
-<td align="center">显示 Docker 客户端和守护进程的版本信息</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker network ls</td>
-<td align="center">列出所有 Docker 网络</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker volume ls</td>
-<td align="center">列出所有 Docker 卷</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker images ls</td>
-<td align="center">列出本地存储的所有镜像</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker compose -f docker-compose.yml up -d</td>
-<td align="center">启动多容器应用（从 docker-compose.yml 文件）</td>
-<td align="center">-d：后台运行容器，例如 docker run -d ubuntu</td>
-</tr>
-<tr>
-<td align="center">docker compose down</td>
-<td align="center">停止并删除由 docker-compose 启动的容器、网络等</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker info</td>
-<td align="center">显示 Docker 系统的详细信息</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">docker stats</td>
-<td align="center">显示容器的实时资源使用情况</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="使用apt仓库为Debian安装docker">2 &nbsp&nbsp<a href="#使用apt仓库为Debian安装docker" class="headerlink" title="使用apt仓库为Debian安装docker"></a>使用apt仓库为Debian安装docker</h1><h2 id="添加Docker的官方GPG密钥">2.1 &nbsp&nbsp<a href="#添加Docker的官方GPG密钥" class="headerlink" title="添加Docker的官方GPG密钥"></a>添加Docker的官方GPG密钥</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install ca-certificates -y</span><br><span class="line">install -m 0755 -d /etc/apt/keyrings</span><br><span class="line"><span class="comment"># 可能下载会出现ssl验证错误，多重复执行几次wget下载就能成功下载</span></span><br><span class="line">wget https://download.docker.com/linux/debian/gpg -O /etc/apt/keyrings/docker.asc</span><br><span class="line"><span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.asc</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加Docker的官方仓库">2.2 &nbsp&nbsp<a href="#添加Docker的官方仓库" class="headerlink" title="添加Docker的官方仓库"></a>添加Docker的官方仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \</span></span><br><span class="line"><span class="string">  <span class="subst">$(. /etc/os-release &amp;&amp; echo <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)</span> stable&quot;</span> | \</span><br><span class="line">  <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装Docker">2.3 &nbsp&nbsp<a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y</span><br></pre></td></tr></table></figure>
-
-<h2 id="验证Docker版本">2.4 &nbsp&nbsp<a href="#验证Docker版本" class="headerlink" title="验证Docker版本"></a>验证Docker版本</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker version</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改Docker镜像源">2.5 &nbsp&nbsp<a href="#修改Docker镜像源" class="headerlink" title="修改Docker镜像源"></a>修改Docker镜像源</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line"><span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">  &quot;registry-mirrors&quot;: [</span></span><br><span class="line"><span class="string">    &quot;https://docker.1ms.run&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.mybacc.com&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://dytt.online&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://lispy.org&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.xiaogenban1993.com&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.yomansunter.com&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://aicarbon.xyz&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://666860.xyz&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.zhai.cm&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://a.ussh.net&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://hub.littlediary.cn&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://hub.rat.dev&quot;,</span></span><br><span class="line"><span class="string">    &quot;https://docker.m.daocloud.io&quot;</span></span><br><span class="line"><span class="string">  ]</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="重启相关服务">2.6 &nbsp&nbsp<a href="#重启相关服务" class="headerlink" title="重启相关服务"></a>重启相关服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<h1 id="Docker-Desktop（Windows）">3 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">3.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
-<p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
   </entry>
   <entry>
     <title>Hexo个人博客搭建踩坑记</title>
@@ -4601,6 +4601,24 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Aegisub总结</title>
+    <url>/software/aegisub/</url>
+    <content><![CDATA[<p>油管的中英双语字幕，要先合并之后再导入aeg</p>
+<p>自己自制的双语，可先将中文打轴，之后复制行，并将翻译好的英文从复制的起始处开始粘贴。</p>
+<p>如果同一个样式的呈现的大小不一致，请重设分辨率再从样式库调用样式。</p>
+<p>时间轴批量置零，全选，在设置框将开始时间、结束时间、持续时间全部置零</p>
+<p>aegisub的频率模式（软件已经默认设置好缩放参数，即默认显示出来是人声频率左右的范围）</p>
+<h1 id="字幕格式设置">1 &nbsp&nbsp<a href="#字幕格式设置" class="headerlink" title="字幕格式设置"></a>字幕格式设置</h1><p>双语主：思源黑体，粗体，黑色，大小56，边框1，阴影1.8，垂直边距75<br>双语次：思源黑体，非粗体，#EBA862，大小36，边框1，阴影1.8，垂直边距40<br>单字幕：双语主，取垂直边距50。样式修改时，和「双语主」同步，先复制一份，再改垂直边距50</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>aegisub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AI总结</title>
     <url>/software/ai/</url>
     <content><![CDATA[<h1 id="LLM大模型">1 &nbsp&nbsp<a href="#LLM大模型" class="headerlink" title="LLM大模型"></a>LLM大模型</h1><h2 id="Ollama安装教程">1.1 &nbsp&nbsp<a href="#Ollama安装教程" class="headerlink" title="Ollama安装教程"></a>Ollama安装教程</h2><ol>
@@ -4665,24 +4683,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>AIGC</tag>
         <tag>AI</tag>
         <tag>yolo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Aegisub总结</title>
-    <url>/software/aegisub/</url>
-    <content><![CDATA[<p>油管的中英双语字幕，要先合并之后再导入aeg</p>
-<p>自己自制的双语，可先将中文打轴，之后复制行，并将翻译好的英文从复制的起始处开始粘贴。</p>
-<p>如果同一个样式的呈现的大小不一致，请重设分辨率再从样式库调用样式。</p>
-<p>时间轴批量置零，全选，在设置框将开始时间、结束时间、持续时间全部置零</p>
-<p>aegisub的频率模式（软件已经默认设置好缩放参数，即默认显示出来是人声频率左右的范围）</p>
-<h1 id="字幕格式设置">1 &nbsp&nbsp<a href="#字幕格式设置" class="headerlink" title="字幕格式设置"></a>字幕格式设置</h1><p>双语主：思源黑体，粗体，黑色，大小56，边框1，阴影1.8，垂直边距75<br>双语次：思源黑体，非粗体，#EBA862，大小36，边框1，阴影1.8，垂直边距40<br>单字幕：双语主，取垂直边距50。样式修改时，和「双语主」同步，先复制一份，再改垂直边距50</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>aegisub</tag>
       </tags>
   </entry>
   <entry>
@@ -4812,33 +4812,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>FFmpeg</title>
-    <url>/software/ffmpeg/</url>
-    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
-<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
-
-<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
-
-<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
-<li>yuv420p的p代表planar</li>
-<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
-<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
-<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
-<li>aac编码：网络视频128k；高质量192k</li>
-</ul>
-<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
-<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
-<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
-<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
-<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CG基础</title>
     <url>/software/cg-fundamentals/</url>
     <content><![CDATA[<h1 id="三维制作的规范">1 &nbsp&nbsp<a href="#三维制作的规范" class="headerlink" title="三维制作的规范"></a>三维制作的规范</h1><ol>
@@ -4865,6 +4838,33 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>CG</tag>
         <tag>基础</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>FFmpeg</title>
+    <url>/software/ffmpeg/</url>
+    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
+<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
+
+<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
+
+<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
+<li>yuv420p的p代表planar</li>
+<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
+<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
+<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
+<li>aac编码：网络视频128k；高质量192k</li>
+</ul>
+<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
+<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
+<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
+<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
+<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
   </entry>
   <entry>
     <title>Inkscape总结</title>
@@ -5670,7 +5670,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h3 id="后续PVE系统日常更新：">3.3.8 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
 
-<h2 id="PVE安装遇到的坑">3.4 &nbsp&nbsp<a href="#PVE安装遇到的坑" class="headerlink" title="PVE安装遇到的坑"></a>PVE安装遇到的坑</h2><h3 id="PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">3.4.1 &nbsp&nbsp<a href="#PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
+<h2 id="PVE安装和使用遇到的坑">3.4 &nbsp&nbsp<a href="#PVE安装和使用遇到的坑" class="headerlink" title="PVE安装和使用遇到的坑"></a>PVE安装和使用遇到的坑</h2><h3 id="PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">3.4.1 &nbsp&nbsp<a href="#PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bootloader setup errors:</span><br><span class="line">- failed to prepare EFI boot using Grub on &#x27;/dev/sda2&#x27;: unable to install the EFI boot loader on &#x27;/dev/sda&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>原因：PVE 8.0版本镜像īso不兼容N3530工控机，估计是bug。参考其他帖子说的只保留usb的uefi设备，依旧也会报错。并且因为机器的bios设置也比较繁琐，我反复尝试将其设置为csm模式，机器始终无法以csm模式启动，估计该主板的bios也是魔改过有bug的。因此导致也无法以csm模式安装pve。</p>
@@ -5715,6 +5715,14 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
+<h3 id="PVE概要页面利用率图标信息无法显示">3.4.8 &nbsp&nbsp<a href="#PVE概要页面利用率图标信息无法显示" class="headerlink" title="PVE概要页面利用率图标信息无法显示"></a>PVE概要页面利用率图标信息无法显示</h3><p>问题原因：rrdcached服务异常，某些情况下也可能会导致所有虚拟机显示「状态: unknown」。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop rrdcached</span><br><span class="line"><span class="built_in">rm</span> -rf /var/lib/rrdcached/*</span><br><span class="line"><span class="comment"># 或者mv /var/lib/rrdcached /var/lib/rrdcached.bck</span></span><br><span class="line">systemctl start rrdcached</span><br></pre></td></tr></table></figure>
+
+<h3 id="PVE面板节点和所有虚拟机显示「状态-unknown」，虚拟机正常运行">3.4.9 &nbsp&nbsp<a href="#PVE面板节点和所有虚拟机显示「状态-unknown」，虚拟机正常运行" class="headerlink" title="PVE面板节点和所有虚拟机显示「状态: unknown」，虚拟机正常运行"></a>PVE面板节点和所有虚拟机显示「状态: unknown」，虚拟机正常运行</h3><p>问题原因：pve的节点状态守护程序<code>pvestatd</code>异常。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查看状态和重启服务</span></span><br><span class="line">systemctl status pvestatd</span><br><span class="line">systemctl restart pvestatd</span><br></pre></td></tr></table></figure>
+
 <h1 id="PVE硬件直通">4 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><div class="note default no-icon"><p>如果机器本身就支持VT-X和VT-d等CPU虚拟化和直通硬件功能，则PVE启用IOMMU方面不需要额外设置。只需要设置好主板BIOS对应的CPU虚拟化和直通硬件功能即可，因为安装PVE系统阶段就会自动设置好启动IOMMU。</p>
 </div>
 
@@ -5854,6 +5862,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>原因：windows系统自带的驱动无此虚拟硬件的驱动。</p>
 <p>解决方式：加载virtio镜像，并运行x64程序安装驱动即可。</p>
 <p>VirtIO镜像下载地址：<a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">点击跳转</a></p>
+<h2 id="创建LXC容器遇到的坑">5.6 &nbsp&nbsp<a href="#创建LXC容器遇到的坑" class="headerlink" title="创建LXC容器遇到的坑"></a>创建LXC容器遇到的坑</h2><h3 id="使用debian-12的CT模板创建LXC容器SSH终端中文乱码">5.6.1 &nbsp&nbsp<a href="#使用debian-12的CT模板创建LXC容器SSH终端中文乱码" class="headerlink" title="使用debian-12的CT模板创建LXC容器SSH终端中文乱码"></a>使用<code>debian-12</code>的CT模板创建LXC容器SSH终端中文乱码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install locales -y</span><br><span class="line"><span class="comment"># 需要重新设置语言的，也可以重新执行该命令</span></span><br><span class="line">dpkg-reconfigure locales</span><br><span class="line"><span class="comment"># 使用Page Up和Page Down翻页查找这两种语言，使用空格确认复选框，tab键切换「确认」，然后回车执行</span></span><br><span class="line"><span class="comment"># en_US.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># zh_CN.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># 然后重启机器</span></span><br><span class="line">init 6</span><br></pre></td></tr></table></figure>
+
 <h1 id="iKuai-OpenWRT-做旁路由网络拓扑">6 &nbsp&nbsp<a href="#iKuai-OpenWRT-做旁路由网络拓扑" class="headerlink" title="iKuai +OpenWRT 做旁路由网络拓扑"></a>iKuai +OpenWRT 做旁路由网络拓扑</h1><p>iKuai作为主路由，负责拨号及DHCP，OpenWRT做旁路由。SmartDNS+AdGuardHome设置分流与去广告。SmartDNS作为DNS管理并提供DNS缓存，实现国内国外DNS分流，彻底解决DNS污染问题、实现秒开网页。同时搭配AdGuardHome实现整个局域网去广告。</p>
 <p>DNS转发流程：设置最核心的部分就是DNS转发端口的衔接，就是把DNSMASQ、Adguardhome、SmartDNS三个插件里的DNS服务器功能分成三个层级，实现层层转发。依次是第一级DNSMASQ，第二级Adguardhome，第三级SmartDNS，第四级OpenClash。</p>
 <h2 id="iKuai的设置">6.1 &nbsp&nbsp<a href="#iKuai的设置" class="headerlink" title="iKuai的设置"></a>iKuai的设置</h2><ul>
@@ -6339,7 +6349,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">6层</td>
 </tr>
 </tbody></table>
-<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[23] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.</p>
+<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[23] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[24] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[25] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[26] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -7308,156 +7318,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
-<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
-<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
-<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
-<p>bash: <code>echo $?</code>，输出127</p>
-<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
-<p>编写程序，在标准输出上打印 Hello, World。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
-<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
-<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
-<p>解释下面程序片段是否合法。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
-</blockquote>
-<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
-<p>修正方式1：二三行添加cout对象</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>修正方式2：删除一二行多余的分号</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
-<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
-<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
-</blockquote>
-<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
-<p>编写程序，使用while循环将50到100的整数相加。</p>
-</blockquote>
-<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
-<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
-</blockquote>
-<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
-<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
-</blockquote>
-<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
-<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
-
-<p>从-100加到100，sum的终值为0。</p>
-<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
-<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
-</blockquote>
-<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
-<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
-</blockquote>
-<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
-<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
-<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
-<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
-</blockquote>
-<p>编译器可检查的错误：</p>
-<ol>
-<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
-<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
-<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
-</ol>
-<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
-<p>编写程序，从cin读取一组数，输出其和。</p>
-</blockquote>
-<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
-<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
-<ul>
-<li>Windows：ctrl+z</li>
-<li>UNIX（包括Mac OS X）：ctrl+d</li>
-</ul>
-<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
-<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
-</blockquote>
-<ol>
-<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
-<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
-</ol>
-<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
-<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
-</blockquote>
-<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
-<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
-</blockquote>
-<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
-<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
-</blockquote>
-<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
-<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
-</blockquote>
-<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
-<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
-</blockquote>
-<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
-<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
-</blockquote>
-<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
-<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
-</blockquote>
-<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
-<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows系统排障总结</title>
     <url>/troubleshooting/windows-troubleshooting/</url>
     <content><![CDATA[<h1 id="Windows系统版本发布日志">1 &nbsp&nbsp<a href="#Windows系统版本发布日志" class="headerlink" title="Windows系统版本发布日志"></a>Windows系统版本发布日志</h1><ul>
@@ -7969,12 +7829,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#46;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#115;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#97;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#x73;&#46;&#99;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8066,6 +7926,156 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
+<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
+<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
+<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
+<p>bash: <code>echo $?</code>，输出127</p>
+<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
+<p>编写程序，在标准输出上打印 Hello, World。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
+<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
+<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
+<p>解释下面程序片段是否合法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
+</blockquote>
+<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
+<p>修正方式1：二三行添加cout对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>修正方式2：删除一二行多余的分号</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
+<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
+<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
+</blockquote>
+<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
+<p>编写程序，使用while循环将50到100的整数相加。</p>
+</blockquote>
+<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
+<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
+</blockquote>
+<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
+<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
+</blockquote>
+<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
+<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
+
+<p>从-100加到100，sum的终值为0。</p>
+<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
+<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
+</blockquote>
+<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
+<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
+</blockquote>
+<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
+<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
+<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
+<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
+</blockquote>
+<p>编译器可检查的错误：</p>
+<ol>
+<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
+<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
+<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
+</ol>
+<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
+<p>编写程序，从cin读取一组数，输出其和。</p>
+</blockquote>
+<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
+<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
+<ul>
+<li>Windows：ctrl+z</li>
+<li>UNIX（包括Mac OS X）：ctrl+d</li>
+</ul>
+<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
+<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
+</blockquote>
+<ol>
+<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
+<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
+</ol>
+<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
+<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
+</blockquote>
+<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
+<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
+</blockquote>
+<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
+<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
+</blockquote>
+<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
+<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
+</blockquote>
+<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
+<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
+</blockquote>
+<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
+<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
+</blockquote>
+<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
+<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
+</blockquote>
+<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
+<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -9605,243 +9615,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：第五章「语句」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap5/</url>
-    <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
-<p>什么是空语句？什么时候会用到空语句？</p>
-</blockquote>
-<p>只含有一个单独的分号的语句是空语句。如：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">;</span><br></pre></td></tr></table></figure>
-<p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，此时应该使用空语句。（建议做好注释说明空语句作用）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重复读入数据直至到达文件末尾或某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (cin &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-2"><a href="#练习5-2" class="headerlink" title="练习5.2"></a>练习5.2</h2><blockquote>
-<p>什么是块？什么时候会用到块？</p>
-</blockquote>
-<p>用花括号括起来的语句和声明的序列就是块。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果在程序的某个地方，逻辑上需要多条语句，而语法上只能容纳一条语句，此时应该使用块。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">    ++val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-3"><a href="#练习5-3" class="headerlink" title="练习5.3"></a>练习5.3</h2><blockquote>
-<p>使用逗号运算符重写（参见4.10节，第140页）1.4.1节的 while 循环，使它不再需要块，观察改写之后的代码可读性提高了还是降低了。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>)</span><br><span class="line">    sum += val, ++val;</span><br></pre></td></tr></table></figure>
-<p>代码的可读性降低了。</p>
-<h2 id="练习5-4"><a href="#练习5-4" class="headerlink" title="练习5.4"></a>练习5.4</h2><blockquote>
-<p>说明下列例子的含义，如果存在问题，试着修改它。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">while</span> (string::iterator iter != s.<span class="built_in">end</span>()) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">(b) <span class="keyword">while</span> (<span class="type">bool</span> status = <span class="built_in">find</span>(word)) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">        <span class="keyword">if</span> (!status) &#123; <span class="comment">/* . . . */</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 这个循环试图用迭代器遍历string，但是变量的定义应该放在循环的外面，目前每次循环都会重新定义一个变量，明显是错误的。</li>
-<li>(b) 这个循环的 while 和 if 是两个独立的语句，if 语句中无法访问 status 变量，正确的做法是应该将 if 语句包含在 while 里面，</li>
-</ul>
-<h2 id="练习5-5"><a href="#练习5-5" class="headerlink" title="练习5.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_5.cpp">练习5.5</a></h2><blockquote>
-<p>写一段自己的程序，使用if else 语句实现把数字转换为字母成绩的要求。</p>
-</blockquote>
-<h2 id="练习5-6"><a href="#练习5-6" class="headerlink" title="练习5.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_6.cpp">练习5.6</a></h2><blockquote>
-<p>改写上一题的程序，使用条件运算符（参见4.7节，第134页）代替if else语句。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="练习5-7"><a href="#练习5-7" class="headerlink" title="练习5.7"></a>练习5.7</h2><blockquote>
-<p>改写下列代码段中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">if</span> (ival1 != ival2)</span><br><span class="line">        ival1 = ival2</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ival1 = ival2 = <span class="number">0</span>;</span><br><span class="line">(b) <span class="keyword">if</span> (ival &lt; minval)</span><br><span class="line">        minval = ival;</span><br><span class="line">        occurs = <span class="number">1</span>;</span><br><span class="line">(c) <span class="keyword">if</span> (<span class="type">int</span> ival = <span class="built_in">get_value</span>())</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = &quot;</span> &lt;&lt; ival &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (!ival)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = 0\n&quot;</span>;</span><br><span class="line">(d) <span class="keyword">if</span> (ival = <span class="number">0</span>)</span><br><span class="line">        ival = <span class="built_in">get_value</span>();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) <code>ival1 = ival2</code> 后面少了分号。</li>
-<li>(b) 应该用花括号括起来。</li>
-<li>(c) <code>if (!ival)</code> 应该改为 <code>else</code>。</li>
-<li>(d) <code>if (ival = 0)</code> 应该改为 <code>if (ival == 0)</code>。</li>
-</ul>
-<h2 id="练习5-8"><a href="#练习5-8" class="headerlink" title="练习5.8"></a>练习5.8</h2><blockquote>
-<p>什么是“悬垂else”？C++语言是如何处理else子句的？</p>
-</blockquote>
-<p>C++语言规定else与它最近的尚未匹配的if匹配。</p>
-<h2 id="练习5-9"><a href="#练习5-9" class="headerlink" title="练习5.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_9.cpp">练习5.9</a></h2><blockquote>
-<p>编写一段程序，使用一系列if语句统计从cin读入的文本中有多少元音字母。</p>
-</blockquote>
-<h2 id="练习5-10"><a href="#练习5-10" class="headerlink" title="练习5.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_10.cpp">练习5.10</a></h2><blockquote>
-<p>我们之前实现的统计元音字母的程序存在一个问题：如果元音字母以大写形式出现，不会被统计在内。编写一段程序，既统计元音字母的小写形式，也统计大写形式，也就是说，新程序遇到&#39;a&#39;和&#39;A&#39;都应该递增 aCnt 的值，以此类推。</p>
-</blockquote>
-<h2 id="练习5-11"><a href="#练习5-11" class="headerlink" title="练习5.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_11.cpp">练习5.11</a></h2><blockquote>
-<p>修改统计元音字母的程序，使其也能统计空格、制表符、和换行符的数量。</p>
-</blockquote>
-<h2 id="练习5-12"><a href="#练习5-12" class="headerlink" title="练习5.12"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_12.cpp">练习5.12</a></h2><blockquote>
-<p>修改统计元音字母的程序，使其能统计以下含有两个字符的字符序列的数量：ff、fl和fi。</p>
-</blockquote>
-<h2 id="练习5-13"><a href="#练习5-13" class="headerlink" title="练习5.13"></a>练习5.13</h2><blockquote>
-<p>下面显示的每个程序都含有一个常见的编程错误，指出错误在哪里，然后修改它们。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line">    <span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++;</span><br><span class="line">        <span class="keyword">default</span>: iouCnt++;</span><br><span class="line">    &#125;</span><br><span class="line">(b) <span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line">    <span class="keyword">switch</span> (index) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="type">int</span> ix = <span class="built_in">get_value</span>();</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            ix = ivec.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">    &#125;</span><br><span class="line">(c) <span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>:</span><br><span class="line">            oddcnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>:</span><br><span class="line">            evencnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">(d) <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line">    <span class="type">unsigned</span> bufsize;</span><br><span class="line">    <span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line">    <span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">        <span class="keyword">case</span> ival:</span><br><span class="line">            bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> jval:</span><br><span class="line">            bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kval:</span><br><span class="line">            bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 少了 break语句。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line"><span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: iouCnt++; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>switch内部的控制流：如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非程序显式地中断了这一过程，比如添加break语句，否则直到switch的结尾处才会停下来。</p>
-<ul>
-<li>(b) 在 default 分支当中，ix 未定义。应该在外部定义ix。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line"><span class="type">int</span> ix;</span><br><span class="line"><span class="keyword">switch</span> (index) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ix = <span class="built_in">get_value</span>();</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ix = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(ivec.<span class="built_in">size</span>())<span class="number">-1</span>;</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(c) case 后面应该用冒号而不是逗号。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line"><span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">5</span>: <span class="keyword">case</span> <span class="number">7</span>: <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        oddcnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">6</span>: <span class="keyword">case</span> <span class="number">8</span>: <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        evencnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(d) case 标签必须是整型常量表达式。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line"><span class="type">unsigned</span> bufsize;</span><br><span class="line"><span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line"><span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">    <span class="keyword">case</span> ival:</span><br><span class="line">        bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> jval:</span><br><span class="line">        bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> kval:</span><br><span class="line">        bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-14"><a href="#练习5-14" class="headerlink" title="练习5.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_14.cpp">练习5.14</a></h2><blockquote>
-<p>编写一段程序，从标准输入中读取若干string对象并查找连续重复出现的单词，所谓连续重复出现的意思是：一个单词后面紧跟着这个单词本身。要求记录连续重复出现的最大次数以及对应的单词。如果这样的单词存在，输出重复出现的最大次数；如果不存在，输出一条信息说明任何单词都没有连续出现过。例如：如果输入是：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">how now now now brown cow cow</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>那么输出应该表明单词now连续出现了3次。</p>
-</blockquote>
-<p>本题编程中使用了<code>std::pair</code>，<code>std::pair</code>是类模板，提供在一个单元存储两个相异类型对象的途径。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T1</span>,</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T2</span></span><br><span class="line">&gt; <span class="keyword">struct</span> <span class="title class_">pair</span>;</span><br></pre></td></tr></table></figure>
-<p>总共有两个成员对象：first和second。</p>
-<p>示例：<code>std::pair&lt;std::string, float&gt;(&quot;aa&quot;, 1.1);</code></p>
-<h2 id="练习5-15"><a href="#练习5-15" class="headerlink" title="练习5.15"></a>练习5.15</h2><blockquote>
-<p>说明下列循环的含义并改正其中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix, ++sz) &#123; <span class="comment">/*...*/</span> &#125;</span><br></pre></td></tr></table></figure>
-<p>修正如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix = <span class="number">0</span>; ix != sz; ++ix)  &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">    <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/*...*/</span> &#125; <span class="comment">//如果首次判断ix不等于sz，执行++sz将导致死循环。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-16"><a href="#练习5-16" class="headerlink" title="练习5.16"></a>练习5.16</h2><blockquote>
-<p>while 循环特别适用于那种条件不变、反复执行操作的情况，例如，当未达到文件末尾时不断读取下一个值。for 循环则更像是在按步骤迭代，它的索引值在某个范围内依次变化。根据每种循环的习惯各自编写一段程序，然后分别用另一种循环改写。如果只能使用一种循环，你倾向于使用哪种呢？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// while循环读取输入</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; i )</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环读取输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; cin &gt;&gt; i;)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环遍历</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != size; ++i)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// while循环遍历</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i != size)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果只能用一种循环，我会更倾向使用while循环，因为while的代码可读性更强。</p>
-<h2 id="练习5-17"><a href="#练习5-17" class="headerlink" title="练习5.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_17.cpp">练习5.17</a></h2><blockquote>
-<p>假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2 和 0、1、1、2、3、5、8，则程序的返回结果为真。</p>
-</blockquote>
-<h2 id="练习5-18"><a href="#练习5-18" class="headerlink" title="练习5.18"></a>练习5.18</h2><blockquote>
-<p>说明下列循环的含义并改正其中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
-<p>修正如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span> &#123; <span class="comment">// 应该添加花括号</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    &#125;<span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-19"><a href="#练习5-19" class="headerlink" title="练习5.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_19.cpp">练习5.19</a></h2><blockquote>
-<p>编写一段程序，使用do while 循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。</p>
-</blockquote>
-<h2 id="练习5-20"><a href="#练习5-20" class="headerlink" title="练习5.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_20.cpp">练习5.20</a></h2><blockquote>
-<p>编写一段程序，从标准输入中读取string对象的序列直到连续出现两个相同的单词或者所有的单词都读完为止。使用while循环一次读取一个单词，当一个单词连续出现两次时使用break语句终止循环。输出连续重复出现的单词，或者输出一个消息说明没有任何单词是连续重复出现的。</p>
-</blockquote>
-<h2 id="练习5-21"><a href="#练习5-21" class="headerlink" title="练习5.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_21.cpp">练习5.21</a></h2><blockquote>
-<p>修改5.5.1节（第171页）练习题的程序，使其找到的重复单词必须以大写字母开头。</p>
-</blockquote>
-<h2 id="练习5-22"><a href="#练习5-22" class="headerlink" title="练习5.22"></a>练习5.22</h2><blockquote>
-<p>本节的最后一个例子跳回到 begin，其实使用循环能更好的完成该任务，重写这段代码，注意不再使用goto语句。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 向后跳过一个带初始化的变量定义是合法的</span></span><br><span class="line">begin:</span><br><span class="line">    <span class="type">int</span> sz = <span class="built_in">get_size</span>();</span><br><span class="line">    <span class="keyword">if</span> (sz &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> begin;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>用 <code>for</code> 循环修改效果如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> sz = <span class="built_in">get_size</span>(); sz &lt;=<span class="number">0</span>; sz = <span class="built_in">get_size</span>())</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-23"><a href="#练习5-23" class="headerlink" title="练习5.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_23.cpp">练习5.23</a></h2><blockquote>
-<p>编写一段程序，从标准输入读取两个整数，输出第一个数除以第二个数的结果。</p>
-</blockquote>
-<h2 id="练习5-24"><a href="#练习5-24" class="headerlink" title="练习5.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_24.cpp">练习5.24</a></h2><blockquote>
-<p>修改你的程序，使得当第二个数是0时抛出异常。先不要设定catch子句，运行程序并真的为除数输入0，看看会发生什么？</p>
-</blockquote>
-<h2 id="练习5-25"><a href="#练习5-25" class="headerlink" title="练习5.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_25.cpp">练习5.25</a></h2><blockquote>
-<p>修改上一题的程序，使用try语句块去捕获异常。catch子句应该为用户输出一条提示信息，询问其是否输入新数并重新执行try语句块的内容。</p>
-</blockquote>
-<p>异常处理（try-throw-catch）：</p>
-<ul>
-<li>将错误处理代码和正常代码分离开：传统的错误处理代码中都会使用一系列的 if-else 条件判断来处理错误。这些条件判断代码和错误处理代码会混在正常的程序流中，降低代码的可读性和可维护性。使用 try&#x2F;catch 块则能够将错误处理与正常流程分开。</li>
-<li>个人理解：更像是一个高级goto语法。</li>
-</ul>
-<p>大致的使用形式：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 被保护的代码</span></span><br><span class="line">    <span class="keyword">throw</span>  <span class="comment">// 抛出异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> ()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五章</tag>
-        <tag>语句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ Primer 第五版：第六章「函数」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap6/</url>
     <content><![CDATA[<h1 id="第六章：函数"><a href="#第六章：函数" class="headerlink" title="第六章：函数"></a>第六章：函数</h1><h2 id="练习6-1"><a href="#练习6-1" class="headerlink" title="练习6.1"></a>练习6.1</h2><blockquote>
@@ -10171,6 +9944,243 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>练习总结</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第五章「语句」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap5/</url>
+    <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
+<p>什么是空语句？什么时候会用到空语句？</p>
+</blockquote>
+<p>只含有一个单独的分号的语句是空语句。如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">;</span><br></pre></td></tr></table></figure>
+<p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，此时应该使用空语句。（建议做好注释说明空语句作用）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重复读入数据直至到达文件末尾或某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (cin &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-2"><a href="#练习5-2" class="headerlink" title="练习5.2"></a>练习5.2</h2><blockquote>
+<p>什么是块？什么时候会用到块？</p>
+</blockquote>
+<p>用花括号括起来的语句和声明的序列就是块。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果在程序的某个地方，逻辑上需要多条语句，而语法上只能容纳一条语句，此时应该使用块。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">    ++val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-3"><a href="#练习5-3" class="headerlink" title="练习5.3"></a>练习5.3</h2><blockquote>
+<p>使用逗号运算符重写（参见4.10节，第140页）1.4.1节的 while 循环，使它不再需要块，观察改写之后的代码可读性提高了还是降低了。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>)</span><br><span class="line">    sum += val, ++val;</span><br></pre></td></tr></table></figure>
+<p>代码的可读性降低了。</p>
+<h2 id="练习5-4"><a href="#练习5-4" class="headerlink" title="练习5.4"></a>练习5.4</h2><blockquote>
+<p>说明下列例子的含义，如果存在问题，试着修改它。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">while</span> (string::iterator iter != s.<span class="built_in">end</span>()) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">(b) <span class="keyword">while</span> (<span class="type">bool</span> status = <span class="built_in">find</span>(word)) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">        <span class="keyword">if</span> (!status) &#123; <span class="comment">/* . . . */</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 这个循环试图用迭代器遍历string，但是变量的定义应该放在循环的外面，目前每次循环都会重新定义一个变量，明显是错误的。</li>
+<li>(b) 这个循环的 while 和 if 是两个独立的语句，if 语句中无法访问 status 变量，正确的做法是应该将 if 语句包含在 while 里面，</li>
+</ul>
+<h2 id="练习5-5"><a href="#练习5-5" class="headerlink" title="练习5.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_5.cpp">练习5.5</a></h2><blockquote>
+<p>写一段自己的程序，使用if else 语句实现把数字转换为字母成绩的要求。</p>
+</blockquote>
+<h2 id="练习5-6"><a href="#练习5-6" class="headerlink" title="练习5.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_6.cpp">练习5.6</a></h2><blockquote>
+<p>改写上一题的程序，使用条件运算符（参见4.7节，第134页）代替if else语句。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="练习5-7"><a href="#练习5-7" class="headerlink" title="练习5.7"></a>练习5.7</h2><blockquote>
+<p>改写下列代码段中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">if</span> (ival1 != ival2)</span><br><span class="line">        ival1 = ival2</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ival1 = ival2 = <span class="number">0</span>;</span><br><span class="line">(b) <span class="keyword">if</span> (ival &lt; minval)</span><br><span class="line">        minval = ival;</span><br><span class="line">        occurs = <span class="number">1</span>;</span><br><span class="line">(c) <span class="keyword">if</span> (<span class="type">int</span> ival = <span class="built_in">get_value</span>())</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = &quot;</span> &lt;&lt; ival &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (!ival)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = 0\n&quot;</span>;</span><br><span class="line">(d) <span class="keyword">if</span> (ival = <span class="number">0</span>)</span><br><span class="line">        ival = <span class="built_in">get_value</span>();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) <code>ival1 = ival2</code> 后面少了分号。</li>
+<li>(b) 应该用花括号括起来。</li>
+<li>(c) <code>if (!ival)</code> 应该改为 <code>else</code>。</li>
+<li>(d) <code>if (ival = 0)</code> 应该改为 <code>if (ival == 0)</code>。</li>
+</ul>
+<h2 id="练习5-8"><a href="#练习5-8" class="headerlink" title="练习5.8"></a>练习5.8</h2><blockquote>
+<p>什么是“悬垂else”？C++语言是如何处理else子句的？</p>
+</blockquote>
+<p>C++语言规定else与它最近的尚未匹配的if匹配。</p>
+<h2 id="练习5-9"><a href="#练习5-9" class="headerlink" title="练习5.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_9.cpp">练习5.9</a></h2><blockquote>
+<p>编写一段程序，使用一系列if语句统计从cin读入的文本中有多少元音字母。</p>
+</blockquote>
+<h2 id="练习5-10"><a href="#练习5-10" class="headerlink" title="练习5.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_10.cpp">练习5.10</a></h2><blockquote>
+<p>我们之前实现的统计元音字母的程序存在一个问题：如果元音字母以大写形式出现，不会被统计在内。编写一段程序，既统计元音字母的小写形式，也统计大写形式，也就是说，新程序遇到&#39;a&#39;和&#39;A&#39;都应该递增 aCnt 的值，以此类推。</p>
+</blockquote>
+<h2 id="练习5-11"><a href="#练习5-11" class="headerlink" title="练习5.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_11.cpp">练习5.11</a></h2><blockquote>
+<p>修改统计元音字母的程序，使其也能统计空格、制表符、和换行符的数量。</p>
+</blockquote>
+<h2 id="练习5-12"><a href="#练习5-12" class="headerlink" title="练习5.12"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_12.cpp">练习5.12</a></h2><blockquote>
+<p>修改统计元音字母的程序，使其能统计以下含有两个字符的字符序列的数量：ff、fl和fi。</p>
+</blockquote>
+<h2 id="练习5-13"><a href="#练习5-13" class="headerlink" title="练习5.13"></a>练习5.13</h2><blockquote>
+<p>下面显示的每个程序都含有一个常见的编程错误，指出错误在哪里，然后修改它们。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line">    <span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++;</span><br><span class="line">        <span class="keyword">default</span>: iouCnt++;</span><br><span class="line">    &#125;</span><br><span class="line">(b) <span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line">    <span class="keyword">switch</span> (index) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="type">int</span> ix = <span class="built_in">get_value</span>();</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            ix = ivec.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">    &#125;</span><br><span class="line">(c) <span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>:</span><br><span class="line">            oddcnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>:</span><br><span class="line">            evencnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">(d) <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line">    <span class="type">unsigned</span> bufsize;</span><br><span class="line">    <span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line">    <span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">        <span class="keyword">case</span> ival:</span><br><span class="line">            bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> jval:</span><br><span class="line">            bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kval:</span><br><span class="line">            bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 少了 break语句。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line"><span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: iouCnt++; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>switch内部的控制流：如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非程序显式地中断了这一过程，比如添加break语句，否则直到switch的结尾处才会停下来。</p>
+<ul>
+<li>(b) 在 default 分支当中，ix 未定义。应该在外部定义ix。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line"><span class="type">int</span> ix;</span><br><span class="line"><span class="keyword">switch</span> (index) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ix = <span class="built_in">get_value</span>();</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ix = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(ivec.<span class="built_in">size</span>())<span class="number">-1</span>;</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(c) case 后面应该用冒号而不是逗号。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line"><span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">5</span>: <span class="keyword">case</span> <span class="number">7</span>: <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        oddcnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">6</span>: <span class="keyword">case</span> <span class="number">8</span>: <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        evencnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(d) case 标签必须是整型常量表达式。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line"><span class="type">unsigned</span> bufsize;</span><br><span class="line"><span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line"><span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">    <span class="keyword">case</span> ival:</span><br><span class="line">        bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> jval:</span><br><span class="line">        bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> kval:</span><br><span class="line">        bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-14"><a href="#练习5-14" class="headerlink" title="练习5.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_14.cpp">练习5.14</a></h2><blockquote>
+<p>编写一段程序，从标准输入中读取若干string对象并查找连续重复出现的单词，所谓连续重复出现的意思是：一个单词后面紧跟着这个单词本身。要求记录连续重复出现的最大次数以及对应的单词。如果这样的单词存在，输出重复出现的最大次数；如果不存在，输出一条信息说明任何单词都没有连续出现过。例如：如果输入是：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">how now now now brown cow cow</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>那么输出应该表明单词now连续出现了3次。</p>
+</blockquote>
+<p>本题编程中使用了<code>std::pair</code>，<code>std::pair</code>是类模板，提供在一个单元存储两个相异类型对象的途径。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T1</span>,</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T2</span></span><br><span class="line">&gt; <span class="keyword">struct</span> <span class="title class_">pair</span>;</span><br></pre></td></tr></table></figure>
+<p>总共有两个成员对象：first和second。</p>
+<p>示例：<code>std::pair&lt;std::string, float&gt;(&quot;aa&quot;, 1.1);</code></p>
+<h2 id="练习5-15"><a href="#练习5-15" class="headerlink" title="练习5.15"></a>练习5.15</h2><blockquote>
+<p>说明下列循环的含义并改正其中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix, ++sz) &#123; <span class="comment">/*...*/</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>修正如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix = <span class="number">0</span>; ix != sz; ++ix)  &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">    <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/*...*/</span> &#125; <span class="comment">//如果首次判断ix不等于sz，执行++sz将导致死循环。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-16"><a href="#练习5-16" class="headerlink" title="练习5.16"></a>练习5.16</h2><blockquote>
+<p>while 循环特别适用于那种条件不变、反复执行操作的情况，例如，当未达到文件末尾时不断读取下一个值。for 循环则更像是在按步骤迭代，它的索引值在某个范围内依次变化。根据每种循环的习惯各自编写一段程序，然后分别用另一种循环改写。如果只能使用一种循环，你倾向于使用哪种呢？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// while循环读取输入</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; i )</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环读取输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; cin &gt;&gt; i;)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环遍历</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != size; ++i)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// while循环遍历</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i != size)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果只能用一种循环，我会更倾向使用while循环，因为while的代码可读性更强。</p>
+<h2 id="练习5-17"><a href="#练习5-17" class="headerlink" title="练习5.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_17.cpp">练习5.17</a></h2><blockquote>
+<p>假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2 和 0、1、1、2、3、5、8，则程序的返回结果为真。</p>
+</blockquote>
+<h2 id="练习5-18"><a href="#练习5-18" class="headerlink" title="练习5.18"></a>练习5.18</h2><blockquote>
+<p>说明下列循环的含义并改正其中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
+<p>修正如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span> &#123; <span class="comment">// 应该添加花括号</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    &#125;<span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-19"><a href="#练习5-19" class="headerlink" title="练习5.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_19.cpp">练习5.19</a></h2><blockquote>
+<p>编写一段程序，使用do while 循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。</p>
+</blockquote>
+<h2 id="练习5-20"><a href="#练习5-20" class="headerlink" title="练习5.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_20.cpp">练习5.20</a></h2><blockquote>
+<p>编写一段程序，从标准输入中读取string对象的序列直到连续出现两个相同的单词或者所有的单词都读完为止。使用while循环一次读取一个单词，当一个单词连续出现两次时使用break语句终止循环。输出连续重复出现的单词，或者输出一个消息说明没有任何单词是连续重复出现的。</p>
+</blockquote>
+<h2 id="练习5-21"><a href="#练习5-21" class="headerlink" title="练习5.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_21.cpp">练习5.21</a></h2><blockquote>
+<p>修改5.5.1节（第171页）练习题的程序，使其找到的重复单词必须以大写字母开头。</p>
+</blockquote>
+<h2 id="练习5-22"><a href="#练习5-22" class="headerlink" title="练习5.22"></a>练习5.22</h2><blockquote>
+<p>本节的最后一个例子跳回到 begin，其实使用循环能更好的完成该任务，重写这段代码，注意不再使用goto语句。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 向后跳过一个带初始化的变量定义是合法的</span></span><br><span class="line">begin:</span><br><span class="line">    <span class="type">int</span> sz = <span class="built_in">get_size</span>();</span><br><span class="line">    <span class="keyword">if</span> (sz &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> begin;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 <code>for</code> 循环修改效果如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> sz = <span class="built_in">get_size</span>(); sz &lt;=<span class="number">0</span>; sz = <span class="built_in">get_size</span>())</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-23"><a href="#练习5-23" class="headerlink" title="练习5.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_23.cpp">练习5.23</a></h2><blockquote>
+<p>编写一段程序，从标准输入读取两个整数，输出第一个数除以第二个数的结果。</p>
+</blockquote>
+<h2 id="练习5-24"><a href="#练习5-24" class="headerlink" title="练习5.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_24.cpp">练习5.24</a></h2><blockquote>
+<p>修改你的程序，使得当第二个数是0时抛出异常。先不要设定catch子句，运行程序并真的为除数输入0，看看会发生什么？</p>
+</blockquote>
+<h2 id="练习5-25"><a href="#练习5-25" class="headerlink" title="练习5.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_25.cpp">练习5.25</a></h2><blockquote>
+<p>修改上一题的程序，使用try语句块去捕获异常。catch子句应该为用户输出一条提示信息，询问其是否输入新数并重新执行try语句块的内容。</p>
+</blockquote>
+<p>异常处理（try-throw-catch）：</p>
+<ul>
+<li>将错误处理代码和正常代码分离开：传统的错误处理代码中都会使用一系列的 if-else 条件判断来处理错误。这些条件判断代码和错误处理代码会混在正常的程序流中，降低代码的可读性和可维护性。使用 try&#x2F;catch 块则能够将错误处理与正常流程分开。</li>
+<li>个人理解：更像是一个高级goto语法。</li>
+</ul>
+<p>大致的使用形式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 被保护的代码</span></span><br><span class="line">    <span class="keyword">throw</span>  <span class="comment">// 抛出异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> ()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五章</tag>
+        <tag>语句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -11575,7 +11585,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#116;&#101;&#114;&#107;&#105;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#105;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -11690,6 +11700,11 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>知识总结手册</title>
     <url>/manuals/index.html</url>
     <content><![CDATA[<h1 id="软件操作总结">1 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><ul>
@@ -11760,11 +11775,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a></li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>作品</title>
