@@ -684,6 +684,14 @@
     <a href="https://forums.guru3d.com/threads/windows-power-plan-settings-explorer-utility.416058/">图形化电源计划设置PowerSettingsExplorer</a>
 </div>
 
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">BI数据库可视化</p>
+    </div>
+    <a href="https://github.com/dataease/dataease/releases">DataEase</a>
+    <a href="https://dataease.io/versions.html">DataEase 版本对比</a>
+</div>
+
 </div>
 
 <h1 id="系统镜像"><a href="#系统镜像" class="headerlink" title="系统镜像"></a>系统镜像</h1><div class="text-box-container">
@@ -2536,12 +2544,39 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h2 id="重启相关服务">2.6 &nbsp&nbsp<a href="#重启相关服务" class="headerlink" title="重启相关服务"></a>重启相关服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
 
-<h1 id="Docker-Desktop（Windows）">3 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">3.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
+<h1 id="Docker创建应用">3 &nbsp&nbsp<a href="#Docker创建应用" class="headerlink" title="Docker创建应用"></a>Docker创建应用</h1><h2 id="搭建DataEase">3.1 &nbsp&nbsp<a href="#搭建DataEase" class="headerlink" title="搭建DataEase"></a>搭建DataEase</h2><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
+<h3 id="下载DataEase部署脚本。">3.1.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h3><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
+<p><code>dataease-release-v1.18.27.tar.gz</code>和<code>dataease-v1.18.27-online.tar.gz</code>这两个文件数据完全一致，随意下载，本人解压并比对过文件哈希值。</p>
+<p>v2开源社区版不支持创建用户，代码层面写死只有一个admin账户，若有用户管理的需求，可以不用考虑v2版本。</p>
+<h3 id="修改配置文件install-conf">3.1.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h3><p>安装模式模式修改为<code>local</code>（），端口这些自行根据需求改，如下配置文件是修改为8100。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础配置</span></span><br><span class="line"><span class="comment">## 安装目录</span></span><br><span class="line">DE_BASE=/opt</span><br><span class="line"><span class="comment">## Service 端口</span></span><br><span class="line">DE_PORT=8100</span><br><span class="line"><span class="comment">## 部署及运行模式，可选值有 local、simple、cluster，分别对应 本地模式、精简模式、集群模式</span></span><br><span class="line">DE_ENGINE_MODE=<span class="built_in">local</span></span><br><span class="line"><span class="comment">## docker 网段设置</span></span><br><span class="line">DE_DOCKER_SUBNET=172.19.0.0/16</span><br><span class="line"><span class="comment">## docker 网关 IP</span></span><br><span class="line">DE_DOCKER_GATEWAY=172.19.0.1</span><br><span class="line"><span class="comment">## Apache Doris FE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_FE_IP=172.19.0.198</span><br><span class="line"><span class="comment">## Apache Doris BE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_BE_IP=172.19.0.199</span><br><span class="line"><span class="comment">## 登录超时时间，单位min。如果不设置则默认8小时，也就是480</span></span><br><span class="line">DE_LOGIN_TIMEOUT=480</span><br><span class="line"><span class="comment">## 新建用户初始密码</span></span><br><span class="line">DE_INIT_PASSWORD=DataEase123456</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库配置</span></span><br><span class="line"><span class="comment">## 是否使用外部数据库</span></span><br><span class="line">DE_EXTERNAL_MYSQL=<span class="literal">false</span></span><br><span class="line"><span class="comment">## 数据库地址</span></span><br><span class="line">DE_MYSQL_HOST=mysql</span><br><span class="line"><span class="comment">## 数据库端口</span></span><br><span class="line">DE_MYSQL_PORT=3306</span><br><span class="line"><span class="comment">## DataEase 数据库库名</span></span><br><span class="line">DE_MYSQL_DB=dataease</span><br><span class="line"><span class="comment">## 数据库用户名</span></span><br><span class="line">DE_MYSQL_USER=root</span><br><span class="line"><span class="comment">## 数据库密码</span></span><br><span class="line">DE_MYSQL_PASSWORD=Password123@mysql</span><br><span class="line"><span class="comment">## 数据库参数</span></span><br><span class="line">DE_MYSQL_PARAMS=<span class="string">&quot;autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Apache Doris 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Apache Doris</span></span><br><span class="line">DE_EXTERNAL_DORIS=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Doris 地址</span></span><br><span class="line">DE_DORIS_HOST=doris-fe</span><br><span class="line"><span class="comment">## Doris 查询连接端口</span></span><br><span class="line">DE_DORIS_PORT=9030</span><br><span class="line"><span class="comment">## Doris http端口</span></span><br><span class="line">DE_DORIS_HTTPPORT=8030</span><br><span class="line"><span class="comment">## Doris 数据库名称</span></span><br><span class="line">DE_DORIS_DB=dataease</span><br><span class="line"><span class="comment">## Doris 用户名</span></span><br><span class="line">DE_DORIS_USER=root</span><br><span class="line"><span class="comment">## Doris 密码</span></span><br><span class="line">DE_DORIS_PASSWORD=Password123@doris</span><br><span class="line"></span><br><span class="line"><span class="comment"># Kettle 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Kettle - (目前还不支持外部Kettle，除非不需运行Kettle，否则请不要修改此参数)</span></span><br><span class="line">DE_EXTERNAL_KETTLE=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Kettle 服务器地址</span></span><br><span class="line">DE_CARTE_HOST=kettle</span><br><span class="line"><span class="comment">## Kettle 访问端口</span></span><br><span class="line">DE_CARTE_PORT=18080</span><br><span class="line"><span class="comment">## Kettle 用户名</span></span><br><span class="line">DE_CARTE_USER=cluster</span><br><span class="line"><span class="comment">## Kettle 密码</span></span><br><span class="line">DE_CARTE_PASSWORD=cluster</span><br></pre></td></tr></table></figure>
+
+<h4 id="不同安装模式的区别">3.1.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h4><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
+</div>
+
+<div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;simple<br>使用精简模式安装，系统不会额外安装 Doris 与 Kettle 组件，提供用户轻量级的应用系统，尤其是对接数据量较小的情况。<br>在此模式下，Excel 数据集或 API 数据集的相关数据存储在数据引擎中（默认配置自带的 MySQL 组件，用户可在系统管理界面配置数据引擎，数据引擎目前仅支持 MySQL 类型）。<br>注意：由于精简模式未配置 Kettle 与 Doris，故精简模式不提供定时同步模式。</p>
+</div>
+
+<div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;cluster<br>使用集群模式安装，系统不会额外安装 Doris 与 Kettle 组件，但会在系统管理模块提供 Doris 与 Kettle 的链接配置界面（请参考【系统管理】的【系统参数】说明），用户可独立安装 Doris 集群及 Kettle 并配置在 DataEase 中。集群模式下 Excel 数据集，API 数据集以及定时同步的数据通过 Kettle 抽取到 Doris 集群中。<br>Doris 安装部署可参考：<a href="http://doris.incubator.apache.org/zh-CN/">http://doris.incubator.apache.org/zh-CN/</a><br>Kettle 安装部署可参考：<a href="http://www.kettle.org.cn/">http://www.kettle.org.cn/</a></p>
+</div>
+
+<h3 id="安装DataEase">3.1.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h3><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash ./install.sh</span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建DataEase的踩坑记录">3.1.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h3><h4 id="doris-be容器状态一直为unhealthy">3.1.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h4><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">doris_role:be</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; FE_SERVERS=[fe1:172.19.0.198:9010]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; BE_ADDR=[172.19.0.199:9050]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feIpArray = 172.19.0.198</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feEditLogPortArray = 9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; masterFe = 172.19.0.198:9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; be_addr = 172.19.0.199:9050</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; Append the configuration [priority_networks = 172.19.0.0/24] to /opt/apache-doris/be/conf/fe.conf</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerMySQL = mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;alter system add backend &#x27;172.19.0.199:9050&#x27;&quot;</span></span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerShell = /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;show backends&quot;</span> | grep <span class="string">&quot; 172.19.0.199 &quot;</span> | grep <span class="string">&quot; 9050 &quot;</span></span><br><span class="line">10003   default_cluster 172.19.0.199    9050    -1      -1      -1      NULL    NULL    <span class="literal">false</span>   <span class="literal">false</span>   <span class="literal">false</span>   0       0.000   1.000 B       0.000   0.00 %  0.00 %  0.000   &#123;<span class="string">&quot;location&quot;</span> : <span class="string">&quot;default&quot;</span>&#125;        java.net.NoRouteToHostException: No route to host (Host unreachable)          &#123;<span class="string">&quot;lastStreamLoadTime&quot;</span>:-1,<span class="string">&quot;isQueryDisabled&quot;</span>:<span class="literal">false</span>,<span class="string">&quot;isLoadDisabled&quot;</span>:<span class="literal">false</span>&#125;        1</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  0 <span class="keyword">time</span> to register BE node, be_join_status=0</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; run <span class="built_in">command</span> /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registered : 1</span><br><span class="line">Please <span class="built_in">set</span> vm.max_map_count to be 2000000 under root using <span class="string">&#x27;sysctl -w vm.max_map_count=2000000&#x27;</span>.</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  1  <span class="keyword">time</span> to check is_alive &gt;&gt;&gt;&gt;&gt;&gt; 1</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br></pre></td></tr></table></figure>
+<p>可以查看上述日志输出提示<code>Please set vm.max_map_count to be 2000000 under root using &#39;sysctl -w vm.max_map_count=2000000&#39;.</code></p>
+<p>原因：Doris作为分布式数据库，对于内存映射数量有要求，Linux系统默认参数值无法满足，例如PVE系统默认的<code>vm.max_map_count=262144</code>。</p>
+<p>解决方法1：请在运行doris容器的宿主机上，运行<code>sysctl -w vm.max_map_count=2000000</code>命令设置<code>vm.max_map_count</code>内核参数。若宿主机本身也是容器化的虚拟机，例如PVE的LXC容器，可以直接在PVE上运行命令修改参数。</p>
+<p>解决方法2：换DataEase v2版本，v2系列不需要部署Doris。</p>
+<h4 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">3.1.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h4><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
+<p>解决方法：不修改<code>install.conf</code>的MySQL和Doris的密码，直接使用模板预设的默认密码完成部署。</p>
+<h1 id="Docker-Desktop（Windows）">4 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">4.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
 <p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#116;&#x40;&#x31;&#x37;&#x32;&#x2e;&#49;&#57;&#46;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -2860,6 +2895,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>hexo</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -3362,56 +3447,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -4311,302 +4346,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -5873,6 +5612,41 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>VirtIO镜像下载地址：<a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">点击跳转</a></p>
 <h2 id="创建LXC容器遇到的坑">5.6 &nbsp&nbsp<a href="#创建LXC容器遇到的坑" class="headerlink" title="创建LXC容器遇到的坑"></a>创建LXC容器遇到的坑</h2><h3 id="使用debian-12的CT模板创建LXC容器SSH终端中文乱码">5.6.1 &nbsp&nbsp<a href="#使用debian-12的CT模板创建LXC容器SSH终端中文乱码" class="headerlink" title="使用debian-12的CT模板创建LXC容器SSH终端中文乱码"></a>使用<code>debian-12</code>的CT模板创建LXC容器SSH终端中文乱码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install locales -y</span><br><span class="line"><span class="comment"># 需要重新设置语言的，也可以重新执行该命令</span></span><br><span class="line">dpkg-reconfigure locales</span><br><span class="line"><span class="comment"># 使用Page Up和Page Down翻页查找这两种语言，使用空格确认复选框，tab键切换「确认」，然后回车执行</span></span><br><span class="line"><span class="comment"># en_US.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># zh_CN.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># 然后重启机器</span></span><br><span class="line">init 6</span><br></pre></td></tr></table></figure>
 
+<h2 id="非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数">5.7 &nbsp&nbsp<a href="#非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数" class="headerlink" title="非特权（unprivileged）LXC容器无法设置vm.max_map_count内核参数"></a>非特权（unprivileged）LXC容器无法设置<code>vm.max_map_count</code>内核参数</h2><p>报错提示：<code>error: permission denied on key &#39;vm.max_map_count&#39;</code></p>
+<p>报错原因：因为非特权的LXC容器的<code>/proc/sys</code>是以只读方式挂载到容器里面，无法修改sysctl内核参数。</p>
+<p>解决方法：在PVE宿主机上，使用<code>sysctl -w vm.max_map_count=2000000</code>命令设置<code>vm.max_map_count</code>内核参数。<code>max_map_count</code>默认值是262144。</p>
+<h3 id="补充知识点：namespace化的sysctl内核参数">5.7.1 &nbsp&nbsp<a href="#补充知识点：namespace化的sysctl内核参数" class="headerlink" title="补充知识点：namespace化的sysctl内核参数"></a>补充知识点：namespace化的sysctl内核参数</h3><p><code>vm.max_map_count</code>属于内核参数，而<code>vm.*</code>参数并没有namespace化。只有namespace化的sysctl内核参数在容器内直接修改设置的时候，不会影响宿主机和其他容器。</p>
+<p>已经namespace化的sysctl内核参数：</p>
+<ul>
+<li>kernel.shm*</li>
+<li>kernel.msg*</li>
+<li>kernel.sem</li>
+<li>fs.mqueue.*</li>
+<li>net.*<ul>
+<li>net.netfilter.nf_conntrack_max（Linux 5.12.2之前并未namespace化）</li>
+<li>net.netfilter.nf_conntrack_expect_max（Linux 5.12.2之前并未namespace化）</li>
+</ul>
+</li>
+</ul>
+<p>给LXC容器单独设置sysctl内核参数的方式：</p>
+<ul>
+<li>为LXC容器开启特权选项<code>--privileged</code>，对应<code>/proc</code>目录的挂载方式为<code>rw</code>，可以直接在容器内使用命令修改参数了。若修改的是<code>namespaced</code>参数，则不会影响宿主机和其他容器。</li>
+<li>把<code>/proc/sys</code>bind到容器里面，该方式和<code>--privileged</code>效果类似。</li>
+</ul>
+<p>给docker容器单独设置sysctl内核参数的方式：</p>
+<ul>
+<li><code>--privileged</code>：<code>docker run --privileged -it ubuntu bash</code>，该方式启动后，可以通过命令任意修改sysctl参数。</li>
+<li>把&#x2F;proc&#x2F;sys bind到容器里面，再具体写值，和上面的效果类似。<ol>
+<li><code>docker run -v /proc/sys:/writable-sys -it ubuntu bash</code></li>
+<li><code>echo 62 &gt; /writable-sys/net/ipv4/ip_default_ttl</code></li>
+</ol>
+</li>
+<li><code>--sysctl</code>：<code>docker run -it --sysctl &#39;net.ipv4.ip_default_ttl=63&#39; ubuntu sysctl net.ipv4.ip_default_ttl</code>。<ul>
+<li>只有namespaced参数才可以。否则会报错&quot;invalid argument...&quot;</li>
+<li>这种方式只是在容器初始化过程中完成内核参数的修改，容器运行起来以后，&#x2F;proc&#x2F;sys仍然是以只读方式挂载的，在容器中不能再次修改sysctl内核参数。</li>
+</ul>
+</li>
+</ul>
 <h1 id="iKuai-OpenWRT-做旁路由网络拓扑">6 &nbsp&nbsp<a href="#iKuai-OpenWRT-做旁路由网络拓扑" class="headerlink" title="iKuai +OpenWRT 做旁路由网络拓扑"></a>iKuai +OpenWRT 做旁路由网络拓扑</h1><p>iKuai作为主路由，负责拨号及DHCP，OpenWRT做旁路由。SmartDNS+AdGuardHome设置分流与去广告。SmartDNS作为DNS管理并提供DNS缓存，实现国内国外DNS分流，彻底解决DNS污染问题、实现秒开网页。同时搭配AdGuardHome实现整个局域网去广告。</p>
 <p>DNS转发流程：设置最核心的部分就是DNS转发端口的衔接，就是把DNSMASQ、Adguardhome、SmartDNS三个插件里的DNS服务器功能分成三个层级，实现层层转发。依次是第一级DNSMASQ，第二级Adguardhome，第三级SmartDNS，第四级OpenClash。</p>
 <h2 id="iKuai的设置">6.1 &nbsp&nbsp<a href="#iKuai的设置" class="headerlink" title="iKuai的设置"></a>iKuai的设置</h2><ul>
@@ -6358,7 +6132,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">6层</td>
 </tr>
 </tbody></table>
-<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[23] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[24] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[25] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[26] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.</p>
+<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[23] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[24] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[25] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[26] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[27] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[27] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[28] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -6443,6 +6217,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <categories>
         <category>software</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android系统排障总结</title>
@@ -7120,6 +7190,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>路由排障总结</title>
+    <url>/troubleshooting/router-troubleshooting/</url>
+    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+  </entry>
+  <entry>
     <title>运行库修复（Windows平台）</title>
     <url>/troubleshooting/runtime-library-repair-on-windows/</url>
     <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
@@ -7184,17 +7265,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>NET Framework</tag>
         <tag>Microsoft Visual C++ Runtime</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>路由排障总结</title>
-    <url>/troubleshooting/router-troubleshooting/</url>
-    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
   </entry>
   <entry>
     <title>计算机软件排障总结</title>
@@ -7838,12 +7908,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#115;&#46;&#99;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#107;&#x79;&#111;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#97;&#110;&#107;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -10686,59 +10756,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -10979,57 +10996,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
 
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
 ]]></content>
       <categories>
         <category>software</category>
@@ -11395,6 +11361,57 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Blender常见问题总结——Q&amp;A</title>
     <url>/software/blender/q-a/</url>
     <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
@@ -11416,6 +11433,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>blender</tag>
         <tag>问题总结</tag>
         <tag>Q&amp;A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -11594,7 +11664,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#x73;&#116;&#x65;&#114;&#107;&#x69;&#110;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#105;&#x73;&#x74;&#101;&#x72;&#107;&#105;&#110;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -11857,83 +11927,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     width: 60px;
 }
 </style>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于本站</title>
-    <url>/about/about-site/index.html</url>
-    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
-<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
-<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
-</div>
-
-<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
-<table>
-<thead>
-<tr>
-<th align="left">允许</th>
-<th align="left">限制</th>
-<th align="left">条件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><font style="color: green;">√</font> 修改</td>
-<td align="left"><font style="color: red;">×</font> 商标使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 分发</td>
-<td align="left"><font style="color: red;">×</font> 专利使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 个人使用</td>
-<td align="left"><font style="color: red;">×</font> 商业使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
-</tr>
-</tbody></table>
-<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
-<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
-<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
-<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
-<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
-</div>
-
-<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
-<ul>
-<li>1920×1080 分辨率的笔记本屏幕</li>
-<li>火狐浏览器</li>
-<li>Win10 OS</li>
-</ul>
-<p>本站存在的问题：</p>
-<ul>
-<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
-<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
-</ul>
-<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
-<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
-</div>
-
-<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
-<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
-<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
-<blockquote class="blockquote-center">
-<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
-<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
-</blockquote>
-
-<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
-<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
@@ -12284,20 +12277,97 @@ CGI&后期处理
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/live2d_models/umaru/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+    <title>关于本站</title>
+    <url>/about/about-site/index.html</url>
+    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
+<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
+<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
+</div>
+
+<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
+<table>
+<thead>
+<tr>
+<th align="left">允许</th>
+<th align="left">限制</th>
+<th align="left">条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><font style="color: green;">√</font> 修改</td>
+<td align="left"><font style="color: red;">×</font> 商标使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 分发</td>
+<td align="left"><font style="color: red;">×</font> 专利使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 个人使用</td>
+<td align="left"><font style="color: red;">×</font> 商业使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
+</tr>
+</tbody></table>
+<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
+<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
+<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
+<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
+<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
+</div>
+
+<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
+<ul>
+<li>1920×1080 分辨率的笔记本屏幕</li>
+<li>火狐浏览器</li>
+<li>Win10 OS</li>
+</ul>
+<p>本站存在的问题：</p>
+<ul>
+<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
+<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
+</ul>
+<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
+<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
+</div>
+
+<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
+<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
+<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
+<blockquote class="blockquote-center">
+<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
+<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
+</blockquote>
+
+<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
+<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
+]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/live2d_models/umaru/umaru.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
+    <url>/live2d_models/umaru/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
   </entry>
   <entry>
     <title>艺术作品</title>
     <url>/works/artworks/index.html</url>
     <content><![CDATA[<p>TODO</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/live2d_models/umaru/umaru.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
   <entry>
     <title>软件作品</title>
