@@ -503,6 +503,7 @@
     <p class="tag-bookmark-page">游戏相关资产</p>
     </div>
     <a href="https://www.spriters-resource.com/">spriters-resource</a>
+    <a href="https://github.com/RyensX/UnrealFabAssistant">Fab商城免费资源入库脚本</a>
 </div>
 
 </div>
@@ -768,6 +769,8 @@
     <p class="tag-bookmark-page">软路由系统</p>
     </div>
     <a href="https://www.ikuai8.com/component/download">iKuaiOS</a>
+    <a href="https://firmware-selector.immortalwrt.org/?target=x86%2F64&id=generic">ImmortalWrt</a>
+    <a href="https://downloads.openwrt.org/">OpenWrt官方固件</a>
     <a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>
     <a href="https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1">OpenWrt eSir GDQ 高大全</a>
 </div>
@@ -2597,7 +2600,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#49;&#55;&#x32;&#46;&#49;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[5] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#64;&#49;&#55;&#x32;&#x2e;&#x31;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[5] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4370,302 +4373,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Aegisub总结</title>
     <url>/software/aegisub/</url>
     <content><![CDATA[<p>油管的中英双语字幕，要先合并之后再导入aeg</p>
@@ -5665,6 +5372,32 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
@@ -6335,13 +6068,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="PBS-Proxmox-Backup-Server-总结">9 &nbsp&nbsp<a href="#PBS-Proxmox-Backup-Server-总结" class="headerlink" title="PBS(Proxmox Backup Server)总结"></a>PBS(Proxmox Backup Server)总结</h1><h2 id="PBS使用遇到的坑">9.1 &nbsp&nbsp<a href="#PBS使用遇到的坑" class="headerlink" title="PBS使用遇到的坑"></a>PBS使用遇到的坑</h2><h3 id="ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error">9.1.1 &nbsp&nbsp<a href="#ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error" class="headerlink" title="ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error"></a>ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error</h3><p>问题现象：PBS备份服务器或者PVE备份LXC虚拟机容器时出现失败，具体报错信息为</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">INFO: Starting Backup of VM 102 (lxc)</span><br><span class="line">INFO: Backup started at 2025-04-25 00:30:36</span><br><span class="line">INFO: status = running</span><br><span class="line">INFO: CT Name: <span class="built_in">test</span></span><br><span class="line">INFO: including mount point rootfs (<span class="string">&#x27;/&#x27;</span>) <span class="keyword">in</span> backup</span><br><span class="line">INFO: backup mode: snapshot</span><br><span class="line">INFO: ionice priority: 7</span><br><span class="line">INFO: create storage snapshot <span class="string">&#x27;vzdump&#x27;</span></span><br><span class="line">snapshot create failed: starting cleanup</span><br><span class="line">no lock found trying to remove <span class="string">&#x27;backup&#x27;</span>  lock</span><br><span class="line">ERROR: Backup of VM 102 failed - lvcreate snapshot <span class="string">&#x27;pve/snap_vm-102-disk-0_vzdump&#x27;</span> error:   Logical Volume <span class="string">&quot;snap_vm-102-disk-0_vzdump&quot;</span> already exists <span class="keyword">in</span> volume group <span class="string">&quot;pve&quot;</span></span><br><span class="line">INFO: Failed at 2025-04-25 00:30:36</span><br><span class="line">INFO: Backup job finished with errors</span><br><span class="line">INFO: notified via target `mail-to-root`</span><br><span class="line">TASK ERROR: job errors</span><br></pre></td></tr></table></figure>
 
-<p>问题原因：有残留的同名逻辑卷<code>/dev/pve/snap_vm-102-disk-0_vzdump</code>，一般是上次备份成功之后的清理操作失败导致残留下来的逻辑卷。</p>
+<p>问题原因：有残留的同名逻辑卷<code>/dev/pve/snap_vm-102-disk-0_vzdump</code>，一般是上次备份成功之后的清理操作失败导致残留下来的逻辑卷，例如卸载操作失败<code>command &#39;umount -l -d /mnt/vzsnapo/ failed: got signal 11</code>。</p>
 <p>解决方法：</p>
 <ol>
 <li>查看当前PVE系统中存在的逻辑卷：<code>lvdisplay</code>，可以查看到<code>/dev/pve/snap_vm-102-disk-0_vzdump</code>逻辑卷属性<code>LV Write Access        read only</code>是只读。其他查看命令<code>lvs</code>，<code>lvscan</code>。</li>
 <li>清理残留的逻辑卷：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump</code></li>
 </ol>
-<p>若遇上报错：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump&#39; error:   Logical volume /dev/pve/snap_vm-102-disk-0_vzdump contains a filesystem in use.</code>，请尝试</p>
+<p>若遇上报错：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump&#39; error:   Logical volume pve/snap_vm-102-disk-0_vzdump contains a filesystem in use.</code>，请尝试</p>
 <ul>
 <li>方案1：重启PVE宿主机</li>
 <li>方案2：添加<code>-f</code>参数强制删除，<code>lvremove -f /dev/pve/snap_vm-102-disk-0_vzdump</code></li>
@@ -6630,30 +6363,300 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
 </ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
 ]]></content>
       <categories>
-        <category>software</category>
+        <category>translations</category>
       </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android系统排障总结</title>
@@ -8049,12 +8052,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#x6e;&#107;&#x73;&#x2e;&#99;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#46;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#x6b;&#121;&#x6f;&#117;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -10367,295 +10370,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
-<li>跨平台应用程序开发框架</li>
-<li>首次发布于1995年5月</li>
-<li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li>
-</ul>
-<h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table>
-<thead>
-<tr>
-<th align="center">目标设备</th>
-<th align="center">目标平台</th>
-<th align="center">主机平台</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center">桌面Linux</td>
-<td align="center">桌面Linux</td>
-</tr>
-<tr>
-<td align="center">计算机</td>
-<td align="center">macOS</td>
-<td align="center">macOS</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">Android</td>
-<td align="center">桌面Linux、 macOS、Windows</td>
-</tr>
-<tr>
-<td align="center">移动设备</td>
-<td align="center">iOS</td>
-<td align="center">macOS</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">手机Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">嵌入式Linux</td>
-<td align="center">桌面Linux</td>
-</tr>
-<tr>
-<td align="center">嵌入式设备</td>
-<td align="center">QNX</td>
-<td align="center">桌面Linux、 Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">VxWorks</td>
-<td align="center">桌面Linux、 Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">嵌入式Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center">单片机</td>
-<td align="center">FreeRTOS或无操作系统</td>
-<td align="center">Windows、 桌面Linux</td>
-</tr>
-</tbody></table>
-<p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p>
-<h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p>
-<ul>
-<li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li>
-<li>开源许可：<ul>
-<li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li>
-<li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li>
-</ul>
-</li>
-</ul>
-<h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p>
-<h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol>
-<li>C++ 和 QML<ul>
-<li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li>
-<li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li>
-<li>C++和QML可以混合使用。</li>
-</ul>
-</li>
-<li>Python<ul>
-<li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li>
-<li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li>
-</ul>
-</li>
-</ol>
-<h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p>
-<ul>
-<li>支持 C++ 17 标准。</li>
-<li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li>
-<li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li>
-<li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li>
-<li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li>
-</ul>
-<h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p>
-</div>
-
-<p>自Qt5.1.5起，Qt官方只提供在线安装包。</p>
-<p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p>
-<p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p>
-<h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p>
-<ul>
-<li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li>
-<li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li>
-</ul>
-<p>Qt Creator新建工程的一些总结：</p>
-<ol>
-<li>应用类型：<ul>
-<li>Widgets：widget界面</li>
-<li>Console：控制台程序</li>
-<li>Quick：QML实现的界面</li>
-</ul>
-</li>
-<li>base class基础类：<ul>
-<li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li>
-<li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li>
-<li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li>
-</ul>
-</li>
-<li>翻译文件：i18国际化语言</li>
-</ol>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第一章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
-<ul>
-<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
-<li>main.cpp：主程序入口文件，实现main函数</li>
-<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
-<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
-<li>widget.cpp：是实现文件</li>
-<li>res.qrc：资源文件</li>
-</ul>
-<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
-
-<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第二章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IELTS雅思词汇圣经：6分词汇</title>
     <url>/english/IELTS/score6/</url>
     <content><![CDATA[<h1 id="list1"><a href="#list1" class="headerlink" title="list1"></a>list1</h1><ul>
@@ -10897,6 +10611,200 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
+<li>跨平台应用程序开发框架</li>
+<li>首次发布于1995年5月</li>
+<li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li>
+</ul>
+<h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table>
+<thead>
+<tr>
+<th align="center">目标设备</th>
+<th align="center">目标平台</th>
+<th align="center">主机平台</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center">桌面Linux</td>
+<td align="center">桌面Linux</td>
+</tr>
+<tr>
+<td align="center">计算机</td>
+<td align="center">macOS</td>
+<td align="center">macOS</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Android</td>
+<td align="center">桌面Linux、 macOS、Windows</td>
+</tr>
+<tr>
+<td align="center">移动设备</td>
+<td align="center">iOS</td>
+<td align="center">macOS</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">手机Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">嵌入式Linux</td>
+<td align="center">桌面Linux</td>
+</tr>
+<tr>
+<td align="center">嵌入式设备</td>
+<td align="center">QNX</td>
+<td align="center">桌面Linux、 Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">VxWorks</td>
+<td align="center">桌面Linux、 Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">嵌入式Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center">单片机</td>
+<td align="center">FreeRTOS或无操作系统</td>
+<td align="center">Windows、 桌面Linux</td>
+</tr>
+</tbody></table>
+<p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p>
+<h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p>
+<ul>
+<li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li>
+<li>开源许可：<ul>
+<li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li>
+<li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p>
+<h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol>
+<li>C++ 和 QML<ul>
+<li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li>
+<li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li>
+<li>C++和QML可以混合使用。</li>
+</ul>
+</li>
+<li>Python<ul>
+<li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li>
+<li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li>
+</ul>
+</li>
+</ol>
+<h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p>
+<ul>
+<li>支持 C++ 17 标准。</li>
+<li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li>
+<li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li>
+<li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li>
+<li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li>
+</ul>
+<h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p>
+</div>
+
+<p>自Qt5.1.5起，Qt官方只提供在线安装包。</p>
+<p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p>
+<p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p>
+<h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p>
+<ul>
+<li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li>
+<li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li>
+</ul>
+<p>Qt Creator新建工程的一些总结：</p>
+<ol>
+<li>应用类型：<ul>
+<li>Widgets：widget界面</li>
+<li>Console：控制台程序</li>
+<li>Quick：QML实现的界面</li>
+</ul>
+</li>
+<li>base class基础类：<ul>
+<li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li>
+<li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li>
+<li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li>
+</ul>
+</li>
+<li>翻译文件：i18国际化语言</li>
+</ol>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第一章</tag>
+        <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
+<ul>
+<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
+<li>main.cpp：主程序入口文件，实现main函数</li>
+<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
+<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
+<li>widget.cpp：是实现文件</li>
+<li>res.qrc：资源文件</li>
+</ul>
+<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
+
+<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第二章</tag>
+        <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
@@ -10947,40 +10855,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>动画</tag>
         <tag>动画电影</tag>
         <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
       </tags>
   </entry>
   <entry>
@@ -11152,6 +11026,40 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -11190,6 +11098,57 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
 
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
 ]]></content>
       <categories>
         <category>software</category>
@@ -11555,57 +11514,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Blender常见问题总结——Q&amp;A</title>
     <url>/software/blender/q-a/</url>
     <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
@@ -11630,21 +11538,61 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender教程总结</title>
-    <url>/software/blender/tranining/training/</url>
-    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
-<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>software</category>
-        <category>blender</category>
-        <category>tranining</category>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
       </categories>
       <tags>
-        <tag>总结</tag>
-        <tag>Blender</tag>
-        <tag>教程</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -11669,6 +11617,61 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>苹果</tag>
         <tag>小刀</tag>
         <tag>布料</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender教程总结</title>
+    <url>/software/blender/tranining/training/</url>
+    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
+<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
+</ul>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+        <category>tranining</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>教程</tag>
+        <tag>Blender</tag>
       </tags>
   </entry>
   <entry>
@@ -11805,7 +11808,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#114;&#107;&#x69;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#115;&#116;&#x65;&#114;&#x6b;&#105;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -11915,6 +11918,11 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>知识总结手册</title>
     <url>/manuals/index.html</url>
     <content><![CDATA[<h1 id="软件操作总结">1 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><ul>
@@ -11992,11 +12000,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>作品</title>
     <url>/works/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -12068,83 +12071,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     width: 60px;
 }
 </style>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于本站</title>
-    <url>/about/about-site/index.html</url>
-    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
-<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
-<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
-</div>
-
-<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
-<table>
-<thead>
-<tr>
-<th align="left">允许</th>
-<th align="left">限制</th>
-<th align="left">条件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><font style="color: green;">√</font> 修改</td>
-<td align="left"><font style="color: red;">×</font> 商标使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 分发</td>
-<td align="left"><font style="color: red;">×</font> 专利使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 个人使用</td>
-<td align="left"><font style="color: red;">×</font> 商业使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
-</tr>
-</tbody></table>
-<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
-<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
-<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
-<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
-<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
-</div>
-
-<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
-<ul>
-<li>1920×1080 分辨率的笔记本屏幕</li>
-<li>火狐浏览器</li>
-<li>Win10 OS</li>
-</ul>
-<p>本站存在的问题：</p>
-<ul>
-<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
-<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
-</ul>
-<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
-<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
-</div>
-
-<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
-<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
-<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
-<blockquote class="blockquote-center">
-<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
-<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
-</blockquote>
-
-<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
-<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
@@ -12359,6 +12285,83 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     text-indent: -6.5em; /* 用 indent 将第一行收回来，相互抵消 */
 }
 </style>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于本站</title>
+    <url>/about/about-site/index.html</url>
+    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
+<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
+<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
+</div>
+
+<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
+<table>
+<thead>
+<tr>
+<th align="left">允许</th>
+<th align="left">限制</th>
+<th align="left">条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><font style="color: green;">√</font> 修改</td>
+<td align="left"><font style="color: red;">×</font> 商标使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 分发</td>
+<td align="left"><font style="color: red;">×</font> 专利使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 个人使用</td>
+<td align="left"><font style="color: red;">×</font> 商业使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
+</tr>
+</tbody></table>
+<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
+<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
+<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
+<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
+<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
+</div>
+
+<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
+<ul>
+<li>1920×1080 分辨率的笔记本屏幕</li>
+<li>火狐浏览器</li>
+<li>Win10 OS</li>
+</ul>
+<p>本站存在的问题：</p>
+<ul>
+<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
+<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
+</ul>
+<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
+<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
+</div>
+
+<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
+<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
+<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
+<blockquote class="blockquote-center">
+<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
+<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
+</blockquote>
+
+<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
+<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
