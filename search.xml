@@ -2597,7 +2597,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#116;&#64;&#49;&#x37;&#x32;&#x2e;&#49;&#57;&#x2e;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[5] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#49;&#55;&#x32;&#46;&#49;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[5] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5668,26 +5668,39 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
-<h1 id="N3530工控机配置">2 &nbsp&nbsp<a href="#N3530工控机配置" class="headerlink" title="N3530工控机配置"></a>N3530工控机配置</h1><ul>
+<h1 id="机器配置">2 &nbsp&nbsp<a href="#机器配置" class="headerlink" title="机器配置"></a>机器配置</h1><h2 id="N3530工控机配置">2.1 &nbsp&nbsp<a href="#N3530工控机配置" class="headerlink" title="N3530工控机配置"></a>N3530工控机配置</h2><ul>
 <li>CPU：Intel(R) Pentium(R) CPU N3530</li>
 <li>内存：海力士DDR3L-8GB单根（从老笔记本电脑上拆一根DDR3条子给它用）</li>
 <li>硬盘：海力士SH920 msata 256GB</li>
 <li>网卡：千兆网卡Intel I211 *2+千兆网卡Realtek mini-pcie RTL8211E&#x2F;F（螃蟹卡，后期自己购买加装至mini pcie无线网卡口位置）</li>
 </ul>
-<h1 id="安装PVE">3 &nbsp&nbsp<a href="#安装PVE" class="headerlink" title="安装PVE"></a>安装PVE</h1><h2 id="N3530工控机BIOS的优化设置">3.1 &nbsp&nbsp<a href="#N3530工控机BIOS的优化设置" class="headerlink" title="N3530工控机BIOS的优化设置"></a>N3530工控机BIOS的优化设置</h2><p>该N3530工控机BIOS是采用经典的<code>AMI(American Megatrends)</code>方案。</p>
+<h2 id="N3530工控机BIOS的优化设置">2.2 &nbsp&nbsp<a href="#N3530工控机BIOS的优化设置" class="headerlink" title="N3530工控机BIOS的优化设置"></a>N3530工控机BIOS的优化设置</h2><blockquote>
+<p>快速启动菜单按键：F11键</p>
+</blockquote>
+<p>该N3530工控机BIOS是采用经典的<code>AMI(American Megatrends)</code>方案。</p>
 <ul>
 <li>设置来电自启：<code>Chipset-&gt;North Bridge-&gt;Restore AC Power Loss-&gt;Power on</code></li>
 <li>启用CPU内置温度传感器：<code>Advanced-&gt;CPU Configuration-&gt;CPU Thermal Configuration-&gt;DTS-&gt;Enabled</code></li>
 <li>启用VT-x：<code>Advanced-&gt;CPU Configuration-&gt;Intel Virtualization Technology-&gt;Enabled</code></li>
 <li>设置自定义功率模式：<code>Advanced-&gt;CPU Configuration-&gt;Power Technology-&gt;Custom</code>。（默认是Efficient节能模式）</li>
 </ul>
-<h2 id="PVE安装步骤">3.2 &nbsp&nbsp<a href="#PVE安装步骤" class="headerlink" title="PVE安装步骤"></a>PVE安装步骤</h2><ol>
+<h2 id="i5-12400-云星Matx-Z690-NAS主板配置">2.3 &nbsp&nbsp<a href="#i5-12400-云星Matx-Z690-NAS主板配置" class="headerlink" title="i5-12400+云星Matx-Z690 NAS主板配置"></a>i5-12400+云星Matx-Z690 NAS主板配置</h2><h2 id="云星Matx-Z690-NAS主板BIOS的优化设置">2.4 &nbsp&nbsp<a href="#云星Matx-Z690-NAS主板BIOS的优化设置" class="headerlink" title="云星Matx-Z690 NAS主板BIOS的优化设置"></a>云星Matx-Z690 NAS主板BIOS的优化设置</h2><blockquote>
+<p>快速启动菜单按键：F11键</p>
+</blockquote>
+<h1 id="安装PVE">3 &nbsp&nbsp<a href="#安装PVE" class="headerlink" title="安装PVE"></a>安装PVE</h1><h2 id="PVE安装步骤">3.1 &nbsp&nbsp<a href="#PVE安装步骤" class="headerlink" title="PVE安装步骤"></a>PVE安装步骤</h2><ol>
 <li>下载PVE系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（我的情况就是需要下载pve 7.4的iso镜像文件，因为安装pve 8.x会引起<code>bootloader setup errors</code>报错而导致安装PVE系统失败）</li>
 <li>制作U盘启动项：<a href="https://github.com/ventoy/Ventoy/releases">ventoy</a>。拷贝镜像iso文件到U盘，启动选择pve镜像进入，选择图形安装界面。</li>
 <li>同意协议。</li>
 <li>点击option按钮，选择硬盘和ext4格式：<ol>
 <li>swapsize&#x3D;8GB（交换分区请根据自己的硬盘容量和使用情况设置）</li>
 <li>maxroot&#x3D;50GB（该分区对应PVE系统的local存储空间，主要用于存放ISO镜像和LXC模板（CT Templates），请根据自己的硬盘和使用情况设置）</li>
+<li>minfree&#x3D;0GB（该分区是定义划分LVM卷组“pve”后剩余的可用空间量。当可用存储空间超过128GB时，其默认值为16GB。）<ul>
+<li>一般是留出这闲置空间用于手动lvcreate逻辑分卷snapshot快照这种操作。但PVE是使用lvmthin，无需闲置空间作为lvmthin的快照存储，因此设置为0即可。</li>
+<li>如果自己的需求有自行创建逻辑卷快照的需求，请留空使用默认值16GB即可。</li>
+<li>LVM需要VG中的可用空间来创建快照，而lvmthin快照则不需要。</li>
+</ul>
+</li>
+<li>maxvz&#x3D;留空（该分区是定义数据卷（data）的最大大小。计算公式：datasize &#x3D; hdsize - rootsize - swapsize - minfree）</li>
 </ol>
 </li>
 <li>国家选择china，时区会自动修改为上海，键盘布局不改。</li>
@@ -5697,7 +5710,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>。账户：root。密码：[前面步骤设置的密码]。</li>
 <li>设置网卡并确保pve能联网。</li>
 </ol>
-<h2 id="PVE升级步骤（7-4-8-x）">3.3 &nbsp&nbsp<a href="#PVE升级步骤（7-4-8-x）" class="headerlink" title="PVE升级步骤（7.4-&gt;8.x）"></a>PVE升级步骤（7.4-&gt;8.x）</h2><h3 id="替换PVE-7-4的Debian系统软件源和PVE软件源">3.3.1 &nbsp&nbsp<a href="#替换PVE-7-4的Debian系统软件源和PVE软件源" class="headerlink" title="替换PVE 7.4的Debian系统软件源和PVE软件源"></a>替换PVE 7.4的Debian系统软件源和PVE软件源</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。</p>
+<h2 id="PVE升级步骤（7-4-8-x）">3.2 &nbsp&nbsp<a href="#PVE升级步骤（7-4-8-x）" class="headerlink" title="PVE升级步骤（7.4-&gt;8.x）"></a>PVE升级步骤（7.4-&gt;8.x）</h2><h3 id="替换PVE-7-4的Debian系统软件源和PVE软件源">3.2.1 &nbsp&nbsp<a href="#替换PVE-7-4的Debian系统软件源和PVE软件源" class="headerlink" title="替换PVE 7.4的Debian系统软件源和PVE软件源"></a>替换PVE 7.4的Debian系统软件源和PVE软件源</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。</p>
 <div class="tabs" id="74sources"><ul class="nav-tabs"><li class="tab active"><a href="#74sources-1">PVE 7.4的Debian系统软件源</a></li><li class="tab"><a href="#74sources-2">PVE 7.4的PVE软件源</a></li><li class="tab"><a href="#74sources-3">PVE 7.4的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sources-1"><p>修改<code>/etc/apt/sources.list</code>文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="74sourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74sourcestype-1">PVE 7.4的Debian系统软件源（中科大源）</a></li><li class="tab"><a href="#74sourcestype-2">PVE 7.4的Debian系统软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74sourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="74sources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
@@ -5705,9 +5718,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="tabs" id="74pvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74pvesourcestype-1">PVE 7.4的PVE软件源（中科大源）</a></li><li class="tab"><a href="#74pvesourcestype-2">PVE 7.4的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74pvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74pvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="74sources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="74cephsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74cephsourcestype-1">PVE 7.4的CEPH分布式源（中科大源）</a></li><li class="tab"><a href="#74cephsourcestype-2">PVE 7.4的CEPH分布式源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74cephsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy bullseye no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74cephsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/ceph-quincy bullseye no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
-<h3 id="升级到PVE-7-4最新的版本">3.3.2 &nbsp&nbsp<a href="#升级到PVE-7-4最新的版本" class="headerlink" title="升级到PVE 7.4最新的版本"></a>升级到PVE 7.4最新的版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
-<h3 id="检查版本升级的兼容性">3.3.3 &nbsp&nbsp<a href="#检查版本升级的兼容性" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve7to8</span><br></pre></td></tr></table></figure>
-<h3 id="替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像）">3.3.4 &nbsp&nbsp<a href="#替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像）" class="headerlink" title="替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像）"></a>替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像）</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。</p>
+<h3 id="升级到PVE-7-4最新的版本">3.2.2 &nbsp&nbsp<a href="#升级到PVE-7-4最新的版本" class="headerlink" title="升级到PVE 7.4最新的版本"></a>升级到PVE 7.4最新的版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
+<h3 id="检查版本升级的兼容性">3.2.3 &nbsp&nbsp<a href="#检查版本升级的兼容性" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve7to8</span><br></pre></td></tr></table></figure>
+<h3 id="替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像）">3.2.4 &nbsp&nbsp<a href="#替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像）" class="headerlink" title="替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像）"></a>替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像）</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。</p>
 <div class="tabs" id="8xsources"><ul class="nav-tabs"><li class="tab active"><a href="#8xsources-1">PVE 8.x的Debian系统软件源</a></li><li class="tab"><a href="#8xsources-2">PVE 8.x的PVE软件源</a></li><li class="tab"><a href="#8xsources-3">PVE 8.x的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xsources-1"><p>修改&#x2F;etc&#x2F;apt&#x2F;sources.list文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="8xsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xsourcestype-1">PVE 8.x的中科大镜像源</a></li><li class="tab"><a href="#8xsourcestype-2">PVE 8.x的清华镜像源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org bookworm-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org bookworm-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="8xsources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
@@ -5715,16 +5728,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="tabs" id="8xpvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xpvesourcestype-1">PVE 8.x的PVE软件源（中科大源）</a></li><li class="tab"><a href="#8xpvesourcestype-2">PVE 8.x的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xpvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xpvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="8xsources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="8xcephsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xcephsourcestype-1">PVE 8.x的CEPH分布式源（中科大源）</a></li><li class="tab"><a href="#8xcephsourcestype-2">PVE 8.x的CEPH分布式源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xcephsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xcephsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
-<h3 id="替换LXC模板（CT-Templates）镜像源">3.3.5 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h3><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，重启后生效。</strong></p>
+<h3 id="替换LXC模板（CT-Templates）镜像源">3.2.5 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h3><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，重启后生效。</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm.bak</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="lxcsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#lxcsourcestype-1">PVE LXC模板（CT Templates）（中科大源）</a></li><li class="tab"><a href="#lxcsourcestype-2">PVE LXC模板（CT Templates）（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="lxcsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.ustc.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="lxcsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.tuna.tsinghua.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure></div></div></div>
 
-<h3 id="开始正式升级">3.3.6 &nbsp&nbsp<a href="#开始正式升级" class="headerlink" title="开始正式升级"></a>开始正式升级</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+<h3 id="开始正式升级">3.2.6 &nbsp&nbsp<a href="#开始正式升级" class="headerlink" title="开始正式升级"></a>开始正式升级</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
 </div>
 <p>升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/issue -&gt; Proxmox VE will auto-generate this file on boot, and it has only cosmetic effects on the login console.</span><br><span class="line">Using the default <span class="string">&quot;No&quot;</span> (keep your currently-installed version) is safe here.</span><br><span class="line"></span><br><span class="line">/etc/lvm/lvm.conf -&gt; Changes relevant <span class="keyword">for</span> Proxmox VE will be updated, and a newer config version might be useful.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br><span class="line"></span><br><span class="line">/etc/ssh/sshd_config -&gt; If you have not changed this file manually, the only differences should be a replacement of ChallengeResponseAuthentication no with KbdInteractiveAuthentication no and some irrelevant changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#).</span></span><br><span class="line">If this is the <span class="keyword">case</span>, both options are safe, though we would recommend installing the package maintainer<span class="string">&#x27;s version in order to move away from the deprecated ChallengeResponseAuthentication option. If there are other changes, we suggest to inspect them closely and decide accordingly.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">/etc/default/grub -&gt; Here you may want to take special care, as this is normally only asked for if you changed it manually, e.g., for adding some kernel command line option.</span></span><br><span class="line"><span class="string">It&#x27;</span>s recommended to check the difference <span class="keyword">for</span> any relevant change, note that changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#) are not relevant.</span></span><br><span class="line">If unsure, we suggested to selected <span class="string">&quot;No&quot;</span> (keep your currently-installed version)</span><br></pre></td></tr></table></figure>
-<h3 id="去除未订阅提示">3.3.7 &nbsp&nbsp<a href="#去除未订阅提示" class="headerlink" title="去除未订阅提示"></a>去除未订阅提示</h3><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。</strong></p>
+<h3 id="去除未订阅提示">3.2.7 &nbsp&nbsp<a href="#去除未订阅提示" class="headerlink" title="去除未订阅提示"></a>去除未订阅提示</h3><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。</strong></p>
 <ul>
 <li><code>/usr/share/pve-manager/js/pvemanagerlib.js</code></li>
 <li><code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code></li>
@@ -5733,25 +5746,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="flex-column">
 <img data-src="/images/pve/no_subscribe.webp">「无有效订阅」的提示弹窗</div>
 
-<h3 id="后续PVE系统日常更新：">3.3.8 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+<h3 id="后续PVE系统日常更新：">3.2.8 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
 
-<h2 id="PVE安装和使用遇到的坑">3.4 &nbsp&nbsp<a href="#PVE安装和使用遇到的坑" class="headerlink" title="PVE安装和使用遇到的坑"></a>PVE安装和使用遇到的坑</h2><h3 id="PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">3.4.1 &nbsp&nbsp<a href="#PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
+<h2 id="PVE安装和使用遇到的坑">3.3 &nbsp&nbsp<a href="#PVE安装和使用遇到的坑" class="headerlink" title="PVE安装和使用遇到的坑"></a>PVE安装和使用遇到的坑</h2><h3 id="PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">3.3.1 &nbsp&nbsp<a href="#PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h3><p>报错信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bootloader setup errors:</span><br><span class="line">- failed to prepare EFI boot using Grub on &#x27;/dev/sda2&#x27;: unable to install the EFI boot loader on &#x27;/dev/sda&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>原因：PVE 8.0版本镜像īso不兼容N3530工控机，估计是bug。参考其他帖子说的只保留usb的uefi设备，依旧也会报错。并且因为机器的bios设置也比较繁琐，我反复尝试将其设置为csm模式，机器始终无法以csm模式启动，估计该主板的bios也是魔改过有bug的。因此导致也无法以csm模式安装pve。</p>
 <p>解决方法：安装pve 7.4版本，再升级到pve 8.x。</p>
-<h3 id="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应">3.4.2 &nbsp&nbsp<a href="#USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应" class="headerlink" title="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应"></a>USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应</h3><p>原因：推测为N3530工控机BIOS的驱动BUG。</p>
+<h3 id="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应">3.3.2 &nbsp&nbsp<a href="#USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL-ALT-DELETE可以响应" class="headerlink" title="USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应"></a>USB键盘一直插着时会无法响应的，无法进入并操控BIOS，只有CTRL+ALT+DELETE可以响应</h3><p>原因：推测为N3530工控机BIOS的驱动BUG。</p>
 <p>解决方法：先不插键盘启动机器，看屏幕右下角等待主板自检代码走到99阶段，快速插上键盘，摁DEL键。如果一次不成功，就使用<code>CTRL+ALT+DELETE</code>强制重启，继续尝试该操作。</p>
-<h3 id="hdmi屏幕不显bios">3.4.3 &nbsp&nbsp<a href="#hdmi屏幕不显bios" class="headerlink" title="hdmi屏幕不显bios"></a>hdmi屏幕不显bios</h3><p>N3530工控机主板BIOS内置驱动对普通HDMI小屏幕兼容性不好，只有成功启动PVE系统后才会正常显示画面，而在自检阶段和BIOS界面只会显示白屏或者花屏，接大屏驱动板兼容性好点。</p>
-<h3 id="后面加装的RTL8211网卡不识别">3.4.4 &nbsp&nbsp<a href="#后面加装的RTL8211网卡不识别" class="headerlink" title="后面加装的RTL8211网卡不识别"></a>后面加装的RTL8211网卡不识别</h3><p>原因：因为安装pve系统之前未加装好螃蟹卡RTL8211，因此后续加装之后，pve系统并未识别到。</p>
+<h3 id="hdmi屏幕不显bios">3.3.3 &nbsp&nbsp<a href="#hdmi屏幕不显bios" class="headerlink" title="hdmi屏幕不显bios"></a>hdmi屏幕不显bios</h3><p>N3530工控机主板BIOS内置驱动对普通HDMI小屏幕兼容性不好，只有成功启动PVE系统后才会正常显示画面，而在自检阶段和BIOS界面只会显示白屏或者花屏，接大屏驱动板兼容性好点。</p>
+<h3 id="后面加装的RTL8211网卡不识别">3.3.4 &nbsp&nbsp<a href="#后面加装的RTL8211网卡不识别" class="headerlink" title="后面加装的RTL8211网卡不识别"></a>后面加装的RTL8211网卡不识别</h3><p>原因：因为安装pve系统之前未加装好螃蟹卡RTL8211，因此后续加装之后，pve系统并未识别到。</p>
 <p>解决方法：重装pve系统。（驱动源码编译方案，也有编译报错，不好解决，推荐是重装pve，让pve自动打驱动）</p>
-<h3 id="工控机重启bug，看门狗导致重启很长时间">3.4.5 &nbsp&nbsp<a href="#工控机重启bug，看门狗导致重启很长时间" class="headerlink" title="工控机重启bug，看门狗导致重启很长时间"></a>工控机重启bug，看门狗导致重启很长时间</h3><p>原因：未查明，只要一重启，就会长时间卡在看门狗的错误提示。</p>
+<h3 id="工控机重启bug，看门狗导致重启很长时间">3.3.5 &nbsp&nbsp<a href="#工控机重启bug，看门狗导致重启很长时间" class="headerlink" title="工控机重启bug，看门狗导致重启很长时间"></a>工控机重启bug，看门狗导致重启很长时间</h3><p>原因：未查明，只要一重启，就会长时间卡在看门狗的错误提示。</p>
 <p>错误提示：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">watchgod: watchdog0: watchdog did<span class="string">&#x27;t did not stop!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">systemd-shutdown: Failed to finalzie DM services, ignorening.</span></span><br></pre></td></tr></table></figure>
 
 <p>解决方法：无法解决，只能长时间等待完成重启或者强制关机重开。</p>
 <p><strong>P.S. 尝试在主板BIOS中主动启用看门狗计时器设置<code>Advanced-&gt;SIO MISC Configuration-&gt;Watchdog Dog Timer-&gt;Enabled</code>仍无法解决，该问题暂未查明原因。</strong></p>
-<h3 id="Repository-Debian-bookworm-changed-its-non-free-component-value-from-non-free-to-non-free-non-free-firmware">3.4.6 &nbsp&nbsp<a href="#Repository-Debian-bookworm-changed-its-non-free-component-value-from-non-free-to-non-free-non-free-firmware" class="headerlink" title="Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;"></a>Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;</h3><p>问题现象：运行<code>apt update</code>出现报错：Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;</p>
+<h3 id="Repository-Debian-bookworm-changed-its-non-free-component-value-from-non-free-to-non-free-non-free-firmware">3.3.6 &nbsp&nbsp<a href="#Repository-Debian-bookworm-changed-its-non-free-component-value-from-non-free-to-non-free-non-free-firmware" class="headerlink" title="Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;"></a>Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;</h3><p>问题现象：运行<code>apt update</code>出现报错：Repository &#39;Debian bookworm&#39; changed its &#39;non-free component&#39; value from &#39;non-free&#39; to &#39;non-free non-free-firmware&#39;</p>
 <p>问题原因：Debian 12版本（bookworm）的非自有固件包（如硬件驱动程序）不再放在non-free目录中，而是non-free-firmware目录。</p>
 <p>解决方法1（修正<code>/etc/apt/sources.list</code>软件源）：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 确保软件源中添加了non-free-firmware目录，而不仅仅只有non-free目录</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
@@ -5759,7 +5772,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法2（直接屏蔽该错误）：<br>创建一个文件<code>/etc/apt/apt.conf.d/no-bookworm-firmware.conf</code>，写入内容如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">APT::Get::Update::SourceListWarnings::NonFreeFirmware <span class="string">&quot;false&quot;</span>;</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装独立显卡的机器中PVE系统里面识别不到核显设备">3.4.7 &nbsp&nbsp<a href="#安装独立显卡的机器中PVE系统里面识别不到核显设备" class="headerlink" title="安装独立显卡的机器中PVE系统里面识别不到核显设备"></a>安装独立显卡的机器中PVE系统里面识别不到核显设备</h3><p>问题现象：华硕Z690-A Gaming WiFi D4主板在安装独立显卡后，运行<code>ls pci | grep VGA</code>找不到核显的VGA设备。</p>
+<h3 id="安装独立显卡的机器中PVE系统里面识别不到核显设备">3.3.7 &nbsp&nbsp<a href="#安装独立显卡的机器中PVE系统里面识别不到核显设备" class="headerlink" title="安装独立显卡的机器中PVE系统里面识别不到核显设备"></a>安装独立显卡的机器中PVE系统里面识别不到核显设备</h3><p>问题现象：华硕Z690-A Gaming WiFi D4主板在安装独立显卡后，运行<code>ls pci | grep VGA</code>找不到核显的VGA设备。</p>
 <p>问题原因：主板BIOS未有开启核显。</p>
 <p>解决方法：</p>
 <ul>
@@ -5780,15 +5793,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h3 id="PVE概要页面利用率图标信息无法显示">3.4.8 &nbsp&nbsp<a href="#PVE概要页面利用率图标信息无法显示" class="headerlink" title="PVE概要页面利用率图标信息无法显示"></a>PVE概要页面利用率图标信息无法显示</h3><p>问题原因：rrdcached服务异常，某些情况下也可能会导致所有虚拟机显示「状态: unknown」。</p>
+<h3 id="PVE概要页面利用率图标信息无法显示">3.3.8 &nbsp&nbsp<a href="#PVE概要页面利用率图标信息无法显示" class="headerlink" title="PVE概要页面利用率图标信息无法显示"></a>PVE概要页面利用率图标信息无法显示</h3><p>问题原因：rrdcached服务异常，某些情况下也可能会导致所有虚拟机显示「状态: unknown」。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop rrdcached</span><br><span class="line"><span class="built_in">rm</span> -rf /var/lib/rrdcached/*</span><br><span class="line"><span class="comment"># 或者mv /var/lib/rrdcached /var/lib/rrdcached.bck</span></span><br><span class="line">systemctl start rrdcached</span><br></pre></td></tr></table></figure>
 
-<h3 id="PVE面板节点和所有虚拟机显示「状态-unknown」，虚拟机正常运行">3.4.9 &nbsp&nbsp<a href="#PVE面板节点和所有虚拟机显示「状态-unknown」，虚拟机正常运行" class="headerlink" title="PVE面板节点和所有虚拟机显示「状态: unknown」，虚拟机正常运行"></a>PVE面板节点和所有虚拟机显示「状态: unknown」，虚拟机正常运行</h3><p>问题原因：pve的节点状态守护程序<code>pvestatd</code>异常。</p>
+<h3 id="PVE面板节点和所有虚拟机显示「状态-unknown」，虚拟机正常运行">3.3.9 &nbsp&nbsp<a href="#PVE面板节点和所有虚拟机显示「状态-unknown」，虚拟机正常运行" class="headerlink" title="PVE面板节点和所有虚拟机显示「状态: unknown」，虚拟机正常运行"></a>PVE面板节点和所有虚拟机显示「状态: unknown」，虚拟机正常运行</h3><p>问题原因：pve的节点状态守护程序<code>pvestatd</code>异常。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查看状态和重启服务</span></span><br><span class="line">systemctl status pvestatd</span><br><span class="line">systemctl restart pvestatd</span><br></pre></td></tr></table></figure>
 
-<h3 id="使用ventoy引导安装PVE后，无法正常启动PVE">3.4.10 &nbsp&nbsp<a href="#使用ventoy引导安装PVE后，无法正常启动PVE" class="headerlink" title="使用ventoy引导安装PVE后，无法正常启动PVE"></a>使用ventoy引导安装PVE后，无法正常启动PVE</h3><p>问题：使用ventoy引导安装PVE后，安装完成重启，初次开机就卡在<code>loading initial ramdisk</code>或者黑屏</p>
+<h3 id="使用ventoy引导安装PVE后，无法正常启动PVE">3.3.10 &nbsp&nbsp<a href="#使用ventoy引导安装PVE后，无法正常启动PVE" class="headerlink" title="使用ventoy引导安装PVE后，无法正常启动PVE"></a>使用ventoy引导安装PVE后，无法正常启动PVE</h3><p>问题：使用ventoy引导安装PVE后，安装完成重启，初次开机就卡在<code>loading initial ramdisk</code>或者黑屏</p>
 <p>原因：因为ventoy偷偷给PVE添加启动内核参数<code>rdinit=/vtoy/vtoy</code>。据反复实验，在ventoy使用grub模式加载PVE镜像引导的话，这个参数百分比会被偷偷加入，使用正常UEFI模式加载偶尔会出现这种情况。测试使用的ventoy版本为v1.1.05。</p>
 <p>解决方法：</p>
 <ol>
@@ -5906,7 +5919,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>输入字母o回车进入其「其他选项」，开启外网访问web。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.1/">http://192.168.1.1:80</a>。默认账户：admin。默认密码：admin。</li>
 </ol>
-<h2 id="安装OpenWrt">5.3 &nbsp&nbsp<a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h2><h3 id="OpenWrt镜像的选择">5.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
+<h2 id="安装OpenWrt（KVM虚拟机）">5.3 &nbsp&nbsp<a href="#安装OpenWrt（KVM虚拟机）" class="headerlink" title="安装OpenWrt（KVM虚拟机）"></a>安装OpenWrt（KVM虚拟机）</h2><h3 id="OpenWrt镜像的选择">5.3.1 &nbsp&nbsp<a href="#OpenWrt镜像的选择" class="headerlink" title="OpenWrt镜像的选择"></a>OpenWrt镜像的选择</h3><ul>
 <li><a href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64">Bleach OpenWrt</a>：推荐（本教程使用该固件）。内置SmartDNS，软件包空间设置为1G，剩余五百多兆。</li>
 <li><a href="https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1">eSir GDQ 高大全</a>：eSir的高大全固件。不推荐。没有内置SmartDNS拓展（我测试时安装SmartDNS并未出现有服务项，无效）。并且相较于Blench版本，较为繁琐。软件包空间只剩余几兆，需自己手动扩盘。</li>
 </ul>
@@ -5924,7 +5937,49 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>pve中用shell：<code>vi /etc/config/network</code>，将lan口ip改为<code>192.168.1.3</code>，<code>reboot</code>重启。vim编辑：按i进入修改模式，按esc退出编辑模式，输入 :wq回车保存修改。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.3/">http://192.168.1.3</a>。默认账户：root。默认密码：password。</li>
 </ol>
-<h2 id="安装飞牛私有云fnOS">5.4 &nbsp&nbsp<a href="#安装飞牛私有云fnOS" class="headerlink" title="安装飞牛私有云fnOS"></a>安装飞牛私有云fnOS</h2><ol>
+<h2 id="安装OpenWrt（LXC容器）">5.4 &nbsp&nbsp<a href="#安装OpenWrt（LXC容器）" class="headerlink" title="安装OpenWrt（LXC容器）"></a>安装OpenWrt（LXC容器）</h2><h3 id="OpenWrt根文件镜像的选择">5.4.1 &nbsp&nbsp<a href="#OpenWrt根文件镜像的选择" class="headerlink" title="OpenWrt根文件镜像的选择"></a>OpenWrt根文件镜像的选择</h3><ul>
+<li><a href="https://firmware-selector.immortalwrt.org/?target=x86/64&id=generic">ImmortalWrt</a>：推荐（本教程使用该固件）。选择<code>ROOTFS (SQUASHFS)</code>类型下载，编写教程时最新版本为<code>immortalwrt-24.10.1-x86-64-generic-squashfs-rootfs.img.gz</code>。</li>
+<li><a href="https://downloads.openwrt.org/">OpenWrt官方固件</a></li>
+</ul>
+<h3 id="安装步骤-1">5.4.2 &nbsp&nbsp<a href="#安装步骤-1" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<li>在PVE宿主机上安装<code>squashfs-tools</code>软件包：<code>apt install squashfs-tools</code>。</li>
+<li>下载OpenWrt根文件镜像：<a href="#OpenWrt%E6%A0%B9%E6%96%87%E4%BB%B6%E9%95%9C%E5%83%8F%E7%9A%84%E9%80%89%E6%8B%A9">见上一小节</a></li>
+<li>解压gz包：<code>gunzip immortalwrt-24.10.1-x86-64-generic-squashfs-rootfs.img.gz</code>（gunzip解压gz包之后会自动删除gz包的）。</li>
+<li>解压img镜像文件：<code>unsquashfs openwrt-x86-64-generic-squashfs-rootfs.img</code>，解压路径为当前路径下的<code>squashfs-root</code>文件夹。</li>
+<li>打包tar.gz格式，作为LXC模版：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> squashfs-root</span><br><span class="line">tar zcf /var/lib/vz/template/cache/immortalwrt-24.10.1-x86-64-generic-rootfs.tar.gz ./*</span><br><span class="line"><span class="comment"># 完成之后PVE的local的CT模板路径中就可以看到immortalwrt-24.10.1-x86-64-generic-rootfs.tar.gz文件了</span></span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>手动创建LXC容器（这里不能用网页端选择LXC模板来创建，会报错），若需要后期编辑LXC虚拟机的配置项，使用命令编辑<code>nano /etc/pve/lxc/101.conf</code>。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pct create 101 /var/lib/vz/template/cache/immortalwrt-24.10.1-x86-64-generic-rootfs.tar.gz --rootfs local-lvm:2 --ostype unmanaged --hostname openwrt --<span class="built_in">arch</span> amd64 --cores 4 --memory 2048 --swap 0 -net0 bridge=vmbr4,name=eth0 -net1 bridge=vmbr4,name=eth1 --features nesting=1 --unprivileged 0</span><br></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<ul>
+<li>pct create 100: 创建一个 ID 为 100 的容器。</li>
+<li>&#x2F;var&#x2F;lib&#x2F;vz&#x2F;template&#x2F;cache&#x2F;openwrt-x86-64-generic-rootfs.tar.gz: 指定要使用的根文件系统模板的路径。这里是 OpenWRT 的根文件系统。</li>
+<li>rootfs local-lvm:2: 设置容器的根文件系统存储位置。local-lvm表示使用local-lvm的空间，2表示分配2GB的存储空间。</li>
+<li>ostype unmanaged: 指定操作系统类型为&quot;unmanaged&quot;，表示 Proxmox 不会对已知操作系统进行特定优化。</li>
+<li>hostname openwrt: 将容器的主机名设置为 openwrt。</li>
+<li>arch amd64: 指定容器的架构为 64 位（amd64）。</li>
+<li>cores 4: 分配 4 个 CPU 核心给容器。</li>
+<li>memory 2048: 分配 2048 MB 的内存给容器。</li>
+<li>swap 0: 分配 0 MB 的交换空间给容器。</li>
+<li>net0 bridge&#x3D;vmbr0,name&#x3D;eth0: 配置第一个网络接口，连接到 vmbr0 桥接，并将接口命名为 eth0。</li>
+<li>features nesting&#x3D;1: 启用特定功能。nesting&#x3D;1 允许嵌套虚拟化。</li>
+<li>unprivileged 0：表示使用特权模式（该选项一定要开启，否则OpenWrt的DNSMasq服务无法正常启动）</li>
+</ul>
+<ol>
+<li>在PVE管理网页打开进入LXC的shell，修改固件的LAN口IP，让OpenWrt可以访问外网：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/config/network</span><br><span class="line">service network restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置文件内容（请按自己的网络拓扑需求进行修改）</span></span><br><span class="line">config interface <span class="string">&#x27;loopback&#x27;</span></span><br><span class="line">        option device <span class="string">&#x27;lo&#x27;</span></span><br><span class="line">        option proto <span class="string">&#x27;static&#x27;</span></span><br><span class="line">        option ipaddr <span class="string">&#x27;127.0.0.1&#x27;</span></span><br><span class="line">        option netmask <span class="string">&#x27;255.0.0.0&#x27;</span></span><br><span class="line"></span><br><span class="line">config globals <span class="string">&#x27;globals&#x27;</span></span><br><span class="line">        option ula_prefix <span class="string">&#x27;fdbb:d148:dd0e::/48&#x27;</span></span><br><span class="line">        option packet_steering <span class="string">&#x27;1&#x27;</span></span><br><span class="line"></span><br><span class="line">config device</span><br><span class="line">        option name <span class="string">&#x27;br-lan&#x27;</span></span><br><span class="line">        option <span class="built_in">type</span> <span class="string">&#x27;bridge&#x27;</span></span><br><span class="line">        list ports <span class="string">&#x27;eth0&#x27;</span></span><br><span class="line"></span><br><span class="line">config interface <span class="string">&#x27;lan&#x27;</span></span><br><span class="line">        option device <span class="string">&#x27;br-lan&#x27;</span></span><br><span class="line">        option proto <span class="string">&#x27;static&#x27;</span></span><br><span class="line">        option ipaddr <span class="string">&#x27;10.10.11.1&#x27;</span></span><br><span class="line">        option netmask <span class="string">&#x27;255.255.255.0&#x27;</span></span><br><span class="line">        option ip6assign <span class="string">&#x27;60&#x27;</span></span><br><span class="line"></span><br><span class="line">config interface <span class="string">&#x27;wan&#x27;</span></span><br><span class="line">        option device <span class="string">&#x27;eth1&#x27;</span></span><br><span class="line">        option proto <span class="string">&#x27;static&#x27;</span></span><br><span class="line">        option ipaddr <span class="string">&#x27;10.10.10.3&#x27;</span></span><br><span class="line">        option netmask <span class="string">&#x27;255.255.255.0&#x27;</span></span><br><span class="line">        option gateway <span class="string">&#x27;10.10.10.1&#x27;</span></span><br><span class="line">        list dns <span class="string">&#x27;114.114.114.114&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>安装软件包：<ol>
+<li>美化皮肤：<code>luci-i18n-argon-config-zh-cn</code></li>
+<li>OpenClash：<code>luci-app-openclash</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="安装飞牛私有云fnOS">5.5 &nbsp&nbsp<a href="#安装飞牛私有云fnOS" class="headerlink" title="安装飞牛私有云fnOS"></a>安装飞牛私有云fnOS</h2><ol>
 <li>下载飞牛私有云fnOS镜像：<a href="https://www.fnnas.com/download">点击跳转</a></li>
 <li>local-内容-上传：fnOS的安装镜像文件。</li>
 <li>创建虚拟机，命名虚拟机名称fnOS，VM编号102。</li>
@@ -5945,23 +6000,23 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>进入到传统Linux登录界面（无GUI），这里能看到WEB管理地址。若需要固定IP地址，在<code>ikuai</code>中找到对应MAC地址加入静态分配表即可。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.5:5666/">http://192.168.1.5:5666/</a>。首次访问会提示创建NAS<code>设备名称``超级管理员账号``密码``确认密码</code>。</li>
 </ol>
-<h2 id="创建虚拟机遇到的坑">5.5 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.5.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
+<h2 id="创建虚拟机遇到的坑">5.6 &nbsp&nbsp<a href="#创建虚拟机遇到的坑" class="headerlink" title="创建虚拟机遇到的坑"></a>创建虚拟机遇到的坑</h2><h3 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">5.6.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h3><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
 <p>解决方法：创建EFI磁盘时，取消勾选添加密钥。</p>
-<h3 id="安装windows镜像，无法识别找到磁盘">5.5.2 &nbsp&nbsp<a href="#安装windows镜像，无法识别找到磁盘" class="headerlink" title="安装windows镜像，无法识别找到磁盘"></a>安装windows镜像，无法识别找到磁盘</h3><p>原因：scsi不适合windows镜像，windows安装解决识别不到硬盘。</p>
+<h3 id="安装windows镜像，无法识别找到磁盘">5.6.2 &nbsp&nbsp<a href="#安装windows镜像，无法识别找到磁盘" class="headerlink" title="安装windows镜像，无法识别找到磁盘"></a>安装windows镜像，无法识别找到磁盘</h3><p>原因：scsi不适合windows镜像，windows安装解决识别不到硬盘。</p>
 <p>解决方法：创建硬盘时，总线&#x2F;设备选择：SATA硬盘或者IDE。</p>
-<h3 id="安装windows镜像，网卡无驱动">5.5.3 &nbsp&nbsp<a href="#安装windows镜像，网卡无驱动" class="headerlink" title="安装windows镜像，网卡无驱动"></a>安装windows镜像，网卡无驱动</h3><p>现象：当网卡设置为virtio模型时，安装并进入到windows系统后，网卡无驱动。</p>
+<h3 id="安装windows镜像，网卡无驱动">5.6.3 &nbsp&nbsp<a href="#安装windows镜像，网卡无驱动" class="headerlink" title="安装windows镜像，网卡无驱动"></a>安装windows镜像，网卡无驱动</h3><p>现象：当网卡设置为virtio模型时，安装并进入到windows系统后，网卡无驱动。</p>
 <p>原因：windows系统自带的驱动无此虚拟硬件的驱动。</p>
 <p>解决方式：加载virtio镜像，并运行x64程序安装驱动即可。</p>
 <p>VirtIO镜像下载地址：<a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">点击跳转</a></p>
-<h3 id="创建的Windows虚拟机运行一段时间自动挂起进入suspended状态">5.5.4 &nbsp&nbsp<a href="#创建的Windows虚拟机运行一段时间自动挂起进入suspended状态" class="headerlink" title="创建的Windows虚拟机运行一段时间自动挂起进入suspended状态"></a>创建的Windows虚拟机运行一段时间自动挂起进入suspended状态</h3><p>问题：创建的Windows虚拟机运行一段时间后，会自动挂起进入suspended状态，并且恢复resume系统状态会导致虚拟机内存占用瞬间吃满，然后无响应。</p>
+<h3 id="创建的Windows虚拟机运行一段时间自动挂起进入suspended状态">5.6.4 &nbsp&nbsp<a href="#创建的Windows虚拟机运行一段时间自动挂起进入suspended状态" class="headerlink" title="创建的Windows虚拟机运行一段时间自动挂起进入suspended状态"></a>创建的Windows虚拟机运行一段时间自动挂起进入suspended状态</h3><p>问题：创建的Windows虚拟机运行一段时间后，会自动挂起进入suspended状态，并且恢复resume系统状态会导致虚拟机内存占用瞬间吃满，然后无响应。</p>
 <p>原因：虚拟机Windows系统自身有自动睡眠和关闭屏幕等设置，导致PVE的QEMU自动进入到挂起状态。</p>
 <p>解决方法：关闭虚拟机Windows系统内电源设置的自动睡眠和自动关闭屏幕功能。</p>
-<h2 id="创建LXC容器遇到的坑">5.6 &nbsp&nbsp<a href="#创建LXC容器遇到的坑" class="headerlink" title="创建LXC容器遇到的坑"></a>创建LXC容器遇到的坑</h2><h3 id="使用debian-12的CT模板创建LXC容器SSH终端中文乱码">5.6.1 &nbsp&nbsp<a href="#使用debian-12的CT模板创建LXC容器SSH终端中文乱码" class="headerlink" title="使用debian-12的CT模板创建LXC容器SSH终端中文乱码"></a>使用<code>debian-12</code>的CT模板创建LXC容器SSH终端中文乱码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install locales -y</span><br><span class="line"><span class="comment"># 需要重新设置语言的，也可以重新执行该命令</span></span><br><span class="line">dpkg-reconfigure locales</span><br><span class="line"><span class="comment"># 使用Page Up和Page Down翻页查找这两种语言，使用空格确认复选框，tab键切换「确认」，然后回车执行</span></span><br><span class="line"><span class="comment"># en_US.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># zh_CN.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># 然后重启机器</span></span><br><span class="line">init 6</span><br></pre></td></tr></table></figure>
+<h2 id="创建LXC容器遇到的坑">5.7 &nbsp&nbsp<a href="#创建LXC容器遇到的坑" class="headerlink" title="创建LXC容器遇到的坑"></a>创建LXC容器遇到的坑</h2><h3 id="使用debian-12的CT模板创建LXC容器SSH终端中文乱码">5.7.1 &nbsp&nbsp<a href="#使用debian-12的CT模板创建LXC容器SSH终端中文乱码" class="headerlink" title="使用debian-12的CT模板创建LXC容器SSH终端中文乱码"></a>使用<code>debian-12</code>的CT模板创建LXC容器SSH终端中文乱码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install locales -y</span><br><span class="line"><span class="comment"># 需要重新设置语言的，也可以重新执行该命令</span></span><br><span class="line">dpkg-reconfigure locales</span><br><span class="line"><span class="comment"># 使用Page Up和Page Down翻页查找这两种语言，使用空格确认复选框，tab键切换「确认」，然后回车执行</span></span><br><span class="line"><span class="comment"># en_US.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># zh_CN.UTF-8 UTF-8</span></span><br><span class="line"><span class="comment"># 然后重启机器</span></span><br><span class="line">init 6</span><br></pre></td></tr></table></figure>
 
-<h3 id="非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数">5.6.2 &nbsp&nbsp<a href="#非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数" class="headerlink" title="非特权（unprivileged）LXC容器无法设置vm.max_map_count内核参数"></a>非特权（unprivileged）LXC容器无法设置<code>vm.max_map_count</code>内核参数</h3><p>报错提示：<code>error: permission denied on key &#39;vm.max_map_count&#39;</code></p>
+<h3 id="非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数">5.7.2 &nbsp&nbsp<a href="#非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数" class="headerlink" title="非特权（unprivileged）LXC容器无法设置vm.max_map_count内核参数"></a>非特权（unprivileged）LXC容器无法设置<code>vm.max_map_count</code>内核参数</h3><p>报错提示：<code>error: permission denied on key &#39;vm.max_map_count&#39;</code></p>
 <p>报错原因：因为非特权的LXC容器的<code>/proc/sys</code>是以只读方式挂载到容器里面，无法修改sysctl内核参数。</p>
 <p>解决方法：在PVE宿主机上，使用<code>sysctl -w vm.max_map_count=2000000</code>命令设置<code>vm.max_map_count</code>内核参数。<code>max_map_count</code>默认值是262144。</p>
-<h4 id="补充知识点：namespace化的sysctl内核参数">5.6.2.1 &nbsp&nbsp<a href="#补充知识点：namespace化的sysctl内核参数" class="headerlink" title="补充知识点：namespace化的sysctl内核参数"></a>补充知识点：namespace化的sysctl内核参数</h4><p><code>vm.max_map_count</code>属于内核参数，而<code>vm.*</code>参数并没有namespace化。只有namespace化的sysctl内核参数在容器内直接修改设置的时候，不会影响宿主机和其他容器。</p>
+<h4 id="补充知识点：namespace化的sysctl内核参数">5.7.2.1 &nbsp&nbsp<a href="#补充知识点：namespace化的sysctl内核参数" class="headerlink" title="补充知识点：namespace化的sysctl内核参数"></a>补充知识点：namespace化的sysctl内核参数</h4><p><code>vm.max_map_count</code>属于内核参数，而<code>vm.*</code>参数并没有namespace化。只有namespace化的sysctl内核参数在容器内直接修改设置的时候，不会影响宿主机和其他容器。</p>
 <p>已经namespace化的sysctl内核参数：</p>
 <ul>
 <li>kernel.shm*</li>
@@ -5993,13 +6048,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h3 id="创建的LXC容器debian-12系统时间与宿主机时间不一致">5.6.3 &nbsp&nbsp<a href="#创建的LXC容器debian-12系统时间与宿主机时间不一致" class="headerlink" title="创建的LXC容器debian-12系统时间与宿主机时间不一致"></a>创建的LXC容器<code>debian-12</code>系统时间与宿主机时间不一致</h3><p>使用<code>debian-12</code>的CT模板默认使用的是世界时设置，比东八区时间慢八小时，因此需要手动设置时区。</p>
+<h3 id="创建的LXC容器debian-12系统时间与宿主机时间不一致">5.7.3 &nbsp&nbsp<a href="#创建的LXC容器debian-12系统时间与宿主机时间不一致" class="headerlink" title="创建的LXC容器debian-12系统时间与宿主机时间不一致"></a>创建的LXC容器<code>debian-12</code>系统时间与宿主机时间不一致</h3><p>使用<code>debian-12</code>的CT模板默认使用的是世界时设置，比东八区时间慢八小时，因此需要手动设置时区。</p>
 <ul>
 <li>方法1：timedatectl set-timezone Asia&#x2F;Shanghai</li>
 <li>方法2：dpkg-reconfigure tzdata</li>
 </ul>
 <p>验证修改是否成功：<code>timedatectl</code></p>
-<h1 id="iKuai主路由-OpenWRT旁路由的网络拓扑">6 &nbsp&nbsp<a href="#iKuai主路由-OpenWRT旁路由的网络拓扑" class="headerlink" title="iKuai主路由+OpenWRT旁路由的网络拓扑"></a>iKuai主路由+OpenWRT旁路由的网络拓扑</h1><p>iKuai作为主路由，负责拨号及DHCP，OpenWRT做旁路由。SmartDNS+AdGuardHome设置分流与去广告。SmartDNS作为DNS管理并提供DNS缓存，实现国内国外DNS分流，彻底解决DNS污染问题、实现秒开网页。同时搭配AdGuardHome实现整个局域网去广告。</p>
+<h3 id="在PVE管理页面工具选择OpenWrt的自建LXC模板来创建LXC会报错">5.7.4 &nbsp&nbsp<a href="#在PVE管理页面工具选择OpenWrt的自建LXC模板来创建LXC会报错" class="headerlink" title="在PVE管理页面工具选择OpenWrt的自建LXC模板来创建LXC会报错"></a>在PVE管理页面工具选择OpenWrt的自建LXC模板来创建LXC会报错</h3><p>报错提示：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">  Logical volume <span class="string">&quot;vm-101-disk-0&quot;</span> created.</span><br><span class="line">Creating filesystem with 524288 4k blocks and 131072 inodes</span><br><span class="line">Filesystem UUID: 0d6d0789-09cb-4564-95be-c04ba88481bb</span><br><span class="line">Superblock backups stored on blocks:</span><br><span class="line">    32768, 98304, 163840, 229376, 294912</span><br><span class="line">extracting archive <span class="string">&#x27;/var/lib/vz/template/cache/immortalwrt-24.10.1-x86-64-generic-rootfs.tar.gz&#x27;</span></span><br><span class="line">Total bytes <span class="built_in">read</span>: 39229440 (38MiB, 176MiB/s)</span><br><span class="line">unknown ID <span class="string">&#x27;immortalwrt&#x27;</span> <span class="keyword">in</span> /etc/os-release file, trying fallback detection</span><br><span class="line">  Logical volume <span class="string">&quot;vm-101-disk-0&quot;</span> successfully removed.</span><br><span class="line">TASK ERROR: unable to create CT 101 - unable to detect OS distribution</span><br></pre></td></tr></table></figure>
+
+<p>报错原因：PVE管理页面工具无法识别该LXC模板的系统类型。</p>
+<p>解决方法：使用<code>pct create</code>手动创建LXC容器。</p>
+<h3 id="非特权模式的OpenWrt的LXC容器网络访问问题">5.7.5 &nbsp&nbsp<a href="#非特权模式的OpenWrt的LXC容器网络访问问题" class="headerlink" title="非特权模式的OpenWrt的LXC容器网络访问问题"></a>非特权模式的OpenWrt的LXC容器网络访问问题</h3><p>使用<code>unprivileged 1</code>非特权模式创建的LXC容器，OpenWrt的DNSMasq服务无法正常启动，这种模式下网络可以ping通IP，但无法解析域名，提示报错<code>ping: bad address &#39;qq.com&#39;</code>，因为DNSMasq服务异常。</p>
+<p>临时解决方法：若需要在这种情况下临时访问外网，直接修改<code>/etc/resolv.conf</code>文件即可，追加可用的DNS服务器IP即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置文件内容</span></span><br><span class="line">search lan</span><br><span class="line">nameserver 127.0.0.1</span><br><span class="line">nameserver ::1</span><br><span class="line"><span class="comment"># 追加可用的DNS服务器</span></span><br><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<h1 id="iKuai主路由-OpenWRT传统旁路由的网络拓扑">6 &nbsp&nbsp<a href="#iKuai主路由-OpenWRT传统旁路由的网络拓扑" class="headerlink" title="iKuai主路由+OpenWRT传统旁路由的网络拓扑"></a>iKuai主路由+OpenWRT传统旁路由的网络拓扑</h1><p>iKuai作为主路由，负责拨号及DHCP，OpenWRT做旁路由。SmartDNS+AdGuardHome设置分流与去广告。SmartDNS作为DNS管理并提供DNS缓存，实现国内国外DNS分流，彻底解决DNS污染问题、实现秒开网页。同时搭配AdGuardHome实现整个局域网去广告。</p>
 <p>DNS转发流程：设置最核心的部分就是DNS转发端口的衔接，就是把DNSMASQ、Adguardhome、SmartDNS三个插件里的DNS服务器功能分成三个层级，实现层层转发。依次是第一级DNSMASQ，第二级Adguardhome，第三级SmartDNS，第四级OpenClash。</p>
 <h2 id="iKuai的设置">6.1 &nbsp&nbsp<a href="#iKuai的设置" class="headerlink" title="iKuai的设置"></a>iKuai的设置</h2><ul>
 <li><del>系统设置&gt;重启关机&gt;添加一个重启计划：每天05:00时重启。</del></li>
@@ -6256,7 +6320,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>重启openwrt虚拟机，检查扩容情况。</li>
 <li>根据情况可能需手动移除之前挂载的<code>/mnt/sda3</code>状态。</li>
 </ol>
-<h1 id="PVE总结">7 &nbsp&nbsp<a href="#PVE总结" class="headerlink" title="PVE总结"></a>PVE总结</h1><h2 id="PVETOOLS脚本程序推荐">7.1 &nbsp&nbsp<a href="#PVETOOLS脚本程序推荐" class="headerlink" title="PVETOOLS脚本程序推荐"></a>PVETOOLS脚本程序推荐</h2><blockquote>
+<h1 id="iKuai主路由-OpenWrt旁路由分流的网络拓扑">7 &nbsp&nbsp<a href="#iKuai主路由-OpenWrt旁路由分流的网络拓扑" class="headerlink" title="iKuai主路由+OpenWrt旁路由分流的网络拓扑"></a>iKuai主路由+OpenWrt旁路由分流的网络拓扑</h1><h1 id="PVE总结">8 &nbsp&nbsp<a href="#PVE总结" class="headerlink" title="PVE总结"></a>PVE总结</h1><h2 id="PVETOOLS脚本程序推荐">8.1 &nbsp&nbsp<a href="#PVETOOLS脚本程序推荐" class="headerlink" title="PVETOOLS脚本程序推荐"></a>PVETOOLS脚本程序推荐</h2><blockquote>
 <p>新硬件主机不太推荐安装该脚本，CPU省电相关设置不一定能正常设置成功，恢复时也容易出问题。</p>
 </blockquote>
 <ul>
@@ -6267,8 +6331,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <ul>
 <li>执行脚本程序后，可以一键执行「安装配置CPU省电」「配置PVE的web界面显示传感器温度」「去除订阅提示」等功能。</li>
 </ul>
-<h2 id="PVE虚拟机各硬件模型总结">7.2 &nbsp&nbsp<a href="#PVE虚拟机各硬件模型总结" class="headerlink" title="PVE虚拟机各硬件模型总结"></a>PVE虚拟机各硬件模型总结</h2><p>TODO</p>
-<h1 id="iKuai总结">8 &nbsp&nbsp<a href="#iKuai总结" class="headerlink" title="iKuai总结"></a>iKuai总结</h1><h2 id="iKuai爱快内网测试">8.1 &nbsp&nbsp<a href="#iKuai爱快内网测试" class="headerlink" title="iKuai爱快内网测试"></a>iKuai爱快内网测试</h2><p>iKuai爱快内置支持iperf3内网测试工具，但服务端默认并未开启。</p>
+<h2 id="PVE-Proxmox-VE-虚拟机各硬件模型总结">8.2 &nbsp&nbsp<a href="#PVE-Proxmox-VE-虚拟机各硬件模型总结" class="headerlink" title="PVE(Proxmox VE)虚拟机各硬件模型总结"></a>PVE(Proxmox VE)虚拟机各硬件模型总结</h2><p>TODO</p>
+<h1 id="PBS-Proxmox-Backup-Server-总结">9 &nbsp&nbsp<a href="#PBS-Proxmox-Backup-Server-总结" class="headerlink" title="PBS(Proxmox Backup Server)总结"></a>PBS(Proxmox Backup Server)总结</h1><h2 id="PBS使用遇到的坑">9.1 &nbsp&nbsp<a href="#PBS使用遇到的坑" class="headerlink" title="PBS使用遇到的坑"></a>PBS使用遇到的坑</h2><h3 id="ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error">9.1.1 &nbsp&nbsp<a href="#ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error" class="headerlink" title="ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error"></a>ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error</h3><p>问题现象：PBS备份服务器或者PVE备份LXC虚拟机容器时出现失败，具体报错信息为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">INFO: Starting Backup of VM 102 (lxc)</span><br><span class="line">INFO: Backup started at 2025-04-25 00:30:36</span><br><span class="line">INFO: status = running</span><br><span class="line">INFO: CT Name: <span class="built_in">test</span></span><br><span class="line">INFO: including mount point rootfs (<span class="string">&#x27;/&#x27;</span>) <span class="keyword">in</span> backup</span><br><span class="line">INFO: backup mode: snapshot</span><br><span class="line">INFO: ionice priority: 7</span><br><span class="line">INFO: create storage snapshot <span class="string">&#x27;vzdump&#x27;</span></span><br><span class="line">snapshot create failed: starting cleanup</span><br><span class="line">no lock found trying to remove <span class="string">&#x27;backup&#x27;</span>  lock</span><br><span class="line">ERROR: Backup of VM 102 failed - lvcreate snapshot <span class="string">&#x27;pve/snap_vm-102-disk-0_vzdump&#x27;</span> error:   Logical Volume <span class="string">&quot;snap_vm-102-disk-0_vzdump&quot;</span> already exists <span class="keyword">in</span> volume group <span class="string">&quot;pve&quot;</span></span><br><span class="line">INFO: Failed at 2025-04-25 00:30:36</span><br><span class="line">INFO: Backup job finished with errors</span><br><span class="line">INFO: notified via target `mail-to-root`</span><br><span class="line">TASK ERROR: job errors</span><br></pre></td></tr></table></figure>
+
+<p>问题原因：有残留的同名逻辑卷<code>/dev/pve/snap_vm-102-disk-0_vzdump</code>，一般是上次备份成功之后的清理操作失败导致残留下来的逻辑卷。</p>
+<p>解决方法：</p>
+<ol>
+<li>查看当前PVE系统中存在的逻辑卷：<code>lvdisplay</code>，可以查看到<code>/dev/pve/snap_vm-102-disk-0_vzdump</code>逻辑卷属性<code>LV Write Access        read only</code>是只读。其他查看命令<code>lvs</code>，<code>lvscan</code>。</li>
+<li>清理残留的逻辑卷：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump</code></li>
+</ol>
+<p>若遇上报错：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump&#39; error:   Logical volume /dev/pve/snap_vm-102-disk-0_vzdump contains a filesystem in use.</code>，请尝试</p>
+<ul>
+<li>方案1：重启PVE宿主机</li>
+<li>方案2：添加<code>-f</code>参数强制删除，<code>lvremove -f /dev/pve/snap_vm-102-disk-0_vzdump</code></li>
+</ul>
+<h1 id="iKuai总结">10 &nbsp&nbsp<a href="#iKuai总结" class="headerlink" title="iKuai总结"></a>iKuai总结</h1><h2 id="iKuai爱快内网测试">10.1 &nbsp&nbsp<a href="#iKuai爱快内网测试" class="headerlink" title="iKuai爱快内网测试"></a>iKuai爱快内网测试</h2><p>iKuai爱快内置支持iperf3内网测试工具，但服务端默认并未开启。</p>
 <p>开启服务端设置和测试的步骤</p>
 <ol>
 <li>在iKuai爱快中设置：应用工具-&gt;吞吐测试-&gt;服务端功能开关（勾选启用）</li>
@@ -6281,11 +6359,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>运行测试命令：<code>iperf3 -s -p 5201</code></li>
 <li>在iKuai爱快的客户端工具连接客户端IP测试。</li>
 </ol>
-<h2 id="ikuai报错提示：写入数据失败-请检查你的配置">8.2 &nbsp&nbsp<a href="#ikuai报错提示：写入数据失败-请检查你的配置" class="headerlink" title="ikuai报错提示：写入数据失败,请检查你的配置!"></a>ikuai报错提示：写入数据失败,请检查你的配置!</h2><p>问题：调整ikuai设置，无法保存设置，并报错提示：写入数据失败，请检查你的配置！具体变现为修改配置后，刷新页面后发现设置跟以前一样，并且无法记录流量数据等日志。</p>
+<h2 id="ikuai报错提示：写入数据失败-请检查你的配置">10.2 &nbsp&nbsp<a href="#ikuai报错提示：写入数据失败-请检查你的配置" class="headerlink" title="ikuai报错提示：写入数据失败,请检查你的配置!"></a>ikuai报错提示：写入数据失败,请检查你的配置!</h2><p>问题：调整ikuai设置，无法保存设置，并报错提示：写入数据失败，请检查你的配置！具体变现为修改配置后，刷新页面后发现设置跟以前一样，并且无法记录流量数据等日志。</p>
 <p>原因：磁盘所有分区变成只读模式，没有读写权限，数据无法正常保存。</p>
 <p>排查确认方法：ikuai管理后台-&gt;应用工具-&gt;健康检测。</p>
 <p>解决方法：强制断电重启机器。若仍然无法识别到硬盘或者反复出现这种只读权限问题，很可能硬盘出故障，请尽快备份设备文件并更换新硬盘。</p>
-<h1 id="飞牛私有云fnOS（NAS总结）">9 &nbsp&nbsp<a href="#飞牛私有云fnOS（NAS总结）" class="headerlink" title="飞牛私有云fnOS（NAS总结）"></a>飞牛私有云fnOS（NAS总结）</h1><h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">9.1 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
+<h1 id="飞牛私有云fnOS（NAS总结）">11 &nbsp&nbsp<a href="#飞牛私有云fnOS（NAS总结）" class="headerlink" title="飞牛私有云fnOS（NAS总结）"></a>飞牛私有云fnOS（NAS总结）</h1><h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">11.1 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
 <p>解决方法：永久禁用<code>Swap cache</code>功能。</p>
 <ol>
 <li>访问fnOS虚拟机控制台。</li>
@@ -6298,15 +6376,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">UUID=ea545bcc-cd3f-479f-902a-ab2b02db25 / ext4 errors=remount-ro 0 1</span><br><span class="line"><span class="comment"># /swapfile none swap sw 0 0</span></span><br><span class="line">UUID=676D-A1AF /boot/efi vfat <span class="built_in">umask</span>=0077 0 1</span><br></pre></td></tr></table></figure>
 
-<h1 id="宽带网络总结">10 &nbsp&nbsp<a href="#宽带网络总结" class="headerlink" title="宽带网络总结"></a>宽带网络总结</h1><h2 id="会话数（连接数）">10.1 &nbsp&nbsp<a href="#会话数（连接数）" class="headerlink" title="会话数（连接数）"></a>会话数（连接数）</h2><p>会话数（连接数）在线测试工具：<a href="https://qps.itzmx.com/">https://qps.itzmx.com</a></p>
+<h1 id="宽带网络总结">12 &nbsp&nbsp<a href="#宽带网络总结" class="headerlink" title="宽带网络总结"></a>宽带网络总结</h1><h2 id="会话数（连接数）">12.1 &nbsp&nbsp<a href="#会话数（连接数）" class="headerlink" title="会话数（连接数）"></a>会话数（连接数）</h2><p>会话数（连接数）在线测试工具：<a href="https://qps.itzmx.com/">https://qps.itzmx.com</a></p>
 <p>连接数为应用产生的网络连接数，例如在爱快首页上看到连接数。并发连接数为 qps ，即每秒发起请求，等于在同一秒内，产生了 250 个请求。</p>
 <p>会话数（连接数）的限制，一般普通线路带宽会有会话数限制，专线则没有该限制。触发限制的常见现象为：超过并发连接数上限后，此前已建立连接数的软件和网络请求可正常通信，并且期间ping一切正常，延迟没有任何抖动现象，但是新开软件则连不上网络。</p>
-<h1 id="后记">11 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><del>这光猫还是有断流情况，估计是过热导致掉线，后续考虑下加装小风扇。</del></p>
+<h1 id="后记">13 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><del>这光猫还是有断流情况，估计是过热导致掉线，后续考虑下加装小风扇。</del></p>
 <p>断流降速故障已查明：虚拟网卡模型设置为<code>Intel E1000</code>导致的故障，重设为<code>VirtIO (半虚拟化)</code>即可解决。</p>
 <div class="note info no-icon"><p>在这台工控机上实际使用openwrt内网测速工具发现，虚拟机网卡模型设置为<code>Intel E1000</code>或者<code>Realtek RTL8139</code>都无法正常发挥网卡的性能，<code>Intel E1000</code>大约测试性能为100Mbps~300Mbps不等，<code>Realtek RTL8139</code>模型是最为拉跨的，直接为10Mbps。使用<code>VirtIO (半虚拟化)</code>模型内网测速才能恢复到900Mbps以上的正常速度。</p>
 </div>
 
-<h1 id="All-in-One-All-in-Boom-机器硬件选型总结">12 &nbsp&nbsp<a href="#All-in-One-All-in-Boom-机器硬件选型总结" class="headerlink" title="All in One (All in Boom) 机器硬件选型总结"></a>All in One (All in Boom) 机器硬件选型总结</h1><h2 id="CPU选型对比">12.1 &nbsp&nbsp<a href="#CPU选型对比" class="headerlink" title="CPU选型对比"></a>CPU选型对比</h2><div class="note primary no-icon"><p>All in One用途大多是使用虚拟机方案实现各子系统，其中虚拟化直通硬件方案需要CPU中一个很重要的功能才能实现。对于Intel CPU来说，就是VT-d（该功能可以在Intel官方每个CPU SKU规格页面查看是否支持）；对于AMD CPU来说，就是IOMMU，也称AMD-Vi（暂未找到AMD官方资料特性说明，根据维基百科资料所言，所有 Ryzen 处理器均支持该功能）。</p>
+<h1 id="All-in-One-All-in-Boom-机器硬件选型总结">14 &nbsp&nbsp<a href="#All-in-One-All-in-Boom-机器硬件选型总结" class="headerlink" title="All in One (All in Boom) 机器硬件选型总结"></a>All in One (All in Boom) 机器硬件选型总结</h1><h2 id="CPU选型对比">14.1 &nbsp&nbsp<a href="#CPU选型对比" class="headerlink" title="CPU选型对比"></a>CPU选型对比</h2><div class="note primary no-icon"><p>All in One用途大多是使用虚拟机方案实现各子系统，其中虚拟化直通硬件方案需要CPU中一个很重要的功能才能实现。对于Intel CPU来说，就是VT-d（该功能可以在Intel官方每个CPU SKU规格页面查看是否支持）；对于AMD CPU来说，就是IOMMU，也称AMD-Vi（暂未找到AMD官方资料特性说明，根据维基百科资料所言，所有 Ryzen 处理器均支持该功能）。</p>
 </div>
 <table>
 <thead>
@@ -6465,7 +6543,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note default no-icon"><p>BUG处理器的折腾性思考：小黄鱼上面流通不少Intel 12代ES测试版处理器，不同步进版本存在不同问题，例如CPU没有内建直连独立显卡的PCI-E通道，会导致所有主板上第一根直连独立显卡的PCI-E X16插槽无效。这类BUG CPU虽然价格看着很诱惑，但可能实际运行不稳定，因此不纳入All in One硬件选型考虑范围。</p>
 </div>
 
-<h2 id="主板选型对比">12.2 &nbsp&nbsp<a href="#主板选型对比" class="headerlink" title="主板选型对比"></a>主板选型对比</h2><table>
+<h2 id="主板选型对比">14.2 &nbsp&nbsp<a href="#主板选型对比" class="headerlink" title="主板选型对比"></a>主板选型对比</h2><table>
 <thead>
 <tr>
 <th align="center">主板型号</th>
@@ -6491,7 +6569,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">6层</td>
 </tr>
 </tbody></table>
-<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.</p>
+<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -6506,32 +6584,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>openwrt</tag>
         <tag>虚拟机</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
   </entry>
   <entry>
     <title>虚拟机总结</title>
@@ -6572,6 +6624,32 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
 </ul>
 <h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -7971,12 +8049,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#x79;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#99;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#x6e;&#107;&#x73;&#x2e;&#99;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8068,64 +8146,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>第二章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -8271,11 +8291,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
         <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -8760,11 +8780,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>第二章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
       </tags>
   </entry>
   <entry>
@@ -9059,10 +9079,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -9806,10 +9826,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -9977,10 +9997,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -10309,10 +10329,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -10339,11 +10359,106 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -10835,6 +10950,40 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -11003,40 +11152,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -11075,57 +11190,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
 
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
 ]]></content>
       <categories>
         <category>software</category>
@@ -11491,6 +11555,57 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Blender常见问题总结——Q&amp;A</title>
     <url>/software/blender/q-a/</url>
     <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
@@ -11515,40 +11630,21 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+    <title>Blender教程总结</title>
+    <url>/software/blender/tranining/training/</url>
+    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
+<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
 </ul>
 ]]></content>
       <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
+        <category>software</category>
+        <category>blender</category>
+        <category>tranining</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第一章</tag>
+        <tag>总结</tag>
+        <tag>Blender</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -11573,24 +11669,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>苹果</tag>
         <tag>小刀</tag>
         <tag>布料</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender教程总结</title>
-    <url>/software/blender/tranining/training/</url>
-    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
-<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
-</ul>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-        <category>tranining</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>教程</tag>
-        <tag>Blender</tag>
       </tags>
   </entry>
   <entry>
@@ -11727,7 +11805,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#x69;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#114;&#107;&#x69;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -11837,11 +11915,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>知识总结手册</title>
     <url>/manuals/index.html</url>
     <content><![CDATA[<h1 id="软件操作总结">1 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><ul>
@@ -11916,6 +11989,11 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
   <entry>
     <title>标签</title>
     <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
