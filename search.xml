@@ -2555,6 +2555,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">显示容器的实时资源使用情况</td>
 <td align="center"></td>
 </tr>
+<tr>
+<td align="center">docker builder prune</td>
+<td align="center">删除所有未被使用的构建缓存</td>
+<td align="center"></td>
+</tr>
 </tbody></table>
 <h1 id="使用apt仓库为Debian安装docker">2 &nbsp&nbsp<a href="#使用apt仓库为Debian安装docker" class="headerlink" title="使用apt仓库为Debian安装docker"></a>使用apt仓库为Debian安装docker</h1><h2 id="添加Docker的官方GPG密钥">2.1 &nbsp&nbsp<a href="#添加Docker的官方GPG密钥" class="headerlink" title="添加Docker的官方GPG密钥"></a>添加Docker的官方GPG密钥</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install ca-certificates -y</span><br><span class="line">install -m 0755 -d /etc/apt/keyrings</span><br><span class="line"><span class="comment"># 可能下载会出现ssl验证错误，多重复执行几次wget下载就能成功下载</span></span><br><span class="line">wget https://download.docker.com/linux/debian/gpg -O /etc/apt/keyrings/docker.asc</span><br><span class="line"><span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.asc</span><br></pre></td></tr></table></figure>
 
@@ -2600,7 +2605,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#x37;&#x32;&#x2e;&#x31;&#57;&#x2e;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[5] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#x74;&#64;&#x31;&#x37;&#x32;&#x2e;&#49;&#57;&#x2e;&#x30;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[5] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -2741,56 +2746,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>github</tag>
         <tag>代码管理</tag>
         <tag>版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -2969,6 +2924,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>hexo</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -3474,6 +3479,63 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Python总结笔记</title>
+    <url>/code/python/</url>
+    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
+<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
+<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
+<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
+<p>原因：python环境异常。</p>
+<p>解决方法：重装python。</p>
+<ol>
+<li>直接删除python主安装路径的文件</li>
+<li>运行安装程序repair</li>
+<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
+</ol>
+<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
+<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
+<p>基本的使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
+<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
+<p>基本使用：</p>
+<ul>
+<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
+<li>创建setup.py文件：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
+<li>安装twine并发布包到PyPI：</li>
+</ul>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
+</ul>
+<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
+<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
+</ul>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>编程</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Qt总结笔记</title>
     <url>/code/qt/</url>
     <content><![CDATA[<h1 id="Qt语法">1 &nbsp&nbsp<a href="#Qt语法" class="headerlink" title="Qt语法"></a>Qt语法</h1><p><a href="https://www.cnblogs.com/jfzhu/p/13501678.html">Qt信号与槽使用方法最完整总结</a></p>
@@ -3790,63 +3852,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>源码</tag>
         <tag>qt creator</tag>
         <tag>界面开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python总结笔记</title>
-    <url>/code/python/</url>
-    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
-<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
-<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
-<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
-<p>原因：python环境异常。</p>
-<p>解决方法：重装python。</p>
-<ol>
-<li>直接删除python主安装路径的文件</li>
-<li>运行安装程序repair</li>
-<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
-</ol>
-<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
-<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
-<p>基本的使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
-<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
-<p>基本使用：</p>
-<ul>
-<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
-<li>创建setup.py文件：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
-<li>安装twine并发布包到PyPI：</li>
-</ul>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
-</ul>
-<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
-</ul>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>编程</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4880,6 +4885,33 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>FFmpeg</title>
+    <url>/software/ffmpeg/</url>
+    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
+<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
+
+<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
+
+<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
+<li>yuv420p的p代表planar</li>
+<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
+<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
+<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
+<li>aac编码：网络视频128k；高质量192k</li>
+</ul>
+<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
+<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
+<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
+<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
+<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CG基础</title>
     <url>/software/cg-fundamentals/</url>
     <content><![CDATA[<h1 id="三维制作的规范">1 &nbsp&nbsp<a href="#三维制作的规范" class="headerlink" title="三维制作的规范"></a>三维制作的规范</h1><ol>
@@ -4906,33 +4938,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>CG</tag>
         <tag>基础</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>FFmpeg</title>
-    <url>/software/ffmpeg/</url>
-    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
-<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
-
-<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
-
-<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
-<li>yuv420p的p代表planar</li>
-<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
-<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
-<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
-<li>aac编码：网络视频128k；高质量192k</li>
-</ul>
-<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
-<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
-<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
-<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
-<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
   </entry>
   <entry>
     <title>Inkscape总结</title>
@@ -5668,6 +5673,32 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
@@ -5817,6 +5848,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <ol start="5">
 <li>移除参数后，重启机器，PVE启动应该就能恢复正常</li>
 </ol>
+<h3 id="KVM和LXC被锁定lock无法启动">3.3.11 &nbsp&nbsp<a href="#KVM和LXC被锁定lock无法启动" class="headerlink" title="KVM和LXC被锁定lock无法启动"></a>KVM和LXC被锁定lock无法启动</h3><p>原因：回滚快照或者备份被异常中断都可能导致出现这种情况，对应的虚拟机状态可以看见一个被锁的图标。</p>
+<p>解决方法：</p>
+<ul>
+<li>KVM虚拟机解锁命名：<code>qm unlock vmid</code>，例如<code>qm unlock 100</code>。</li>
+<li>LXC虚拟机解锁命名：<code>pct unlock vmid</code>，例如<code>pct unlock 101</code>。</li>
+</ul>
 <h1 id="PVE硬件直通">4 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><div class="note default no-icon"><p>如果机器本身就支持VT-X和VT-d等CPU虚拟化和直通硬件功能，则PVE启用IOMMU方面不需要额外设置。只需要设置好主板BIOS对应的CPU虚拟化和直通硬件功能即可，因为安装PVE系统阶段就会自动设置好启动IOMMU。</p>
 </div>
 
@@ -6600,7 +6637,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">6层</td>
 </tr>
 </tbody></table>
-<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.</p>
+<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.<br>[40] Proxmox VE 容器或虚拟机被锁定解决办法[EB&#x2F;OL]. <a href="https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -6615,32 +6652,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>openwrt</tag>
         <tag>虚拟机</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
   </entry>
   <entry>
     <title>虚拟机总结</title>
@@ -7553,7 +7564,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="ToDesk远程软件">13 &nbsp&nbsp<a href="#ToDesk远程软件" class="headerlink" title="ToDesk远程软件"></a>ToDesk远程软件</h1><h2 id="受控端为精简版时，ToDesk会话数受限">13.1 &nbsp&nbsp<a href="#受控端为精简版时，ToDesk会话数受限" class="headerlink" title="受控端为精简版时，ToDesk会话数受限"></a>受控端为精简版时，ToDesk会话数受限</h2><p>提示报错：当前会话数受限，请前往个人中心购买</p>
 <p>原因：ToDesk精简版出了新的限制（精简版界面标注内容：仅支持被控，免安装运行（该版本仅支持主控登录账号为VIP时连接使用））</p>
 <p>解决方法：被控ToDesk下载安装全功能版或是操控端账号升级至VIP。</p>
-<h1 id="参考文献">14 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.</p>
+<h1 id="LocalSend">14 &nbsp&nbsp<a href="#LocalSend" class="headerlink" title="LocalSend"></a>LocalSend</h1><h2 id="RhttpTimeoutException-Request-timed-out">14.1 &nbsp&nbsp<a href="#RhttpTimeoutException-Request-timed-out" class="headerlink" title="RhttpTimeoutException: Request timed out"></a>RhttpTimeoutException: Request timed out</h2><p>问题：手机往PC Windows系统传数据时，报错<code>RhttpTimeoutException: Request timed out</code>，但是PC往手机传数据正常。</p>
+<p>原因：Windows防火墙屏蔽了出口端口。一般是由于网络类型引起，例如网络类型被设置为「公用网络」。</p>
+<p>解决方法：将Windows的网络类型从「公用网络」切换为「专用网络」。</p>
+<h1 id="参考文献">15 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.<br>[7] RhttpTimeoutException: Request timed out[EB&#x2F;OL]. <a href="https://github.com/localsend/localsend/issues/2121">https://github.com/localsend/localsend/issues/2121</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -8080,12 +8094,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#46;&#x63;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#x6e;&#107;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#104;&#x61;&#x6e;&#x6b;&#x73;&#46;&#x63;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#x75;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8177,6 +8191,79 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>第二章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第一章</tag>
       </tags>
   </entry>
   <entry>
@@ -8322,11 +8409,33 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>第一章</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -8811,11 +8920,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
+        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>第二章</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -9110,10 +9219,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -9857,10 +9966,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -10028,10 +10137,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -10360,10 +10469,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -10390,300 +10499,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
-<li>跨平台应用程序开发框架</li>
-<li>首次发布于1995年5月</li>
-<li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li>
-</ul>
-<h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table>
-<thead>
-<tr>
-<th align="center">目标设备</th>
-<th align="center">目标平台</th>
-<th align="center">主机平台</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center">桌面Linux</td>
-<td align="center">桌面Linux</td>
-</tr>
-<tr>
-<td align="center">计算机</td>
-<td align="center">macOS</td>
-<td align="center">macOS</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">Android</td>
-<td align="center">桌面Linux、 macOS、Windows</td>
-</tr>
-<tr>
-<td align="center">移动设备</td>
-<td align="center">iOS</td>
-<td align="center">macOS</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">手机Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">嵌入式Linux</td>
-<td align="center">桌面Linux</td>
-</tr>
-<tr>
-<td align="center">嵌入式设备</td>
-<td align="center">QNX</td>
-<td align="center">桌面Linux、 Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">VxWorks</td>
-<td align="center">桌面Linux、 Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">嵌入式Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center">单片机</td>
-<td align="center">FreeRTOS或无操作系统</td>
-<td align="center">Windows、 桌面Linux</td>
-</tr>
-</tbody></table>
-<p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p>
-<h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p>
-<ul>
-<li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li>
-<li>开源许可：<ul>
-<li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li>
-<li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li>
-</ul>
-</li>
-</ul>
-<h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p>
-<h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol>
-<li>C++ 和 QML<ul>
-<li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li>
-<li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li>
-<li>C++和QML可以混合使用。</li>
-</ul>
-</li>
-<li>Python<ul>
-<li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li>
-<li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li>
-</ul>
-</li>
-</ol>
-<h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p>
-<ul>
-<li>支持 C++ 17 标准。</li>
-<li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li>
-<li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li>
-<li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li>
-<li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li>
-</ul>
-<h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p>
-</div>
-
-<p>自Qt5.1.5起，Qt官方只提供在线安装包。</p>
-<p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p>
-<p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p>
-<h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p>
-<ul>
-<li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li>
-<li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li>
-</ul>
-<p>Qt Creator新建工程的一些总结：</p>
-<ol>
-<li>应用类型：<ul>
-<li>Widgets：widget界面</li>
-<li>Console：控制台程序</li>
-<li>Quick：QML实现的界面</li>
-</ul>
-</li>
-<li>base class基础类：<ul>
-<li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li>
-<li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li>
-<li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li>
-</ul>
-</li>
-<li>翻译文件：i18国际化语言</li>
-</ol>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第一章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
-<ul>
-<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
-<li>main.cpp：主程序入口文件，实现main函数</li>
-<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
-<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
-<li>widget.cpp：是实现文件</li>
-<li>res.qrc：资源文件</li>
-</ul>
-<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
-
-<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第二章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
       </tags>
   </entry>
   <entry>
@@ -10928,6 +10748,200 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
+<ul>
+<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
+<li>main.cpp：主程序入口文件，实现main函数</li>
+<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
+<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
+<li>widget.cpp：是实现文件</li>
+<li>res.qrc：资源文件</li>
+</ul>
+<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
+
+<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第二章</tag>
+        <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
+<li>跨平台应用程序开发框架</li>
+<li>首次发布于1995年5月</li>
+<li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li>
+</ul>
+<h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table>
+<thead>
+<tr>
+<th align="center">目标设备</th>
+<th align="center">目标平台</th>
+<th align="center">主机平台</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center">桌面Linux</td>
+<td align="center">桌面Linux</td>
+</tr>
+<tr>
+<td align="center">计算机</td>
+<td align="center">macOS</td>
+<td align="center">macOS</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Android</td>
+<td align="center">桌面Linux、 macOS、Windows</td>
+</tr>
+<tr>
+<td align="center">移动设备</td>
+<td align="center">iOS</td>
+<td align="center">macOS</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">手机Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">嵌入式Linux</td>
+<td align="center">桌面Linux</td>
+</tr>
+<tr>
+<td align="center">嵌入式设备</td>
+<td align="center">QNX</td>
+<td align="center">桌面Linux、 Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">VxWorks</td>
+<td align="center">桌面Linux、 Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">嵌入式Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center">单片机</td>
+<td align="center">FreeRTOS或无操作系统</td>
+<td align="center">Windows、 桌面Linux</td>
+</tr>
+</tbody></table>
+<p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p>
+<h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p>
+<ul>
+<li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li>
+<li>开源许可：<ul>
+<li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li>
+<li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p>
+<h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol>
+<li>C++ 和 QML<ul>
+<li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li>
+<li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li>
+<li>C++和QML可以混合使用。</li>
+</ul>
+</li>
+<li>Python<ul>
+<li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li>
+<li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li>
+</ul>
+</li>
+</ol>
+<h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p>
+<ul>
+<li>支持 C++ 17 标准。</li>
+<li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li>
+<li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li>
+<li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li>
+<li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li>
+</ul>
+<h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p>
+</div>
+
+<p>自Qt5.1.5起，Qt官方只提供在线安装包。</p>
+<p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p>
+<p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p>
+<h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p>
+<ul>
+<li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li>
+<li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li>
+</ul>
+<p>Qt Creator新建工程的一些总结：</p>
+<ol>
+<li>应用类型：<ul>
+<li>Widgets：widget界面</li>
+<li>Console：控制台程序</li>
+<li>Quick：QML实现的界面</li>
+</ul>
+</li>
+<li>base class基础类：<ul>
+<li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li>
+<li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li>
+<li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li>
+</ul>
+</li>
+<li>翻译文件：i18国际化语言</li>
+</ol>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第一章</tag>
+        <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
@@ -11149,40 +11163,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -11277,6 +11257,40 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>software</category>
         <category>blender</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
   </entry>
   <entry>
     <title>Blender界面工具操作总结</title>
@@ -11836,7 +11850,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#105;&#x73;&#116;&#101;&#x72;&#107;&#x69;&#110;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#105;&#115;&#x74;&#x65;&#114;&#107;&#105;&#x6e;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
