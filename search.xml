@@ -2628,7 +2628,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#x74;&#x40;&#49;&#55;&#50;&#46;&#x31;&#57;&#x2e;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#116;&#64;&#x31;&#55;&#50;&#46;&#x31;&#57;&#46;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4936,33 +4936,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>FFmpeg</title>
-    <url>/software/ffmpeg/</url>
-    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
-<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
-
-<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
-
-<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
-<li>yuv420p的p代表planar</li>
-<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
-<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
-<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
-<li>aac编码：网络视频128k；高质量192k</li>
-</ul>
-<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
-<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
-<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
-<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
-<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Inkscape总结</title>
     <url>/software/inkscape/</url>
     <content><![CDATA[<h1 id="案例">1 &nbsp&nbsp<a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="位图转SVG">1.1 &nbsp&nbsp<a href="#位图转SVG" class="headerlink" title="位图转SVG"></a>位图转SVG</h2><p>理想适用图像类型：简单的平面图，如何字母或logo；颜色不超过三种。</p>
@@ -5248,6 +5221,33 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>后期处理</tag>
         <tag>krita</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>FFmpeg</title>
+    <url>/software/ffmpeg/</url>
+    <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
+<h2 id="查询命令">1.1 &nbsp&nbsp<a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg.exe -h -&gt; help.txt <span class="comment"># 打印帮助文件</span></span><br><span class="line">ffmpeg -h encoder=libx264</span><br><span class="line">ffmpeg -hwaccels <span class="comment"># 查看支持的硬件加速选项</span></span><br><span class="line">ffmpeg -codecs | grep cuvid <span class="comment"># 查看cuvid提供的GPU编解码器（grep为Linux命令）</span></span><br><span class="line">ffmpeg -f lavfi -i nullsrc -c:v nvenc -gpu list -f null none_output (-hwaccel_device N 和 -gpu N)</span><br></pre></td></tr></table></figure>
+
+<h2 id="硬件编码">1.2 &nbsp&nbsp<a href="#硬件编码" class="headerlink" title="硬件编码"></a>硬件编码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-c:v h264_nvenc -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k -profile:v high</span><br><span class="line">ffmpeg -hwaccel cuvid -c:v h264_cuvid -i &lt;input&gt; -c:v h264_nvenc -b:v 2048k -vf scale_npp=1280:-1 -y &lt;output&gt;</span><br><span class="line">ffmpeg -vsync 0 -hwaccel cuvid -c:v h264_cuvid -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">                -hwaccel cuda -hwaccel_output_format cuda</span><br><span class="line">ffmpeg -vsync 0 –hwaccel cuvid -c:v h264_cuvid –resize 1280x720 -i input.mp4 -c:a copy -c:v h264_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -r 30 -f image2 -i %4d.jpg -r 30 -c:v h264_nvenc -profile:v high -level 5.1 -preset slow -rc:v vbr_hq -cq:v 19 -b:v 2500k -maxrate:v 5000k ../output.mp4</span><br></pre></td></tr></table></figure>
+
+<h1 id="实战案例">2 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="合并多个视频文件">2.1 &nbsp&nbsp<a href="#合并多个视频文件" class="headerlink" title="合并多个视频文件"></a>合并多个视频文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mp4</span><br><span class="line"><span class="comment"># filelist.txt</span></span><br><span class="line"><span class="comment"># file &#x27;1.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;2.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;3.flv&#x27;</span></span><br><span class="line"><span class="comment"># file &#x27;4.flv&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="常见知识点">3 &nbsp&nbsp<a href="#常见知识点" class="headerlink" title="常见知识点"></a>常见知识点</h1><ul>
+<li>yuv420p的p代表planar</li>
+<li>k和K都是表示$10^3&#x2F;2^{10}$，K之后的只有大写，比如M表示$10^6&#x2F;2^{20}$（详见<a href="https://ffmpeg.org/ffmpeg-utils.html#Expression-Evaluation">Expression Evaluation</a>。</li>
+<li>bufsize配合maxrate参数使用可控制编码时的码率波动，例如264的cbr恒定码率编码中，同时设置b:v maxrate minrate bufsize(前三个都是设置为1M，bufsize设置为50k，最后编码出来的码率波动最小996kbit&#x2F;s，1001kbit&#x2F;s)。bufsize is the &quot;rate control buffer&quot;，即码率控制缓存。作用是每次达到bufsize大小，都是计算并调整到average平均码率。</li>
+<li>filter chain之间的filter用分号，普通的filter之间用逗号</li>
+<li>aac编码：网络视频128k；高质量192k</li>
+</ul>
+<h1 id="常见错误-警告">4 &nbsp&nbsp<a href="#常见错误-警告" class="headerlink" title="常见错误&#x2F;警告"></a>常见错误&#x2F;警告</h1><h2 id="时间戳问题">4.1 &nbsp&nbsp<a href="#时间戳问题" class="headerlink" title="时间戳问题"></a>时间戳问题</h2><p>常见于 Non-monotonous DTS in output stream</p>
+<p>完美的解决方式暂未找到，网上的解决方法基本为：先转为 mts 文件，后转为 mp4。（本质是重新编码，确实可以解决时间戳错误，但也会劣化音质和画质。）</p>
+<h2 id="deprecated-pixel-format-used-make-sure-you-did-set-range-correctly">4.2 &nbsp&nbsp<a href="#deprecated-pixel-format-used-make-sure-you-did-set-range-correctly" class="headerlink" title="deprecated pixel format used, make sure you did set range correctly"></a>deprecated pixel format used, make sure you did set range correctly</h2><p>This is just a warning, not an error. You can safely ignore it when using ffmpeg from the command-line, and you don&#39;t have to fix anything.</p>
+<p>The warning occurs when converting from a yuv420p source to JPEG, which makes ffmpeg choose yuvj420p as output format. That format is required for writing files with the mjpeg encoder.</p>
+<p>These two pixel formats have different color ranges: the former is from 16–235, which is &quot;limited range&quot; (also called &quot;MPEG&quot; range), the latter defaults to 0–255, which is &quot;full range&quot;. The warning is meant for using FFmpeg as a library in your own code (like here). See also the comments on this question.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
   </entry>
   <entry>
     <title>英伟达Jetson开发板踩坑记录总结</title>
@@ -6441,7 +6441,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><code>tcping 10.10.10.6 80</code></li>
 <li><code>tcping 10.10.10.6 25500</code></li>
 </ul>
-<h1 id="PVE总结">8 &nbsp&nbsp<a href="#PVE总结" class="headerlink" title="PVE总结"></a>PVE总结</h1><h2 id="PVETOOLS脚本程序推荐">8.1 &nbsp&nbsp<a href="#PVETOOLS脚本程序推荐" class="headerlink" title="PVETOOLS脚本程序推荐"></a>PVETOOLS脚本程序推荐</h2><blockquote>
+<h1 id="PVE总结">8 &nbsp&nbsp<a href="#PVE总结" class="headerlink" title="PVE总结"></a>PVE总结</h1><h2 id="PVE-Proxmox-VE-虚拟机各硬件模型总结">8.1 &nbsp&nbsp<a href="#PVE-Proxmox-VE-虚拟机各硬件模型总结" class="headerlink" title="PVE(Proxmox VE)虚拟机各硬件模型总结"></a>PVE(Proxmox VE)虚拟机各硬件模型总结</h2><p>TODO</p>
+<h2 id="PVE虚拟机磁盘容量调整">8.2 &nbsp&nbsp<a href="#PVE虚拟机磁盘容量调整" class="headerlink" title="PVE虚拟机磁盘容量调整"></a>PVE虚拟机磁盘容量调整</h2><ul>
+<li>LXC容器的磁盘，在网页控制台设置增加大小，容器会自动增加对应的磁盘分区大小，无需手动在虚拟机系统格式化和挂载。</li>
+</ul>
+<h2 id="PVETOOLS脚本程序推荐">8.3 &nbsp&nbsp<a href="#PVETOOLS脚本程序推荐" class="headerlink" title="PVETOOLS脚本程序推荐"></a>PVETOOLS脚本程序推荐</h2><blockquote>
 <p>新硬件主机不太推荐安装该脚本，CPU省电相关设置不一定能正常设置成功，恢复时也容易出问题。</p>
 </blockquote>
 <ul>
@@ -6452,7 +6456,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <ul>
 <li>执行脚本程序后，可以一键执行「安装配置CPU省电」「配置PVE的web界面显示传感器温度」「去除订阅提示」等功能。</li>
 </ul>
-<h2 id="PVE-Proxmox-VE-虚拟机各硬件模型总结">8.2 &nbsp&nbsp<a href="#PVE-Proxmox-VE-虚拟机各硬件模型总结" class="headerlink" title="PVE(Proxmox VE)虚拟机各硬件模型总结"></a>PVE(Proxmox VE)虚拟机各硬件模型总结</h2><p>TODO</p>
 <h1 id="PBS-Proxmox-Backup-Server-总结">9 &nbsp&nbsp<a href="#PBS-Proxmox-Backup-Server-总结" class="headerlink" title="PBS(Proxmox Backup Server)总结"></a>PBS(Proxmox Backup Server)总结</h1><h2 id="PBS使用遇到的坑">9.1 &nbsp&nbsp<a href="#PBS使用遇到的坑" class="headerlink" title="PBS使用遇到的坑"></a>PBS使用遇到的坑</h2><h3 id="ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error">9.1.1 &nbsp&nbsp<a href="#ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error" class="headerlink" title="ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error"></a>ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error</h3><p>问题现象：PBS备份服务器或者PVE备份LXC虚拟机容器时出现失败，具体报错信息为</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">INFO: Starting Backup of VM 102 (lxc)</span><br><span class="line">INFO: Backup started at 2025-04-25 00:30:36</span><br><span class="line">INFO: status = running</span><br><span class="line">INFO: CT Name: <span class="built_in">test</span></span><br><span class="line">INFO: including mount point rootfs (<span class="string">&#x27;/&#x27;</span>) <span class="keyword">in</span> backup</span><br><span class="line">INFO: backup mode: snapshot</span><br><span class="line">INFO: ionice priority: 7</span><br><span class="line">INFO: create storage snapshot <span class="string">&#x27;vzdump&#x27;</span></span><br><span class="line">snapshot create failed: starting cleanup</span><br><span class="line">no lock found trying to remove <span class="string">&#x27;backup&#x27;</span>  lock</span><br><span class="line">ERROR: Backup of VM 102 failed - lvcreate snapshot <span class="string">&#x27;pve/snap_vm-102-disk-0_vzdump&#x27;</span> error:   Logical Volume <span class="string">&quot;snap_vm-102-disk-0_vzdump&quot;</span> already exists <span class="keyword">in</span> volume group <span class="string">&quot;pve&quot;</span></span><br><span class="line">INFO: Failed at 2025-04-25 00:30:36</span><br><span class="line">INFO: Backup job finished with errors</span><br><span class="line">INFO: notified via target `mail-to-root`</span><br><span class="line">TASK ERROR: job errors</span><br></pre></td></tr></table></figure>
 
@@ -8207,12 +8210,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#46;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#107;&#x73;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#x2e;&#x63;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x73;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#107;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -11963,7 +11966,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#105;&#115;&#x74;&#101;&#114;&#x6b;&#x69;&#x6e;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
