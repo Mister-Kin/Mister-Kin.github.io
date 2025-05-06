@@ -2213,6 +2213,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机安全</title>
     <url>/code/computer-security/</url>
     <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
@@ -2229,19 +2242,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>计算机安全</tag>
         <tag>信息安全</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
   </entry>
   <entry>
     <title>css总结笔记</title>
@@ -2264,6 +2264,69 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>css</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/code/data-structure/</url>
+    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
+<li>集合的特性：<ul>
+<li>集合里的元素类型不一定相同</li>
+<li>集合里的元素没有顺序</li>
+</ul>
+</li>
+<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
+<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
+<li>列表最常见的表现形式：数组和链表<ul>
+<li>C++和Java中，数组中的元素类型必须保持一致。</li>
+<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
+</ul>
+</li>
+<li>特殊类型的列表：栈和队列</li>
+</ul>
+</li>
+<li>列表和数组的区别<ul>
+<li>数组<ul>
+<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
+<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
+</ul>
+</li>
+<li>列表<ul>
+<li>列表没有<code>索引</code>。</li>
+<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
+<ul>
+<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
+<li>时间复杂度：O(1)</li>
+</ul>
+</li>
+<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
+<li>时间复杂度：O(N)</li>
+</ul>
+</li>
+<li>插入元素<ul>
+<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
+<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
+</ul>
+</li>
+<li>删除元素：与插入元素类似<ul>
+<li>末尾删除：只需要一步</li>
+<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
+<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
   </entry>
   <entry>
     <title>数据库技术总结笔记</title>
@@ -2390,69 +2453,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>mongodb</tag>
         <tag>sql</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>数据结构</title>
-    <url>/code/data-structure/</url>
-    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
-<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
-<li>集合的特性：<ul>
-<li>集合里的元素类型不一定相同</li>
-<li>集合里的元素没有顺序</li>
-</ul>
-</li>
-<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
-<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
-<li>列表最常见的表现形式：数组和链表<ul>
-<li>C++和Java中，数组中的元素类型必须保持一致。</li>
-<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
-</ul>
-</li>
-<li>特殊类型的列表：栈和队列</li>
-</ul>
-</li>
-<li>列表和数组的区别<ul>
-<li>数组<ul>
-<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
-<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
-</ul>
-</li>
-<li>列表<ul>
-<li>列表没有<code>索引</code>。</li>
-<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
-<ul>
-<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
-<li>时间复杂度：O(1)</li>
-</ul>
-</li>
-<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
-<li>时间复杂度：O(N)</li>
-</ul>
-</li>
-<li>插入元素<ul>
-<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
-<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
-</ul>
-</li>
-<li>删除元素：与插入元素类似<ul>
-<li>末尾删除：只需要一步</li>
-<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
-<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
-</ul>
-</li>
-</ul>
-<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
   </entry>
   <entry>
     <title>docker</title>
@@ -2628,7 +2628,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#49;&#57;&#46;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#x31;&#x37;&#x32;&#x2e;&#49;&#57;&#x2e;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4612,6 +4612,34 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>CG基础</title>
+    <url>/software/cg-fundamentals/</url>
+    <content><![CDATA[<h1 id="三维制作的规范">1 &nbsp&nbsp<a href="#三维制作的规范" class="headerlink" title="三维制作的规范"></a>三维制作的规范</h1><ol>
+<li>模型的比例、单位、坐标：一般单位采用m，按实际规则和尺寸进行制作；场景或模型放在坐标轴原点处。如果默认单位不是m，制作时应注意缩放大小。</li>
+<li>模型的命名：英文命名，若有重复模型，使用下划线_和数字序号以区分，如model_1.</li>
+<li>模型面：动画用模型（特别是需要Skinning的有机体）尽量用Quad（四边面），静态物体时Triangle（三角面）和Quad都没有太大问题。</li>
+<li>模型面数：单个面数以1500三角面以上，最高面数不超过8000三角面。室内场景一般总面数在80000三角面较佳。</li>
+<li>模型法线：模型制作注意法线方向，不要出现法线翻转，以免法线的背面露在玩家视线之内，导致无法看到模型（Unity引擎对模型的显示是单面）</li>
+<li>UV：贴图的摆放要根据实际模型上可以观察到的状况而定，玩家不能直接看到，或者被遮挡的部位的UV可以缩小点，而很主要的大面尺寸放大一些。在摆放的时候需要大家反复的尝试和修改，使之尽可能的填满整个UV。高级的UV则会有很多合理的重叠的地方，运用这些合理的重叠，可以大幅度提高UV的使用率，而且可以减少贴图绘制量，提高贴图的精度。对于新人来说，分的整齐是关键，一个是在UV视口中整齐的摆放，还有就是贴到物体上贴图的整齐。贴图的绘制方法多种多样，需要多种方法配合才能很快捷方便的完整贴图的绘制，为了方便之后的法线贴图和光照贴图的制作，在PS里要合理区分图层。最终导出的模型都会有两套UV。一套（UV1）用于漫反射贴图(DiffuseMap)、高光贴图(SpetMap)、法线贴图(NormalMap)；另一套（UV2）用于光照图(LightMap)。UV2不可重叠，但是可以将场景中的物体都展在同一张UV空间上。使其可以最大限度的利用贴图空间生成光照图。</li>
+<li>贴图：贴图的漫反射贴图和高光贴图在同一个图片文件上，两张贴图用在同一张贴图的不同通道上，漫反射使用RGB通道，高光使用Alpha通道。这两张贴图使用UV1，贴图的最终大小应控制在256——1024之间，在一开始制作贴图的时候，在考虑整体画面的情况下应该适当的做分辨率高一些的贴图，格式为TGA或TIF（tif文件包含图层，方便PS调整）。 UV2使用的是光照图，大小应该控制在一个室内场景一张1024大小的图，格式为TGA或PNG。</li>
+<li>材质：所有模型所使用的都应是默认材质，不需要调节材质球的参数，只需要将做好的贴图贴到模型上即可。注意模型、材质和贴图命名的一致性。</li>
+<li>模型的导出：无论是从3Dmax或是Maya中导出的场景都应该是干净的，只包含模型和贴图。 摄影机和灯光等其余物件都不应该有。请注意场景的大纲视图是否简洁有序，并最终确认一次上述所有需要注意的要点，之后导出。格式推荐为FBX。</li>
+<li>文件的存放格式，导出文件后，贴图文件放到命名为Texture的文件夹中，模型文件与Texture放到同一目录中。</li>
+</ol>
+<h2 id="关于模型面的一些分析">1.1 &nbsp&nbsp<a href="#关于模型面的一些分析" class="headerlink" title="关于模型面的一些分析"></a>关于模型面的一些分析</h2><p>DCC里面的Quad本质上是两个三角面，其中共享边被隐藏了。你仔细查看DCC的选项，一定会找到隐藏显示该条边的功能。</p>
+<p>对于一般的3D建模，Quad的主要好处增强编辑的效率，方便复杂建模。Quad可以快速选择Loop或者Ring；可以使布线同模型本身的结构更加吻合，Skinning的时候更加容易控制。如果是Sub-division建模，Quad使得细分结果更加可预料和可控制。</p>
+<p>最终进入渲染器或者游戏引擎，全部的面都会被拆成三角面进行处理（其实DCC都支持一个面拥有任意三条以上的边）。因为三角面是定义3D模型表面的最小单位，有很多处理上的方便之处。</p>
+<p>回到问题，本质上所有3D模型都是三角面构成。Quad是我们为了增加编辑效率引入的。你可以使用三角面建模的角色进行动画，但是会给自己增添很多麻烦和不便。所以前人的经验就是动画用模型（特别是需要Skinning的有机体）尽量用Quad。</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>CG</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FFmpeg</title>
     <url>/software/ffmpeg/</url>
     <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
@@ -5372,104 +5400,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>CG基础</title>
-    <url>/software/cg-fundamentals/</url>
-    <content><![CDATA[<h1 id="三维制作的规范">1 &nbsp&nbsp<a href="#三维制作的规范" class="headerlink" title="三维制作的规范"></a>三维制作的规范</h1><ol>
-<li>模型的比例、单位、坐标：一般单位采用m，按实际规则和尺寸进行制作；场景或模型放在坐标轴原点处。如果默认单位不是m，制作时应注意缩放大小。</li>
-<li>模型的命名：英文命名，若有重复模型，使用下划线_和数字序号以区分，如model_1.</li>
-<li>模型面：动画用模型（特别是需要Skinning的有机体）尽量用Quad（四边面），静态物体时Triangle（三角面）和Quad都没有太大问题。</li>
-<li>模型面数：单个面数以1500三角面以上，最高面数不超过8000三角面。室内场景一般总面数在80000三角面较佳。</li>
-<li>模型法线：模型制作注意法线方向，不要出现法线翻转，以免法线的背面露在玩家视线之内，导致无法看到模型（Unity引擎对模型的显示是单面）</li>
-<li>UV：贴图的摆放要根据实际模型上可以观察到的状况而定，玩家不能直接看到，或者被遮挡的部位的UV可以缩小点，而很主要的大面尺寸放大一些。在摆放的时候需要大家反复的尝试和修改，使之尽可能的填满整个UV。高级的UV则会有很多合理的重叠的地方，运用这些合理的重叠，可以大幅度提高UV的使用率，而且可以减少贴图绘制量，提高贴图的精度。对于新人来说，分的整齐是关键，一个是在UV视口中整齐的摆放，还有就是贴到物体上贴图的整齐。贴图的绘制方法多种多样，需要多种方法配合才能很快捷方便的完整贴图的绘制，为了方便之后的法线贴图和光照贴图的制作，在PS里要合理区分图层。最终导出的模型都会有两套UV。一套（UV1）用于漫反射贴图(DiffuseMap)、高光贴图(SpetMap)、法线贴图(NormalMap)；另一套（UV2）用于光照图(LightMap)。UV2不可重叠，但是可以将场景中的物体都展在同一张UV空间上。使其可以最大限度的利用贴图空间生成光照图。</li>
-<li>贴图：贴图的漫反射贴图和高光贴图在同一个图片文件上，两张贴图用在同一张贴图的不同通道上，漫反射使用RGB通道，高光使用Alpha通道。这两张贴图使用UV1，贴图的最终大小应控制在256——1024之间，在一开始制作贴图的时候，在考虑整体画面的情况下应该适当的做分辨率高一些的贴图，格式为TGA或TIF（tif文件包含图层，方便PS调整）。 UV2使用的是光照图，大小应该控制在一个室内场景一张1024大小的图，格式为TGA或PNG。</li>
-<li>材质：所有模型所使用的都应是默认材质，不需要调节材质球的参数，只需要将做好的贴图贴到模型上即可。注意模型、材质和贴图命名的一致性。</li>
-<li>模型的导出：无论是从3Dmax或是Maya中导出的场景都应该是干净的，只包含模型和贴图。 摄影机和灯光等其余物件都不应该有。请注意场景的大纲视图是否简洁有序，并最终确认一次上述所有需要注意的要点，之后导出。格式推荐为FBX。</li>
-<li>文件的存放格式，导出文件后，贴图文件放到命名为Texture的文件夹中，模型文件与Texture放到同一目录中。</li>
-</ol>
-<h2 id="关于模型面的一些分析">1.1 &nbsp&nbsp<a href="#关于模型面的一些分析" class="headerlink" title="关于模型面的一些分析"></a>关于模型面的一些分析</h2><p>DCC里面的Quad本质上是两个三角面，其中共享边被隐藏了。你仔细查看DCC的选项，一定会找到隐藏显示该条边的功能。</p>
-<p>对于一般的3D建模，Quad的主要好处增强编辑的效率，方便复杂建模。Quad可以快速选择Loop或者Ring；可以使布线同模型本身的结构更加吻合，Skinning的时候更加容易控制。如果是Sub-division建模，Quad使得细分结果更加可预料和可控制。</p>
-<p>最终进入渲染器或者游戏引擎，全部的面都会被拆成三角面进行处理（其实DCC都支持一个面拥有任意三条以上的边）。因为三角面是定义3D模型表面的最小单位，有很多处理上的方便之处。</p>
-<p>回到问题，本质上所有3D模型都是三角面构成。Quad是我们为了增加编辑效率引入的。你可以使用三角面建模的角色进行动画，但是会给自己增添很多麻烦和不便。所以前人的经验就是动画用模型（特别是需要Skinning的有机体）尽量用Quad。</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>CG</tag>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>虚拟机总结</title>
-    <url>/software/virtual-machine/</url>
-    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
-<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
-<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
-<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
-<p>解决方法：</p>
-<ol>
-<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
-<li>Containers</li>
-<li>Hyper-V</li>
-<li>Virtual Machine Platform</li>
-<li>Windows Hypervisor Platform</li>
-<li>Windows Sandbox</li>
-<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
-</ul>
-</li>
-<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
-</ol>
-<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
-<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
-<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
-<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
-<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
-<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
-<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
-<li><a href="https://github.com/intel/haxm">haxm</a></li>
-</ul>
-<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
-<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS虚拟机折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>早期因联通赠送的光猫性能不支持双lan口长时间同时上网，故从海鲜市场（小黄鱼）上淘了一块n3530小工控机（准系统，无内存条），计划用来安装pve虚拟机用以作软路由处理宽带拨号和网关ip分配，光猫仅作为一个光电信号转换器。</p>
@@ -5586,7 +5516,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>Intel 11代及以后的CPU核显不支持传统Legacy显示方式，如果看不到在主板BIOS中找不到iGPU设置选项的话，请设置关闭CSM：<code>BOOT-&gt;CSM (Compatibility Support Module)-&gt;Launch CSM-&gt;Disabled</code></li>
 </ul>
 </li>
-<li>设置首选显示设备为核显：<code>Advanced-&gt;System Agent (SA) Configuration-&gt;Graphics Configuration-&gt;Primary Display-&gt;PEG Slot</code><ul>
+<li>设置首选显示设备为核显：<code>Advanced-&gt;System Agent (SA) Configuration-&gt;Graphics Configuration-&gt;Primary Display-&gt;CPU Graphics</code><ul>
 <li>一般其他主板型号可能有的选项值：<ul>
 <li>Auto</li>
 <li>CPU Graphics：核显</li>
@@ -5706,7 +5636,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>将这两个文件复制到<code>/usr/share/kvm/</code>目录下。</li>
 <li>编辑Windows虚拟机配置文件（示例Windows虚拟机ID为103）：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /etc/pve/qemu-server/103.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面三行</span></span><br><span class="line">args: -<span class="built_in">set</span> device.hostpci0.addr=02.0 -<span class="built_in">set</span> device.hostpci0.x-igd-gms=0x2 -<span class="built_in">set</span> device.hostpci0.x-igd-opregion=on -debugcon fil&gt;bios: ovmf</span><br><span class="line">hostpci0: 0000:00:02.0,legacy-igd=1,romfile=gen12_igd.rom</span><br><span class="line">hostpci1: 0000:00:1f.3,romfile=gen12_gop.rom</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是测试工作正常的完整配置</span></span><br><span class="line">args: -<span class="built_in">set</span> device.hostpci0.addr=02.0 -<span class="built_in">set</span> device.hostpci0.x-igd-gms=0x2 -<span class="built_in">set</span> device.hostpci0.x-igd-opregion=on -debugcon fil&gt;bios: ovmf</span><br><span class="line">boot: order=sata0</span><br><span class="line">cores: 16</span><br><span class="line">cpu: host</span><br><span class="line">efidisk0: local-lvm:vm-103-disk-0,efitype=4m,size=4M</span><br><span class="line">hostpci0: 0000:00:02.0,legacy-igd=1,romfile=gen12_igd.rom</span><br><span class="line">hostpci1: 0000:00:1f.3,romfile=gen12_gop.rom</span><br><span class="line">machine: pc-i440fx-8.0,viommu=virtio</span><br><span class="line">memory: 24576</span><br><span class="line">meta: creation-qemu=9.2.0,ctime=1744108457</span><br><span class="line">name: windows</span><br><span class="line">net0: virtio=BC:24:11:C9:53:72,bridge=vmbr1,firewall=1</span><br><span class="line">numa: 0</span><br><span class="line">onboot: 1</span><br><span class="line">ostype: win11</span><br><span class="line">sata0: local-lvm:vm-103-disk-1,size=200G</span><br><span class="line">sata1: win-hdd:103/vm-103-disk-0.raw,backup=0,size=1007G</span><br><span class="line">scsihw: virtio-scsi-single</span><br><span class="line">smbios1: uuid=eddc911c-c81f-4d48-9ae2-f8c7f6cee2c5</span><br><span class="line">sockets: 1</span><br><span class="line">startup: order=4,up=1</span><br><span class="line">tpmstate0: local-lvm:vm-103-disk-2,size=4M,version=v2.0</span><br><span class="line">vga: none</span><br><span class="line">vmgenid: dc473f54-0098-45f9-92b8-d99320460696</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /etc/pve/qemu-server/103.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加下面三行</span></span><br><span class="line">args: -<span class="built_in">set</span> device.hostpci0.addr=02.0 -<span class="built_in">set</span> device.hostpci0.x-igd-gms=0x2 -<span class="built_in">set</span> device.hostpci0.x-igd-opregion=on -debugcon fil&gt;bios: ovmf</span><br><span class="line">hostpci0: 0000:00:02.0,legacy-igd=1,romfile=gen12_igd.rom</span><br><span class="line">hostpci1: 0000:00:1f.3,romfile=gen12_gop.rom</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是测试工作正常的完整配置</span></span><br><span class="line">args: -<span class="built_in">set</span> device.hostpci0.addr=02.0 -<span class="built_in">set</span> device.hostpci0.x-igd-gms=0x2 -<span class="built_in">set</span> device.hostpci0.x-igd-opregion=on</span><br><span class="line">bios: ovmf</span><br><span class="line">boot: order=sata0</span><br><span class="line">cores: 16</span><br><span class="line">cpu: host</span><br><span class="line">efidisk0: local-lvm:vm-103-disk-0,efitype=4m,size=4M</span><br><span class="line">hostpci0: 0000:00:02.0,legacy-igd=1,romfile=gen12_igd.rom</span><br><span class="line">hostpci1: 0000:00:1f.3,romfile=gen12_gop.rom</span><br><span class="line">machine: pc-i440fx-8.0</span><br><span class="line">memory: 20480</span><br><span class="line">meta: creation-qemu=9.2.0,ctime=1744108457</span><br><span class="line">name: windows</span><br><span class="line">net0: virtio=BC:24:11:C9:53:72,bridge=vmbr1,firewall=1</span><br><span class="line">numa: 0</span><br><span class="line">onboot: 1</span><br><span class="line">ostype: win11</span><br><span class="line">sata0: local-lvm:vm-103-disk-1,size=200G,ssd=1</span><br><span class="line">sata1: win-hdd:103/vm-103-disk-0.raw,backup=0,size=1007G</span><br><span class="line">scsihw: virtio-scsi-single</span><br><span class="line">smbios1: uuid=eddc911c-c81f-4d48-9ae2-f8c7f6cee2c5</span><br><span class="line">sockets: 1</span><br><span class="line">startup: order=4,up=1</span><br><span class="line">tpmstate0: local-lvm:vm-103-disk-2,size=4M,version=v2.0</span><br><span class="line">vga: none</span><br><span class="line">vmgenid: dc473f54-0098-45f9-92b8-d99320460696</span><br></pre></td></tr></table></figure>
 <ol start="4">
 <li>注意在启动前，将虚拟机-&gt;硬件-&gt;显示-&gt;设置为「无 (none)」，即对应虚拟机配置文件的参数：<code>vga: none</code></li>
 <li>通过远程桌面连接RDP接入虚拟机系统，下载并安装最新的Intel的核显驱动（已测试正常的驱动版本<code>32.0.101.6732</code>，驱动程序日期：2025&#x2F;4&#x2F;1）。</li>
@@ -6516,6 +6446,76 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>虚拟机</tag>
         <tag>fnOS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>虚拟机总结</title>
+    <url>/software/virtual-machine/</url>
+    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
+<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
+<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
+<p>解决方法：</p>
+<ol>
+<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
+<li>Containers</li>
+<li>Hyper-V</li>
+<li>Virtual Machine Platform</li>
+<li>Windows Hypervisor Platform</li>
+<li>Windows Sandbox</li>
+<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
+</ul>
+</li>
+<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
+</ol>
+<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
+<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
+<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
+<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
+<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
+<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
+<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
+<li><a href="https://github.com/intel/haxm">haxm</a></li>
+</ul>
+<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
+<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
   </entry>
   <entry>
     <title>Blender手册翻译进度</title>
@@ -8210,12 +8210,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#110;&#107;&#x73;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#x65;&#46;&#99;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#115;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#111;&#117;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8307,6 +8307,156 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
+<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
+<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
+<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
+<p>bash: <code>echo $?</code>，输出127</p>
+<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
+<p>编写程序，在标准输出上打印 Hello, World。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
+<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
+<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
+<p>解释下面程序片段是否合法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
+</blockquote>
+<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
+<p>修正方式1：二三行添加cout对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>修正方式2：删除一二行多余的分号</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
+<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
+<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
+</blockquote>
+<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
+<p>编写程序，使用while循环将50到100的整数相加。</p>
+</blockquote>
+<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
+<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
+</blockquote>
+<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
+<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
+</blockquote>
+<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
+<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
+
+<p>从-100加到100，sum的终值为0。</p>
+<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
+<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
+</blockquote>
+<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
+<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
+</blockquote>
+<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
+<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
+<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
+<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
+</blockquote>
+<p>编译器可检查的错误：</p>
+<ol>
+<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
+<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
+<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
+</ol>
+<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
+<p>编写程序，从cin读取一组数，输出其和。</p>
+</blockquote>
+<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
+<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
+<ul>
+<li>Windows：ctrl+z</li>
+<li>UNIX（包括Mac OS X）：ctrl+d</li>
+</ul>
+<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
+<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
+</blockquote>
+<ol>
+<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
+<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
+</ol>
+<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
+<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
+</blockquote>
+<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
+<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
+</blockquote>
+<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
+<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
+</blockquote>
+<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
+<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
+</blockquote>
+<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
+<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
+</blockquote>
+<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
+<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
+</blockquote>
+<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
+<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
+</blockquote>
+<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
+<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -8793,9 +8943,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
-        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>第二章</tag>
       </tags>
   </entry>
   <entry>
@@ -9846,156 +9996,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
-<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
-<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
-<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
-<p>bash: <code>echo $?</code>，输出127</p>
-<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
-<p>编写程序，在标准输出上打印 Hello, World。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
-<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
-<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
-<p>解释下面程序片段是否合法。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
-</blockquote>
-<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
-<p>修正方式1：二三行添加cout对象</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>修正方式2：删除一二行多余的分号</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
-<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
-<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
-</blockquote>
-<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
-<p>编写程序，使用while循环将50到100的整数相加。</p>
-</blockquote>
-<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
-<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
-</blockquote>
-<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
-<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
-</blockquote>
-<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
-<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
-
-<p>从-100加到100，sum的终值为0。</p>
-<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
-<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
-</blockquote>
-<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
-<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
-</blockquote>
-<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
-<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
-<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
-<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
-</blockquote>
-<p>编译器可检查的错误：</p>
-<ol>
-<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
-<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
-<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
-</ol>
-<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
-<p>编写程序，从cin读取一组数，输出其和。</p>
-</blockquote>
-<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
-<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
-<ul>
-<li>Windows：ctrl+z</li>
-<li>UNIX（包括Mac OS X）：ctrl+d</li>
-</ul>
-<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
-<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
-</blockquote>
-<ol>
-<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
-<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
-</ol>
-<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
-<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
-</blockquote>
-<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
-<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
-</blockquote>
-<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
-<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
-</blockquote>
-<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
-<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
-</blockquote>
-<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
-<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
-</blockquote>
-<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
-<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
-</blockquote>
-<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
-<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
-</blockquote>
-<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
-<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第一章</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ Primer 第五版：第五章「语句」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap5/</url>
     <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
@@ -10556,9 +10556,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>head-first-html-css-v2</category>
       </categories>
       <tags>
+        <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>第一章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
@@ -10592,9 +10592,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>head-first-html-css-v2</category>
       </categories>
       <tags>
-        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>第二章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
@@ -11966,7 +11966,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#105;&#x73;&#x74;&#101;&#114;&#x6b;&#105;&#110;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#115;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -12523,69 +12523,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
-    <url>/about/post-offline-download/index.html</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
-<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
-<ul>
-<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
-<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
-<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
-</ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
-</div>
-
-<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
-<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
-<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
-<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
-</div>
-
-<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
-<ol>
-<li>打开火狐浏览器。</li>
-<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
-<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
-<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
-<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
-    <div class="flex-column">
-    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
-</div>
-
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
-</div>
-
-<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
-<li>保存压缩包到本地即可。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
-
-<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
-<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
-<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>第三方开源许可声明</title>
     <url>/about/third-party-declaration/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -12653,6 +12590,69 @@ CGI&后期处理
     margin-left: 25px;
 }
 </style>
+]]></content>
+  </entry>
+  <entry>
+    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
+    <url>/about/post-offline-download/index.html</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
+<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
+<ul>
+<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
+<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
+<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
+</ul>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+</div>
+
+<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
+<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
+<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+</div>
+
+<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
+<ol>
+<li>打开火狐浏览器。</li>
+<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
+<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
+<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
+<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
+    <div class="flex-column">
+    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
+</div>
+
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+</div>
+
+<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
+<li>保存压缩包到本地即可。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
+
+<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
+<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
+<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
