@@ -720,6 +720,14 @@
     <a href="https://www.bt.cn/new/index.html">宝塔面板</a>
 </div>
 
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">通知服务</p>
+    </div>
+    <a href="https://sct.ftqq.com/">Server酱</a>
+    <a href="https://github.com/chf007/action-wechat-work">action-wechat-work（企微通知）</a>
+</div>
+
 </div>
 
 <h1 id="系统镜像"><a href="#系统镜像" class="headerlink" title="系统镜像"></a>系统镜像</h1><div class="text-box-container">
@@ -2596,14 +2604,16 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h2 id="重启相关服务">2.6 &nbsp&nbsp<a href="#重启相关服务" class="headerlink" title="重启相关服务"></a>重启相关服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
 
-<h1 id="Docker创建应用">3 &nbsp&nbsp<a href="#Docker创建应用" class="headerlink" title="Docker创建应用"></a>Docker创建应用</h1><h2 id="搭建DataEase">3.1 &nbsp&nbsp<a href="#搭建DataEase" class="headerlink" title="搭建DataEase"></a>搭建DataEase</h2><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
-<h3 id="下载DataEase部署脚本。">3.1.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h3><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1.x</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
+<h1 id="Docker搭建Redis">3 &nbsp&nbsp<a href="#Docker搭建Redis" class="headerlink" title="Docker搭建Redis"></a>Docker搭建Redis</h1><h2 id="Redis容器清理缓存">3.1 &nbsp&nbsp<a href="#Redis容器清理缓存" class="headerlink" title="Redis容器清理缓存"></a>Redis容器清理缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过可交互终端进入redis容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it redis /bin/bash</span><br><span class="line"><span class="comment"># 登录容器的redis服务</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br><span class="line"><span class="comment"># 若Redis设置有密码使用该命令，否则执行 keys *会报错：(error) NOAUTH Authentication required。</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379 -a redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有key值</span></span><br><span class="line">keys *</span><br><span class="line"><span class="comment"># 删除指定索引的值</span></span><br><span class="line">del key</span><br><span class="line"><span class="comment"># 清除当前数据库缓存</span></span><br><span class="line">flushdb</span><br><span class="line"><span class="comment"># 清除整个redis所有缓存</span></span><br><span class="line">flushall</span><br></pre></td></tr></table></figure>
+
+<h1 id="Docker搭建DataEase">4 &nbsp&nbsp<a href="#Docker搭建DataEase" class="headerlink" title="Docker搭建DataEase"></a>Docker搭建DataEase</h1><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
+<h2 id="下载DataEase部署脚本。">4.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h2><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1.x</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
 <p><code>dataease-release-v1.18.27.tar.gz</code>和<code>dataease-v1.18.27-online.tar.gz</code>这两个文件数据完全一致，随意下载，本人解压并比对过文件哈希值。</p>
 <p>v2.x开源社区版不支持创建用户，代码层面写死只有一个admin账户，若有用户管理的需求，可以不用考虑v2.x版本或者考虑商业版的v2.x。</p>
-<h3 id="修改配置文件install-conf">3.1.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h3><p>安装模式模式修改为<code>local</code>，端口这些自行根据需求改，如下配置文件是修改为8100。</p>
+<h2 id="修改配置文件install-conf">4.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h2><p>安装模式模式修改为<code>local</code>，端口这些自行根据需求改，如下配置文件是修改为8100。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础配置</span></span><br><span class="line"><span class="comment">## 安装目录</span></span><br><span class="line">DE_BASE=/opt</span><br><span class="line"><span class="comment">## Service 端口</span></span><br><span class="line">DE_PORT=8100</span><br><span class="line"><span class="comment">## 部署及运行模式，可选值有 local、simple、cluster，分别对应 本地模式、精简模式、集群模式</span></span><br><span class="line">DE_ENGINE_MODE=<span class="built_in">local</span></span><br><span class="line"><span class="comment">## docker 网段设置</span></span><br><span class="line">DE_DOCKER_SUBNET=172.19.0.0/16</span><br><span class="line"><span class="comment">## docker 网关 IP</span></span><br><span class="line">DE_DOCKER_GATEWAY=172.19.0.1</span><br><span class="line"><span class="comment">## Apache Doris FE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_FE_IP=172.19.0.198</span><br><span class="line"><span class="comment">## Apache Doris BE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_BE_IP=172.19.0.199</span><br><span class="line"><span class="comment">## 登录超时时间，单位min。如果不设置则默认8小时，也就是480</span></span><br><span class="line">DE_LOGIN_TIMEOUT=480</span><br><span class="line"><span class="comment">## 新建用户初始密码</span></span><br><span class="line">DE_INIT_PASSWORD=DataEase123456</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库配置</span></span><br><span class="line"><span class="comment">## 是否使用外部数据库</span></span><br><span class="line">DE_EXTERNAL_MYSQL=<span class="literal">false</span></span><br><span class="line"><span class="comment">## 数据库地址</span></span><br><span class="line">DE_MYSQL_HOST=mysql</span><br><span class="line"><span class="comment">## 数据库端口</span></span><br><span class="line">DE_MYSQL_PORT=3306</span><br><span class="line"><span class="comment">## DataEase 数据库库名</span></span><br><span class="line">DE_MYSQL_DB=dataease</span><br><span class="line"><span class="comment">## 数据库用户名</span></span><br><span class="line">DE_MYSQL_USER=root</span><br><span class="line"><span class="comment">## 数据库密码</span></span><br><span class="line">DE_MYSQL_PASSWORD=Password123@mysql</span><br><span class="line"><span class="comment">## 数据库参数</span></span><br><span class="line">DE_MYSQL_PARAMS=<span class="string">&quot;autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Apache Doris 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Apache Doris</span></span><br><span class="line">DE_EXTERNAL_DORIS=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Doris 地址</span></span><br><span class="line">DE_DORIS_HOST=doris-fe</span><br><span class="line"><span class="comment">## Doris 查询连接端口</span></span><br><span class="line">DE_DORIS_PORT=9030</span><br><span class="line"><span class="comment">## Doris http端口</span></span><br><span class="line">DE_DORIS_HTTPPORT=8030</span><br><span class="line"><span class="comment">## Doris 数据库名称</span></span><br><span class="line">DE_DORIS_DB=dataease</span><br><span class="line"><span class="comment">## Doris 用户名</span></span><br><span class="line">DE_DORIS_USER=root</span><br><span class="line"><span class="comment">## Doris 密码</span></span><br><span class="line">DE_DORIS_PASSWORD=Password123@doris</span><br><span class="line"></span><br><span class="line"><span class="comment"># Kettle 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Kettle - (目前还不支持外部Kettle，除非不需运行Kettle，否则请不要修改此参数)</span></span><br><span class="line">DE_EXTERNAL_KETTLE=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Kettle 服务器地址</span></span><br><span class="line">DE_CARTE_HOST=kettle</span><br><span class="line"><span class="comment">## Kettle 访问端口</span></span><br><span class="line">DE_CARTE_PORT=18080</span><br><span class="line"><span class="comment">## Kettle 用户名</span></span><br><span class="line">DE_CARTE_USER=cluster</span><br><span class="line"><span class="comment">## Kettle 密码</span></span><br><span class="line">DE_CARTE_PASSWORD=cluster</span><br></pre></td></tr></table></figure>
 
-<h4 id="不同安装模式的区别">3.1.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h4><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
+<h3 id="不同安装模式的区别">4.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h3><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
 </div>
 
 <div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;simple<br>使用精简模式安装，系统不会额外安装 Doris 与 Kettle 组件，提供用户轻量级的应用系统，尤其是对接数据量较小的情况。<br>在此模式下，Excel 数据集或 API 数据集的相关数据存储在数据引擎中（默认配置自带的 MySQL 组件，用户可在系统管理界面配置数据引擎，数据引擎目前仅支持 MySQL 类型）。<br>注意：由于精简模式未配置 Kettle 与 Doris，故精简模式不提供定时同步模式。</p>
@@ -2612,23 +2622,29 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;cluster<br>使用集群模式安装，系统不会额外安装 Doris 与 Kettle 组件，但会在系统管理模块提供 Doris 与 Kettle 的链接配置界面（请参考【系统管理】的【系统参数】说明），用户可独立安装 Doris 集群及 Kettle 并配置在 DataEase 中。集群模式下 Excel 数据集，API 数据集以及定时同步的数据通过 Kettle 抽取到 Doris 集群中。<br>Doris 安装部署可参考：<a href="http://doris.incubator.apache.org/zh-CN/">http://doris.incubator.apache.org/zh-CN/</a><br>Kettle 安装部署可参考：<a href="http://www.kettle.org.cn/">http://www.kettle.org.cn/</a></p>
 </div>
 
-<h3 id="安装DataEase">3.1.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h3><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
+<h2 id="安装DataEase">4.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h2><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash ./install.sh</span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 
-<h3 id="创建DataEase的踩坑记录">3.1.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h3><h4 id="doris-be容器状态一直为unhealthy">3.1.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h4><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
+<h2 id="创建DataEase的踩坑记录">4.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h2><h3 id="doris-be容器状态一直为unhealthy">4.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h3><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">doris_role:be</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; FE_SERVERS=[fe1:172.19.0.198:9010]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; BE_ADDR=[172.19.0.199:9050]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feIpArray = 172.19.0.198</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feEditLogPortArray = 9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; masterFe = 172.19.0.198:9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; be_addr = 172.19.0.199:9050</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; Append the configuration [priority_networks = 172.19.0.0/24] to /opt/apache-doris/be/conf/fe.conf</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerMySQL = mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;alter system add backend &#x27;172.19.0.199:9050&#x27;&quot;</span></span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerShell = /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;show backends&quot;</span> | grep <span class="string">&quot; 172.19.0.199 &quot;</span> | grep <span class="string">&quot; 9050 &quot;</span></span><br><span class="line">10003   default_cluster 172.19.0.199    9050    -1      -1      -1      NULL    NULL    <span class="literal">false</span>   <span class="literal">false</span>   <span class="literal">false</span>   0       0.000   1.000 B       0.000   0.00 %  0.00 %  0.000   &#123;<span class="string">&quot;location&quot;</span> : <span class="string">&quot;default&quot;</span>&#125;        java.net.NoRouteToHostException: No route to host (Host unreachable)          &#123;<span class="string">&quot;lastStreamLoadTime&quot;</span>:-1,<span class="string">&quot;isQueryDisabled&quot;</span>:<span class="literal">false</span>,<span class="string">&quot;isLoadDisabled&quot;</span>:<span class="literal">false</span>&#125;        1</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  0 <span class="keyword">time</span> to register BE node, be_join_status=0</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; run <span class="built_in">command</span> /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registered : 1</span><br><span class="line">Please <span class="built_in">set</span> vm.max_map_count to be 2000000 under root using <span class="string">&#x27;sysctl -w vm.max_map_count=2000000&#x27;</span>.</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  1  <span class="keyword">time</span> to check is_alive &gt;&gt;&gt;&gt;&gt;&gt; 1</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br></pre></td></tr></table></figure>
 <p>可以查看上述日志输出提示<code>Please set vm.max_map_count to be 2000000 under root using &#39;sysctl -w vm.max_map_count=2000000&#39;.</code></p>
 <p>原因：Doris作为分布式数据库，对于内存映射数量有要求，Linux系统默认参数值无法满足，例如PVE系统默认的<code>vm.max_map_count=262144</code>。</p>
-<p>解决方法1：请在运行doris容器的宿主机上，运行<code>sysctl -w vm.max_map_count=2000000</code>命令设置<code>vm.max_map_count</code>内核参数。若宿主机本身也是容器化的虚拟机，例如PVE的LXC容器，可以直接在PVE上运行命令修改参数。</p>
-<p>解决方法2：换DataEase v2版本，v2系列不需要部署Doris。</p>
-<h4 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">3.1.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h4><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
+<ul>
+<li>解决方法1：请在运行doris容器的宿主机上，运行<code>sysctl -w vm.max_map_count=2000000</code>命令设置<code>vm.max_map_count</code>内核参数。若宿主机本身也是容器化的虚拟机，例如PVE的LXC容器，可以直接在PVE上运行命令修改参数。<ul>
+<li>查看参数值：<code>sysctl vm.max_map_count</code></li>
+<li>宿主机PVE重启后，<code>vm.max_map_count</code>参数可能会被重置为默认值，若查看日志仍提示报错，请尝试重设参数。</li>
+</ul>
+</li>
+<li>解决方法2：换DataEase v2版本，v2系列不需要部署Doris。</li>
+</ul>
+<h3 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">4.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h3><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
 <p>解决方法：不修改<code>install.conf</code>的MySQL和Doris的密码，直接使用模板预设的默认密码完成部署。</p>
-<h1 id="Docker-Desktop（Windows）">4 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">4.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
+<h1 id="Docker-Desktop（Windows）">5 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">5.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
 <p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#x31;&#x37;&#x32;&#x2e;&#49;&#57;&#x2e;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.</p>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#x74;&#x40;&#49;&#55;&#50;&#46;&#49;&#57;&#x2e;&#48;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4401,6 +4417,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Aegisub总结</title>
     <url>/software/aegisub/</url>
     <content><![CDATA[<p>油管的中英双语字幕，要先合并之后再导入aeg</p>
@@ -4596,22 +4908,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Audacity总结</title>
-    <url>/software/audacity/</url>
-    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
-<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>audacity</tag>
-        <tag>音频</tag>
-        <tag>后期处理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CG基础</title>
     <url>/software/cg-fundamentals/</url>
     <content><![CDATA[<h1 id="三维制作的规范">1 &nbsp&nbsp<a href="#三维制作的规范" class="headerlink" title="三维制作的规范"></a>三维制作的规范</h1><ol>
@@ -4637,6 +4933,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>CG</tag>
         <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Audacity总结</title>
+    <url>/software/audacity/</url>
+    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
+<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>audacity</tag>
+        <tag>音频</tag>
+        <tag>后期处理</tag>
       </tags>
   </entry>
   <entry>
@@ -5788,6 +6100,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h3 id="非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数">5.7.2 &nbsp&nbsp<a href="#非特权（unprivileged）LXC容器无法设置vm-max-map-count内核参数" class="headerlink" title="非特权（unprivileged）LXC容器无法设置vm.max_map_count内核参数"></a>非特权（unprivileged）LXC容器无法设置<code>vm.max_map_count</code>内核参数</h3><p>报错提示：<code>error: permission denied on key &#39;vm.max_map_count&#39;</code></p>
 <p>报错原因：因为非特权的LXC容器的<code>/proc/sys</code>是以只读方式挂载到容器里面，无法修改sysctl内核参数。</p>
 <p>解决方法：在PVE宿主机上，使用<code>sysctl -w vm.max_map_count=2000000</code>命令设置<code>vm.max_map_count</code>内核参数。<code>max_map_count</code>默认值是262144。</p>
+<ul>
+<li>查看参数值：<code>sysctl vm.max_map_count</code></li>
+</ul>
 <h4 id="补充知识点：namespace化的sysctl内核参数">5.7.2.1 &nbsp&nbsp<a href="#补充知识点：namespace化的sysctl内核参数" class="headerlink" title="补充知识点：namespace化的sysctl内核参数"></a>补充知识点：namespace化的sysctl内核参数</h4><p><code>vm.max_map_count</code>属于内核参数，而<code>vm.*</code>参数并没有namespace化。只有namespace化的sysctl内核参数在容器内直接修改设置的时候，不会影响宿主机和其他容器。</p>
 <p>已经namespace化的sysctl内核参数：</p>
 <ul>
@@ -6516,302 +6831,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <categories>
         <category>software</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-      </tags>
   </entry>
   <entry>
     <title>Android系统排障总结</title>
@@ -8210,12 +8229,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#115;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#111;&#117;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -10528,6 +10547,42 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -10559,42 +10614,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
@@ -11055,6 +11074,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -11738,59 +11810,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -11966,7 +11985,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#115;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#x6b;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -12523,6 +12542,69 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
+    <url>/about/post-offline-download/index.html</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
+<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
+<ul>
+<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
+<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
+<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
+</ul>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+</div>
+
+<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
+<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
+<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+</div>
+
+<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
+<ol>
+<li>打开火狐浏览器。</li>
+<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
+<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
+<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
+<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
+    <div class="flex-column">
+    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
+</div>
+
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+</div>
+
+<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
+<li>保存压缩包到本地即可。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
+
+<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
+<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
+<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>第三方开源许可声明</title>
     <url>/about/third-party-declaration/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -12590,69 +12672,6 @@ CGI&后期处理
     margin-left: 25px;
 }
 </style>
-]]></content>
-  </entry>
-  <entry>
-    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
-    <url>/about/post-offline-download/index.html</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
-<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
-<ul>
-<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
-<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
-<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
-</ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
-</div>
-
-<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
-<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
-<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
-<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
-</div>
-
-<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
-<ol>
-<li>打开火狐浏览器。</li>
-<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
-<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
-<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
-<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
-    <div class="flex-column">
-    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
-</div>
-
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
-</div>
-
-<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
-<li>保存压缩包到本地即可。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
-
-<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
-<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
-<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
