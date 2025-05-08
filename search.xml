@@ -728,6 +728,13 @@
     <a href="https://github.com/chf007/action-wechat-work">action-wechat-work（企微通知）</a>
 </div>
 
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">机场</p>
+    </div>
+    <a href="https://github.com/Anankke/SSPanel-UIM">SSPanel-UIM（代理服务管理系统）</a>
+</div>
+
 </div>
 
 <h1 id="系统镜像"><a href="#系统镜像" class="headerlink" title="系统镜像"></a>系统镜像</h1><div class="text-box-container">
@@ -2644,7 +2651,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#49;&#55;&#x32;&#x2e;&#x31;&#57;&#46;&#x30;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.</p>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#49;&#57;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4414,302 +4421,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -6846,6 +6557,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android系统排障总结</title>
     <url>/troubleshooting/android-troubleshooting/</url>
     <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
@@ -8242,12 +8249,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#115;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#46;&#x63;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#x6f;&#117;&#46;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#46;&#x63;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8978,308 +8985,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：第三章「字符串、向量和数组」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap3/</url>
-    <content><![CDATA[<h1 id="第三章：字符串、向量和数组"><a href="#第三章：字符串、向量和数组" class="headerlink" title="第三章：字符串、向量和数组"></a>第三章：字符串、向量和数组</h1><h2 id="练习3-1"><a href="#练习3-1" class="headerlink" title="练习3.1"></a>练习3.1</h2><blockquote>
-<p>使用恰当的using声明重做1.4.1节（第11页）和2.6.2节（第67页）的练习。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_1.cpp">1.4.1</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_2.cpp">2.6.2</a></li>
-</ul>
-<p>因为较为简单，每个小节就只写一个练习了。</p>
-<p>using声明易造成名字冲突：</p>
-<ul>
-<li>使用using声明，一般建议为每个名字做独立的using声明，例如<code>using std::cin</code>，不太建议使用整个命名空间，例如<code>using namespace std</code>，易造成名字冲突。</li>
-<li>头文件不应包含using声明：易造成名字冲突。</li>
-</ul>
-<h2 id="练习3-2"><a href="#练习3-2" class="headerlink" title="练习3.2"></a>练习3.2</h2><blockquote>
-<p>编写一段程序从标准输入中一次读入一行，然后修改该程序使其一次读入一个词。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_1.cpp">一次读入一行</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_2.cpp">一次读入一个词</a></li>
-</ul>
-<h2 id="练习3-3"><a href="#练习3-3" class="headerlink" title="练习3.3"></a>练习3.3</h2><blockquote>
-<p>请说明string类的输入运算符和getline函数分别是如何处理空白字符的。</p>
-</blockquote>
-<ul>
-<li>类似 cin &gt;&gt; str 的读取，string对象会忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止。</li>
-<li>类似 getline(cin, str) 的读取，string对象会从给定的输入流中读取内容，直到遇到换行符为止（换行符被读进来，但不会存放进对象）。</li>
-</ul>
-<h2 id="练习3-4"><a href="#练习3-4" class="headerlink" title="练习3.4"></a>练习3.4</h2><blockquote>
-<p>编写一段程序读取两个字符串，比较其是否相等并输出结果。如果不相等，输出较大的那个字符串。改写上述程序，比较输入的两个字符串是否等长，如果不等长，输出长度较大的那个字符串。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_1.cpp">比较大的</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_2.cpp">长度大的</a></li>
-</ul>
-<h2 id="练习3-5"><a href="#练习3-5" class="headerlink" title="练习3.5"></a>练习3.5</h2><blockquote>
-<p>编写一段程序从标准输入中读入多个字符串并将它们连接在一起，输出连接成的大字符串。然后修改上述程序，用空格把输入的多个字符串分隔开来。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_1.cpp">无空格分隔</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_2.cpp">空格分隔</a></li>
-</ul>
-<p>string对象操作的一些总结：</p>
-<ul>
-<li><strong>定义、初始化和基本操作看下面代码（书本见P76和P77）。</strong></li>
-<li>关系运算符&lt;、&lt;&#x3D;、&gt;、&gt;&#x3D;比较规则：依次比较每个位置上的字符大小，若都一样时，则长度更长的字符串就更大。</li>
-<li><code>string</code>和字符字面值和字符串字面值混在一条语句中，必须确保加法运算符「+」两侧至少有一个<code>string</code>对象（因为标准库可以将字面值转换为<code>string</code>对象，但不允许两个字面值直接相加）</li>
-<li><code>size()</code>函数返回的是<code>string::size_type</code>类型的值，是无符号数。表达式中如果有<code>size()</code>，切记不要再使用<code>int</code>。如果需要定义变量存储<code>size()</code>函数，使用<code>auto</code>或<code>decltype</code>，例如<code>auto len = str.size()</code></li>
-<li><strong>注意字符串字面值不是<code>string</code>对象，和<code>string</code>是不同的类型（因为需要兼容C）。</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义和初始化（等号是拷贝初始化，圆括号是直接初始化）</span></span><br><span class="line">string s1;     <span class="comment">//默认初始化为空串</span></span><br><span class="line"><span class="function">string <span class="title">s2</span><span class="params">(s1)</span></span>; <span class="comment">// s2是s1的副本</span></span><br><span class="line">string s2 = s1; <span class="comment">// 同上，不过是拷贝初始化</span></span><br><span class="line">string s3 = (<span class="string">&quot;hello&quot;</span>); <span class="comment">// s3是字面值&quot;hello&quot;的副本（不包括字面值中的空字符）</span></span><br><span class="line">string s3 = <span class="string">&quot;hello&quot;</span>; <span class="comment">// 同上</span></span><br><span class="line"><span class="function">string <span class="title">s4</span><span class="params">(n, <span class="string">&#x27;c&#x27;</span>)</span></span>; <span class="comment">// s4初始化为由n个字符c组成的串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 基本操作</span></span><br><span class="line">os &lt;&lt; s; <span class="comment">// 将s写到输出流os，返回os</span></span><br><span class="line">is &gt;&gt; s; <span class="comment">// 将输入流is读取字符串赋值给s，字符串以空白分割，返回is</span></span><br><span class="line"><span class="built_in">getline</span>(is, s); <span class="comment">// 从输入流is读取一行赋值给s，返回is</span></span><br><span class="line">s.<span class="built_in">empty</span>(); <span class="comment">// s为空返回true，否则返回false</span></span><br><span class="line">s.<span class="built_in">size</span>(); <span class="comment">// 返回s中字符的个数</span></span><br><span class="line">s[n]; <span class="comment">// 返回s中第n个字符的引用，下标从0计起。</span></span><br><span class="line">s1 + s2; <span class="comment">// 返回s1和s2连接后的结果</span></span><br><span class="line">s1 = s2; <span class="comment">// 用s2的副本代替s1中原来的字符</span></span><br><span class="line">s1 == s2; <span class="comment">// 判断两个string对象是否相等，对字母大小写敏感</span></span><br><span class="line">s1 != s2;</span><br><span class="line">&lt;, &lt;=, &gt;, &gt;= ; <span class="comment">// 利用字符在字典中的顺序进行比较，对字母大小写敏感</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习3-6"><a href="#练习3-6" class="headerlink" title="练习3.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_6.cpp">练习3.6</a></h2><blockquote>
-<p>编写一段程序，使用范围for语句将字符串内的所有字符用X代替。</p>
-</blockquote>
-<p><strong>for范围语句中引用的理解：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : s)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> itr = s.<span class="built_in">begin</span>(); itr != s.<span class="built_in">end</span>(); ++itr) &#123;</span><br><span class="line">    <span class="keyword">auto</span> &amp;c = *itr; <span class="comment">// 每个迭代中用一个新引用绑定一个元素</span></span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-7"><a href="#练习3-7" class="headerlink" title="练习3.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_7.cpp">练习3.7</a></h2><blockquote>
-<p>就上一题完成的程序而言，如果将循环控制变量的类型设为char将发生什么？先估计一下结果，然后实际编程进行验证。</p>
-</blockquote>
-<p>字符串没有变化（因为c只是拷贝，即char，而非引用，即char &amp;，所以无法改变字符串的）。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="string">&quot;hello, world!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">char</span> c : str)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-8"><a href="#练习3-8" class="headerlink" title="练习3.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_8.cpp">练习3.8</a></h2><blockquote>
-<p>分别用while循环和传统for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？</p>
-</blockquote>
-<p>范围for语句更好，因为不需要直接操作索引，更简洁。</p>
-<h2 id="练习3-9"><a href="#练习3-9" class="headerlink" title="练习3.9"></a>练习3.9</h2><blockquote>
-<p>下面的程序有何作用？它合法吗？如果不合法，为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line">cout &lt;&lt; s[<span class="number">0</span>] &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
-
-<p>不合法。使用下标访问空字符串是非法的行为（通过下标访问不存在元素的行为会导致缓冲区错误buffer overflow，本质上就是下标越界，试图访问非法内存区域）。</p>
-<p><strong>只能对确知已存在的元素执行下标操作：建议设下标类型为<code>decltype(str.size())</code>，这样可以确保下标不会小于0。写程序逻辑时，自己确保下标小于<code>str.size()</code>即可（或者使用范围for语句遍历更方便，能有效地确保下标合法，不会出现下标越界）。</strong></p>
-<h2 id="练习3-10"><a href="#练习3-10" class="headerlink" title="练习3.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_10.cpp">练习3.10</a></h2><blockquote>
-<p>编写一段程序，读入一个包含标点符号的字符串，将标点符号去除后输出字符串剩余的部分。</p>
-</blockquote>
-<p><strong>C++标准库兼容C标准库</strong><br>C标准库头文件形如ctype.h，而在C++中，则是命名为cctype，即前面加一个c并且去除后缀.h。使用方式，标准库的名字可以在命名空间std找到。</p>
-<h2 id="练习3-11"><a href="#练习3-11" class="headerlink" title="练习3.11"></a>练习3.11</h2><blockquote>
-<p>下面的范围for语句合法吗？如果合法，c的类型是什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> string s = <span class="string">&quot;Keep out!&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s)&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>要根据for循环体中的代码来看是否合法，s是常量，c是string对象中字符的引用（const char &amp;）。因此如果for循环体中的代码重新给c赋值就会非法，如果不改变c的值，那么合法。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; c;  <span class="comment">// 合法</span></span><br><span class="line">c = <span class="string">&#x27;X&#x27;</span>;    <span class="comment">// 不合法</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-12"><a href="#练习3-12" class="headerlink" title="练习3.12"></a>练习3.12</h2><blockquote>
-<p>下列vector对象的定义有不正确的吗？如果有，请指出来。对于正确的，描述其执行结果；对于不正确的，说明其错误的原因。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ivec;         <span class="comment">// 在C++11当中合法，ivec的元素是vector对象</span></span><br><span class="line">vector&lt;string&gt; svec = ivec;       <span class="comment">// 不合法，类型不一样，ivec的元素是vector int，svec的元素是string</span></span><br><span class="line"><span class="function">vector&lt;string&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>, <span class="string">&quot;null&quot;</span>)</span></span>;  <span class="comment">// 合法，svec有10个字符串：&quot;null&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-13"><a href="#练习3-13" class="headerlink" title="练习3.13"></a>练习3.13</h2><blockquote>
-<p>下列的vector对象各包含多少个元素？这些元素的值分别是多少？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v1;         <span class="comment">// 0个，无值</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v2</span><span class="params">(<span class="number">10</span>)</span></span>;     <span class="comment">// 10个，都是0</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v3</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>; <span class="comment">// 10个，都是42</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v4&#123; <span class="number">10</span> &#125;;     <span class="comment">// 1个，10</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v5&#123; <span class="number">10</span>, <span class="number">42</span> &#125;; <span class="comment">// 2个，10和42</span></span><br><span class="line">vector&lt;string&gt; v6&#123; <span class="number">10</span> &#125;;  <span class="comment">// 10个，空串</span></span><br><span class="line">vector&lt;string&gt; v7&#123; <span class="number">10</span>, <span class="string">&quot;hi&quot;</span> &#125;;  <span class="comment">// 10个，都是&quot;hi&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>初始化的括号区别：</p>
-<ul>
-<li>圆括号：构造vector对象，即圆括号声明容量和初值。</li>
-<li>花括号：列表初始化，用花括号的值作为元素初始值。（当提供的值不能用来列表初始化时，就会用来构造对象。如<code>vector&lt;string&gt; v1&#123;10, &quot;hi&quot;&#125;;</code>，因为类型不同，所以构造成10个&quot;hi&quot;）</li>
-</ul>
-<h2 id="练习3-14"><a href="#练习3-14" class="headerlink" title="练习3.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_14.cpp">练习3.14</a></h2><blockquote>
-<p>编写一段程序，用cin读入一组整数并把它们存入一个vector对象。</p>
-</blockquote>
-<p><strong>vctror对象能高效增长，在定义时设定其大小意义不大。开始时创建空vector，运行时再动态添加元素。</strong></p>
-<h2 id="练习3-15"><a href="#练习3-15" class="headerlink" title="练习3.15"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_15.cpp">练习3.15</a></h2><blockquote>
-<p>改写上题的程序，不过这次读入的是字符串。</p>
-</blockquote>
-<h2 id="练习3-16"><a href="#练习3-16" class="headerlink" title="练习3.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_16.cpp">练习3.16</a></h2><blockquote>
-<p>编写一段程序，把练习3.13中vector对象的容量和具体内容输出出来。检验你之前的回答是否正确，如果不对，回过头重新学习3.3.1节（第87页）知道弄明白错在何处为止。</p>
-</blockquote>
-<h2 id="练习3-17"><a href="#练习3-17" class="headerlink" title="练习3.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_17.cpp">练习3.17</a></h2><blockquote>
-<p>从cin读入一组词并把它们存入一个vector对象，然后设法把所有词都改写为大写形式。输出改变后的结果，每个词占一行。</p>
-</blockquote>
-<h2 id="练习3-18"><a href="#练习3-18" class="headerlink" title="练习3.18"></a>练习3.18</h2><blockquote>
-<p>下面的程序合法吗？如果不合法，你准备如何修改？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; ivec;</span><br><span class="line">ivec[<span class="number">0</span>] = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
-
-<p>不合法（ivec是空vector对象，对其执行下标操作是非法行为）。修正方式：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ivec.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-19"><a href="#练习3-19" class="headerlink" title="练习3.19"></a>练习3.19</h2><blockquote>
-<p>如果想定义一个含有10个元素的vector对象，所有元素的值都是42，请列举出三种不同的实现方法，哪种方式更好呢？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">ivec1</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec2&#123; <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec3;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">    ivec<span class="number">3.</span><span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
-<p>第一种方式最好。写法简洁。</p>
-<h2 id="练习3-20"><a href="#练习3-20" class="headerlink" title="练习3.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_20.cpp">练习3.20</a></h2><blockquote>
-<p>读入一组整数并把它们存入一个vector对象，将每对相邻整数的和输出出来。改写你的程序，这次要求先输出第1个和最后1个元素的和，接着输出第2个和倒数第2个元素的和，以此类推。</p>
-</blockquote>
-<h2 id="练习3-21"><a href="#练习3-21" class="headerlink" title="练习3.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_21.cpp">练习3.21</a></h2><blockquote>
-<p>请使用迭代器重做3.3.3节（第94页）的第一个练习。</p>
-</blockquote>
-<p>迭代器的总结（本质上就是指针）：</p>
-<ul>
-<li>类似于指针，解引用运算符*，可以获取迭代器指向的内容。</li>
-<li>使用迭代器的循环体是用<code>!=</code>作为判断条件（像c或者java使用下标，多是用<code>&lt;</code>）。因为C++中标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，而只有string和vector某些库才有下标运算符。</li>
-<li>容器为空时，begin和end返回的是同一个迭代器（尾后迭代器）。</li>
-<li>尾后迭代器指示的是不存在的“尾后”元素，实际并不指示某个元素，因此不能进行递增或者解引用操作。</li>
-<li>只需读操作时，可用cbegin和cend函数。</li>
-<li>箭头运算符是结合解引用和成员访问两个操作，即<code>it-&gt;men</code>等同于<code>(*it).men</code>。</li>
-<li>使用了迭代器的循环体，不要向其所属的容器添加元素。例如，在循环体中向vector对象push_back，这会导致迭代器失效。（类似的，也不能在范围for循环中向vector对象添加元素）</li>
-</ul>
-<h2 id="练习3-22"><a href="#练习3-22" class="headerlink" title="练习3.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_22.cpp">练习3.22</a></h2><blockquote>
-<p>修改之前那个输出text第一段的程序，首先把text的第一段全都改成大写形式，然后输出它。</p>
-</blockquote>
-<h2 id="练习3-23"><a href="#练习3-23" class="headerlink" title="练习3.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_23.cpp">练习3.23</a></h2><blockquote>
-<p>编写一段程序，创建一个含有10个整数的vector对象，然后使用迭代器将所有元素的值都变成原来的两倍。输出vector对象的内容，检验程序是否正确。</p>
-</blockquote>
-<h2 id="练习3-24"><a href="#练习3-24" class="headerlink" title="练习3.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_24.cpp">练习3.24</a></h2><blockquote>
-<p>请使用迭代器重做3.3.3节（第94页）的最后一个练习。</p>
-</blockquote>
-<h2 id="练习3-25"><a href="#练习3-25" class="headerlink" title="练习3.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_25.cpp">练习3.25</a></h2><blockquote>
-<p>3.3.3节（第93页）划分分数段的程序是使用下标运算符实现的，请利用迭代器改写该程序并实现完全相同的功能。</p>
-</blockquote>
-<h2 id="练习3-26"><a href="#练习3-26" class="headerlink" title="练习3.26"></a>练习3.26</h2><blockquote>
-<p>在100页的二分搜索程序中，为什么用的是 mid &#x3D; beg + (end - beg) &#x2F; 2，而非 mid &#x3D; (beg + end) &#x2F; 2 ; ?</p>
-</blockquote>
-<p>因为两个迭代器之间支持的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>，而没有<code>+</code> 。<code>end - beg</code> 相减的结果是之间的距离，将之除以2然后与beg相加，表示将beg移动到一半的位置。</p>
-<p>迭代器运算的理解：迭代器可以加减一个数（包括加减复合赋值运算符），但两个迭代器之间的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>关系运算符。</p>
-<h2 id="练习3-27"><a href="#练习3-27" class="headerlink" title="练习3.27"></a>练习3.27</h2><blockquote>
-<p>假设txt_size是一个无参数的函数，它的返回值是int。请回答下列哪个定义是非法的？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> buf_size = <span class="number">1024</span>;</span><br><span class="line">(a) <span class="type">int</span> ia[buf_size];</span><br><span class="line">(b) <span class="type">int</span> ia[<span class="number">4</span> * <span class="number">7</span> - <span class="number">14</span>];</span><br><span class="line">(c) <span class="type">int</span> ia[<span class="built_in">txt_size</span>()];</span><br><span class="line">(d) <span class="type">char</span> st[<span class="number">11</span>] = <span class="string">&quot;fundamental&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 非法。纬度必须是一个常量表达式。</li>
-<li>(b) 合法。</li>
-<li>(c) 非法。txt_size返回的是int，不是constexpr int。</li>
-<li>(d) 非法。数组的大小应该是12，字符串字面值末尾还有个空字符&#39;\0&#39;。</li>
-</ul>
-<h2 id="练习3-28"><a href="#练习3-28" class="headerlink" title="练习3.28"></a>练习3.28</h2><blockquote>
-<p>下列数组中元素的值是什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string sa[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> ia[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	string sa2[<span class="number">10</span>];</span><br><span class="line">	<span class="type">int</span> ia2[<span class="number">10</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>sa的元素值全部为空字符串，ia的元素值全部为0。sa2的元素值全部为空字符串，ia2的元素没有被初始化，初值全部未定义。</p>
-<h2 id="练习3-29"><a href="#练习3-29" class="headerlink" title="练习3.29"></a>练习3.29</h2><blockquote>
-<p>相比于vector来说，数组有哪些缺点，请列举一些。</p>
-</blockquote>
-<ul>
-<li>数组的大小是固定的，不能随意增加元素</li>
-<li>不允许拷贝和赋值</li>
-<li>没有像vector那样的API</li>
-</ul>
-<h2 id="练习3-30"><a href="#练习3-30" class="headerlink" title="练习3.30"></a>练习3.30</h2><blockquote>
-<p>指出下面代码中的索引错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">size_t</span> array_size = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> ia[array_size];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> ix = <span class="number">1</span>; ix &lt;= array_size; ++ix)</span><br><span class="line">	ia[ix] = ix;</span><br></pre></td></tr></table></figure>
-
-<p>当ix等于10时，表达式ia[ix]属于未定义行为（UB），下标越界。</p>
-<p><strong>通常将数组下标类型定义size_t，size_t定义在cstddef头文件，是一种机器相关的无符号类型，可以表示内存中任意对象的大小（因为被设计得足够大）。</strong></p>
-<h2 id="练习3-31"><a href="#练习3-31" class="headerlink" title="练习3.31"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_31.cpp">练习3.31</a></h2><blockquote>
-<p>编写一段程序，定义一个含有10个int的数组，令每个元素的值就是其下标值。</p>
-</blockquote>
-<h2 id="练习3-32"><a href="#练习3-32" class="headerlink" title="练习3.32"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_32.cpp">练习3.32</a></h2><blockquote>
-<p>将上一题刚刚创建的数组拷贝给另外一个数组。利用vector重写程序，实现类似的功能。</p>
-</blockquote>
-<h2 id="练习3-33"><a href="#练习3-33" class="headerlink" title="练习3.33"></a>练习3.33</h2><blockquote>
-<p>对于104页的程序来说，如果不初始化scores将会发生什么？</p>
-</blockquote>
-<p>数组中所有元素的值将会未定义（有可能不是0，会有脏数据存在）。</p>
-<h2 id="练习3-34"><a href="#练习3-34" class="headerlink" title="练习3.34"></a>练习3.34</h2><blockquote>
-<p>假定p1和p2都指向同一个数组中的元素，则下面程序的功能是什么？什么情况下该程序是非法的？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">p1 += p2 - p1;</span><br></pre></td></tr></table></figure>
-
-<p>将p1移动到p2的位置，即指向同一个地址。只要p1、p2值合法，该程序任何情况下都合法。</p>
-<h2 id="练习3-35"><a href="#练习3-35" class="headerlink" title="练习3.35"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_35.cpp">练习3.35</a></h2><blockquote>
-<p>编写一段程序，利用指针将数组中的元素置为0。</p>
-</blockquote>
-<p><strong>数组与指针的总结：</strong></p>
-<ul>
-<li>数组名可以当作是首指针（编译器会自动将其转换成一个指向数组首元素的指针（函数传参、赋值给指针、表达式），但本质上数组名自身不是指针）</li>
-<li>类似迭代器，也可以获取数组的首尾指针（假设数组int array[10]&#x3D;{xxx}。<strong>类似尾迭代器，注意尾指针不指向具体元素，不能对其进行解引用或递增操作</strong>）<ul>
-<li><code>int *begin = array; int *end = &amp;array[10];</code></li>
-<li><code>int *begin = begin(array); int *end = end(array);</code> <strong>begin和end函数定义在iterator头文件（数组不是类类型，没有类似vector迭代器那种成员函数）</strong></li>
-</ul>
-</li>
-<li>两个指针相减的结果类型是ptrdiff_t，是一种带符号类型，和size_t一样也定义在cstddef头文件。</li>
-<li><strong>只要指针指向数组元素（或者尾元素的下一位置，即尾指针），都可以执行下标运算（当然，需要保证运算后的指针也是指向同一数组或者尾指针）。像数组这种C++语言内置的下标运算允许处理负值，但像标准库类型string和vector则限定下标是无符号类型。</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p = &amp;array[<span class="number">2</span>]; <span class="comment">// p指向索引为2的元素</span></span><br><span class="line"><span class="type">int</span> j = p[<span class="number">1</span>];       <span class="comment">// p[1]等价于*(p+1)，即array[3]</span></span><br><span class="line"><span class="type">int</span> k = p[<span class="number">-2</span>];      <span class="comment">// 即array[0]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-36"><a href="#练习3-36" class="headerlink" title="练习3.36"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_36.cpp">练习3.36</a></h2><blockquote>
-<p>编写一段程序，比较两个数组是否相等。再写一段程序，比较两个vector对象是否相等。</p>
-</blockquote>
-<h2 id="练习3-37"><a href="#练习3-37" class="headerlink" title="练习3.37"></a>练习3.37</h2><blockquote>
-<p>下面的程序是何含义，程序的输出结果是什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> ca[] = &#123; <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *cp = ca;</span><br><span class="line"><span class="keyword">while</span> (*cp) &#123;</span><br><span class="line">    cout &lt;&lt; *cp &lt;&lt; endl;</span><br><span class="line">    ++cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>会将ca字符数组中的元素打印出来，但是因为没有空字符&#39;\0&#39;的存在，循环不会终止，会打印出来很多无意义脏数据。</p>
-<h2 id="练习3-38"><a href="#练习3-38" class="headerlink" title="练习3.38"></a>练习3.38</h2><blockquote>
-<p>在本节中我们提到，将两个指针相加不但是非法的，而且也没什么意义。请问为什么两个指针相加没什么意义？</p>
-</blockquote>
-<p><strong>指针本质就是地址</strong>，将两个指针相减可以表示两个指针(在同一数组中)的距离，将指针加上一个整数也可以表示移动这个指针到某一位置。<strong>但是两个指针相加后的地址并没有逻辑上的意义。</strong></p>
-<p><a href="https://stackoverflow.com/questions/2935038/why-cant-i-add-pointers">参考资料</a></p>
-<h2 id="练习3-39"><a href="#练习3-39" class="headerlink" title="练习3.39"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_39.cpp">练习3.39</a></h2><blockquote>
-<p>编写一段程序，比较两个string对象。再编写一段程序，比较两个C风格字符串的内容。</p>
-</blockquote>
-<p><strong>C标准库string函数（头文件cstring）</strong></p>
-<ul>
-<li>strlen(p) 返回p的长度，不计算空字符</li>
-<li>strcmp(p1,p2) 比较p1和p2，<code>p1==p2</code>则返回0；<code>p1&gt;p2</code>则返回正值；<code>p1&lt;p2</code>则返回负值</li>
-<li>strcat(p1,p2) p2附加到p1后，再返回p1</li>
-<li>strcpy(p1,p2) p2拷贝给p1，再返回p1</li>
-</ul>
-<p><strong>注意这些函数的指针必须指向以空字符作为结束的数组</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> ca[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125; <span class="comment">// 没有以空字符结束。</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">strlen</span>(ca) &lt;&lt; endl; <span class="comment">// 严重错误，没有空字符，该函数有可能在内存中不断向前寻找，直至找到空字符。</span></span><br><span class="line"><span class="comment">// 修正方式：用字符串字面值给ca赋初值&quot;ab&quot;。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-40"><a href="#练习3-40" class="headerlink" title="练习3.40"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_40.cpp">练习3.40</a></h2><blockquote>
-<p>编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前面两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组当中。</p>
-</blockquote>
-<h2 id="练习3-41"><a href="#练习3-41" class="headerlink" title="练习3.41"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_41.cpp">练习3.41</a></h2><blockquote>
-<p>编写一段程序，用整型数组初始化一个vector对象。</p>
-</blockquote>
-<h2 id="练习3-42"><a href="#练习3-42" class="headerlink" title="练习3.42"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_42.cpp">练习3.42</a></h2><blockquote>
-<p>编写一段程序，将含有整数元素的vector对象拷贝给一个整型数组。</p>
-</blockquote>
-<p><strong>使用数组初始化vector对象（不能用数组初始化数组；不能用vector对象初始化数组）</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> array[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(begin(array), end(array))</span></span>; <span class="comment">// 使用首尾指针</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">subv</span><span class="params">(array + <span class="number">1</span>, array + <span class="number">3</span>)</span></span>; <span class="comment">// 数组中的部分也可用来初始化</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>混用string对象和C风格字符串</strong></p>
-<ul>
-<li>允许使用以空字符结束的字符数组来初始化或赋值给string对象</li>
-<li>string对象的加法运算允许以空字符结束的字符数组作为其中一个运算对象（加法运算符「+」两侧至少有一个string对象）</li>
-<li>string复合赋值运算中允许以空字符结束的字符数组作为右侧运算对象</li>
-<li>string对象不能直接初始化指向字符的指针，需要使用成员函数<code>c_str</code>返回指针，如<code>const char *str = s.c_str();</code></li>
-</ul>
-<h2 id="练习3-43"><a href="#练习3-43" class="headerlink" title="练习3.43"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_43.cpp">练习3.43</a></h2><blockquote>
-<p>编写3个不同版本的程序，令其均能输出ia的元素。版本1使用范围for语句管理迭代过程；版本2和版本3都使用普通for语句，其中版本2要求使用下标运算符，版本3要求使用指针。此外，在所有3个版本的程序中都要直接写出数据类型，而不能使用类型别名、auto关键字和decltype关键字。</p>
-</blockquote>
-<h2 id="练习3-44"><a href="#练习3-44" class="headerlink" title="练习3.44"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_44.cpp">练习3.44</a></h2><blockquote>
-<p>改写上一个练习中的程序，使用类型别名来代替循环控制变量的类型。</p>
-</blockquote>
-<h2 id="练习3-45"><a href="#练习3-45" class="headerlink" title="练习3.45"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_45.cpp">练习3.45</a></h2><blockquote>
-<p>再一次改写程序，这次使用auto关键字。</p>
-</blockquote>
-<p><strong>多维数组和指针的总结</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 多维数组本质上是数组的数组，初始化时内层嵌套的花括号也可去掉</span></span><br><span class="line"><span class="type">int</span> ia[<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">1</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用范围for语句处理多维数组时，要将控制变量声明为引用类型（为避免编译器将其转换成指针）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;row : ia)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;col : row)</span><br><span class="line">        ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义指向多维数组的指针注意写法（手动写较易写错，建议使用auto或者decltype）</span></span><br><span class="line"><span class="type">int</span> *ip[<span class="number">2</span>];          <span class="comment">// 整型指针的数组</span></span><br><span class="line"><span class="built_in">int</span>(*ip)[<span class="number">2</span>];         <span class="comment">// 指针，指向含有2个整数的数组</span></span><br><span class="line"><span class="built_in">int</span>(&amp;ip)[<span class="number">2</span>] = ia[<span class="number">0</span>]; <span class="comment">// 引用，指向含有2个整数的数组</span></span><br><span class="line"><span class="comment">// 类型别名简化写法，下面两行等同于int(*ip)[2];</span></span><br><span class="line"><span class="keyword">using</span> int_array = <span class="type">int</span>[<span class="number">2</span>];</span><br><span class="line">int_array *ip;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第三章</tag>
-        <tag>字符串</tag>
-        <tag>向量</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -10028,6 +9733,308 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>C++ Primer 第五版：第三章「字符串、向量和数组」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap3/</url>
+    <content><![CDATA[<h1 id="第三章：字符串、向量和数组"><a href="#第三章：字符串、向量和数组" class="headerlink" title="第三章：字符串、向量和数组"></a>第三章：字符串、向量和数组</h1><h2 id="练习3-1"><a href="#练习3-1" class="headerlink" title="练习3.1"></a>练习3.1</h2><blockquote>
+<p>使用恰当的using声明重做1.4.1节（第11页）和2.6.2节（第67页）的练习。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_1.cpp">1.4.1</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_2.cpp">2.6.2</a></li>
+</ul>
+<p>因为较为简单，每个小节就只写一个练习了。</p>
+<p>using声明易造成名字冲突：</p>
+<ul>
+<li>使用using声明，一般建议为每个名字做独立的using声明，例如<code>using std::cin</code>，不太建议使用整个命名空间，例如<code>using namespace std</code>，易造成名字冲突。</li>
+<li>头文件不应包含using声明：易造成名字冲突。</li>
+</ul>
+<h2 id="练习3-2"><a href="#练习3-2" class="headerlink" title="练习3.2"></a>练习3.2</h2><blockquote>
+<p>编写一段程序从标准输入中一次读入一行，然后修改该程序使其一次读入一个词。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_1.cpp">一次读入一行</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_2.cpp">一次读入一个词</a></li>
+</ul>
+<h2 id="练习3-3"><a href="#练习3-3" class="headerlink" title="练习3.3"></a>练习3.3</h2><blockquote>
+<p>请说明string类的输入运算符和getline函数分别是如何处理空白字符的。</p>
+</blockquote>
+<ul>
+<li>类似 cin &gt;&gt; str 的读取，string对象会忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止。</li>
+<li>类似 getline(cin, str) 的读取，string对象会从给定的输入流中读取内容，直到遇到换行符为止（换行符被读进来，但不会存放进对象）。</li>
+</ul>
+<h2 id="练习3-4"><a href="#练习3-4" class="headerlink" title="练习3.4"></a>练习3.4</h2><blockquote>
+<p>编写一段程序读取两个字符串，比较其是否相等并输出结果。如果不相等，输出较大的那个字符串。改写上述程序，比较输入的两个字符串是否等长，如果不等长，输出长度较大的那个字符串。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_1.cpp">比较大的</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_2.cpp">长度大的</a></li>
+</ul>
+<h2 id="练习3-5"><a href="#练习3-5" class="headerlink" title="练习3.5"></a>练习3.5</h2><blockquote>
+<p>编写一段程序从标准输入中读入多个字符串并将它们连接在一起，输出连接成的大字符串。然后修改上述程序，用空格把输入的多个字符串分隔开来。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_1.cpp">无空格分隔</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_2.cpp">空格分隔</a></li>
+</ul>
+<p>string对象操作的一些总结：</p>
+<ul>
+<li><strong>定义、初始化和基本操作看下面代码（书本见P76和P77）。</strong></li>
+<li>关系运算符&lt;、&lt;&#x3D;、&gt;、&gt;&#x3D;比较规则：依次比较每个位置上的字符大小，若都一样时，则长度更长的字符串就更大。</li>
+<li><code>string</code>和字符字面值和字符串字面值混在一条语句中，必须确保加法运算符「+」两侧至少有一个<code>string</code>对象（因为标准库可以将字面值转换为<code>string</code>对象，但不允许两个字面值直接相加）</li>
+<li><code>size()</code>函数返回的是<code>string::size_type</code>类型的值，是无符号数。表达式中如果有<code>size()</code>，切记不要再使用<code>int</code>。如果需要定义变量存储<code>size()</code>函数，使用<code>auto</code>或<code>decltype</code>，例如<code>auto len = str.size()</code></li>
+<li><strong>注意字符串字面值不是<code>string</code>对象，和<code>string</code>是不同的类型（因为需要兼容C）。</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义和初始化（等号是拷贝初始化，圆括号是直接初始化）</span></span><br><span class="line">string s1;     <span class="comment">//默认初始化为空串</span></span><br><span class="line"><span class="function">string <span class="title">s2</span><span class="params">(s1)</span></span>; <span class="comment">// s2是s1的副本</span></span><br><span class="line">string s2 = s1; <span class="comment">// 同上，不过是拷贝初始化</span></span><br><span class="line">string s3 = (<span class="string">&quot;hello&quot;</span>); <span class="comment">// s3是字面值&quot;hello&quot;的副本（不包括字面值中的空字符）</span></span><br><span class="line">string s3 = <span class="string">&quot;hello&quot;</span>; <span class="comment">// 同上</span></span><br><span class="line"><span class="function">string <span class="title">s4</span><span class="params">(n, <span class="string">&#x27;c&#x27;</span>)</span></span>; <span class="comment">// s4初始化为由n个字符c组成的串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 基本操作</span></span><br><span class="line">os &lt;&lt; s; <span class="comment">// 将s写到输出流os，返回os</span></span><br><span class="line">is &gt;&gt; s; <span class="comment">// 将输入流is读取字符串赋值给s，字符串以空白分割，返回is</span></span><br><span class="line"><span class="built_in">getline</span>(is, s); <span class="comment">// 从输入流is读取一行赋值给s，返回is</span></span><br><span class="line">s.<span class="built_in">empty</span>(); <span class="comment">// s为空返回true，否则返回false</span></span><br><span class="line">s.<span class="built_in">size</span>(); <span class="comment">// 返回s中字符的个数</span></span><br><span class="line">s[n]; <span class="comment">// 返回s中第n个字符的引用，下标从0计起。</span></span><br><span class="line">s1 + s2; <span class="comment">// 返回s1和s2连接后的结果</span></span><br><span class="line">s1 = s2; <span class="comment">// 用s2的副本代替s1中原来的字符</span></span><br><span class="line">s1 == s2; <span class="comment">// 判断两个string对象是否相等，对字母大小写敏感</span></span><br><span class="line">s1 != s2;</span><br><span class="line">&lt;, &lt;=, &gt;, &gt;= ; <span class="comment">// 利用字符在字典中的顺序进行比较，对字母大小写敏感</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习3-6"><a href="#练习3-6" class="headerlink" title="练习3.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_6.cpp">练习3.6</a></h2><blockquote>
+<p>编写一段程序，使用范围for语句将字符串内的所有字符用X代替。</p>
+</blockquote>
+<p><strong>for范围语句中引用的理解：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : s)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> itr = s.<span class="built_in">begin</span>(); itr != s.<span class="built_in">end</span>(); ++itr) &#123;</span><br><span class="line">    <span class="keyword">auto</span> &amp;c = *itr; <span class="comment">// 每个迭代中用一个新引用绑定一个元素</span></span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-7"><a href="#练习3-7" class="headerlink" title="练习3.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_7.cpp">练习3.7</a></h2><blockquote>
+<p>就上一题完成的程序而言，如果将循环控制变量的类型设为char将发生什么？先估计一下结果，然后实际编程进行验证。</p>
+</blockquote>
+<p>字符串没有变化（因为c只是拷贝，即char，而非引用，即char &amp;，所以无法改变字符串的）。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="string">&quot;hello, world!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">char</span> c : str)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-8"><a href="#练习3-8" class="headerlink" title="练习3.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_8.cpp">练习3.8</a></h2><blockquote>
+<p>分别用while循环和传统for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？</p>
+</blockquote>
+<p>范围for语句更好，因为不需要直接操作索引，更简洁。</p>
+<h2 id="练习3-9"><a href="#练习3-9" class="headerlink" title="练习3.9"></a>练习3.9</h2><blockquote>
+<p>下面的程序有何作用？它合法吗？如果不合法，为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line">cout &lt;&lt; s[<span class="number">0</span>] &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+
+<p>不合法。使用下标访问空字符串是非法的行为（通过下标访问不存在元素的行为会导致缓冲区错误buffer overflow，本质上就是下标越界，试图访问非法内存区域）。</p>
+<p><strong>只能对确知已存在的元素执行下标操作：建议设下标类型为<code>decltype(str.size())</code>，这样可以确保下标不会小于0。写程序逻辑时，自己确保下标小于<code>str.size()</code>即可（或者使用范围for语句遍历更方便，能有效地确保下标合法，不会出现下标越界）。</strong></p>
+<h2 id="练习3-10"><a href="#练习3-10" class="headerlink" title="练习3.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_10.cpp">练习3.10</a></h2><blockquote>
+<p>编写一段程序，读入一个包含标点符号的字符串，将标点符号去除后输出字符串剩余的部分。</p>
+</blockquote>
+<p><strong>C++标准库兼容C标准库</strong><br>C标准库头文件形如ctype.h，而在C++中，则是命名为cctype，即前面加一个c并且去除后缀.h。使用方式，标准库的名字可以在命名空间std找到。</p>
+<h2 id="练习3-11"><a href="#练习3-11" class="headerlink" title="练习3.11"></a>练习3.11</h2><blockquote>
+<p>下面的范围for语句合法吗？如果合法，c的类型是什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> string s = <span class="string">&quot;Keep out!&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s)&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>要根据for循环体中的代码来看是否合法，s是常量，c是string对象中字符的引用（const char &amp;）。因此如果for循环体中的代码重新给c赋值就会非法，如果不改变c的值，那么合法。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; c;  <span class="comment">// 合法</span></span><br><span class="line">c = <span class="string">&#x27;X&#x27;</span>;    <span class="comment">// 不合法</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-12"><a href="#练习3-12" class="headerlink" title="练习3.12"></a>练习3.12</h2><blockquote>
+<p>下列vector对象的定义有不正确的吗？如果有，请指出来。对于正确的，描述其执行结果；对于不正确的，说明其错误的原因。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ivec;         <span class="comment">// 在C++11当中合法，ivec的元素是vector对象</span></span><br><span class="line">vector&lt;string&gt; svec = ivec;       <span class="comment">// 不合法，类型不一样，ivec的元素是vector int，svec的元素是string</span></span><br><span class="line"><span class="function">vector&lt;string&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>, <span class="string">&quot;null&quot;</span>)</span></span>;  <span class="comment">// 合法，svec有10个字符串：&quot;null&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-13"><a href="#练习3-13" class="headerlink" title="练习3.13"></a>练习3.13</h2><blockquote>
+<p>下列的vector对象各包含多少个元素？这些元素的值分别是多少？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v1;         <span class="comment">// 0个，无值</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v2</span><span class="params">(<span class="number">10</span>)</span></span>;     <span class="comment">// 10个，都是0</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v3</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>; <span class="comment">// 10个，都是42</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v4&#123; <span class="number">10</span> &#125;;     <span class="comment">// 1个，10</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v5&#123; <span class="number">10</span>, <span class="number">42</span> &#125;; <span class="comment">// 2个，10和42</span></span><br><span class="line">vector&lt;string&gt; v6&#123; <span class="number">10</span> &#125;;  <span class="comment">// 10个，空串</span></span><br><span class="line">vector&lt;string&gt; v7&#123; <span class="number">10</span>, <span class="string">&quot;hi&quot;</span> &#125;;  <span class="comment">// 10个，都是&quot;hi&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>初始化的括号区别：</p>
+<ul>
+<li>圆括号：构造vector对象，即圆括号声明容量和初值。</li>
+<li>花括号：列表初始化，用花括号的值作为元素初始值。（当提供的值不能用来列表初始化时，就会用来构造对象。如<code>vector&lt;string&gt; v1&#123;10, &quot;hi&quot;&#125;;</code>，因为类型不同，所以构造成10个&quot;hi&quot;）</li>
+</ul>
+<h2 id="练习3-14"><a href="#练习3-14" class="headerlink" title="练习3.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_14.cpp">练习3.14</a></h2><blockquote>
+<p>编写一段程序，用cin读入一组整数并把它们存入一个vector对象。</p>
+</blockquote>
+<p><strong>vctror对象能高效增长，在定义时设定其大小意义不大。开始时创建空vector，运行时再动态添加元素。</strong></p>
+<h2 id="练习3-15"><a href="#练习3-15" class="headerlink" title="练习3.15"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_15.cpp">练习3.15</a></h2><blockquote>
+<p>改写上题的程序，不过这次读入的是字符串。</p>
+</blockquote>
+<h2 id="练习3-16"><a href="#练习3-16" class="headerlink" title="练习3.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_16.cpp">练习3.16</a></h2><blockquote>
+<p>编写一段程序，把练习3.13中vector对象的容量和具体内容输出出来。检验你之前的回答是否正确，如果不对，回过头重新学习3.3.1节（第87页）知道弄明白错在何处为止。</p>
+</blockquote>
+<h2 id="练习3-17"><a href="#练习3-17" class="headerlink" title="练习3.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_17.cpp">练习3.17</a></h2><blockquote>
+<p>从cin读入一组词并把它们存入一个vector对象，然后设法把所有词都改写为大写形式。输出改变后的结果，每个词占一行。</p>
+</blockquote>
+<h2 id="练习3-18"><a href="#练习3-18" class="headerlink" title="练习3.18"></a>练习3.18</h2><blockquote>
+<p>下面的程序合法吗？如果不合法，你准备如何修改？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; ivec;</span><br><span class="line">ivec[<span class="number">0</span>] = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
+
+<p>不合法（ivec是空vector对象，对其执行下标操作是非法行为）。修正方式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ivec.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-19"><a href="#练习3-19" class="headerlink" title="练习3.19"></a>练习3.19</h2><blockquote>
+<p>如果想定义一个含有10个元素的vector对象，所有元素的值都是42，请列举出三种不同的实现方法，哪种方式更好呢？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">ivec1</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec2&#123; <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec3;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">    ivec<span class="number">3.</span><span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+<p>第一种方式最好。写法简洁。</p>
+<h2 id="练习3-20"><a href="#练习3-20" class="headerlink" title="练习3.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_20.cpp">练习3.20</a></h2><blockquote>
+<p>读入一组整数并把它们存入一个vector对象，将每对相邻整数的和输出出来。改写你的程序，这次要求先输出第1个和最后1个元素的和，接着输出第2个和倒数第2个元素的和，以此类推。</p>
+</blockquote>
+<h2 id="练习3-21"><a href="#练习3-21" class="headerlink" title="练习3.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_21.cpp">练习3.21</a></h2><blockquote>
+<p>请使用迭代器重做3.3.3节（第94页）的第一个练习。</p>
+</blockquote>
+<p>迭代器的总结（本质上就是指针）：</p>
+<ul>
+<li>类似于指针，解引用运算符*，可以获取迭代器指向的内容。</li>
+<li>使用迭代器的循环体是用<code>!=</code>作为判断条件（像c或者java使用下标，多是用<code>&lt;</code>）。因为C++中标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，而只有string和vector某些库才有下标运算符。</li>
+<li>容器为空时，begin和end返回的是同一个迭代器（尾后迭代器）。</li>
+<li>尾后迭代器指示的是不存在的“尾后”元素，实际并不指示某个元素，因此不能进行递增或者解引用操作。</li>
+<li>只需读操作时，可用cbegin和cend函数。</li>
+<li>箭头运算符是结合解引用和成员访问两个操作，即<code>it-&gt;men</code>等同于<code>(*it).men</code>。</li>
+<li>使用了迭代器的循环体，不要向其所属的容器添加元素。例如，在循环体中向vector对象push_back，这会导致迭代器失效。（类似的，也不能在范围for循环中向vector对象添加元素）</li>
+</ul>
+<h2 id="练习3-22"><a href="#练习3-22" class="headerlink" title="练习3.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_22.cpp">练习3.22</a></h2><blockquote>
+<p>修改之前那个输出text第一段的程序，首先把text的第一段全都改成大写形式，然后输出它。</p>
+</blockquote>
+<h2 id="练习3-23"><a href="#练习3-23" class="headerlink" title="练习3.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_23.cpp">练习3.23</a></h2><blockquote>
+<p>编写一段程序，创建一个含有10个整数的vector对象，然后使用迭代器将所有元素的值都变成原来的两倍。输出vector对象的内容，检验程序是否正确。</p>
+</blockquote>
+<h2 id="练习3-24"><a href="#练习3-24" class="headerlink" title="练习3.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_24.cpp">练习3.24</a></h2><blockquote>
+<p>请使用迭代器重做3.3.3节（第94页）的最后一个练习。</p>
+</blockquote>
+<h2 id="练习3-25"><a href="#练习3-25" class="headerlink" title="练习3.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_25.cpp">练习3.25</a></h2><blockquote>
+<p>3.3.3节（第93页）划分分数段的程序是使用下标运算符实现的，请利用迭代器改写该程序并实现完全相同的功能。</p>
+</blockquote>
+<h2 id="练习3-26"><a href="#练习3-26" class="headerlink" title="练习3.26"></a>练习3.26</h2><blockquote>
+<p>在100页的二分搜索程序中，为什么用的是 mid &#x3D; beg + (end - beg) &#x2F; 2，而非 mid &#x3D; (beg + end) &#x2F; 2 ; ?</p>
+</blockquote>
+<p>因为两个迭代器之间支持的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>，而没有<code>+</code> 。<code>end - beg</code> 相减的结果是之间的距离，将之除以2然后与beg相加，表示将beg移动到一半的位置。</p>
+<p>迭代器运算的理解：迭代器可以加减一个数（包括加减复合赋值运算符），但两个迭代器之间的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>关系运算符。</p>
+<h2 id="练习3-27"><a href="#练习3-27" class="headerlink" title="练习3.27"></a>练习3.27</h2><blockquote>
+<p>假设txt_size是一个无参数的函数，它的返回值是int。请回答下列哪个定义是非法的？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> buf_size = <span class="number">1024</span>;</span><br><span class="line">(a) <span class="type">int</span> ia[buf_size];</span><br><span class="line">(b) <span class="type">int</span> ia[<span class="number">4</span> * <span class="number">7</span> - <span class="number">14</span>];</span><br><span class="line">(c) <span class="type">int</span> ia[<span class="built_in">txt_size</span>()];</span><br><span class="line">(d) <span class="type">char</span> st[<span class="number">11</span>] = <span class="string">&quot;fundamental&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 非法。纬度必须是一个常量表达式。</li>
+<li>(b) 合法。</li>
+<li>(c) 非法。txt_size返回的是int，不是constexpr int。</li>
+<li>(d) 非法。数组的大小应该是12，字符串字面值末尾还有个空字符&#39;\0&#39;。</li>
+</ul>
+<h2 id="练习3-28"><a href="#练习3-28" class="headerlink" title="练习3.28"></a>练习3.28</h2><blockquote>
+<p>下列数组中元素的值是什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string sa[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> ia[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	string sa2[<span class="number">10</span>];</span><br><span class="line">	<span class="type">int</span> ia2[<span class="number">10</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>sa的元素值全部为空字符串，ia的元素值全部为0。sa2的元素值全部为空字符串，ia2的元素没有被初始化，初值全部未定义。</p>
+<h2 id="练习3-29"><a href="#练习3-29" class="headerlink" title="练习3.29"></a>练习3.29</h2><blockquote>
+<p>相比于vector来说，数组有哪些缺点，请列举一些。</p>
+</blockquote>
+<ul>
+<li>数组的大小是固定的，不能随意增加元素</li>
+<li>不允许拷贝和赋值</li>
+<li>没有像vector那样的API</li>
+</ul>
+<h2 id="练习3-30"><a href="#练习3-30" class="headerlink" title="练习3.30"></a>练习3.30</h2><blockquote>
+<p>指出下面代码中的索引错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">size_t</span> array_size = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> ia[array_size];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> ix = <span class="number">1</span>; ix &lt;= array_size; ++ix)</span><br><span class="line">	ia[ix] = ix;</span><br></pre></td></tr></table></figure>
+
+<p>当ix等于10时，表达式ia[ix]属于未定义行为（UB），下标越界。</p>
+<p><strong>通常将数组下标类型定义size_t，size_t定义在cstddef头文件，是一种机器相关的无符号类型，可以表示内存中任意对象的大小（因为被设计得足够大）。</strong></p>
+<h2 id="练习3-31"><a href="#练习3-31" class="headerlink" title="练习3.31"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_31.cpp">练习3.31</a></h2><blockquote>
+<p>编写一段程序，定义一个含有10个int的数组，令每个元素的值就是其下标值。</p>
+</blockquote>
+<h2 id="练习3-32"><a href="#练习3-32" class="headerlink" title="练习3.32"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_32.cpp">练习3.32</a></h2><blockquote>
+<p>将上一题刚刚创建的数组拷贝给另外一个数组。利用vector重写程序，实现类似的功能。</p>
+</blockquote>
+<h2 id="练习3-33"><a href="#练习3-33" class="headerlink" title="练习3.33"></a>练习3.33</h2><blockquote>
+<p>对于104页的程序来说，如果不初始化scores将会发生什么？</p>
+</blockquote>
+<p>数组中所有元素的值将会未定义（有可能不是0，会有脏数据存在）。</p>
+<h2 id="练习3-34"><a href="#练习3-34" class="headerlink" title="练习3.34"></a>练习3.34</h2><blockquote>
+<p>假定p1和p2都指向同一个数组中的元素，则下面程序的功能是什么？什么情况下该程序是非法的？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">p1 += p2 - p1;</span><br></pre></td></tr></table></figure>
+
+<p>将p1移动到p2的位置，即指向同一个地址。只要p1、p2值合法，该程序任何情况下都合法。</p>
+<h2 id="练习3-35"><a href="#练习3-35" class="headerlink" title="练习3.35"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_35.cpp">练习3.35</a></h2><blockquote>
+<p>编写一段程序，利用指针将数组中的元素置为0。</p>
+</blockquote>
+<p><strong>数组与指针的总结：</strong></p>
+<ul>
+<li>数组名可以当作是首指针（编译器会自动将其转换成一个指向数组首元素的指针（函数传参、赋值给指针、表达式），但本质上数组名自身不是指针）</li>
+<li>类似迭代器，也可以获取数组的首尾指针（假设数组int array[10]&#x3D;{xxx}。<strong>类似尾迭代器，注意尾指针不指向具体元素，不能对其进行解引用或递增操作</strong>）<ul>
+<li><code>int *begin = array; int *end = &amp;array[10];</code></li>
+<li><code>int *begin = begin(array); int *end = end(array);</code> <strong>begin和end函数定义在iterator头文件（数组不是类类型，没有类似vector迭代器那种成员函数）</strong></li>
+</ul>
+</li>
+<li>两个指针相减的结果类型是ptrdiff_t，是一种带符号类型，和size_t一样也定义在cstddef头文件。</li>
+<li><strong>只要指针指向数组元素（或者尾元素的下一位置，即尾指针），都可以执行下标运算（当然，需要保证运算后的指针也是指向同一数组或者尾指针）。像数组这种C++语言内置的下标运算允许处理负值，但像标准库类型string和vector则限定下标是无符号类型。</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p = &amp;array[<span class="number">2</span>]; <span class="comment">// p指向索引为2的元素</span></span><br><span class="line"><span class="type">int</span> j = p[<span class="number">1</span>];       <span class="comment">// p[1]等价于*(p+1)，即array[3]</span></span><br><span class="line"><span class="type">int</span> k = p[<span class="number">-2</span>];      <span class="comment">// 即array[0]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-36"><a href="#练习3-36" class="headerlink" title="练习3.36"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_36.cpp">练习3.36</a></h2><blockquote>
+<p>编写一段程序，比较两个数组是否相等。再写一段程序，比较两个vector对象是否相等。</p>
+</blockquote>
+<h2 id="练习3-37"><a href="#练习3-37" class="headerlink" title="练习3.37"></a>练习3.37</h2><blockquote>
+<p>下面的程序是何含义，程序的输出结果是什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> ca[] = &#123; <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *cp = ca;</span><br><span class="line"><span class="keyword">while</span> (*cp) &#123;</span><br><span class="line">    cout &lt;&lt; *cp &lt;&lt; endl;</span><br><span class="line">    ++cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>会将ca字符数组中的元素打印出来，但是因为没有空字符&#39;\0&#39;的存在，循环不会终止，会打印出来很多无意义脏数据。</p>
+<h2 id="练习3-38"><a href="#练习3-38" class="headerlink" title="练习3.38"></a>练习3.38</h2><blockquote>
+<p>在本节中我们提到，将两个指针相加不但是非法的，而且也没什么意义。请问为什么两个指针相加没什么意义？</p>
+</blockquote>
+<p><strong>指针本质就是地址</strong>，将两个指针相减可以表示两个指针(在同一数组中)的距离，将指针加上一个整数也可以表示移动这个指针到某一位置。<strong>但是两个指针相加后的地址并没有逻辑上的意义。</strong></p>
+<p><a href="https://stackoverflow.com/questions/2935038/why-cant-i-add-pointers">参考资料</a></p>
+<h2 id="练习3-39"><a href="#练习3-39" class="headerlink" title="练习3.39"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_39.cpp">练习3.39</a></h2><blockquote>
+<p>编写一段程序，比较两个string对象。再编写一段程序，比较两个C风格字符串的内容。</p>
+</blockquote>
+<p><strong>C标准库string函数（头文件cstring）</strong></p>
+<ul>
+<li>strlen(p) 返回p的长度，不计算空字符</li>
+<li>strcmp(p1,p2) 比较p1和p2，<code>p1==p2</code>则返回0；<code>p1&gt;p2</code>则返回正值；<code>p1&lt;p2</code>则返回负值</li>
+<li>strcat(p1,p2) p2附加到p1后，再返回p1</li>
+<li>strcpy(p1,p2) p2拷贝给p1，再返回p1</li>
+</ul>
+<p><strong>注意这些函数的指针必须指向以空字符作为结束的数组</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> ca[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125; <span class="comment">// 没有以空字符结束。</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">strlen</span>(ca) &lt;&lt; endl; <span class="comment">// 严重错误，没有空字符，该函数有可能在内存中不断向前寻找，直至找到空字符。</span></span><br><span class="line"><span class="comment">// 修正方式：用字符串字面值给ca赋初值&quot;ab&quot;。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-40"><a href="#练习3-40" class="headerlink" title="练习3.40"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_40.cpp">练习3.40</a></h2><blockquote>
+<p>编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前面两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组当中。</p>
+</blockquote>
+<h2 id="练习3-41"><a href="#练习3-41" class="headerlink" title="练习3.41"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_41.cpp">练习3.41</a></h2><blockquote>
+<p>编写一段程序，用整型数组初始化一个vector对象。</p>
+</blockquote>
+<h2 id="练习3-42"><a href="#练习3-42" class="headerlink" title="练习3.42"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_42.cpp">练习3.42</a></h2><blockquote>
+<p>编写一段程序，将含有整数元素的vector对象拷贝给一个整型数组。</p>
+</blockquote>
+<p><strong>使用数组初始化vector对象（不能用数组初始化数组；不能用vector对象初始化数组）</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> array[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(begin(array), end(array))</span></span>; <span class="comment">// 使用首尾指针</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">subv</span><span class="params">(array + <span class="number">1</span>, array + <span class="number">3</span>)</span></span>; <span class="comment">// 数组中的部分也可用来初始化</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>混用string对象和C风格字符串</strong></p>
+<ul>
+<li>允许使用以空字符结束的字符数组来初始化或赋值给string对象</li>
+<li>string对象的加法运算允许以空字符结束的字符数组作为其中一个运算对象（加法运算符「+」两侧至少有一个string对象）</li>
+<li>string复合赋值运算中允许以空字符结束的字符数组作为右侧运算对象</li>
+<li>string对象不能直接初始化指向字符的指针，需要使用成员函数<code>c_str</code>返回指针，如<code>const char *str = s.c_str();</code></li>
+</ul>
+<h2 id="练习3-43"><a href="#练习3-43" class="headerlink" title="练习3.43"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_43.cpp">练习3.43</a></h2><blockquote>
+<p>编写3个不同版本的程序，令其均能输出ia的元素。版本1使用范围for语句管理迭代过程；版本2和版本3都使用普通for语句，其中版本2要求使用下标运算符，版本3要求使用指针。此外，在所有3个版本的程序中都要直接写出数据类型，而不能使用类型别名、auto关键字和decltype关键字。</p>
+</blockquote>
+<h2 id="练习3-44"><a href="#练习3-44" class="headerlink" title="练习3.44"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_44.cpp">练习3.44</a></h2><blockquote>
+<p>改写上一个练习中的程序，使用类型别名来代替循环控制变量的类型。</p>
+</blockquote>
+<h2 id="练习3-45"><a href="#练习3-45" class="headerlink" title="练习3.45"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_45.cpp">练习3.45</a></h2><blockquote>
+<p>再一次改写程序，这次使用auto关键字。</p>
+</blockquote>
+<p><strong>多维数组和指针的总结</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 多维数组本质上是数组的数组，初始化时内层嵌套的花括号也可去掉</span></span><br><span class="line"><span class="type">int</span> ia[<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">1</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用范围for语句处理多维数组时，要将控制变量声明为引用类型（为避免编译器将其转换成指针）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;row : ia)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;col : row)</span><br><span class="line">        ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义指向多维数组的指针注意写法（手动写较易写错，建议使用auto或者decltype）</span></span><br><span class="line"><span class="type">int</span> *ip[<span class="number">2</span>];          <span class="comment">// 整型指针的数组</span></span><br><span class="line"><span class="built_in">int</span>(*ip)[<span class="number">2</span>];         <span class="comment">// 指针，指向含有2个整数的数组</span></span><br><span class="line"><span class="built_in">int</span>(&amp;ip)[<span class="number">2</span>] = ia[<span class="number">0</span>]; <span class="comment">// 引用，指向含有2个整数的数组</span></span><br><span class="line"><span class="comment">// 类型别名简化写法，下面两行等同于int(*ip)[2];</span></span><br><span class="line"><span class="keyword">using</span> int_array = <span class="type">int</span>[<span class="number">2</span>];</span><br><span class="line">int_array *ip;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第三章</tag>
+        <tag>字符串</tag>
+        <tag>向量</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ Primer 第五版：第五章「语句」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap5/</url>
     <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
@@ -10196,35 +10203,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>练习总结</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
       </tags>
   </entry>
   <entry>
@@ -10560,6 +10538,35 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -10846,59 +10853,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>qt6</tag>
         <tag>开发</tag>
         <tag>第一版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
       </tags>
   </entry>
   <entry>
@@ -11311,6 +11265,40 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -11354,40 +11342,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>software</category>
         <category>blender</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
   </entry>
   <entry>
     <title>Blender实战案例总结</title>
@@ -11439,30 +11393,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>software</category>
         <category>blender</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Blender常见问题总结——Q&amp;A</title>
-    <url>/software/blender/q-a/</url>
-    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
-<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
-<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
-<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
-<ul>
-<li>CPU比GPU性能差很多</li>
-<li>渲染Volumetrics场景</li>
-</ul>
-<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
-      </tags>
   </entry>
   <entry>
     <title>Blender界面工具操作总结</title>
@@ -11823,6 +11753,83 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -11998,7 +12005,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#x65;&#114;&#107;&#x69;&#110;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#x69;&#x73;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
