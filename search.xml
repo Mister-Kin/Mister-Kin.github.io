@@ -218,8 +218,9 @@
     <p class="tag-bookmark-page">PDF工具</p>
     </div>
     <a href="https://www.sumatrapdfreader.org/">Sumatra PDF</a>
-    <a href="http://www.daokeyuedu.com/index.php?act=download">稻壳阅读器</a>
     <a href="https://www.cnblogs.com/stronghorse">老马的原创空间（电子书制作工具）</a>
+    <a href="https://github.com/ocrmypdf/OCRmyPDF">OCRmyPDF</a>
+    <del><a href="http://www.daokeyuedu.com/index.php?act=download">稻壳阅读器（被金山法务起诉导致下架）</a></del>
 </div>
 
 <div class="text-box">
@@ -699,9 +700,11 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">Windows管理优化工具</p>
     </div>
+    <a href="https://github.com/Atlas-OS/Atlas">AtlasOS</a>
     <a href="https://bitsum.com/download-process-lasso/">进程管理Process Lasso</a>
     <a href="https://github.com/henrypp/memreduct/releases">内存清理memreduct</a>
     <a href="https://forums.guru3d.com/threads/windows-power-plan-settings-explorer-utility.416058/">图形化电源计划设置PowerSettingsExplorer</a>
+    <a href="https://windhawk.net/">Windhawk</a>
 </div>
 
 <div class="text-box">
@@ -971,6 +974,14 @@
     <a href="https://10000.gd.cn/#/speed">广东电信宽带测速平台</a>
     <a href="http://speed.unicomgd.com:8080/">联通宽带测试平台</a>
     <a href="https://qps.itzmx.com/">会话数（连接数）在线测试</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">蓝屏BSOD排查</p>
+    </div>
+    <a href="https://apps.microsoft.com/detail/9pgjgd53tn86?hl=zh-CN&gl=CN">WinDbg</a>
+    <a href="https://www.nirsoft.net/utils/blue_screen_view.html">BlueScreenView</a>
 </div>
 
 </div>
@@ -2470,6 +2481,143 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Git总结笔记</title>
+    <url>/code/git/</url>
+    <content><![CDATA[<h1 id="语言编码的区别">1 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><ul>
+<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
+<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
+</ul>
+<h1 id="三维模型等二进制文件的版本控制">2 &nbsp&nbsp<a href="#三维模型等二进制文件的版本控制" class="headerlink" title="三维模型等二进制文件的版本控制"></a>三维模型等二进制文件的版本控制</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
+<p>Perforce Helix Core官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
+<h1 id="linux和windows之间的文件换行符">3 &nbsp&nbsp<a href="#linux和windows之间的文件换行符" class="headerlink" title="linux和windows之间的文件换行符"></a>linux和windows之间的文件换行符</h1><p>windows中的换行符（dos）是\r\n，而linux中的换行符（unix）是\n。若不转换，git可能会视作为被更改的文件，从而造成大量无意义的commit。此外，windows中bat脚本文件要求换行符为\r\n，否则cmd解释器无法正确解析，导致无法正确执行脚本。</p>
+<p>单文件转换：</p>
+<ul>
+<li>\r\n转\n：<code>dos2unix test.c</code></li>
+<li>\n转\r\n：<code>unix2dos test.c</code></li>
+</ul>
+<p>批量转换：</p>
+<ul>
+<li>\r\n转\n：<code>find . -type f -exec dos2unix &#123;&#125; \;</code></li>
+<li>\n转\r\n：<code>find . -type f -exec unix2dos &#123;&#125; \;</code></li>
+</ul>
+<p>详细命令解释：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find .: Find anything in this directory, including its subdirectories, and anything in those subdirectories as well (recursion)</span><br><span class="line">-type f: Only return &#x27;regular file&#x27; names. Exclude folder names from the results.</span><br><span class="line">-exec: Execute the following command for every result. Everything beyond this point should be treated as part of that command until the ; character is found.</span><br><span class="line">dos2unix: dos2unix will be executed with the following options...</span><br><span class="line">-k: Keep the date stamp of the output file the same as the input file</span><br><span class="line">-s: Skip binary files (images, archives, etc.). This option is included by default, but I use it anyway in case that default were different on some systems (e.g. OS X v. Debian v. CentOS v. Ubuntu v. ...).</span><br><span class="line">-o: Write the changes directly to the file, rather than creating a new file with the data in the new format.</span><br><span class="line">&#123;&#125;: This tells find to insert the filename it has found as a parameter of the dos2unix call.</span><br><span class="line">&#x27;;&#x27;: Tell find that the params for dos2unix have ended. Anything beyond this point will again be treated as a parameter of find. 反斜杠\是用于转移分号;</span><br><span class="line">&#x27;&#123;&#125;&#x27; is a placeholder which indicates where in the command you want the filename(s) to be inserted, and &#x27;+&#x27; terminates the said command. You can also run dos2unix once for each filename (by changing &#x27;+&#x27; with &#x27;;&#x27;), but since dos2unix accepts an arbitrary number of input arguments, it’s better to use it (as it avoids spawning many processes).</span><br></pre></td></tr></table></figure>
+
+<h2 id="换行符问题导致git同步错误">3.1 &nbsp&nbsp<a href="#换行符问题导致git同步错误" class="headerlink" title="换行符问题导致git同步错误"></a>换行符问题导致git同步错误</h2><p>若出现本地仓库文件和远程仓库文件出现crlf和lf不相同的问题，会导致git代码同步报错。</p>
+<p>解决方法：使用editorconfig文件规定文档。</p>
+<h1 id="Git配置">4 &nbsp&nbsp<a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><h2 id="编辑git特定的config项">4.1 &nbsp&nbsp<a href="#编辑git特定的config项" class="headerlink" title="编辑git特定的config项"></a>编辑git特定的config项</h2><p>打开<code>%USERPROFILE%\.gitconfig</code>文件，编辑特定的设置项即可。</p>
+<h2 id="代理设置">4.2 &nbsp&nbsp<a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br><span class="line">git config --global http.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line">git config --global https.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于git的重命名操作">4.3 &nbsp&nbsp<a href="#关于git的重命名操作" class="headerlink" title="关于git的重命名操作"></a>关于git的重命名操作</h2><p>git默认对大小写不敏感，一般可通过两种方式避免git未识别大小写操作。</p>
+<p>方式1：中间文件方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git mv（重命名索引，文件夹直接大小写重命名可能无法成功，可以用tmp做中间处理，文件直接大小写无问题）</span></span><br><span class="line">git <span class="built_in">mv</span> myfolder tmp</span><br><span class="line">git <span class="built_in">mv</span> tmp MyFolder</span><br></pre></td></tr></table></figure>
+
+<p>方式2：设置git配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="pull（拉取）">5 &nbsp&nbsp<a href="#pull（拉取）" class="headerlink" title="pull（拉取）"></a>pull（拉取）</h1><h2 id="github从远程仓库拉取">5.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="github从上游拉取未并入主干的拉取请求-pull-request">5.2 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
+
+<h1 id="clone（克隆）">6 &nbsp&nbsp<a href="#clone（克隆）" class="headerlink" title="clone（克隆）"></a>clone（克隆）</h1><h2 id="常规克隆">6.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><p>git clone http链接（可以不包含.git后缀）</p>
+<h2 id="wget从Github仓库下载特定的文件夹">6.2 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
+
+<h2 id="克隆特定分支">6.3 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br><span class="line">git <span class="built_in">clone</span> --recursive -b branch—name url</span><br></pre></td></tr></table></figure>
+
+<h2 id="克隆远程仓库中的指定文件或者文件夹">6.4 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h2><p>以克隆blender手册翻译的简中为例：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line"><span class="comment"># 为当前目录初始化一个git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加上游git链接</span></span><br><span class="line">git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line"><span class="comment"># 设置稀疏检出的筛选目录，sparse-checkout文件里写入要拉取的文件或者文件夹。匹配规则类似.gitignore</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout</span><br><span class="line"><span class="comment"># 或者使用sparse-checkout set命令设置设置稀疏检出的筛选目录</span></span><br><span class="line">git sparse-checkout <span class="built_in">set</span> <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"><span class="comment"># 开启稀疏检出</span></span><br><span class="line">git config core.sparsecheckout <span class="literal">true</span></span><br><span class="line"><span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
+
+<h1 id="commit（提交）">7 &nbsp&nbsp<a href="#commit（提交）" class="headerlink" title="commit（提交）"></a>commit（提交）</h1><h2 id="commit信息的规范化">7.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
+<ul>
+<li>chore</li>
+<li>fix</li>
+<li>feat</li>
+<li>docs</li>
+</ul>
+<h1 id="release（发布）">8 &nbsp&nbsp<a href="#release（发布）" class="headerlink" title="release（发布）"></a>release（发布）</h1><h2 id="常规发布">8.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
+<h2 id="release-note的规范化">8.2 &nbsp&nbsp<a href="#release-note的规范化" class="headerlink" title="release note的规范化"></a>release note的规范化</h2><ul>
+<li>Breaking Changes</li>
+<li>Changes</li>
+<li>New Features</li>
+<li>Features</li>
+<li>Bug Fixes</li>
+<li>Improvements</li>
+<li>Documentation（可缩写 Docs）</li>
+</ul>
+<blockquote>
+<p>注：支持……版本，英文用 Support for …… 表示</p>
+</blockquote>
+<h1 id="添加子仓库">9 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="重写历史">10 &nbsp&nbsp<a href="#重写历史" class="headerlink" title="重写历史"></a>重写历史</h1><h2 id="删除所有commit">10.1 &nbsp&nbsp<a href="#删除所有commit" class="headerlink" title="删除所有commit"></a>删除所有commit</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf .git</span><br><span class="line">git init</span><br><span class="line">git remote add origin url（仓库地址） <span class="comment"># git remote -v</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;commit message&#x27;</span></span><br><span class="line">git push --force origin master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意如果使用这种方式，强制推送到远程github仓库的话，实际查看github网站的信息，貌似并没有缩小，可能数据更新有延迟。</p>
+</blockquote>
+<p>还有另外一种方式，在github网站上删除该reop，并重新建立同名repo再推送。</p>
+<h2 id="从所有commit中清除特定文件">10.2 &nbsp&nbsp<a href="#从所有commit中清除特定文件" class="headerlink" title="从所有commit中清除特定文件"></a>从所有commit中清除特定文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --index-filter <span class="string">&#x27;git rm --cached --ignore-unmatch filename&#x27;</span> HEAD <span class="comment">#（*.pdf）</span></span><br><span class="line"><span class="built_in">rm</span> -rf .git/refs/original <span class="comment">#删除git的备份</span></span><br><span class="line">git reflog expire --all --expire=now  <span class="comment">#使所有散落的object失效</span></span><br><span class="line">git fsck --unreachable <span class="comment">#检查是否有散落的object, 验证数据库中对象的连接性和有效性</span></span><br><span class="line">git gc --aggressive --prune=now <span class="comment">#git的垃圾清理车最终删除那些对象, --aggressive 此选项将导致git gc更积极地优化存储库</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="分支管理">11 &nbsp&nbsp<a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="常规操作">11.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="多人协作的工作流">11.2 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h2><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。</p>
+<h2 id="常规分支管理项目">11.3 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Switched to a new branch &quot;dev&quot;</span></span><br><span class="line">git checkout -b dev</span><br><span class="line"><span class="comment"># Switched to a new branch &quot;hotfix&quot;</span></span><br><span class="line">git checkout -b hotfix</span><br><span class="line"><span class="comment"># 切换到主分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># 合并hotfix分支</span></span><br><span class="line">git merge hotfix</span><br><span class="line"><span class="comment"># 删除hotfix分支</span></span><br><span class="line">git branch -d hotfix</span><br></pre></td></tr></table></figure>
+
+<h1 id="切换分支时有未提交的文件">12 &nbsp&nbsp<a href="#切换分支时有未提交的文件" class="headerlink" title="切换分支时有未提交的文件"></a>切换分支时有未提交的文件</h1><p>应用场景：在dev分支进行开发编写，突然发现master分支有bug，想checkout分支（切换分支），但此时dev分支上有未提交的文件，并且也并不想现在提交。</p>
+<p>解决方案：</p>
+<ol>
+<li>在dev分支上git stash，储藏当前工作区</li>
+<li>checkout到master分支进行bug修复（新建bugfix分支时，完成后合并，删除）</li>
+<li>checkout到dev分支，git stash list</li>
+<li>git stash pop，恢复工作区（该方式恢复的同时也把stash内容删除）。（另一种方式是git stash apply（恢复）后git stash drop（删除））</li>
+</ol>
+<h1 id="远程仓库">13 &nbsp&nbsp<a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="重命名分支并推送到远程仓库">13.1 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除已经推送到远程仓库中的包含在-gitignore中的文件">13.2 &nbsp&nbsp<a href="#删除已经推送到远程仓库中的包含在-gitignore中的文件" class="headerlink" title="删除已经推送到远程仓库中的包含在.gitignore中的文件"></a>删除已经推送到远程仓库中的包含在.gitignore中的文件</h2><p>.gitignore文件中添加新的文件过滤，但是该文件在之前已经提交到远程仓库分支里，我们需要将远程分支代码中的这个文件移除。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.为避免冲突，同步已下远程仓库最新代码</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.在本地项目目录下删除git缓存</span></span><br><span class="line">git <span class="built_in">rm</span> -r --cached .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.add所有文件：输入以下命令，再次将项目中所有文件添加到本地仓库缓存中</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.本地commit</span></span><br><span class="line">git commit -m <span class="string">&quot;filter new files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.push到远程仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<h2 id="unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054">13.3 &nbsp&nbsp<a href="#unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054"></a>unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>这是由于Http协议错误，刷新缓存即可解决</p>
+<div class="tabs" id="flush_dns"><ul class="nav-tabs"><li class="tab active"><a href="#flush_dns-1">Windows</a></li><li class="tab"><a href="#flush_dns-2">Mac</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flush_dns-1"><p>使用终端命令窗口运行命令：</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="flush_dns-2"><p>使用终端命令窗口运行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall -HUP mDNSResponder</span><br><span class="line"><span class="built_in">sudo</span> dscacheutil -flushcache</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="更改已提交到远程仓库的commit消息（修改错别字或添加信息）">13.4 &nbsp&nbsp<a href="#更改已提交到远程仓库的commit消息（修改错别字或添加信息）" class="headerlink" title="更改已提交到远程仓库的commit消息（修改错别字或添加信息）"></a>更改已提交到远程仓库的commit消息（修改错别字或添加信息）</h2><ol>
+<li>git rebase -i HEAD~n(N为最近n个提交)</li>
+<li>git会生成一个文件在编辑器打开，在需要修改的commit那一行中，将pick修改为reword，保存关闭</li>
+<li>之后会弹出一个文件，在编辑器修改后保存关闭</li>
+<li>之后强制push到远程仓库</li>
+</ol>
+<h2 id="RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8">13.5 &nbsp&nbsp<a href="#RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8" class="headerlink" title="RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)"></a>RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)</h2><p>因为git文件过大造成的错误，默认缓冲区是1M大小。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000 <span class="comment"># 设置为500M</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="已经提交Pull-Request的如何二次修改覆盖">13.6 &nbsp&nbsp<a href="#已经提交Pull-Request的如何二次修改覆盖" class="headerlink" title="已经提交Pull Request的如何二次修改覆盖"></a>已经提交Pull Request的如何二次修改覆盖</h2><ol>
+<li>本地git reset撤销提交，然后重新完成二次修改</li>
+<li>push -f强行覆盖掉你远程的commit</li>
+<li>上游仓库的PR会自动更新相关内容（例如xx强制push commit）</li>
+<li>有其他的新内容commit，push普通推送也能自动追加到上游仓库的PR中。</li>
+</ol>
+<h1 id="Github-LFS">14 &nbsp&nbsp<a href="#Github-LFS" class="headerlink" title="Github LFS"></a>Github LFS</h1><p>Github LFS是收费产品，免费账户只有1G的存储空间和带宽流量（本人已弃用）。</p>
+<p>仓库一旦使用LFS存储，无法直接通过wget或者curl工具下载原文件，只会下载到一个文本指针文件，指向LFS的存储云地址。</p>
+<h2 id="为Git启用LFS">14.1 &nbsp&nbsp<a href="#为Git启用LFS" class="headerlink" title="为Git启用LFS"></a>为Git启用LFS</h2><p>Windows Git LFS大文件管理：windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code>。</p>
+<p>ubuntu安装LFS包：<code>sudo apt install git-lfs</code>。</p>
+<h2 id="LFS基本使用">14.2 &nbsp&nbsp<a href="#LFS基本使用" class="headerlink" title="LFS基本使用"></a>LFS基本使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加LFS需要管理的大文件，如果文件名就是*.txt，则需要用双引号&quot;&quot;包含</span></span><br><span class="line"><span class="comment"># 若无引号，通配符*会被shell扩展，导致LFS跟踪所有txt文件</span></span><br><span class="line">git lfs track test.txt</span><br><span class="line">git lfs track *.txt</span><br><span class="line">git lfs track <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 取消LFS跟踪文件</span></span><br><span class="line">git lfs untrack *.txt</span><br><span class="line"><span class="comment"># 常规git操作都可以处理LFS文件，显式指定lfs命令可提高速度</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line">git pull origin main</span><br><span class="line"><span class="comment"># git lfs clone是检出（checkout）完成后再批量下载所有必需的 Git LFS 文件。利用并行下载的优势，显著减少产生的 HTTP 请求和进程的数量</span></span><br><span class="line">git lfs <span class="built_in">clone</span></span><br><span class="line"><span class="comment"># 同样地，lfs提供拉取速度</span></span><br><span class="line">git lfs pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除lfs，然后手动删除.gitattribute中关于lfs的条目</span></span><br><span class="line">git lfs uninstall</span><br><span class="line"><span class="comment"># 重组织所有文件，可以使标记为lfs文件恢复到正常状态，但不会影响到不关联的文件。</span></span><br><span class="line">git add --renormalize .</span><br><span class="line"><span class="comment"># 重新提交</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h1 id="CI-CD">15 &nbsp&nbsp<a href="#CI-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h1><p>重复繁琐的工作交予自动CI&#x2F;CD完成。</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.<br>[6] How to run dos2unix on all files with all extensions in a directory and its sun-directories?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun">https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun</a>.<br>[7] How to pull a pull request from upstream in github[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github">https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github</a>.<br>[8] 详解 Git 大文件存储（Git LFS）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/146683392">https://zhuanlan.zhihu.com/p/146683392</a>.<br>[9] Git Sparse Checkout使用指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/shelutai/article/details/123116973">https://blog.csdn.net/shelutai/article/details/123116973</a>.<br>[10] git-sparse-checkout[EB&#x2F;OL]. <a href="https://www.git-scm.com/docs/git-sparse-checkout">https://www.git-scm.com/docs/git-sparse-checkout</a>.<br>[11] Simple steps to uninstall Git LFS from your repository[EB&#x2F;OL]. <a href="https://github.com/git-lfs/git-lfs/issues/3026">https://github.com/git-lfs/git-lfs/issues/3026</a>.<br>[12] zh-cn 与 zh-hans 是什么关系、有什么区别？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/21980689">https://www.zhihu.com/question/21980689</a>.<br>[13] github 提交pull request操作后, 如果想对代码再次进行修改，该如何操作？[EB&#x2F;OL]. <a href="https://segmentfault.com/q/1010000012129041">https://segmentfault.com/q/1010000012129041</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>git</tag>
+        <tag>github</tag>
+        <tag>代码管理</tag>
+        <tag>版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker</title>
     <url>/code/docker/</url>
     <content><![CDATA[<ul>
@@ -2611,16 +2759,91 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h2 id="重启相关服务">2.6 &nbsp&nbsp<a href="#重启相关服务" class="headerlink" title="重启相关服务"></a>重启相关服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
 
-<h1 id="Docker搭建Redis">3 &nbsp&nbsp<a href="#Docker搭建Redis" class="headerlink" title="Docker搭建Redis"></a>Docker搭建Redis</h1><h2 id="Redis容器清理缓存">3.1 &nbsp&nbsp<a href="#Redis容器清理缓存" class="headerlink" title="Redis容器清理缓存"></a>Redis容器清理缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过可交互终端进入redis容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it redis /bin/bash</span><br><span class="line"><span class="comment"># 登录容器的redis服务</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br><span class="line"><span class="comment"># 若Redis设置有密码使用该命令，否则执行 keys *会报错：(error) NOAUTH Authentication required。</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379 -a redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有key值</span></span><br><span class="line">keys *</span><br><span class="line"><span class="comment"># 删除指定索引的值</span></span><br><span class="line">del key</span><br><span class="line"><span class="comment"># 清除当前数据库缓存</span></span><br><span class="line">flushdb</span><br><span class="line"><span class="comment"># 清除整个redis所有缓存</span></span><br><span class="line">flushall</span><br></pre></td></tr></table></figure>
+<h1 id="Docker搭建Gitea">3 &nbsp&nbsp<a href="#Docker搭建Gitea" class="headerlink" title="Docker搭建Gitea"></a>Docker搭建Gitea</h1><h2 id="创建Gitea的mysql数据库数据文件夹">3.1 &nbsp&nbsp<a href="#创建Gitea的mysql数据库数据文件夹" class="headerlink" title="创建Gitea的mysql数据库数据文件夹"></a>创建Gitea的mysql数据库数据文件夹</h2><p>在<code>root</code>账户路径下，创建<code>mysql</code>文件夹和子目录：<code>mkdir -p /root/mysql/conf.d</code></p>
+<p>创建<code>my.ini</code>：<code>nano /root/mysql/conf.d/my.ini</code></p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="comment">###### [client]配置模块 ######</span></span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="attr">socket</span>=/var/lib/mysql/mysql.sock</span><br><span class="line"></span><br><span class="line"><span class="comment">###### [mysql]配置模块 ######</span></span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置MySQL客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="attr">socket</span>=/var/lib/mysql/mysql.sock</span><br><span class="line"></span><br><span class="line"><span class="comment">###### [mysqld]配置模块 ######</span></span><br><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">user</span>=mysql</span><br><span class="line"><span class="comment"># 设置sql模式 sql_mode模式引起的分组查询出现*this is incompatible with sql_mode=only_full_group_by，这里最好剔除ONLY_FULL_GROUP_BY</span></span><br><span class="line"><span class="attr">sql_mode</span>=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</span><br><span class="line"><span class="attr">datadir</span>=/var/lib/mysql</span><br><span class="line"><span class="attr">socket</span>=/var/lib/mysql/mysql.sock</span><br><span class="line"><span class="attr">server-id</span>= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># MySQL8 的密码认证插件 如果不设置低版本navicat无法连接</span></span><br><span class="line"><span class="comment">#default_authentication_plugin=mysql_native_password</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁用符号链接以防止各种安全风险</span></span><br><span class="line"><span class="attr">symbolic-links</span>=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为8比特编码的latin1字符集</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8mb4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库字符集对应一些排序等规则，注意要和 character-set-server 对应</span></span><br><span class="line"><span class="attr">collation-server</span> = utf8mb4_unicode_ci</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0: 表名将按指定方式存储，并且比较区分大小写;</span></span><br><span class="line"><span class="comment"># 1: 表名以小写形式存储在磁盘上，比较不区分大小写；</span></span><br><span class="line"><span class="attr">lower_case_table_names</span>=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">max_allowed_packet</span>=<span class="number">16</span>M</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置时区</span></span><br><span class="line"><span class="attr">default-time_zone</span>=<span class="string">&#x27;+8:00&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="Docker搭建DataEase">4 &nbsp&nbsp<a href="#Docker搭建DataEase" class="headerlink" title="Docker搭建DataEase"></a>Docker搭建DataEase</h1><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
-<h2 id="下载DataEase部署脚本。">4.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h2><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1.x</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
+<h2 id="创建Gitea数据文件夹和配置文件">3.2 &nbsp&nbsp<a href="#创建Gitea数据文件夹和配置文件" class="headerlink" title="创建Gitea数据文件夹和配置文件"></a>创建Gitea数据文件夹和配置文件</h2><p>在<code>root</code>账户路径下，创建<code>gitea</code>文件夹和子目录：<code>mkdir -p /root/gitea/gitea/conf</code></p>
+<p>创建<code>app.ini</code>文件：<code>nano /root/gitea/gitea/conf/app.ini</code></p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">APP_NAME</span> = Gitea: Git with a cup of tea</span><br><span class="line"><span class="attr">RUN_MODE</span> = prod</span><br><span class="line"><span class="attr">WORK_PATH</span> = /data/gitea</span><br><span class="line"></span><br><span class="line"><span class="section">[repository]</span></span><br><span class="line"><span class="attr">ROOT</span> = /data/git/repositories</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.local]</span></span><br><span class="line"><span class="attr">LOCAL_COPY_PATH</span> = /data/gitea/tmp/local-repo</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.upload]</span></span><br><span class="line"><span class="attr">TEMP_PATH</span> = /data/gitea/uploads</span><br><span class="line"></span><br><span class="line"><span class="section">[server]</span></span><br><span class="line"><span class="attr">APP_DATA_PATH</span> = /data/gitea</span><br><span class="line"><span class="attr">DOMAIN</span> = localhost</span><br><span class="line"><span class="attr">SSH_DOMAIN</span> = localhost</span><br><span class="line"><span class="attr">HTTP_PORT</span> = <span class="number">3000</span></span><br><span class="line"><span class="attr">ROOT_URL</span> = http://<span class="number">192.168</span>.<span class="number">1.10</span>:<span class="number">3000</span>/</span><br><span class="line"><span class="attr">DISABLE_SSH</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">SSH_PORT</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">SSH_LISTEN_PORT</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">LFS_START_SERVER</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">LFS_JWT_SECRET</span> =</span><br><span class="line"><span class="attr">OFFLINE_MODE</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[database]</span></span><br><span class="line"><span class="attr">PATH</span> = /data/gitea/gitea.db</span><br><span class="line"><span class="attr">DB_TYPE</span> = mysql</span><br><span class="line"><span class="attr">HOST</span> = database:<span class="number">3306</span></span><br><span class="line"><span class="attr">NAME</span> = gitea</span><br><span class="line"><span class="attr">USER</span> = gitea</span><br><span class="line"><span class="attr">PASSWD</span> = normalpdxxx</span><br><span class="line"><span class="attr">LOG_SQL</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">SSL_MODE</span> = disable</span><br><span class="line"></span><br><span class="line"><span class="section">[mailer]</span></span><br><span class="line"><span class="attr">ENABLED</span> = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="section">[openid]</span></span><br><span class="line"><span class="attr">ENABLE_OPENID_SIGNIN</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">ENABLE_OPENID_SIGNUP</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[cron.update_checker]</span></span><br><span class="line"><span class="attr">ENABLED</span> = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="section">[indexer]</span></span><br><span class="line"><span class="attr">ISSUE_INDEXER_PATH</span> = /data/gitea/indexers/issues.bleve</span><br><span class="line"></span><br><span class="line"><span class="section">[session]</span></span><br><span class="line"><span class="attr">PROVIDER_CONFIG</span> = /data/gitea/sessions</span><br><span class="line"></span><br><span class="line"><span class="section">[picture]</span></span><br><span class="line"><span class="attr">AVATAR_UPLOAD_PATH</span> = /data/gitea/avatars</span><br><span class="line"><span class="attr">REPOSITORY_AVATAR_UPLOAD_PATH</span> = /data/gitea/repo-avatars</span><br><span class="line"></span><br><span class="line"><span class="section">[attachment]</span></span><br><span class="line"><span class="attr">PATH</span> = /data/gitea/attachments</span><br><span class="line"></span><br><span class="line"><span class="section">[log]</span></span><br><span class="line"><span class="attr">MODE</span> = console</span><br><span class="line"><span class="attr">LEVEL</span> = info</span><br><span class="line"><span class="attr">ROOT_PATH</span> = /data/gitea/log</span><br><span class="line"></span><br><span class="line"><span class="section">[security]</span></span><br><span class="line"><span class="attr">INSTALL_LOCK</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">INTERNAL_TOKEN</span> =</span><br><span class="line"><span class="attr">PASSWORD_HASH_ALGO</span> = pbkdf2</span><br><span class="line"><span class="attr">SECRET_KEY</span> =</span><br><span class="line"><span class="attr">REVERSE_PROXY_LIMIT</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">REVERSE_PROXY_TRUSTED_PROXIES</span> = *</span><br><span class="line"></span><br><span class="line"><span class="section">[service]</span></span><br><span class="line"><span class="attr">REGISTER_EMAIL_CONFIRM</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">ENABLE_NOTIFY_MAIL</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">DISABLE_REGISTRATION</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">ALLOW_ONLY_EXTERNAL_REGISTRATION</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">ENABLE_CAPTCHA</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">REQUIRE_SIGNIN_VIEW</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">DEFAULT_KEEP_EMAIL_PRIVATE</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">DEFAULT_ALLOW_CREATE_ORGANIZATION</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">DEFAULT_ENABLE_TIMETRACKING</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">NO_REPLY_ADDRESS</span> = noreply.localhost</span><br><span class="line"></span><br><span class="line"><span class="section">[lfs]</span></span><br><span class="line"><span class="attr">PATH</span> = /data/git/lfs</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.pull-request]</span></span><br><span class="line"><span class="attr">DEFAULT_MERGE_STYLE</span> = merge</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.signing]</span></span><br><span class="line"><span class="attr">DEFAULT_TRUST_MODEL</span> = committer</span><br><span class="line"></span><br><span class="line"><span class="section">[oauth2]</span></span><br><span class="line">JWT_SECRET =</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建actions-runner配置文件">3.3 &nbsp&nbsp<a href="#创建actions-runner配置文件" class="headerlink" title="创建actions_runner配置文件"></a>创建actions_runner配置文件</h2><div class="note danger no-icon"><p>如果是本地搭建并只在本地使用，配件文件的<code>host</code>设置为<code>127.0.0.1</code>就能访问到gitea实例了。</p>
+</div>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /root/actions_runner_config.yaml</span><br></pre></td></tr></table></figure>
+
+<p><code>actions_runner_config.yaml</code>内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Example configuration file, it&#x27;s safe to copy this as the default config file without any modification.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You don&#x27;t have to copy this file to your instance,</span></span><br><span class="line"><span class="comment"># just run `./act_runner generate-config &gt; config.yaml` to generate a config file.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">log:</span></span><br><span class="line">  <span class="comment"># The level of logging, can be trace, debug, info, warn, error, fatal</span></span><br><span class="line">  <span class="attr">level:</span> <span class="string">info</span></span><br><span class="line"></span><br><span class="line"><span class="attr">runner:</span></span><br><span class="line">  <span class="comment"># Where to store the registration result.</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">.runner</span></span><br><span class="line">  <span class="comment"># Execute how many tasks concurrently at the same time.</span></span><br><span class="line">  <span class="attr">capacity:</span> <span class="number">2</span></span><br><span class="line">  <span class="comment"># Extra environment variables to run jobs.</span></span><br><span class="line">  <span class="attr">envs:</span></span><br><span class="line">    <span class="attr">A_TEST_ENV_NAME_1:</span> <span class="string">a_test_env_value_1</span></span><br><span class="line">    <span class="attr">A_TEST_ENV_NAME_2:</span> <span class="string">a_test_env_value_2</span></span><br><span class="line">  <span class="comment"># Extra environment variables to run jobs from a file.</span></span><br><span class="line">  <span class="comment"># It will be ignored if it&#x27;s empty or the file doesn&#x27;t exist.</span></span><br><span class="line">  <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">  <span class="comment"># The timeout for a job to be finished.</span></span><br><span class="line">  <span class="comment"># Please note that the Gitea instance also has a timeout (3h by default) for the job.</span></span><br><span class="line">  <span class="comment"># So the job could be stopped by the Gitea instance if it&#x27;s timeout is shorter than this.</span></span><br><span class="line">  <span class="attr">timeout:</span> <span class="string">3h</span></span><br><span class="line">  <span class="comment"># Whether skip verifying the TLS certificate of the Gitea instance.</span></span><br><span class="line">  <span class="attr">insecure:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># The timeout for fetching the job from the Gitea instance.</span></span><br><span class="line">  <span class="attr">fetch_timeout:</span> <span class="string">5s</span></span><br><span class="line">  <span class="comment"># The interval for fetching the job from the Gitea instance.</span></span><br><span class="line">  <span class="attr">fetch_interval:</span> <span class="string">2s</span></span><br><span class="line">  <span class="comment"># The labels of a runner are used to determine which jobs the runner can run, and how to run them.</span></span><br><span class="line">  <span class="comment"># Like: &quot;macos-arm64:host&quot; or &quot;ubuntu-latest:docker://gitea/runner-images:ubuntu-latest&quot;</span></span><br><span class="line">  <span class="comment"># Find more images provided by Gitea at https://gitea.com/gitea/runner-images .</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty when registering, it will ask for inputting labels.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty when execute `daemon`, will use labels in `.runner` file.</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;ubuntu-latest:docker://gitea/runner-images:ubuntu-latest&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;ubuntu-22.04:docker://gitea/runner-images:ubuntu-22.04&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;ubuntu-20.04:docker://gitea/runner-images:ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">  <span class="comment"># Enable cache server to use actions/cache.</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># The directory to store the cache data.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, the cache data will be stored in $HOME/.cache/actcache.</span></span><br><span class="line">  <span class="attr">dir:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="comment"># The host of the cache server.</span></span><br><span class="line">  <span class="comment"># It&#x27;s not for the address to listen, but the address to connect from job containers.</span></span><br><span class="line">  <span class="comment"># So 0.0.0.0 is a bad choice, leave it empty to detect automatically.</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&quot;10.10.10.10&quot;</span></span><br><span class="line">  <span class="comment"># The port of the cache server.</span></span><br><span class="line">  <span class="comment"># 0 means to use a random available port.</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">18088</span></span><br><span class="line">  <span class="comment"># The external cache server URL. Valid only when enable is true.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s specified, act_runner will use this URL as the ACTIONS_CACHE_URL rather than start a server by itself.</span></span><br><span class="line">  <span class="comment"># The URL should generally end with &quot;/&quot;.</span></span><br><span class="line">  <span class="attr">external_server:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">container:</span></span><br><span class="line">  <span class="comment"># Specifies the network to which the container will connect.</span></span><br><span class="line">  <span class="comment"># Could be host, bridge or the name of a custom network.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, act_runner will create a network automatically.</span></span><br><span class="line">  <span class="attr">network:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="comment"># Whether to use privileged mode or not when launching task containers (privileged mode is required for Docker-in-Docker).</span></span><br><span class="line">  <span class="attr">privileged:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># And other options to be used when the container is started (eg, --add-host=my.gitea.url:host-gateway).</span></span><br><span class="line">  <span class="attr">options:</span></span><br><span class="line">  <span class="comment"># The parent directory of a job&#x27;s working directory.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> There is no need to add the first &#x27;/&#x27; of the path as act_runner will add it automatically.</span></span><br><span class="line">  <span class="comment"># If the path starts with &#x27;/&#x27;, the &#x27;/&#x27; will be trimmed.</span></span><br><span class="line">  <span class="comment"># For example, if the parent directory is /path/to/my/dir, workdir_parent should be path/to/my/dir</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, /workspace will be used.</span></span><br><span class="line">  <span class="attr">workdir_parent:</span></span><br><span class="line">  <span class="comment"># Volumes (including bind mounts) can be mounted to containers. Glob syntax is supported, see https://github.com/gobwas/glob</span></span><br><span class="line">  <span class="comment"># You can specify multiple volumes. If the sequence is empty, no volumes can be mounted.</span></span><br><span class="line">  <span class="comment"># For example, if you only allow containers to mount the `data` volume and all the json files in `/src`, you should change the config to:</span></span><br><span class="line">  <span class="comment"># valid_volumes:</span></span><br><span class="line">  <span class="comment">#   - data</span></span><br><span class="line">  <span class="comment">#   - /src/*.json</span></span><br><span class="line">  <span class="comment"># If you want to allow any volume, please use the following configuration:</span></span><br><span class="line">  <span class="comment"># valid_volumes:</span></span><br><span class="line">  <span class="comment">#   - &#x27;**&#x27;</span></span><br><span class="line">  <span class="attr">valid_volumes:</span> []</span><br><span class="line">  <span class="comment"># overrides the docker client host with the specified one.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, act_runner will find an available docker host automatically.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s &quot;-&quot;, act_runner will find an available docker host automatically, but the docker host won&#x27;t be mounted to the job containers and service containers.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s not empty or &quot;-&quot;, the specified docker host will be used. An error will be returned if it doesn&#x27;t work.</span></span><br><span class="line">  <span class="attr">docker_host:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="comment"># Pull docker image(s) even if already present</span></span><br><span class="line">  <span class="attr">force_pull:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Rebuild docker image(s) even if already present</span></span><br><span class="line">  <span class="attr">force_rebuild:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">host:</span></span><br><span class="line">  <span class="comment"># The parent directory of a job&#x27;s working directory.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, $HOME/.cache/act/ will be used.</span></span><br><span class="line">  <span class="attr">workdir_parent:</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="启动Docker-Compose">3.4 &nbsp&nbsp<a href="#启动Docker-Compose" class="headerlink" title="启动Docker-Compose"></a>启动Docker-Compose</h2><div class="note danger no-icon"><p><code>runner</code>容器的环境变量<code>environment</code>的Gitea实例地址<code>GITEA_INSTANCE_URL</code>参数这里，不能用<code>http://server</code>直接作为参数。虽然docker compose容器之间可以识别这个写法，但<code>action runner</code>运行时无法识别该参数，使用<code>checkout</code>脚本甚至都拉取不了源码到<code>runner</code>容器内。</p>
+<p>但参数设置错误也会导致如下错误：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">level=error msg=<span class="string">&quot;Cannot ping the Gitea instance server&quot;</span> error=<span class="string">&quot;unknown: 500 Internal Server Error&quot;</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">level=error msg=<span class="string">&quot;Cannot ping the Gitea instance server&quot;</span> error=<span class="string">&quot;unavailable: dial tcp: lookup server on 127.0.0.11:53: server misbehaving&quot;</span></span><br></pre></td></tr></table></figure></div>
+<div class="note danger no-icon"><p><code>runner</code>容器的环境变量<code>environment</code>的runner注册令牌<code>GITEA_RUNNER_REGISTRATION_TOKEN</code>参数步骤：在Gitea管理后台-&gt;Actions-&gt;Runners-&gt;创建Runner-&gt;创建新的令牌或者查看已有的令牌。</p>
+</div>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /root/docker-compose.yml</span><br><span class="line">docker compose -f docker-compose.yml up -d</span><br></pre></td></tr></table></figure>
+
+<p><code>docker-compose.yml</code>内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">gitea:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">server:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.gitea.com/gitea:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_UID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_GID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__DB_TYPE=mysql</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__HOST=database:3306</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__NAME=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__PASSWD=normalpdxxx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./gitea:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3000:3000&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;222:22&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">database</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">database:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.io/library/mysql:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3306:3306&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_ROOT_PASSWORD=rootpdxxx</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_DATABASE=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_PASSWORD=normalpdxxx</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 映射数据目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./mysql/data:/var/lib/mysql</span></span><br><span class="line">      <span class="comment"># 映射配置目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./mysql/conf.d:/etc/mysql/conf.d</span></span><br><span class="line">      <span class="comment"># 映射日志目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./mysql/log:/var/log/mysql</span></span><br><span class="line">      <span class="comment"># 让容器的时钟与宿主机时钟同步，避免时间的问题，ro是read only的意思，就是只读。</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">runner:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitea/act_runner:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">runner</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18088:18088&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">CONFIG_FILE=/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_INSTANCE_URL=http://10.10.10.10:3000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_REGISTRATION_TOKEN=xxx_token</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_NAME=$&#123;RUNNER_NAME&#125;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_LABELS=$&#123;RUNNER_LABELS&#125;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./actions_runner_config.yaml:/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./actions_runner:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./actions_runner_cache:/root/.cache</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">server</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="迁移Gitea的mysql数据库和git仓库数据">3.5 &nbsp&nbsp<a href="#迁移Gitea的mysql数据库和git仓库数据" class="headerlink" title="迁移Gitea的mysql数据库和git仓库数据"></a>迁移Gitea的mysql数据库和git仓库数据</h2><ol>
+<li>备份其他服务器上的Gitea的mysql数据库、git仓库数据和gitea其他资产数据。</li>
+<li>进入mysql容器，并使用备份sql文件恢复mysql数据库。</li>
+<li>停止docker-compose</li>
+<li>迁移Gitea的git仓库数据和其他资产数据（例如avatars，actions_logs等），<ul>
+<li>Git仓库数据路径：<code>/root/gitea/git/repositories</code></li>
+<li>Git仓库lfs数据路径：<code>/root/gitea/git/lfs</code></li>
+<li>Gitea资产数据路径：<ul>
+<li><code>/root/gitea/gitea/attachments</code></li>
+<li><code>/root/gitea/gitea/repo-archive</code></li>
+<li><code>/root/gitea/gitea/actions_logs</code></li>
+<li><code>/root/gitea/gitea/conf</code></li>
+<li><code>/root/gitea/gitea/actions_artifacts</code></li>
+<li><code>/root/gitea/gitea/jwt</code></li>
+<li><code>/root/gitea/gitea/indexers</code></li>
+<li><code>/root/gitea/gitea/tmp</code></li>
+<li><code>/root/gitea/gitea/repo-avatars</code></li>
+<li><code>/root/gitea/gitea/queues</code></li>
+<li><code>/root/gitea/gitea/packages</code></li>
+<li><code>/root/gitea/gitea/home</code></li>
+<li><code>/root/gitea/gitea/avatars</code></li>
+<li><code>/root/gitea/gitea/log</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>重新运行docker-compose</li>
+</ol>
+<h2 id="Gitea搭建和使用的踩坑">3.6 &nbsp&nbsp<a href="#Gitea搭建和使用的踩坑" class="headerlink" title="Gitea搭建和使用的踩坑"></a>Gitea搭建和使用的踩坑</h2><h3 id="actions-runner容器无法正常启动，日志提示未注册runner">3.6.1 &nbsp&nbsp<a href="#actions-runner容器无法正常启动，日志提示未注册runner" class="headerlink" title="actions_runner容器无法正常启动，日志提示未注册runner"></a>actions_runner容器无法正常启动，日志提示未注册runner</h3><p>问题现象：<code>docker logs runner</code>查看日志提示如下，同时，gitea管理后台查看runner也无法看到有正常在线的runner。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">level=error msg=<span class="string">&quot;fail to invoke Declare&quot;</span> error=<span class="string">&quot;unknown: rpc error: code = Unauthenticated desc = unregistered runner&quot;</span></span><br><span class="line">Error: Unknown: rpc error: code = Unauthenticated desc = unregistered runner</span><br></pre></td></tr></table></figure>
+
+<p>问题原因：<code>/root/actions_runner</code>路径下有一个隐藏文件夹<code>.runner</code>，该文件夹存储runner配置数据，但该数据是旧的，gitea实例无法识别，因此runner容器无法成功注册。</p>
+<p>解决方法：</p>
+<ol>
+<li>停止docker-compose</li>
+<li>删除<code>.runner</code>文件夹：<code>rm -rf /root/actions_runner/.runner</code></li>
+<li>重新运行docker-compose</li>
+<li>之后在gitea管理后台就能看到正常在线的新runner了</li>
+</ol>
+<h3 id="“版本发布”下，自己上传的文件url错误">3.6.2 &nbsp&nbsp<a href="#“版本发布”下，自己上传的文件url错误" class="headerlink" title="“版本发布”下，自己上传的文件url错误"></a>“版本发布”下，自己上传的文件url错误</h3><blockquote>
+<p>背景说明：Gitea构建在子局域网IP<code>10.10.10.10</code>，然后外部网络访问该Gitea服务是通过IP<code>192.168.1.10</code>（宿主机IP<code>192.168.1.10</code>已设置路由表转发<code>3000</code>端口到IP<code>10.10.10.10</code>，即<code>192.168.1.10:3000</code>-&gt;<code>10.10.10.10:3000</code>）</p>
+</blockquote>
+<p>问题现象：在版本发布内容中，上传的资产文件<code>assets</code>下载路径链接指向<code>http://10.10.10.10:3000/xxx.zip</code>。</p>
+<p>问题原因：Gitea的配置文件<code>app.ini</code>中的<code>ROOT_URL</code>未设置参数，导致下载路径链接自动指向<code>http://10.10.10.10:3000/xxx</code>。</p>
+<p>解决方法：编辑<code>app.ini</code>文件，将<code>[server]</code>小节中的<code>ROOT_URL</code>参数设置为<code>http://192.168.1.10:3000</code>即可。</p>
+<h3 id="Gitea管理后台提示当前访问的url和app-ini配置url不同">3.6.3 &nbsp&nbsp<a href="#Gitea管理后台提示当前访问的url和app-ini配置url不同" class="headerlink" title="Gitea管理后台提示当前访问的url和app.ini配置url不同"></a>Gitea管理后台提示当前访问的url和app.ini配置url不同</h3><p>问题现象：Gitea管理后台提示警告，你的<code>app.ini</code>的<code>ROOT_URL</code>是<code>http://10.10.10.10:3000</code>，但当前访问的url是<code>http://192.168.1.10:3000</code>。你应该正确设置<code>ROOT_URL</code>，否则网络服务可能无法正常运行。</p>
+<p>问题原因：Gitea的配置文件<code>app.ini</code>中的<code>ROOT_URL</code>未设置参数或者设置错误的url，导致下载路径链接自动指向<code>http://10.10.10.10:3000/xxx</code>。</p>
+<p>解决方法：编辑<code>app.ini</code>文件，将<code>[server]</code>小节中的<code>ROOT_URL</code>参数设置为当前访问URL即可，例如<code>http://192.168.1.10:3000</code>。</p>
+<h1 id="Docker搭建Redis">4 &nbsp&nbsp<a href="#Docker搭建Redis" class="headerlink" title="Docker搭建Redis"></a>Docker搭建Redis</h1><h2 id="Redis容器清理缓存">4.1 &nbsp&nbsp<a href="#Redis容器清理缓存" class="headerlink" title="Redis容器清理缓存"></a>Redis容器清理缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过可交互终端进入redis容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it redis /bin/bash</span><br><span class="line"><span class="comment"># 登录容器的redis服务</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br><span class="line"><span class="comment"># 若Redis设置有密码使用该命令，否则执行 keys *会报错：(error) NOAUTH Authentication required。</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379 -a redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有key值</span></span><br><span class="line">keys *</span><br><span class="line"><span class="comment"># 删除指定索引的值</span></span><br><span class="line">del key</span><br><span class="line"><span class="comment"># 清除当前数据库缓存</span></span><br><span class="line">flushdb</span><br><span class="line"><span class="comment"># 清除整个redis所有缓存</span></span><br><span class="line">flushall</span><br></pre></td></tr></table></figure>
+
+<h1 id="Docker搭建DataEase">5 &nbsp&nbsp<a href="#Docker搭建DataEase" class="headerlink" title="Docker搭建DataEase"></a>Docker搭建DataEase</h1><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
+<h2 id="下载DataEase部署脚本。">5.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h2><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1.x</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
 <p><code>dataease-release-v1.18.27.tar.gz</code>和<code>dataease-v1.18.27-online.tar.gz</code>这两个文件数据完全一致，随意下载，本人解压并比对过文件哈希值。</p>
 <p>v2.x开源社区版不支持创建用户，代码层面写死只有一个admin账户，若有用户管理的需求，可以不用考虑v2.x版本或者考虑商业版的v2.x。</p>
-<h2 id="修改配置文件install-conf">4.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h2><p>安装模式模式修改为<code>local</code>，端口这些自行根据需求改，如下配置文件是修改为8100。</p>
+<h2 id="修改配置文件install-conf">5.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h2><p>安装模式模式修改为<code>local</code>，端口这些自行根据需求改，如下配置文件是修改为8100。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础配置</span></span><br><span class="line"><span class="comment">## 安装目录</span></span><br><span class="line">DE_BASE=/opt</span><br><span class="line"><span class="comment">## Service 端口</span></span><br><span class="line">DE_PORT=8100</span><br><span class="line"><span class="comment">## 部署及运行模式，可选值有 local、simple、cluster，分别对应 本地模式、精简模式、集群模式</span></span><br><span class="line">DE_ENGINE_MODE=<span class="built_in">local</span></span><br><span class="line"><span class="comment">## docker 网段设置</span></span><br><span class="line">DE_DOCKER_SUBNET=172.19.0.0/16</span><br><span class="line"><span class="comment">## docker 网关 IP</span></span><br><span class="line">DE_DOCKER_GATEWAY=172.19.0.1</span><br><span class="line"><span class="comment">## Apache Doris FE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_FE_IP=172.19.0.198</span><br><span class="line"><span class="comment">## Apache Doris BE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_BE_IP=172.19.0.199</span><br><span class="line"><span class="comment">## 登录超时时间，单位min。如果不设置则默认8小时，也就是480</span></span><br><span class="line">DE_LOGIN_TIMEOUT=480</span><br><span class="line"><span class="comment">## 新建用户初始密码</span></span><br><span class="line">DE_INIT_PASSWORD=DataEase123456</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库配置</span></span><br><span class="line"><span class="comment">## 是否使用外部数据库</span></span><br><span class="line">DE_EXTERNAL_MYSQL=<span class="literal">false</span></span><br><span class="line"><span class="comment">## 数据库地址</span></span><br><span class="line">DE_MYSQL_HOST=mysql</span><br><span class="line"><span class="comment">## 数据库端口</span></span><br><span class="line">DE_MYSQL_PORT=3306</span><br><span class="line"><span class="comment">## DataEase 数据库库名</span></span><br><span class="line">DE_MYSQL_DB=dataease</span><br><span class="line"><span class="comment">## 数据库用户名</span></span><br><span class="line">DE_MYSQL_USER=root</span><br><span class="line"><span class="comment">## 数据库密码</span></span><br><span class="line">DE_MYSQL_PASSWORD=Password123@mysql</span><br><span class="line"><span class="comment">## 数据库参数</span></span><br><span class="line">DE_MYSQL_PARAMS=<span class="string">&quot;autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Apache Doris 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Apache Doris</span></span><br><span class="line">DE_EXTERNAL_DORIS=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Doris 地址</span></span><br><span class="line">DE_DORIS_HOST=doris-fe</span><br><span class="line"><span class="comment">## Doris 查询连接端口</span></span><br><span class="line">DE_DORIS_PORT=9030</span><br><span class="line"><span class="comment">## Doris http端口</span></span><br><span class="line">DE_DORIS_HTTPPORT=8030</span><br><span class="line"><span class="comment">## Doris 数据库名称</span></span><br><span class="line">DE_DORIS_DB=dataease</span><br><span class="line"><span class="comment">## Doris 用户名</span></span><br><span class="line">DE_DORIS_USER=root</span><br><span class="line"><span class="comment">## Doris 密码</span></span><br><span class="line">DE_DORIS_PASSWORD=Password123@doris</span><br><span class="line"></span><br><span class="line"><span class="comment"># Kettle 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Kettle - (目前还不支持外部Kettle，除非不需运行Kettle，否则请不要修改此参数)</span></span><br><span class="line">DE_EXTERNAL_KETTLE=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Kettle 服务器地址</span></span><br><span class="line">DE_CARTE_HOST=kettle</span><br><span class="line"><span class="comment">## Kettle 访问端口</span></span><br><span class="line">DE_CARTE_PORT=18080</span><br><span class="line"><span class="comment">## Kettle 用户名</span></span><br><span class="line">DE_CARTE_USER=cluster</span><br><span class="line"><span class="comment">## Kettle 密码</span></span><br><span class="line">DE_CARTE_PASSWORD=cluster</span><br></pre></td></tr></table></figure>
 
-<h3 id="不同安装模式的区别">4.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h3><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
+<h3 id="不同安装模式的区别">5.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h3><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
 </div>
 
 <div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;simple<br>使用精简模式安装，系统不会额外安装 Doris 与 Kettle 组件，提供用户轻量级的应用系统，尤其是对接数据量较小的情况。<br>在此模式下，Excel 数据集或 API 数据集的相关数据存储在数据引擎中（默认配置自带的 MySQL 组件，用户可在系统管理界面配置数据引擎，数据引擎目前仅支持 MySQL 类型）。<br>注意：由于精简模式未配置 Kettle 与 Doris，故精简模式不提供定时同步模式。</p>
@@ -2629,10 +2852,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;cluster<br>使用集群模式安装，系统不会额外安装 Doris 与 Kettle 组件，但会在系统管理模块提供 Doris 与 Kettle 的链接配置界面（请参考【系统管理】的【系统参数】说明），用户可独立安装 Doris 集群及 Kettle 并配置在 DataEase 中。集群模式下 Excel 数据集，API 数据集以及定时同步的数据通过 Kettle 抽取到 Doris 集群中。<br>Doris 安装部署可参考：<a href="http://doris.incubator.apache.org/zh-CN/">http://doris.incubator.apache.org/zh-CN/</a><br>Kettle 安装部署可参考：<a href="http://www.kettle.org.cn/">http://www.kettle.org.cn/</a></p>
 </div>
 
-<h2 id="安装DataEase">4.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h2><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
+<h2 id="安装DataEase">5.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h2><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash ./install.sh</span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 
-<h2 id="创建DataEase的踩坑记录">4.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h2><h3 id="doris-be容器状态一直为unhealthy">4.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h3><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
+<h2 id="创建DataEase的踩坑记录">5.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h2><h3 id="doris-be容器状态一直为unhealthy">5.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h3><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">doris_role:be</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; FE_SERVERS=[fe1:172.19.0.198:9010]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; BE_ADDR=[172.19.0.199:9050]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feIpArray = 172.19.0.198</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feEditLogPortArray = 9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; masterFe = 172.19.0.198:9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; be_addr = 172.19.0.199:9050</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; Append the configuration [priority_networks = 172.19.0.0/24] to /opt/apache-doris/be/conf/fe.conf</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerMySQL = mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;alter system add backend &#x27;172.19.0.199:9050&#x27;&quot;</span></span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerShell = /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;show backends&quot;</span> | grep <span class="string">&quot; 172.19.0.199 &quot;</span> | grep <span class="string">&quot; 9050 &quot;</span></span><br><span class="line">10003   default_cluster 172.19.0.199    9050    -1      -1      -1      NULL    NULL    <span class="literal">false</span>   <span class="literal">false</span>   <span class="literal">false</span>   0       0.000   1.000 B       0.000   0.00 %  0.00 %  0.000   &#123;<span class="string">&quot;location&quot;</span> : <span class="string">&quot;default&quot;</span>&#125;        java.net.NoRouteToHostException: No route to host (Host unreachable)          &#123;<span class="string">&quot;lastStreamLoadTime&quot;</span>:-1,<span class="string">&quot;isQueryDisabled&quot;</span>:<span class="literal">false</span>,<span class="string">&quot;isLoadDisabled&quot;</span>:<span class="literal">false</span>&#125;        1</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  0 <span class="keyword">time</span> to register BE node, be_join_status=0</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; run <span class="built_in">command</span> /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registered : 1</span><br><span class="line">Please <span class="built_in">set</span> vm.max_map_count to be 2000000 under root using <span class="string">&#x27;sysctl -w vm.max_map_count=2000000&#x27;</span>.</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  1  <span class="keyword">time</span> to check is_alive &gt;&gt;&gt;&gt;&gt;&gt; 1</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br></pre></td></tr></table></figure>
 <p>可以查看上述日志输出提示<code>Please set vm.max_map_count to be 2000000 under root using &#39;sysctl -w vm.max_map_count=2000000&#39;.</code></p>
 <p>原因：Doris作为分布式数据库，对于内存映射数量有要求，Linux系统默认参数值无法满足，例如PVE系统默认的<code>vm.max_map_count=262144</code>。</p>
@@ -2644,155 +2867,27 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>解决方法2：换DataEase v2版本，v2系列不需要部署Doris。</li>
 </ul>
-<h3 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">4.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h3><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
+<h3 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">5.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h3><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
 <p>解决方法：不修改<code>install.conf</code>的MySQL和Doris的密码，直接使用模板预设的默认密码完成部署。</p>
-<h1 id="Docker-Desktop（Windows）">5 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">5.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
+<h2 id="DataEase使用踩坑纪录">5.5 &nbsp&nbsp<a href="#DataEase使用踩坑纪录" class="headerlink" title="DataEase使用踩坑纪录"></a>DataEase使用踩坑纪录</h2><ul>
+<li>变更&#x2F;删除数据集，均会导致丢失仪表盘的过滤器参数</li>
+<li>仪表盘的视图在超过1000条数据时则无法全部导出excel表格（比如实际导出的excel表格行数为1001，有一行是表头）<ul>
+<li>建议导出操作，使用数据集的导出功能。</li>
+</ul>
+</li>
+<li>excel数据源若有几万行，则无法成功导入dataease作为数据集，在数据同步阶段会失效（可能是内存溢出的问题，有待排查验证）</li>
+<li>V2社区开源版不支持创建多用户</li>
+</ul>
+<h1 id="Docker-Desktop（Windows）">6 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">6.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
 <p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#x74;&#x40;&#x31;&#55;&#50;&#46;&#x31;&#57;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.</p>
+<h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#116;&#x40;&#49;&#x37;&#x32;&#46;&#49;&#x39;&#x2e;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Git总结笔记</title>
-    <url>/code/git/</url>
-    <content><![CDATA[<h1 id="语言编码的区别">1 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><ul>
-<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
-<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
-</ul>
-<h1 id="三维模型等二进制文件的版本控制">2 &nbsp&nbsp<a href="#三维模型等二进制文件的版本控制" class="headerlink" title="三维模型等二进制文件的版本控制"></a>三维模型等二进制文件的版本控制</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
-<p>Perforce Helix Core官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
-<h1 id="linux和windows之间的文件换行符">3 &nbsp&nbsp<a href="#linux和windows之间的文件换行符" class="headerlink" title="linux和windows之间的文件换行符"></a>linux和windows之间的文件换行符</h1><p>windows中的换行符（dos）是\r\n，而linux中的换行符（unix）是\n。若不转换，git可能会视作为被更改的文件，从而造成大量无意义的commit。此外，windows中bat脚本文件要求换行符为\r\n，否则cmd解释器无法正确解析，导致无法正确执行脚本。</p>
-<p>单文件转换：</p>
-<ul>
-<li>\r\n转\n：<code>dos2unix test.c</code></li>
-<li>\n转\r\n：<code>unix2dos test.c</code></li>
-</ul>
-<p>批量转换：</p>
-<ul>
-<li>\r\n转\n：<code>find . -type f -exec dos2unix &#123;&#125; \;</code></li>
-<li>\n转\r\n：<code>find . -type f -exec unix2dos &#123;&#125; \;</code></li>
-</ul>
-<p>详细命令解释：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find .: Find anything in this directory, including its subdirectories, and anything in those subdirectories as well (recursion)</span><br><span class="line">-type f: Only return &#x27;regular file&#x27; names. Exclude folder names from the results.</span><br><span class="line">-exec: Execute the following command for every result. Everything beyond this point should be treated as part of that command until the ; character is found.</span><br><span class="line">dos2unix: dos2unix will be executed with the following options...</span><br><span class="line">-k: Keep the date stamp of the output file the same as the input file</span><br><span class="line">-s: Skip binary files (images, archives, etc.). This option is included by default, but I use it anyway in case that default were different on some systems (e.g. OS X v. Debian v. CentOS v. Ubuntu v. ...).</span><br><span class="line">-o: Write the changes directly to the file, rather than creating a new file with the data in the new format.</span><br><span class="line">&#123;&#125;: This tells find to insert the filename it has found as a parameter of the dos2unix call.</span><br><span class="line">&#x27;;&#x27;: Tell find that the params for dos2unix have ended. Anything beyond this point will again be treated as a parameter of find. 反斜杠\是用于转移分号;</span><br><span class="line">&#x27;&#123;&#125;&#x27; is a placeholder which indicates where in the command you want the filename(s) to be inserted, and &#x27;+&#x27; terminates the said command. You can also run dos2unix once for each filename (by changing &#x27;+&#x27; with &#x27;;&#x27;), but since dos2unix accepts an arbitrary number of input arguments, it’s better to use it (as it avoids spawning many processes).</span><br></pre></td></tr></table></figure>
-
-<h2 id="换行符问题导致git同步错误">3.1 &nbsp&nbsp<a href="#换行符问题导致git同步错误" class="headerlink" title="换行符问题导致git同步错误"></a>换行符问题导致git同步错误</h2><p>若出现本地仓库文件和远程仓库文件出现crlf和lf不相同的问题，会导致git代码同步报错。</p>
-<p>解决方法：使用editorconfig文件规定文档。</p>
-<h1 id="Git配置">4 &nbsp&nbsp<a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><h2 id="编辑git特定的config项">4.1 &nbsp&nbsp<a href="#编辑git特定的config项" class="headerlink" title="编辑git特定的config项"></a>编辑git特定的config项</h2><p>打开<code>%USERPROFILE%\.gitconfig</code>文件，编辑特定的设置项即可。</p>
-<h2 id="代理设置">4.2 &nbsp&nbsp<a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br><span class="line">git config --global http.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line">git config --global https.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于git的重命名操作">4.3 &nbsp&nbsp<a href="#关于git的重命名操作" class="headerlink" title="关于git的重命名操作"></a>关于git的重命名操作</h2><p>git默认对大小写不敏感，一般可通过两种方式避免git未识别大小写操作。</p>
-<p>方式1：中间文件方法</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git mv（重命名索引，文件夹直接大小写重命名可能无法成功，可以用tmp做中间处理，文件直接大小写无问题）</span></span><br><span class="line">git <span class="built_in">mv</span> myfolder tmp</span><br><span class="line">git <span class="built_in">mv</span> tmp MyFolder</span><br></pre></td></tr></table></figure>
-
-<p>方式2：设置git配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="pull（拉取）">5 &nbsp&nbsp<a href="#pull（拉取）" class="headerlink" title="pull（拉取）"></a>pull（拉取）</h1><h2 id="github从远程仓库拉取">5.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="github从上游拉取未并入主干的拉取请求-pull-request">5.2 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
-
-<h1 id="clone（克隆）">6 &nbsp&nbsp<a href="#clone（克隆）" class="headerlink" title="clone（克隆）"></a>clone（克隆）</h1><h2 id="常规克隆">6.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><p>git clone http链接（可以不包含.git后缀）</p>
-<h2 id="wget从Github仓库下载特定的文件夹">6.2 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
-
-<h2 id="克隆特定分支">6.3 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br><span class="line">git <span class="built_in">clone</span> --recursive -b branch—name url</span><br></pre></td></tr></table></figure>
-
-<h2 id="克隆远程仓库中的指定文件或者文件夹">6.4 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h2><p>以克隆blender手册翻译的简中为例：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line"><span class="comment"># 为当前目录初始化一个git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加上游git链接</span></span><br><span class="line">git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line"><span class="comment"># 设置稀疏检出的筛选目录，sparse-checkout文件里写入要拉取的文件或者文件夹。匹配规则类似.gitignore</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout</span><br><span class="line"><span class="comment"># 或者使用sparse-checkout set命令设置设置稀疏检出的筛选目录</span></span><br><span class="line">git sparse-checkout <span class="built_in">set</span> <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"><span class="comment"># 开启稀疏检出</span></span><br><span class="line">git config core.sparsecheckout <span class="literal">true</span></span><br><span class="line"><span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
-
-<h1 id="commit（提交）">7 &nbsp&nbsp<a href="#commit（提交）" class="headerlink" title="commit（提交）"></a>commit（提交）</h1><h2 id="commit信息的规范化">7.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
-<ul>
-<li>chore</li>
-<li>fix</li>
-<li>feat</li>
-<li>docs</li>
-</ul>
-<h1 id="release（发布）">8 &nbsp&nbsp<a href="#release（发布）" class="headerlink" title="release（发布）"></a>release（发布）</h1><h2 id="常规发布">8.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
-<h2 id="release-note的规范化">8.2 &nbsp&nbsp<a href="#release-note的规范化" class="headerlink" title="release note的规范化"></a>release note的规范化</h2><ul>
-<li>Breaking Changes</li>
-<li>Changes</li>
-<li>New Features</li>
-<li>Features</li>
-<li>Bug Fixes</li>
-<li>Improvements</li>
-<li>Documentation（可缩写 Docs）</li>
-</ul>
-<blockquote>
-<p>注：支持……版本，英文用 Support for …… 表示</p>
-</blockquote>
-<h1 id="添加子仓库">9 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="重写历史">10 &nbsp&nbsp<a href="#重写历史" class="headerlink" title="重写历史"></a>重写历史</h1><h2 id="删除所有commit">10.1 &nbsp&nbsp<a href="#删除所有commit" class="headerlink" title="删除所有commit"></a>删除所有commit</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf .git</span><br><span class="line">git init</span><br><span class="line">git remote add origin url（仓库地址） <span class="comment"># git remote -v</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;commit message&#x27;</span></span><br><span class="line">git push --force origin master</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意如果使用这种方式，强制推送到远程github仓库的话，实际查看github网站的信息，貌似并没有缩小，可能数据更新有延迟。</p>
-</blockquote>
-<p>还有另外一种方式，在github网站上删除该reop，并重新建立同名repo再推送。</p>
-<h2 id="从所有commit中清除特定文件">10.2 &nbsp&nbsp<a href="#从所有commit中清除特定文件" class="headerlink" title="从所有commit中清除特定文件"></a>从所有commit中清除特定文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --index-filter <span class="string">&#x27;git rm --cached --ignore-unmatch filename&#x27;</span> HEAD <span class="comment">#（*.pdf）</span></span><br><span class="line"><span class="built_in">rm</span> -rf .git/refs/original <span class="comment">#删除git的备份</span></span><br><span class="line">git reflog expire --all --expire=now  <span class="comment">#使所有散落的object失效</span></span><br><span class="line">git fsck --unreachable <span class="comment">#检查是否有散落的object, 验证数据库中对象的连接性和有效性</span></span><br><span class="line">git gc --aggressive --prune=now <span class="comment">#git的垃圾清理车最终删除那些对象, --aggressive 此选项将导致git gc更积极地优化存储库</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="分支管理">11 &nbsp&nbsp<a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="常规操作">11.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="多人协作的工作流">11.2 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h2><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。</p>
-<h2 id="常规分支管理项目">11.3 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Switched to a new branch &quot;dev&quot;</span></span><br><span class="line">git checkout -b dev</span><br><span class="line"><span class="comment"># Switched to a new branch &quot;hotfix&quot;</span></span><br><span class="line">git checkout -b hotfix</span><br><span class="line"><span class="comment"># 切换到主分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># 合并hotfix分支</span></span><br><span class="line">git merge hotfix</span><br><span class="line"><span class="comment"># 删除hotfix分支</span></span><br><span class="line">git branch -d hotfix</span><br></pre></td></tr></table></figure>
-
-<h1 id="切换分支时有未提交的文件">12 &nbsp&nbsp<a href="#切换分支时有未提交的文件" class="headerlink" title="切换分支时有未提交的文件"></a>切换分支时有未提交的文件</h1><p>应用场景：在dev分支进行开发编写，突然发现master分支有bug，想checkout分支（切换分支），但此时dev分支上有未提交的文件，并且也并不想现在提交。</p>
-<p>解决方案：</p>
-<ol>
-<li>在dev分支上git stash，储藏当前工作区</li>
-<li>checkout到master分支进行bug修复（新建bugfix分支时，完成后合并，删除）</li>
-<li>checkout到dev分支，git stash list</li>
-<li>git stash pop，恢复工作区（该方式恢复的同时也把stash内容删除）。（另一种方式是git stash apply（恢复）后git stash drop（删除））</li>
-</ol>
-<h1 id="远程仓库">13 &nbsp&nbsp<a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="重命名分支并推送到远程仓库">13.1 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除已经推送到远程仓库中的包含在-gitignore中的文件">13.2 &nbsp&nbsp<a href="#删除已经推送到远程仓库中的包含在-gitignore中的文件" class="headerlink" title="删除已经推送到远程仓库中的包含在.gitignore中的文件"></a>删除已经推送到远程仓库中的包含在.gitignore中的文件</h2><p>.gitignore文件中添加新的文件过滤，但是该文件在之前已经提交到远程仓库分支里，我们需要将远程分支代码中的这个文件移除。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.为避免冲突，同步已下远程仓库最新代码</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.在本地项目目录下删除git缓存</span></span><br><span class="line">git <span class="built_in">rm</span> -r --cached .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.add所有文件：输入以下命令，再次将项目中所有文件添加到本地仓库缓存中</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.本地commit</span></span><br><span class="line">git commit -m <span class="string">&quot;filter new files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.push到远程仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<h2 id="unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054">13.3 &nbsp&nbsp<a href="#unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054"></a>unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>这是由于Http协议错误，刷新缓存即可解决</p>
-<div class="tabs" id="flush_dns"><ul class="nav-tabs"><li class="tab active"><a href="#flush_dns-1">Windows</a></li><li class="tab"><a href="#flush_dns-2">Mac</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flush_dns-1"><p>使用终端命令窗口运行命令：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="flush_dns-2"><p>使用终端命令窗口运行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall -HUP mDNSResponder</span><br><span class="line"><span class="built_in">sudo</span> dscacheutil -flushcache</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="更改已提交到远程仓库的commit消息（修改错别字或添加信息）">13.4 &nbsp&nbsp<a href="#更改已提交到远程仓库的commit消息（修改错别字或添加信息）" class="headerlink" title="更改已提交到远程仓库的commit消息（修改错别字或添加信息）"></a>更改已提交到远程仓库的commit消息（修改错别字或添加信息）</h2><ol>
-<li>git rebase -i HEAD~n(N为最近n个提交)</li>
-<li>git会生成一个文件在编辑器打开，在需要修改的commit那一行中，将pick修改为reword，保存关闭</li>
-<li>之后会弹出一个文件，在编辑器修改后保存关闭</li>
-<li>之后强制push到远程仓库</li>
-</ol>
-<h2 id="RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8">13.5 &nbsp&nbsp<a href="#RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8" class="headerlink" title="RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)"></a>RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)</h2><p>因为git文件过大造成的错误，默认缓冲区是1M大小。</p>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000 <span class="comment"># 设置为500M</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="已经提交Pull-Request的如何二次修改覆盖">13.6 &nbsp&nbsp<a href="#已经提交Pull-Request的如何二次修改覆盖" class="headerlink" title="已经提交Pull Request的如何二次修改覆盖"></a>已经提交Pull Request的如何二次修改覆盖</h2><ol>
-<li>本地git reset撤销提交，然后重新完成二次修改</li>
-<li>push -f强行覆盖掉你远程的commit</li>
-<li>上游仓库的PR会自动更新相关内容（例如xx强制push commit）</li>
-<li>有其他的新内容commit，push普通推送也能自动追加到上游仓库的PR中。</li>
-</ol>
-<h1 id="Github-LFS">14 &nbsp&nbsp<a href="#Github-LFS" class="headerlink" title="Github LFS"></a>Github LFS</h1><p>Github LFS是收费产品，免费账户只有1G的存储空间和带宽流量（本人已弃用）。</p>
-<p>仓库一旦使用LFS存储，无法直接通过wget或者curl工具下载原文件，只会下载到一个文本指针文件，指向LFS的存储云地址。</p>
-<h2 id="为Git启用LFS">14.1 &nbsp&nbsp<a href="#为Git启用LFS" class="headerlink" title="为Git启用LFS"></a>为Git启用LFS</h2><p>Windows Git LFS大文件管理：windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code>。</p>
-<p>ubuntu安装LFS包：<code>sudo apt install git-lfs</code>。</p>
-<h2 id="LFS基本使用">14.2 &nbsp&nbsp<a href="#LFS基本使用" class="headerlink" title="LFS基本使用"></a>LFS基本使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加LFS需要管理的大文件，如果文件名就是*.txt，则需要用双引号&quot;&quot;包含</span></span><br><span class="line"><span class="comment"># 若无引号，通配符*会被shell扩展，导致LFS跟踪所有txt文件</span></span><br><span class="line">git lfs track test.txt</span><br><span class="line">git lfs track *.txt</span><br><span class="line">git lfs track <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 取消LFS跟踪文件</span></span><br><span class="line">git lfs untrack *.txt</span><br><span class="line"><span class="comment"># 常规git操作都可以处理LFS文件，显式指定lfs命令可提高速度</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line">git pull origin main</span><br><span class="line"><span class="comment"># git lfs clone是检出（checkout）完成后再批量下载所有必需的 Git LFS 文件。利用并行下载的优势，显著减少产生的 HTTP 请求和进程的数量</span></span><br><span class="line">git lfs <span class="built_in">clone</span></span><br><span class="line"><span class="comment"># 同样地，lfs提供拉取速度</span></span><br><span class="line">git lfs pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除lfs，然后手动删除.gitattribute中关于lfs的条目</span></span><br><span class="line">git lfs uninstall</span><br><span class="line"><span class="comment"># 重组织所有文件，可以使标记为lfs文件恢复到正常状态，但不会影响到不关联的文件。</span></span><br><span class="line">git add --renormalize .</span><br><span class="line"><span class="comment"># 重新提交</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h1 id="CI-CD">15 &nbsp&nbsp<a href="#CI-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h1><p>重复繁琐的工作交予自动CI&#x2F;CD完成。</p>
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.<br>[6] How to run dos2unix on all files with all extensions in a directory and its sun-directories?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun">https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun</a>.<br>[7] How to pull a pull request from upstream in github[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github">https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github</a>.<br>[8] 详解 Git 大文件存储（Git LFS）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/146683392">https://zhuanlan.zhihu.com/p/146683392</a>.<br>[9] Git Sparse Checkout使用指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/shelutai/article/details/123116973">https://blog.csdn.net/shelutai/article/details/123116973</a>.<br>[10] git-sparse-checkout[EB&#x2F;OL]. <a href="https://www.git-scm.com/docs/git-sparse-checkout">https://www.git-scm.com/docs/git-sparse-checkout</a>.<br>[11] Simple steps to uninstall Git LFS from your repository[EB&#x2F;OL]. <a href="https://github.com/git-lfs/git-lfs/issues/3026">https://github.com/git-lfs/git-lfs/issues/3026</a>.<br>[12] zh-cn 与 zh-hans 是什么关系、有什么区别？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/21980689">https://www.zhihu.com/question/21980689</a>.<br>[13] github 提交pull request操作后, 如果想对代码再次进行修改，该如何操作？[EB&#x2F;OL]. <a href="https://segmentfault.com/q/1010000012129041">https://segmentfault.com/q/1010000012129041</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>git</tag>
-        <tag>github</tag>
-        <tag>代码管理</tag>
-        <tag>版本控制</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hexo个人博客搭建踩坑记</title>
@@ -4149,6 +4244,44 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>英文词汇日常总结</title>
+    <url>/english/daily/</url>
+    <content><![CDATA[<ul>
+<li>anode &#x2F;ˈænəʊd&#x2F;　n.阳极，（电解池）正极</li>
+<li>cathode &#x2F;ˈkæθəʊd&#x2F;　n.阴极，（电解池）负极<ul>
+<li>同kathode</li>
+</ul>
+</li>
+<li>recursive adj.递归的，循环</li>
+<li>melancholy &#x2F;ˈmelənkəli&#x2F;　n.忧郁，伤悲 adj.（令人）悲哀的，沮丧的</li>
+<li>melody n.旋律；曲调；（尤指）主旋律</li>
+<li>remark n.注意 v.察觉</li>
+<li>introspection n.内省；反省</li>
+<li>one..., the other...（总数量两个）<ul>
+<li>one..., another...（总数量两个以上，another在此处自身代指的事物就表明超过一个）</li>
+</ul>
+</li>
+<li>sugar buns infml.(主要美国和加拿大) 感情用语，同sweatheart</li>
+<li>get it 明白了一些之前不明白的事情</li>
+<li>got it 明白了某件事情的表达（事情的传达）</li>
+<li>get wasted 喝醉了，烂醉如泥的<ul>
+<li>形容微醺：tipsy buzzed</li>
+<li>形容大醉：hammered blasted get plastered shit-faced（语气较重，看场合用）</li>
+</ul>
+</li>
+<li>make yourself useful 让对方别闲着，干点事情</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>电力专业英文术语</title>
     <url>/english/electrical-pro/</url>
     <content><![CDATA[<h1 id="电路基础（Fundamentals-of-Electronic-Circuits）">1 &nbsp&nbsp<a href="#电路基础（Fundamentals-of-Electronic-Circuits）" class="headerlink" title="电路基础（Fundamentals of Electronic Circuits）"></a>电路基础（Fundamentals of Electronic Circuits）</h1><h2 id="电路原理（Circuit-Theory）">1.1 &nbsp&nbsp<a href="#电路原理（Circuit-Theory）" class="headerlink" title="电路原理（Circuit Theory）"></a>电路原理（Circuit Theory）</h2><ul>
@@ -4253,44 +4386,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>英文</tag>
         <tag>术语</tag>
         <tag>电力</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英文词汇日常总结</title>
-    <url>/english/daily/</url>
-    <content><![CDATA[<ul>
-<li>anode &#x2F;ˈænəʊd&#x2F;　n.阳极，（电解池）正极</li>
-<li>cathode &#x2F;ˈkæθəʊd&#x2F;　n.阴极，（电解池）负极<ul>
-<li>同kathode</li>
-</ul>
-</li>
-<li>recursive adj.递归的，循环</li>
-<li>melancholy &#x2F;ˈmelənkəli&#x2F;　n.忧郁，伤悲 adj.（令人）悲哀的，沮丧的</li>
-<li>melody n.旋律；曲调；（尤指）主旋律</li>
-<li>remark n.注意 v.察觉</li>
-<li>introspection n.内省；反省</li>
-<li>one..., the other...（总数量两个）<ul>
-<li>one..., another...（总数量两个以上，another在此处自身代指的事物就表明超过一个）</li>
-</ul>
-</li>
-<li>sugar buns infml.(主要美国和加拿大) 感情用语，同sweatheart</li>
-<li>get it 明白了一些之前不明白的事情</li>
-<li>got it 明白了某件事情的表达（事情的传达）</li>
-<li>get wasted 喝醉了，烂醉如泥的<ul>
-<li>形容微醺：tipsy buzzed</li>
-<li>形容大醉：hammered blasted get plastered shit-faced（语气较重，看场合用）</li>
-</ul>
-</li>
-<li>make yourself useful 让对方别闲着，干点事情</li>
-</ul>
-]]></content>
-      <categories>
-        <category>english</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>英文</tag>
-        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -4421,302 +4516,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -5875,6 +5674,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>KVM虚拟机解锁命名：<code>qm unlock vmid</code>，例如<code>qm unlock 100</code>。</li>
 <li>LXC虚拟机解锁命名：<code>pct unlock vmid</code>，例如<code>pct unlock 101</code>。</li>
 </ul>
+<h3 id="Intel-13-14代CPU搭建的PVE机器频繁宕机">3.3.12 &nbsp&nbsp<a href="#Intel-13-14代CPU搭建的PVE机器频繁宕机" class="headerlink" title="Intel 13&#x2F;14代CPU搭建的PVE机器频繁宕机"></a>Intel 13&#x2F;14代CPU搭建的PVE机器频繁宕机</h3><p>问题现象：Intel 13&#x2F;14代CPU搭建的PVE机器经常会出现宕机现象，基本每隔两天就会出现失联，ssh也无法正常连接到PVE。此外还有一个很严重的现象，即未设置任何硬件直通的内核启动参数情况下，仍然会导致十分随机的PVE系统启动卡住现象或者出现随机启动报错，包括并不仅限于：</p>
+<ul>
+<li><a href="https://blog.csdn.net/Magic_Engine/article/details/144424476">PVE启动卡在loading initial ramdisk</a></li>
+<li><a href="https://forum.proxmox.com/threads/proxmox-stuck-in-dev-mapper-pve-root-clean.154567/">Proxmox stuck in &#x2F;dev&#x2F;mapper&#x2F;pve-root: clean</a>：光标在下一行，并且光标不会闪烁，就显示一个下划线<code>_</code>。</li>
+<li><code>BUG: Bad page state in process init  pfn:11386d</code></li>
+<li>启动虚拟机经常遇到：<a href="https://github.com/lxc/lxc/issues/2678">Failed to create the configured network</a>，从而导致无法启动</li>
+<li>无法正常卸载分区，reboot系统也会卡住在<code>unmount filesystem xxxx</code>（xxxx指UUID）</li>
+</ul>
+<p>问题原因：CPU缩缸（辣鸡Intel(ಥ﹏ಥ)）。相信我，修改grub引导参数设置<code>nomodeset</code>什么的都不管用的，仍然是随机崩溃或者随机卡住。</p>
+<p>解决方法：为CPU设置BIOS锁频和稳压，确保CPU可以稳定运行工作。</p>
+<div class="note default no-icon"><p>如果是1265u的机器，可能是C状态的问题。编辑<code>/etc/default/grub</code>，在<code>GRUB_CMDLINE_LINUX_DEFAULT</code>追加<code>intel_idle.max_cstate=2</code>参数，然后<code>update-grub</code>，最后在BIOS中设置关闭C状态。</p>
+</div>
+
+<h3 id="PVE宕机故障的排查手段">3.3.13 &nbsp&nbsp<a href="#PVE宕机故障的排查手段" class="headerlink" title="PVE宕机故障的排查手段"></a>PVE宕机故障的排查手段</h3><ul>
+<li>PVE管理后台-&gt;PVE节点-&gt;系统-&gt;系统日志</li>
+<li>排障思路：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看系统版本</span></span><br><span class="line"><span class="built_in">uname</span> -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看PVE版本</span></span><br><span class="line">pveversion -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看PVE启动日志</span></span><br><span class="line"><span class="built_in">cd</span> /var/log</span><br><span class="line">last</span><br></pre></td></tr></table></figure>
+
 <h1 id="PVE硬件直通">4 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><div class="note default no-icon"><p>如果机器本身就支持VT-X和VT-d等CPU虚拟化和直通硬件功能，则PVE启用IOMMU方面不需要额外设置。只需要设置好主板BIOS对应的CPU虚拟化和直通硬件功能即可，因为安装PVE系统阶段就会自动设置好启动IOMMU。</p>
 </div>
 
@@ -6765,7 +6583,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">6层</td>
 </tr>
 </tbody></table>
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.<br>[40] Proxmox VE 容器或虚拟机被锁定解决办法[EB&#x2F;OL]. <a href="https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/</a>.<br>[41] kyleflower&#x2F;clash_rules[EB&#x2F;OL]. <a href="https://github.com/kyleflower/clash_rules">https://github.com/kyleflower/clash_rules</a>.<br>[42] docker搭建MyUrls短链服务,可配合sub-web食用[EB&#x2F;OL]. <a href="http://213.35.110.223:8000/2024/08/1724228021116">http://213.35.110.223:8000/2024/08/1724228021116</a>.<br>[43] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 (Docker版本)[EB&#x2F;OL]. <a href="https://crossbell.io/notes/59373-1">https://crossbell.io/notes/59373-1</a>.<br>[44] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 - 全docker完成 - mihomo内核 避坑指南[EB&#x2F;OL]. <a href="https://imgki.com/archives/718.html">https://imgki.com/archives/718.html</a>.<br>[45] 自建Clash订阅转换[EB&#x2F;OL]. <a href="https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html">https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html</a>.<br>[46] .env 配置在 Docker 中不起作用[EB&#x2F;OL]. <a href="https://github.com/CareyWang/sub-web/issues/68">https://github.com/CareyWang/sub-web/issues/68</a>.<br>[47] [BUG] 使用 Clash Meta 内核开启tun模式出现 connect error: dns resolve failed: context deadline exceeded[EB&#x2F;OL]. <a href="https://github.com/clash-verge-rev/clash-verge-rev/issues/104">https://github.com/clash-verge-rev/clash-verge-rev/issues/104</a>.<br>[48] openclash &quot;all DNS requests failed, first error: dns: bad rdata&quot;错误解决[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/670131605">https://zhuanlan.zhihu.com/p/670131605</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.<br>[40] Proxmox VE 容器或虚拟机被锁定解决办法[EB&#x2F;OL]. <a href="https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/</a>.<br>[41] kyleflower&#x2F;clash_rules[EB&#x2F;OL]. <a href="https://github.com/kyleflower/clash_rules">https://github.com/kyleflower/clash_rules</a>.<br>[42] docker搭建MyUrls短链服务,可配合sub-web食用[EB&#x2F;OL]. <a href="http://213.35.110.223:8000/2024/08/1724228021116">http://213.35.110.223:8000/2024/08/1724228021116</a>.<br>[43] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 (Docker版本)[EB&#x2F;OL]. <a href="https://crossbell.io/notes/59373-1">https://crossbell.io/notes/59373-1</a>.<br>[44] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 - 全docker完成 - mihomo内核 避坑指南[EB&#x2F;OL]. <a href="https://imgki.com/archives/718.html">https://imgki.com/archives/718.html</a>.<br>[45] 自建Clash订阅转换[EB&#x2F;OL]. <a href="https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html">https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html</a>.<br>[46] .env 配置在 Docker 中不起作用[EB&#x2F;OL]. <a href="https://github.com/CareyWang/sub-web/issues/68">https://github.com/CareyWang/sub-web/issues/68</a>.<br>[47] [BUG] 使用 Clash Meta 内核开启tun模式出现 connect error: dns resolve failed: context deadline exceeded[EB&#x2F;OL]. <a href="https://github.com/clash-verge-rev/clash-verge-rev/issues/104">https://github.com/clash-verge-rev/clash-verge-rev/issues/104</a>.<br>[48] openclash &quot;all DNS requests failed, first error: dns: bad rdata&quot;错误解决[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/670131605">https://zhuanlan.zhihu.com/p/670131605</a>.<br>[49] 我的家里pve虚拟机经常死机原来是原因这导致的[EB&#x2F;OL]. <a href="https://blog.csdn.net/u010042660/article/details/139935170">https://blog.csdn.net/u010042660/article/details/139935170</a>.<br>[50] pve节点频繁宕机问题排查[EB&#x2F;OL]. <a href="https://www.cnblogs.com/nf01/p/16296724.html">https://www.cnblogs.com/nf01/p/16296724.html</a>.<br>[51] pve8.0 cpu是1265u经常死机，进不去，需要断电重启[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/8488486698">https://tieba.baidu.com/p/8488486698</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -6851,6 +6669,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <categories>
         <category>software</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android系统排障总结</title>
@@ -7799,6 +7913,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">华硕奥创</td>
 </tr>
 <tr>
+<td align="center">WinDbg</td>
+<td align="left"><a href="https://apps.microsoft.com/detail/9pgjgd53tn86?hl=zh-CN&gl=CN">https://apps.microsoft.com/detail/9pgjgd53tn86?hl=zh-CN&amp;gl=CN</a></td>
+<td align="center">Microsoft Corporation</td>
+<td align="center"></td>
+</tr>
+<tr>
 <td align="center">Microsoft Defender</td>
 <td align="left"><a href="https://apps.microsoft.com/detail/9p6pmztm93lr?hl=zh-cn&gl=CN">https://apps.microsoft.com/detail/9p6pmztm93lr?hl=zh-cn&amp;gl=CN</a></td>
 <td align="center">Microsoft Corporation</td>
@@ -8249,12 +8369,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#x63;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#97;&#110;&#107;&#115;&#46;&#x63;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#117;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#x61;&#x6e;&#x6b;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#46;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#46;&#99;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -11097,59 +11217,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -11830,6 +11897,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -12005,7 +12125,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#105;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#105;&#115;&#116;&#x65;&#x72;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
