@@ -59,6 +59,7 @@
     <p class="tag-bookmark-page">图像处理</p>
     </div>
     <a href="https://www.photopea.com/">Photopea</a>
+    <a href="https://ps.gaoding.com">稿定设计（国内版Photopea）</a>
     <a href="https://www.vectorpea.com/">Vectorpea</a>
     <a href="https://tinify.cn/">TinyPNG</a>
 </div>
@@ -67,7 +68,14 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">以图搜图</p>
     </div>
+    <a href="https://trace.moe/">动漫图像查番</a>
+    <a href="https://ascii2d.net/">二次元画像详细检索</a>
+    <a href="http://www.iqdb.org/">多服务图像查找</a>
+    <a href="https://graph.baidu.com/pcpage/index">百度识图</a>
+    <a href="https://www.bing.com/visualsearch">必应识图</a>
+    <a href="https://images.google.com/">谷歌识图</a>
     <a href="https://yandex.com/images/">Yandex</a>
+    <a href="https://saucenao.com/">SauceNAO</a>
 </div>
 
 <div class="text-box">
@@ -75,6 +83,8 @@
     <p class="tag-bookmark-page">镜像加速</p>
     </div>
     <a href="https://doget.nocsdn.com/">Doget（Github加速下载）</a>
+    <a href="https://pd.zwc365.com/">zwc365（Github加速下载）</a>
+    <a href="https://nightly.link/">免登录下载actions artifacts</a>
 </div>
 
 <div class="text-box">
@@ -91,6 +101,10 @@
     </div>
     <a href="https://ip.tool.chinaz.com/">全球IP地址查询-站长工具</a>
     <a href="https://my-ip.cc/zh-hans/">我的IP地址</a>
+    <a href="https://www.ipaddress.com/">ipaddress查看IP地址</a>
+    <a href="https://www.ip138.com/">ip138查看IP地址</a>
+    <a href="https://tool.lu/ip/">IP归属地查询</a>
+    <a href="https://www.cip.cc/">CIP查看IP地址</a>
 </div>
 
 <div class="text-box">
@@ -107,6 +121,8 @@
     <p class="tag-bookmark-page">文档处理</p>
     </div>
     <a href="https://tableconvert.com/zh-cn/csv-to-markdown">表格转换工具</a>
+    <a href="https://smallpdf.com/cn">Smallpdf</a>
+    <a href="https://tools.pdf24.org/zh/">PDF24 Tools</a>
 </div>
 
 <div class="text-box">
@@ -2237,19 +2253,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C语言总结笔记</title>
     <url>/code/c/</url>
     <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
@@ -2265,6 +2268,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>编程</tag>
         <tag>语言</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于项目开发的语言技术栈选择">1 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">2 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">2.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
   </entry>
   <entry>
     <title>计算机安全</title>
@@ -2761,7 +2777,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#x74;&#64;&#49;&#55;&#50;&#46;&#49;&#x39;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#64;&#49;&#55;&#50;&#x2e;&#49;&#57;&#46;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -2902,56 +2918,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>github</tag>
         <tag>代码管理</tag>
         <tag>版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -3130,6 +3096,113 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>hexo</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python总结笔记</title>
+    <url>/code/python/</url>
+    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
+<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
+<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
+<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
+<p>原因：python环境异常。</p>
+<p>解决方法：重装python。</p>
+<ol>
+<li>直接删除python主安装路径的文件</li>
+<li>运行安装程序repair</li>
+<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
+</ol>
+<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
+<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
+<p>基本的使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
+<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
+<p>基本使用：</p>
+<ul>
+<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
+<li>创建setup.py文件：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
+<li>安装twine并发布包到PyPI：</li>
+</ul>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
+</ul>
+<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
+<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
+</ul>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>编程</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3954,63 +4027,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Python总结笔记</title>
-    <url>/code/python/</url>
-    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
-<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
-<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
-<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
-<p>原因：python环境异常。</p>
-<p>解决方法：重装python。</p>
-<ol>
-<li>直接删除python主安装路径的文件</li>
-<li>运行安装程序repair</li>
-<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
-</ol>
-<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
-<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
-<p>基本的使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
-<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
-<p>基本使用：</p>
-<ul>
-<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
-<li>创建setup.py文件：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
-<li>安装twine并发布包到PyPI：</li>
-</ul>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
-</ul>
-<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
-</ul>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>编程</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>正则表达式总结笔记</title>
     <url>/code/regular-expressions/</url>
     <content><![CDATA[<h1 id="常用的正则表达式">1 &nbsp&nbsp<a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h1><ul>
@@ -4131,6 +4147,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>英文词典常用缩写</title>
+    <url>/english/abbr/</url>
+    <content><![CDATA[<ul>
+<li>abbr. abbreviations 缩写</li>
+<li>v. verb 动词</li>
+<li>vt. transitive verb 及物动词</li>
+<li>vi. intransitive verb 不及物动词</li>
+<li>n. noun 名词</li>
+<li>adj. adjective 形容词</li>
+<li>adv. adverb 副词</li>
+<li>prep. preposition 介词</li>
+<li>pron. pronoun 代词</li>
+<li>conj. conjunction 连词</li>
+<li>abbr. abbreviation 缩写</li>
+<li>det. determiner 限定词</li>
+<li>sing. singular 单数</li>
+<li>pl. plural 复数</li>
+<li>exclamation 感叹词</li>
+<li>symb. symbol 符号</li>
+<li>opp. opposite 反义词</li>
+<li>syn. synonym 同义词</li>
+<li>fig. figurative 比喻的</li>
+<li>derog. derogatie 贬义的</li>
+<li>fml. formal 用于正式文体</li>
+<li>infml. informal 用于非正式文体</li>
+<li>BrE 英国英语</li>
+<li>AmE 美国英语</li>
+<li>C countable 可数名词</li>
+<li>U uncountable 不可数名词</li>
+<li>sb. somebody 某人</li>
+<li>sth. something 某事物</li>
+<li>pt past tense 过去时</li>
+<li>pp past participle 过去分词</li>
+<li>[计] 计算机</li>
+<li>[物] 物理</li>
+<li>[电] 电路</li>
+<li>[医] 医学</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>词典</tag>
+        <tag>缩写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编程英文术语</title>
     <url>/english/code/</url>
     <content><![CDATA[<ul>
@@ -4206,56 +4272,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>编程</tag>
         <tag>英文</tag>
         <tag>术语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英文词典常用缩写</title>
-    <url>/english/abbr/</url>
-    <content><![CDATA[<ul>
-<li>abbr. abbreviations 缩写</li>
-<li>v. verb 动词</li>
-<li>vt. transitive verb 及物动词</li>
-<li>vi. intransitive verb 不及物动词</li>
-<li>n. noun 名词</li>
-<li>adj. adjective 形容词</li>
-<li>adv. adverb 副词</li>
-<li>prep. preposition 介词</li>
-<li>pron. pronoun 代词</li>
-<li>conj. conjunction 连词</li>
-<li>abbr. abbreviation 缩写</li>
-<li>det. determiner 限定词</li>
-<li>sing. singular 单数</li>
-<li>pl. plural 复数</li>
-<li>exclamation 感叹词</li>
-<li>symb. symbol 符号</li>
-<li>opp. opposite 反义词</li>
-<li>syn. synonym 同义词</li>
-<li>fig. figurative 比喻的</li>
-<li>derog. derogatie 贬义的</li>
-<li>fml. formal 用于正式文体</li>
-<li>infml. informal 用于非正式文体</li>
-<li>BrE 英国英语</li>
-<li>AmE 美国英语</li>
-<li>C countable 可数名词</li>
-<li>U uncountable 不可数名词</li>
-<li>sb. somebody 某人</li>
-<li>sth. something 某事物</li>
-<li>pt past tense 过去时</li>
-<li>pp past participle 过去分词</li>
-<li>[计] 计算机</li>
-<li>[物] 物理</li>
-<li>[电] 电路</li>
-<li>[医] 医学</li>
-</ul>
-]]></content>
-      <categories>
-        <category>english</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>英文</tag>
-        <tag>词典</tag>
-        <tag>缩写</tag>
       </tags>
   </entry>
   <entry>
@@ -5992,8 +6008,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li><code>BUG: Bad page state in process init  pfn:11386d</code></li>
 <li>启动虚拟机经常遇到：<a href="https://github.com/lxc/lxc/issues/2678">Failed to create the configured network</a>，从而导致无法启动</li>
 <li>无法正常卸载分区，reboot系统也会卡住在<code>unmount filesystem xxxx</code>（xxxx指UUID）</li>
+<li>导致PBS备份失败：<a href="#ERROR-Backup-of-VM-102-failed-lvcreate-snapshot-pve-snap-vm-102-disk-0-vzdump-error">ERROR: Backup of VM 102 failed - lvcreate snapshot &#39;pve&#x2F;snap_vm-102-disk-0_vzdump&#39; error</a></li>
 </ul>
-<p>问题原因：CPU缩缸（辣鸡Intel(ಥ﹏ಥ)）。相信我，修改grub引导参数设置<code>nomodeset</code>什么的都不管用的，仍然是随机崩溃或者随机卡住。</p>
+<p>问题原因：CPU缩缸（辣鸡Intel(ಥ﹏ಥ)）。相信我，修改grub引导参数设置<code>nomodeset</code>什么的都不管用的，仍然是随机崩溃宕机或者开机随机卡住。</p>
 <p>解决方法：为CPU设置BIOS锁频和稳压，确保CPU可以稳定运行工作。</p>
 <div class="note default no-icon"><p>如果是1265u的机器，可能是C状态的问题。编辑<code>/etc/default/grub</code>，在<code>GRUB_CMDLINE_LINUX_DEFAULT</code>追加<code>intel_idle.max_cstate=2</code>参数，然后<code>update-grub</code>，最后在BIOS中设置关闭C状态。</p>
 </div>
@@ -8398,12 +8415,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#111;&#117;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#x63;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#97;&#x6e;&#107;&#115;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#121;&#111;&#117;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#112;&#108;&#101;&#x40;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#x31;&#x2e;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#x73;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -10982,6 +10999,82 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IELTS雅思词汇圣经：6分词汇</title>
     <url>/english/IELTS/score6/</url>
     <content><![CDATA[<h1 id="list1"><a href="#list1" class="headerlink" title="list1"></a>list1</h1><ul>
@@ -11223,59 +11316,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -11441,29 +11481,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>翻译</tag>
         <tag>blender</tag>
         <tag>资料整理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
       </tags>
   </entry>
   <entry>
@@ -12057,88 +12074,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 ]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>知识总结手册</title>
-    <url>/manuals/index.html</url>
-    <content><![CDATA[<h1 id="软件操作总结">1 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><ul>
-<li><a href="/software/blender/blender">Blender总结</a><ul>
-<li><a href="/software/blender/interface-tools-operation">Blender界面工具操作总结</a></li>
-<li><a href="/software/blender/q-a">Blender常见问题总结 ——Q&amp;A</a></li>
-<li><a href="/software/blender/examples">Blender实战案例总结</a></li>
-<li><a href="/software/blender/code-development">Blender二次代码开发总结</a></li>
-<li><a href="/software/blender/blender-learning-resources">Blender自学资料向（干货整理）(内容已过时，作废)</a></li>
-</ul>
-</li>
-<li><a href="/software/blender/tranining/training">Blender教程总结</a><ul>
-<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a></li>
-</ul>
-</li>
-<li><a href="/software/krita">Krita</a></li>
-<li><a href="/software/office">Office</a></li>
-<li><a href="/software/virtual-machine">虚拟机总结</a></li>
-<li><a href="/software/server">服务器</a></li>
-</ul>
-<h1 id="编程总结">2 &nbsp&nbsp<a href="#编程总结" class="headerlink" title="编程总结"></a>编程总结</h1><ul>
-<li><a href="/code/data-structure">数据结构</a></li>
-<li><a href="/code-training/leetcode">力扣LeetCode</a></li>
-<li><a href="/code-training/pat">Programming Ability Test (PAT)</a></li>
-<li><a href="/code/code">开发总结</a></li>
-<li><a href="/code/vscode">Visual Studio Code</a></li>
-<li><a href="/code/bash">Bash Shell</a></li>
-<li><a href="/code/bat-powershell">Bat&amp;Powershell</a></li>
-<li><a href="/code/database">数据库</a></li>
-<li><a href="/code/docker">Docker</a></li>
-<li><a href="/code/c">C</a></li>
-<li><a href="/code/css">CSS</a></li>
-<li><a href="/code/git">Git</a></li>
-<li><a href="/code/latex">LaTeX</a></li>
-<li><a href="/code/markdown">Markdown</a></li>
-<li><a href="/code/python">Python</a></li>
-<li><a href="/code/qt">Qt</a></li>
-<li><a href="/code/hexo">Hexo个人博客搭建踩坑记</a></li>
-<li><a href="/code/regular-expressions">正则表达式</a></li>
-</ul>
-<h1 id="排障总结">3 &nbsp&nbsp<a href="#排障总结" class="headerlink" title="排障总结"></a>排障总结</h1><ul>
-<li><a href="/troubleshooting/windows-troubleshooting">Windows系统排障总结</a></li>
-<li><a href="/troubleshooting/runtime-library-repair-on-windows">运行库修复（Windows平台）</a></li>
-<li><a href="/troubleshooting/linux-troubleshooting">Linux系统排障总结</a></li>
-<li><a href="/troubleshooting/hardware-troubleshooting">计算机硬件排障总结</a></li>
-<li><a href="/troubleshooting/software-troubleshooting">计算机软件排障总结</a></li>
-<li><a href="/troubleshooting/android-troubleshooting">Android系统排障总结</a></li>
-<li><a href="/troubleshooting/router-troubleshooting">路由排障总结</a></li>
-</ul>
-<h1 id="系统安装">4 &nbsp&nbsp<a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><ul>
-<li><a href="/software/pve">PVE+iKuai+OpenWrt+fnOS 虚拟机折腾记录</a></li>
-<li><a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a></li>
-<li><a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a></li>
-</ul>
-<h1 id="AI开发">5 &nbsp&nbsp<a href="#AI开发" class="headerlink" title="AI开发"></a>AI开发</h1><ul>
-<li><a href="/software/ai">AI总结</a></li>
-<li><a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a></li>
-</ul>
-<h1 id="CAD类">6 &nbsp&nbsp<a href="#CAD类" class="headerlink" title="CAD类"></a>CAD类</h1><ul>
-<li><a href="/cad/cad">CAD</a></li>
-<li><a href="/cad/pcb">PCB设计</a></li>
-<li><a href="/cad/flash-disk">闪存驱动器设计</a></li>
-<li><a href="/cad/simulation">电路仿真设计</a></li>
-</ul>
-<h1 id="书籍阅读总结">7 &nbsp&nbsp<a href="#书籍阅读总结" class="headerlink" title="书籍阅读总结"></a>书籍阅读总结</h1><ul>
-<li><a href="/code-training/cpp-primer-v5/cpp-primer-v5">C++ Primer 第五版</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide">QT6 C++开发指南</a></li>
-<li><a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>关于我</title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -12236,7 +12171,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#x69;&#115;&#116;&#101;&#x72;&#107;&#x69;&#110;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#x6b;&#x69;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -12344,6 +12279,88 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 }
 </style>
 ]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>知识总结手册</title>
+    <url>/manuals/index.html</url>
+    <content><![CDATA[<h1 id="软件操作总结">1 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><ul>
+<li><a href="/software/blender/blender">Blender总结</a><ul>
+<li><a href="/software/blender/interface-tools-operation">Blender界面工具操作总结</a></li>
+<li><a href="/software/blender/q-a">Blender常见问题总结 ——Q&amp;A</a></li>
+<li><a href="/software/blender/examples">Blender实战案例总结</a></li>
+<li><a href="/software/blender/code-development">Blender二次代码开发总结</a></li>
+<li><a href="/software/blender/blender-learning-resources">Blender自学资料向（干货整理）(内容已过时，作废)</a></li>
+</ul>
+</li>
+<li><a href="/software/blender/tranining/training">Blender教程总结</a><ul>
+<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a></li>
+</ul>
+</li>
+<li><a href="/software/krita">Krita</a></li>
+<li><a href="/software/office">Office</a></li>
+<li><a href="/software/virtual-machine">虚拟机总结</a></li>
+<li><a href="/software/server">服务器</a></li>
+</ul>
+<h1 id="编程总结">2 &nbsp&nbsp<a href="#编程总结" class="headerlink" title="编程总结"></a>编程总结</h1><ul>
+<li><a href="/code/data-structure">数据结构</a></li>
+<li><a href="/code-training/leetcode">力扣LeetCode</a></li>
+<li><a href="/code-training/pat">Programming Ability Test (PAT)</a></li>
+<li><a href="/code/code">开发总结</a></li>
+<li><a href="/code/vscode">Visual Studio Code</a></li>
+<li><a href="/code/bash">Bash Shell</a></li>
+<li><a href="/code/bat-powershell">Bat&amp;Powershell</a></li>
+<li><a href="/code/database">数据库</a></li>
+<li><a href="/code/docker">Docker</a></li>
+<li><a href="/code/c">C</a></li>
+<li><a href="/code/css">CSS</a></li>
+<li><a href="/code/git">Git</a></li>
+<li><a href="/code/latex">LaTeX</a></li>
+<li><a href="/code/markdown">Markdown</a></li>
+<li><a href="/code/python">Python</a></li>
+<li><a href="/code/qt">Qt</a></li>
+<li><a href="/code/hexo">Hexo个人博客搭建踩坑记</a></li>
+<li><a href="/code/regular-expressions">正则表达式</a></li>
+</ul>
+<h1 id="排障总结">3 &nbsp&nbsp<a href="#排障总结" class="headerlink" title="排障总结"></a>排障总结</h1><ul>
+<li><a href="/troubleshooting/windows-troubleshooting">Windows系统排障总结</a></li>
+<li><a href="/troubleshooting/runtime-library-repair-on-windows">运行库修复（Windows平台）</a></li>
+<li><a href="/troubleshooting/linux-troubleshooting">Linux系统排障总结</a></li>
+<li><a href="/troubleshooting/hardware-troubleshooting">计算机硬件排障总结</a></li>
+<li><a href="/troubleshooting/software-troubleshooting">计算机软件排障总结</a></li>
+<li><a href="/troubleshooting/android-troubleshooting">Android系统排障总结</a></li>
+<li><a href="/troubleshooting/router-troubleshooting">路由排障总结</a></li>
+</ul>
+<h1 id="系统安装">4 &nbsp&nbsp<a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><ul>
+<li><a href="/software/pve">PVE+iKuai+OpenWrt+fnOS 虚拟机折腾记录</a></li>
+<li><a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a></li>
+<li><a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a></li>
+</ul>
+<h1 id="AI开发">5 &nbsp&nbsp<a href="#AI开发" class="headerlink" title="AI开发"></a>AI开发</h1><ul>
+<li><a href="/software/ai">AI总结</a></li>
+<li><a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a></li>
+</ul>
+<h1 id="CAD类">6 &nbsp&nbsp<a href="#CAD类" class="headerlink" title="CAD类"></a>CAD类</h1><ul>
+<li><a href="/cad/cad">CAD</a></li>
+<li><a href="/cad/pcb">PCB设计</a></li>
+<li><a href="/cad/flash-disk">闪存驱动器设计</a></li>
+<li><a href="/cad/simulation">电路仿真设计</a></li>
+</ul>
+<h1 id="书籍阅读总结">7 &nbsp&nbsp<a href="#书籍阅读总结" class="headerlink" title="书籍阅读总结"></a>书籍阅读总结</h1><ul>
+<li><a href="/code-training/cpp-primer-v5/cpp-primer-v5">C++ Primer 第五版</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide">QT6 C++开发指南</a></li>
+<li><a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>作品</title>
