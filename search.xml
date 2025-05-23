@@ -1757,108 +1757,110 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>闪存驱动器设计</title>
-    <url>/cad/flash-disk/</url>
-    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
-<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
-<p>部分店铺的网评：大树推荐，翼浪排除</p>
-</blockquote>
-<p><strong>店铺总结（个人购买经验总结）：</strong></p>
+    <title>PCB设计</title>
+    <url>/cad/pcb/</url>
+    <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
+<h1 id="常见接口引脚定义">2 &nbsp&nbsp<a href="#常见接口引脚定义" class="headerlink" title="常见接口引脚定义"></a>常见接口引脚定义</h1><p>USB协议官网：<a href="https://www.usb.org/">https://www.usb.org/</a></p>
+<p>USB接口种类：<a href="https://zhuanlan.zhihu.com/p/447595295">https://zhuanlan.zhihu.com/p/447595295</a></p>
+<p>常见USB引脚定义：<a href="https://zhuanlan.zhihu.com/p/364748197">https://zhuanlan.zhihu.com/p/364748197</a><br>USB 2.0 A型、B型、Mini和Micro接口 type-c 定义及封装：<a href="https://blog.csdn.net/wuhenyouyuyouyu/article/details/52511925">https://blog.csdn.net/wuhenyouyuyouyu/article/details/52511925</a></p>
+<p>接口速率总结：</p>
 <ul>
-<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
-<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
-<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
+<li>USB3.0：460MB左右</li>
+<li>USB2.0：44MB左右</li>
+<li>Type-C：1GB左右</li>
 </ul>
-<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
-<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
-<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
-</ul>
-<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
-<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
-<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
-<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
+<h2 id="Type-C接口">2.1 &nbsp&nbsp<a href="#Type-C接口" class="headerlink" title="Type-C接口"></a>Type-C接口</h2><p><a href="https://blog.csdn.net/qlexcel/article/details/117431413">https://blog.csdn.net/qlexcel/article/details/117431413</a></p>
+<h2 id="mini-usb接口">2.2 &nbsp&nbsp<a href="#mini-usb接口" class="headerlink" title="mini usb接口"></a>mini usb接口</h2><p><a href="https://blog.csdn.net/eddy_liu/article/details/8316140">https://blog.csdn.net/eddy_liu/article/details/8316140</a></p>
+<table>
+<thead>
+<tr>
+<th>针脚</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>名称</td>
+<td>VCC</td>
+<td>D-</td>
+<td>D+</td>
+<td>id</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>+5V电压</td>
+<td>数据线负极</td>
+<td>数据线正极</td>
+<td>OTG功能</td>
+<td>接地</td>
+</tr>
+<tr>
+<td>接线颜色</td>
+<td>红色</td>
+<td>白色</td>
+<td>绿色</td>
+<td>&#x2F;</td>
+<td>黑色</td>
+</tr>
+</tbody></table>
+<h2 id="充电DC圆孔">2.3 &nbsp&nbsp<a href="#充电DC圆孔" class="headerlink" title="充电DC圆孔"></a>充电DC圆孔</h2><p>无论是公口或者母口，一般都是内正外负，不仅是5.5大小的，4、3.5、2.5等等的。不过有些厂家是对着干的，比如当年卡西欧和雅马哈电子琴所配的电源。</p>
+<div class="flex-column">
+<img data-src="/images/pcb/dc_pin.webp">DC接口引脚定义</div>
+
+<h1 id="常见传感器的应用">3 &nbsp&nbsp<a href="#常见传感器的应用" class="headerlink" title="常见传感器的应用"></a>常见传感器的应用</h1><ul>
+<li>IR感测器（红外）：作为检测判断防尘网是否被灰尘堵塞（用例：华硕PA602机箱）</li>
+<li>触摸传感器（触觉传感器）：对于触摸或者压力敏感, 是一种用来检测物体接触或靠近的传感器。通常是通过检测触摸界面的电容或电阻的变化，或者是检测声波反射等方式来工作。<ul>
+<li>电容式触摸传感器：弹簧型传感器，可适用于曲面前面板方案。例如屏幕灯为圆柱形，触摸面为曲面。<ul>
+<li>德州仪器 (TI)技术资料：<a href="https://www.ti.com.cn/cn/lit/ml/zhcaaa9/zhcaaa9.pdf?ts=1740213118582">CapTIvate™电容式触摸入门手册</a></li>
 </ul>
 </li>
-<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
-<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
-<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
-</ul>
-</li>
-<li>THGBMFG9C4LBAIR：64GB<ul>
-<li>颗粒从酷派平板拆出来</li>
-</ul>
-</li>
-<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）<ul>
-<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN）拆出来（主控为SM2267XTV）</li>
-</ul>
-</li>
-<li>NW852（7WB2D&#x2F;7ZB2D）<ul>
-<li>颗粒从HP SSD S700 M.2 250GB拆出来（主控为hp 1746H6008  G AB N1GX89 00）</li>
+<li>电阻式触摸传感器</li>
+<li>红外触摸传感器</li>
 </ul>
 </li>
 </ul>
-<p>颗粒的部分资料：</p>
-<ul>
-<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
+<div class="flex-column">
+<img data-src="/images/pcb/touch-sensor-comparison.webp">触摸传感器比较</div>
+
+<h1 id="华硕主板灯控开发">4 &nbsp&nbsp<a href="#华硕主板灯控开发" class="headerlink" title="华硕主板灯控开发"></a>华硕主板灯控开发</h1><ul>
+<li><a href="https://github.com/ProgramAndPoem/AacHal">https://github.com/ProgramAndPoem/AacHal</a></li>
+<li><a href="https://blog.csdn.net/weixin_42349978/article/details/112128924">https://blog.csdn.net/weixin_42349978/article/details/112128924</a></li>
 </ul>
-<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
-<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
-<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
-<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
-<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
-<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
+<h1 id="锂电池">5 &nbsp&nbsp<a href="#锂电池" class="headerlink" title="锂电池"></a>锂电池</h1><p>串并联符号：串联s，并联p。3s1p：三串一并，一并实际就是没有并联。比如1s1p就是单一电池。</p>
+<p>串联增压，并联增容。</p>
+<h1 id="FPC的断裂修复">6 &nbsp&nbsp<a href="#FPC的断裂修复" class="headerlink" title="FPC的断裂修复"></a>FPC的断裂修复</h1><p>刮表层，使用焊油连接金属触点（将锡附着在焊头上）。</p>
+<h1 id="蓝牙耳机拆解">7 &nbsp&nbsp<a href="#蓝牙耳机拆解" class="headerlink" title="蓝牙耳机拆解"></a>蓝牙耳机拆解</h1><ul>
+<li><a href="https://www.52audio.com/archives/107686.html">OPPO Enco Air2</a></li>
 </ul>
-<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
-<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
-<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
-<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
+<h1 id="焊接总结">8 &nbsp&nbsp<a href="#焊接总结" class="headerlink" title="焊接总结"></a>焊接总结</h1><ul>
+<li>USB接口固定引脚的加固：一般的USB接口有两个的固定引脚，如果只在一侧加焊的话，USB接口的固定引脚仍有可能会因为长期的拔插使用导致断裂（是在没有焊点的那侧断裂的）。因此加固建议是在无焊点那侧加焊，即固定引脚两侧都有焊点。</li>
+<li>5V3针灯条的串接，上下相叠起来才能吃锡</li>
+<li>芯片主控板焊盘不需要值球（若买的成品焊盘已有值球的话，清理干净再上芯片），芯片需要值球。推荐吹焊前，先在焊盘均匀涂抹少许焊油。</li>
+<li>BGA封装的植球焊接<ul>
+<li>使用锡泥植球时，使用热风枪加热到锡泥变亮即加热成功（这个阶段一般不需要加焊油）。</li>
+<li>倘若锡泥涂抹过多，导致加热后锡球不好脱离钢网的话，可以使用镊子夹起钢网，再重新加热，并利用重力让锡球脱离钢网。</li>
 </ul>
-<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
-<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
-<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
+</li>
 </ul>
-<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
-<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
-<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
-<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
-</ul>
-<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
-<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
-<li>焊接颗粒到主控盘，插上电脑</li>
-<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
-<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
-<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
-<li>「量产测试」标签页点击「开始」就会开始量产</li>
-</ol>
-<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
-<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
-<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
-<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
-<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
-</ul>
-<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
-<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
-<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
-<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+<h1 id="U盘的拆解">9 &nbsp&nbsp<a href="#U盘的拆解" class="headerlink" title="U盘的拆解"></a>U盘的拆解</h1><h2 id="推拉U盘的拆解">9.1 &nbsp&nbsp<a href="#推拉U盘的拆解" class="headerlink" title="推拉U盘的拆解"></a>推拉U盘的拆解</h2><div class="flex-column">
+<img data-src="/images/pcb/ktc-usb.webp">金士顿推拉U盘示意图</div>
+
+<p>大部分推拉U盘的拆解，直接将推拉外壳往外使劲一拉就能拆掉。但这种拆卸方法可能会导致外壳内侧的突起卡扣点被破坏，从而导致安装回去的推拉外壳内侧没有卡点导致失去原来的推拉限位功能。</p>
+<p>有帖子教学无损拆解，是使用订书钉或者回形针（钳子拉直）插到外壳两侧的条形凹槽，然后将推拉外壳退回最内侧，使长针卡进外壳内侧，然后将外壳往外使劲一拉。</p>
+<p>在拆掉推拉外壳之后，内部塑料壳就是基础的四侧卡扣结构，直接从USB口那侧用撬片撬开<code>人</code>字形后，就可取出U盘的PCB板。</p>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 触摸传感器 - 从零开始认识各种传感器【第五期】[EB&#x2F;OL]. <a href="https://blog.csdn.net/m0_61036291/article/details/140498200">https://blog.csdn.net/m0_61036291/article/details/140498200</a>.</p>
+]]></content>
       <categories>
         <category>cad</category>
       </categories>
       <tags>
-        <tag>量产</tag>
-        <tag>U盘</tag>
-        <tag>固态</tag>
-        <tag>开卡</tag>
-        <tag>测试架</tag>
-        <tag>主控</tag>
-        <tag>颗粒</tag>
+        <tag>PCB</tag>
+        <tag>电路</tag>
+        <tag>设计</tag>
       </tags>
   </entry>
   <entry>
@@ -1982,110 +1984,108 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>PCB设计</title>
-    <url>/cad/pcb/</url>
-    <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
-<h1 id="常见接口引脚定义">2 &nbsp&nbsp<a href="#常见接口引脚定义" class="headerlink" title="常见接口引脚定义"></a>常见接口引脚定义</h1><p>USB协议官网：<a href="https://www.usb.org/">https://www.usb.org/</a></p>
-<p>USB接口种类：<a href="https://zhuanlan.zhihu.com/p/447595295">https://zhuanlan.zhihu.com/p/447595295</a></p>
-<p>常见USB引脚定义：<a href="https://zhuanlan.zhihu.com/p/364748197">https://zhuanlan.zhihu.com/p/364748197</a><br>USB 2.0 A型、B型、Mini和Micro接口 type-c 定义及封装：<a href="https://blog.csdn.net/wuhenyouyuyouyu/article/details/52511925">https://blog.csdn.net/wuhenyouyuyouyu/article/details/52511925</a></p>
-<p>接口速率总结：</p>
+    <title>闪存驱动器设计</title>
+    <url>/cad/flash-disk/</url>
+    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
+<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+</blockquote>
+<p><strong>店铺总结（个人购买经验总结）：</strong></p>
 <ul>
-<li>USB3.0：460MB左右</li>
-<li>USB2.0：44MB左右</li>
-<li>Type-C：1GB左右</li>
+<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
+<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
+<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
 </ul>
-<h2 id="Type-C接口">2.1 &nbsp&nbsp<a href="#Type-C接口" class="headerlink" title="Type-C接口"></a>Type-C接口</h2><p><a href="https://blog.csdn.net/qlexcel/article/details/117431413">https://blog.csdn.net/qlexcel/article/details/117431413</a></p>
-<h2 id="mini-usb接口">2.2 &nbsp&nbsp<a href="#mini-usb接口" class="headerlink" title="mini usb接口"></a>mini usb接口</h2><p><a href="https://blog.csdn.net/eddy_liu/article/details/8316140">https://blog.csdn.net/eddy_liu/article/details/8316140</a></p>
-<table>
-<thead>
-<tr>
-<th>针脚</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>名称</td>
-<td>VCC</td>
-<td>D-</td>
-<td>D+</td>
-<td>id</td>
-<td>GND</td>
-</tr>
-<tr>
-<td>作用</td>
-<td>+5V电压</td>
-<td>数据线负极</td>
-<td>数据线正极</td>
-<td>OTG功能</td>
-<td>接地</td>
-</tr>
-<tr>
-<td>接线颜色</td>
-<td>红色</td>
-<td>白色</td>
-<td>绿色</td>
-<td>&#x2F;</td>
-<td>黑色</td>
-</tr>
-</tbody></table>
-<h2 id="充电DC圆孔">2.3 &nbsp&nbsp<a href="#充电DC圆孔" class="headerlink" title="充电DC圆孔"></a>充电DC圆孔</h2><p>无论是公口或者母口，一般都是内正外负，不仅是5.5大小的，4、3.5、2.5等等的。不过有些厂家是对着干的，比如当年卡西欧和雅马哈电子琴所配的电源。</p>
-<div class="flex-column">
-<img data-src="/images/pcb/dc_pin.webp">DC接口引脚定义</div>
-
-<h1 id="常见传感器的应用">3 &nbsp&nbsp<a href="#常见传感器的应用" class="headerlink" title="常见传感器的应用"></a>常见传感器的应用</h1><ul>
-<li>IR感测器（红外）：作为检测判断防尘网是否被灰尘堵塞（用例：华硕PA602机箱）</li>
-<li>触摸传感器（触觉传感器）：对于触摸或者压力敏感, 是一种用来检测物体接触或靠近的传感器。通常是通过检测触摸界面的电容或电阻的变化，或者是检测声波反射等方式来工作。<ul>
-<li>电容式触摸传感器：弹簧型传感器，可适用于曲面前面板方案。例如屏幕灯为圆柱形，触摸面为曲面。<ul>
-<li>德州仪器 (TI)技术资料：<a href="https://www.ti.com.cn/cn/lit/ml/zhcaaa9/zhcaaa9.pdf?ts=1740213118582">CapTIvate™电容式触摸入门手册</a></li>
+<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
+<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
+</ul>
+<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
+<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
+<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
 </ul>
 </li>
-<li>电阻式触摸传感器</li>
-<li>红外触摸传感器</li>
+<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
+<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
+<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
+</ul>
+</li>
+<li>THGBMFG9C4LBAIR：64GB<ul>
+<li>颗粒从酷派平板拆出来</li>
+</ul>
+</li>
+<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）<ul>
+<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN）拆出来（主控为SM2267XTV）</li>
+</ul>
+</li>
+<li>NW852（7WB2D&#x2F;7ZB2D）<ul>
+<li>颗粒从HP SSD S700 M.2 250GB拆出来（主控为hp 1746H6008  G AB N1GX89 00）</li>
 </ul>
 </li>
 </ul>
-<div class="flex-column">
-<img data-src="/images/pcb/touch-sensor-comparison.webp">触摸传感器比较</div>
-
-<h1 id="华硕主板灯控开发">4 &nbsp&nbsp<a href="#华硕主板灯控开发" class="headerlink" title="华硕主板灯控开发"></a>华硕主板灯控开发</h1><ul>
-<li><a href="https://github.com/ProgramAndPoem/AacHal">https://github.com/ProgramAndPoem/AacHal</a></li>
-<li><a href="https://blog.csdn.net/weixin_42349978/article/details/112128924">https://blog.csdn.net/weixin_42349978/article/details/112128924</a></li>
+<p>颗粒的部分资料：</p>
+<ul>
+<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
 </ul>
-<h1 id="锂电池">5 &nbsp&nbsp<a href="#锂电池" class="headerlink" title="锂电池"></a>锂电池</h1><p>串并联符号：串联s，并联p。3s1p：三串一并，一并实际就是没有并联。比如1s1p就是单一电池。</p>
-<p>串联增压，并联增容。</p>
-<h1 id="FPC的断裂修复">6 &nbsp&nbsp<a href="#FPC的断裂修复" class="headerlink" title="FPC的断裂修复"></a>FPC的断裂修复</h1><p>刮表层，使用焊油连接金属触点（将锡附着在焊头上）。</p>
-<h1 id="蓝牙耳机拆解">7 &nbsp&nbsp<a href="#蓝牙耳机拆解" class="headerlink" title="蓝牙耳机拆解"></a>蓝牙耳机拆解</h1><ul>
-<li><a href="https://www.52audio.com/archives/107686.html">OPPO Enco Air2</a></li>
+<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
+<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
+<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
+<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
+<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
 </ul>
-<h1 id="焊接总结">8 &nbsp&nbsp<a href="#焊接总结" class="headerlink" title="焊接总结"></a>焊接总结</h1><ul>
-<li>USB接口固定引脚的加固：一般的USB接口有两个的固定引脚，如果只在一侧加焊的话，USB接口的固定引脚仍有可能会因为长期的拔插使用导致断裂（是在没有焊点的那侧断裂的）。因此加固建议是在无焊点那侧加焊，即固定引脚两侧都有焊点。</li>
-<li>5V3针灯条的串接，上下相叠起来才能吃锡</li>
-<li>芯片主控板焊盘不需要值球（若买的成品焊盘已有值球的话，清理干净再上芯片），芯片需要值球。推荐吹焊前，先在焊盘均匀涂抹少许焊油。</li>
-<li>BGA封装的植球焊接<ul>
-<li>使用锡泥植球时，使用热风枪加热到锡泥变亮即加热成功（这个阶段一般不需要加焊油）。</li>
-<li>倘若锡泥涂抹过多，导致加热后锡球不好脱离钢网的话，可以使用镊子夹起钢网，再重新加热，并利用重力让锡球脱离钢网。</li>
+<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
+<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
+<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
+<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
 </ul>
-</li>
+<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
+<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
+<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
 </ul>
-<h1 id="U盘的拆解">9 &nbsp&nbsp<a href="#U盘的拆解" class="headerlink" title="U盘的拆解"></a>U盘的拆解</h1><h2 id="推拉U盘的拆解">9.1 &nbsp&nbsp<a href="#推拉U盘的拆解" class="headerlink" title="推拉U盘的拆解"></a>推拉U盘的拆解</h2><div class="flex-column">
-<img data-src="/images/pcb/ktc-usb.webp">金士顿推拉U盘示意图</div>
-
-<p>大部分推拉U盘的拆解，直接将推拉外壳往外使劲一拉就能拆掉。但这种拆卸方法可能会导致外壳内侧的突起卡扣点被破坏，从而导致安装回去的推拉外壳内侧没有卡点导致失去原来的推拉限位功能。</p>
-<p>有帖子教学无损拆解，是使用订书钉或者回形针（钳子拉直）插到外壳两侧的条形凹槽，然后将推拉外壳退回最内侧，使长针卡进外壳内侧，然后将外壳往外使劲一拉。</p>
-<p>在拆掉推拉外壳之后，内部塑料壳就是基础的四侧卡扣结构，直接从USB口那侧用撬片撬开<code>人</code>字形后，就可取出U盘的PCB板。</p>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 触摸传感器 - 从零开始认识各种传感器【第五期】[EB&#x2F;OL]. <a href="https://blog.csdn.net/m0_61036291/article/details/140498200">https://blog.csdn.net/m0_61036291/article/details/140498200</a>.</p>
-]]></content>
+<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
+<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
+<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
+<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
+</ul>
+<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
+<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<li>焊接颗粒到主控盘，插上电脑</li>
+<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
+<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
+<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
+<li>「量产测试」标签页点击「开始」就会开始量产</li>
+</ol>
+<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
+<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
+<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
+<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
+<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
+</ul>
+<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
+<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
+<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>cad</category>
       </categories>
       <tags>
-        <tag>PCB</tag>
-        <tag>电路</tag>
-        <tag>设计</tag>
+        <tag>量产</tag>
+        <tag>U盘</tag>
+        <tag>固态</tag>
+        <tag>开卡</tag>
+        <tag>测试架</tag>
+        <tag>主控</tag>
+        <tag>颗粒</tag>
       </tags>
   </entry>
   <entry>
@@ -2838,7 +2838,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#x74;&#64;&#49;&#x37;&#50;&#46;&#49;&#57;&#x2e;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#x40;&#x31;&#x37;&#x32;&#46;&#49;&#x39;&#x2e;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3207,63 +3207,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>TeX</tag>
         <tag>编译</tag>
         <tag>排版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python总结笔记</title>
-    <url>/code/python/</url>
-    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
-<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
-<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
-<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
-<p>原因：python环境异常。</p>
-<p>解决方法：重装python。</p>
-<ol>
-<li>直接删除python主安装路径的文件</li>
-<li>运行安装程序repair</li>
-<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
-</ol>
-<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
-<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
-<p>基本的使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
-<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
-<p>基本使用：</p>
-<ul>
-<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
-<li>创建setup.py文件：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
-<li>安装twine并发布包到PyPI：</li>
-</ul>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
-</ul>
-<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
-</ul>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>编程</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3766,6 +3709,63 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python总结笔记</title>
+    <url>/code/python/</url>
+    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
+<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
+<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
+<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
+<p>原因：python环境异常。</p>
+<p>解决方法：重装python。</p>
+<ol>
+<li>直接删除python主安装路径的文件</li>
+<li>运行安装程序repair</li>
+<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
+</ol>
+<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
+<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
+<p>基本的使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
+<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
+<p>基本使用：</p>
+<ul>
+<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
+<li>创建setup.py文件：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
+<li>安装twine并发布包到PyPI：</li>
+</ul>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
+</ul>
+<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
+<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
+</ul>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>编程</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -6775,302 +6775,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android系统排障总结</title>
     <url>/troubleshooting/android-troubleshooting/</url>
     <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
@@ -8493,12 +8197,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#x6b;&#121;&#x6f;&#117;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#97;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8590,6 +8294,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -12249,7 +12249,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#107;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -12592,6 +12592,69 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
+    <url>/about/post-offline-download/index.html</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
+<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
+<ul>
+<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
+<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
+<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
+</ul>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+</div>
+
+<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
+<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
+<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+</div>
+
+<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
+<ol>
+<li>打开火狐浏览器。</li>
+<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
+<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
+<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
+<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
+    <div class="flex-column">
+    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
+</div>
+
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+</div>
+
+<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
+<li>保存压缩包到本地即可。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
+
+<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
+<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
+<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>更新日志</title>
     <url>/about/logs/index.html</url>
     <content><![CDATA[<div class="note info no-icon"><p>注：本页面用来记录本博客的建设日志。（从2021&#x2F;11&#x2F;11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
@@ -12804,69 +12867,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     text-indent: -6.5em; /* 用 indent 将第一行收回来，相互抵消 */
 }
 </style>
-]]></content>
-  </entry>
-  <entry>
-    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
-    <url>/about/post-offline-download/index.html</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
-<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
-<ul>
-<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
-<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
-<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
-</ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
-</div>
-
-<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
-<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
-<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
-<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
-</div>
-
-<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
-<ol>
-<li>打开火狐浏览器。</li>
-<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
-<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
-<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
-<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
-    <div class="flex-column">
-    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
-</div>
-
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
-</div>
-
-<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
-<li>保存压缩包到本地即可。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
-
-<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
-<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
-<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
@@ -13381,7 +13381,10 @@ CGI&后期处理
 <p><strong>「导入蓝图（参考图）」功能支持的参考图文件格式和命名规则列表：</strong></p>
 <ul>
 <li>在导入前，请重命名参考图文件，实际添加[连接符][后缀]即可，</li>
-<li>命令规则：[文件的旧文件名称]+[连接符]+[后缀]+[文件格式]</li>
+<li>命令规则：[文件的旧文件名称]+[连接符]+[后缀]+[文件格式]<ul>
+<li>文件格式，即文件后缀名，不要求必须为小写字母，只要是符合的文件格式均支持，例如<code>.png</code>、<code>.Png</code>、<code>.PNG</code>等。</li>
+</ul>
+</li>
 <li>示例参考图文件名：<ul>
 <li>1.俯视图.png</li>
 <li>pen-topview.png</li>
