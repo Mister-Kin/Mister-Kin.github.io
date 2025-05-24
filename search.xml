@@ -1797,12 +1797,22 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>颗粒从酷派平板拆出来</li>
 </ul>
 </li>
-<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）<ul>
-<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN）拆出来（主控为SM2267XTV）</li>
+<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
+<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
 </ul>
 </li>
-<li>NW852（7WB2D&#x2F;7ZB2D）<ul>
-<li>颗粒从HP SSD S700 M.2 250GB拆出来（主控为hp 1746H6008  G AB N1GX89 00）</li>
+<li>NW852（7WB2D&#x2F;7ZB2D）：64GB<ul>
+<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
+</ul>
+</li>
+<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
+<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
+</ul>
+</li>
+<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
+<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
+<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
+<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
 </ul>
 </li>
 </ul>
@@ -2368,6 +2378,69 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>数据结构</title>
+    <url>/code/data-structure/</url>
+    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
+<li>集合的特性：<ul>
+<li>集合里的元素类型不一定相同</li>
+<li>集合里的元素没有顺序</li>
+</ul>
+</li>
+<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
+<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
+<li>列表最常见的表现形式：数组和链表<ul>
+<li>C++和Java中，数组中的元素类型必须保持一致。</li>
+<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
+</ul>
+</li>
+<li>特殊类型的列表：栈和队列</li>
+</ul>
+</li>
+<li>列表和数组的区别<ul>
+<li>数组<ul>
+<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
+<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
+</ul>
+</li>
+<li>列表<ul>
+<li>列表没有<code>索引</code>。</li>
+<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
+<ul>
+<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
+<li>时间复杂度：O(1)</li>
+</ul>
+</li>
+<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
+<li>时间复杂度：O(N)</li>
+</ul>
+</li>
+<li>插入元素<ul>
+<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
+<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
+</ul>
+</li>
+<li>删除元素：与插入元素类似<ul>
+<li>末尾删除：只需要一步</li>
+<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
+<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数据库技术总结笔记</title>
     <url>/code/database/</url>
     <content><![CDATA[<h1 id="常见数据库">1 &nbsp&nbsp<a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h1><ul>
@@ -2492,69 +2565,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>mongodb</tag>
         <tag>sql</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>数据结构</title>
-    <url>/code/data-structure/</url>
-    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
-<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
-<li>集合的特性：<ul>
-<li>集合里的元素类型不一定相同</li>
-<li>集合里的元素没有顺序</li>
-</ul>
-</li>
-<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
-<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
-<li>列表最常见的表现形式：数组和链表<ul>
-<li>C++和Java中，数组中的元素类型必须保持一致。</li>
-<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
-</ul>
-</li>
-<li>特殊类型的列表：栈和队列</li>
-</ul>
-</li>
-<li>列表和数组的区别<ul>
-<li>数组<ul>
-<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
-<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
-</ul>
-</li>
-<li>列表<ul>
-<li>列表没有<code>索引</code>。</li>
-<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
-<ul>
-<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
-<li>时间复杂度：O(1)</li>
-</ul>
-</li>
-<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
-<li>时间复杂度：O(N)</li>
-</ul>
-</li>
-<li>插入元素<ul>
-<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
-<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
-</ul>
-</li>
-<li>删除元素：与插入元素类似<ul>
-<li>末尾删除：只需要一步</li>
-<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
-<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
-</ul>
-</li>
-</ul>
-<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
   </entry>
   <entry>
     <title>docker</title>
@@ -2847,7 +2857,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#64;&#x31;&#x37;&#50;&#46;&#x31;&#57;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#49;&#55;&#x32;&#x2e;&#x31;&#57;&#x2e;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -8514,12 +8524,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#111;&#117;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#x61;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#x75;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -10905,28 +10915,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
     <url>/code-training/qt6-cpp-development-guide/chap1/</url>
     <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
@@ -11067,6 +11055,28 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>qt</tag>
         <tag>第一章</tag>
         <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -12270,7 +12280,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#105;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#116;&#101;&#x72;&#x6b;&#x69;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
