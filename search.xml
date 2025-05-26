@@ -2129,24 +2129,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>电路仿真设计</title>
-    <url>/cad/simulation/</url>
-    <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
-<ul>
-<li>计算机性能不够，导致运行proteus仿真过慢</li>
-<li>proteus内设置的晶振频率和keil源码编译时设置的晶振频率不同</li>
-</ul>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] proteus 8 仿真时 时间流动过慢的解决方案[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44176696/article/details/106875850">https://blog.csdn.net/weixin_44176696/article/details/106875850</a>.</p>
-]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>电路</tag>
-        <tag>仿真</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bash Shell总结笔记</title>
     <url>/code/bash/</url>
     <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
@@ -2175,6 +2157,24 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>系统</tag>
         <tag>linux</tag>
         <tag>终端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电路仿真设计</title>
+    <url>/cad/simulation/</url>
+    <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
+<ul>
+<li>计算机性能不够，导致运行proteus仿真过慢</li>
+<li>proteus内设置的晶振频率和keil源码编译时设置的晶振频率不同</li>
+</ul>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] proteus 8 仿真时 时间流动过慢的解决方案[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44176696/article/details/106875850">https://blog.csdn.net/weixin_44176696/article/details/106875850</a>.</p>
+]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>电路</tag>
+        <tag>仿真</tag>
       </tags>
   </entry>
   <entry>
@@ -2857,7 +2857,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#x74;&#64;&#49;&#55;&#50;&#x2e;&#x31;&#57;&#x2e;&#x30;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x37;&#x32;&#x2e;&#49;&#57;&#46;&#48;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3226,6 +3226,63 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>TeX</tag>
         <tag>编译</tag>
         <tag>排版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python总结笔记</title>
+    <url>/code/python/</url>
+    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
+<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
+<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
+<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
+<p>原因：python环境异常。</p>
+<p>解决方法：重装python。</p>
+<ol>
+<li>直接删除python主安装路径的文件</li>
+<li>运行安装程序repair</li>
+<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
+</ol>
+<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
+<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
+<p>基本的使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
+<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
+<p>基本使用：</p>
+<ul>
+<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
+<li>创建setup.py文件：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
+<li>安装twine并发布包到PyPI：</li>
+</ul>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
+</ul>
+<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
+<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
+</ul>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>编程</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3731,63 +3788,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Python总结笔记</title>
-    <url>/code/python/</url>
-    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
-<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
-<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
-<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
-<p>原因：python环境异常。</p>
-<p>解决方法：重装python。</p>
-<ol>
-<li>直接删除python主安装路径的文件</li>
-<li>运行安装程序repair</li>
-<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
-</ol>
-<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
-<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
-<p>基本的使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
-<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
-<p>基本使用：</p>
-<ul>
-<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
-<li>创建setup.py文件：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
-<li>安装twine并发布包到PyPI：</li>
-</ul>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
-</ul>
-<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
-</ul>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>编程</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt总结笔记</title>
     <url>/code/qt/</url>
     <content><![CDATA[<h1 id="Qt语法">1 &nbsp&nbsp<a href="#Qt语法" class="headerlink" title="Qt语法"></a>Qt语法</h1><p><a href="https://www.cnblogs.com/jfzhu/p/13501678.html">Qt信号与槽使用方法最完整总结</a></p>
@@ -3845,17 +3845,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h2 id="修改模板文件以便新建工程时默认支持C-20">5.2 &nbsp&nbsp<a href="#修改模板文件以便新建工程时默认支持C-20" class="headerlink" title="修改模板文件以便新建工程时默认支持C++20"></a>修改模板文件以便新建工程时默认支持C++20</h2><p>使用程序完成批量修改：<a href="https://github.com/Mister-Kin/BatchTools/blob/master/modify_qt_creator_template_files_to_support_c%2B%2B20.bat">modify_qt_creator_template_files_to_support_c++20.bat</a></p>
 <div class="tabs" id="template"><ul class="nav-tabs"><li class="tab active"><a href="#template-1">cmake</a></li><li class="tab"><a href="#template-2">qmake</a></li></ul><div class="tab-content"><div class="tab-pane active" id="template-1"><p>将以下文件中的<code>set(CMAKE_CXX_STANDARD 17)</code>修改为<code>set(CMAKE_CXX_STANDARD 20)</code></p>
 <ul>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\consoleapp\CMakeLists.txt</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\cpplibrary\CMakeLists.txt</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\plaincpp\CMakeLists.txt</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\qtquickapplication_compat\CMakeLists.txt</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\CMakeLists.txt</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\consoleapp\CMakeLists.txt</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\cpplibrary\CMakeLists.txt</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\plaincpp\CMakeLists.txt</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\qtquickapplication_compat\CMakeLists.txt</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\CMakeLists.txt</li>
 </ul></div><div class="tab-pane" id="template-2"><p>将以下文件中的<code>CONFIG += c++17</code>修改为<code>CONFIG += c++20</code></p>
 <ul>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\consoleapp\file.pro</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\cpplibrary\project.pro</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\plaincpp\file.pro</li>
-<li>qtcreator-16.0.0\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\project.pro</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\consoleapp\file.pro</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\cpplibrary\project.pro</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\plaincpp\file.pro</li>
+<li>qtcreator-16.0.2\share\qtcreator\templates\wizards\projects\qtwidgetsapplication\project.pro</li>
 </ul></div></div></div>
 
 <h1 id="Qt国际化多语言的总结">6 &nbsp&nbsp<a href="#Qt国际化多语言的总结" class="headerlink" title="Qt国际化多语言的总结"></a>Qt国际化多语言的总结</h1><p>QT官方多语言编程wiki参考：<a href="https://wiki.qt.io/How_to_create_a_multi_language_application#Add_translations_to_the_project">How to create a multi language application</a></p>
@@ -3886,19 +3886,19 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p><em>注意不能使用ninja直接构建源码，会报错：build.ninja not found。<strong>构建是使用CMake。</strong></em></p>
 <p>编译步骤：</p>
 <ol>
-<li>将源码解压到分区的根目录下，例如：<code>G:\qtbase-everywhere-src-6.8.2</code></li>
+<li>将源码解压到分区的根目录下，例如：<code>G:\qtbase-everywhere-src-6.9.0</code></li>
 <li>在源码文件夹外新建一个文件夹，如<code>qtbasebuild</code>，拷贝该编译脚本进文件夹，打开cmd窗口，执行该脚本（不建议直接双击运行编译脚本，因为脚本编译出错或者执行完毕都会关闭窗口，这样无法得知编译详情）。</li>
 <li>编译完成后添加环境变量PATH配置：<code>C:\Qt\qt6release\bin</code></li>
 </ol>
 <h2 id="单模块逐个编译的BAT脚本">7.3 &nbsp&nbsp<a href="#单模块逐个编译的BAT脚本" class="headerlink" title="单模块逐个编译的BAT脚本"></a>单模块逐个编译的BAT脚本</h2><p>附加编译子模块的方式：运行Qt安装路径下的&#x2F;bin&#x2F;qt-configure-module.bat + 附件模块源码解压路径。</p>
 <p>一般普通开发编译release版本即可，debug版本是是编译用来开发调试qt源码的。</p>
-<h3 id="编译release版本">7.3.1 &nbsp&nbsp<a href="#编译release版本" class="headerlink" title="编译release版本"></a>编译release版本</h3><h4 id="编译qtbase-release">7.3.1.1 &nbsp&nbsp<a href="#编译qtbase-release" class="headerlink" title="编译qtbase(release)"></a>编译qtbase(release)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">8</span>.<span class="number">2</span>\configure.bat -prefix C:\Qt\qt6release -c++std c++<span class="number">20</span> -release -optimize-size -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
+<h3 id="编译release版本">7.3.1 &nbsp&nbsp<a href="#编译release版本" class="headerlink" title="编译release版本"></a>编译release版本</h3><h4 id="编译qtbase-release">7.3.1.1 &nbsp&nbsp<a href="#编译qtbase-release" class="headerlink" title="编译qtbase(release)"></a>编译qtbase(release)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">9</span>.<span class="number">0</span>\configure.bat -prefix C:\Qt\qt6release -c++std c++<span class="number">20</span> -release -optimize-size -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
 
-<h4 id="附加编译其他子模块（release）">7.3.1.2 &nbsp&nbsp<a href="#附加编译其他子模块（release）" class="headerlink" title="附加编译其他子模块（release）"></a>附加编译其他子模块（release）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6release</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> <span class="title">G</span>:\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.2 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
+<h4 id="附加编译其他子模块（release）">7.3.1.2 &nbsp&nbsp<a href="#附加编译其他子模块（release）" class="headerlink" title="附加编译其他子模块（release）"></a>附加编译其他子模块（release）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6release</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> <span class="title">G</span>:\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.9.0 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="编译debug版本">7.3.2 &nbsp&nbsp<a href="#编译debug版本" class="headerlink" title="编译debug版本"></a>编译debug版本</h3><h4 id="编译qtbase-debug">7.3.2.1 &nbsp&nbsp<a href="#编译qtbase-debug" class="headerlink" title="编译qtbase(debug)"></a>编译qtbase(debug)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">8</span>.<span class="number">2</span>\configure.bat -prefix C:\Qt\qt6debug -c++std c++<span class="number">20</span> -debug -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
+<h3 id="编译debug版本">7.3.2 &nbsp&nbsp<a href="#编译debug版本" class="headerlink" title="编译debug版本"></a>编译debug版本</h3><h4 id="编译qtbase-debug">7.3.2.1 &nbsp&nbsp<a href="#编译qtbase-debug" class="headerlink" title="编译qtbase(debug)"></a>编译qtbase(debug)</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line">..\qtbase-everywhere-src-<span class="number">6</span>.<span class="number">9</span>.<span class="number">0</span>\configure.bat -prefix C:\Qt\qt6debug -c++std c++<span class="number">20</span> -debug -shared &amp;&amp; cmake --build . --parallel &amp;&amp; cmake --install .</span><br></pre></td></tr></table></figure>
 
-<h4 id="附加编译其他子模块（debug）">7.3.2.2 &nbsp&nbsp<a href="#附加编译其他子模块（debug）" class="headerlink" title="附加编译其他子模块（debug）"></a>附加编译其他子模块（debug）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6debug</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> ..\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.2 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
+<h4 id="附加编译其他子模块（debug）">7.3.2.2 &nbsp&nbsp<a href="#附加编译其他子模块（debug）" class="headerlink" title="附加编译其他子模块（debug）"></a>附加编译其他子模块（debug）</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">chcp</span> <span class="number">65001</span>&gt;<span class="built_in">nul</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">CALL</span> &quot;C:\Program Files (x86)\Microsoft Visual Studio\<span class="number">2022</span>\BuildTools\VC\Auxiliary\Build\vcvarsall.bat&quot; x64</span><br><span class="line"><span class="function">C:\<span class="title">Qt</span>\<span class="title">qt6debug</span>\<span class="title">bin</span>\<span class="title">qt</span>-<span class="title">configure</span>-<span class="title">module.bat</span> ..\<span class="title">qtshadertools</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.9.0 &amp;&amp; <span class="title">cmake</span> --<span class="title">build</span> . --<span class="title">parallel</span> &amp;&amp; <span class="title">cmake</span> --<span class="title">install</span> .</span></span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -3909,7 +3909,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h3 id="找不到qtshadertools-qsb-工具">7.4.3 &nbsp&nbsp<a href="#找不到qtshadertools-qsb-工具" class="headerlink" title="找不到qtshadertools &#39;qsb&#39;工具"></a>找不到qtshadertools &#39;qsb&#39;工具</h3><p>报错信息：<code>Note: Qt Quick modules not built due to not finding the qtshadertools &#39;qsb&#39; tool.</code></p>
 <p>解决方法：qtdeclarative模块依赖于qtshadertools模块，需要先编译安装好qtshadertools，之后再编译安装qtdeclarative。</p>
 <h3 id="optimize-size选项导致编译中断">7.4.4 &nbsp&nbsp<a href="#optimize-size选项导致编译中断" class="headerlink" title="optimize_size选项导致编译中断"></a>optimize_size选项导致编译中断</h3><p>报错信息：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">Feature</span> &quot;<span class="title">optimize_size</span>&quot;: <span class="title">Forcing</span> <span class="title">to</span> &quot;<span class="title">ON</span>&quot; <span class="title">breaks</span> <span class="title">its</span> <span class="title">condition</span>:</span></span><br><span class="line"><span class="function">    <span class="title">NOT</span> <span class="title">QT_FEATURE_debug</span> <span class="title">OR</span> <span class="title">QT_FEATURE_debug_and_release</span></span></span><br><span class="line"><span class="function"><span class="title">Condition</span> <span class="title">values</span> <span class="title">dump</span>:</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug</span> = &quot;<span class="title">ON</span>&quot;</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug_and_release</span> = &quot;<span class="title">OFF</span>&quot;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:194 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">Check</span> <span class="title">the</span> <span class="title">configuration</span> <span class="title">messages</span> <span class="title">for</span> <span class="title">an</span> <span class="title">error</span> <span class="title">that</span> <span class="title">has</span> <span class="title">occurred</span>.</span></span><br><span class="line"><span class="function"><span class="title">Call</span> <span class="title">Stack</span> (<span class="title">most</span> <span class="title">recent</span> <span class="title">call</span> <span class="title">first</span>):</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:24 (<span class="title">qt_configure_print_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInternals</span>/<span class="title">QtBuildInternalsConfig.cmake</span>:548 (<span class="title">qt_print_feature_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">CMakeLists.txt</span>:198 (<span class="title">qt_build_repo_end</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">-- <span class="title">Configuring</span> <span class="title">incomplete</span>, <span class="title">errors</span> <span class="title">occurred</span>!</span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">G</span>:/<span class="title">qtbase</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.8.2/<span class="title">cmake</span>/<span class="title">QtProcessConfigureArgs.cmake</span>:995 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">CMake</span> <span class="title">exited</span> <span class="title">with</span> <span class="title">code</span> 1.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">Feature</span> &quot;<span class="title">optimize_size</span>&quot;: <span class="title">Forcing</span> <span class="title">to</span> &quot;<span class="title">ON</span>&quot; <span class="title">breaks</span> <span class="title">its</span> <span class="title">condition</span>:</span></span><br><span class="line"><span class="function">    <span class="title">NOT</span> <span class="title">QT_FEATURE_debug</span> <span class="title">OR</span> <span class="title">QT_FEATURE_debug_and_release</span></span></span><br><span class="line"><span class="function"><span class="title">Condition</span> <span class="title">values</span> <span class="title">dump</span>:</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug</span> = &quot;<span class="title">ON</span>&quot;</span></span><br><span class="line"><span class="function">    <span class="title">QT_FEATURE_debug_and_release</span> = &quot;<span class="title">OFF</span>&quot;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:194 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">Check</span> <span class="title">the</span> <span class="title">configuration</span> <span class="title">messages</span> <span class="title">for</span> <span class="title">an</span> <span class="title">error</span> <span class="title">that</span> <span class="title">has</span> <span class="title">occurred</span>.</span></span><br><span class="line"><span class="function"><span class="title">Call</span> <span class="title">Stack</span> (<span class="title">most</span> <span class="title">recent</span> <span class="title">call</span> <span class="title">first</span>):</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInformation.cmake</span>:24 (<span class="title">qt_configure_print_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">cmake</span>/<span class="title">QtBuildInternals</span>/<span class="title">QtBuildInternalsConfig.cmake</span>:548 (<span class="title">qt_print_feature_summary</span>)</span></span><br><span class="line"><span class="function">  <span class="title">CMakeLists.txt</span>:198 (<span class="title">qt_build_repo_end</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">-- <span class="title">Configuring</span> <span class="title">incomplete</span>, <span class="title">errors</span> <span class="title">occurred</span>!</span></span><br><span class="line"><span class="function"><span class="title">CMake</span> <span class="title">Error</span> <span class="title">at</span> <span class="title">G</span>:/<span class="title">qtbase</span>-<span class="title">everywhere</span>-<span class="title">src</span>-6.9.0/<span class="title">cmake</span>/<span class="title">QtProcessConfigureArgs.cmake</span>:995 (<span class="title">message</span>):</span></span><br><span class="line"><span class="function">  <span class="title">CMake</span> <span class="title">exited</span> <span class="title">with</span> <span class="title">code</span> 1.</span></span><br></pre></td></tr></table></figure>
 
 <p>解决方法：这是因为在64位的系统上选择x32的编译器引起的错误。根据自己的平台选择对应的编译器，例如，MSVC CL编译器的x64环境，否则启用optimize_size选项有相关报错信息。当然，不启用该选项的话，可正常编译，但得不偿失。</p>
 <h3 id="链接lib文件出现错误LNK2019">7.4.5 &nbsp&nbsp<a href="#链接lib文件出现错误LNK2019" class="headerlink" title="链接lib文件出现错误LNK2019"></a>链接lib文件出现错误LNK2019</h3><p>问题：链接lib文件报错，error LNK2019: 无法解析的外部符号。</p>
@@ -8524,12 +8524,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#117;&#46;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#115;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#117;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#x61;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#x2e;&#x63;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#115;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -11108,29 +11108,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IELTS雅思词汇圣经：6分词汇</title>
     <url>/english/IELTS/score6/</url>
     <content><![CDATA[<h1 id="list1"><a href="#list1" class="headerlink" title="list1"></a>list1</h1><ul>
@@ -11369,6 +11346,29 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
       </tags>
   </entry>
   <entry>
@@ -12280,7 +12280,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#105;&#x73;&#x74;&#101;&#114;&#x6b;&#105;&#110;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#x69;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
