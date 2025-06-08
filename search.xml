@@ -185,6 +185,7 @@
     <a href="https://github.com/lyswhut/lx-music-mobile/releases">LX Music移动版</a>
     <a href="https://github.com/Huibq/keep-alive">音乐音源</a>
     <a href="https://github.com/maotoumao/MusicFreeDesktop/releases">MusicFree</a>
+    <a href="http://fonger.top/">方格音乐</a>
     <a href="https://docs.lxmusic.top/">LX Music（旧地址）</a>
 </div>
 
@@ -2023,27 +2024,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>维修工具</title>
-    <url>/cad/repair-tools/</url>
-    <content><![CDATA[<ul>
-<li>可调电源：检测电流，电压。接入机器才会显示电流。可剪断电源正极的通用口线，自己做一个开关。（防止弄坏电源机械开关，有些机器待机电流也偏大，不宜频繁开关？）通用口可接特定的接口，可接不同厂商的机器。</li>
-<li>烙铁</li>
-<li>热风枪</li>
-<li>万用表，打值卡，假负载，诊断卡</li>
-<li>示波器：主要是供电和信号，不是频率</li>
-<li>BGA返修台</li>
-</ul>
-<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PCB设计</title>
     <url>/cad/pcb/</url>
     <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
@@ -2148,6 +2128,27 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>PCB</tag>
         <tag>电路</tag>
         <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>维修工具</title>
+    <url>/cad/repair-tools/</url>
+    <content><![CDATA[<ul>
+<li>可调电源：检测电流，电压。接入机器才会显示电流。可剪断电源正极的通用口线，自己做一个开关。（防止弄坏电源机械开关，有些机器待机电流也偏大，不宜频繁开关？）通用口可接特定的接口，可接不同厂商的机器。</li>
+<li>烙铁</li>
+<li>热风枪</li>
+<li>万用表，打值卡，假负载，诊断卡</li>
+<li>示波器：主要是供电和信号，不是频率</li>
+<li>BGA返修台</li>
+</ul>
+<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
@@ -2879,7 +2880,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#x40;&#49;&#55;&#x32;&#46;&#x31;&#x39;&#46;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#x31;&#55;&#x32;&#46;&#49;&#x39;&#46;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5025,6 +5026,258 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Krita总结</title>
+    <url>/software/krita/</url>
+    <content><![CDATA[<h1 id="软件基础">1 &nbsp&nbsp<a href="#软件基础" class="headerlink" title="软件基础"></a>软件基础</h1><p>多功能拾色器：三角形外环是色相环，点击&#x2F;拖动可选择三角形内部颜色，三角形显示内容随着对色相环的操作而变化。</p>
+<h2 id="文件格式">1.1 &nbsp&nbsp<a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h2><ul>
+<li>kra：krita文档，专用格式文件</li>
+<li>jpg：有损压缩格式，导出时保持默认80%即可，平衡了画质和文件大小。</li>
+<li>png：无损压缩格式，选择较小文件体积。</li>
+</ul>
+<h2 id="PPI和DPI">1.2 &nbsp&nbsp<a href="#PPI和DPI" class="headerlink" title="PPI和DPI"></a>PPI和DPI</h2><ul>
+<li>PPI：ixels Per Inch，即每英寸像素数，也可以理解成像素&#x2F;英寸（pixels&#x2F;inch）</li>
+<li>DPI：Dots Per Inch，即每英寸点数，也可以理解成点&#x2F;英寸（dots&#x2F;inch）<br>一般打印时，可认为图片ppi&#x3D;dpi。</li>
+</ul>
+<h2 id="快捷键">1.3 &nbsp&nbsp<a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>手绘笔刷工具：B（橡皮擦也归类为笔刷）。按住V可以临时切换到直线工具拉直线。</li>
+<li>调整笔刷大小：Shift+左右拖动</li>
+<li>笔刷橡皮擦模式：E。把当前笔刷切换到橡皮擦模式，然后用来擦除。但不是橡皮擦，Krita中橡皮檫是笔刷。</li>
+<li>切换到上一个使用的笔刷：&#x2F;。反复切换可在上一个和当前笔刷中切换。</li>
+<li>调暗笔刷颜色：K</li>
+<li>调亮笔刷颜色：L</li>
+<li>降低不透明度：I</li>
+<li>提高不透明度：O</li>
+<li>临时吸色到前景色：Ctrl+左键</li>
+<li>裁剪工具：C（也可以用于扩大&#x2F;缩小画布，确保勾选应用到图像，而不是图层）</li>
+<li>撤销：Ctrl+Z</li>
+<li>重做：Ctrl+Shift+Z</li>
+<li>旋转画布：Shift+鼠标中键+移动（数字键：左旋4右旋6重置旋转5）</li>
+<li>缩放画布：Ctrl+中键+上下移动。100%大小：1。缩放到视图大小：2。</li>
+<li>移动画布：<code>按一下空格+按住左键拖动</code>&#x2F;<code>中键+移动</code></li>
+<li>镜像显示：M</li>
+<li>工具的右键功能<ul>
+<li>手绘笔刷工具：有笔刷选择、拾色器、缩放、旋转、镜像显示等。</li>
+<li>选区工具：有全选，取消选择，反选等。</li>
+</ul>
+</li>
+<li>图层操作<ul>
+<li>通过点击内容反向选中图层：按住R+点击内容（Shift+R可以连续选择多个）</li>
+<li>新增颜料图层：Ins</li>
+<li>新建图层组：Ctrl+G，会将当前选中的图层放进新建后的图层组内。</li>
+<li>取消图层编组：Ctrl+Alt+G</li>
+<li>向下合并图层：Ctrl+E</li>
+<li>删除图层：Shift+Del</li>
+<li>选择图层不透明区域：Ctrl+点击图层缩略图</li>
+<li>建立剪贴编组（继承透明度）：Ctrl+Shift+G</li>
+<li>单独显示图层&#x2F;图层组：ALT+左键点击图层，无需点击眼睛（右键图层，单独显示图层，然后选择对应图层即为该图层）</li>
+</ul>
+</li>
+<li>选区（<strong>选区建立后只能在选区中绘制</strong>）<ul>
+<li>矩形选区工具：Ctrl+R</li>
+<li>多边形选区（多边形套索）</li>
+<li>手绘轮廓选区（套索）：手绘轮廓选区中按住 Ctrl 后提起笔尖在下笔会临时切换到多边形选区</li>
+<li>增加选区：按住 Shift 在已有选区上添加</li>
+<li>减少选区：按住 Alt 在已有选区上减少</li>
+<li>保留选区相交部分：按住 Shift+Alt 在已有选区上留下相交部分</li>
+<li>反向选择：Ctrl+Shift+I</li>
+<li>取消选择：Ctrl+Shift+A</li>
+</ul>
+</li>
+<li>变形（调整已绘制好内容）：Ctrl+T，可用来移动<ul>
+<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
+<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
+<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
+<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
+<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
+</ul>
+</li>
+<li>移动图层：T</li>
+<li>搜索功能：Ctrl+Enter</li>
+<li>填充工具：F</li>
+<li>删除当前选中内容：Del（若存在选区，则仅对选区内操作）</li>
+</ul>
+<h2 id="多功能右键">1.4 &nbsp&nbsp<a href="#多功能右键" class="headerlink" title="多功能右键"></a>多功能右键</h2><p>右键面板功能：</p>
+<ul>
+<li>选取颜色（色相环外边的一层是使用过的历史颜色）</li>
+<li>选择笔刷（笔刷标签）</li>
+<li>笔刷面板参数</li>
+<li>镜像显示</li>
+<li>旋转画布（右键面板最外边的一层）</li>
+<li>缩放画布（滑轨）</li>
+</ul>
+<h2 id="图层">1.5 &nbsp&nbsp<a href="#图层" class="headerlink" title="图层"></a>图层</h2><ul>
+<li>图层：从上往下遮盖合成显示（图层组内的图层优先合成，除非图层组设置为穿透混合模式）</li>
+<li>图层混合模式：某些绘画方式会利用混合模式来进行一些操作。</li>
+<li>图层不透明度：数值越低越透明，数值越高越不透明。</li>
+<li>新建颜料图层：一般用于绘画的图层。</li>
+<li>命名图层：双击图层名即可。</li>
+<li>新建图层组：整理归纳图层，类似于文件夹。新建按钮下拉菜单-&gt;新增图层组</li>
+<li>取消图层编组：右键选择图层组-&gt;图层组-&gt;取消图层编组</li>
+<li>向下合并图层：右键选择图层组-&gt;向下合并图层</li>
+<li>删除图层：垃圾桶按钮</li>
+<li>隐藏&#x2F;显示图层：图层左边的眼睛图标（隐藏的图层不参与图层合成，Krita中透明会用灰白棋盘格表示）</li>
+<li>调整图层所在层级：拖拽图层调整即可</li>
+<li>锁定图层：图层右边的锁按钮（锁定的图层，除了隐藏&#x2F;显示图层，其他操作无法进行）</li>
+<li>锁定透明：图层右边的灰白棋盘按钮。锁定透明是为了防止不小心涂到已有颜色区域外而存在的功能。例如启用锁定透明后，再进行绘画涂色会被限定在已有颜色的部分，不会影响画布其他空白区域。</li>
+<li>继承透明：图层右边的<code>α</code>按钮。继承透明类似锁定透明，两者都可用来防止涂出已有颜色范围的。差别是继承透明不局限于单个图层，会按图层合成顺序继承透明。<ul>
+<li>常见使用方式1：若启用继承透明的图层和被继承透明的图层都在图层组内，那么直接启用继承透明即可</li>
+<li>常见使用方式2:：若启用继承透明的图层和被继承透明的图层不在图层组内<br>1、先建立图层组<br>2、移动底色图层进图层组<br>3、在图层组内，底色图层上新建图层<br>4、在新建的图层上启用继承透明<br>5、在新建的图层上绘制（此时就不会超出范围了）</li>
+<li><strong>常见使用方式2便捷操作：选中底色图层，然后按下 Ctrl+Shift+G（建立剪贴编组），右键底色图层-图层组-建立剪贴编组，在新建的图层上绘制。</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="选区和变形（调整已绘制好内容）">1.6 &nbsp&nbsp<a href="#选区和变形（调整已绘制好内容）" class="headerlink" title="选区和变形（调整已绘制好内容）"></a>选区和变形（调整已绘制好内容）</h2><ol>
+<li>通过点击内容反向选中图层：按住R+点击内容</li>
+<li>切换到手绘轮廓选区工具选中想要调整的部分（若手绘选区不能形成一个封闭区，该工具可自行连接选区）</li>
+<li>切换到变形工具（Ctrl+T）对选中部分进行调整（右键选区-变形-变形工具）</li>
+<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
+<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
+<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
+<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
+<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
+<li>调整好后需要切换回手绘笔刷工具（B）才能继续绘画。</li>
+</ol>
+<h2 id="线稿与填色技巧">1.7 &nbsp&nbsp<a href="#线稿与填色技巧" class="headerlink" title="线稿与填色技巧"></a>线稿与填色技巧</h2><ul>
+<li>让线条平滑<ul>
+<li>手绘笔刷工具的防抖和笔画平滑，笔刷选项中默认为「基本-只平滑笔画棱角」。</li>
+<li>绘制长线条或者使用鼠标的时候，可以选则后两种，有额外的细调选项可调整。</li>
+</ul>
+</li>
+<li>给线稿填色<ul>
+<li>线稿无缺口：需确保线稿无缺口，有缺口会导致填充至外部。<ol>
+<li>新建图层并命名</li>
+<li>将线稿图层置顶，线稿图层置顶有助于获得良好的线稿效果</li>
+<li>切换到填充工具（F）</li>
+<li>调整填充工具选项以获得良好填充效果：<ul>
+<li>采样图层：分图层进行填充时，推荐切换为所有图层</li>
+<li>扩大&#x2F;缩小填充区域：1px或者更高的扩大数值让线稿边缘在填充后不会出现灰杂色。线稿不能非常细，否则这个会导致填充到线稿外面。</li>
+<li>色差阈值：控制忽略颜色差异的程度，数值越大越把类似颜色当做一样的处理，例如数值越大，灰色线条和白色底色当做同色处理。</li>
+</ul>
+</li>
+<li>选取想要使用的颜色对底色图层进行填充。</li>
+<li>在底色填充完之后，新建图层进行相关细化，例如绘制阴影亮部之类细节。</li>
+</ol>
+</li>
+<li>线稿有缺口：若想对存在缺口的线稿进行填充，可使用智能填色蒙版工具。</li>
+</ul>
+</li>
+</ul>
+<h1 id="快捷键优化设置">2 &nbsp&nbsp<a href="#快捷键优化设置" class="headerlink" title="快捷键优化设置"></a>快捷键优化设置</h1><ul>
+<li>压感笔设置：鼠标右键，鼠标中键。</li>
+</ul>
+<h1 id="Krita优化设置">3 &nbsp&nbsp<a href="#Krita优化设置" class="headerlink" title="Krita优化设置"></a>Krita优化设置</h1><ul>
+<li>软件的UI比例异常<ul>
+<li>Windows系统设置-&gt;显示-&gt;缩放与布局</li>
+<li>设置-&gt;配置 krita-&gt;常规-&gt;窗口-&gt;启用高分辨率（Hi-DPI）支持（该项目启用即代表同步Windows的缩放设置）</li>
+</ul>
+</li>
+<li>设置-&gt;配置 krita-&gt;显示-&gt;首选渲染器-&gt;Direct3D 11 - 通过ANGLE转译</li>
+<li>数位板相关设置<ul>
+<li>确保数位板和显示屏映射比例为 1:1</li>
+<li>确保数位板&#x2F;数位屏双击时笔尖间距为关闭（wacom 的设备需要关闭双击时笔尖间距，避免导致绘画线条变成直线）</li>
+<li>设置-&gt;配置 krita-&gt;数位板设置-&gt;WinTab（如果数位板没有压感，可以切换此设置）</li>
+</ul>
+</li>
+</ul>
+<h1 id="实战案例">4 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="按图层内容大小导出图层">4.1 &nbsp&nbsp<a href="#按图层内容大小导出图层" class="headerlink" title="按图层内容大小导出图层"></a>按图层内容大小导出图层</h2><ol>
+<li>保存当前工作内容为 kra 格式文件</li>
+<li>菜单-&gt;工具-&gt;脚本-&gt;图层导出工具</li>
+<li>选中之前保存的 kra 文件</li>
+<li>初始目录：处选择导出位置</li>
+<li>勾选-&gt;按图层内容调整导出大小（图层内容可以超出画布！）</li>
+<li>选择图像拓展名为 PNG（该格式才能保存透明通道）</li>
+<li>点 OK 输出</li>
+</ol>
+<h2 id="导入PS的-abr-格式笔刷文件">4.2 &nbsp&nbsp<a href="#导入PS的-abr-格式笔刷文件" class="headerlink" title="导入PS的 abr 格式笔刷文件"></a>导入PS的 abr 格式笔刷文件</h2><p>所有能导入 PS 笔刷的其他软件都是有限度支持！因为不同软件的笔刷引擎不可能完全一样，无论什么其他软件都需要导入后手动调整来贴合原始效果。</p>
+<p>目前只能从 PS 的 abr 格式笔刷文件导入画笔笔尖形状（PS 内叫法），之后需要自行设置相关参数调整。</p>
+<h2 id="白底黑图片转透明底白图片">4.3 &nbsp&nbsp<a href="#白底黑图片转透明底白图片" class="headerlink" title="白底黑图片转透明底白图片"></a>白底黑图片转透明底白图片</h2><ol>
+<li>导入图片</li>
+<li>菜单&gt;滤镜&gt;颜色&gt;颜色转为透明度（不做遮罩，否则不好反相）</li>
+<li>菜单&gt;滤镜&gt;调整&gt;反相</li>
+<li>导出图片</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>后期处理</tag>
+        <tag>krita</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Office总结笔记</title>
+    <url>/software/office/</url>
+    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
+<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
+<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
+<li>分节符用的下一页。</li>
+</ul>
+<p>关于分页符和分节符的删除：</p>
+<ul>
+<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
+<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
+</ul>
+<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
+<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
+<li>单击时，只能使用一次。双击时，能多次使用。</li>
+</ul>
+<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
+<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
+<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
+<p>几种模式的区别：</p>
+<ul>
+<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
+<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
+</ul>
+<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
+<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
+<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
+<li>在第二页表格第一行，插入空白页。</li>
+<li>之后删除表格页。</li>
+</ol>
+<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
+<li>创建文献编号，排版文献<ol>
+<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
+<li>在数值左右分别添加 [] 符号</li>
+<li>对参考文献使用该格式进行排版</li>
+</ol>
+</li>
+<li>交叉引用，插入引用编号<ol>
+<li>「引用」选项卡 &gt; 交叉引用</li>
+<li>编号项 + 段落编号 + 插入为超链接</li>
+<li>选择所引用的参考文献</li>
+</ol>
+</li>
+<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
+</ol>
+<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
+<li>无任何数据的初始列：设置单元格式</li>
+<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
+</ul>
+<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
+<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
+<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
+<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
+</ul>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>软件</tag>
+        <tag>office</tag>
+        <tag>excel</tag>
+        <tag>word</tag>
+        <tag>ppt</tag>
+        <tag>powerpoint</tag>
+        <tag>操作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英伟达Jetson开发板踩坑记录总结</title>
     <url>/software/nvidia-jetson/</url>
     <content><![CDATA[<div class="note info no-icon"><p>文章推荐：<a href="https://www.guyuehome.com/42097">Jetson nano 系统安装</a></p>
@@ -5399,255 +5652,155 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Krita总结</title>
-    <url>/software/krita/</url>
-    <content><![CDATA[<h1 id="软件基础">1 &nbsp&nbsp<a href="#软件基础" class="headerlink" title="软件基础"></a>软件基础</h1><p>多功能拾色器：三角形外环是色相环，点击&#x2F;拖动可选择三角形内部颜色，三角形显示内容随着对色相环的操作而变化。</p>
-<h2 id="文件格式">1.1 &nbsp&nbsp<a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h2><ul>
-<li>kra：krita文档，专用格式文件</li>
-<li>jpg：有损压缩格式，导出时保持默认80%即可，平衡了画质和文件大小。</li>
-<li>png：无损压缩格式，选择较小文件体积。</li>
-</ul>
-<h2 id="PPI和DPI">1.2 &nbsp&nbsp<a href="#PPI和DPI" class="headerlink" title="PPI和DPI"></a>PPI和DPI</h2><ul>
-<li>PPI：ixels Per Inch，即每英寸像素数，也可以理解成像素&#x2F;英寸（pixels&#x2F;inch）</li>
-<li>DPI：Dots Per Inch，即每英寸点数，也可以理解成点&#x2F;英寸（dots&#x2F;inch）<br>一般打印时，可认为图片ppi&#x3D;dpi。</li>
-</ul>
-<h2 id="快捷键">1.3 &nbsp&nbsp<a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>手绘笔刷工具：B（橡皮擦也归类为笔刷）。按住V可以临时切换到直线工具拉直线。</li>
-<li>调整笔刷大小：Shift+左右拖动</li>
-<li>笔刷橡皮擦模式：E。把当前笔刷切换到橡皮擦模式，然后用来擦除。但不是橡皮擦，Krita中橡皮檫是笔刷。</li>
-<li>切换到上一个使用的笔刷：&#x2F;。反复切换可在上一个和当前笔刷中切换。</li>
-<li>调暗笔刷颜色：K</li>
-<li>调亮笔刷颜色：L</li>
-<li>降低不透明度：I</li>
-<li>提高不透明度：O</li>
-<li>临时吸色到前景色：Ctrl+左键</li>
-<li>裁剪工具：C（也可以用于扩大&#x2F;缩小画布，确保勾选应用到图像，而不是图层）</li>
-<li>撤销：Ctrl+Z</li>
-<li>重做：Ctrl+Shift+Z</li>
-<li>旋转画布：Shift+鼠标中键+移动（数字键：左旋4右旋6重置旋转5）</li>
-<li>缩放画布：Ctrl+中键+上下移动。100%大小：1。缩放到视图大小：2。</li>
-<li>移动画布：<code>按一下空格+按住左键拖动</code>&#x2F;<code>中键+移动</code></li>
-<li>镜像显示：M</li>
-<li>工具的右键功能<ul>
-<li>手绘笔刷工具：有笔刷选择、拾色器、缩放、旋转、镜像显示等。</li>
-<li>选区工具：有全选，取消选择，反选等。</li>
-</ul>
-</li>
-<li>图层操作<ul>
-<li>通过点击内容反向选中图层：按住R+点击内容（Shift+R可以连续选择多个）</li>
-<li>新增颜料图层：Ins</li>
-<li>新建图层组：Ctrl+G，会将当前选中的图层放进新建后的图层组内。</li>
-<li>取消图层编组：Ctrl+Alt+G</li>
-<li>向下合并图层：Ctrl+E</li>
-<li>删除图层：Shift+Del</li>
-<li>选择图层不透明区域：Ctrl+点击图层缩略图</li>
-<li>建立剪贴编组（继承透明度）：Ctrl+Shift+G</li>
-<li>单独显示图层&#x2F;图层组：ALT+左键点击图层，无需点击眼睛（右键图层，单独显示图层，然后选择对应图层即为该图层）</li>
-</ul>
-</li>
-<li>选区（<strong>选区建立后只能在选区中绘制</strong>）<ul>
-<li>矩形选区工具：Ctrl+R</li>
-<li>多边形选区（多边形套索）</li>
-<li>手绘轮廓选区（套索）：手绘轮廓选区中按住 Ctrl 后提起笔尖在下笔会临时切换到多边形选区</li>
-<li>增加选区：按住 Shift 在已有选区上添加</li>
-<li>减少选区：按住 Alt 在已有选区上减少</li>
-<li>保留选区相交部分：按住 Shift+Alt 在已有选区上留下相交部分</li>
-<li>反向选择：Ctrl+Shift+I</li>
-<li>取消选择：Ctrl+Shift+A</li>
-</ul>
-</li>
-<li>变形（调整已绘制好内容）：Ctrl+T，可用来移动<ul>
-<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
-<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
-<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
-<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
-<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
-</ul>
-</li>
-<li>移动图层：T</li>
-<li>搜索功能：Ctrl+Enter</li>
-<li>填充工具：F</li>
-<li>删除当前选中内容：Del（若存在选区，则仅对选区内操作）</li>
-</ul>
-<h2 id="多功能右键">1.4 &nbsp&nbsp<a href="#多功能右键" class="headerlink" title="多功能右键"></a>多功能右键</h2><p>右键面板功能：</p>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
 <ul>
-<li>选取颜色（色相环外边的一层是使用过的历史颜色）</li>
-<li>选择笔刷（笔刷标签）</li>
-<li>笔刷面板参数</li>
-<li>镜像显示</li>
-<li>旋转画布（右键面板最外边的一层）</li>
-<li>缩放画布（滑轨）</li>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
 </ul>
-<h2 id="图层">1.5 &nbsp&nbsp<a href="#图层" class="headerlink" title="图层"></a>图层</h2><ul>
-<li>图层：从上往下遮盖合成显示（图层组内的图层优先合成，除非图层组设置为穿透混合模式）</li>
-<li>图层混合模式：某些绘画方式会利用混合模式来进行一些操作。</li>
-<li>图层不透明度：数值越低越透明，数值越高越不透明。</li>
-<li>新建颜料图层：一般用于绘画的图层。</li>
-<li>命名图层：双击图层名即可。</li>
-<li>新建图层组：整理归纳图层，类似于文件夹。新建按钮下拉菜单-&gt;新增图层组</li>
-<li>取消图层编组：右键选择图层组-&gt;图层组-&gt;取消图层编组</li>
-<li>向下合并图层：右键选择图层组-&gt;向下合并图层</li>
-<li>删除图层：垃圾桶按钮</li>
-<li>隐藏&#x2F;显示图层：图层左边的眼睛图标（隐藏的图层不参与图层合成，Krita中透明会用灰白棋盘格表示）</li>
-<li>调整图层所在层级：拖拽图层调整即可</li>
-<li>锁定图层：图层右边的锁按钮（锁定的图层，除了隐藏&#x2F;显示图层，其他操作无法进行）</li>
-<li>锁定透明：图层右边的灰白棋盘按钮。锁定透明是为了防止不小心涂到已有颜色区域外而存在的功能。例如启用锁定透明后，再进行绘画涂色会被限定在已有颜色的部分，不会影响画布其他空白区域。</li>
-<li>继承透明：图层右边的<code>α</code>按钮。继承透明类似锁定透明，两者都可用来防止涂出已有颜色范围的。差别是继承透明不局限于单个图层，会按图层合成顺序继承透明。<ul>
-<li>常见使用方式1：若启用继承透明的图层和被继承透明的图层都在图层组内，那么直接启用继承透明即可</li>
-<li>常见使用方式2:：若启用继承透明的图层和被继承透明的图层不在图层组内<br>1、先建立图层组<br>2、移动底色图层进图层组<br>3、在图层组内，底色图层上新建图层<br>4、在新建的图层上启用继承透明<br>5、在新建的图层上绘制（此时就不会超出范围了）</li>
-<li><strong>常见使用方式2便捷操作：选中底色图层，然后按下 Ctrl+Shift+G（建立剪贴编组），右键底色图层-图层组-建立剪贴编组，在新建的图层上绘制。</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="选区和变形（调整已绘制好内容）">1.6 &nbsp&nbsp<a href="#选区和变形（调整已绘制好内容）" class="headerlink" title="选区和变形（调整已绘制好内容）"></a>选区和变形（调整已绘制好内容）</h2><ol>
-<li>通过点击内容反向选中图层：按住R+点击内容</li>
-<li>切换到手绘轮廓选区工具选中想要调整的部分（若手绘选区不能形成一个封闭区，该工具可自行连接选区）</li>
-<li>切换到变形工具（Ctrl+T）对选中部分进行调整（右键选区-变形-变形工具）</li>
-<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
-<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
-<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
-<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
-<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
-<li>调整好后需要切换回手绘笔刷工具（B）才能继续绘画。</li>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
 </ol>
-<h2 id="线稿与填色技巧">1.7 &nbsp&nbsp<a href="#线稿与填色技巧" class="headerlink" title="线稿与填色技巧"></a>线稿与填色技巧</h2><ul>
-<li>让线条平滑<ul>
-<li>手绘笔刷工具的防抖和笔画平滑，笔刷选项中默认为「基本-只平滑笔画棱角」。</li>
-<li>绘制长线条或者使用鼠标的时候，可以选则后两种，有额外的细调选项可调整。</li>
-</ul>
-</li>
-<li>给线稿填色<ul>
-<li>线稿无缺口：需确保线稿无缺口，有缺口会导致填充至外部。<ol>
-<li>新建图层并命名</li>
-<li>将线稿图层置顶，线稿图层置顶有助于获得良好的线稿效果</li>
-<li>切换到填充工具（F）</li>
-<li>调整填充工具选项以获得良好填充效果：<ul>
-<li>采样图层：分图层进行填充时，推荐切换为所有图层</li>
-<li>扩大&#x2F;缩小填充区域：1px或者更高的扩大数值让线稿边缘在填充后不会出现灰杂色。线稿不能非常细，否则这个会导致填充到线稿外面。</li>
-<li>色差阈值：控制忽略颜色差异的程度，数值越大越把类似颜色当做一样的处理，例如数值越大，灰色线条和白色底色当做同色处理。</li>
-</ul>
-</li>
-<li>选取想要使用的颜色对底色图层进行填充。</li>
-<li>在底色填充完之后，新建图层进行相关细化，例如绘制阴影亮部之类细节。</li>
-</ol>
-</li>
-<li>线稿有缺口：若想对存在缺口的线稿进行填充，可使用智能填色蒙版工具。</li>
-</ul>
-</li>
-</ul>
-<h1 id="快捷键优化设置">2 &nbsp&nbsp<a href="#快捷键优化设置" class="headerlink" title="快捷键优化设置"></a>快捷键优化设置</h1><ul>
-<li>压感笔设置：鼠标右键，鼠标中键。</li>
-</ul>
-<h1 id="Krita优化设置">3 &nbsp&nbsp<a href="#Krita优化设置" class="headerlink" title="Krita优化设置"></a>Krita优化设置</h1><ul>
-<li>软件的UI比例异常<ul>
-<li>Windows系统设置-&gt;显示-&gt;缩放与布局</li>
-<li>设置-&gt;配置 krita-&gt;常规-&gt;窗口-&gt;启用高分辨率（Hi-DPI）支持（该项目启用即代表同步Windows的缩放设置）</li>
-</ul>
-</li>
-<li>设置-&gt;配置 krita-&gt;显示-&gt;首选渲染器-&gt;Direct3D 11 - 通过ANGLE转译</li>
-<li>数位板相关设置<ul>
-<li>确保数位板和显示屏映射比例为 1:1</li>
-<li>确保数位板&#x2F;数位屏双击时笔尖间距为关闭（wacom 的设备需要关闭双击时笔尖间距，避免导致绘画线条变成直线）</li>
-<li>设置-&gt;配置 krita-&gt;数位板设置-&gt;WinTab（如果数位板没有压感，可以切换此设置）</li>
-</ul>
-</li>
-</ul>
-<h1 id="实战案例">4 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="按图层内容大小导出图层">4.1 &nbsp&nbsp<a href="#按图层内容大小导出图层" class="headerlink" title="按图层内容大小导出图层"></a>按图层内容大小导出图层</h2><ol>
-<li>保存当前工作内容为 kra 格式文件</li>
-<li>菜单-&gt;工具-&gt;脚本-&gt;图层导出工具</li>
-<li>选中之前保存的 kra 文件</li>
-<li>初始目录：处选择导出位置</li>
-<li>勾选-&gt;按图层内容调整导出大小（图层内容可以超出画布！）</li>
-<li>选择图像拓展名为 PNG（该格式才能保存透明通道）</li>
-<li>点 OK 输出</li>
-</ol>
-<h2 id="导入PS的-abr-格式笔刷文件">4.2 &nbsp&nbsp<a href="#导入PS的-abr-格式笔刷文件" class="headerlink" title="导入PS的 abr 格式笔刷文件"></a>导入PS的 abr 格式笔刷文件</h2><p>所有能导入 PS 笔刷的其他软件都是有限度支持！因为不同软件的笔刷引擎不可能完全一样，无论什么其他软件都需要导入后手动调整来贴合原始效果。</p>
-<p>目前只能从 PS 的 abr 格式笔刷文件导入画笔笔尖形状（PS 内叫法），之后需要自行设置相关参数调整。</p>
-<h2 id="白底黑图片转透明底白图片">4.3 &nbsp&nbsp<a href="#白底黑图片转透明底白图片" class="headerlink" title="白底黑图片转透明底白图片"></a>白底黑图片转透明底白图片</h2><ol>
-<li>导入图片</li>
-<li>菜单&gt;滤镜&gt;颜色&gt;颜色转为透明度（不做遮罩，否则不好反相）</li>
-<li>菜单&gt;滤镜&gt;调整&gt;反相</li>
-<li>导出图片</li>
-</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
       </categories>
+  </entry>
+  <entry>
+    <title>虚拟机总结</title>
+    <url>/software/virtual-machine/</url>
+    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
+<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
+<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
+<p>解决方法：</p>
+<ol>
+<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
+<li>Containers</li>
+<li>Hyper-V</li>
+<li>Virtual Machine Platform</li>
+<li>Windows Hypervisor Platform</li>
+<li>Windows Sandbox</li>
+<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
+</ul>
+</li>
+<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
+</ol>
+<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
+<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
+<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
+<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
+<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
+<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
+<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
+<li><a href="https://github.com/intel/haxm">haxm</a></li>
+</ul>
+<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
+<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
       <tags>
-        <tag>后期处理</tag>
-        <tag>krita</tag>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
       </tags>
   </entry>
   <entry>
-    <title>Office总结笔记</title>
-    <url>/software/office/</url>
-    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
-<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
-<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
-<li>分节符用的下一页。</li>
-</ul>
-<p>关于分页符和分节符的删除：</p>
-<ul>
-<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
-<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
-</ul>
-<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
-<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
-<li>单击时，只能使用一次。双击时，能多次使用。</li>
-</ul>
-<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
-<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
-<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
-<p>几种模式的区别：</p>
-<ul>
-<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
-<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
-</ul>
-<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
-<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
-<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
-<li>在第二页表格第一行，插入空白页。</li>
-<li>之后删除表格页。</li>
-</ol>
-<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
-<li>创建文献编号，排版文献<ol>
-<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
-<li>在数值左右分别添加 [] 符号</li>
-<li>对参考文献使用该格式进行排版</li>
-</ol>
-</li>
-<li>交叉引用，插入引用编号<ol>
-<li>「引用」选项卡 &gt; 交叉引用</li>
-<li>编号项 + 段落编号 + 插入为超链接</li>
-<li>选择所引用的参考文献</li>
-</ol>
-</li>
-<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
-</ol>
-<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
-<li>无任何数据的初始列：设置单元格式</li>
-<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
-</ul>
-<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
-<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
-<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
-<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
-</ul>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
 ]]></content>
       <categories>
-        <category>software</category>
+        <category>translations</category>
       </categories>
       <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>软件</tag>
-        <tag>office</tag>
-        <tag>excel</tag>
-        <tag>word</tag>
-        <tag>ppt</tag>
-        <tag>powerpoint</tag>
-        <tag>操作</tag>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
       </tags>
   </entry>
   <entry>
@@ -6743,158 +6896,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>openwrt</tag>
         <tag>虚拟机</tag>
         <tag>fnOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>虚拟机总结</title>
-    <url>/software/virtual-machine/</url>
-    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
-<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
-<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
-<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
-<p>解决方法：</p>
-<ol>
-<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
-<li>Containers</li>
-<li>Hyper-V</li>
-<li>Virtual Machine Platform</li>
-<li>Windows Hypervisor Platform</li>
-<li>Windows Sandbox</li>
-<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
-</ul>
-</li>
-<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
-</ol>
-<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
-<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
-<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
-<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
-<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
-<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
-<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
-<li><a href="https://github.com/intel/haxm">haxm</a></li>
-</ul>
-<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
-<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
       </tags>
   </entry>
   <entry>
@@ -8546,12 +8547,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#107;&#x73;&#46;&#x63;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x40;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#97;&#110;&#107;&#115;&#46;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8643,6 +8644,101 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -8788,11 +8884,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -9277,11 +9373,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -9576,10 +9672,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -10323,10 +10419,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -10494,10 +10590,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -10826,10 +10922,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -10856,106 +10952,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -11641,57 +11642,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Blender界面工具操作总结</title>
     <url>/software/blender/interface-tools-operation/</url>
     <content><![CDATA[<h1 id="3D-视窗（3D-Viewport）">1 &nbsp&nbsp<a href="#3D-视窗（3D-Viewport）" class="headerlink" title="3D 视窗（3D Viewport）"></a>3D 视窗（3D Viewport）</h1><p>3D视图用于和3D场景交互，例如建模、动画、纹理绘制等。</p>
@@ -12050,6 +12000,57 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Blender常见问题总结——Q&amp;A</title>
     <url>/software/blender/q-a/</url>
     <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
@@ -12302,7 +12303,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#x69;&#x6e;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#109;&#105;&#115;&#x74;&#101;&#x72;&#107;&#x69;&#x6e;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
