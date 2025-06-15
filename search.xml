@@ -968,12 +968,14 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">内存RAM</p>
     </div>
+    <a href="https://github.com/clamchowder/MicrobenchmarksGui/releases">Microbenchmarks测试内存/显存延迟</a>
     <a href="https://zentimings.com/">内存时序：ZENTIMINGS（AMD平台）</a>
     <a href="https://github.com/CoolCmd/TestMem5">新版TM5（TestMem5）</a>
     <a href="https://docs.qq.com/sheet/DYmV0dFFJcFZrTmhY?tab=no3u73">TestMem5内存超频测试报错表</a>
     <a href="https://docs.qq.com/sheet/DQ2FUTlZBUEVnd1lM?tab=BB08J2">1usmus Error Diagnosis（腾讯文档表格）</a>
     <a href="https://docs.google.com/spreadsheets/d/1A7G97QOL0dNMwJZa9SYEq2RElJ5T6Hcx9WdReTsnIWw">DDR4/5 Helper by Veii（1usmus v3配置文件）</a>
     <a href="https://docs.google.com/spreadsheets/d/1cJmhO62WHPLNKGBtsJV3BjdL-dcfJJeyhdSAoJmuzJE">Ryzen Google Calculator!（也有报错表）</a>
+    <a href="https://docs.google.com/spreadsheets/d/1TfGAex1K0_Af9idWtcgic1-IMY1D8fWn3IudKAZo43c">AMD DDR5时序计算表</a>
     <a href="https://www.thaiphoonburner.com/zh/download-for-windows">Thaiphoon Burner</a>
 </div>
 
@@ -2880,7 +2882,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#x40;&#x31;&#55;&#x32;&#46;&#49;&#x39;&#46;&#x30;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#x74;&#64;&#49;&#x37;&#x32;&#46;&#49;&#57;&#46;&#48;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3021,184 +3023,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>github</tag>
         <tag>代码管理</tag>
         <tag>版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo个人博客搭建踩坑记</title>
-    <url>/code/hexo/</url>
-    <content><![CDATA[<h1 id="开发环境配置">1 &nbsp&nbsp<a href="#开发环境配置" class="headerlink" title="开发环境配置"></a>开发环境配置</h1><h2 id="安装Node-js和启用Yarn">1.1 &nbsp&nbsp<a href="#安装Node-js和启用Yarn" class="headerlink" title="安装Node.js和启用Yarn"></a>安装Node.js和启用Yarn</h2><p>下载链接：</p>
-<ul>
-<li><a href="https://nodejs.org/en/download">Node.js</a>：推荐LTS长期版，不推荐用最新版，可能很多npm并未能适配新版。</li>
-<li><a href="https://github.com/yarnpkg/yarn/releases">Yarn（&lt;&#x3D;v1.22.19才有编译好的安装包）</a>：若要使用新版Yarn，则不需要下载离线包安装，通过Node.js的corepack启用即可。</li>
-</ul>
-<p>启用Yarn：</p>
-<div class="tabs" id="enable_yarn"><ul class="nav-tabs"><li class="tab active"><a href="#enable_yarn-1">通过Corepack启用Yarn（>v1.22.19，要求Node.js>=16.10）</a></li><li class="tab"><a href="#enable_yarn-2">通过离线包启用Yarn（<= v1.22.19）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="enable_yarn-1"><ol>
-<li>管理员终端运行命令启用：<code>corepack enable</code>，执行成功之后yarn命令即可系统全局正常调用。</li>
-<li>终端运行命令：<code>yarn global bin</code>，复制路径添加到用户的PATH环境变量中。（这一步一定需要手动添加路径，因为程序没有自动添加PATH变量）</li>
-</ol></div><div class="tab-pane" id="enable_yarn-2"><p>下载安装Yarn离线包即可，程序会自动添加PATH环境变量（Yarn程序路径和Package二进制程序路径）。</p></div></div></div>
-
-<h2 id="yarn和npm部分对应命令">1.2 &nbsp&nbsp<a href="#yarn和npm部分对应命令" class="headerlink" title="yarn和npm部分对应命令"></a>yarn和npm部分对应命令</h2><table>
-<thead>
-<tr>
-<th align="center">yarn命令</th>
-<th align="center">npm命令</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>yarn init</code></td>
-<td align="center"><code>npm init</code></td>
-<td align="center">初始化</td>
-</tr>
-<tr>
-<td align="center"><code>yarn / yarn install</code></td>
-<td align="center"><code>npm install</code></td>
-<td align="center">安装包</td>
-</tr>
-<tr>
-<td align="center"><code>yarn add [package]</code></td>
-<td align="center"><code>npm install [package] --save</code></td>
-<td align="center">安装包</td>
-</tr>
-<tr>
-<td align="center"><code>yarn global add [package]</code></td>
-<td align="center"><code>npm install -g [package] --save</code></td>
-<td align="center">全局安装包</td>
-</tr>
-<tr>
-<td align="center"><code>yarn remove</code></td>
-<td align="center"><code>npm uninstall</code></td>
-<td align="center">卸载包</td>
-</tr>
-<tr>
-<td align="center"><code>yarn upgrade</code></td>
-<td align="center"><code>npm update</code></td>
-<td align="center">更新包</td>
-</tr>
-<tr>
-<td align="center"><code>yarn global dir</code></td>
-<td align="center"><code>npm config get prefix</code></td>
-<td align="center">查看安装目录</td>
-</tr>
-<tr>
-<td align="center"><code>yarn global bin</code></td>
-<td align="center"></td>
-<td align="center">查看安装bin目录</td>
-</tr>
-<tr>
-<td align="center"><code>yarn cache dir</code></td>
-<td align="center"></td>
-<td align="center">查看缓存目录</td>
-</tr>
-<tr>
-<td align="center"><code>yarn cache clear</code></td>
-<td align="center"><code>npm cache clean</code></td>
-<td align="center">清除缓存目录</td>
-</tr>
-</tbody></table>
-<h2 id="版本和包更新">1.3 &nbsp&nbsp<a href="#版本和包更新" class="headerlink" title="版本和包更新"></a>版本和包更新</h2><blockquote>
-<p>站点配置文件<code>_config.yml</code>和主题配置文件<code>_config.next.yml</code>的更新改动项，通过查看Github仓库代码是否存在更新改动。</p>
-</blockquote>
-<blockquote>
-<p>Next主题直接可通过package版本号更新即可。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn outdated <span class="comment"># 检查已过时的包，并修改 package 中 dependencies 中相关版本号</span></span><br><span class="line">yarn global outdated <span class="comment"># 全局检查已过时的包（hexo-cli若已过时，可以先remove再add）</span></span><br><span class="line"><span class="built_in">rm</span> -rf node_modules <span class="comment"># 删除包路径</span></span><br><span class="line">yarn <span class="comment"># 重新为项目安装包，实际等于yarn install（根据package.json安装）</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="npm源设定">1.4 &nbsp&nbsp<a href="#npm源设定" class="headerlink" title="npm源设定"></a>npm源设定</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config get registry  // 查看当前npm源</span><br><span class="line">yarn config delete registry // 重置为官方源</span><br><span class="line">yarn config <span class="built_in">set</span> registry https://registry.npmmirror.com  // 设置npm镜像源（原淘宝镜像源）</span><br></pre></td></tr></table></figure>
-<p>当前有效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code><br><del>已失效镜像链接：<code>npm config set registry http://registry.npm.taobao.org</code></del></p>
-<h2 id="安装hexo和hexo-cli">1.5 &nbsp&nbsp<a href="#安装hexo和hexo-cli" class="headerlink" title="安装hexo和hexo-cli"></a>安装hexo和hexo-cli</h2><p>在想要安装hexo的位置建立文件夹「hexo」，打开命令行终端，以此路径作为终端工作路径。然后执行下面命令（推荐全局安装）。</p>
-<div class="tabs" id="install_hexo"><ul class="nav-tabs"><li class="tab active"><a href="#install_hexo-1">全局安装hexo-cli</a></li><li class="tab"><a href="#install_hexo-2">本地安装hexo-cli</a></li></ul><div class="tab-content"><div class="tab-pane active" id="install_hexo-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn global add hexo-cli <span class="comment"># 全局安装hexo-cli脚手架</span></span><br><span class="line">hexo init <span class="comment"># 初始化hexo，克隆hexo-starter和默认landscape主题仓库</span></span><br><span class="line">hexo s <span class="comment"># hexo server，启用本地服务器，见：http://localhost:4000/</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="install_hexo-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add hexo-cli</span><br><span class="line">node_modules/.bin/hexo.cmd init blog <span class="comment"># init需要空文件夹，所以另外用文件夹「blog」来初始化hexo</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">yarn add <span class="comment"># 一般hexo init之后都会自动安装相关依赖。若没有自动安装时，则需要执行该条命令以手动安装依赖。</span></span><br><span class="line">node_modules/.bin/hexo.cmd s</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="踩坑纪录">1.6 &nbsp&nbsp<a href="#踩坑纪录" class="headerlink" title="踩坑纪录"></a>踩坑纪录</h2><h3 id="npm-ERR-Error-EPERM-operation-not-permitted-unlink-xxx">1.6.1 &nbsp&nbsp<a href="#npm-ERR-Error-EPERM-operation-not-permitted-unlink-xxx" class="headerlink" title="npm ERR! Error: EPERM: operation not permitted, unlink xxx"></a>npm ERR! Error: EPERM: operation not permitted, unlink xxx</h3><p>问题原因：后台有node在运行相关命令进程，导致无法链接成功。全部终止进程，再运行安装库的命令即可。</p>
-<h3 id="运行npm安装包提示报错：certificate-has-expired">1.6.2 &nbsp&nbsp<a href="#运行npm安装包提示报错：certificate-has-expired" class="headerlink" title="运行npm安装包提示报错：certificate has expired"></a>运行npm安装包提示报错：certificate has expired</h3><p>解决方法，关闭HTTPS证书验证即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config <span class="built_in">set</span> strict-ssl <span class="literal">false</span> -g</span><br><span class="line">npm config <span class="built_in">set</span> strict-ssl <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="hexo配置">2 &nbsp&nbsp<a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h1><h2 id="config-yml">2.1 &nbsp&nbsp<a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>注：language根据主题设置，注意新版Next主题已经没有zh-Hans语言配置文件，设置中文简体请用zh-CN参数。<br>注：新版Next主题主仓库已从 iissnan 名下迁移至 theme-next 组织。<br>注：现阶段新版Next支持Font Awesome 5.13.0，而5.1.4旧版Next版本只支持Font Awesome 4.7.0</p>
-<h2 id="为Next主题引入Giscus评论系统">2.2 &nbsp&nbsp<a href="#为Next主题引入Giscus评论系统" class="headerlink" title="为Next主题引入Giscus评论系统"></a>为Next主题引入Giscus评论系统</h2><ol>
-<li>前置条件准备：<ol>
-<li>点击安装<a href="https://github.com/apps/giscus">Giscus APP</a>，选择安装到自己Github账户下的博客仓库<code>github.io</code>（不用勾选全部仓库）。</li>
-<li>启用博客仓库<code>github.io</code>中的<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Discussions功能</a>。</li>
-</ol>
-</li>
-<li>安装<code>hexo-next-giscus</code>插件：<code>yarn add hexo-next-giscus</code></li>
-<li>在博客配置文件<code>_config.yml</code>中添加<code>giscus</code>配置项，具体配置项参数值可以通过<a href="https://giscus.app/zh-CN">Giscus官方配置页面</a>查看（填好仓库地址，页面会检查该仓库地址是否符合要求）。选好各项配置项后，在<code>启用 giscus</code>小节中可以看到最终生成的配置项参数值，例如<code>repo_id</code>和<code>category_id</code>。<code>页面 ↔️ discussion 映射关系（mapping）</code>设置为<code>pathname</code>即可，该选项是用来控制创建<code>discussion</code>的名字，<code>pathname</code>就是博文在博客中的路径值。<code>Discussion 分类（category）</code>设置<code>Announcements</code>类型即可，该类型只有管理员（项目维护者）有权限管理操作。</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">Mister-Kin/Mister-Kin.github.io</span> <span class="comment"># 请填入自己实际的博客仓库 # Github repository name</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="comment"># 请填入自己实际的id # Github repository id</span></span><br><span class="line">  <span class="attr">category:</span> <span class="string">Announcements</span> <span class="comment"># Github discussion category</span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="comment"># 请填入自己实际的id # Github discussion category id</span></span><br><span class="line">  <span class="comment"># Available values: pathname | url | title | og:title</span></span><br><span class="line">  <span class="attr">mapping:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="comment"># Available values: 0 | 1</span></span><br><span class="line">  <span class="attr">reactions_enabled:</span> <span class="number">1</span></span><br><span class="line">   <span class="comment"># Available values: 0 | 1</span></span><br><span class="line">  <span class="attr">emit_metadata:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | preferred_color_scheme | transparent_dark | noborder_light | noborder_dark | noborder_gray | cobalt | purple_dark</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">  <span class="comment"># Available values: en | zh-CN</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="comment"># Place the comment box above the comments: top | bottom</span></span><br><span class="line">  <span class="attr">input_position:</span> <span class="string">top</span></span><br><span class="line">  <span class="comment"># Load the comments lazily</span></span><br><span class="line">  <span class="attr">loading:</span> <span class="string">lazy</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="为文章标题实现自动编号">2.3 &nbsp&nbsp<a href="#为文章标题实现自动编号" class="headerlink" title="为文章标题实现自动编号"></a>为文章标题实现自动编号</h2><h3 id="CSS样式实现">2.3.1 &nbsp&nbsp<a href="#CSS样式实现" class="headerlink" title="CSS样式实现"></a>CSS样式实现</h3><div class="note danger no-icon"><p>该CSS样式仅针对hexo-theme-next主题优化，并且也会针对TOC目录项进行适配。</p>
-</div>
-<p>需要注意的是：计数器应在对应标签上层级的创建，<code>计数器+1</code>就在对应标签中执行。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span>, <span class="selector-class">.post-toc</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h1counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h1</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-1</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h2counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h1counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h2</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-2</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h3counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h2counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h3</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-3</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h4counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h3counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h4</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-4</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h5counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h4counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h5</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-5</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h6counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h5counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h6</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-6</span>&#123;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h6counter;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h1</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-1</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-2</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-3</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h4</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-4</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter)<span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h4counter)  <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h5</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-5</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h4counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h5counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h6</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-6</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h4counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h5counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h6counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="live2d的修正处理">2.4 &nbsp&nbsp<a href="#live2d的修正处理" class="headerlink" title="live2d的修正处理"></a>live2d的修正处理</h2><p>参考链接：<a href="https://github.com/xiazeyu/live2d-widget.js/issues/62">&quot;idle&quot; 设置多个动作时每次加载只会执行其中一个动作，不会随机到别的动作</a></p>
-<p>关于适配自动构建的两个解决方法：</p>
-<ul>
-<li>Github Action自动构建需要相应修改命令（比较繁琐，因此放弃）</li>
-<li>fork源码修改重新编译发布npm包（需要注册npmjs，发布全局包也需审核；使用个人仓库链接作为npm使用即可）</li>
-</ul>
-<p>详细修改：</p>
-<ol>
-<li>cModel.js line 369（注释掉原来的，再添加以下代码）</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">motions</span>[motionName] == <span class="literal">null</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">loadMotion</span>(motionName, <span class="variable language_">this</span>.<span class="property">modelHomeDir</span> + motionName, <span class="keyword">function</span>(<span class="params">mtn</span>) &#123;</span><br><span class="line">        motion = mtn;</span><br><span class="line"></span><br><span class="line">        thisRef.<span class="title function_">setFadeInFadeOut</span>(name, no, priority, motion);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    motion = <span class="variable language_">this</span>.<span class="property">motions</span>[motionName];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    thisRef.<span class="title function_">setFadeInFadeOut</span>(name, no, priority, motion);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>cManager.js line 89（注释掉原来的，再添加以下代码）</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">models</span>[i].<span class="title function_">startRandomMotion</span>(cDefine.<span class="property">MOTION_GROUP_FLICK_HEAD</span>,</span><br><span class="line">        cDefine.<span class="property">PRIORITY_NORMAL</span>);</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>修改两个文件的代码后，在live2d-widget路径下执行构建命令：<code>npm run inst:dev</code>和<code>npm run build:prod</code></li>
-</ol>
-<div class="tabs" id="修正并构建live2d"><ul class="nav-tabs"><li class="tab active"><a href="#修正并构建live2d-1">yarn命令版本</a></li><li class="tab"><a href="#修正并构建live2d-2">npm命令版本</a></li></ul><div class="tab-content"><div class="tab-pane active" id="修正并构建live2d-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn global add commitizen &amp;&amp; yarn global add conventional-changelog-cli &amp;&amp; yarn</span><br><span class="line">./node_modules/.bin/webpack --<span class="built_in">env</span> prod --progress --colors &amp;&amp; ./node_modules/.bin/webpack --<span class="built_in">env</span> prod --progress --colors --config webpack.config.common.js</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="修正并构建live2d-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run inst:dev</span><br><span class="line">npm run build:prod</span><br></pre></td></tr></table></figure></div></div></div>
-
-<blockquote>
-<p>yarn版本详细命令可通过查看<code>node_modules/live2d-widget/package.json</code>包得知：</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;inst:dev&quot;:</span> <span class="string">&quot;npm install -g commitizen &amp;&amp; npm install -g conventional-changelog-cli &amp;&amp; npm install&quot;</span></span><br><span class="line"><span class="attr">&quot;build:prod&quot;:</span> <span class="string">&quot;./node_modules/.bin/webpack --env prod --progress --colors &amp;&amp; npm run build:module&quot;</span><span class="string">,</span></span><br><span class="line"><span class="attr">&quot;build:module&quot;:</span> <span class="string">&quot;./node_modules/.bin/webpack --env prod --progress --colors --config webpack.config.common.js&quot;</span><span class="string">,</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="Github-Action自动构建">3 &nbsp&nbsp<a href="#Github-Action自动构建" class="headerlink" title="Github Action自动构建"></a>Github Action自动构建</h1><h2 id="以往编写actions测试的一些命令">3.1 &nbsp&nbsp<a href="#以往编写actions测试的一些命令" class="headerlink" title="以往编写actions测试的一些命令"></a>以往编写actions测试的一些命令</h2><p>Bash版本（ubuntu runner）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$PATH</span>:<span class="subst">$(yarn global bin)</span>&quot;</span></span><br><span class="line">sed -i <span class="string">&quot;s/GITHUB_ACCESS_TOKEN/<span class="variable">$TOKEN_VALUE</span>/g&quot;</span> ./_config.yml <span class="comment"># g在s模式下会替换每个匹配字符串</span></span><br><span class="line">sed -i <span class="string">&quot;s/GITHUB_ACCESS_TOKEN/<span class="variable">$TOKEN_VALUE</span>/&quot;</span> ./_config.yml <span class="comment"># 这个只会替换每行的第一个字符串</span></span><br></pre></td></tr></table></figure>
-
-<p>Powershell版本（windows runner）：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">get-content</span> _config.yml) <span class="operator">-replace</span> <span class="string">&quot;GITHUB_ACCESS_TOKEN&quot;</span>, <span class="string">&quot;<span class="variable">$TOKEN_VALUE</span>&quot;</span> | <span class="built_in">Set-content</span> _config.yml</span><br><span class="line"><span class="variable">$env:Path</span> += <span class="variable">$env:localappdata</span>/yarn/bin</span><br><span class="line"><span class="variable">$env:Path</span> +=<span class="string">&quot;;C:\Users\runneradmin\AppData\Local\Yarn\bin&quot;</span></span><br><span class="line">stix_2_math_font_path=<span class="variable">$</span>(find / <span class="literal">-name</span> STIXTwoMath<span class="literal">-Regular</span>.otf <span class="number">2</span>&gt;/dev/null)</span><br><span class="line"><span class="built_in">cp</span> <span class="literal">-a</span> <span class="variable">$stix_2_math_font_path</span> ./LaTeXFonts</span><br><span class="line"><span class="built_in">wget</span> <span class="literal">-P</span> ./LaTeXFonts https://github.com/stipub/stixfonts/blob/master/fonts/static_otf/STIXTwoMath<span class="literal">-Regular</span>.otf</span><br></pre></td></tr></table></figure>
-
-<h1 id="hexo部署报错排查">4 &nbsp&nbsp<a href="#hexo部署报错排查" class="headerlink" title="hexo部署报错排查"></a>hexo部署报错排查</h1><h2 id="postinstall-npm-run-build-highlight-failed">4.1 &nbsp&nbsp<a href="#postinstall-npm-run-build-highlight-failed" class="headerlink" title="postinstall: npm run build:highlight failed"></a>postinstall: npm run build:highlight failed</h2><p>问题现象：在操作更新hexo-renderer-marked，在使用yarn执行构建时候，出现报错：<code>hexo-util: command failed. Command: npm run build:highlight</code>。经过尝试全局单独安装<code>hexo-util</code>排查发现，<code>&quot;npm&#39;is not recognized as an internal or external command.</code>。</p>
-<p>问题原因：安装<code>node.js</code>，由于未勾选启用<code>npm</code>模块，导致系统安装的<code>node.js</code>环境缺失<code>npm</code>，但由于新依赖包直接在包构建命令里面新增并写死了<code>npm</code>命令，导致无法正常构建。</p>
-<p>解决方法：重新运行<code>node.js</code>安装包，选择「change」选项，启用<code>npm</code>模块。然后重新运行<code>yarn</code>构建。</p>
-<h2 id="Stylus-for-Node-v14-Accessing-non-existent-property-errors">4.2 &nbsp&nbsp<a href="#Stylus-for-Node-v14-Accessing-non-existent-property-errors" class="headerlink" title="Stylus for Node v14 &#39;Accessing non-existent property&#39; errors"></a>Stylus for Node v14 &#39;Accessing non-existent property&#39; errors</h2><p>问题原因：Node.js v14环境搭配出现该报错。</p>
-<p>解决方法：<br>本地开发环境Node.js版本选择v12，可避免出现<code>Stylus for Node v14 &#39;Accessing non-existent property&#39; errors</code>。</p>
-<h2 id="stylus出现奇怪的依赖报错问题">4.3 &nbsp&nbsp<a href="#stylus出现奇怪的依赖报错问题" class="headerlink" title="stylus出现奇怪的依赖报错问题"></a>stylus出现奇怪的依赖报错问题</h2><p>问题原因：stylus的依赖问题。</p>
-<p>解决方法1：</p>
-<ol>
-<li>更新hexo-renderer-stylus到v3.0.0以后（该版本默认子依赖stylus为v0.59.0）。</li>
-<li>更新hexo-theme-next到v8.17.0以后（解决 stylus 依赖问题 ——css 库依赖报错）。</li>
-</ol>
-<p>解决方法2：<br>在<code>package.json</code>中用<code>resolutions</code>字段手动指定<code>stylus</code>依赖的版本。</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;resolutions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.58.1&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="hexo插件">5 &nbsp&nbsp<a href="#hexo插件" class="headerlink" title="hexo插件"></a>hexo插件</h1><h2 id="修复hexo-heading-index插件bug的记录">5.1 &nbsp&nbsp<a href="#修复hexo-heading-index插件bug的记录" class="headerlink" title="修复hexo-heading-index插件bug的记录"></a>修复<code>hexo-heading-index</code>插件bug的记录</h2><p>点击查看<a href="https://github.com/r12f/hexo-heading-index/pull/8">PR的具体修改内容</a>。关于debug的思路：在<code>updateHeadingIndexes</code>函数前后分别输出对应的数据，然后对比内容查看数据具体存在什么问题。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> contentKeys = [<span class="string">&#x27;content&#x27;</span>, <span class="string">&#x27;excerpt&#x27;</span>];</span><br><span class="line">contentKeys.<span class="title function_">forEach</span>(<span class="function">(<span class="params">contentKey</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> ( contentKey == <span class="string">&#x27;excerpt&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">        fs.<span class="title function_">writeFile</span>(<span class="string">&#x27;D:/excerpt_before.txt&#x27;</span>, contentKey, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">error</span>(err);</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    postInfo[contentKey] = <span class="title function_">updateHeadingIndexes</span>(options, postInfo[contentKey]);</span><br><span class="line">    <span class="keyword">if</span> ( contentKey == <span class="string">&#x27;excerpt&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">        fs.<span class="title function_">writeFile</span>(<span class="string">&#x27;D:/excerpt_after.txt&#x27;</span>, contentKey, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">error</span>(err);</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>关于cheerio库的配置：<a href="https://cheerio.nodejs.cn/docs/advanced/configuring-cheerio">配置 Cheerio</a></p>
-<h2 id="hexo-tag-mmedia插件替代方案标签">5.2 &nbsp&nbsp<a href="#hexo-tag-mmedia插件替代方案标签" class="headerlink" title="hexo-tag-mmedia插件替代方案&lt;ifame&gt;标签"></a>hexo-tag-mmedia插件替代方案<code>&lt;ifame&gt;</code>标签</h2><p>用 <code>&lt;iframe&gt;</code> 在 HTML 中插入B站视频：</p>
-<ul>
-<li><a href="https://perrykum.github.io/rtcls/study/bliframe/bliframe.html">https://perrykum.github.io/rtcls/study/bliframe/bliframe.html</a></li>
-</ul>
-<h2 id="hexo插件开发资料">5.3 &nbsp&nbsp<a href="#hexo插件开发资料" class="headerlink" title="hexo插件开发资料"></a>hexo插件开发资料</h2><ul>
-<li><a href="https://hexo.io/docs/plugins.html#Plugin">https://hexo.io/docs/plugins.html#Plugin</a></li>
-<li><a href="https://jiangtj.com/articles/beechnut/hexo-next-injects/">https://jiangtj.com/articles/beechnut/hexo-next-injects/</a></li>
-<li><a href="https://theme-next.js.org/docs/advanced-settings/injects">https://theme-next.js.org/docs/advanced-settings/injects</a></li>
-<li><a href="https://jayshao.com/hexo-inject-css-js/">https://jayshao.com/hexo-inject-css-js/</a></li>
-<li><a href="https://frapples.github.io/articles/2016-09-21-6d0.html">https://frapples.github.io/articles/2016-09-21-6d0.html</a></li>
-</ul>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm 淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a>.<br>[2] postinstall: npm run build:highlight failes leaving full hexo install unusable...[EB&#x2F;OL]. <a href="https://github.com/hexojs/hexo%E2%80%91util/issues/9">https://github.com/hexojs/hexo‑util/issues/9</a>.<br>[3] Step-by-step[EB&#x2F;OL]. <a href="https://yarnpkg.com/migration/guide">https://yarnpkg.com/migration/guide</a>.<br>[4] giscus[EB&#x2F;OL]. <a href="https://giscus.app/zh-CN">https://giscus.app/zh-CN</a>.<br>[5] Hexo评论系统对比推荐[EB&#x2F;OL]. <a href="https://yzs020220.github.io/posts/44102">https://yzs020220.github.io/posts/44102</a>.<br>[6] Hugo 博客引入 Giscus 评论系统[EB&#x2F;OL]. <a href="https://www.lixueduan.com/posts/blog/02-add-giscus-comment">https://www.lixueduan.com/posts/blog/02-add-giscus-comment</a>.<br>[7] CSS技巧：利用counter-reset和counter-increment实现标题自动编号[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_26822029/article/details/118864239">https://blog.csdn.net/qq_26822029/article/details/118864239</a>.<br>[8] 使用 Node.js 写入文件[EB&#x2F;OL]. <a href="https://dev.nodejs.cn/learn/writing-files-with-nodejs/">https://dev.nodejs.cn/learn/writing-files-with-nodejs/</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>hexo</tag>
-        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -3808,6 +3632,184 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>编程</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo个人博客搭建踩坑记</title>
+    <url>/code/hexo/</url>
+    <content><![CDATA[<h1 id="开发环境配置">1 &nbsp&nbsp<a href="#开发环境配置" class="headerlink" title="开发环境配置"></a>开发环境配置</h1><h2 id="安装Node-js和启用Yarn">1.1 &nbsp&nbsp<a href="#安装Node-js和启用Yarn" class="headerlink" title="安装Node.js和启用Yarn"></a>安装Node.js和启用Yarn</h2><p>下载链接：</p>
+<ul>
+<li><a href="https://nodejs.org/en/download">Node.js</a>：推荐LTS长期版，不推荐用最新版，可能很多npm并未能适配新版。</li>
+<li><a href="https://github.com/yarnpkg/yarn/releases">Yarn（&lt;&#x3D;v1.22.19才有编译好的安装包）</a>：若要使用新版Yarn，则不需要下载离线包安装，通过Node.js的corepack启用即可。</li>
+</ul>
+<p>启用Yarn：</p>
+<div class="tabs" id="enable_yarn"><ul class="nav-tabs"><li class="tab active"><a href="#enable_yarn-1">通过Corepack启用Yarn（>v1.22.19，要求Node.js>=16.10）</a></li><li class="tab"><a href="#enable_yarn-2">通过离线包启用Yarn（<= v1.22.19）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="enable_yarn-1"><ol>
+<li>管理员终端运行命令启用：<code>corepack enable</code>，执行成功之后yarn命令即可系统全局正常调用。</li>
+<li>终端运行命令：<code>yarn global bin</code>，复制路径添加到用户的PATH环境变量中。（这一步一定需要手动添加路径，因为程序没有自动添加PATH变量）</li>
+</ol></div><div class="tab-pane" id="enable_yarn-2"><p>下载安装Yarn离线包即可，程序会自动添加PATH环境变量（Yarn程序路径和Package二进制程序路径）。</p></div></div></div>
+
+<h2 id="yarn和npm部分对应命令">1.2 &nbsp&nbsp<a href="#yarn和npm部分对应命令" class="headerlink" title="yarn和npm部分对应命令"></a>yarn和npm部分对应命令</h2><table>
+<thead>
+<tr>
+<th align="center">yarn命令</th>
+<th align="center">npm命令</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>yarn init</code></td>
+<td align="center"><code>npm init</code></td>
+<td align="center">初始化</td>
+</tr>
+<tr>
+<td align="center"><code>yarn / yarn install</code></td>
+<td align="center"><code>npm install</code></td>
+<td align="center">安装包</td>
+</tr>
+<tr>
+<td align="center"><code>yarn add [package]</code></td>
+<td align="center"><code>npm install [package] --save</code></td>
+<td align="center">安装包</td>
+</tr>
+<tr>
+<td align="center"><code>yarn global add [package]</code></td>
+<td align="center"><code>npm install -g [package] --save</code></td>
+<td align="center">全局安装包</td>
+</tr>
+<tr>
+<td align="center"><code>yarn remove</code></td>
+<td align="center"><code>npm uninstall</code></td>
+<td align="center">卸载包</td>
+</tr>
+<tr>
+<td align="center"><code>yarn upgrade</code></td>
+<td align="center"><code>npm update</code></td>
+<td align="center">更新包</td>
+</tr>
+<tr>
+<td align="center"><code>yarn global dir</code></td>
+<td align="center"><code>npm config get prefix</code></td>
+<td align="center">查看安装目录</td>
+</tr>
+<tr>
+<td align="center"><code>yarn global bin</code></td>
+<td align="center"></td>
+<td align="center">查看安装bin目录</td>
+</tr>
+<tr>
+<td align="center"><code>yarn cache dir</code></td>
+<td align="center"></td>
+<td align="center">查看缓存目录</td>
+</tr>
+<tr>
+<td align="center"><code>yarn cache clear</code></td>
+<td align="center"><code>npm cache clean</code></td>
+<td align="center">清除缓存目录</td>
+</tr>
+</tbody></table>
+<h2 id="版本和包更新">1.3 &nbsp&nbsp<a href="#版本和包更新" class="headerlink" title="版本和包更新"></a>版本和包更新</h2><blockquote>
+<p>站点配置文件<code>_config.yml</code>和主题配置文件<code>_config.next.yml</code>的更新改动项，通过查看Github仓库代码是否存在更新改动。</p>
+</blockquote>
+<blockquote>
+<p>Next主题直接可通过package版本号更新即可。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn outdated <span class="comment"># 检查已过时的包，并修改 package 中 dependencies 中相关版本号</span></span><br><span class="line">yarn global outdated <span class="comment"># 全局检查已过时的包（hexo-cli若已过时，可以先remove再add）</span></span><br><span class="line"><span class="built_in">rm</span> -rf node_modules <span class="comment"># 删除包路径</span></span><br><span class="line">yarn <span class="comment"># 重新为项目安装包，实际等于yarn install（根据package.json安装）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="npm源设定">1.4 &nbsp&nbsp<a href="#npm源设定" class="headerlink" title="npm源设定"></a>npm源设定</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config get registry  // 查看当前npm源</span><br><span class="line">yarn config delete registry // 重置为官方源</span><br><span class="line">yarn config <span class="built_in">set</span> registry https://registry.npmmirror.com  // 设置npm镜像源（原淘宝镜像源）</span><br></pre></td></tr></table></figure>
+<p>当前有效镜像链接：<code>npm config set registry https://registry.npmmirror.com</code><br><del>已失效镜像链接：<code>npm config set registry http://registry.npm.taobao.org</code></del></p>
+<h2 id="安装hexo和hexo-cli">1.5 &nbsp&nbsp<a href="#安装hexo和hexo-cli" class="headerlink" title="安装hexo和hexo-cli"></a>安装hexo和hexo-cli</h2><p>在想要安装hexo的位置建立文件夹「hexo」，打开命令行终端，以此路径作为终端工作路径。然后执行下面命令（推荐全局安装）。</p>
+<div class="tabs" id="install_hexo"><ul class="nav-tabs"><li class="tab active"><a href="#install_hexo-1">全局安装hexo-cli</a></li><li class="tab"><a href="#install_hexo-2">本地安装hexo-cli</a></li></ul><div class="tab-content"><div class="tab-pane active" id="install_hexo-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn global add hexo-cli <span class="comment"># 全局安装hexo-cli脚手架</span></span><br><span class="line">hexo init <span class="comment"># 初始化hexo，克隆hexo-starter和默认landscape主题仓库</span></span><br><span class="line">hexo s <span class="comment"># hexo server，启用本地服务器，见：http://localhost:4000/</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="install_hexo-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add hexo-cli</span><br><span class="line">node_modules/.bin/hexo.cmd init blog <span class="comment"># init需要空文件夹，所以另外用文件夹「blog」来初始化hexo</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">yarn add <span class="comment"># 一般hexo init之后都会自动安装相关依赖。若没有自动安装时，则需要执行该条命令以手动安装依赖。</span></span><br><span class="line">node_modules/.bin/hexo.cmd s</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="踩坑纪录">1.6 &nbsp&nbsp<a href="#踩坑纪录" class="headerlink" title="踩坑纪录"></a>踩坑纪录</h2><h3 id="npm-ERR-Error-EPERM-operation-not-permitted-unlink-xxx">1.6.1 &nbsp&nbsp<a href="#npm-ERR-Error-EPERM-operation-not-permitted-unlink-xxx" class="headerlink" title="npm ERR! Error: EPERM: operation not permitted, unlink xxx"></a>npm ERR! Error: EPERM: operation not permitted, unlink xxx</h3><p>问题原因：后台有node在运行相关命令进程，导致无法链接成功。全部终止进程，再运行安装库的命令即可。</p>
+<h3 id="运行npm安装包提示报错：certificate-has-expired">1.6.2 &nbsp&nbsp<a href="#运行npm安装包提示报错：certificate-has-expired" class="headerlink" title="运行npm安装包提示报错：certificate has expired"></a>运行npm安装包提示报错：certificate has expired</h3><p>解决方法，关闭HTTPS证书验证即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config <span class="built_in">set</span> strict-ssl <span class="literal">false</span> -g</span><br><span class="line">npm config <span class="built_in">set</span> strict-ssl <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="hexo配置">2 &nbsp&nbsp<a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h1><h2 id="config-yml">2.1 &nbsp&nbsp<a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>注：language根据主题设置，注意新版Next主题已经没有zh-Hans语言配置文件，设置中文简体请用zh-CN参数。<br>注：新版Next主题主仓库已从 iissnan 名下迁移至 theme-next 组织。<br>注：现阶段新版Next支持Font Awesome 5.13.0，而5.1.4旧版Next版本只支持Font Awesome 4.7.0</p>
+<h2 id="为Next主题引入Giscus评论系统">2.2 &nbsp&nbsp<a href="#为Next主题引入Giscus评论系统" class="headerlink" title="为Next主题引入Giscus评论系统"></a>为Next主题引入Giscus评论系统</h2><ol>
+<li>前置条件准备：<ol>
+<li>点击安装<a href="https://github.com/apps/giscus">Giscus APP</a>，选择安装到自己Github账户下的博客仓库<code>github.io</code>（不用勾选全部仓库）。</li>
+<li>启用博客仓库<code>github.io</code>中的<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Discussions功能</a>。</li>
+</ol>
+</li>
+<li>安装<code>hexo-next-giscus</code>插件：<code>yarn add hexo-next-giscus</code></li>
+<li>在博客配置文件<code>_config.yml</code>中添加<code>giscus</code>配置项，具体配置项参数值可以通过<a href="https://giscus.app/zh-CN">Giscus官方配置页面</a>查看（填好仓库地址，页面会检查该仓库地址是否符合要求）。选好各项配置项后，在<code>启用 giscus</code>小节中可以看到最终生成的配置项参数值，例如<code>repo_id</code>和<code>category_id</code>。<code>页面 ↔️ discussion 映射关系（mapping）</code>设置为<code>pathname</code>即可，该选项是用来控制创建<code>discussion</code>的名字，<code>pathname</code>就是博文在博客中的路径值。<code>Discussion 分类（category）</code>设置<code>Announcements</code>类型即可，该类型只有管理员（项目维护者）有权限管理操作。</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">Mister-Kin/Mister-Kin.github.io</span> <span class="comment"># 请填入自己实际的博客仓库 # Github repository name</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="comment"># 请填入自己实际的id # Github repository id</span></span><br><span class="line">  <span class="attr">category:</span> <span class="string">Announcements</span> <span class="comment"># Github discussion category</span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="comment"># 请填入自己实际的id # Github discussion category id</span></span><br><span class="line">  <span class="comment"># Available values: pathname | url | title | og:title</span></span><br><span class="line">  <span class="attr">mapping:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="comment"># Available values: 0 | 1</span></span><br><span class="line">  <span class="attr">reactions_enabled:</span> <span class="number">1</span></span><br><span class="line">   <span class="comment"># Available values: 0 | 1</span></span><br><span class="line">  <span class="attr">emit_metadata:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | preferred_color_scheme | transparent_dark | noborder_light | noborder_dark | noborder_gray | cobalt | purple_dark</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">  <span class="comment"># Available values: en | zh-CN</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="comment"># Place the comment box above the comments: top | bottom</span></span><br><span class="line">  <span class="attr">input_position:</span> <span class="string">top</span></span><br><span class="line">  <span class="comment"># Load the comments lazily</span></span><br><span class="line">  <span class="attr">loading:</span> <span class="string">lazy</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="为文章标题实现自动编号">2.3 &nbsp&nbsp<a href="#为文章标题实现自动编号" class="headerlink" title="为文章标题实现自动编号"></a>为文章标题实现自动编号</h2><h3 id="CSS样式实现">2.3.1 &nbsp&nbsp<a href="#CSS样式实现" class="headerlink" title="CSS样式实现"></a>CSS样式实现</h3><div class="note danger no-icon"><p>该CSS样式仅针对hexo-theme-next主题优化，并且也会针对TOC目录项进行适配。</p>
+</div>
+<p>需要注意的是：计数器应在对应标签上层级的创建，<code>计数器+1</code>就在对应标签中执行。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span>, <span class="selector-class">.post-toc</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h1counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h1</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-1</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h2counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h1counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h2</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-2</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h3counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h2counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h3</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-3</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h4counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h3counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h4</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-4</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h5counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h4counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h5</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-5</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h6counter;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h5counter;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h6</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-6</span>&#123;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h6counter;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h1</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-1</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-2</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-3</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h4</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-4</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter)<span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h4counter)  <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h5</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-5</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h4counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h5counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">h6</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.post-toc</span> <span class="selector-class">.nav-level-6</span> <span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h1counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h2counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h3counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h4counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h5counter) <span class="string">&quot;.&quot;</span><span class="built_in">counter</span>(h6counter) <span class="string">&quot;\0000a0\0000a0\0000a0&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="live2d的修正处理">2.4 &nbsp&nbsp<a href="#live2d的修正处理" class="headerlink" title="live2d的修正处理"></a>live2d的修正处理</h2><p>参考链接：<a href="https://github.com/xiazeyu/live2d-widget.js/issues/62">&quot;idle&quot; 设置多个动作时每次加载只会执行其中一个动作，不会随机到别的动作</a></p>
+<p>关于适配自动构建的两个解决方法：</p>
+<ul>
+<li>Github Action自动构建需要相应修改命令（比较繁琐，因此放弃）</li>
+<li>fork源码修改重新编译发布npm包（需要注册npmjs，发布全局包也需审核；使用个人仓库链接作为npm使用即可）</li>
+</ul>
+<p>详细修改：</p>
+<ol>
+<li>cModel.js line 369（注释掉原来的，再添加以下代码）</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">motions</span>[motionName] == <span class="literal">null</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">loadMotion</span>(motionName, <span class="variable language_">this</span>.<span class="property">modelHomeDir</span> + motionName, <span class="keyword">function</span>(<span class="params">mtn</span>) &#123;</span><br><span class="line">        motion = mtn;</span><br><span class="line"></span><br><span class="line">        thisRef.<span class="title function_">setFadeInFadeOut</span>(name, no, priority, motion);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    motion = <span class="variable language_">this</span>.<span class="property">motions</span>[motionName];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    thisRef.<span class="title function_">setFadeInFadeOut</span>(name, no, priority, motion);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>cManager.js line 89（注释掉原来的，再添加以下代码）</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">models</span>[i].<span class="title function_">startRandomMotion</span>(cDefine.<span class="property">MOTION_GROUP_FLICK_HEAD</span>,</span><br><span class="line">        cDefine.<span class="property">PRIORITY_NORMAL</span>);</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>修改两个文件的代码后，在live2d-widget路径下执行构建命令：<code>npm run inst:dev</code>和<code>npm run build:prod</code></li>
+</ol>
+<div class="tabs" id="修正并构建live2d"><ul class="nav-tabs"><li class="tab active"><a href="#修正并构建live2d-1">yarn命令版本</a></li><li class="tab"><a href="#修正并构建live2d-2">npm命令版本</a></li></ul><div class="tab-content"><div class="tab-pane active" id="修正并构建live2d-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn global add commitizen &amp;&amp; yarn global add conventional-changelog-cli &amp;&amp; yarn</span><br><span class="line">./node_modules/.bin/webpack --<span class="built_in">env</span> prod --progress --colors &amp;&amp; ./node_modules/.bin/webpack --<span class="built_in">env</span> prod --progress --colors --config webpack.config.common.js</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="修正并构建live2d-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run inst:dev</span><br><span class="line">npm run build:prod</span><br></pre></td></tr></table></figure></div></div></div>
+
+<blockquote>
+<p>yarn版本详细命令可通过查看<code>node_modules/live2d-widget/package.json</code>包得知：</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;inst:dev&quot;:</span> <span class="string">&quot;npm install -g commitizen &amp;&amp; npm install -g conventional-changelog-cli &amp;&amp; npm install&quot;</span></span><br><span class="line"><span class="attr">&quot;build:prod&quot;:</span> <span class="string">&quot;./node_modules/.bin/webpack --env prod --progress --colors &amp;&amp; npm run build:module&quot;</span><span class="string">,</span></span><br><span class="line"><span class="attr">&quot;build:module&quot;:</span> <span class="string">&quot;./node_modules/.bin/webpack --env prod --progress --colors --config webpack.config.common.js&quot;</span><span class="string">,</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Github-Action自动构建">3 &nbsp&nbsp<a href="#Github-Action自动构建" class="headerlink" title="Github Action自动构建"></a>Github Action自动构建</h1><h2 id="以往编写actions测试的一些命令">3.1 &nbsp&nbsp<a href="#以往编写actions测试的一些命令" class="headerlink" title="以往编写actions测试的一些命令"></a>以往编写actions测试的一些命令</h2><p>Bash版本（ubuntu runner）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$PATH</span>:<span class="subst">$(yarn global bin)</span>&quot;</span></span><br><span class="line">sed -i <span class="string">&quot;s/GITHUB_ACCESS_TOKEN/<span class="variable">$TOKEN_VALUE</span>/g&quot;</span> ./_config.yml <span class="comment"># g在s模式下会替换每个匹配字符串</span></span><br><span class="line">sed -i <span class="string">&quot;s/GITHUB_ACCESS_TOKEN/<span class="variable">$TOKEN_VALUE</span>/&quot;</span> ./_config.yml <span class="comment"># 这个只会替换每行的第一个字符串</span></span><br></pre></td></tr></table></figure>
+
+<p>Powershell版本（windows runner）：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">get-content</span> _config.yml) <span class="operator">-replace</span> <span class="string">&quot;GITHUB_ACCESS_TOKEN&quot;</span>, <span class="string">&quot;<span class="variable">$TOKEN_VALUE</span>&quot;</span> | <span class="built_in">Set-content</span> _config.yml</span><br><span class="line"><span class="variable">$env:Path</span> += <span class="variable">$env:localappdata</span>/yarn/bin</span><br><span class="line"><span class="variable">$env:Path</span> +=<span class="string">&quot;;C:\Users\runneradmin\AppData\Local\Yarn\bin&quot;</span></span><br><span class="line">stix_2_math_font_path=<span class="variable">$</span>(find / <span class="literal">-name</span> STIXTwoMath<span class="literal">-Regular</span>.otf <span class="number">2</span>&gt;/dev/null)</span><br><span class="line"><span class="built_in">cp</span> <span class="literal">-a</span> <span class="variable">$stix_2_math_font_path</span> ./LaTeXFonts</span><br><span class="line"><span class="built_in">wget</span> <span class="literal">-P</span> ./LaTeXFonts https://github.com/stipub/stixfonts/blob/master/fonts/static_otf/STIXTwoMath<span class="literal">-Regular</span>.otf</span><br></pre></td></tr></table></figure>
+
+<h1 id="hexo部署报错排查">4 &nbsp&nbsp<a href="#hexo部署报错排查" class="headerlink" title="hexo部署报错排查"></a>hexo部署报错排查</h1><h2 id="postinstall-npm-run-build-highlight-failed">4.1 &nbsp&nbsp<a href="#postinstall-npm-run-build-highlight-failed" class="headerlink" title="postinstall: npm run build:highlight failed"></a>postinstall: npm run build:highlight failed</h2><p>问题现象：在操作更新hexo-renderer-marked，在使用yarn执行构建时候，出现报错：<code>hexo-util: command failed. Command: npm run build:highlight</code>。经过尝试全局单独安装<code>hexo-util</code>排查发现，<code>&quot;npm&#39;is not recognized as an internal or external command.</code>。</p>
+<p>问题原因：安装<code>node.js</code>，由于未勾选启用<code>npm</code>模块，导致系统安装的<code>node.js</code>环境缺失<code>npm</code>，但由于新依赖包直接在包构建命令里面新增并写死了<code>npm</code>命令，导致无法正常构建。</p>
+<p>解决方法：重新运行<code>node.js</code>安装包，选择「change」选项，启用<code>npm</code>模块。然后重新运行<code>yarn</code>构建。</p>
+<h2 id="Stylus-for-Node-v14-Accessing-non-existent-property-errors">4.2 &nbsp&nbsp<a href="#Stylus-for-Node-v14-Accessing-non-existent-property-errors" class="headerlink" title="Stylus for Node v14 &#39;Accessing non-existent property&#39; errors"></a>Stylus for Node v14 &#39;Accessing non-existent property&#39; errors</h2><p>问题原因：Node.js v14环境搭配出现该报错。</p>
+<p>解决方法：<br>本地开发环境Node.js版本选择v12，可避免出现<code>Stylus for Node v14 &#39;Accessing non-existent property&#39; errors</code>。</p>
+<h2 id="stylus出现奇怪的依赖报错问题">4.3 &nbsp&nbsp<a href="#stylus出现奇怪的依赖报错问题" class="headerlink" title="stylus出现奇怪的依赖报错问题"></a>stylus出现奇怪的依赖报错问题</h2><p>问题原因：stylus的依赖问题。</p>
+<p>解决方法1：</p>
+<ol>
+<li>更新hexo-renderer-stylus到v3.0.0以后（该版本默认子依赖stylus为v0.59.0）。</li>
+<li>更新hexo-theme-next到v8.17.0以后（解决 stylus 依赖问题 ——css 库依赖报错）。</li>
+</ol>
+<p>解决方法2：<br>在<code>package.json</code>中用<code>resolutions</code>字段手动指定<code>stylus</code>依赖的版本。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;resolutions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.58.1&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="hexo插件">5 &nbsp&nbsp<a href="#hexo插件" class="headerlink" title="hexo插件"></a>hexo插件</h1><h2 id="修复hexo-heading-index插件bug的记录">5.1 &nbsp&nbsp<a href="#修复hexo-heading-index插件bug的记录" class="headerlink" title="修复hexo-heading-index插件bug的记录"></a>修复<code>hexo-heading-index</code>插件bug的记录</h2><p>点击查看<a href="https://github.com/r12f/hexo-heading-index/pull/8">PR的具体修改内容</a>。关于debug的思路：在<code>updateHeadingIndexes</code>函数前后分别输出对应的数据，然后对比内容查看数据具体存在什么问题。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> contentKeys = [<span class="string">&#x27;content&#x27;</span>, <span class="string">&#x27;excerpt&#x27;</span>];</span><br><span class="line">contentKeys.<span class="title function_">forEach</span>(<span class="function">(<span class="params">contentKey</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> ( contentKey == <span class="string">&#x27;excerpt&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">        fs.<span class="title function_">writeFile</span>(<span class="string">&#x27;D:/excerpt_before.txt&#x27;</span>, contentKey, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">error</span>(err);</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    postInfo[contentKey] = <span class="title function_">updateHeadingIndexes</span>(options, postInfo[contentKey]);</span><br><span class="line">    <span class="keyword">if</span> ( contentKey == <span class="string">&#x27;excerpt&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">        fs.<span class="title function_">writeFile</span>(<span class="string">&#x27;D:/excerpt_after.txt&#x27;</span>, contentKey, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">error</span>(err);</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>关于cheerio库的配置：<a href="https://cheerio.nodejs.cn/docs/advanced/configuring-cheerio">配置 Cheerio</a></p>
+<h2 id="hexo-tag-mmedia插件替代方案标签">5.2 &nbsp&nbsp<a href="#hexo-tag-mmedia插件替代方案标签" class="headerlink" title="hexo-tag-mmedia插件替代方案&lt;ifame&gt;标签"></a>hexo-tag-mmedia插件替代方案<code>&lt;ifame&gt;</code>标签</h2><p>用 <code>&lt;iframe&gt;</code> 在 HTML 中插入B站视频：</p>
+<ul>
+<li><a href="https://perrykum.github.io/rtcls/study/bliframe/bliframe.html">https://perrykum.github.io/rtcls/study/bliframe/bliframe.html</a></li>
+</ul>
+<h2 id="hexo插件开发资料">5.3 &nbsp&nbsp<a href="#hexo插件开发资料" class="headerlink" title="hexo插件开发资料"></a>hexo插件开发资料</h2><ul>
+<li><a href="https://hexo.io/docs/plugins.html#Plugin">https://hexo.io/docs/plugins.html#Plugin</a></li>
+<li><a href="https://jiangtj.com/articles/beechnut/hexo-next-injects/">https://jiangtj.com/articles/beechnut/hexo-next-injects/</a></li>
+<li><a href="https://theme-next.js.org/docs/advanced-settings/injects">https://theme-next.js.org/docs/advanced-settings/injects</a></li>
+<li><a href="https://jayshao.com/hexo-inject-css-js/">https://jayshao.com/hexo-inject-css-js/</a></li>
+<li><a href="https://frapples.github.io/articles/2016-09-21-6d0.html">https://frapples.github.io/articles/2016-09-21-6d0.html</a></li>
+</ul>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] npm 淘宝镜像最新官方指引（2023.08.31）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/653480874">https://zhuanlan.zhihu.com/p/653480874</a>.<br>[2] postinstall: npm run build:highlight failes leaving full hexo install unusable...[EB&#x2F;OL]. <a href="https://github.com/hexojs/hexo%E2%80%91util/issues/9">https://github.com/hexojs/hexo‑util/issues/9</a>.<br>[3] Step-by-step[EB&#x2F;OL]. <a href="https://yarnpkg.com/migration/guide">https://yarnpkg.com/migration/guide</a>.<br>[4] giscus[EB&#x2F;OL]. <a href="https://giscus.app/zh-CN">https://giscus.app/zh-CN</a>.<br>[5] Hexo评论系统对比推荐[EB&#x2F;OL]. <a href="https://yzs020220.github.io/posts/44102">https://yzs020220.github.io/posts/44102</a>.<br>[6] Hugo 博客引入 Giscus 评论系统[EB&#x2F;OL]. <a href="https://www.lixueduan.com/posts/blog/02-add-giscus-comment">https://www.lixueduan.com/posts/blog/02-add-giscus-comment</a>.<br>[7] CSS技巧：利用counter-reset和counter-increment实现标题自动编号[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_26822029/article/details/118864239">https://blog.csdn.net/qq_26822029/article/details/118864239</a>.<br>[8] 使用 Node.js 写入文件[EB&#x2F;OL]. <a href="https://dev.nodejs.cn/learn/writing-files-with-nodejs/">https://dev.nodejs.cn/learn/writing-files-with-nodejs/</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>hexo</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -8547,12 +8549,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#97;&#110;&#107;&#x73;&#46;&#99;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#x61;&#110;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#115;&#x2e;&#99;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#117;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -12303,7 +12305,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#105;&#115;&#116;&#x65;&#114;&#107;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#x6b;&#x69;&#110;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -12566,83 +12568,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     width: 60px;
 }
 </style>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于本站</title>
-    <url>/about/about-site/index.html</url>
-    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
-<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
-<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
-</div>
-
-<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
-<table>
-<thead>
-<tr>
-<th align="left">允许</th>
-<th align="left">限制</th>
-<th align="left">条件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><font style="color: green;">√</font> 修改</td>
-<td align="left"><font style="color: red;">×</font> 商标使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 分发</td>
-<td align="left"><font style="color: red;">×</font> 专利使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 个人使用</td>
-<td align="left"><font style="color: red;">×</font> 商业使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
-</tr>
-</tbody></table>
-<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
-<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
-<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
-<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
-<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
-</div>
-
-<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
-<ul>
-<li>1920×1080 分辨率的笔记本屏幕</li>
-<li>火狐浏览器</li>
-<li>Win10 OS</li>
-</ul>
-<p>本站存在的问题：</p>
-<ul>
-<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
-<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
-</ul>
-<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
-<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
-</div>
-
-<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
-<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
-<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
-<blockquote class="blockquote-center">
-<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
-<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
-</blockquote>
-
-<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
-<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
@@ -12992,6 +12917,83 @@ CGI&后期处理
     margin-left: 25px;
 }
 </style>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于本站</title>
+    <url>/about/about-site/index.html</url>
+    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
+<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
+<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
+</div>
+
+<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
+<table>
+<thead>
+<tr>
+<th align="left">允许</th>
+<th align="left">限制</th>
+<th align="left">条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><font style="color: green;">√</font> 修改</td>
+<td align="left"><font style="color: red;">×</font> 商标使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 分发</td>
+<td align="left"><font style="color: red;">×</font> 专利使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 个人使用</td>
+<td align="left"><font style="color: red;">×</font> 商业使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
+</tr>
+</tbody></table>
+<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
+<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
+<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
+<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
+<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
+</div>
+
+<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
+<ul>
+<li>1920×1080 分辨率的笔记本屏幕</li>
+<li>火狐浏览器</li>
+<li>Win10 OS</li>
+</ul>
+<p>本站存在的问题：</p>
+<ul>
+<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
+<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
+</ul>
+<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
+<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
+</div>
+
+<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
+<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
+<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
+<blockquote class="blockquote-center">
+<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
+<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
+</blockquote>
+
+<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
+<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
