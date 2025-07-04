@@ -318,6 +318,7 @@
     <p class="tag-bookmark-page">多线程下载工具</p>
     </div>
     <a href="https://www.neatdownloadmanager.com/index.php/en/">Neat Download Manager</a>
+    <a href="https://eternallybored.org/misc/wget/">GNU Wget(Windows)</a>
 </div>
 
 <div class="text-box">
@@ -2193,37 +2194,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Bash Shell总结笔记</title>
-    <url>/code/bash/</url>
-    <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
-<p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p>
-<h1 id="shell提示符">2 &nbsp&nbsp<a href="#shell提示符" class="headerlink" title="shell提示符"></a>shell提示符</h1><p>shell命令行界面（CLI）</p>
-<h1 id="bash的配置">3 &nbsp&nbsp<a href="#bash的配置" class="headerlink" title="bash的配置"></a>bash的配置</h1><p>source ~&#x2F;.bashrc<br>source ~&#x2F;.profile<br>echo &#39;export APP&#x3D;&#x2F;opt&#x2F;tinyos-2.x&#x2F;apps&#39; &gt;&gt; ~&#x2F;.bashrc</p>
-<h2 id="删除Git-Bash历史记录">3.1 &nbsp&nbsp<a href="#删除Git-Bash历史记录" class="headerlink" title="删除Git Bash历史记录"></a>删除Git Bash历史记录</h2><p>在<code>%USERPROFILE%</code>（用户配置路径）下找到.bash_history删除即可。</p>
-<h1 id="参数表达式">4 &nbsp&nbsp<a href="#参数表达式" class="headerlink" title="参数表达式"></a><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">参数表达式</a></h1><h2 id="前缀和后缀的获取">4.1 &nbsp&nbsp<a href="#前缀和后缀的获取" class="headerlink" title="前缀和后缀的获取"></a>前缀和后缀的获取</h2><p><code>$&#123;file%.*&#125;</code>：移除最后一个点之后的内容<br><code>$&#123;file%%.*&#125;</code>：移除第一个点之后的内容<br><code>$&#123;file#*.&#125;</code>：移除第一个点之前的内容<br><code>$&#123;file##*.&#125;</code>：移除最后一个点之前的内容</p>
-<h1 id="test">5 &nbsp&nbsp<a href="#test" class="headerlink" title="test"></a>test</h1><p>test可以与&amp;&amp;组成一个条件判断，无需用if命令。</p>
-<h1 id="case">6 &nbsp&nbsp<a href="#case" class="headerlink" title="case"></a>case</h1><p>case命令，无法使用test命令。<br>case不能用正则表达，只用<a href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching">样式匹配</a>。</p>
-<h1 id="删除特定目录下所有文件，但排除部分文件">7 &nbsp&nbsp<a href="#删除特定目录下所有文件，但排除部分文件" class="headerlink" title="删除特定目录下所有文件，但排除部分文件"></a>删除特定目录下所有文件，但排除部分文件</h1><p><code>find /path/to/directory -type f ! -name &#39;file_prefix*&#39; | xargs rm -rf</code></p>
-<h1 id="Bash脚本加密解密">8 &nbsp&nbsp<a href="#Bash脚本加密解密" class="headerlink" title="Bash脚本加密解密"></a>Bash脚本加密解密</h1><p><a href="https://www.jb51.net/article/216095.htm">https://www.jb51.net/article/216095.htm</a><br><a href="https://www.qcgzxw.cn/575.html">https://www.qcgzxw.cn/575.html</a></p>
-<h1 id="文本编辑">9 &nbsp&nbsp<a href="#文本编辑" class="headerlink" title="文本编辑"></a>文本编辑</h1><h2 id="编辑并同时备份的命令">9.1 &nbsp&nbsp<a href="#编辑并同时备份的命令" class="headerlink" title="编辑并同时备份的命令"></a>编辑并同时备份的命令</h2><ul>
-<li><code>set -i.bak</code>：编辑并同时创建一个<code>.bak</code>后缀的备份文件</li>
-<li><code>sed -i_orig</code>：编辑并同时创建一个<code>_orig</code>后缀的备份文件</li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BLUM R, BRESNAHAN C. Linux 命令行与 shell 脚本编程大全[M]. 门佳, 武海峰, 译. 3 版. 北京: 人民邮电出版社, 2016.<br>[2] GNU Bash[EB&#x2F;OL]. <a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>.<br>[3] Test variable in a bash case statement[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/205084/test%E2%80%91variable%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://unix.stackexchange.com/questions/205084/test‑variable‑in‑a‑bash‑case‑statement</a>.<br>[4] Regular expressions in a Bash case statement[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/9631335/regular%E2%80%91expressions%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://stackoverflow.com/questions/9631335/regular‑expressions‑in‑a‑bash‑case‑statement</a>.<br>[5] Adding suffix to filename during for loop in bash[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/600051/adding%E2%80%91suffix%E2%80%91to%E2%80%91filename%E2%80%91during%E2%80%91for%E2%80%91loop%E2%80%91in%E2%80%91bash">https://unix.stackexchange.com/questions/600051/adding‑suffix‑to‑filename‑during‑for‑loop‑in‑bash</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>bash</tag>
-        <tag>shell</tag>
-        <tag>系统</tag>
-        <tag>linux</tag>
-        <tag>终端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>电路仿真设计</title>
     <url>/cad/simulation/</url>
     <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
@@ -2360,15 +2330,46 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>终端</tag>
         <tag>bat</tag>
         <tag>cmd</tag>
         <tag>语法</tag>
         <tag>笔记</tag>
+        <tag>终端</tag>
         <tag>windows</tag>
         <tag>运维</tag>
         <tag>powershell</tag>
         <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bash Shell总结笔记</title>
+    <url>/code/bash/</url>
+    <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
+<p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p>
+<h1 id="shell提示符">2 &nbsp&nbsp<a href="#shell提示符" class="headerlink" title="shell提示符"></a>shell提示符</h1><p>shell命令行界面（CLI）</p>
+<h1 id="bash的配置">3 &nbsp&nbsp<a href="#bash的配置" class="headerlink" title="bash的配置"></a>bash的配置</h1><p>source ~&#x2F;.bashrc<br>source ~&#x2F;.profile<br>echo &#39;export APP&#x3D;&#x2F;opt&#x2F;tinyos-2.x&#x2F;apps&#39; &gt;&gt; ~&#x2F;.bashrc</p>
+<h2 id="删除Git-Bash历史记录">3.1 &nbsp&nbsp<a href="#删除Git-Bash历史记录" class="headerlink" title="删除Git Bash历史记录"></a>删除Git Bash历史记录</h2><p>在<code>%USERPROFILE%</code>（用户配置路径）下找到.bash_history删除即可。</p>
+<h1 id="参数表达式">4 &nbsp&nbsp<a href="#参数表达式" class="headerlink" title="参数表达式"></a><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">参数表达式</a></h1><h2 id="前缀和后缀的获取">4.1 &nbsp&nbsp<a href="#前缀和后缀的获取" class="headerlink" title="前缀和后缀的获取"></a>前缀和后缀的获取</h2><p><code>$&#123;file%.*&#125;</code>：移除最后一个点之后的内容<br><code>$&#123;file%%.*&#125;</code>：移除第一个点之后的内容<br><code>$&#123;file#*.&#125;</code>：移除第一个点之前的内容<br><code>$&#123;file##*.&#125;</code>：移除最后一个点之前的内容</p>
+<h1 id="test">5 &nbsp&nbsp<a href="#test" class="headerlink" title="test"></a>test</h1><p>test可以与&amp;&amp;组成一个条件判断，无需用if命令。</p>
+<h1 id="case">6 &nbsp&nbsp<a href="#case" class="headerlink" title="case"></a>case</h1><p>case命令，无法使用test命令。<br>case不能用正则表达，只用<a href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching">样式匹配</a>。</p>
+<h1 id="删除特定目录下所有文件，但排除部分文件">7 &nbsp&nbsp<a href="#删除特定目录下所有文件，但排除部分文件" class="headerlink" title="删除特定目录下所有文件，但排除部分文件"></a>删除特定目录下所有文件，但排除部分文件</h1><p><code>find /path/to/directory -type f ! -name &#39;file_prefix*&#39; | xargs rm -rf</code></p>
+<h1 id="Bash脚本加密解密">8 &nbsp&nbsp<a href="#Bash脚本加密解密" class="headerlink" title="Bash脚本加密解密"></a>Bash脚本加密解密</h1><p><a href="https://www.jb51.net/article/216095.htm">https://www.jb51.net/article/216095.htm</a><br><a href="https://www.qcgzxw.cn/575.html">https://www.qcgzxw.cn/575.html</a></p>
+<h1 id="文本编辑">9 &nbsp&nbsp<a href="#文本编辑" class="headerlink" title="文本编辑"></a>文本编辑</h1><h2 id="编辑并同时备份的命令">9.1 &nbsp&nbsp<a href="#编辑并同时备份的命令" class="headerlink" title="编辑并同时备份的命令"></a>编辑并同时备份的命令</h2><ul>
+<li><code>set -i.bak</code>：编辑并同时创建一个<code>.bak</code>后缀的备份文件</li>
+<li><code>sed -i_orig</code>：编辑并同时创建一个<code>_orig</code>后缀的备份文件</li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BLUM R, BRESNAHAN C. Linux 命令行与 shell 脚本编程大全[M]. 门佳, 武海峰, 译. 3 版. 北京: 人民邮电出版社, 2016.<br>[2] GNU Bash[EB&#x2F;OL]. <a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>.<br>[3] Test variable in a bash case statement[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/205084/test%E2%80%91variable%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://unix.stackexchange.com/questions/205084/test‑variable‑in‑a‑bash‑case‑statement</a>.<br>[4] Regular expressions in a Bash case statement[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/9631335/regular%E2%80%91expressions%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://stackoverflow.com/questions/9631335/regular‑expressions‑in‑a‑bash‑case‑statement</a>.<br>[5] Adding suffix to filename during for loop in bash[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/600051/adding%E2%80%91suffix%E2%80%91to%E2%80%91filename%E2%80%91during%E2%80%91for%E2%80%91loop%E2%80%91in%E2%80%91bash">https://unix.stackexchange.com/questions/600051/adding‑suffix‑to‑filename‑during‑for‑loop‑in‑bash</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>终端</tag>
+        <tag>bash</tag>
+        <tag>shell</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2641,128 +2642,133 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <tr>
 <th align="center">命令</th>
 <th align="center">功能</th>
-<th align="center">注释</th>
+<th align="left">注释</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">docker ps</td>
 <td align="center">列出当前正在运行的容器</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker ps -a</td>
 <td align="center">列出所有容器（包括已停止的容器）</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker logs container_name</td>
 <td align="center">查看指定容器的日志</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker inspect container_name&#x2F;image</td>
 <td align="center">获取指定容器或镜像的详细信息</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker exec -it container_name &#x2F;bin&#x2F;bash</td>
 <td align="center">进入指定容器的交互式终端</td>
-<td align="center">-i: 交互式操作<br>-t: 终端<br>-it：以交互式终端运行容器，例如 docker exec -it container_name bash</td>
+<td align="left">-i: 交互式操作<br>-t: 终端<br>-it：以交互式终端运行容器，例如 docker exec -it container_name bash</td>
 </tr>
 <tr>
 <td align="center">docker stop container_name</td>
 <td align="center">停止一个或多个容器</td>
-<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">docker kill container_name</td>
+<td align="center">立即停止一个或多个容器</td>
+<td align="left">直接发送 SIGKILL 信号给容器的主进程，导致容器立即停止<br>docker kill -s SIGTERM container_name等同于stop<br>-s, --signal: 发送给容器的信号（默认为 SIGKILL）<br>SIGKILL: 强制终止进程（默认信号）<br>SIGTERM: 请求进程终止<br>SIGINT: 发送中断信号，通常表示用户请求终止<br>SIGHUP: 挂起信号，通常表示终端断开</td>
 </tr>
 <tr>
 <td align="center">docker rm container_name</td>
 <td align="center">删除一个或多个容器</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker rmi image-name:tag</td>
 <td align="center">删除一个或多个镜像</td>
-<td align="center">不加tag则会删除所有</td>
+<td align="left">不加tag则会删除所有</td>
 </tr>
 <tr>
 <td align="center">docker run image-name --name container_name -d</td>
 <td align="center">启动一个新的容器并运行命令</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker start container_name</td>
 <td align="center">启动已停止的容器</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker restart container_name</td>
 <td align="center">重启一个容器</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker version</td>
 <td align="center">显示 Docker 客户端和守护进程的版本信息</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker network ls</td>
 <td align="center">列出所有 Docker 网络</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker volume ls</td>
 <td align="center">列出所有 Docker 卷</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker images ls</td>
 <td align="center">列出本地存储的所有镜像</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker compose -f docker-compose.yml up -d</td>
 <td align="center">启动多容器应用（从 docker-compose.yml 文件）</td>
-<td align="center">-d：后台运行容器，例如 docker run -d ubuntu</td>
+<td align="left">-d：后台运行容器，例如 docker run -d ubuntu</td>
 </tr>
 <tr>
 <td align="center">docker compose -f docker-compose.yml down</td>
 <td align="center">停止并删除由 docker-compose 启动的容器、网络等</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker compose logs -f docker-compose.yml</td>
 <td align="center">查看指定compose的运行日志</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker info</td>
 <td align="center">显示 Docker 系统的详细信息</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker stats</td>
 <td align="center">显示容器的实时资源使用情况</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker builder prune</td>
 <td align="center">删除所有未被使用的构建缓存</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker builder prune --filter &#39;until&#x3D;240h&#39;</td>
 <td align="center">删除所有未被使用的构建缓存，并保留最近10天的缓存</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker system prune</td>
 <td align="center">清理磁盘，删除关闭的容器、无用的数据卷和网络，以及dangling镜像（即无tag的镜像）</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">docker system prune -a</td>
 <td align="center">比上面命令清理得更加彻底，没有容器使用Docker镜像都会被删掉</td>
-<td align="center"></td>
+<td align="left"></td>
 </tr>
 </tbody></table>
 <h1 id="使用apt仓库为Debian安装docker">2 &nbsp&nbsp<a href="#使用apt仓库为Debian安装docker" class="headerlink" title="使用apt仓库为Debian安装docker"></a>使用apt仓库为Debian安装docker</h1><h2 id="添加Docker的官方GPG密钥">2.1 &nbsp&nbsp<a href="#添加Docker的官方GPG密钥" class="headerlink" title="添加Docker的官方GPG密钥"></a>添加Docker的官方GPG密钥</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install ca-certificates -y</span><br><span class="line">install -m 0755 -d /etc/apt/keyrings</span><br><span class="line"><span class="comment"># 可能下载会出现ssl验证错误，多重复执行几次wget下载就能成功下载</span></span><br><span class="line">wget https://download.docker.com/linux/debian/gpg -O /etc/apt/keyrings/docker.asc</span><br><span class="line"><span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.asc</span><br></pre></td></tr></table></figure>
@@ -2777,17 +2783,42 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 
 <h2 id="重启相关服务">2.6 &nbsp&nbsp<a href="#重启相关服务" class="headerlink" title="重启相关服务"></a>重启相关服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
 
-<h1 id="Docker部署Dockge（docker-compose可视化管理）">3 &nbsp&nbsp<a href="#Docker部署Dockge（docker-compose可视化管理）" class="headerlink" title="Docker部署Dockge（docker compose可视化管理）"></a>Docker部署Dockge（docker compose可视化管理）</h1><div class="note danger no-icon"><ul>
+<h1 id="Docker部署code-server（VS-Code-in-The-Browser）">3 &nbsp&nbsp<a href="#Docker部署code-server（VS-Code-in-The-Browser）" class="headerlink" title="Docker部署code-server（VS Code in The Browser）"></a>Docker部署code-server（VS Code in The Browser）</h1><div class="note danger no-icon"><ul>
+<li>有帖子反馈打开较大的文件时，会比较卡顿。</li>
+<li>并且插件扩展的提供渠道，也是社区维护的。</li>
+</ul>
+</div>
+
+<ul>
+<li><a href="https://hub.docker.com/r/codercom/code-server">codercom&#x2F;code-server</a>：由Coder公司开发并维护的基于微软开源的Visual Studio Code (VS Code)构建的网页版开发环</li>
+<li><a href="https://hub.docker.com/r/linuxserver/code-server">linuxserver&#x2F;code-server</a>：基于codercom&#x2F;code-server的Docker容器化封装，支持多平台架构（x86-64&#x2F;arm64）<ul>
+<li>LinuxServer.io镜像依赖Coder的底层更新，因此功能迭代略滞后于官方。Coder镜像是LinuxServer.io镜像的上游版本。</li>
+</ul>
+</li>
+</ul>
+<div class="note "><p>关于哈希密码的生成：</p>
+<ol>
+<li>在其他有装npm的机器上安装<code>argon2-cli</code>包：<code>npm install argon2-cli</code></li>
+<li>生成哈希密码：echo -n &quot;your-password&quot; | npx argon2-cli -e</li>
+<li>程序输出哈希（<strong>这整串就是哈希，但是填入docker-compose.yml文件中时，需要用<code>$$</code>替换<code>$</code>符号</strong>）：<code>$argon2i$v=19$m=4096,t=3,p=1$52d7tDyHRAFyqt+1k4fJsA$NvGfhHZ084v4rwGYTspIxP0uFX4qfeFRCVhsvKqN52E</code></li>
+</ol>
+</div>
+
+<p>docker-compose.yml文件内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">code-server:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">codercom/code-server:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">code-server</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span> <span class="comment">#时区</span></span><br><span class="line">      <span class="comment">#- PASSWORD=password #可选，改成你自己的密码 PASSWORD/HASHED_PASSWORD 至少要配置一个</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">HASHED_PASSWORD=$$argon2i$$v=19$$m=4096,t=3,p=1$$52d7tDyHRAFyqt+1k4fJsA$$NvGfhHZ084v4rwGYTspIxP0uFX4qfeFRCVhsvKqN52E</span> <span class="comment">#可选，非明文保存的密码，因为上面 Password 的[&gt;      #- SUDO_PASSWORD=password #可选，如果用这里的密码会以 sudo 的方式登陆</span></span><br><span class="line">      <span class="comment">#- SUDO_PASSWORD_HASH= #可选，同上</span></span><br><span class="line">      <span class="comment">#- PROXY_DOMAIN=code-server.my.domain #可选，服务器绑定的域名</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">DEFAULT_WORKSPACE=/home/coder/project</span> <span class="comment">#可选，默认工作区</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/code-server-config:/config</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/code-server-workspace:/home/coder/project</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:8080</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
+
+<p>访问网页管理后台：<a href="http://10.10.10.9:8080/">http://10.10.10.9:8080</a></p>
+<h1 id="Docker部署Dockge（docker-compose可视化管理）">4 &nbsp&nbsp<a href="#Docker部署Dockge（docker-compose可视化管理）" class="headerlink" title="Docker部署Dockge（docker compose可视化管理）"></a>Docker部署Dockge（docker compose可视化管理）</h1><div class="note danger no-icon"><ul>
 <li>dockge容器运行是UTC世界时，指定环境变量或者同步宿主机的时区都是无法生效，容器日志纪录的时间戳就是UTC时间——Mr. Kin，2025-05-22</li>
 <li>docker实现的终端功能只有简单shell命令，因此终端更多是使用docker相关命令，其余复杂的操作，还是推荐ssh连接到服务器进行操作。</li>
 </ul>
 </div>
 <div class="note default no-icon"><p><code>/opt/stacks</code>路径下任意文件夹的名称都是作为堆栈stack名称，显示在dockge网页管理后台上。其中，在文件夹内，<code>docker-compose.yml</code>或者<code>compose.yml</code>文件名称是必需，其他自定义文件名称，dockge将无法识别。</p>
-<p>例如，<code>/opt/stacks/dockge</code>文件夹，在dockge网页管理后台上显示为<code>dockge</code>。</p>
+<p>例如，<code>/opt/stacks/dockge</code>文件夹，在dockge网页管理后台上显示为<code>dockge</code>。如果有多个服务器都需要安装dockge，文件夹名称可以加上<code>-server</code>后缀以方便标识，例如<code>dockge-server</code>。</p>
 </div>
 
 <ol>
-<li>创建stacks文件夹：</li>
+<li>创建stacks文件夹（建议加上<code>-xxx</code>后缀以方便标识）：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /opt/stacks/dockge</span><br></pre></td></tr></table></figure>
 <ol start="2">
@@ -2796,16 +2827,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">dockge:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">louislam/dockge:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">dockge</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5001</span><span class="string">:5001</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/dockge_data:/app/data</span></span><br><span class="line">      <span class="comment"># Stacks Directory</span></span><br><span class="line">      <span class="comment"># ⚠️ READ IT CAREFULLY. If you did it wrong, your data could end up writing into a WRONG PATH.</span></span><br><span class="line">      <span class="comment"># ⚠️ 1. FULL path only. No relative path (MUST)</span></span><br><span class="line">      <span class="comment"># ⚠️ 2. Left Stacks Path === Right Stacks Path (MUST)</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/opt/stacks:/opt/stacks</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># Tell Dockge where to find the stacks</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">DOCKGE_STACKS_DIR=/opt/stacks</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">DOCKGE_ENABLE_CONSOLE=true</span></span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li>访问dockge网页管理后台：<code>http://10.10.10.10:5001</code>。初次访问会提示创建用户和密码。</li>
+<li>进入到对应<code>dockge-[xxx]</code>路径，运行dockge服务：<code>docker compose -f docker-compose.yml up -d</code>。</li>
 </ol>
-<h1 id="Docker搭建Gitea">4 &nbsp&nbsp<a href="#Docker搭建Gitea" class="headerlink" title="Docker搭建Gitea"></a>Docker搭建Gitea</h1><h2 id="创建Gitea的mysql数据库数据文件夹">4.1 &nbsp&nbsp<a href="#创建Gitea的mysql数据库数据文件夹" class="headerlink" title="创建Gitea的mysql数据库数据文件夹"></a>创建Gitea的mysql数据库数据文件夹</h2><p>在<code>root</code>账户路径下，创建<code>mysql</code>文件夹和子目录：<code>mkdir -p /root/mysql/conf.d</code></p>
+<h1 id="Docker搭建Gitea">5 &nbsp&nbsp<a href="#Docker搭建Gitea" class="headerlink" title="Docker搭建Gitea"></a>Docker搭建Gitea</h1><h2 id="创建Gitea的mysql数据库数据文件夹">5.1 &nbsp&nbsp<a href="#创建Gitea的mysql数据库数据文件夹" class="headerlink" title="创建Gitea的mysql数据库数据文件夹"></a>创建Gitea的mysql数据库数据文件夹</h2><p>在<code>root</code>账户路径下，创建<code>mysql</code>文件夹和子目录：<code>mkdir -p /root/mysql/conf.d</code></p>
 <p>创建<code>my.ini</code>：<code>nano /root/mysql/conf.d/my.ini</code></p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="comment">###### [client]配置模块 ######</span></span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="attr">socket</span>=/var/lib/mysql/mysql.sock</span><br><span class="line"></span><br><span class="line"><span class="comment">###### [mysql]配置模块 ######</span></span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置MySQL客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8mb4</span><br><span class="line"><span class="attr">socket</span>=/var/lib/mysql/mysql.sock</span><br><span class="line"></span><br><span class="line"><span class="comment">###### [mysqld]配置模块 ######</span></span><br><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">user</span>=mysql</span><br><span class="line"><span class="comment"># 设置sql模式 sql_mode模式引起的分组查询出现*this is incompatible with sql_mode=only_full_group_by，这里最好剔除ONLY_FULL_GROUP_BY</span></span><br><span class="line"><span class="attr">sql_mode</span>=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION</span><br><span class="line"><span class="attr">datadir</span>=/var/lib/mysql</span><br><span class="line"><span class="attr">socket</span>=/var/lib/mysql/mysql.sock</span><br><span class="line"><span class="attr">server-id</span>= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># MySQL8 的密码认证插件 如果不设置低版本navicat无法连接</span></span><br><span class="line"><span class="comment">#default_authentication_plugin=mysql_native_password</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁用符号链接以防止各种安全风险</span></span><br><span class="line"><span class="attr">symbolic-links</span>=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为8比特编码的latin1字符集</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8mb4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库字符集对应一些排序等规则，注意要和 character-set-server 对应</span></span><br><span class="line"><span class="attr">collation-server</span> = utf8mb4_unicode_ci</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0: 表名将按指定方式存储，并且比较区分大小写;</span></span><br><span class="line"><span class="comment"># 1: 表名以小写形式存储在磁盘上，比较不区分大小写；</span></span><br><span class="line"><span class="attr">lower_case_table_names</span>=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">max_allowed_packet</span>=<span class="number">16</span>M</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置时区</span></span><br><span class="line"><span class="attr">default-time_zone</span>=<span class="string">&#x27;+8:00&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="创建Gitea数据文件夹和配置文件">4.2 &nbsp&nbsp<a href="#创建Gitea数据文件夹和配置文件" class="headerlink" title="创建Gitea数据文件夹和配置文件"></a>创建Gitea数据文件夹和配置文件</h2><p>在<code>root</code>账户路径下，创建<code>gitea</code>文件夹和子目录：<code>mkdir -p /root/gitea/gitea/conf</code></p>
+<h2 id="创建Gitea数据文件夹和配置文件">5.2 &nbsp&nbsp<a href="#创建Gitea数据文件夹和配置文件" class="headerlink" title="创建Gitea数据文件夹和配置文件"></a>创建Gitea数据文件夹和配置文件</h2><p>在<code>root</code>账户路径下，创建<code>gitea</code>文件夹和子目录：<code>mkdir -p /root/gitea/gitea/conf</code></p>
 <p>创建<code>app.ini</code>文件：<code>nano /root/gitea/gitea/conf/app.ini</code></p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">APP_NAME</span> = Gitea: Git with a cup of tea</span><br><span class="line"><span class="attr">RUN_MODE</span> = prod</span><br><span class="line"><span class="attr">WORK_PATH</span> = /data/gitea</span><br><span class="line"></span><br><span class="line"><span class="section">[repository]</span></span><br><span class="line"><span class="attr">ROOT</span> = /data/git/repositories</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.local]</span></span><br><span class="line"><span class="attr">LOCAL_COPY_PATH</span> = /data/gitea/tmp/local-repo</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.upload]</span></span><br><span class="line"><span class="attr">TEMP_PATH</span> = /data/gitea/uploads</span><br><span class="line"></span><br><span class="line"><span class="section">[server]</span></span><br><span class="line"><span class="attr">APP_DATA_PATH</span> = /data/gitea</span><br><span class="line"><span class="attr">DOMAIN</span> = localhost</span><br><span class="line"><span class="attr">SSH_DOMAIN</span> = localhost</span><br><span class="line"><span class="attr">HTTP_PORT</span> = <span class="number">3000</span></span><br><span class="line"><span class="attr">ROOT_URL</span> = http://<span class="number">192.168</span>.<span class="number">1.10</span>:<span class="number">3000</span>/</span><br><span class="line"><span class="attr">DISABLE_SSH</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">SSH_PORT</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">SSH_LISTEN_PORT</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">LFS_START_SERVER</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">LFS_JWT_SECRET</span> =</span><br><span class="line"><span class="attr">OFFLINE_MODE</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[database]</span></span><br><span class="line"><span class="attr">PATH</span> = /data/gitea/gitea.db</span><br><span class="line"><span class="attr">DB_TYPE</span> = mysql</span><br><span class="line"><span class="attr">HOST</span> = database:<span class="number">3306</span></span><br><span class="line"><span class="attr">NAME</span> = gitea</span><br><span class="line"><span class="attr">USER</span> = gitea</span><br><span class="line"><span class="attr">PASSWD</span> = normalpdxxx</span><br><span class="line"><span class="attr">LOG_SQL</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">SSL_MODE</span> = disable</span><br><span class="line"></span><br><span class="line"><span class="section">[mailer]</span></span><br><span class="line"><span class="attr">ENABLED</span> = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="section">[openid]</span></span><br><span class="line"><span class="attr">ENABLE_OPENID_SIGNIN</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">ENABLE_OPENID_SIGNUP</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[cron.update_checker]</span></span><br><span class="line"><span class="attr">ENABLED</span> = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="section">[indexer]</span></span><br><span class="line"><span class="attr">ISSUE_INDEXER_PATH</span> = /data/gitea/indexers/issues.bleve</span><br><span class="line"></span><br><span class="line"><span class="section">[session]</span></span><br><span class="line"><span class="attr">PROVIDER_CONFIG</span> = /data/gitea/sessions</span><br><span class="line"></span><br><span class="line"><span class="section">[picture]</span></span><br><span class="line"><span class="attr">AVATAR_UPLOAD_PATH</span> = /data/gitea/avatars</span><br><span class="line"><span class="attr">REPOSITORY_AVATAR_UPLOAD_PATH</span> = /data/gitea/repo-avatars</span><br><span class="line"></span><br><span class="line"><span class="section">[attachment]</span></span><br><span class="line"><span class="attr">PATH</span> = /data/gitea/attachments</span><br><span class="line"></span><br><span class="line"><span class="section">[log]</span></span><br><span class="line"><span class="attr">MODE</span> = console</span><br><span class="line"><span class="attr">LEVEL</span> = info</span><br><span class="line"><span class="attr">ROOT_PATH</span> = /data/gitea/log</span><br><span class="line"></span><br><span class="line"><span class="section">[security]</span></span><br><span class="line"><span class="attr">INSTALL_LOCK</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">INTERNAL_TOKEN</span> =</span><br><span class="line"><span class="attr">PASSWORD_HASH_ALGO</span> = pbkdf2</span><br><span class="line"><span class="attr">SECRET_KEY</span> =</span><br><span class="line"><span class="attr">REVERSE_PROXY_LIMIT</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">REVERSE_PROXY_TRUSTED_PROXIES</span> = *</span><br><span class="line"></span><br><span class="line"><span class="section">[service]</span></span><br><span class="line"><span class="attr">REGISTER_EMAIL_CONFIRM</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">ENABLE_NOTIFY_MAIL</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">DISABLE_REGISTRATION</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">ALLOW_ONLY_EXTERNAL_REGISTRATION</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">ENABLE_CAPTCHA</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">REQUIRE_SIGNIN_VIEW</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">DEFAULT_KEEP_EMAIL_PRIVATE</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">DEFAULT_ALLOW_CREATE_ORGANIZATION</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">DEFAULT_ENABLE_TIMETRACKING</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">NO_REPLY_ADDRESS</span> = noreply.localhost</span><br><span class="line"></span><br><span class="line"><span class="section">[lfs]</span></span><br><span class="line"><span class="attr">PATH</span> = /data/git/lfs</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.pull-request]</span></span><br><span class="line"><span class="attr">DEFAULT_MERGE_STYLE</span> = merge</span><br><span class="line"></span><br><span class="line"><span class="section">[repository.signing]</span></span><br><span class="line"><span class="attr">DEFAULT_TRUST_MODEL</span> = committer</span><br><span class="line"></span><br><span class="line"><span class="section">[oauth2]</span></span><br><span class="line">JWT_SECRET =</span><br></pre></td></tr></table></figure>
 
-<h2 id="创建actions-runner配置文件">4.3 &nbsp&nbsp<a href="#创建actions-runner配置文件" class="headerlink" title="创建actions_runner配置文件"></a>创建actions_runner配置文件</h2><div class="note danger no-icon"><p>如果是本地搭建并只在本地使用，配件文件的<code>host</code>设置为<code>127.0.0.1</code>就能访问到gitea实例了。</p>
+<h2 id="创建actions-runner配置文件">5.3 &nbsp&nbsp<a href="#创建actions-runner配置文件" class="headerlink" title="创建actions_runner配置文件"></a>创建actions_runner配置文件</h2><div class="note danger no-icon"><p>如果是本地搭建并只在本地使用，配件文件的<code>host</code>设置为<code>127.0.0.1</code>就能访问到gitea实例了。</p>
 </div>
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /root/actions_runner_config.yaml</span><br></pre></td></tr></table></figure>
@@ -2813,7 +2845,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p><code>actions_runner_config.yaml</code>内容：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Example configuration file, it&#x27;s safe to copy this as the default config file without any modification.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You don&#x27;t have to copy this file to your instance,</span></span><br><span class="line"><span class="comment"># just run `./act_runner generate-config &gt; config.yaml` to generate a config file.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">log:</span></span><br><span class="line">  <span class="comment"># The level of logging, can be trace, debug, info, warn, error, fatal</span></span><br><span class="line">  <span class="attr">level:</span> <span class="string">info</span></span><br><span class="line"></span><br><span class="line"><span class="attr">runner:</span></span><br><span class="line">  <span class="comment"># Where to store the registration result.</span></span><br><span class="line">  <span class="attr">file:</span> <span class="string">.runner</span></span><br><span class="line">  <span class="comment"># Execute how many tasks concurrently at the same time.</span></span><br><span class="line">  <span class="attr">capacity:</span> <span class="number">2</span></span><br><span class="line">  <span class="comment"># Extra environment variables to run jobs.</span></span><br><span class="line">  <span class="attr">envs:</span></span><br><span class="line">    <span class="attr">A_TEST_ENV_NAME_1:</span> <span class="string">a_test_env_value_1</span></span><br><span class="line">    <span class="attr">A_TEST_ENV_NAME_2:</span> <span class="string">a_test_env_value_2</span></span><br><span class="line">  <span class="comment"># Extra environment variables to run jobs from a file.</span></span><br><span class="line">  <span class="comment"># It will be ignored if it&#x27;s empty or the file doesn&#x27;t exist.</span></span><br><span class="line">  <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">  <span class="comment"># The timeout for a job to be finished.</span></span><br><span class="line">  <span class="comment"># Please note that the Gitea instance also has a timeout (3h by default) for the job.</span></span><br><span class="line">  <span class="comment"># So the job could be stopped by the Gitea instance if it&#x27;s timeout is shorter than this.</span></span><br><span class="line">  <span class="attr">timeout:</span> <span class="string">3h</span></span><br><span class="line">  <span class="comment"># Whether skip verifying the TLS certificate of the Gitea instance.</span></span><br><span class="line">  <span class="attr">insecure:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># The timeout for fetching the job from the Gitea instance.</span></span><br><span class="line">  <span class="attr">fetch_timeout:</span> <span class="string">5s</span></span><br><span class="line">  <span class="comment"># The interval for fetching the job from the Gitea instance.</span></span><br><span class="line">  <span class="attr">fetch_interval:</span> <span class="string">2s</span></span><br><span class="line">  <span class="comment"># The labels of a runner are used to determine which jobs the runner can run, and how to run them.</span></span><br><span class="line">  <span class="comment"># Like: &quot;macos-arm64:host&quot; or &quot;ubuntu-latest:docker://gitea/runner-images:ubuntu-latest&quot;</span></span><br><span class="line">  <span class="comment"># Find more images provided by Gitea at https://gitea.com/gitea/runner-images .</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty when registering, it will ask for inputting labels.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty when execute `daemon`, will use labels in `.runner` file.</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;ubuntu-latest:docker://gitea/runner-images:ubuntu-latest&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;ubuntu-22.04:docker://gitea/runner-images:ubuntu-22.04&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;ubuntu-20.04:docker://gitea/runner-images:ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">  <span class="comment"># Enable cache server to use actions/cache.</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># The directory to store the cache data.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, the cache data will be stored in $HOME/.cache/actcache.</span></span><br><span class="line">  <span class="attr">dir:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="comment"># The host of the cache server.</span></span><br><span class="line">  <span class="comment"># It&#x27;s not for the address to listen, but the address to connect from job containers.</span></span><br><span class="line">  <span class="comment"># So 0.0.0.0 is a bad choice, leave it empty to detect automatically.</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&quot;10.10.10.10&quot;</span></span><br><span class="line">  <span class="comment"># The port of the cache server.</span></span><br><span class="line">  <span class="comment"># 0 means to use a random available port.</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">18088</span></span><br><span class="line">  <span class="comment"># The external cache server URL. Valid only when enable is true.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s specified, act_runner will use this URL as the ACTIONS_CACHE_URL rather than start a server by itself.</span></span><br><span class="line">  <span class="comment"># The URL should generally end with &quot;/&quot;.</span></span><br><span class="line">  <span class="attr">external_server:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">container:</span></span><br><span class="line">  <span class="comment"># Specifies the network to which the container will connect.</span></span><br><span class="line">  <span class="comment"># Could be host, bridge or the name of a custom network.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, act_runner will create a network automatically.</span></span><br><span class="line">  <span class="attr">network:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="comment"># Whether to use privileged mode or not when launching task containers (privileged mode is required for Docker-in-Docker).</span></span><br><span class="line">  <span class="attr">privileged:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># And other options to be used when the container is started (eg, --add-host=my.gitea.url:host-gateway).</span></span><br><span class="line">  <span class="attr">options:</span></span><br><span class="line">  <span class="comment"># The parent directory of a job&#x27;s working directory.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> There is no need to add the first &#x27;/&#x27; of the path as act_runner will add it automatically.</span></span><br><span class="line">  <span class="comment"># If the path starts with &#x27;/&#x27;, the &#x27;/&#x27; will be trimmed.</span></span><br><span class="line">  <span class="comment"># For example, if the parent directory is /path/to/my/dir, workdir_parent should be path/to/my/dir</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, /workspace will be used.</span></span><br><span class="line">  <span class="attr">workdir_parent:</span></span><br><span class="line">  <span class="comment"># Volumes (including bind mounts) can be mounted to containers. Glob syntax is supported, see https://github.com/gobwas/glob</span></span><br><span class="line">  <span class="comment"># You can specify multiple volumes. If the sequence is empty, no volumes can be mounted.</span></span><br><span class="line">  <span class="comment"># For example, if you only allow containers to mount the `data` volume and all the json files in `/src`, you should change the config to:</span></span><br><span class="line">  <span class="comment"># valid_volumes:</span></span><br><span class="line">  <span class="comment">#   - data</span></span><br><span class="line">  <span class="comment">#   - /src/*.json</span></span><br><span class="line">  <span class="comment"># If you want to allow any volume, please use the following configuration:</span></span><br><span class="line">  <span class="comment"># valid_volumes:</span></span><br><span class="line">  <span class="comment">#   - &#x27;**&#x27;</span></span><br><span class="line">  <span class="attr">valid_volumes:</span> []</span><br><span class="line">  <span class="comment"># overrides the docker client host with the specified one.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, act_runner will find an available docker host automatically.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s &quot;-&quot;, act_runner will find an available docker host automatically, but the docker host won&#x27;t be mounted to the job containers and service containers.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s not empty or &quot;-&quot;, the specified docker host will be used. An error will be returned if it doesn&#x27;t work.</span></span><br><span class="line">  <span class="attr">docker_host:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="comment"># Pull docker image(s) even if already present</span></span><br><span class="line">  <span class="attr">force_pull:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Rebuild docker image(s) even if already present</span></span><br><span class="line">  <span class="attr">force_rebuild:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">host:</span></span><br><span class="line">  <span class="comment"># The parent directory of a job&#x27;s working directory.</span></span><br><span class="line">  <span class="comment"># If it&#x27;s empty, $HOME/.cache/act/ will be used.</span></span><br><span class="line">  <span class="attr">workdir_parent:</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="启动Docker-Compose">4.4 &nbsp&nbsp<a href="#启动Docker-Compose" class="headerlink" title="启动Docker-Compose"></a>启动Docker-Compose</h2><div class="note danger no-icon"><p><code>runner</code>容器的环境变量<code>environment</code>的Gitea实例地址<code>GITEA_INSTANCE_URL</code>参数这里，不能用<code>http://server</code>直接作为参数。虽然docker compose容器之间可以识别这个写法，但<code>action runner</code>运行时无法识别该参数，使用<code>checkout</code>脚本甚至都拉取不了源码到<code>runner</code>容器内。</p>
+<h2 id="启动Docker-Compose">5.4 &nbsp&nbsp<a href="#启动Docker-Compose" class="headerlink" title="启动Docker-Compose"></a>启动Docker-Compose</h2><div class="note danger no-icon"><p><code>runner</code>容器的环境变量<code>environment</code>的Gitea实例地址<code>GITEA_INSTANCE_URL</code>参数这里，不能用<code>http://server</code>直接作为参数。虽然docker compose容器之间可以识别这个写法，但<code>action runner</code>运行时无法识别该参数，使用<code>checkout</code>脚本甚至都拉取不了源码到<code>runner</code>容器内。</p>
 <p>但参数设置错误也会导致如下错误：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">level=error msg=<span class="string">&quot;Cannot ping the Gitea instance server&quot;</span> error=<span class="string">&quot;unknown: 500 Internal Server Error&quot;</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">level=error msg=<span class="string">&quot;Cannot ping the Gitea instance server&quot;</span> error=<span class="string">&quot;unavailable: dial tcp: lookup server on 127.0.0.11:53: server misbehaving&quot;</span></span><br></pre></td></tr></table></figure></div>
 <div class="note danger no-icon"><p><code>runner</code>容器的环境变量<code>environment</code>的runner注册令牌<code>GITEA_RUNNER_REGISTRATION_TOKEN</code>参数步骤：在Gitea管理后台-&gt;Actions-&gt;Runners-&gt;创建Runner-&gt;创建新的令牌或者查看已有的令牌。</p>
@@ -2824,7 +2856,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p><code>docker-compose.yml</code>内容：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">gitea:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">server:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.gitea.com/gitea:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_UID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_GID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__DB_TYPE=mysql</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__HOST=database:3306</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__NAME=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__PASSWD=normalpdxxx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/gitea:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3000:3000&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;222:22&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">database</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">database:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.io/library/mysql:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3306:3306&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_ROOT_PASSWORD=rootpdxxx</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_DATABASE=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_PASSWORD=normalpdxxx</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 映射数据目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/data:/var/lib/mysql</span></span><br><span class="line">      <span class="comment"># 映射配置目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/conf.d:/etc/mysql/conf.d</span></span><br><span class="line">      <span class="comment"># 映射日志目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/log:/var/log/mysql</span></span><br><span class="line">      <span class="comment"># 让容器的时钟与宿主机时钟同步，避免时间的问题，ro是read only的意思，就是只读。</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">runner:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitea/act_runner:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">runner</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18088:18088&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">CONFIG_FILE=/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_INSTANCE_URL=http://10.10.10.10:3000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_REGISTRATION_TOKEN=xxx_token</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_NAME=$&#123;RUNNER_NAME&#125;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_LABELS=$&#123;RUNNER_LABELS&#125;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner_config.yaml:/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner_cache:/root/.cache</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">server</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="迁移Gitea的mysql数据库和git仓库数据">4.5 &nbsp&nbsp<a href="#迁移Gitea的mysql数据库和git仓库数据" class="headerlink" title="迁移Gitea的mysql数据库和git仓库数据"></a>迁移Gitea的mysql数据库和git仓库数据</h2><ol>
+<h2 id="迁移Gitea的mysql数据库和git仓库数据">5.5 &nbsp&nbsp<a href="#迁移Gitea的mysql数据库和git仓库数据" class="headerlink" title="迁移Gitea的mysql数据库和git仓库数据"></a>迁移Gitea的mysql数据库和git仓库数据</h2><ol>
 <li>备份其他服务器上的Gitea的mysql数据库、git仓库数据和gitea其他资产数据。</li>
 <li>进入mysql容器，并使用备份sql文件恢复mysql数据库。</li>
 <li>停止docker-compose</li>
@@ -2852,7 +2884,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>重新运行docker-compose</li>
 </ol>
-<h2 id="Gitea搭建和使用的踩坑">4.6 &nbsp&nbsp<a href="#Gitea搭建和使用的踩坑" class="headerlink" title="Gitea搭建和使用的踩坑"></a>Gitea搭建和使用的踩坑</h2><h3 id="actions-runner容器无法正常启动，日志提示未注册runner">4.6.1 &nbsp&nbsp<a href="#actions-runner容器无法正常启动，日志提示未注册runner" class="headerlink" title="actions_runner容器无法正常启动，日志提示未注册runner"></a>actions_runner容器无法正常启动，日志提示未注册runner</h3><p>问题现象：<code>docker logs runner</code>查看日志提示如下，同时，gitea管理后台查看runner也无法看到有正常在线的runner。</p>
+<h2 id="Gitea搭建和使用的踩坑">5.6 &nbsp&nbsp<a href="#Gitea搭建和使用的踩坑" class="headerlink" title="Gitea搭建和使用的踩坑"></a>Gitea搭建和使用的踩坑</h2><h3 id="actions-runner容器无法正常启动，日志提示未注册runner">5.6.1 &nbsp&nbsp<a href="#actions-runner容器无法正常启动，日志提示未注册runner" class="headerlink" title="actions_runner容器无法正常启动，日志提示未注册runner"></a>actions_runner容器无法正常启动，日志提示未注册runner</h3><p>问题现象：<code>docker logs runner</code>查看日志提示如下，同时，gitea管理后台查看runner也无法看到有正常在线的runner。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">level=error msg=<span class="string">&quot;fail to invoke Declare&quot;</span> error=<span class="string">&quot;unknown: rpc error: code = Unauthenticated desc = unregistered runner&quot;</span></span><br><span class="line">Error: Unknown: rpc error: code = Unauthenticated desc = unregistered runner</span><br></pre></td></tr></table></figure>
 
 <p>问题原因：<code>/root/actions_runner</code>路径下有一个隐藏文件夹<code>.runner</code>，该文件夹存储runner配置数据，但该数据是旧的，gitea实例无法识别，因此runner容器无法成功注册。</p>
@@ -2863,25 +2895,25 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>重新运行docker-compose</li>
 <li>之后在gitea管理后台就能看到正常在线的新runner了</li>
 </ol>
-<h3 id="“版本发布”下，自己上传的文件url错误">4.6.2 &nbsp&nbsp<a href="#“版本发布”下，自己上传的文件url错误" class="headerlink" title="“版本发布”下，自己上传的文件url错误"></a>“版本发布”下，自己上传的文件url错误</h3><blockquote>
+<h3 id="“版本发布”下，自己上传的文件url错误">5.6.2 &nbsp&nbsp<a href="#“版本发布”下，自己上传的文件url错误" class="headerlink" title="“版本发布”下，自己上传的文件url错误"></a>“版本发布”下，自己上传的文件url错误</h3><blockquote>
 <p>背景说明：Gitea构建在子局域网IP<code>10.10.10.10</code>，然后外部网络访问该Gitea服务是通过IP<code>192.168.1.10</code>（宿主机IP<code>192.168.1.10</code>已设置路由表转发<code>3000</code>端口到IP<code>10.10.10.10</code>，即<code>192.168.1.10:3000</code>-&gt;<code>10.10.10.10:3000</code>）</p>
 </blockquote>
 <p>问题现象：在版本发布内容中，上传的资产文件<code>assets</code>下载路径链接指向<code>http://10.10.10.10:3000/xxx.zip</code>。</p>
 <p>问题原因：Gitea的配置文件<code>app.ini</code>中的<code>ROOT_URL</code>未设置参数，导致下载路径链接自动指向<code>http://10.10.10.10:3000/xxx</code>。</p>
 <p>解决方法：编辑<code>app.ini</code>文件，将<code>[server]</code>小节中的<code>ROOT_URL</code>参数设置为<code>http://192.168.1.10:3000</code>即可。</p>
-<h3 id="Gitea管理后台提示当前访问的url和app-ini配置url不同">4.6.3 &nbsp&nbsp<a href="#Gitea管理后台提示当前访问的url和app-ini配置url不同" class="headerlink" title="Gitea管理后台提示当前访问的url和app.ini配置url不同"></a>Gitea管理后台提示当前访问的url和app.ini配置url不同</h3><p>问题现象：Gitea管理后台提示警告，你的<code>app.ini</code>的<code>ROOT_URL</code>是<code>http://10.10.10.10:3000</code>，但当前访问的url是<code>http://192.168.1.10:3000</code>。你应该正确设置<code>ROOT_URL</code>，否则网络服务可能无法正常运行。</p>
+<h3 id="Gitea管理后台提示当前访问的url和app-ini配置url不同">5.6.3 &nbsp&nbsp<a href="#Gitea管理后台提示当前访问的url和app-ini配置url不同" class="headerlink" title="Gitea管理后台提示当前访问的url和app.ini配置url不同"></a>Gitea管理后台提示当前访问的url和app.ini配置url不同</h3><p>问题现象：Gitea管理后台提示警告，你的<code>app.ini</code>的<code>ROOT_URL</code>是<code>http://10.10.10.10:3000</code>，但当前访问的url是<code>http://192.168.1.10:3000</code>。你应该正确设置<code>ROOT_URL</code>，否则网络服务可能无法正常运行。</p>
 <p>问题原因：Gitea的配置文件<code>app.ini</code>中的<code>ROOT_URL</code>未设置参数或者设置错误的url，导致下载路径链接自动指向<code>http://10.10.10.10:3000/xxx</code>。</p>
 <p>解决方法：编辑<code>app.ini</code>文件，将<code>[server]</code>小节中的<code>ROOT_URL</code>参数设置为当前访问URL即可，例如<code>http://192.168.1.10:3000</code>。</p>
-<h1 id="Docker搭建Redis">5 &nbsp&nbsp<a href="#Docker搭建Redis" class="headerlink" title="Docker搭建Redis"></a>Docker搭建Redis</h1><h2 id="Redis容器清理缓存">5.1 &nbsp&nbsp<a href="#Redis容器清理缓存" class="headerlink" title="Redis容器清理缓存"></a>Redis容器清理缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过可交互终端进入redis容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it redis /bin/bash</span><br><span class="line"><span class="comment"># 登录容器的redis服务</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br><span class="line"><span class="comment"># 若Redis设置有密码使用该命令，否则执行 keys *会报错：(error) NOAUTH Authentication required。</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379 -a redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有key值</span></span><br><span class="line">keys *</span><br><span class="line"><span class="comment"># 删除指定索引的值</span></span><br><span class="line">del key</span><br><span class="line"><span class="comment"># 清除当前数据库缓存</span></span><br><span class="line">flushdb</span><br><span class="line"><span class="comment"># 清除整个redis所有缓存</span></span><br><span class="line">flushall</span><br></pre></td></tr></table></figure>
+<h1 id="Docker搭建Redis">6 &nbsp&nbsp<a href="#Docker搭建Redis" class="headerlink" title="Docker搭建Redis"></a>Docker搭建Redis</h1><h2 id="Redis容器清理缓存">6.1 &nbsp&nbsp<a href="#Redis容器清理缓存" class="headerlink" title="Redis容器清理缓存"></a>Redis容器清理缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过可交互终端进入redis容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it redis /bin/bash</span><br><span class="line"><span class="comment"># 登录容器的redis服务</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br><span class="line"><span class="comment"># 若Redis设置有密码使用该命令，否则执行 keys *会报错：(error) NOAUTH Authentication required。</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379 -a redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有key值</span></span><br><span class="line">keys *</span><br><span class="line"><span class="comment"># 删除指定索引的值</span></span><br><span class="line">del key</span><br><span class="line"><span class="comment"># 清除当前数据库缓存</span></span><br><span class="line">flushdb</span><br><span class="line"><span class="comment"># 清除整个redis所有缓存</span></span><br><span class="line">flushall</span><br></pre></td></tr></table></figure>
 
-<h1 id="Docker搭建DataEase">6 &nbsp&nbsp<a href="#Docker搭建DataEase" class="headerlink" title="Docker搭建DataEase"></a>Docker搭建DataEase</h1><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
-<h2 id="下载DataEase部署脚本。">6.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h2><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1.x</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
+<h1 id="Docker搭建DataEase">7 &nbsp&nbsp<a href="#Docker搭建DataEase" class="headerlink" title="Docker搭建DataEase"></a>Docker搭建DataEase</h1><p>请提前为宿主机安装好Docker以及配置好镜像源，这里不作介绍。</p>
+<h2 id="下载DataEase部署脚本。">7.1 &nbsp&nbsp<a href="#下载DataEase部署脚本。" class="headerlink" title="下载DataEase部署脚本。"></a>下载DataEase部署脚本。</h2><p>最新的<a href="https://github.com/dataease/dataease/releases/tag/v1.18.27">DataEase V1.x</a>部署脚本并解压（本文示例为v1.18.27版本）。</p>
 <p><code>dataease-release-v1.18.27.tar.gz</code>和<code>dataease-v1.18.27-online.tar.gz</code>这两个文件数据完全一致，随意下载，本人解压并比对过文件哈希值。</p>
 <p>v2.x开源社区版不支持创建用户，代码层面写死只有一个admin账户，若有用户管理的需求，可以不用考虑v2.x版本或者考虑商业版的v2.x。</p>
-<h2 id="修改配置文件install-conf">6.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h2><p>安装模式模式修改为<code>local</code>，端口这些自行根据需求改，如下配置文件是修改为8100。</p>
+<h2 id="修改配置文件install-conf">7.2 &nbsp&nbsp<a href="#修改配置文件install-conf" class="headerlink" title="修改配置文件install.conf"></a>修改配置文件<code>install.conf</code></h2><p>安装模式模式修改为<code>local</code>，端口这些自行根据需求改，如下配置文件是修改为8100。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础配置</span></span><br><span class="line"><span class="comment">## 安装目录</span></span><br><span class="line">DE_BASE=/opt</span><br><span class="line"><span class="comment">## Service 端口</span></span><br><span class="line">DE_PORT=8100</span><br><span class="line"><span class="comment">## 部署及运行模式，可选值有 local、simple、cluster，分别对应 本地模式、精简模式、集群模式</span></span><br><span class="line">DE_ENGINE_MODE=<span class="built_in">local</span></span><br><span class="line"><span class="comment">## docker 网段设置</span></span><br><span class="line">DE_DOCKER_SUBNET=172.19.0.0/16</span><br><span class="line"><span class="comment">## docker 网关 IP</span></span><br><span class="line">DE_DOCKER_GATEWAY=172.19.0.1</span><br><span class="line"><span class="comment">## Apache Doris FE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_FE_IP=172.19.0.198</span><br><span class="line"><span class="comment">## Apache Doris BE IP (外部 Doris 此参数无效)</span></span><br><span class="line">DE_DORIS_BE_IP=172.19.0.199</span><br><span class="line"><span class="comment">## 登录超时时间，单位min。如果不设置则默认8小时，也就是480</span></span><br><span class="line">DE_LOGIN_TIMEOUT=480</span><br><span class="line"><span class="comment">## 新建用户初始密码</span></span><br><span class="line">DE_INIT_PASSWORD=DataEase123456</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据库配置</span></span><br><span class="line"><span class="comment">## 是否使用外部数据库</span></span><br><span class="line">DE_EXTERNAL_MYSQL=<span class="literal">false</span></span><br><span class="line"><span class="comment">## 数据库地址</span></span><br><span class="line">DE_MYSQL_HOST=mysql</span><br><span class="line"><span class="comment">## 数据库端口</span></span><br><span class="line">DE_MYSQL_PORT=3306</span><br><span class="line"><span class="comment">## DataEase 数据库库名</span></span><br><span class="line">DE_MYSQL_DB=dataease</span><br><span class="line"><span class="comment">## 数据库用户名</span></span><br><span class="line">DE_MYSQL_USER=root</span><br><span class="line"><span class="comment">## 数据库密码</span></span><br><span class="line">DE_MYSQL_PASSWORD=Password123@mysql</span><br><span class="line"><span class="comment">## 数据库参数</span></span><br><span class="line">DE_MYSQL_PARAMS=<span class="string">&quot;autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Apache Doris 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Apache Doris</span></span><br><span class="line">DE_EXTERNAL_DORIS=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Doris 地址</span></span><br><span class="line">DE_DORIS_HOST=doris-fe</span><br><span class="line"><span class="comment">## Doris 查询连接端口</span></span><br><span class="line">DE_DORIS_PORT=9030</span><br><span class="line"><span class="comment">## Doris http端口</span></span><br><span class="line">DE_DORIS_HTTPPORT=8030</span><br><span class="line"><span class="comment">## Doris 数据库名称</span></span><br><span class="line">DE_DORIS_DB=dataease</span><br><span class="line"><span class="comment">## Doris 用户名</span></span><br><span class="line">DE_DORIS_USER=root</span><br><span class="line"><span class="comment">## Doris 密码</span></span><br><span class="line">DE_DORIS_PASSWORD=Password123@doris</span><br><span class="line"></span><br><span class="line"><span class="comment"># Kettle 配置</span></span><br><span class="line"><span class="comment">## 是否使用外部 Kettle - (目前还不支持外部Kettle，除非不需运行Kettle，否则请不要修改此参数)</span></span><br><span class="line">DE_EXTERNAL_KETTLE=<span class="literal">false</span></span><br><span class="line"><span class="comment">## Kettle 服务器地址</span></span><br><span class="line">DE_CARTE_HOST=kettle</span><br><span class="line"><span class="comment">## Kettle 访问端口</span></span><br><span class="line">DE_CARTE_PORT=18080</span><br><span class="line"><span class="comment">## Kettle 用户名</span></span><br><span class="line">DE_CARTE_USER=cluster</span><br><span class="line"><span class="comment">## Kettle 密码</span></span><br><span class="line">DE_CARTE_PASSWORD=cluster</span><br></pre></td></tr></table></figure>
 
-<h3 id="不同安装模式的区别">6.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h3><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
+<h3 id="不同安装模式的区别">7.2.1 &nbsp&nbsp<a href="#不同安装模式的区别" class="headerlink" title="不同安装模式的区别"></a>不同安装模式的区别</h3><div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;local<br>使用本地模式安装，DataEase 会自带 Doris 与 Kettle 组件，无需再做额外配置，但各组件均为单点，不具备高可用特性。<br>在此模式下，Excel 数据集、API 数据集以及定时同步的数据默认保存在自带的 Doris 组件中。</p>
 </div>
 
 <div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;simple<br>使用精简模式安装，系统不会额外安装 Doris 与 Kettle 组件，提供用户轻量级的应用系统，尤其是对接数据量较小的情况。<br>在此模式下，Excel 数据集或 API 数据集的相关数据存储在数据引擎中（默认配置自带的 MySQL 组件，用户可在系统管理界面配置数据引擎，数据引擎目前仅支持 MySQL 类型）。<br>注意：由于精简模式未配置 Kettle 与 Doris，故精简模式不提供定时同步模式。</p>
@@ -2890,10 +2922,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <div class="note info no-icon"><p>DE_ENGINE_MODE&#x3D;cluster<br>使用集群模式安装，系统不会额外安装 Doris 与 Kettle 组件，但会在系统管理模块提供 Doris 与 Kettle 的链接配置界面（请参考【系统管理】的【系统参数】说明），用户可独立安装 Doris 集群及 Kettle 并配置在 DataEase 中。集群模式下 Excel 数据集，API 数据集以及定时同步的数据通过 Kettle 抽取到 Doris 集群中。<br>Doris 安装部署可参考：<a href="http://doris.incubator.apache.org/zh-CN/">http://doris.incubator.apache.org/zh-CN/</a><br>Kettle 安装部署可参考：<a href="http://www.kettle.org.cn/">http://www.kettle.org.cn/</a></p>
 </div>
 
-<h2 id="安装DataEase">6.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h2><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
+<h2 id="安装DataEase">7.3 &nbsp&nbsp<a href="#安装DataEase" class="headerlink" title="安装DataEase"></a>安装DataEase</h2><p>运行命令安装DataEase，并查看对应docker容器是否正常运行。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash ./install.sh</span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 
-<h2 id="创建DataEase的踩坑记录">6.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h2><h3 id="doris-be容器状态一直为unhealthy">6.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h3><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
+<h2 id="创建DataEase的踩坑记录">7.4 &nbsp&nbsp<a href="#创建DataEase的踩坑记录" class="headerlink" title="创建DataEase的踩坑记录"></a>创建DataEase的踩坑记录</h2><h3 id="doris-be容器状态一直为unhealthy">7.4.1 &nbsp&nbsp<a href="#doris-be容器状态一直为unhealthy" class="headerlink" title="doris-be容器状态一直为unhealthy"></a>doris-be容器状态一直为unhealthy</h3><p>问题：doris-be容器状态一直为unhealthy，一直在尝试反复启动。<code>docker logs doris-be</code>查看到如下日志输出：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">doris_role:be</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; FE_SERVERS=[fe1:172.19.0.198:9010]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; BE_ADDR=[172.19.0.199:9050]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feIpArray = 172.19.0.198</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; feEditLogPortArray = 9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; masterFe = 172.19.0.198:9010</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; be_addr = 172.19.0.199:9050</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; Append the configuration [priority_networks = 172.19.0.0/24] to /opt/apache-doris/be/conf/fe.conf</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerMySQL = mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;alter system add backend &#x27;172.19.0.199:9050&#x27;&quot;</span></span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registerShell = /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">mysql -uroot -P9030 -h172.19.0.198  -e <span class="string">&quot;show backends&quot;</span> | grep <span class="string">&quot; 172.19.0.199 &quot;</span> | grep <span class="string">&quot; 9050 &quot;</span></span><br><span class="line">10003   default_cluster 172.19.0.199    9050    -1      -1      -1      NULL    NULL    <span class="literal">false</span>   <span class="literal">false</span>   <span class="literal">false</span>   0       0.000   1.000 B       0.000   0.00 %  0.00 %  0.000   &#123;<span class="string">&quot;location&quot;</span> : <span class="string">&quot;default&quot;</span>&#125;        java.net.NoRouteToHostException: No route to host (Host unreachable)          &#123;<span class="string">&quot;lastStreamLoadTime&quot;</span>:-1,<span class="string">&quot;isQueryDisabled&quot;</span>:<span class="literal">false</span>,<span class="string">&quot;isLoadDisabled&quot;</span>:<span class="literal">false</span>&#125;        1</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  0 <span class="keyword">time</span> to register BE node, be_join_status=0</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; run <span class="built_in">command</span> /opt/apache-doris/be/bin/start_be.sh &amp;</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; registered : 1</span><br><span class="line">Please <span class="built_in">set</span> vm.max_map_count to be 2000000 under root using <span class="string">&#x27;sysctl -w vm.max_map_count=2000000&#x27;</span>.</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br><span class="line">DEBUG &gt;&gt;&gt;&gt;&gt;&gt; The  1  <span class="keyword">time</span> to check is_alive &gt;&gt;&gt;&gt;&gt;&gt; 1</span><br><span class="line">ERROR 1105 (HY000) at line 1: errCode = 2, detailMessage = There is no scanNode Backend available.[10003: not alive]</span><br></pre></td></tr></table></figure>
 <p>可以查看上述日志输出提示<code>Please set vm.max_map_count to be 2000000 under root using &#39;sysctl -w vm.max_map_count=2000000&#39;.</code></p>
 <p>原因：Doris作为分布式数据库，对于内存映射数量有要求，Linux系统默认参数值无法满足，例如PVE系统默认的<code>vm.max_map_count=262144</code>。</p>
@@ -2905,9 +2937,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>解决方法2：换DataEase v2版本，v2系列不需要部署Doris。</li>
 </ul>
-<h3 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">6.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h3><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
+<h3 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">7.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h3><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
 <p>解决方法：不修改<code>install.conf</code>的MySQL和Doris的密码，直接使用模板预设的默认密码完成部署。</p>
-<h2 id="DataEase使用踩坑纪录">6.5 &nbsp&nbsp<a href="#DataEase使用踩坑纪录" class="headerlink" title="DataEase使用踩坑纪录"></a>DataEase使用踩坑纪录</h2><ul>
+<h2 id="DataEase使用踩坑纪录">7.5 &nbsp&nbsp<a href="#DataEase使用踩坑纪录" class="headerlink" title="DataEase使用踩坑纪录"></a>DataEase使用踩坑纪录</h2><ul>
 <li>变更&#x2F;删除数据集，均会导致丢失仪表盘的过滤器参数</li>
 <li>仪表盘的视图在超过1000条数据时则无法全部导出excel表格（比如实际导出的excel表格行数为1001，有一行是表头）<ul>
 <li>建议导出操作，使用数据集的导出功能。</li>
@@ -2916,12 +2948,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>excel数据源若有几万行，则无法成功导入dataease作为数据集，在数据同步阶段会失效（可能是内存溢出的问题，有待排查验证）</li>
 <li>V2社区开源版不支持创建多用户</li>
 </ul>
-<h1 id="Docker-Desktop（Windows）">7 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">7.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
+<h1 id="Docker-Desktop（Windows）">8 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">8.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
 <p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#55;&#x32;&#x2e;&#x31;&#x39;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.</p>
+<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#64;&#x31;&#55;&#x32;&#x2e;&#49;&#57;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3290,63 +3322,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>TeX</tag>
         <tag>编译</tag>
         <tag>排版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python总结笔记</title>
-    <url>/code/python/</url>
-    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
-<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
-<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
-<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
-<p>原因：python环境异常。</p>
-<p>解决方法：重装python。</p>
-<ol>
-<li>直接删除python主安装路径的文件</li>
-<li>运行安装程序repair</li>
-<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
-</ol>
-<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
-<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
-<p>基本的使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
-<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
-<p>基本使用：</p>
-<ul>
-<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
-<li>创建setup.py文件：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
-<li>安装twine并发布包到PyPI：</li>
-</ul>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
-</ul>
-<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
-<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
-</ul>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>编程</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3849,6 +3824,63 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python总结笔记</title>
+    <url>/code/python/</url>
+    <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
+<h1 id="安装python的踩坑记录">2 &nbsp&nbsp<a href="#安装python的踩坑记录" class="headerlink" title="安装python的踩坑记录"></a>安装python的踩坑记录</h1><h2 id="vscode-无法设置python解释器">2.1 &nbsp&nbsp<a href="#vscode-无法设置python解释器" class="headerlink" title="vscode 无法设置python解释器"></a>vscode 无法设置python解释器</h2><p>原因：安装路径在<code>C:\Program Files</code>，vscode权限不够时会导致无法设置python解释器。</p>
+<p>解决方法：安装路径直接按默认路径，不装program路径。</p>
+<h2 id="pip安装某些包异常">2.2 &nbsp&nbsp<a href="#pip安装某些包异常" class="headerlink" title="pip安装某些包异常"></a>pip安装某些包异常</h2><p>情况：如果pip安装某些包一直有异常，反复安装卸载包都无法解决的话，并且确认不是包的问题的话。</p>
+<p>原因：python环境异常。</p>
+<p>解决方法：重装python。</p>
+<ol>
+<li>直接删除python主安装路径的文件</li>
+<li>运行安装程序repair</li>
+<li>点击卸载，再点击安装（必须要卸载再安装，否则site-packages路径下没有任何包，repair操作不会恢复这个路径的文件）</li>
+</ol>
+<h1 id="卸载python">3 &nbsp&nbsp<a href="#卸载python" class="headerlink" title="卸载python"></a>卸载python</h1><h2 id="卸载清除已安装的pip包的bat批处理脚本">3.1 &nbsp&nbsp<a href="#卸载清除已安装的pip包的bat批处理脚本" class="headerlink" title="卸载清除已安装的pip包的bat批处理脚本"></a>卸载清除已安装的pip包的bat批处理脚本</h2><div class="tabs" id="purge_pip_packages"><ul class="nav-tabs"><li class="tab active"><a href="#purge_pip_packages-1">python 3.11</a></li><li class="tab"><a href="#purge_pip_packages-2">python 3.10</a></li><li class="tab"><a href="#purge_pip_packages-3">python 3.9</a></li></ul><div class="tab-content"><div class="tab-pane active" id="purge_pip_packages-1"><p>purge_py311_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip freeze &gt; py311_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">11</span> -m pip uninstall -r py311_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py311_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-2"><p>purge_py310_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip freeze &gt; py310_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">10</span> -m pip uninstall -r py310_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py310_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="purge_pip_packages-3"><p>purge_py39_packages.bat</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip freeze &gt; py39_requirements.txt</span><br><span class="line">py -<span class="number">3</span>.<span class="number">9</span> -m pip uninstall -r py39_requirements.txt -y</span><br><span class="line"><span class="built_in">del</span> py39_requirements.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="清除pip缓存">3.2 &nbsp&nbsp<a href="#清除pip缓存" class="headerlink" title="清除pip缓存"></a>清除pip缓存</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">pip cache purge</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="python的包管理">4 &nbsp&nbsp<a href="#python的包管理" class="headerlink" title="python的包管理"></a>python的包管理</h1><p>Python包管理是指创建、发布和安装Python包的过程。Python包是一种封装和分发Python代码的方式，以便于其他开发者使用和共享。Python包管理涉及的三个关键组件：PyPI、setuptools和wheel。</p>
+<h2 id="PyPI">4.1 &nbsp&nbsp<a href="#PyPI" class="headerlink" title="PyPI"></a>PyPI</h2><p>Python软件包索引（PyPI）是一个在线存储库，用于发布和查找Python包。PyPI允许开发者上传他们的包，并提供一个中心化的搜索引擎，让其他开发者能够找到并安装这些包。PyPI通过pip（Python包安装器）来安装和管理包。</p>
+<p>基本的使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 升级pip</span></span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line">pip install pip -U</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br><span class="line"></span><br><span class="line"><span class="comment"># pip设定清华源（升级 pip 到最新的版本 (&gt;=10.0.0) 后进再进行配置）</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="comment"># win平台pip缓存路径：\%LocalAppData\%&gt;pip&gt;Cache</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 临时一次性使用镜像源安装包</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包</span></span><br><span class="line">pip install &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 升级包</span></span><br><span class="line">pip install --upgrade &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 卸载包</span></span><br><span class="line">pip uninstall &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 显示包文件信息</span></span><br><span class="line">pip show --files &lt;package_name&gt;</span><br><span class="line"><span class="comment"># 列出已过时的包</span></span><br><span class="line">pip list --outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全部包</span></span><br><span class="line">pip freeze &gt; requirements.txt</span><br><span class="line">pip uninstall -r requirements.txt -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装全部包</span></span><br><span class="line">pip install -r requirements.txt --upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="setuptools和wheel">4.2 &nbsp&nbsp<a href="#setuptools和wheel" class="headerlink" title="setuptools和wheel"></a>setuptools和wheel</h2><p>setuptools是一个Python包管理工具，用于创建、构建和发布Python包。setuptools通过提供易于使用的命令行接口和配置文件（如setup.py）来简化包管理过程。通过使用setuptools，开发者可以方便地将他们的代码打包成可分发的格式，如源代码分发（sdist）和wheel分发（bdist_wheel）。</p>
+<p>wheel是一种Python分发格式，用于提高安装速度和兼容性。与源代码分发（sdist）相比，wheel分发是预编译的，这意味着它们不需要在安装过程中进行编译。这使得wheel分发在安装速度和跨平台兼容性方面具有优势。</p>
+<p>基本使用：</p>
+<ul>
+<li>安装setuptools和wheel：<code>pip install setuptools wheel</code></li>
+<li>创建setup.py文件：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup, find_packages</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;my_package&quot;</span>,</span><br><span class="line">    version=<span class="string">&quot;0.1&quot;</span>,</span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">&quot;requests&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>构建源代码分发和wheel分发：<code>python setup.py sdist bdist_wheel</code></li>
+<li>安装twine并发布包到PyPI：</li>
+</ul>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install twine</span><br><span class="line">twine upload dist/*</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装wheel分发的包：<code>pip install dist/my_package-0.1-py3-none-any.whl</code></li>
+</ul>
+<h1 id="其他">5 &nbsp&nbsp<a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
+<li>官方3.9版本最后提供二进制文件下载的是3.9.13版本，之后都是补丁形式。</li>
+</ul>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]【Python 基础】Python 包管理：PyPI、setuptools 与 wheel[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_33578950/article/details/130297451">https://blog.csdn.net/qq_33578950/article/details/130297451</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>编程</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -7724,6 +7756,21 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="center">root权限可使用</td>
 </tr>
 <tr>
+<td align="center">nohup command &gt; &quot;command.log&quot; 2&gt;&amp;1 &amp;</td>
+<td align="center">后台运行命令，ssh中断也能保持运行</td>
+<td align="center"><code>command.log</code>是日志文件，记录命令的输出<br>如果不需要日志，输出可以重定向到&#x2F;dev&#x2F;null</td>
+</tr>
+<tr>
+<td align="center">echo $! &gt; pid</td>
+<td align="center">获取上次运行命令的进程编号</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">kill $(cat .&#x2F;pid)</td>
+<td align="center">基于pid文件的pid编号终止进程</td>
+<td align="center">kill命令发送SIGTERM（信号15）<br>kill -9强制终止进程</td>
+</tr>
+<tr>
 <td align="center">blkid</td>
 <td align="center">查看硬盘分区的UUID值</td>
 <td align="center"></td>
@@ -7902,10 +7949,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>维修</tag>
+        <tag>笔记</tag>
+        <tag>终端</tag>
         <tag>系统</tag>
         <tag>linux</tag>
-        <tag>终端</tag>
-        <tag>笔记</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
         <tag>维护</tag>
@@ -8678,12 +8725,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#x75;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#49;&#46;&#x63;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#x75;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#64;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#x6e;&#x6b;&#x79;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#x63;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#x6e;&#x6b;&#115;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8771,8 +8818,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>维修</tag>
-        <tag>系统</tag>
         <tag>windows</tag>
+        <tag>系统</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
         <tag>维护</tag>
@@ -11749,6 +11796,85 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender二次代码开发总结</title>
+    <url>/software/blender/code-development/</url>
+    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
+<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
+</ul>
+<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
+<li>cycles API直接查看cycles源码，properties.py</li>
+<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
+<li>blender排错cmd工具：blender_debug_log.bat</li>
+</ul>
+<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
+<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
+<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
+<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
+<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
+<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
+<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
+<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
+<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
+<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
+<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
+</ul>
+<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
+<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
+<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
+</ul>
+<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
+</div>
+<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
+<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
+<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
+<p>具体context override代码的使用例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Blender实战案例总结</title>
     <url>/software/blender/examples/</url>
     <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
@@ -11793,51 +11919,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>shift + D 复制并对齐片段</li>
 <li>shift + R 重操操作</li>
 </ol>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender二次代码开发总结</title>
-    <url>/software/blender/code-development/</url>
-    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
-<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
-</ul>
-<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
-<li>cycles API直接查看cycles源码，properties.py</li>
-<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
-<li>blender排错cmd工具：blender_debug_log.bat</li>
-</ul>
-<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
-<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
-<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
-<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
-<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
-<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
-<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
-<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
-<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
-<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
-<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
-</ul>
-<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
-<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
-<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
-</ul>
-<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
-</div>
-<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
-<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
-<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
-<p>具体context override代码的使用例子：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -12203,40 +12284,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender常见问题总结——Q&amp;A</title>
     <url>/software/blender/q-a/</url>
     <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
@@ -12436,7 +12483,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#115;&#116;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#105;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
