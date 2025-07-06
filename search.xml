@@ -143,6 +143,13 @@
     <a href="https://github.com/Aethersailor/Custom_OpenClash_Rules">Custom_OpenClash_Rules</a>
 </div>
 
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">一次性邮箱/临时邮箱</p>
+    </div>
+    <a href="https://www.emailtick.com/zh">EmailTick(临时Gmail)</a>
+</div>
+
 </div>
 
 <h1 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h1><div class="text-box-container">
@@ -668,10 +675,16 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">Docker</p>
     </div>
-    <a href="https://github.com/louislam/dockge">Docker Compose可视化管理</a>
     <a href="https://github.com/dongyubin/DockerHub">Docker镜像源</a>
     <a href="https://status.1panel.top/status/docker">国内 Docker 服务状态 & 镜像加速监控</a>
     <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a>
+    <a href="https://hub.docker.com/r/louislam/dockge">dockge（Docker Compose可视化管理）</a>
+    <a href="https://hub.docker.com/_/mysql">mysql（数据库）</a>
+    <a href="https://hub.docker.com/r/gitea/gitea">gitea（Git托管服务）</a>
+    <a href="https://hub.docker.com/r/gitea/act_runner">gitea/act_runner（CI/CD自动构建）</a>
+    <a href="https://hub.docker.com/r/amir20/dozzle">dozzle（实时日志监控，但不保存日志文件）</a>
+    <a href="https://hub.docker.com/r/codercom/code-server">codercom/code-server（浏览器版VSCode）</a>
+    <a href="https://hub.docker.com/r/linuxserver/code-server">linuxserver/code-server（浏览器版VSCode）</a>
 </div>
 
 <div class="text-box">
@@ -2953,7 +2966,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#49;&#x39;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.</p>
+<h1 id="参考文献">9 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#116;&#64;&#x31;&#55;&#x32;&#46;&#49;&#57;&#46;&#x30;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4229,7 +4242,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>安装：默认路径安装，选项额外添选上下文菜单（文件和目录）</li>
 </ul>
 <p>镜像加速下载的方法：将下载链接URL中的<code>stable</code>之前的字符全部改为<code>https://vscode.cdn.azure.cn/</code>即可。</p>
-<h1 id="配置C-C-开发环境">2 &nbsp&nbsp<a href="#配置C-C-开发环境" class="headerlink" title="配置C&#x2F;C++开发环境"></a>配置C&#x2F;C++开发环境</h1><h2 id="MSVC-CL编译器的安装和环境设置">2.1 &nbsp&nbsp<a href="#MSVC-CL编译器的安装和环境设置" class="headerlink" title="MSVC CL编译器的安装和环境设置"></a>MSVC CL编译器的安装和环境设置</h2><ol>
+<h1 id="配置远程主机SSH连接使用VSCode">2 &nbsp&nbsp<a href="#配置远程主机SSH连接使用VSCode" class="headerlink" title="配置远程主机SSH连接使用VSCode"></a>配置远程主机SSH连接使用VSCode</h1><h1 id="配置C-C-开发环境">3 &nbsp&nbsp<a href="#配置C-C-开发环境" class="headerlink" title="配置C&#x2F;C++开发环境"></a>配置C&#x2F;C++开发环境</h1><h2 id="MSVC-CL编译器的安装和环境设置">3.1 &nbsp&nbsp<a href="#MSVC-CL编译器的安装和环境设置" class="headerlink" title="MSVC CL编译器的安装和环境设置"></a>MSVC CL编译器的安装和环境设置</h2><ol>
 <li>下载（<code>CMake</code>和<code>Ninja</code>可以不用单独下载安装，<code>MSVC CL</code>编译器的<code>Visual Studio Installer</code>管理器可以统一管理下载和更新）<ul>
 <li><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">MSVC CL编译器（Visual Studio 2022 生成工具）</a>，<code>所有下载</code>-&gt;<code>用于 Visual Studio 的工具</code>-&gt;<code>Visual Studio 2022 生成工具</code>。</li>
 <li><del><a href="https://cmake.org/download/">CMake</a></del></li>
@@ -4260,28 +4273,28 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </li>
 <li>拷贝<code>.vscode</code>配置文件夹</li>
 </ol>
-<h2 id="更新MSVC后找不到CL命令">2.2 &nbsp&nbsp<a href="#更新MSVC后找不到CL命令" class="headerlink" title="更新MSVC后找不到CL命令"></a>更新MSVC后找不到CL命令</h2><p>使用<code>Visual Studio Installer</code>更新MSVC后，编译器版本号可能会变更，如果在终端运行cl命令后提示找不到程序，需要手动更新两处地方的CL编译器路径：</p>
+<h2 id="更新MSVC后找不到CL命令">3.2 &nbsp&nbsp<a href="#更新MSVC后找不到CL命令" class="headerlink" title="更新MSVC后找不到CL命令"></a>更新MSVC后找不到CL命令</h2><p>使用<code>Visual Studio Installer</code>更新MSVC后，编译器版本号可能会变更，如果在终端运行cl命令后提示找不到程序，需要手动更新两处地方的CL编译器路径：</p>
 <ul>
 <li>系统环境变量<code>Path</code></li>
 <li><code>.vscode</code>配置文件夹中的<code>c_cpp_properties.json</code></li>
 </ul>
-<h1 id="VSCode源代码管理">3 &nbsp&nbsp<a href="#VSCode源代码管理" class="headerlink" title="VSCode源代码管理"></a>VSCode源代码管理</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，第一次用vs code进行commit时，若使用「同步更改」命令提示说找不到远程仓库时，可以直接使用「推送到」命令。</p>
-<h1 id="Codeium扩展插件的帐号token获取及使用">4 &nbsp&nbsp<a href="#Codeium扩展插件的帐号token获取及使用" class="headerlink" title="Codeium扩展插件的帐号token获取及使用"></a>Codeium扩展插件的帐号token获取及使用</h1><p>一般直接通过Codeium Auth登录帐号即可使用扩展插件。</p>
-<h2 id="token获取">4.1 &nbsp&nbsp<a href="#token获取" class="headerlink" title="token获取"></a>token获取</h2><p>如果不想登录帐号，而是想要通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token的话。首先需要获取token，获取方式：</p>
+<h1 id="VSCode源代码管理">4 &nbsp&nbsp<a href="#VSCode源代码管理" class="headerlink" title="VSCode源代码管理"></a>VSCode源代码管理</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，第一次用vs code进行commit时，若使用「同步更改」命令提示说找不到远程仓库时，可以直接使用「推送到」命令。</p>
+<h1 id="Codeium-Windsurf-扩展插件的帐号token获取及使用">5 &nbsp&nbsp<a href="#Codeium-Windsurf-扩展插件的帐号token获取及使用" class="headerlink" title="Codeium(Windsurf)扩展插件的帐号token获取及使用"></a>Codeium(Windsurf)扩展插件的帐号token获取及使用</h1><p>一般直接通过Codeium Auth登录帐号即可使用扩展插件。</p>
+<h2 id="token获取">5.1 &nbsp&nbsp<a href="#token获取" class="headerlink" title="token获取"></a>token获取</h2><p>如果不想登录帐号，而是想要通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token的话。首先需要获取token，获取方式：</p>
 <ul>
 <li>方式一：<a href="https://www.codeium.com/profile?response_type=token&redirect_uri=vim-show-auth-token&state=a&scope=openid%20profile%20email&redirect_parameters_type=query">官网直链获取</a>（此直链是会提示关联vim扩展，但token都是通用的，同样适用于VSCode的扩展），直接在该网址中登录帐号即可获取「Provide Authentication Token」</li>
 <li>方式二：参考<a href="#token%E4%BD%BF%E7%94%A8">token使用</a>的1-4步骤。</li>
 </ul>
-<h2 id="token使用">4.2 &nbsp&nbsp<a href="#token使用" class="headerlink" title="token使用"></a>token使用</h2><ol>
+<h2 id="token使用">5.2 &nbsp&nbsp<a href="#token使用" class="headerlink" title="token使用"></a>token使用</h2><ol>
 <li>VSCode安装好Codeium扩展插件。</li>
 <li>左下角，点击Codeium Auth登录按钮，首先插件会弹窗请求跳转到网页输入帐号登录。</li>
 <li>直接关闭打开的网页，点击右下角「在线帐号登录」的cancel按钮。</li>
 <li>之后插件会弹窗请求跳转到网页输入帐号登录，这个在线网址则是获取「Provide Authentication Token」。（如果已经提前获取到token，这里可以不登录网页帐号，直接关闭网页）</li>
 <li>最后通过<code>ctrl+shift+p</code>执行<code>Codeium: Provide Authentication Token</code>命令输入token即可正常登录。</li>
 </ol>
-<h1 id="拓展插件">5 &nbsp&nbsp<a href="#拓展插件" class="headerlink" title="拓展插件"></a>拓展插件</h1><h2 id="LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found">5.1 &nbsp&nbsp<a href="#LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found" class="headerlink" title="LaTeX-Workshop报错提示command &#39;latex-workshop.onEnterKey&#39; not found"></a><code>LaTeX-Workshop</code>报错提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code></h2><p>问题现象：在<code>tex</code>文件中使用<code>Enter</code>键会出现报错信息，提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code>，只有<code>Ctrl+Enter</code>键才能正常输入回车。</p>
+<h1 id="拓展插件">6 &nbsp&nbsp<a href="#拓展插件" class="headerlink" title="拓展插件"></a>拓展插件</h1><h2 id="LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found">6.1 &nbsp&nbsp<a href="#LaTeX-Workshop报错提示command-latex-workshop-onEnterKey-not-found" class="headerlink" title="LaTeX-Workshop报错提示command &#39;latex-workshop.onEnterKey&#39; not found"></a><code>LaTeX-Workshop</code>报错提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code></h2><p>问题现象：在<code>tex</code>文件中使用<code>Enter</code>键会出现报错信息，提示<code>command &#39;latex-workshop.onEnterKey&#39; not found</code>，只有<code>Ctrl+Enter</code>键才能正常输入回车。</p>
 <p>解决方案：卸载<code>LaTeX-Workshop</code>扩展插件，关闭<code>VSCode</code>程序，确保<code>VSCode</code>正常移除插件的缓存文件。然后重新打开<code>VSCode</code>，重新安装<code>LaTeX-Workshop</code>。</p>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [Question] How can I get codeium auth token[EB&#x2F;OL]. <a href="https://github.com/Exafunction/codeium.vim/issues/150">https://github.com/Exafunction/codeium.vim/issues/150</a>.<br>[2] VsCode下载，使用国内镜像秒下载[EB&#x2F;OL]. <a href="https://blog.csdn.net/bielaiwuyang1999/article/details/117814237">https://blog.csdn.net/bielaiwuyang1999/article/details/117814237</a>.</p>
+<h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [Question] How can I get codeium auth token[EB&#x2F;OL]. <a href="https://github.com/Exafunction/codeium.vim/issues/150">https://github.com/Exafunction/codeium.vim/issues/150</a>.<br>[2] VsCode下载，使用国内镜像秒下载[EB&#x2F;OL]. <a href="https://blog.csdn.net/bielaiwuyang1999/article/details/117814237">https://blog.csdn.net/bielaiwuyang1999/article/details/117814237</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4723,6 +4736,302 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -6975,302 +7284,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android系统排障总结</title>
     <url>/troubleshooting/android-troubleshooting/</url>
     <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
@@ -8725,12 +8738,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#99;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#115;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#64;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#107;&#115;&#46;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#111;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -11575,6 +11588,59 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -12255,59 +12321,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -12483,7 +12496,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#x73;&#116;&#x65;&#x72;&#107;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#x69;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
