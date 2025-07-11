@@ -2086,6 +2086,45 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>维修工具</title>
+    <url>/cad/repair-tools/</url>
+    <content><![CDATA[<ul>
+<li>可调电源：检测电流，电压。接入机器才会显示电流。可剪断电源正极的通用口线，自己做一个开关。（防止弄坏电源机械开关，有些机器待机电流也偏大，不宜频繁开关？）通用口可接特定的接口，可接不同厂商的机器。</li>
+<li>烙铁</li>
+<li>热风枪</li>
+<li>万用表，打值卡，假负载，诊断卡</li>
+<li>示波器：主要是供电和信号，不是频率</li>
+<li>BGA返修台</li>
+</ul>
+<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电路仿真设计</title>
+    <url>/cad/simulation/</url>
+    <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
+<ul>
+<li>计算机性能不够，导致运行proteus仿真过慢</li>
+<li>proteus内设置的晶振频率和keil源码编译时设置的晶振频率不同</li>
+</ul>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] proteus 8 仿真时 时间流动过慢的解决方案[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44176696/article/details/106875850">https://blog.csdn.net/weixin_44176696/article/details/106875850</a>.</p>
+]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>电路</tag>
+        <tag>仿真</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PCB设计</title>
     <url>/cad/pcb/</url>
     <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
@@ -2190,48 +2229,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>cad</category>
       </categories>
       <tags>
+        <tag>电路</tag>
         <tag>PCB</tag>
-        <tag>电路</tag>
         <tag>设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>维修工具</title>
-    <url>/cad/repair-tools/</url>
-    <content><![CDATA[<ul>
-<li>可调电源：检测电流，电压。接入机器才会显示电流。可剪断电源正极的通用口线，自己做一个开关。（防止弄坏电源机械开关，有些机器待机电流也偏大，不宜频繁开关？）通用口可接特定的接口，可接不同厂商的机器。</li>
-<li>烙铁</li>
-<li>热风枪</li>
-<li>万用表，打值卡，假负载，诊断卡</li>
-<li>示波器：主要是供电和信号，不是频率</li>
-<li>BGA返修台</li>
-</ul>
-<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>电路仿真设计</title>
-    <url>/cad/simulation/</url>
-    <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
-<ul>
-<li>计算机性能不够，导致运行proteus仿真过慢</li>
-<li>proteus内设置的晶振频率和keil源码编译时设置的晶振频率不同</li>
-</ul>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] proteus 8 仿真时 时间流动过慢的解决方案[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44176696/article/details/106875850">https://blog.csdn.net/weixin_44176696/article/details/106875850</a>.</p>
-]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>电路</tag>
-        <tag>仿真</tag>
       </tags>
   </entry>
   <entry>
@@ -2533,132 +2533,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>数据库技术总结笔记</title>
-    <url>/code/database/</url>
-    <content><![CDATA[<h1 id="常见数据库">1 &nbsp&nbsp<a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h1><ul>
-<li>企业级开源分布式数据库：OceanBase，可应对高并发和海量数据</li>
-</ul>
-<h1 id="MySQL基础命令操作">2 &nbsp&nbsp<a href="#MySQL基础命令操作" class="headerlink" title="MySQL基础命令操作"></a>MySQL基础命令操作</h1><table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">功能</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">mysql -u[your_username] -p[your_password]<br>mysql -u your_name -p</td>
-<td align="center">连接mysql</td>
-<td align="center">但一般不推荐直接在终端上输入明文密码</td>
-</tr>
-<tr>
-<td align="center">show databases;</td>
-<td align="center">列出所有可用的数据库</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">use your_database;</td>
-<td align="center">选择要使用的数据库</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">show tables;</td>
-<td align="center">列出数据库中的所有表</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">show create table table_name;</td>
-<td align="center">查看表的创建语句</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">desc table_name;<br>show fields from table_name;<br>desc  table_name;</td>
-<td align="center">查看表的结构</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">exit;<br>quit;<br>Ctrl + D（Unix&#x2F;Linux 系统）</td>
-<td align="center">退出<code>mysql</code>命令环境</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">alter table tableName auto_increment&#x3D;number;</td>
-<td align="center">重新设置表的AUTO_INCREMENT自增值</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">rename table table_original_name to table_new_name;<br>alter table table_original_name rename table_new_name;<br>alter table table_original_name rename to table_new_name;</td>
-<td align="center">重命名表的名字</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">drop table table_name;</td>
-<td align="center">删除表</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">alter table table_name drop column_name</td>
-<td align="center">删除表中的列</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">update table_name set column_name1&#x3D;value1,column_name2&#x3D;value2 where colomn_name3&#x3D;value3;</td>
-<td align="center">更新表中的数据</td>
-<td align="center">set是修改具体列数据<br>where关键字后面跟随条件</td>
-</tr>
-<tr>
-<td align="center">delete from table_name where column_name&#x3D;value;</td>
-<td align="center">删除一行记录</td>
-<td align="center">where关键字后面跟随条件</td>
-</tr>
-<tr>
-<td align="center">mysqldump -u your_name -p database_name &gt; path&#x2F;database_name.sql</td>
-<td align="center">备份数据库到对应路径的SQL文件</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">mysql -u your_name -p database_name &lt; path&#x2F;database_name.sql</td>
-<td align="center">从对应路径的SQL文件恢复数据库</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="mongodb">3 &nbsp&nbsp<a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h1><p><strong>GUI客户端推荐：mongodb compass</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查询某天的文档</span><br><span class="line">db.getCollection(&#x27;YSTZ_202305&#x27;)</span><br><span class="line">  .find(&#123;</span><br><span class="line">    createat: &#123;</span><br><span class="line">      $gte: &#x27;2023-05-23 00:00:00&#x27;,</span><br><span class="line">      $lte: &#x27;2023-05-30 00:00:00&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .sort(&#123; createat: 1 &#125;)</span><br><span class="line">  .limit(100000000);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 排序：其中1为升序排列，而-1是用于降序排列</span><br><span class="line">db.COLLECTION_NAME.find().sort(&#123;KEY:1,key2:-1&#125;);</span><br><span class="line"></span><br><span class="line"># 查看当前操作进度（比如创建索引）</span><br><span class="line">db.currentOp()</span><br></pre></td></tr></table></figure>
-
-<h1 id="Navicat">4 &nbsp&nbsp<a href="#Navicat" class="headerlink" title="Navicat"></a>Navicat</h1><h2 id="mongodb导出导入">4.1 &nbsp&nbsp<a href="#mongodb导出导入" class="headerlink" title="mongodb导出导入"></a>mongodb导出导入</h2><h3 id="导入导出数据库">4.1.1 &nbsp&nbsp<a href="#导入导出数据库" class="headerlink" title="导入导出数据库"></a>导入导出数据库</h3><ol>
-<li>去MongoDB官网下载<a href="https://www.mongodb.com/try/download/database-tools">MongoDB Command Line Database Tools</a></li>
-<li>对数据库右键，选择MongoDump，设置刚刚下载解压后的bin下路径的mongodump.exe</li>
-<li>设置保存路径，以gz格式存放</li>
-<li>对新数据库右键，选择MongoRestore，配置路径mongorestore.exe，选择备份文件导入</li>
-</ol>
-<h3 id="导入导出表，或者表中部分字段">4.1.2 &nbsp&nbsp<a href="#导入导出表，或者表中部分字段" class="headerlink" title="导入导出表，或者表中部分字段"></a>导入导出表，或者表中部分字段</h3><p>使用mongoexport，mongoimport功能</p>
-<h2 id="数据迁移">4.2 &nbsp&nbsp<a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h2><h3 id="单库迁移">4.2.1 &nbsp&nbsp<a href="#单库迁移" class="headerlink" title="单库迁移"></a>单库迁移</h3><ol>
-<li>在目标服务器中创建一个和源服务器数据库名称一样的数据库</li>
-<li>菜单栏&gt;工具&gt;数据传输（填写源服务器和目标服务器的信息，例如ip访问地址）</li>
-<li>下一步即可开始迁移</li>
-</ol>
-<h3 id="多库迁移">4.2.2 &nbsp&nbsp<a href="#多库迁移" class="headerlink" title="多库迁移"></a>多库迁移</h3><ol>
-<li>在目标服务器中创建一个和源服务器数据库名称一样的数据库</li>
-<li>菜单栏&gt;工具&gt;数据传输（填写源服务器和目标服务器的信息，例如ip访问地址）</li>
-<li>选择保存配置文件，一一为每个数据库都进行这个操作。</li>
-<li>菜单栏&gt;工具&gt;数据传输&gt;自动运行&gt;点击新建批处理操作&gt;点击数据传递，导入前面保存的配置文件。</li>
-</ol>
-<h2 id="Navicat执行查询超时">4.3 &nbsp&nbsp<a href="#Navicat执行查询超时" class="headerlink" title="Navicat执行查询超时"></a>Navicat执行查询超时</h2><p>问题：执行一段复杂的Sql，在mysql命令行下用时较长。</p>
-<p>解决方法：做好索引再查询或者更换其他工具（例如mongodb官方工具）进行查询。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 利用Navicat进行数据迁移[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_39043762/article/details/118363462">https://blog.csdn.net/qq_39043762/article/details/118363462</a>.<br>[2] Navicat导出 导入mongodb数据库（windows）[EB&#x2F;OL]. <a href="https://blog.csdn.net/zjkpy_5/article/details/123952785">https://blog.csdn.net/zjkpy_5/article/details/123952785</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>数据库</tag>
-        <tag>mongodb</tag>
-        <tag>sql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker</title>
     <url>/code/docker/</url>
     <content><![CDATA[<ul>
@@ -2875,9 +2749,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>如果docker宿主机配置较差，推荐使用<code>host</code>宿主机网络版，这样没有网络隔离，适用于需要高性能网络通信的场景。官方教程也是用的<code>network_mode: &quot;host&quot;</code>。</li>
 </ul>
 </div>
-<h3 id="host宿主机网络版：">4.3.1 &nbsp&nbsp<a href="#host宿主机网络版：" class="headerlink" title="host宿主机网络版："></a><code>host</code>宿主机网络版：</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">hbbs:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbs</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbs</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rust_hbbs:/root</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">&quot;host&quot;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">  <span class="attr">hbbr:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbr</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rust_hbbs:/root</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">&quot;host&quot;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
+<h3 id="host宿主机网络版：">4.3.1 &nbsp&nbsp<a href="#host宿主机网络版：" class="headerlink" title="host宿主机网络版："></a><code>host</code>宿主机网络版：</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">hbbs:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbs</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbs</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rd_data:/root</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">&quot;host&quot;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">  <span class="attr">hbbr:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbr</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rd_data:/root</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">&quot;host&quot;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="rustdesk-net隔离网络版：">4.3.2 &nbsp&nbsp<a href="#rustdesk-net隔离网络版：" class="headerlink" title="rustdesk-net隔离网络版："></a><code>rustdesk-net</code>隔离网络版：</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">rustdesk-net:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">hbbs:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbs</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbs</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rust_hbbs:/root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21115</span><span class="string">:21115</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21116</span><span class="string">:21116</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21116</span><span class="string">:21116/udp</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21118</span><span class="string">:21118</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">rustdesk-net</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">  <span class="attr">hbbr:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbr</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rust_hbbs:/root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21117</span><span class="string">:21117</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21119</span><span class="string">:21119</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">rustdesk-net</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
+<h3 id="rustdesk-net隔离网络版：">4.3.2 &nbsp&nbsp<a href="#rustdesk-net隔离网络版：" class="headerlink" title="rustdesk-net隔离网络版："></a><code>rustdesk-net</code>隔离网络版：</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">rustdesk-net:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">hbbs:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbs</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbs</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rd_data:/root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21115</span><span class="string">:21115</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21116</span><span class="string">:21116</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21116</span><span class="string">:21116/udp</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21118</span><span class="string">:21118</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">rustdesk-net</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">  <span class="attr">hbbr:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hbbr</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rustdesk/rustdesk-server:latest</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">hbbr</span> <span class="string">-k</span> <span class="string">_</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/rd_data:/root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21117</span><span class="string">:21117</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">21119</span><span class="string">:21119</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">rustdesk-net</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="Docker部署code-server（VS-Code-in-The-Browser）">5 &nbsp&nbsp<a href="#Docker部署code-server（VS-Code-in-The-Browser）" class="headerlink" title="Docker部署code-server（VS Code in The Browser）"></a>Docker部署code-server（VS Code in The Browser）</h1><div class="note danger no-icon"><ul>
 <li>有帖子反馈打开较大的文件时，会比较卡顿。</li>
@@ -3028,11 +2902,137 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#116;&#64;&#49;&#55;&#x32;&#46;&#49;&#x39;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.</p>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#64;&#x31;&#55;&#x32;&#46;&#49;&#57;&#x2e;&#48;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
       </categories>
+  </entry>
+  <entry>
+    <title>数据库技术总结笔记</title>
+    <url>/code/database/</url>
+    <content><![CDATA[<h1 id="常见数据库">1 &nbsp&nbsp<a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h1><ul>
+<li>企业级开源分布式数据库：OceanBase，可应对高并发和海量数据</li>
+</ul>
+<h1 id="MySQL基础命令操作">2 &nbsp&nbsp<a href="#MySQL基础命令操作" class="headerlink" title="MySQL基础命令操作"></a>MySQL基础命令操作</h1><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">功能</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mysql -u[your_username] -p[your_password]<br>mysql -u your_name -p</td>
+<td align="center">连接mysql</td>
+<td align="center">但一般不推荐直接在终端上输入明文密码</td>
+</tr>
+<tr>
+<td align="center">show databases;</td>
+<td align="center">列出所有可用的数据库</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">use your_database;</td>
+<td align="center">选择要使用的数据库</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">show tables;</td>
+<td align="center">列出数据库中的所有表</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">show create table table_name;</td>
+<td align="center">查看表的创建语句</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">desc table_name;<br>show fields from table_name;<br>desc  table_name;</td>
+<td align="center">查看表的结构</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">exit;<br>quit;<br>Ctrl + D（Unix&#x2F;Linux 系统）</td>
+<td align="center">退出<code>mysql</code>命令环境</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">alter table tableName auto_increment&#x3D;number;</td>
+<td align="center">重新设置表的AUTO_INCREMENT自增值</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">rename table table_original_name to table_new_name;<br>alter table table_original_name rename table_new_name;<br>alter table table_original_name rename to table_new_name;</td>
+<td align="center">重命名表的名字</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">drop table table_name;</td>
+<td align="center">删除表</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">alter table table_name drop column_name</td>
+<td align="center">删除表中的列</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">update table_name set column_name1&#x3D;value1,column_name2&#x3D;value2 where colomn_name3&#x3D;value3;</td>
+<td align="center">更新表中的数据</td>
+<td align="center">set是修改具体列数据<br>where关键字后面跟随条件</td>
+</tr>
+<tr>
+<td align="center">delete from table_name where column_name&#x3D;value;</td>
+<td align="center">删除一行记录</td>
+<td align="center">where关键字后面跟随条件</td>
+</tr>
+<tr>
+<td align="center">mysqldump -u your_name -p database_name &gt; path&#x2F;database_name.sql</td>
+<td align="center">备份数据库到对应路径的SQL文件</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">mysql -u your_name -p database_name &lt; path&#x2F;database_name.sql</td>
+<td align="center">从对应路径的SQL文件恢复数据库</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="mongodb">3 &nbsp&nbsp<a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h1><p><strong>GUI客户端推荐：mongodb compass</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查询某天的文档</span><br><span class="line">db.getCollection(&#x27;YSTZ_202305&#x27;)</span><br><span class="line">  .find(&#123;</span><br><span class="line">    createat: &#123;</span><br><span class="line">      $gte: &#x27;2023-05-23 00:00:00&#x27;,</span><br><span class="line">      $lte: &#x27;2023-05-30 00:00:00&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .sort(&#123; createat: 1 &#125;)</span><br><span class="line">  .limit(100000000);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 排序：其中1为升序排列，而-1是用于降序排列</span><br><span class="line">db.COLLECTION_NAME.find().sort(&#123;KEY:1,key2:-1&#125;);</span><br><span class="line"></span><br><span class="line"># 查看当前操作进度（比如创建索引）</span><br><span class="line">db.currentOp()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Navicat">4 &nbsp&nbsp<a href="#Navicat" class="headerlink" title="Navicat"></a>Navicat</h1><h2 id="mongodb导出导入">4.1 &nbsp&nbsp<a href="#mongodb导出导入" class="headerlink" title="mongodb导出导入"></a>mongodb导出导入</h2><h3 id="导入导出数据库">4.1.1 &nbsp&nbsp<a href="#导入导出数据库" class="headerlink" title="导入导出数据库"></a>导入导出数据库</h3><ol>
+<li>去MongoDB官网下载<a href="https://www.mongodb.com/try/download/database-tools">MongoDB Command Line Database Tools</a></li>
+<li>对数据库右键，选择MongoDump，设置刚刚下载解压后的bin下路径的mongodump.exe</li>
+<li>设置保存路径，以gz格式存放</li>
+<li>对新数据库右键，选择MongoRestore，配置路径mongorestore.exe，选择备份文件导入</li>
+</ol>
+<h3 id="导入导出表，或者表中部分字段">4.1.2 &nbsp&nbsp<a href="#导入导出表，或者表中部分字段" class="headerlink" title="导入导出表，或者表中部分字段"></a>导入导出表，或者表中部分字段</h3><p>使用mongoexport，mongoimport功能</p>
+<h2 id="数据迁移">4.2 &nbsp&nbsp<a href="#数据迁移" class="headerlink" title="数据迁移"></a>数据迁移</h2><h3 id="单库迁移">4.2.1 &nbsp&nbsp<a href="#单库迁移" class="headerlink" title="单库迁移"></a>单库迁移</h3><ol>
+<li>在目标服务器中创建一个和源服务器数据库名称一样的数据库</li>
+<li>菜单栏&gt;工具&gt;数据传输（填写源服务器和目标服务器的信息，例如ip访问地址）</li>
+<li>下一步即可开始迁移</li>
+</ol>
+<h3 id="多库迁移">4.2.2 &nbsp&nbsp<a href="#多库迁移" class="headerlink" title="多库迁移"></a>多库迁移</h3><ol>
+<li>在目标服务器中创建一个和源服务器数据库名称一样的数据库</li>
+<li>菜单栏&gt;工具&gt;数据传输（填写源服务器和目标服务器的信息，例如ip访问地址）</li>
+<li>选择保存配置文件，一一为每个数据库都进行这个操作。</li>
+<li>菜单栏&gt;工具&gt;数据传输&gt;自动运行&gt;点击新建批处理操作&gt;点击数据传递，导入前面保存的配置文件。</li>
+</ol>
+<h2 id="Navicat执行查询超时">4.3 &nbsp&nbsp<a href="#Navicat执行查询超时" class="headerlink" title="Navicat执行查询超时"></a>Navicat执行查询超时</h2><p>问题：执行一段复杂的Sql，在mysql命令行下用时较长。</p>
+<p>解决方法：做好索引再查询或者更换其他工具（例如mongodb官方工具）进行查询。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 利用Navicat进行数据迁移[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_39043762/article/details/118363462">https://blog.csdn.net/qq_39043762/article/details/118363462</a>.<br>[2] Navicat导出 导入mongodb数据库（windows）[EB&#x2F;OL]. <a href="https://blog.csdn.net/zjkpy_5/article/details/123952785">https://blog.csdn.net/zjkpy_5/article/details/123952785</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>数据库</tag>
+        <tag>mongodb</tag>
+        <tag>sql</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git总结笔记</title>
@@ -7456,6 +7456,308 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Linux系统排障总结</title>
+    <url>/troubleshooting/linux-troubleshooting/</url>
+    <content><![CDATA[<h1 id="Bash终端符号输入控制">1 &nbsp&nbsp<a href="#Bash终端符号输入控制" class="headerlink" title="Bash终端符号输入控制"></a>Bash终端符号输入控制</h1><table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">功能</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CTRL+C</td>
+<td align="center">强行中断当前程序执行</td>
+<td align="center">发送 SIGINT 信号给前台进程组中的所有进程。常用于终止正在运行的程序</td>
+</tr>
+<tr>
+<td align="center">CTRL+Z</td>
+<td align="center">停止输入</td>
+<td align="center">任务中断维持挂起状态，任务仍在进程中运行，并没有结束（发送 SIGTSTP 信号给前台进程组中的所有进程，常用于挂起一个进程）</td>
+</tr>
+<tr>
+<td align="center">CTRL+D</td>
+<td align="center">结束当前输入（用户不再给当前程序发出指令），系统通常会结束当前程序</td>
+<td align="center">不是发送信号，而是表示一个特殊的二进制值，表示 EOF</td>
+</tr>
+</tbody></table>
+<h1 id="Bash终端常用命令">2 &nbsp&nbsp<a href="#Bash终端常用命令" class="headerlink" title="Bash终端常用命令"></a>Bash终端常用命令</h1><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">功能</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>init 0</code><br> <code>poweroff</code><br> <code>halt</code><br> <code>shutdown -h now</code></td>
+<td align="center">关机</td>
+<td align="center">init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一<br>它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程<br>init定义了8个运行级别(runlevel)，init 0为关机，init 6为重启<br>shutdown就是使用这种机制<br>halt和poweroff也是调用shutdown工具链实现</td>
+</tr>
+<tr>
+<td align="center"><code>init 6</code><br> <code>reboot</code><br> <code>shutdown -r now</code></td>
+<td align="center">重启</td>
+<td align="center">root权限可使用</td>
+</tr>
+<tr>
+<td align="center">nohup command &gt; &quot;command.log&quot; 2&gt;&amp;1 &amp;</td>
+<td align="center">后台运行命令，ssh中断也能保持运行</td>
+<td align="center"><code>command.log</code>是日志文件，记录命令的输出<br>如果不需要日志，输出可以重定向到&#x2F;dev&#x2F;null</td>
+</tr>
+<tr>
+<td align="center">echo $! &gt; pid</td>
+<td align="center">获取上次运行命令的进程编号</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">kill $(cat .&#x2F;pid)</td>
+<td align="center">基于pid文件的pid编号终止进程</td>
+<td align="center">kill命令发送SIGTERM（信号15）<br>kill -9强制终止进程</td>
+</tr>
+<tr>
+<td align="center">blkid</td>
+<td align="center">查看硬盘分区的UUID值</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">lsblk</td>
+<td align="center">查看硬盘分区情况</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="压缩-解压缩">3 &nbsp&nbsp<a href="#压缩-解压缩" class="headerlink" title="压缩&#x2F;解压缩"></a>压缩&#x2F;解压缩</h1><h2 id="Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument">3.1 &nbsp&nbsp<a href="#Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument" class="headerlink" title="Tar命令解压报错：Cannot change ownership to uid 197609, gid 197609: Invalid argument"></a>Tar命令解压报错：<code>Cannot change ownership to uid 197609, gid 197609: Invalid argument</code></h2><p>问题现象：使用root账户运行tar解压文件<code>tar -zxf xxx.tar.gz</code>时，出现报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar: xxx: Cannot change ownership to uid 197609, gid 197609: Invalid argument</span><br><span class="line">tar: Exiting with failure status due to previous errors</span><br></pre></td></tr></table></figure>
+
+<p>原因：在root身份下运行tar命令，tar命令试图保留root文件权限。但设置失败，因此导致错误。</p>
+<p>解决方式：添加参数<code>--no-same-owner</code>，例如<code>tar -zxf xxx.tar.gz --no-same-owner</code>。</p>
+<h1 id="包管理器">4 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">4.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">4.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
+
+<h1 id="编译问题">5 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">5.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
+
+<h2 id="源码编译的程序的安装和卸载">5.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>卸载方式：</p>
+<ul>
+<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
+<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
+<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
+<li>debian系列linux可尝试使用auto-apt 和 checkinstall：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure>
+
+<h2 id="普通用户导致的编译问题">5.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
+<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
+<h2 id="常见编译错误">5.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
+<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
+<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
+</ul>
+<h1 id="账户管理">6 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">6.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自动root登录">6.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
+
+<h2 id="重置密码（ubuntu为例）">6.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
+<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
+<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
+<li>exit退出shell，选择resume回到正常启动中。</li>
+</ol>
+<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">6.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
+<h3 id="etc-passwd">6.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
+<ol>
+<li>账号名称</li>
+<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
+<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
+<li>GID，也就是群组ID</li>
+<li>关于账号的一些说明信息（暂时可以忽略）</li>
+<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
+<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
+</ol>
+<h3 id="etc-shadow">6.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
+<ol>
+<li>账户名称（密码需要与账户对应的）</li>
+<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
+<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
+<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
+<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
+<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
+<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
+<li>账号失效日期，过了这个日期账号就不能用了</li>
+<li>保留未使用</li>
+</ol>
+<h3 id="etc-shadow文件中密码的加密方式">6.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
+<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
+<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
+<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
+</div>
+
+<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
+<h1 id="硬盘和分区管理">7 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">7.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载，以下示例是写明挂载/dev/sdb，如果硬盘设备实际的路径更变后，例如变更硬盘实际物理接口，可能会导致挂载失败</span></span><br><span class="line">/dev/sdb /mnt/pan ext4 defaults 0 0</span><br><span class="line">blkid|grep /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> nano /etc/fstab <span class="comment"># 使用UUID挂载分区，即使变更硬盘实际物理接口，也不会导致挂载失败</span></span><br><span class="line"><span class="comment"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span></span><br><span class="line"><span class="comment"># options：defaults - 使用文件系统的默认挂载参数</span></span><br><span class="line"><span class="comment"># dump：0 - 不备份</span></span><br><span class="line"><span class="comment"># pass：0代表不检查。对于根目录/和efi目录/boot/efi，该值必需为1。其余分区可以设置为2。优先检查根目录后就会检查设置为2的其他分区。</span></span><br><span class="line">UUID=uuid值 /mnt/share ext4 defaults 0 2</span><br><span class="line"><span class="comment"># mount -a用于挂载配置文件 /etc/fstab 中列出的所有文件系统，可以提前测试挂载情况，不至于配置写错导致重启进入紧急模式</span></span><br><span class="line">mount -a</span><br></pre></td></tr></table></figure>
+
+<h2 id="将-home目录挂载到新分区（或新硬盘）">7.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="查看硬盘是不是固态硬盘（SSD）">7.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
+
+<h1 id="网络">8 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">8.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
+<ul>
+<li>windows：ipconfig &#x2F;a</li>
+<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
+</ul>
+<p>网卡名称解析：</p>
+<ul>
+<li>lo：表示local</li>
+<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
+<li>en：表示ethernet以太网</li>
+<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
+</ul>
+<p>例子：</p>
+<ul>
+<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
+<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
+</ul>
+<h2 id="ubuntu配置网卡">8.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">addresses:</span><br><span class="line">- 192.168.1.10/24</span><br><span class="line">gateway4: 192.168.1.1</span><br><span class="line">nameservers:</span><br><span class="line">addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
+
+<h2 id="ssh登录远程服务器">8.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
+</div>
+<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
+<p>查看ssh版本：<code>ssh -V</code></p>
+<h3 id="生成SSH密钥和公钥">8.3.1 &nbsp&nbsp<a href="#生成SSH密钥和公钥" class="headerlink" title="生成SSH密钥和公钥"></a>生成SSH密钥和公钥</h3><div class="note primary no-icon"><ul>
+<li>Ed25519算法：一种基于椭圆曲线密码学的公钥签名算法，使用Curve25519曲线，其密钥长度较短但安全性较高，抵抗量子计算攻击的能力强。<ul>
+<li>Ed25519在签名和验证过程中通常比RSA更快速，尤其在移动设备等资源受限环境下性能表现更为突出。</li>
+</ul>
+</li>
+<li>RSA算法：基于大整数因子分解，其密钥长度需相对较长才能保证较高的安全性，且在量子计算攻击面前相对脆弱。</li>
+</ul>
+</div>
+
+<p>生成密钥和公钥的命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>命令解释：</p>
+<ul>
+<li>创建时不输入密码，直接回车两次就可以免密登录，否则每次验证公钥都需要输入密码。</li>
+<li><code>-C</code>：注释，用于标识该密钥的用途或者使用者，一般常用是邮件参数。若不使用该参数作注释，则默认是基于当前计算机的用户名和计算机名称生成注释：<code>name@DESKTOP-xxxxxxx</code>。</li>
+<li>ras算法生成密钥文件为<code>id_rsa</code>，公钥文件为<code>id_rsa.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
+<li>ed25519算法生成密钥文件为<code>id_ed25519</code>，公钥文件为<code>id_ed25519.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
+</ul>
+<h3 id="上传SSH公钥到远程服务器">8.3.2 &nbsp&nbsp<a href="#上传SSH公钥到远程服务器" class="headerlink" title="上传SSH公钥到远程服务器"></a>上传SSH公钥到远程服务器</h3><h4 id="方案一：ssh-copy-id命令">8.3.2.1 &nbsp&nbsp<a href="#方案一：ssh-copy-id命令" class="headerlink" title="方案一：ssh-copy-id命令"></a>方案一：<code>ssh-copy-id</code>命令</h4><p><code>ssh-copy-id</code>命令会提示输入远程账户密码，并自动将公钥自动复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id user@remote_host</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入密码验证成功之后，会输出如下信息</span></span><br><span class="line"><span class="comment"># Number of key(s) added: 1</span></span><br><span class="line"><span class="comment"># Now try logging into the machine, with: &quot;ssh &#x27;user@remote_host&#x27;&quot;</span></span><br><span class="line"><span class="comment"># and check to make sure that only the key(s) you wanted were added.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="方案二：手动上传公钥">8.3.2.2 &nbsp&nbsp<a href="#方案二：手动上传公钥" class="headerlink" title="方案二：手动上传公钥"></a>方案二：手动上传公钥</h4><ol>
+<li>先通过普通密码登录远程服务器，进入<code>~/.ssh/</code>目录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@remote_host</span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>将本机的公钥文件<code>id_ed25519.pub</code>或者<code>id_rsa.pub</code>文件内容复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件。若当前路径不存在该文件，则手动创建该文件。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line">nano ~/.ssh/authorized_keys</span><br><span class="line"><span class="comment"># 将公钥文件内容复制到authorized_keys文件中</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>后面正常<code>ssh user@remote_host</code>即可使用SSH密钥实现无密登录。</li>
+</ol>
+<h3 id="管理多个SSH远程服务器">8.3.3 &nbsp&nbsp<a href="#管理多个SSH远程服务器" class="headerlink" title="管理多个SSH远程服务器"></a>管理多个SSH远程服务器</h3><p>可以通过<code>~/.ssh/config</code>文件配置，实现管理多个SSH连接：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 维持 SSH 连接活跃，防止连接超时中断。客户端每隔 60 秒自动发送加密的&quot;保活&quot;数据包。</span></span><br><span class="line">ServerAliveInterval 60</span><br><span class="line"></span><br><span class="line">Host * <span class="comment"># 别名使用星号*，适用于其他单个配置信息，如果指定了IdentityFile，单个服务器可以不需要再额外指定IdentityFile参数。</span></span><br><span class="line">    AddKeysToAgent <span class="built_in">yes</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定单个服务器的配置信息</span></span><br><span class="line">Host remote_host_alias <span class="comment"># 远程服务器的别名</span></span><br><span class="line">    HostName remote_host <span class="comment"># 远程服务器的ip或者域名</span></span><br><span class="line">    User user <span class="comment"># 远程服务器系统用户名</span></span><br><span class="line">    Port 22 <span class="comment"># 远程服务器ssh的端口，参数缺省默认是22</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519 <span class="comment"># 指定验证使用的密钥文件（非公钥），rsa算法指定 ~/.ssh/id_rsa</span></span><br><span class="line">    ProxyCommand ssh -W %h:%p other_remote_host_alias <span class="comment"># 在windows中，ssh需要填写完整路径C:/Windows/System32/OpenSSH/ssh.exe，否则执行代理命令会报错。-W %h:%p将SSH流量转发到目标主机的指定端口，%h自动替换为目标主机地址，%p自动替换为目标主机端口。</span></span><br></pre></td></tr></table></figure>
+
+<p>配置完成之后，可以使用别名进行连接：<code>ssh remote_host_alias</code></p>
+<h3 id="Ubuntu开启ssh服务及允许root登录">8.3.4 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root登录" class="headerlink" title="Ubuntu开启ssh服务及允许root登录"></a>Ubuntu开启ssh服务及允许root登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="系统自启ssh服务">8.3.4.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用scp传递文件">8.3.5 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
+</div>
+<ol>
+<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
+<li>在PuTTY安装路径中打开终端窗口</li>
+<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
+</ol>
+<h1 id="远程控制软件">9 &nbsp&nbsp<a href="#远程控制软件" class="headerlink" title="远程控制软件"></a>远程控制软件</h1><h2 id="ubuntu-linux安装远程控制软件">9.1 &nbsp&nbsp<a href="#ubuntu-linux安装远程控制软件" class="headerlink" title="ubuntu linux安装远程控制软件"></a>ubuntu linux安装远程控制软件</h2><ul>
+<li>根据系统类型下载<a href="https://www.todesk.com/linux.html">官方安装包</a></li>
+<li>安装命令：<code>sudo apt-get install ./todesk-v4.7.2.0-amd64.deb</code></li>
+<li>运行命令：<code>todesk</code></li>
+</ul>
+<h2 id="arch-linux安装远程控制软件">9.2 &nbsp&nbsp<a href="#arch-linux安装远程控制软件" class="headerlink" title="arch linux安装远程控制软件"></a>arch linux安装远程控制软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
+<ul>
+<li>安装todesk：亦可下载<a href="https://www.todesk.com/linux.html">官方安装包</a>手动执行安装</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装teamviewer</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装向日葵</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure>
+
+<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
+<h1 id="开机排障">10 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">10.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
+<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
+<ul>
+<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
+<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
+</ul>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ubuntu紧急模式">10.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
+<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<h2 id="开机出现initramfs-requires-a-manual-fsck">10.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
+<ul>
+<li>异常断电或者关机引起文件数据损坏</li>
+<li>系统无法启动</li>
+<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
+</ul>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="显卡驱动">11 &nbsp&nbsp<a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h1><h2 id="ubuntu-20-04安装英伟达nvidia闭源驱动">11.1 &nbsp&nbsp<a href="#ubuntu-20-04安装英伟达nvidia闭源驱动" class="headerlink" title="ubuntu 20.04安装英伟达nvidia闭源驱动"></a>ubuntu 20.04安装英伟达nvidia闭源驱动</h2><h3 id="运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version">11.1.1 &nbsp&nbsp<a href="#运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version" class="headerlink" title="运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version"></a>运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version</h3><p>故障原因：系统检测到驱动和NVML版本不一致的原因导致的。</p>
+<p>解决方法：<code>sudo reboot</code>重启系统即可。</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.<br>[20] 【已解决】Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version: 535.161[EB&#x2F;OL]. <a href="https://blog.csdn.net/BetrayFree/article/details/137608544">https://blog.csdn.net/BetrayFree/article/details/137608544</a>.<br>[21] Runlevel  运行级别[EB&#x2F;OL]. <a href="https://en.wikipedia.org/wiki/Runlevel">https://en.wikipedia.org/wiki/Runlevel</a>.<br>[22] Linux tar: Cannot change ownership to [..]: Permission denied[EB&#x2F;OL]. <a href="https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/">https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/</a>.<br>[23] 生成新的 SSH 密钥并将其添加到 ssh-agent[EB&#x2F;OL]. <a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>.<br>[24] SSH生成SSH密钥（公钥和私钥）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_43420088/article/details/139775270">https://blog.csdn.net/qq_43420088/article/details/139775270</a>.<br>[25] 设置 SSH 跳板机[EB&#x2F;OL]. <a href="https://wwang721.github.io/myBlog/2019/10/15/ssh.html">https://wwang721.github.io/myBlog/2019/10/15/ssh.html</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+        <tag>笔记</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路由排障总结</title>
+    <url>/troubleshooting/router-troubleshooting/</url>
+    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机硬件排障总结</title>
     <url>/troubleshooting/hardware-troubleshooting/</url>
     <content><![CDATA[<h1 id="PC组件常见品牌质保信息查询">1 &nbsp&nbsp<a href="#PC组件常见品牌质保信息查询" class="headerlink" title="PC组件常见品牌质保信息查询"></a>PC组件常见品牌质保信息查询</h1><p>见「<a href="/bookmark/#%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6%E5%93%81%E7%89%8C%E8%B4%A8%E4%BF%9D%E6%9F%A5%E8%AF%A2">电脑硬件品牌质保查询</a>」</p>
@@ -7871,308 +8173,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Linux系统排障总结</title>
-    <url>/troubleshooting/linux-troubleshooting/</url>
-    <content><![CDATA[<h1 id="Bash终端符号输入控制">1 &nbsp&nbsp<a href="#Bash终端符号输入控制" class="headerlink" title="Bash终端符号输入控制"></a>Bash终端符号输入控制</h1><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">功能</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CTRL+C</td>
-<td align="center">强行中断当前程序执行</td>
-<td align="center">发送 SIGINT 信号给前台进程组中的所有进程。常用于终止正在运行的程序</td>
-</tr>
-<tr>
-<td align="center">CTRL+Z</td>
-<td align="center">停止输入</td>
-<td align="center">任务中断维持挂起状态，任务仍在进程中运行，并没有结束（发送 SIGTSTP 信号给前台进程组中的所有进程，常用于挂起一个进程）</td>
-</tr>
-<tr>
-<td align="center">CTRL+D</td>
-<td align="center">结束当前输入（用户不再给当前程序发出指令），系统通常会结束当前程序</td>
-<td align="center">不是发送信号，而是表示一个特殊的二进制值，表示 EOF</td>
-</tr>
-</tbody></table>
-<h1 id="Bash终端常用命令">2 &nbsp&nbsp<a href="#Bash终端常用命令" class="headerlink" title="Bash终端常用命令"></a>Bash终端常用命令</h1><table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">功能</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>init 0</code><br> <code>poweroff</code><br> <code>halt</code><br> <code>shutdown -h now</code></td>
-<td align="center">关机</td>
-<td align="center">init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一<br>它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程<br>init定义了8个运行级别(runlevel)，init 0为关机，init 6为重启<br>shutdown就是使用这种机制<br>halt和poweroff也是调用shutdown工具链实现</td>
-</tr>
-<tr>
-<td align="center"><code>init 6</code><br> <code>reboot</code><br> <code>shutdown -r now</code></td>
-<td align="center">重启</td>
-<td align="center">root权限可使用</td>
-</tr>
-<tr>
-<td align="center">nohup command &gt; &quot;command.log&quot; 2&gt;&amp;1 &amp;</td>
-<td align="center">后台运行命令，ssh中断也能保持运行</td>
-<td align="center"><code>command.log</code>是日志文件，记录命令的输出<br>如果不需要日志，输出可以重定向到&#x2F;dev&#x2F;null</td>
-</tr>
-<tr>
-<td align="center">echo $! &gt; pid</td>
-<td align="center">获取上次运行命令的进程编号</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">kill $(cat .&#x2F;pid)</td>
-<td align="center">基于pid文件的pid编号终止进程</td>
-<td align="center">kill命令发送SIGTERM（信号15）<br>kill -9强制终止进程</td>
-</tr>
-<tr>
-<td align="center">blkid</td>
-<td align="center">查看硬盘分区的UUID值</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">lsblk</td>
-<td align="center">查看硬盘分区情况</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="压缩-解压缩">3 &nbsp&nbsp<a href="#压缩-解压缩" class="headerlink" title="压缩&#x2F;解压缩"></a>压缩&#x2F;解压缩</h1><h2 id="Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument">3.1 &nbsp&nbsp<a href="#Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument" class="headerlink" title="Tar命令解压报错：Cannot change ownership to uid 197609, gid 197609: Invalid argument"></a>Tar命令解压报错：<code>Cannot change ownership to uid 197609, gid 197609: Invalid argument</code></h2><p>问题现象：使用root账户运行tar解压文件<code>tar -zxf xxx.tar.gz</code>时，出现报错</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar: xxx: Cannot change ownership to uid 197609, gid 197609: Invalid argument</span><br><span class="line">tar: Exiting with failure status due to previous errors</span><br></pre></td></tr></table></figure>
-
-<p>原因：在root身份下运行tar命令，tar命令试图保留root文件权限。但设置失败，因此导致错误。</p>
-<p>解决方式：添加参数<code>--no-same-owner</code>，例如<code>tar -zxf xxx.tar.gz --no-same-owner</code>。</p>
-<h1 id="包管理器">4 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">4.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">4.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
-
-<h1 id="编译问题">5 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">5.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
-
-<h2 id="源码编译的程序的安装和卸载">5.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>卸载方式：</p>
-<ul>
-<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
-<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
-<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
-<li>debian系列linux可尝试使用auto-apt 和 checkinstall：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure>
-
-<h2 id="普通用户导致的编译问题">5.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
-<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
-<h2 id="常见编译错误">5.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
-<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
-<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
-</ul>
-<h1 id="账户管理">6 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">6.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="自动root登录">6.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
-
-<h2 id="重置密码（ubuntu为例）">6.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
-<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
-<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
-<li>exit退出shell，选择resume回到正常启动中。</li>
-</ol>
-<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">6.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
-<h3 id="etc-passwd">6.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
-<ol>
-<li>账号名称</li>
-<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
-<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
-<li>GID，也就是群组ID</li>
-<li>关于账号的一些说明信息（暂时可以忽略）</li>
-<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
-<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
-</ol>
-<h3 id="etc-shadow">6.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
-<ol>
-<li>账户名称（密码需要与账户对应的）</li>
-<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
-<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
-<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
-<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
-<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
-<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
-<li>账号失效日期，过了这个日期账号就不能用了</li>
-<li>保留未使用</li>
-</ol>
-<h3 id="etc-shadow文件中密码的加密方式">6.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
-<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
-<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
-<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
-</div>
-
-<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
-<h1 id="硬盘和分区管理">7 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">7.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载，以下示例是写明挂载/dev/sdb，如果硬盘设备实际的路径更变后，例如变更硬盘实际物理接口，可能会导致挂载失败</span></span><br><span class="line">/dev/sdb /mnt/pan ext4 defaults 0 0</span><br><span class="line">blkid|grep /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> nano /etc/fstab <span class="comment"># 使用UUID挂载分区，即使变更硬盘实际物理接口，也不会导致挂载失败</span></span><br><span class="line"><span class="comment"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span></span><br><span class="line"><span class="comment"># options：defaults - 使用文件系统的默认挂载参数</span></span><br><span class="line"><span class="comment"># dump：0 - 不备份</span></span><br><span class="line"><span class="comment"># pass：0代表不检查。对于根目录/和efi目录/boot/efi，该值必需为1。其余分区可以设置为2。优先检查根目录后就会检查设置为2的其他分区。</span></span><br><span class="line">UUID=uuid值 /mnt/share ext4 defaults 0 2</span><br><span class="line"><span class="comment"># mount -a用于挂载配置文件 /etc/fstab 中列出的所有文件系统，可以提前测试挂载情况，不至于配置写错导致重启进入紧急模式</span></span><br><span class="line">mount -a</span><br></pre></td></tr></table></figure>
-
-<h2 id="将-home目录挂载到新分区（或新硬盘）">7.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="查看硬盘是不是固态硬盘（SSD）">7.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
-
-<h1 id="网络">8 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">8.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
-<ul>
-<li>windows：ipconfig &#x2F;a</li>
-<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
-</ul>
-<p>网卡名称解析：</p>
-<ul>
-<li>lo：表示local</li>
-<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
-<li>en：表示ethernet以太网</li>
-<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
-</ul>
-<p>例子：</p>
-<ul>
-<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
-<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
-</ul>
-<h2 id="ubuntu配置网卡">8.2 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">addresses:</span><br><span class="line">- 192.168.1.10/24</span><br><span class="line">gateway4: 192.168.1.1</span><br><span class="line">nameservers:</span><br><span class="line">addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
-
-<h2 id="ssh登录远程服务器">8.3 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
-</div>
-<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
-<p>查看ssh版本：<code>ssh -V</code></p>
-<h3 id="生成SSH密钥和公钥">8.3.1 &nbsp&nbsp<a href="#生成SSH密钥和公钥" class="headerlink" title="生成SSH密钥和公钥"></a>生成SSH密钥和公钥</h3><div class="note primary no-icon"><ul>
-<li>Ed25519算法：一种基于椭圆曲线密码学的公钥签名算法，使用Curve25519曲线，其密钥长度较短但安全性较高，抵抗量子计算攻击的能力强。<ul>
-<li>Ed25519在签名和验证过程中通常比RSA更快速，尤其在移动设备等资源受限环境下性能表现更为突出。</li>
-</ul>
-</li>
-<li>RSA算法：基于大整数因子分解，其密钥长度需相对较长才能保证较高的安全性，且在量子计算攻击面前相对脆弱。</li>
-</ul>
-</div>
-
-<p>生成密钥和公钥的命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>命令解释：</p>
-<ul>
-<li>创建时不输入密码，直接回车两次就可以免密登录，否则每次验证公钥都需要输入密码。</li>
-<li><code>-C</code>：注释，用于标识该密钥的用途或者使用者，一般常用是邮件参数。若不使用该参数作注释，则默认是基于当前计算机的用户名和计算机名称生成注释：<code>name@DESKTOP-xxxxxxx</code>。</li>
-<li>ras算法生成密钥文件为<code>id_rsa</code>，公钥文件为<code>id_rsa.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
-<li>ed25519算法生成密钥文件为<code>id_ed25519</code>，公钥文件为<code>id_ed25519.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
-</ul>
-<h3 id="上传SSH公钥到远程服务器">8.3.2 &nbsp&nbsp<a href="#上传SSH公钥到远程服务器" class="headerlink" title="上传SSH公钥到远程服务器"></a>上传SSH公钥到远程服务器</h3><h4 id="方案一：ssh-copy-id命令">8.3.2.1 &nbsp&nbsp<a href="#方案一：ssh-copy-id命令" class="headerlink" title="方案一：ssh-copy-id命令"></a>方案一：<code>ssh-copy-id</code>命令</h4><p><code>ssh-copy-id</code>命令会提示输入远程账户密码，并自动将公钥自动复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id user@remote_host</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入密码验证成功之后，会输出如下信息</span></span><br><span class="line"><span class="comment"># Number of key(s) added: 1</span></span><br><span class="line"><span class="comment"># Now try logging into the machine, with: &quot;ssh &#x27;user@remote_host&#x27;&quot;</span></span><br><span class="line"><span class="comment"># and check to make sure that only the key(s) you wanted were added.</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="方案二：手动上传公钥">8.3.2.2 &nbsp&nbsp<a href="#方案二：手动上传公钥" class="headerlink" title="方案二：手动上传公钥"></a>方案二：手动上传公钥</h4><ol>
-<li>先通过普通密码登录远程服务器，进入<code>~/.ssh/</code>目录</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@remote_host</span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>将本机的公钥文件<code>id_ed25519.pub</code>或者<code>id_rsa.pub</code>文件内容复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件。若当前路径不存在该文件，则手动创建该文件。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line">nano ~/.ssh/authorized_keys</span><br><span class="line"><span class="comment"># 将公钥文件内容复制到authorized_keys文件中</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>后面正常<code>ssh user@remote_host</code>即可使用SSH密钥实现无密登录。</li>
-</ol>
-<h3 id="管理多个SSH远程服务器">8.3.3 &nbsp&nbsp<a href="#管理多个SSH远程服务器" class="headerlink" title="管理多个SSH远程服务器"></a>管理多个SSH远程服务器</h3><p>可以通过<code>~/.ssh/config</code>文件配置，实现管理多个SSH连接：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 维持 SSH 连接活跃，防止连接超时中断。客户端每隔 60 秒自动发送加密的&quot;保活&quot;数据包。</span></span><br><span class="line">ServerAliveInterval 60</span><br><span class="line"></span><br><span class="line">Host * <span class="comment"># 别名使用星号*，适用于其他单个配置信息，如果指定了IdentityFile，单个服务器可以不需要再额外指定IdentityFile参数。</span></span><br><span class="line">    AddKeysToAgent <span class="built_in">yes</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定单个服务器的配置信息</span></span><br><span class="line">Host remote_host_alias <span class="comment"># 远程服务器的别名</span></span><br><span class="line">    HostName remote_host <span class="comment"># 远程服务器的ip或者域名</span></span><br><span class="line">    User user <span class="comment"># 远程服务器系统用户名</span></span><br><span class="line">    Port 22 <span class="comment"># 远程服务器ssh的端口，参数缺省默认是22</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519 <span class="comment"># 指定验证使用的密钥文件（非公钥），rsa算法指定 ~/.ssh/id_rsa</span></span><br><span class="line">    ProxyCommand ssh -W %h:%p other_remote_host_alias <span class="comment"># 在windows中，ssh需要填写完整路径C:/Windows/System32/OpenSSH/ssh.exe，否则执行代理命令会报错。-W %h:%p将SSH流量转发到目标主机的指定端口，%h自动替换为目标主机地址，%p自动替换为目标主机端口。</span></span><br></pre></td></tr></table></figure>
-
-<p>配置完成之后，可以使用别名进行连接：<code>ssh remote_host_alias</code></p>
-<h3 id="Ubuntu开启ssh服务及允许root登录">8.3.4 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root登录" class="headerlink" title="Ubuntu开启ssh服务及允许root登录"></a>Ubuntu开启ssh服务及允许root登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="系统自启ssh服务">8.3.4.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用scp传递文件">8.3.5 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
-</div>
-<ol>
-<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
-<li>在PuTTY安装路径中打开终端窗口</li>
-<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
-</ol>
-<h1 id="远程控制软件">9 &nbsp&nbsp<a href="#远程控制软件" class="headerlink" title="远程控制软件"></a>远程控制软件</h1><h2 id="ubuntu-linux安装远程控制软件">9.1 &nbsp&nbsp<a href="#ubuntu-linux安装远程控制软件" class="headerlink" title="ubuntu linux安装远程控制软件"></a>ubuntu linux安装远程控制软件</h2><ul>
-<li>根据系统类型下载<a href="https://www.todesk.com/linux.html">官方安装包</a></li>
-<li>安装命令：<code>sudo apt-get install ./todesk-v4.7.2.0-amd64.deb</code></li>
-<li>运行命令：<code>todesk</code></li>
-</ul>
-<h2 id="arch-linux安装远程控制软件">9.2 &nbsp&nbsp<a href="#arch-linux安装远程控制软件" class="headerlink" title="arch linux安装远程控制软件"></a>arch linux安装远程控制软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
-<ul>
-<li>安装todesk：亦可下载<a href="https://www.todesk.com/linux.html">官方安装包</a>手动执行安装</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装teamviewer</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装向日葵</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure>
-
-<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
-<h1 id="开机排障">10 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">10.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
-<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
-<ul>
-<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
-<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
-</ul>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ubuntu紧急模式">10.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
-<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<h2 id="开机出现initramfs-requires-a-manual-fsck">10.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
-<ul>
-<li>异常断电或者关机引起文件数据损坏</li>
-<li>系统无法启动</li>
-<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
-</ul>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
-
-
-<h1 id="显卡驱动">11 &nbsp&nbsp<a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h1><h2 id="ubuntu-20-04安装英伟达nvidia闭源驱动">11.1 &nbsp&nbsp<a href="#ubuntu-20-04安装英伟达nvidia闭源驱动" class="headerlink" title="ubuntu 20.04安装英伟达nvidia闭源驱动"></a>ubuntu 20.04安装英伟达nvidia闭源驱动</h2><h3 id="运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version">11.1.1 &nbsp&nbsp<a href="#运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version" class="headerlink" title="运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version"></a>运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version</h3><p>故障原因：系统检测到驱动和NVML版本不一致的原因导致的。</p>
-<p>解决方法：<code>sudo reboot</code>重启系统即可。</p>
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.<br>[20] 【已解决】Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version: 535.161[EB&#x2F;OL]. <a href="https://blog.csdn.net/BetrayFree/article/details/137608544">https://blog.csdn.net/BetrayFree/article/details/137608544</a>.<br>[21] Runlevel  运行级别[EB&#x2F;OL]. <a href="https://en.wikipedia.org/wiki/Runlevel">https://en.wikipedia.org/wiki/Runlevel</a>.<br>[22] Linux tar: Cannot change ownership to [..]: Permission denied[EB&#x2F;OL]. <a href="https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/">https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/</a>.<br>[23] 生成新的 SSH 密钥并将其添加到 ssh-agent[EB&#x2F;OL]. <a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>.<br>[24] SSH生成SSH密钥（公钥和私钥）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_43420088/article/details/139775270">https://blog.csdn.net/qq_43420088/article/details/139775270</a>.<br>[25] 设置 SSH 跳板机[EB&#x2F;OL]. <a href="https://wwang721.github.io/myBlog/2019/10/15/ssh.html">https://wwang721.github.io/myBlog/2019/10/15/ssh.html</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>linux</tag>
-        <tag>终端</tag>
-        <tag>笔记</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>路由排障总结</title>
-    <url>/troubleshooting/router-troubleshooting/</url>
-    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-  </entry>
-  <entry>
     <title>运行库修复（Windows平台）</title>
     <url>/troubleshooting/runtime-library-repair-on-windows/</url>
     <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
@@ -8236,6 +8236,156 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>DirectX</tag>
         <tag>NET Framework</tag>
         <tag>Microsoft Visual C++ Runtime</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机软件排障总结</title>
+    <url>/troubleshooting/software-troubleshooting/</url>
+    <content><![CDATA[<h1 id="AIDA64">1 &nbsp&nbsp<a href="#AIDA64" class="headerlink" title="AIDA64"></a>AIDA64</h1><h2 id="AIDA64提示注册信息已损坏">1.1 &nbsp&nbsp<a href="#AIDA64提示注册信息已损坏" class="headerlink" title="AIDA64提示注册信息已损坏"></a>AIDA64提示注册信息已损坏</h2><p>aida64在windows系统时钟与互联网时钟不正确的时候，会导致报错提示「注册信息已损坏」</p>
+<h2 id="AIDA64检测不到CPU封装温度">1.2 &nbsp&nbsp<a href="#AIDA64检测不到CPU封装温度" class="headerlink" title="AIDA64检测不到CPU封装温度"></a>AIDA64检测不到CPU封装温度</h2><p>一般是软件版本并未适配主板型号（软件版本过旧或者主板型号过新），导致软件无法通过主板检测识别到对应的CPU封装温度。</p>
+<h1 id="WinRAR">2 &nbsp&nbsp<a href="#WinRAR" class="headerlink" title="WinRAR"></a>WinRAR</h1><ul>
+<li>开发商RARLAB官网地址：<a href="https://www.rarlab.com/">https://www.rarlab.com/</a></li>
+<li>发行商win.rar GmbH官网地址：<a href="https://www.win-rar.com/">https://www.win-rar.com/</a></li>
+<li>简体中文代理商官网地址：<a href="http://www.winrar.com.cn/">http://www.winrar.com.cn/</a></li>
+<li>WinRAR 7.12.0简中下载地址<ul>
+<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/wrr/winrar-x64-712sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/wrr/winrar-x64-712sc.exe</a></li>
+<li>rrlb版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/rrlb/winrar-x64-712sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/rrlb/winrar-x64-712sc.exe</a></li>
+</ul>
+</li>
+<li>WinRAR 7.11.0简中下载地址<ul>
+<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/wrr/winrar-x64-711sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/wrr/winrar-x64-711sc.exe</a></li>
+<li>rrlb版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/rrlb/winrar-x64-711sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/rrlb/winrar-x64-711sc.exe</a></li>
+</ul>
+</li>
+<li>WinRAR 7.1.0简中下载地址<ul>
+<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x64-701sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x64-701sc.exe</a></li>
+<li>wrr版（x32位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x32-701sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x32-701sc.exe</a></li>
+</ul>
+</li>
+<li>WinRAR 7.0.0简中下载地址<ul>
+<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x64-700sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x64-700sc.exe</a></li>
+<li>wrr版（x32位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x32-700sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x32-700sc.exe</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="rrlb和wrr链接版本的区别">2.1 &nbsp&nbsp<a href="#rrlb和wrr链接版本的区别" class="headerlink" title="rrlb和wrr链接版本的区别"></a>rrlb和wrr链接版本的区别</h2><ul>
+<li>rrlb：官网公开的下载地址是带广告免费版本，并且下载的中文版本无论是否注册都会有广告（和国内代理的版本一样）。</li>
+<li>wrr：官方暗链内部的无广告原版，wrr完成注册之后没有广告。</li>
+</ul>
+<h2 id="永久授权Winrar专用激活KEY方法-rarreg-key">2.2 &nbsp&nbsp<a href="#永久授权Winrar专用激活KEY方法-rarreg-key" class="headerlink" title="永久授权Winrar专用激活KEY方法(rarreg.key)"></a>永久授权Winrar专用激活KEY方法(rarreg.key)</h2><p>使用方法：将下列注册码保存为rarreg.key文件，和WinRAR的放置于一起，安装的时候程序自动拷贝rarreg.key的程序安装路径的根目录下。</p>
+<ul>
+<li>注册码1</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">Admin</span><br><span class="line">Unlimited Company License</span><br><span class="line">UID=1d7426b0b166c91c21ab</span><br><span class="line">641221225021abd0925f7c70456ecd71f724a7f5a00b0a0f7d19ee</span><br><span class="line">45c5e20951dae2857c2960fce6cb5ffde62890079861be57638717</span><br><span class="line">7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565</span><br><span class="line">b41bcf56929486b8bcdac33d50ecf773996076c281ccab247f6153</span><br><span class="line">ed97a3e4a4cb9bffbf35ed364a5cc6908fd2cdc84e9f53a33cf463</span><br><span class="line">9d85cd75291397987399f5159745c84654dfd11e471ec7a360b22a</span><br><span class="line">bbaf66105e62e8afa2d5d154b0c164b1f5377d2975460025531542</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注册码2</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">Federal Agency for Education</span><br><span class="line">1000000 PC usage license</span><br><span class="line">UID=b621cca9a84bc5deffbf</span><br><span class="line">6412612250ffbf533df6db2dfe8ccc3aae5362c06d54762105357d</span><br><span class="line">5e3b1489e751c76bf6e0640001014be50a52303fed29664b074145</span><br><span class="line">7e567d04159ad8defc3fb6edf32831fd1966f72c21c0c53c02fbbb</span><br><span class="line">2f91cfca671d9c482b11b8ac3281cb21378e85606494da349941fa</span><br><span class="line">e9ee328f12dc73e90b6356b921fbfb8522d6562a6a4b97e8ef6c9f</span><br><span class="line">fb866be1e3826b5aa126a4d2bfe9336ad63003fc0e71c307fc2c60</span><br><span class="line">64416495d4c55a0cc82d402110498da970812063934815d81470829275</span><br></pre></td></tr></table></figure>
+
+<h1 id="Adobe">3 &nbsp&nbsp<a href="#Adobe" class="headerlink" title="Adobe"></a>Adobe</h1><h2 id="Pr导出h265编码报错无法安装mc-enc-hevc">3.1 &nbsp&nbsp<a href="#Pr导出h265编码报错无法安装mc-enc-hevc" class="headerlink" title="Pr导出h265编码报错无法安装mc_enc_hevc"></a>Pr导出h265编码报错无法安装mc_enc_hevc</h2><p>提示报错信息：Unable to install:</p>
+<ul>
+<li>&quot;C:\User\Public\Documents\AdobeInstalledCodecsTier2\4.0\mc_enc_hevc.dll&quot;</li>
+<li>&quot;C:\User\Public\Documents\AdobeInstalledCodecsTier2\3.0\mc_enc_hevc.dll&quot;</li>
+<li>&quot;C:\Users\Public\Documents\AdobeInstalledCodecsTier2\2.0\mc_enc_hevc.dll&quot;</li>
+</ul>
+<p>原因：adobe的bug，实际就是因为无法在公共用户的Documents文件夹内生成mc_enc_hevc.dll文件。</p>
+<p>解决方法：</p>
+<ul>
+<li>新建其他的系统账户，用pr导出h265编码，可以看到Public路径成功生成dll，再切换回去原系统账户，并使用火绒添加文件保护，避免再次被删除。（实测可用）</li>
+<li>defender等杀毒软件添加dll路径的排除项（实测无效）</li>
+</ul>
+<p>相关故障报道：</p>
+<ul>
+<li><a href="https://community.adobe.com/t5/premiere-pro-discussions/unable-to-install-mc-enc-hevc-dll/td-p/12111305/page/2">https://community.adobe.com/t5/premiere-pro-discussions/unable-to-install-mc-enc-hevc-dll/td-p/12111305/page/2</a></li>
+<li><a href="https://mavicpilots.com/threads/h265-hevc-in-premiere-pro-2020-does-not-work.87493/">https://mavicpilots.com/threads/h265-hevc-in-premiere-pro-2020-does-not-work.87493/</a></li>
+<li><a href="https://community.adobe.com/t5/premiere-pro-bugs/unable-to-install-mc-enc-hevc-dll-for-hevc-decoding-encoding/idi-p/13590930">https://community.adobe.com/t5/premiere-pro-bugs/unable-to-install-mc-enc-hevc-dll-for-hevc-decoding-encoding/idi-p/13590930</a></li>
+<li><a href="https://www.youtube.com/watch?v=jxShFDfbr7Y">https://www.youtube.com/watch?v=jxShFDfbr7Y</a></li>
+</ul>
+<h1 id="火绒">4 &nbsp&nbsp<a href="#火绒" class="headerlink" title="火绒"></a>火绒</h1><h2 id="关于近期explorer误报问题说明">4.1 &nbsp&nbsp<a href="#关于近期explorer误报问题说明" class="headerlink" title="关于近期explorer误报问题说明"></a>关于近期explorer误报问题说明</h2><p>火绒官方给出的解决方法：<a href="https://bbs.huorong.cn/thread-136360-1-1.html">https://bbs.huorong.cn/thread-136360-1-1.html</a></p>
+<p>如果按照官方的方法操作后，在执行<code>start explorer.exe</code>依旧是提示找不到文件的话，证明后台依旧是被火绒强杀了。</p>
+<p>解决方案：</p>
+<ol>
+<li><code>cd /d &quot;C:\Program Files (x86)\Huorong\Sysdiag\bin\HipsMain.exe&quot;</code></li>
+<li>在火绒主界面恢复被误杀的explorer.exe文件，并添加白名单。</li>
+<li><code>start explorer.exe</code></li>
+</ol>
+<p>事件来龙去脉分析：<a href="https://www.zhihu.com/question/642107690">https://www.zhihu.com/question/642107690</a></p>
+<h1 id="剪映">5 &nbsp&nbsp<a href="#剪映" class="headerlink" title="剪映"></a>剪映</h1><h2 id="剪映电脑版（PC版）没有设置背景的选项？">5.1 &nbsp&nbsp<a href="#剪映电脑版（PC版）没有设置背景的选项？" class="headerlink" title="剪映电脑版（PC版）没有设置背景的选项？"></a>剪映电脑版（PC版）没有设置背景的选项？</h2><p>给视频加背景，需要将视频放入序列主轴上，才会出现背景选项。</p>
+<p>背景设置有4种方式：</p>
+<ol>
+<li>模糊：常见于画面无法填充满画布时，用来创建模糊背景填充空白地方。</li>
+<li>颜色</li>
+<li>样式</li>
+<li>品牌背景</li>
+</ol>
+<h1 id="WeGame腾讯平台游戏">6 &nbsp&nbsp<a href="#WeGame腾讯平台游戏" class="headerlink" title="WeGame腾讯平台游戏"></a>WeGame腾讯平台游戏</h1><h2 id="腾讯游戏-ACE-BASE-SYS-蓝屏">6.1 &nbsp&nbsp<a href="#腾讯游戏-ACE-BASE-SYS-蓝屏" class="headerlink" title="腾讯游戏 ACE BASE.SYS 蓝屏"></a>腾讯游戏 ACE BASE.SYS 蓝屏</h2><p>ACE Base.sys是腾讯反外挂的一个系统文件，当该文件出现不兼容的情况，腾讯系游戏都可能被该文件触发蓝屏。</p>
+<p>解决方法：</p>
+<ul>
+<li>等wegame更新</li>
+<li>重装游戏（确保清除老旧文件）</li>
+<li>更新系统（重装系统）</li>
+</ul>
+<p>以往一种植入假体的解决方法：在系统盘的system32&#x2F;drivers文件夹下建立一个只读的假体，分别是ACE-BASE.sys和ACE-GAME.sys两个文件，设置只读，并禁用掉Administrator的继承权。该法实测无效，估计应该是作为bug很早就被修复过了，问题可能是这儿的。</p>
+<h2 id="关于腾讯机器码">6.2 &nbsp&nbsp<a href="#关于腾讯机器码" class="headerlink" title="关于腾讯机器码"></a>关于腾讯机器码</h2><p>参考文章：<a href="https://tieba.baidu.com/p/7808678958">https://tieba.baidu.com/p/7808678958</a></p>
+<h1 id="Steam">7 &nbsp&nbsp<a href="#Steam" class="headerlink" title="Steam"></a>Steam</h1><h2 id="找回原有的steam安装的游戏（无需重新安装）">7.1 &nbsp&nbsp<a href="#找回原有的steam安装的游戏（无需重新安装）" class="headerlink" title="找回原有的steam安装的游戏（无需重新安装）"></a>找回原有的steam安装的游戏（无需重新安装）</h2><p>steam客户端-&gt;设置-&gt;存储空间-&gt;添加驱动器（点击盘符即可出现下拉选项弹窗）-&gt;添加新的Steam库文件夹（点击盘符即可出现下拉选项弹窗）</p>
+<p>P.S. 此法也可以定位到旧硬盘上的主steam程序本体路径下安装的游戏（非那种Steamlibrary目录），如果游戏较多较大，扫描时间会有点久，让它后台自行扫描。</p>
+<h1 id="CS2">8 &nbsp&nbsp<a href="#CS2" class="headerlink" title="CS2"></a>CS2</h1><h2 id="CS2添加启动参数调出启动项选择国服-国际服">8.1 &nbsp&nbsp<a href="#CS2添加启动参数调出启动项选择国服-国际服" class="headerlink" title="CS2添加启动参数调出启动项选择国服&#x2F;国际服"></a>CS2添加启动参数调出启动项选择国服&#x2F;国际服</h2><p>游戏-&gt;属性-&gt;通用-&gt;启动选项：<code>-promptperfectworld</code></p>
+<h1 id="浏览器">9 &nbsp&nbsp<a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="视频网站产生大量的indexeddb-blob本地缓存">9.1 &nbsp&nbsp<a href="#视频网站产生大量的indexeddb-blob本地缓存" class="headerlink" title="视频网站产生大量的indexeddb.blob本地缓存"></a>视频网站产生大量的indexeddb.blob本地缓存</h2><p>故障表现：C盘中出现大量的indexeddb.blob本地缓存文件，急剧占用C盘系统盘空间。</p>
+<p>目前遇到的平台：</p>
+<ul>
+<li>优酷网</li>
+<li>腾讯短时频</li>
+</ul>
+<p>解决方案：</p>
+<ol>
+<li>使用spacesniffer应用查看具体文件占用的路径</li>
+<li>手动删除indexeddb.blob文件（目前没有浏览器选项可以控制，本人猜测是视频网站使用了该功能作为视频缓存功能，这个技术理论上可以无限制地生成文件）。</li>
+</ol>
+<h1 id="Autodesk-3ds-Max">10 &nbsp&nbsp<a href="#Autodesk-3ds-Max" class="headerlink" title="Autodesk 3ds Max"></a>Autodesk 3ds Max</h1><p>3ds max已停止工作或者打开工程文件卡死无响应或者操作渲染时画面假死</p>
+<ul>
+<li>解决方法1：删除&#96;C:\users\Administrator\AppData\Local\Autodesk\3dsmax&#39;：移除所有崩溃信息和设置文件，即初始化至初始设置。</li>
+<li>解决方法2：系统自带的非英输入法开启兼容性设置（不单只微软拼音有反馈记录，也有网友反馈日文输入法也同样遇到这种现象）</li>
+<li>解决方法3：3Ds MAX安装根目录的dlcomponents文件夹内，找到DlComponentList_x64文件或者DlComponentList文件，删除并用删除文件的名称创建文件夹（作用原理就是win系统无法再二次生成同名称的文件，因为前面创建的文件夹名称一样且已存在）</li>
+</ul>
+<h1 id="企业微信">11 &nbsp&nbsp<a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h1><h2 id="在线表格报错：文档状态有更新-40036">11.1 &nbsp&nbsp<a href="#在线表格报错：文档状态有更新-40036" class="headerlink" title="在线表格报错：文档状态有更新(40036)"></a>在线表格报错：文档状态有更新(40036)</h2><p>故障表现：</p>
+<ol>
+<li>首先弹出提示「文档已在另一个标签页中打开离线编辑，请关闭对应标签页后再重新加载。」</li>
+<li>然后弹出报错「文档状态有更新(40036)」</li>
+</ol>
+<p>原因：qtCef缓存数据异常。</p>
+<p>解决方法：打开企业微信的设置页面，查看具体数据保存路径。关闭企微，找到路径，删除里面的qtCef文件夹，让程序重新运行自动生成。例如，默认路径为<code>C:\Users\User name\Documents\WXWork\qtCef</code>。</p>
+<h1 id="360系列软件">12 &nbsp&nbsp<a href="#360系列软件" class="headerlink" title="360系列软件"></a>360系列软件</h1><h2 id="360壁纸">12.1 &nbsp&nbsp<a href="#360壁纸" class="headerlink" title="360壁纸"></a>360壁纸</h2><p>360壁纸开关在360浏览器中设置，并不在360壁纸应用程序中。</p>
+<h1 id="ToDesk远程软件">13 &nbsp&nbsp<a href="#ToDesk远程软件" class="headerlink" title="ToDesk远程软件"></a>ToDesk远程软件</h1><h2 id="受控端为精简版时，ToDesk会话数受限">13.1 &nbsp&nbsp<a href="#受控端为精简版时，ToDesk会话数受限" class="headerlink" title="受控端为精简版时，ToDesk会话数受限"></a>受控端为精简版时，ToDesk会话数受限</h2><p>提示报错：当前会话数受限，请前往个人中心购买</p>
+<p>原因：ToDesk精简版出了新的限制（精简版界面标注内容：仅支持被控，免安装运行（该版本仅支持主控登录账号为VIP时连接使用））</p>
+<p>解决方法：被控ToDesk下载安装全功能版或是操控端账号升级至VIP。</p>
+<h1 id="LocalSend">14 &nbsp&nbsp<a href="#LocalSend" class="headerlink" title="LocalSend"></a>LocalSend</h1><h2 id="RhttpTimeoutException-Request-timed-out">14.1 &nbsp&nbsp<a href="#RhttpTimeoutException-Request-timed-out" class="headerlink" title="RhttpTimeoutException: Request timed out"></a>RhttpTimeoutException: Request timed out</h2><p>问题：手机往PC Windows系统传数据时，报错<code>RhttpTimeoutException: Request timed out</code>，但是PC往手机传数据正常。</p>
+<p>原因：Windows防火墙屏蔽了出口端口。一般是由于网络类型引起，例如网络类型被设置为「公用网络」。</p>
+<p>解决方法：将Windows的网络类型从「公用网络」切换为「专用网络」。</p>
+<h1 id="华硕软件">15 &nbsp&nbsp<a href="#华硕软件" class="headerlink" title="华硕软件"></a>华硕软件</h1><h2 id="关于华硕GPUTweakIII卸载一坨大垃圾残留日志">15.1 &nbsp&nbsp<a href="#关于华硕GPUTweakIII卸载一坨大垃圾残留日志" class="headerlink" title="关于华硕GPUTweakIII卸载一坨大垃圾残留日志"></a>关于华硕GPUTweakIII卸载一坨大垃圾残留日志</h2><p>2025-05-23T22:41:33+08:00通过SpaceSniffer查看分析C盘的文件，发现已卸载的华硕GPUTweakIII仍在C盘占用多达4.4GB的存储空间。进一步分析发现全是残留下来的日志文件。最大的日志文件<code>VenderLog.txt</code>大小高达1.64GB，真是一坨大屎。</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software-troubleshooting/asus_gputweaker_file1.webp">SpaceSniffer显示的大小</div>
+<div class="flex-column">
+<img data-src="/images/software-troubleshooting/asus_gputweaker_file2.webp">GPUTweakIII残留文件内容</div>
+<div class="flex-column">
+<img data-src="/images/software-troubleshooting/asus_gputweaker_file3.webp">GPUTweakIII的Logs文件夹属性</div>
+<div class="flex-column">
+<img data-src="/images/software-troubleshooting/asus_gputweaker_file4.webp">GPU Tweak III-0.log文件属性</div>
+</div>
+
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.<br>[7] RhttpTimeoutException: Request timed out[EB&#x2F;OL]. <a href="https://github.com/localsend/localsend/issues/2121">https://github.com/localsend/localsend/issues/2121</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>软件</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
       </tags>
   </entry>
   <entry>
@@ -8777,12 +8927,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#97;&#x6e;&#107;&#x79;&#x6f;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#99;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#x6b;&#x73;&#46;&#99;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#99;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#x63;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#x73;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#x6f;&#x75;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -8872,156 +9022,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>维修</tag>
         <tag>系统</tag>
         <tag>windows</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机软件排障总结</title>
-    <url>/troubleshooting/software-troubleshooting/</url>
-    <content><![CDATA[<h1 id="AIDA64">1 &nbsp&nbsp<a href="#AIDA64" class="headerlink" title="AIDA64"></a>AIDA64</h1><h2 id="AIDA64提示注册信息已损坏">1.1 &nbsp&nbsp<a href="#AIDA64提示注册信息已损坏" class="headerlink" title="AIDA64提示注册信息已损坏"></a>AIDA64提示注册信息已损坏</h2><p>aida64在windows系统时钟与互联网时钟不正确的时候，会导致报错提示「注册信息已损坏」</p>
-<h2 id="AIDA64检测不到CPU封装温度">1.2 &nbsp&nbsp<a href="#AIDA64检测不到CPU封装温度" class="headerlink" title="AIDA64检测不到CPU封装温度"></a>AIDA64检测不到CPU封装温度</h2><p>一般是软件版本并未适配主板型号（软件版本过旧或者主板型号过新），导致软件无法通过主板检测识别到对应的CPU封装温度。</p>
-<h1 id="WinRAR">2 &nbsp&nbsp<a href="#WinRAR" class="headerlink" title="WinRAR"></a>WinRAR</h1><ul>
-<li>开发商RARLAB官网地址：<a href="https://www.rarlab.com/">https://www.rarlab.com/</a></li>
-<li>发行商win.rar GmbH官网地址：<a href="https://www.win-rar.com/">https://www.win-rar.com/</a></li>
-<li>简体中文代理商官网地址：<a href="http://www.winrar.com.cn/">http://www.winrar.com.cn/</a></li>
-<li>WinRAR 7.12.0简中下载地址<ul>
-<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/wrr/winrar-x64-712sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/wrr/winrar-x64-712sc.exe</a></li>
-<li>rrlb版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/rrlb/winrar-x64-712sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/rrlb/winrar-x64-712sc.exe</a></li>
-</ul>
-</li>
-<li>WinRAR 7.11.0简中下载地址<ul>
-<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/wrr/winrar-x64-711sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/wrr/winrar-x64-711sc.exe</a></li>
-<li>rrlb版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/rrlb/winrar-x64-711sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20253103/rrlb/winrar-x64-711sc.exe</a></li>
-</ul>
-</li>
-<li>WinRAR 7.1.0简中下载地址<ul>
-<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x64-701sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x64-701sc.exe</a></li>
-<li>wrr版（x32位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x32-701sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x32-701sc.exe</a></li>
-</ul>
-</li>
-<li>WinRAR 7.0.0简中下载地址<ul>
-<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x64-700sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x64-700sc.exe</a></li>
-<li>wrr版（x32位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x32-700sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240306/wrr/winrar-x32-700sc.exe</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="rrlb和wrr链接版本的区别">2.1 &nbsp&nbsp<a href="#rrlb和wrr链接版本的区别" class="headerlink" title="rrlb和wrr链接版本的区别"></a>rrlb和wrr链接版本的区别</h2><ul>
-<li>rrlb：官网公开的下载地址是带广告免费版本，并且下载的中文版本无论是否注册都会有广告（和国内代理的版本一样）。</li>
-<li>wrr：官方暗链内部的无广告原版，wrr完成注册之后没有广告。</li>
-</ul>
-<h2 id="永久授权Winrar专用激活KEY方法-rarreg-key">2.2 &nbsp&nbsp<a href="#永久授权Winrar专用激活KEY方法-rarreg-key" class="headerlink" title="永久授权Winrar专用激活KEY方法(rarreg.key)"></a>永久授权Winrar专用激活KEY方法(rarreg.key)</h2><p>使用方法：将下列注册码保存为rarreg.key文件，和WinRAR的放置于一起，安装的时候程序自动拷贝rarreg.key的程序安装路径的根目录下。</p>
-<ul>
-<li>注册码1</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">Admin</span><br><span class="line">Unlimited Company License</span><br><span class="line">UID=1d7426b0b166c91c21ab</span><br><span class="line">641221225021abd0925f7c70456ecd71f724a7f5a00b0a0f7d19ee</span><br><span class="line">45c5e20951dae2857c2960fce6cb5ffde62890079861be57638717</span><br><span class="line">7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565</span><br><span class="line">b41bcf56929486b8bcdac33d50ecf773996076c281ccab247f6153</span><br><span class="line">ed97a3e4a4cb9bffbf35ed364a5cc6908fd2cdc84e9f53a33cf463</span><br><span class="line">9d85cd75291397987399f5159745c84654dfd11e471ec7a360b22a</span><br><span class="line">bbaf66105e62e8afa2d5d154b0c164b1f5377d2975460025531542</span><br></pre></td></tr></table></figure>
-<ul>
-<li>注册码2</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">Federal Agency for Education</span><br><span class="line">1000000 PC usage license</span><br><span class="line">UID=b621cca9a84bc5deffbf</span><br><span class="line">6412612250ffbf533df6db2dfe8ccc3aae5362c06d54762105357d</span><br><span class="line">5e3b1489e751c76bf6e0640001014be50a52303fed29664b074145</span><br><span class="line">7e567d04159ad8defc3fb6edf32831fd1966f72c21c0c53c02fbbb</span><br><span class="line">2f91cfca671d9c482b11b8ac3281cb21378e85606494da349941fa</span><br><span class="line">e9ee328f12dc73e90b6356b921fbfb8522d6562a6a4b97e8ef6c9f</span><br><span class="line">fb866be1e3826b5aa126a4d2bfe9336ad63003fc0e71c307fc2c60</span><br><span class="line">64416495d4c55a0cc82d402110498da970812063934815d81470829275</span><br></pre></td></tr></table></figure>
-
-<h1 id="Adobe">3 &nbsp&nbsp<a href="#Adobe" class="headerlink" title="Adobe"></a>Adobe</h1><h2 id="Pr导出h265编码报错无法安装mc-enc-hevc">3.1 &nbsp&nbsp<a href="#Pr导出h265编码报错无法安装mc-enc-hevc" class="headerlink" title="Pr导出h265编码报错无法安装mc_enc_hevc"></a>Pr导出h265编码报错无法安装mc_enc_hevc</h2><p>提示报错信息：Unable to install:</p>
-<ul>
-<li>&quot;C:\User\Public\Documents\AdobeInstalledCodecsTier2\4.0\mc_enc_hevc.dll&quot;</li>
-<li>&quot;C:\User\Public\Documents\AdobeInstalledCodecsTier2\3.0\mc_enc_hevc.dll&quot;</li>
-<li>&quot;C:\Users\Public\Documents\AdobeInstalledCodecsTier2\2.0\mc_enc_hevc.dll&quot;</li>
-</ul>
-<p>原因：adobe的bug，实际就是因为无法在公共用户的Documents文件夹内生成mc_enc_hevc.dll文件。</p>
-<p>解决方法：</p>
-<ul>
-<li>新建其他的系统账户，用pr导出h265编码，可以看到Public路径成功生成dll，再切换回去原系统账户，并使用火绒添加文件保护，避免再次被删除。（实测可用）</li>
-<li>defender等杀毒软件添加dll路径的排除项（实测无效）</li>
-</ul>
-<p>相关故障报道：</p>
-<ul>
-<li><a href="https://community.adobe.com/t5/premiere-pro-discussions/unable-to-install-mc-enc-hevc-dll/td-p/12111305/page/2">https://community.adobe.com/t5/premiere-pro-discussions/unable-to-install-mc-enc-hevc-dll/td-p/12111305/page/2</a></li>
-<li><a href="https://mavicpilots.com/threads/h265-hevc-in-premiere-pro-2020-does-not-work.87493/">https://mavicpilots.com/threads/h265-hevc-in-premiere-pro-2020-does-not-work.87493/</a></li>
-<li><a href="https://community.adobe.com/t5/premiere-pro-bugs/unable-to-install-mc-enc-hevc-dll-for-hevc-decoding-encoding/idi-p/13590930">https://community.adobe.com/t5/premiere-pro-bugs/unable-to-install-mc-enc-hevc-dll-for-hevc-decoding-encoding/idi-p/13590930</a></li>
-<li><a href="https://www.youtube.com/watch?v=jxShFDfbr7Y">https://www.youtube.com/watch?v=jxShFDfbr7Y</a></li>
-</ul>
-<h1 id="火绒">4 &nbsp&nbsp<a href="#火绒" class="headerlink" title="火绒"></a>火绒</h1><h2 id="关于近期explorer误报问题说明">4.1 &nbsp&nbsp<a href="#关于近期explorer误报问题说明" class="headerlink" title="关于近期explorer误报问题说明"></a>关于近期explorer误报问题说明</h2><p>火绒官方给出的解决方法：<a href="https://bbs.huorong.cn/thread-136360-1-1.html">https://bbs.huorong.cn/thread-136360-1-1.html</a></p>
-<p>如果按照官方的方法操作后，在执行<code>start explorer.exe</code>依旧是提示找不到文件的话，证明后台依旧是被火绒强杀了。</p>
-<p>解决方案：</p>
-<ol>
-<li><code>cd /d &quot;C:\Program Files (x86)\Huorong\Sysdiag\bin\HipsMain.exe&quot;</code></li>
-<li>在火绒主界面恢复被误杀的explorer.exe文件，并添加白名单。</li>
-<li><code>start explorer.exe</code></li>
-</ol>
-<p>事件来龙去脉分析：<a href="https://www.zhihu.com/question/642107690">https://www.zhihu.com/question/642107690</a></p>
-<h1 id="剪映">5 &nbsp&nbsp<a href="#剪映" class="headerlink" title="剪映"></a>剪映</h1><h2 id="剪映电脑版（PC版）没有设置背景的选项？">5.1 &nbsp&nbsp<a href="#剪映电脑版（PC版）没有设置背景的选项？" class="headerlink" title="剪映电脑版（PC版）没有设置背景的选项？"></a>剪映电脑版（PC版）没有设置背景的选项？</h2><p>给视频加背景，需要将视频放入序列主轴上，才会出现背景选项。</p>
-<p>背景设置有4种方式：</p>
-<ol>
-<li>模糊：常见于画面无法填充满画布时，用来创建模糊背景填充空白地方。</li>
-<li>颜色</li>
-<li>样式</li>
-<li>品牌背景</li>
-</ol>
-<h1 id="WeGame腾讯平台游戏">6 &nbsp&nbsp<a href="#WeGame腾讯平台游戏" class="headerlink" title="WeGame腾讯平台游戏"></a>WeGame腾讯平台游戏</h1><h2 id="腾讯游戏-ACE-BASE-SYS-蓝屏">6.1 &nbsp&nbsp<a href="#腾讯游戏-ACE-BASE-SYS-蓝屏" class="headerlink" title="腾讯游戏 ACE BASE.SYS 蓝屏"></a>腾讯游戏 ACE BASE.SYS 蓝屏</h2><p>ACE Base.sys是腾讯反外挂的一个系统文件，当该文件出现不兼容的情况，腾讯系游戏都可能被该文件触发蓝屏。</p>
-<p>解决方法：</p>
-<ul>
-<li>等wegame更新</li>
-<li>重装游戏（确保清除老旧文件）</li>
-<li>更新系统（重装系统）</li>
-</ul>
-<p>以往一种植入假体的解决方法：在系统盘的system32&#x2F;drivers文件夹下建立一个只读的假体，分别是ACE-BASE.sys和ACE-GAME.sys两个文件，设置只读，并禁用掉Administrator的继承权。该法实测无效，估计应该是作为bug很早就被修复过了，问题可能是这儿的。</p>
-<h2 id="关于腾讯机器码">6.2 &nbsp&nbsp<a href="#关于腾讯机器码" class="headerlink" title="关于腾讯机器码"></a>关于腾讯机器码</h2><p>参考文章：<a href="https://tieba.baidu.com/p/7808678958">https://tieba.baidu.com/p/7808678958</a></p>
-<h1 id="Steam">7 &nbsp&nbsp<a href="#Steam" class="headerlink" title="Steam"></a>Steam</h1><h2 id="找回原有的steam安装的游戏（无需重新安装）">7.1 &nbsp&nbsp<a href="#找回原有的steam安装的游戏（无需重新安装）" class="headerlink" title="找回原有的steam安装的游戏（无需重新安装）"></a>找回原有的steam安装的游戏（无需重新安装）</h2><p>steam客户端-&gt;设置-&gt;存储空间-&gt;添加驱动器（点击盘符即可出现下拉选项弹窗）-&gt;添加新的Steam库文件夹（点击盘符即可出现下拉选项弹窗）</p>
-<p>P.S. 此法也可以定位到旧硬盘上的主steam程序本体路径下安装的游戏（非那种Steamlibrary目录），如果游戏较多较大，扫描时间会有点久，让它后台自行扫描。</p>
-<h1 id="CS2">8 &nbsp&nbsp<a href="#CS2" class="headerlink" title="CS2"></a>CS2</h1><h2 id="CS2添加启动参数调出启动项选择国服-国际服">8.1 &nbsp&nbsp<a href="#CS2添加启动参数调出启动项选择国服-国际服" class="headerlink" title="CS2添加启动参数调出启动项选择国服&#x2F;国际服"></a>CS2添加启动参数调出启动项选择国服&#x2F;国际服</h2><p>游戏-&gt;属性-&gt;通用-&gt;启动选项：<code>-promptperfectworld</code></p>
-<h1 id="浏览器">9 &nbsp&nbsp<a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="视频网站产生大量的indexeddb-blob本地缓存">9.1 &nbsp&nbsp<a href="#视频网站产生大量的indexeddb-blob本地缓存" class="headerlink" title="视频网站产生大量的indexeddb.blob本地缓存"></a>视频网站产生大量的indexeddb.blob本地缓存</h2><p>故障表现：C盘中出现大量的indexeddb.blob本地缓存文件，急剧占用C盘系统盘空间。</p>
-<p>目前遇到的平台：</p>
-<ul>
-<li>优酷网</li>
-<li>腾讯短时频</li>
-</ul>
-<p>解决方案：</p>
-<ol>
-<li>使用spacesniffer应用查看具体文件占用的路径</li>
-<li>手动删除indexeddb.blob文件（目前没有浏览器选项可以控制，本人猜测是视频网站使用了该功能作为视频缓存功能，这个技术理论上可以无限制地生成文件）。</li>
-</ol>
-<h1 id="Autodesk-3ds-Max">10 &nbsp&nbsp<a href="#Autodesk-3ds-Max" class="headerlink" title="Autodesk 3ds Max"></a>Autodesk 3ds Max</h1><p>3ds max已停止工作或者打开工程文件卡死无响应或者操作渲染时画面假死</p>
-<ul>
-<li>解决方法1：删除&#96;C:\users\Administrator\AppData\Local\Autodesk\3dsmax&#39;：移除所有崩溃信息和设置文件，即初始化至初始设置。</li>
-<li>解决方法2：系统自带的非英输入法开启兼容性设置（不单只微软拼音有反馈记录，也有网友反馈日文输入法也同样遇到这种现象）</li>
-<li>解决方法3：3Ds MAX安装根目录的dlcomponents文件夹内，找到DlComponentList_x64文件或者DlComponentList文件，删除并用删除文件的名称创建文件夹（作用原理就是win系统无法再二次生成同名称的文件，因为前面创建的文件夹名称一样且已存在）</li>
-</ul>
-<h1 id="企业微信">11 &nbsp&nbsp<a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h1><h2 id="在线表格报错：文档状态有更新-40036">11.1 &nbsp&nbsp<a href="#在线表格报错：文档状态有更新-40036" class="headerlink" title="在线表格报错：文档状态有更新(40036)"></a>在线表格报错：文档状态有更新(40036)</h2><p>故障表现：</p>
-<ol>
-<li>首先弹出提示「文档已在另一个标签页中打开离线编辑，请关闭对应标签页后再重新加载。」</li>
-<li>然后弹出报错「文档状态有更新(40036)」</li>
-</ol>
-<p>原因：qtCef缓存数据异常。</p>
-<p>解决方法：打开企业微信的设置页面，查看具体数据保存路径。关闭企微，找到路径，删除里面的qtCef文件夹，让程序重新运行自动生成。例如，默认路径为<code>C:\Users\User name\Documents\WXWork\qtCef</code>。</p>
-<h1 id="360系列软件">12 &nbsp&nbsp<a href="#360系列软件" class="headerlink" title="360系列软件"></a>360系列软件</h1><h2 id="360壁纸">12.1 &nbsp&nbsp<a href="#360壁纸" class="headerlink" title="360壁纸"></a>360壁纸</h2><p>360壁纸开关在360浏览器中设置，并不在360壁纸应用程序中。</p>
-<h1 id="ToDesk远程软件">13 &nbsp&nbsp<a href="#ToDesk远程软件" class="headerlink" title="ToDesk远程软件"></a>ToDesk远程软件</h1><h2 id="受控端为精简版时，ToDesk会话数受限">13.1 &nbsp&nbsp<a href="#受控端为精简版时，ToDesk会话数受限" class="headerlink" title="受控端为精简版时，ToDesk会话数受限"></a>受控端为精简版时，ToDesk会话数受限</h2><p>提示报错：当前会话数受限，请前往个人中心购买</p>
-<p>原因：ToDesk精简版出了新的限制（精简版界面标注内容：仅支持被控，免安装运行（该版本仅支持主控登录账号为VIP时连接使用））</p>
-<p>解决方法：被控ToDesk下载安装全功能版或是操控端账号升级至VIP。</p>
-<h1 id="LocalSend">14 &nbsp&nbsp<a href="#LocalSend" class="headerlink" title="LocalSend"></a>LocalSend</h1><h2 id="RhttpTimeoutException-Request-timed-out">14.1 &nbsp&nbsp<a href="#RhttpTimeoutException-Request-timed-out" class="headerlink" title="RhttpTimeoutException: Request timed out"></a>RhttpTimeoutException: Request timed out</h2><p>问题：手机往PC Windows系统传数据时，报错<code>RhttpTimeoutException: Request timed out</code>，但是PC往手机传数据正常。</p>
-<p>原因：Windows防火墙屏蔽了出口端口。一般是由于网络类型引起，例如网络类型被设置为「公用网络」。</p>
-<p>解决方法：将Windows的网络类型从「公用网络」切换为「专用网络」。</p>
-<h1 id="华硕软件">15 &nbsp&nbsp<a href="#华硕软件" class="headerlink" title="华硕软件"></a>华硕软件</h1><h2 id="关于华硕GPUTweakIII卸载一坨大垃圾残留日志">15.1 &nbsp&nbsp<a href="#关于华硕GPUTweakIII卸载一坨大垃圾残留日志" class="headerlink" title="关于华硕GPUTweakIII卸载一坨大垃圾残留日志"></a>关于华硕GPUTweakIII卸载一坨大垃圾残留日志</h2><p>2025-05-23T22:41:33+08:00通过SpaceSniffer查看分析C盘的文件，发现已卸载的华硕GPUTweakIII仍在C盘占用多达4.4GB的存储空间。进一步分析发现全是残留下来的日志文件。最大的日志文件<code>VenderLog.txt</code>大小高达1.64GB，真是一坨大屎。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software-troubleshooting/asus_gputweaker_file1.webp">SpaceSniffer显示的大小</div>
-<div class="flex-column">
-<img data-src="/images/software-troubleshooting/asus_gputweaker_file2.webp">GPUTweakIII残留文件内容</div>
-<div class="flex-column">
-<img data-src="/images/software-troubleshooting/asus_gputweaker_file3.webp">GPUTweakIII的Logs文件夹属性</div>
-<div class="flex-column">
-<img data-src="/images/software-troubleshooting/asus_gputweaker_file4.webp">GPU Tweak III-0.log文件属性</div>
-</div>
-
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.<br>[7] RhttpTimeoutException: Request timed out[EB&#x2F;OL]. <a href="https://github.com/localsend/localsend/issues/2121">https://github.com/localsend/localsend/issues/2121</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>软件</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
         <tag>维护</tag>
@@ -11218,57 +11218,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>第二版</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -11303,6 +11252,93 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -11449,39 +11485,31 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
+<ul>
+<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
+<li>main.cpp：主程序入口文件，实现main函数</li>
+<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
+<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
+<li>widget.cpp：是实现文件</li>
+<li>res.qrc：资源文件</li>
 </ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
+<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
+
+<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
 ]]></content>
       <categories>
         <category>code-training</category>
-        <category>head-first-html-css-v2</category>
+        <category>qt6-cpp-development-guide</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
+        <tag>总结</tag>
+        <tag>qt</tag>
         <tag>第二章</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
+        <tag>qt6</tag>
       </tags>
   </entry>
   <entry>
@@ -11746,34 +11774,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
-<ul>
-<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
-<li>main.cpp：主程序入口文件，实现main函数</li>
-<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
-<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
-<li>widget.cpp：是实现文件</li>
-<li>res.qrc：资源文件</li>
-</ul>
-<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
-
-<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第二章</tag>
-        <tag>qt6</tag>
       </tags>
   </entry>
   <entry>
@@ -12685,7 +12685,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#109;&#105;&#x73;&#116;&#x65;&#114;&#x6b;&#105;&#110;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#110;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
