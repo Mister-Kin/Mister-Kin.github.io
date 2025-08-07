@@ -1293,6 +1293,7 @@
     </div>
     <a href="https://www.asus.com.cn/support/article/642/">华硕-质保条款</a>
     <a href="https://www.asus.com.cn/support/warranty-status-inquiry/">华硕-质保期限查询（主板若注册一年换新则无法查）</a>
+    <a href="https://event.asus.com.cn/2011/4years/regProduct.asp">华硕-主板注册四年质保</a>
     <a href="https://acs.asus.com.cn/huanxin/webentrance/">华硕-主板一年换新（微信访问）</a>
     <a href="https://acs.asus.com.cn/huanxin/register/JD/">华硕-主板一年换新（京东）</a>
     <a href="https://acs.asus.com.cn/huanxin/register/tmall">华硕-主板一年换新（天猫电商专供）</a>
@@ -2271,6 +2272,37 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Bash Shell总结笔记</title>
+    <url>/code/bash/</url>
+    <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
+<p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p>
+<h1 id="shell提示符">2 &nbsp&nbsp<a href="#shell提示符" class="headerlink" title="shell提示符"></a>shell提示符</h1><p>shell命令行界面（CLI）</p>
+<h1 id="bash的配置">3 &nbsp&nbsp<a href="#bash的配置" class="headerlink" title="bash的配置"></a>bash的配置</h1><p>source ~&#x2F;.bashrc<br>source ~&#x2F;.profile<br>echo &#39;export APP&#x3D;&#x2F;opt&#x2F;tinyos-2.x&#x2F;apps&#39; &gt;&gt; ~&#x2F;.bashrc</p>
+<h2 id="删除Git-Bash历史记录">3.1 &nbsp&nbsp<a href="#删除Git-Bash历史记录" class="headerlink" title="删除Git Bash历史记录"></a>删除Git Bash历史记录</h2><p>在<code>%USERPROFILE%</code>（用户配置路径）下找到.bash_history删除即可。</p>
+<h1 id="参数表达式">4 &nbsp&nbsp<a href="#参数表达式" class="headerlink" title="参数表达式"></a><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">参数表达式</a></h1><h2 id="前缀和后缀的获取">4.1 &nbsp&nbsp<a href="#前缀和后缀的获取" class="headerlink" title="前缀和后缀的获取"></a>前缀和后缀的获取</h2><p><code>$&#123;file%.*&#125;</code>：移除最后一个点之后的内容<br><code>$&#123;file%%.*&#125;</code>：移除第一个点之后的内容<br><code>$&#123;file#*.&#125;</code>：移除第一个点之前的内容<br><code>$&#123;file##*.&#125;</code>：移除最后一个点之前的内容</p>
+<h1 id="test">5 &nbsp&nbsp<a href="#test" class="headerlink" title="test"></a>test</h1><p>test可以与&amp;&amp;组成一个条件判断，无需用if命令。</p>
+<h1 id="case">6 &nbsp&nbsp<a href="#case" class="headerlink" title="case"></a>case</h1><p>case命令，无法使用test命令。<br>case不能用正则表达，只用<a href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching">样式匹配</a>。</p>
+<h1 id="删除特定目录下所有文件，但排除部分文件">7 &nbsp&nbsp<a href="#删除特定目录下所有文件，但排除部分文件" class="headerlink" title="删除特定目录下所有文件，但排除部分文件"></a>删除特定目录下所有文件，但排除部分文件</h1><p><code>find /path/to/directory -type f ! -name &#39;file_prefix*&#39; | xargs rm -rf</code></p>
+<h1 id="Bash脚本加密解密">8 &nbsp&nbsp<a href="#Bash脚本加密解密" class="headerlink" title="Bash脚本加密解密"></a>Bash脚本加密解密</h1><p><a href="https://www.jb51.net/article/216095.htm">https://www.jb51.net/article/216095.htm</a><br><a href="https://www.qcgzxw.cn/575.html">https://www.qcgzxw.cn/575.html</a></p>
+<h1 id="文本编辑">9 &nbsp&nbsp<a href="#文本编辑" class="headerlink" title="文本编辑"></a>文本编辑</h1><h2 id="编辑并同时备份的命令">9.1 &nbsp&nbsp<a href="#编辑并同时备份的命令" class="headerlink" title="编辑并同时备份的命令"></a>编辑并同时备份的命令</h2><ul>
+<li><code>set -i.bak</code>：编辑并同时创建一个<code>.bak</code>后缀的备份文件</li>
+<li><code>sed -i_orig</code>：编辑并同时创建一个<code>_orig</code>后缀的备份文件</li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BLUM R, BRESNAHAN C. Linux 命令行与 shell 脚本编程大全[M]. 门佳, 武海峰, 译. 3 版. 北京: 人民邮电出版社, 2016.<br>[2] GNU Bash[EB&#x2F;OL]. <a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>.<br>[3] Test variable in a bash case statement[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/205084/test%E2%80%91variable%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://unix.stackexchange.com/questions/205084/test‑variable‑in‑a‑bash‑case‑statement</a>.<br>[4] Regular expressions in a Bash case statement[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/9631335/regular%E2%80%91expressions%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://stackoverflow.com/questions/9631335/regular‑expressions‑in‑a‑bash‑case‑statement</a>.<br>[5] Adding suffix to filename during for loop in bash[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/600051/adding%E2%80%91suffix%E2%80%91to%E2%80%91filename%E2%80%91during%E2%80%91for%E2%80%91loop%E2%80%91in%E2%80%91bash">https://unix.stackexchange.com/questions/600051/adding‑suffix‑to‑filename‑during‑for‑loop‑in‑bash</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>bash</tag>
+        <tag>shell</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bat&amp;Powershell语法总结笔记</title>
     <url>/code/bat-powershell/</url>
     <content><![CDATA[<div class="note danger no-icon"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
@@ -2389,46 +2421,15 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
+        <tag>终端</tag>
         <tag>bat</tag>
         <tag>cmd</tag>
         <tag>语法</tag>
         <tag>笔记</tag>
-        <tag>终端</tag>
         <tag>windows</tag>
         <tag>运维</tag>
         <tag>powershell</tag>
         <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Bash Shell总结笔记</title>
-    <url>/code/bash/</url>
-    <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
-<p>Bash是GNU项目的shell，即Bourne Again SHell。这是一个由Bourne shell（sh）发展而来的shell，并且兼容sh，包含不少korn shell（ksh）和c shell（csh）的优点。大部分Linux发行版都预装了bash，并且大多数sh脚本（由多个shell命令组成的文件）无需修改即可通过bash运行。</p>
-<h1 id="shell提示符">2 &nbsp&nbsp<a href="#shell提示符" class="headerlink" title="shell提示符"></a>shell提示符</h1><p>shell命令行界面（CLI）</p>
-<h1 id="bash的配置">3 &nbsp&nbsp<a href="#bash的配置" class="headerlink" title="bash的配置"></a>bash的配置</h1><p>source ~&#x2F;.bashrc<br>source ~&#x2F;.profile<br>echo &#39;export APP&#x3D;&#x2F;opt&#x2F;tinyos-2.x&#x2F;apps&#39; &gt;&gt; ~&#x2F;.bashrc</p>
-<h2 id="删除Git-Bash历史记录">3.1 &nbsp&nbsp<a href="#删除Git-Bash历史记录" class="headerlink" title="删除Git Bash历史记录"></a>删除Git Bash历史记录</h2><p>在<code>%USERPROFILE%</code>（用户配置路径）下找到.bash_history删除即可。</p>
-<h1 id="参数表达式">4 &nbsp&nbsp<a href="#参数表达式" class="headerlink" title="参数表达式"></a><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">参数表达式</a></h1><h2 id="前缀和后缀的获取">4.1 &nbsp&nbsp<a href="#前缀和后缀的获取" class="headerlink" title="前缀和后缀的获取"></a>前缀和后缀的获取</h2><p><code>$&#123;file%.*&#125;</code>：移除最后一个点之后的内容<br><code>$&#123;file%%.*&#125;</code>：移除第一个点之后的内容<br><code>$&#123;file#*.&#125;</code>：移除第一个点之前的内容<br><code>$&#123;file##*.&#125;</code>：移除最后一个点之前的内容</p>
-<h1 id="test">5 &nbsp&nbsp<a href="#test" class="headerlink" title="test"></a>test</h1><p>test可以与&amp;&amp;组成一个条件判断，无需用if命令。</p>
-<h1 id="case">6 &nbsp&nbsp<a href="#case" class="headerlink" title="case"></a>case</h1><p>case命令，无法使用test命令。<br>case不能用正则表达，只用<a href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching">样式匹配</a>。</p>
-<h1 id="删除特定目录下所有文件，但排除部分文件">7 &nbsp&nbsp<a href="#删除特定目录下所有文件，但排除部分文件" class="headerlink" title="删除特定目录下所有文件，但排除部分文件"></a>删除特定目录下所有文件，但排除部分文件</h1><p><code>find /path/to/directory -type f ! -name &#39;file_prefix*&#39; | xargs rm -rf</code></p>
-<h1 id="Bash脚本加密解密">8 &nbsp&nbsp<a href="#Bash脚本加密解密" class="headerlink" title="Bash脚本加密解密"></a>Bash脚本加密解密</h1><p><a href="https://www.jb51.net/article/216095.htm">https://www.jb51.net/article/216095.htm</a><br><a href="https://www.qcgzxw.cn/575.html">https://www.qcgzxw.cn/575.html</a></p>
-<h1 id="文本编辑">9 &nbsp&nbsp<a href="#文本编辑" class="headerlink" title="文本编辑"></a>文本编辑</h1><h2 id="编辑并同时备份的命令">9.1 &nbsp&nbsp<a href="#编辑并同时备份的命令" class="headerlink" title="编辑并同时备份的命令"></a>编辑并同时备份的命令</h2><ul>
-<li><code>set -i.bak</code>：编辑并同时创建一个<code>.bak</code>后缀的备份文件</li>
-<li><code>sed -i_orig</code>：编辑并同时创建一个<code>_orig</code>后缀的备份文件</li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BLUM R, BRESNAHAN C. Linux 命令行与 shell 脚本编程大全[M]. 门佳, 武海峰, 译. 3 版. 北京: 人民邮电出版社, 2016.<br>[2] GNU Bash[EB&#x2F;OL]. <a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>.<br>[3] Test variable in a bash case statement[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/205084/test%E2%80%91variable%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://unix.stackexchange.com/questions/205084/test‑variable‑in‑a‑bash‑case‑statement</a>.<br>[4] Regular expressions in a Bash case statement[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/9631335/regular%E2%80%91expressions%E2%80%91in%E2%80%91a%E2%80%91bash%E2%80%91case%E2%80%91statement">https://stackoverflow.com/questions/9631335/regular‑expressions‑in‑a‑bash‑case‑statement</a>.<br>[5] Adding suffix to filename during for loop in bash[EB&#x2F;OL]. <a href="https://unix.stackexchange.com/questions/600051/adding%E2%80%91suffix%E2%80%91to%E2%80%91filename%E2%80%91during%E2%80%91for%E2%80%91loop%E2%80%91in%E2%80%91bash">https://unix.stackexchange.com/questions/600051/adding‑suffix‑to‑filename‑during‑for‑loop‑in‑bash</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>终端</tag>
-        <tag>bash</tag>
-        <tag>shell</tag>
-        <tag>系统</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2729,7 +2730,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <td align="left"></td>
 </tr>
 <tr>
-<td align="center">docker exec -it container_name &#x2F;bin&#x2F;bash</td>
+<td align="center">docker exec -it container_name &#x2F;bin&#x2F;bash<br>docker exec -it container_name sh</td>
 <td align="center">进入指定容器的交互式终端</td>
 <td align="left">-i: 交互式操作<br>-t: 终端<br>-it：以交互式终端运行容器，例如 docker exec -it container_name bash</td>
 </tr>
@@ -2876,13 +2877,13 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <li>docker实现的终端功能只有简单shell命令，因此终端更多是使用docker相关命令，其余复杂的操作，还是推荐ssh连接到服务器进行操作。</li>
 </ul>
 </div>
-<div class="note default no-icon"><p><code>/opt/stacks</code>路径下任意文件夹的名称都是作为堆栈stack名称，显示在dockge网页管理后台上。其中，在文件夹内，<code>docker-compose.yml</code>或者<code>compose.yml</code>文件名称是必需，其他自定义文件名称，dockge将无法识别。</p>
-<p>例如，<code>/opt/stacks/dockge</code>文件夹，在dockge网页管理后台上显示为<code>dockge</code>。如果有多个服务器都需要安装dockge，文件夹名称可以加上<code>-server</code>后缀以方便标识，例如<code>dockge-server</code>。</p>
+<div class="note default no-icon"><p><code>/root/dockge_stacks</code>路径下任意文件夹的名称都是作为堆栈stack名称，显示在dockge网页管理后台上。其中，在文件夹内，<code>docker-compose.yml</code>或者<code>compose.yml</code>文件名称是必需，其他自定义文件名称，dockge将无法识别。</p>
+<p>例如，<code>/root/dockge_stacks/dockge</code>文件夹，在dockge网页管理后台上显示为<code>dockge</code>。如果有多个服务器都需要安装dockge，文件夹名称可以加上<code>-server</code>后缀以方便标识，例如<code>dockge-server</code>。</p>
 </div>
 
 <ol>
-<li>创建stacks文件夹（建议加上<code>-xxx</code>后缀以方便标识）： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /opt/stacks/dockge</span><br></pre></td></tr></table></figure></li>
-<li>创建<code>dockge</code>的<code>docker-compose.yml</code>文件：<code>nano /opt/stacks/dockge/docker-compose.yml</code> <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">dockge:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">louislam/dockge:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">dockge</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">5001</span><span class="string">:5001</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/root/dockge_data:/app/data</span></span><br><span class="line">    <span class="comment"># Stacks Directory</span></span><br><span class="line">    <span class="comment"># ⚠️ READ IT CAREFULLY. If you did it wrong, your data could end up writing into a WRONG PATH.</span></span><br><span class="line">    <span class="comment"># ⚠️ 1. FULL path only. No relative path (MUST)</span></span><br><span class="line">    <span class="comment"># ⚠️ 2. Left Stacks Path === Right Stacks Path (MUST)</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/opt/stacks:/opt/stacks</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">    <span class="comment"># Tell Dockge where to find the stacks</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">DOCKGE_STACKS_DIR=/opt/stacks</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">DOCKGE_ENABLE_CONSOLE=true</span></span><br></pre></td></tr></table></figure></li>
+<li>创建stacks文件夹（建议加上<code>-xxx</code>后缀以方便标识）： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /root/dockge_stacks/dockge</span><br></pre></td></tr></table></figure></li>
+<li>创建<code>dockge</code>的<code>docker-compose.yml</code>文件：<code>nano /root/dockge_stacks/dockge/docker-compose.yml</code> <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">dockge:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">louislam/dockge:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">dockge</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5001</span><span class="string">:5001</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/dockge_data:/app/data</span> <span class="comment"># dockge的数据路径</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/dockge_stacks:/opt/stacks</span> <span class="comment"># dockge的stacks堆栈路径，所有docker-compose.yml都在这里管理</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># Tell Dockge where to find the stacks</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">DOCKGE_STACKS_DIR=/opt/stacks</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">DOCKGE_ENABLE_CONSOLE=true</span></span><br></pre></td></tr></table></figure></li>
 <li>进入到对应<code>dockge-[xxx]</code>路径，运行dockge服务：<code>docker compose -f docker-compose.yml up -d</code>。</li>
 <li>访问dockge网页管理后台：<code>http://10.10.10.10:5001</code>。初次访问会提示创建用户和密码。</li>
 </ol>
@@ -3049,7 +3050,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano /root/docker-compose.yml</span><br><span class="line">docker compose -f docker-compose.yml up -d</span><br></pre></td></tr></table></figure>
 
 <p><code>docker-compose.yml</code>内容：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">gitea:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">server:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitea/gitea:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_UID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_GID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__DB_TYPE=mysql</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__HOST=database:3306</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__NAME=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__PASSWD=normalpdxxx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/gitea:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3000:3000&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;222:22&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">database</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">database:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3306:3306&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_ROOT_PASSWORD=rootpdxxx</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_DATABASE=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_PASSWORD=normalpdxxx</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 映射数据目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/data:/var/lib/mysql</span></span><br><span class="line">      <span class="comment"># 映射配置目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/conf.d:/etc/mysql/conf.d</span></span><br><span class="line">      <span class="comment"># 映射日志目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/log:/var/log/mysql</span></span><br><span class="line">      <span class="comment"># 让容器的时钟与宿主机时钟同步，避免时间的问题，ro是read only的意思，就是只读。</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">runner:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitea/act_runner:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">runner</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18088:18088&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">CONFIG_FILE=/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_INSTANCE_URL=http://10.10.10.10:3000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_REGISTRATION_TOKEN=xxx_token</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_NAME=$&#123;RUNNER_NAME&#125;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_LABELS=$&#123;RUNNER_LABELS&#125;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner_config.yaml:/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner_cache:/root/.cache</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">server</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">gitea:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">server:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitea/gitea:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_UID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">USER_GID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__DB_TYPE=mysql</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__HOST=database:3306</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__NAME=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA__database__PASSWD=normalpdxxx</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/gitea:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3000:3000&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;222:22&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">database</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">database:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3306:3306&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_ROOT_PASSWORD=rootpdxxx</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_DATABASE=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_USER=gitea</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_PASSWORD=normalpdxxx</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 映射目录，宿主机:容器</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/data:/var/lib/mysql</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/mysql/conf.d:/etc/mysql/conf.d</span></span><br><span class="line">      <span class="comment"># 让容器的时钟与宿主机时钟同步，避免时间的问题，ro是read only的意思，就是只读。</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">runner:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">gitea/act_runner:nightly</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">runner</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18088:18088&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">CONFIG_FILE=/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_INSTANCE_URL=http://10.10.10.10:3000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">GITEA_RUNNER_REGISTRATION_TOKEN=xxx_token</span></span><br><span class="line">      <span class="comment">#- GITEA_RUNNER_NAME=$&#123;RUNNER_NAME&#125; # 若不需要设置名称和标签，注释即可</span></span><br><span class="line">      <span class="comment">#- GITEA_RUNNER_LABELS=$&#123;RUNNER_LABELS&#125;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">gitea</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner_config.yaml:/config.yaml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/root/actions_runner_cache:/root/.cache</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">server</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="迁移Gitea的mysql数据库和git仓库数据">8.5 &nbsp&nbsp<a href="#迁移Gitea的mysql数据库和git仓库数据" class="headerlink" title="迁移Gitea的mysql数据库和git仓库数据"></a>迁移Gitea的mysql数据库和git仓库数据</h2><ol>
 <li>备份其他服务器上的Gitea的mysql数据库、git仓库数据和gitea其他资产数据。</li>
@@ -3130,21 +3131,30 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <h3 id="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4">10.4.2 &nbsp&nbsp<a href="#在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access-denied-for-user-root-172-19-0-4" class="headerlink" title="在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示Access denied for user &#39;root@172.19.0.4&#39;"></a>在DataEase添加Excel数据集后，预览数据界面无法加载，并一直提示<code>Access denied for user &#39;root@172.19.0.4&#39;</code></h3><p>原因：修改过<code>install.conf</code>的MySQL和Doris的密码都会导致出现该故障。据<a href="https://github.com/dataease/dataease/issues/5939">5939的issue</a>反馈该问题在1.18.23已修复，但本人使用1.18.27版本部署，修改密码仍会出现该问题。</p>
 <p>解决方法：不修改<code>install.conf</code>的MySQL和Doris的密码，直接使用模板预设的默认密码完成部署。</p>
-<h2 id="DataEase使用踩坑纪录">10.5 &nbsp&nbsp<a href="#DataEase使用踩坑纪录" class="headerlink" title="DataEase使用踩坑纪录"></a>DataEase使用踩坑纪录</h2><ul>
+<h2 id="DataEase使用踩坑纪录（以下总结基本是基于V1版本）">10.5 &nbsp&nbsp<a href="#DataEase使用踩坑纪录（以下总结基本是基于V1版本）" class="headerlink" title="DataEase使用踩坑纪录（以下总结基本是基于V1版本）"></a>DataEase使用踩坑纪录（以下总结基本是基于V1版本）</h2><ul>
 <li>变更&#x2F;删除数据集，均会导致丢失仪表盘的过滤器参数</li>
+<li>使用excel作为数据集的话，替换数据集时，不能存在任何计算字段。<ul>
+<li>若存在计算字段，替换数据操作能成功，但是导入之后预览会报错：<code>预览数据错误：执行SQL失败。可能因相关字段、表、数据集等元素发生变更，请检查-&gt;SQL ERRORerrCode = 2, detailMessage = Sql parser can&#39;t convert the result to array, please check your sql.</code></li>
+<li>预览数据报错解决方式：复制保存计算字段代码逻辑之后，删除已有的计算字段，并重建计算字段。</li>
+</ul>
+</li>
 <li>仪表盘的视图在超过1000条数据时则无法全部导出excel表格（比如实际导出的excel表格行数为1001，有一行是表头）<ul>
 <li>建议导出操作，使用数据集的导出功能。</li>
 </ul>
 </li>
 <li>excel数据源若有几万行，则无法成功导入dataease作为数据集，在数据同步阶段会失效（可能是内存溢出的问题，有待排查验证）</li>
 <li>V2社区开源版不支持创建多用户</li>
+<li>Dataease短链访问：手机浏览器访问提示空白模板（实测安卓火狐和ios的saffasi都遇到一样的情况）。短链解析是未能返回正确的字符串。<ul>
+<li>解决方法：手机移动端需要指定参数——PC端网站，才能解析正常。</li>
+</ul>
+</li>
 </ul>
 <h1 id="Docker-Desktop（Windows）">11 &nbsp&nbsp<a href="#Docker-Desktop（Windows）" class="headerlink" title="Docker Desktop（Windows）"></a>Docker Desktop（Windows）</h1><h2 id="Docker-Unexpected-error">11.1 &nbsp&nbsp<a href="#Docker-Unexpected-error" class="headerlink" title="Docker Unexpected error"></a>Docker Unexpected error</h2><p>问题：无法启用Docker Desktop，提示报错<code>Docker Unexpected error</code>。</p>
 <p>原因：之前有安装并卸载过Docker Desktop。重新安装Docker Desktop有可能触发此问题。</p>
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#64;&#x31;&#x37;&#50;&#x2e;&#x31;&#x39;&#x2e;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#116;&#x40;&#49;&#x37;&#50;&#x2e;&#x31;&#x39;&#46;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4577,6 +4587,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>英文词典常用缩写</title>
+    <url>/english/abbr/</url>
+    <content><![CDATA[<ul>
+<li>abbr. abbreviations 缩写</li>
+<li>v. verb 动词</li>
+<li>vt. transitive verb 及物动词</li>
+<li>vi. intransitive verb 不及物动词</li>
+<li>n. noun 名词</li>
+<li>adj. adjective 形容词</li>
+<li>adv. adverb 副词</li>
+<li>prep. preposition 介词</li>
+<li>pron. pronoun 代词</li>
+<li>conj. conjunction 连词</li>
+<li>abbr. abbreviation 缩写</li>
+<li>det. determiner 限定词</li>
+<li>sing. singular 单数</li>
+<li>pl. plural 复数</li>
+<li>exclamation 感叹词</li>
+<li>symb. symbol 符号</li>
+<li>opp. opposite 反义词</li>
+<li>syn. synonym 同义词</li>
+<li>fig. figurative 比喻的</li>
+<li>derog. derogatie 贬义的</li>
+<li>fml. formal 用于正式文体</li>
+<li>infml. informal 用于非正式文体</li>
+<li>BrE 英国英语</li>
+<li>AmE 美国英语</li>
+<li>C countable 可数名词</li>
+<li>U uncountable 不可数名词</li>
+<li>sb. somebody 某人</li>
+<li>sth. something 某事物</li>
+<li>pt past tense 过去时</li>
+<li>pp past participle 过去分词</li>
+<li>[计] 计算机</li>
+<li>[物] 物理</li>
+<li>[电] 电路</li>
+<li>[医] 医学</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>词典</tag>
+        <tag>缩写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编程英文术语</title>
     <url>/english/code/</url>
     <content><![CDATA[<ul>
@@ -4652,56 +4712,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>编程</tag>
         <tag>英文</tag>
         <tag>术语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英文词典常用缩写</title>
-    <url>/english/abbr/</url>
-    <content><![CDATA[<ul>
-<li>abbr. abbreviations 缩写</li>
-<li>v. verb 动词</li>
-<li>vt. transitive verb 及物动词</li>
-<li>vi. intransitive verb 不及物动词</li>
-<li>n. noun 名词</li>
-<li>adj. adjective 形容词</li>
-<li>adv. adverb 副词</li>
-<li>prep. preposition 介词</li>
-<li>pron. pronoun 代词</li>
-<li>conj. conjunction 连词</li>
-<li>abbr. abbreviation 缩写</li>
-<li>det. determiner 限定词</li>
-<li>sing. singular 单数</li>
-<li>pl. plural 复数</li>
-<li>exclamation 感叹词</li>
-<li>symb. symbol 符号</li>
-<li>opp. opposite 反义词</li>
-<li>syn. synonym 同义词</li>
-<li>fig. figurative 比喻的</li>
-<li>derog. derogatie 贬义的</li>
-<li>fml. formal 用于正式文体</li>
-<li>infml. informal 用于非正式文体</li>
-<li>BrE 英国英语</li>
-<li>AmE 美国英语</li>
-<li>C countable 可数名词</li>
-<li>U uncountable 不可数名词</li>
-<li>sb. somebody 某人</li>
-<li>sth. something 某事物</li>
-<li>pt past tense 过去时</li>
-<li>pp past participle 过去分词</li>
-<li>[计] 计算机</li>
-<li>[物] 物理</li>
-<li>[电] 电路</li>
-<li>[医] 医学</li>
-</ul>
-]]></content>
-      <categories>
-        <category>english</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>英文</tag>
-        <tag>词典</tag>
-        <tag>缩写</tag>
       </tags>
   </entry>
   <entry>
@@ -5219,31 +5229,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Inkscape总结</title>
-    <url>/software/inkscape/</url>
-    <content><![CDATA[<h1 id="案例">1 &nbsp&nbsp<a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="位图转SVG">1.1 &nbsp&nbsp<a href="#位图转SVG" class="headerlink" title="位图转SVG"></a>位图转SVG</h2><p>理想适用图像类型：简单的平面图，如何字母或logo；颜色不超过三种。</p>
-<p>操作步骤：</p>
-<ol>
-<li>导入位图。（可适当放大后再操作）</li>
-<li>使用“选择工具”选中位图。</li>
-<li>菜单&gt;路径&gt;临摹位图轮廓。</li>
-<li>启用“即时预览”。在“模式”中关闭“平滑”功能（平滑会添加模糊效果，不利于转3D）。</li>
-<li>在“模式”中选择合适的“扫描算法”以创建路径。在“选项”中调整合适参数。</li>
-<li>点击“确定”即可生成图形。</li>
-<li>使用“选择工具”选中生成图形并拖动离开原图像。</li>
-<li>使用“路径节点编辑”手动调节改善形状。</li>
-<li>菜单&gt;文件&gt;另存为。（默认就是SVG）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>后期处理</tag>
-        <tag>inkscape</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FFmpeg</title>
     <url>/software/ffmpeg/</url>
     <content><![CDATA[<h1 id="基础">1 &nbsp&nbsp<a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>ffmpeg -i input.avi -metadata key&#x3D;value -codec copy output.avi<br>ffprobe &quot;file&quot; #查看metadata</p>
@@ -5269,6 +5254,31 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <categories>
         <category>software</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Inkscape总结</title>
+    <url>/software/inkscape/</url>
+    <content><![CDATA[<h1 id="案例">1 &nbsp&nbsp<a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="位图转SVG">1.1 &nbsp&nbsp<a href="#位图转SVG" class="headerlink" title="位图转SVG"></a>位图转SVG</h2><p>理想适用图像类型：简单的平面图，如何字母或logo；颜色不超过三种。</p>
+<p>操作步骤：</p>
+<ol>
+<li>导入位图。（可适当放大后再操作）</li>
+<li>使用“选择工具”选中位图。</li>
+<li>菜单&gt;路径&gt;临摹位图轮廓。</li>
+<li>启用“即时预览”。在“模式”中关闭“平滑”功能（平滑会添加模糊效果，不利于转3D）。</li>
+<li>在“模式”中选择合适的“扫描算法”以创建路径。在“选项”中调整合适参数。</li>
+<li>点击“确定”即可生成图形。</li>
+<li>使用“选择工具”选中生成图形并拖动离开原图像。</li>
+<li>使用“路径节点编辑”手动调节改善形状。</li>
+<li>菜单&gt;文件&gt;另存为。（默认就是SVG）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>后期处理</tag>
+        <tag>inkscape</tag>
+      </tags>
   </entry>
   <entry>
     <title>给联想z500安装deepin linux（深度系统）</title>
@@ -5987,32 +5997,38 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <thead>
 <tr>
 <th align="center">配件类别</th>
+<th align="center">数量</th>
 <th align="center">配件型号</th>
 <th align="center">备注</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">CPU</td>
+<td align="center">1</td>
 <td align="center">Intel(R) Pentium(R) CPU N3530</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">内存</td>
+<td align="center">1</td>
 <td align="center">海力士DDR3L-8GB单根</td>
 <td align="center">从老笔记本电脑上拆一根DDR3L条子给它用</td>
 </tr>
 <tr>
 <td align="center">硬盘</td>
+<td align="center">1</td>
 <td align="center">海力士SH920 msata 256GB</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">网卡</td>
+<td align="center">3</td>
 <td align="center">千兆网卡Intel I211 *2<br>千兆网卡Realtek mini-pcie RTL8111E&#x2F;F</td>
 <td align="center">Realtek螃蟹卡是后期自己购买加装至mini pcie无线网卡口位置<br>拆掉主控板的一个com接口，用锉刀将外壳挫出一个RJ45网口的尺寸孔</td>
 </tr>
 <tr>
 <td align="center">主板</td>
+<td align="center">1</td>
 <td align="center">未知品牌的工控机主板</td>
 <td align="center"></td>
 </tr>
@@ -8329,10 +8345,10 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>维修</tag>
-        <tag>笔记</tag>
-        <tag>终端</tag>
         <tag>系统</tag>
         <tag>linux</tag>
+        <tag>终端</tag>
+        <tag>笔记</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
         <tag>维护</tag>
@@ -9117,12 +9133,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#46;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#x75;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#x31;&#46;&#99;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#107;&#115;&#x2e;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#99;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -9210,8 +9226,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>维修</tag>
-        <tag>windows</tag>
         <tag>系统</tag>
+        <tag>windows</tag>
         <tag>计算机</tag>
         <tag>电脑</tag>
         <tag>维护</tag>
@@ -12742,9 +12758,40 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
+    <title>404 Not Found：该页无法显示</title>
+    <url>//404.html</url>
+    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
+
+<div class="navigation-border">
+<center>
+<a href="/navigation-announcement">
+<button class="navigation-button-box">站点导航和公告</button></a>
+<a href="/">
+<button class="navigation-button-box">回主页</button></a>
+</center></div>
+
+<div class="navigation-border">
+<center>
+<a href="/archives">
+<button class="navigation-button-box">所有文章</button></a>
+<a href="/about#联系方式">
+<button class="navigation-button-box">联系我</button></a>
+<a href="/about">
+<button class="navigation-button-box">关于我</button></a>
+<a href="/about/about-site/">
+<button class="navigation-button-box">关于本站</button></a>
+</center></div>
+
+<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
+
+<center>
+<div style="text-align: center; width: 50%;">
+可以听歌，稍作休息~
+<div style="text-align: left">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
+</div></div>
+</center>
+]]></content>
   </entry>
   <entry>
     <title>关于我</title>
@@ -12844,7 +12891,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#116;&#101;&#x72;&#107;&#105;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#x69;&#115;&#116;&#101;&#114;&#107;&#x69;&#110;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -12954,40 +13001,9 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>404 Not Found：该页无法显示</title>
-    <url>//404.html</url>
-    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
-
-<div class="navigation-border">
-<center>
-<a href="/navigation-announcement">
-<button class="navigation-button-box">站点导航和公告</button></a>
-<a href="/">
-<button class="navigation-button-box">回主页</button></a>
-</center></div>
-
-<div class="navigation-border">
-<center>
-<a href="/archives">
-<button class="navigation-button-box">所有文章</button></a>
-<a href="/about#联系方式">
-<button class="navigation-button-box">联系我</button></a>
-<a href="/about">
-<button class="navigation-button-box">关于我</button></a>
-<a href="/about/about-site/">
-<button class="navigation-button-box">关于本站</button></a>
-</center></div>
-
-<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
-
-<center>
-<div style="text-align: center; width: 50%;">
-可以听歌，稍作休息~
-<div style="text-align: left">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
-</div></div>
-</center>
-]]></content>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>知识总结手册</title>
@@ -13199,6 +13215,83 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     width: 60px;
 }
 </style>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于本站</title>
+    <url>/about/about-site/index.html</url>
+    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
+<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
+<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
+</div>
+
+<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
+<table>
+<thead>
+<tr>
+<th align="left">允许</th>
+<th align="left">限制</th>
+<th align="left">条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><font style="color: green;">√</font> 修改</td>
+<td align="left"><font style="color: red;">×</font> 商标使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 分发</td>
+<td align="left"><font style="color: red;">×</font> 专利使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
+</tr>
+<tr>
+<td align="left"><font style="color: green;">√</font> 个人使用</td>
+<td align="left"><font style="color: red;">×</font> 商业使用</td>
+<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
+</tr>
+</tbody></table>
+<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
+<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
+<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
+<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
+<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
+</div>
+
+<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
+<ul>
+<li>1920×1080 分辨率的笔记本屏幕</li>
+<li>火狐浏览器</li>
+<li>Win10 OS</li>
+</ul>
+<p>本站存在的问题：</p>
+<ul>
+<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
+<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
+</ul>
+<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
+<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
+</div>
+
+<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
+<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
+<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
+<blockquote class="blockquote-center">
+<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
+
+</blockquote>
+
+<blockquote class="blockquote-center">
+<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
+<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
+</blockquote>
+
+<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
+<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
@@ -13480,83 +13573,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
 <li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于本站</title>
-    <url>/about/about-site/index.html</url>
-    <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
-<p>取之于网，返之于网，通过本站记录下来。一来，锻炼了写作思维能力；二来，分享了知识，帮助那些想在网络上获取知识的朋友；再者，也记录自身点点滴滴的成长。</p>
-<div class="note primary no-icon"><p>若觉得本站的文章不错，靓仔&#x2F;美女们，不考虑打个赏，挺挺我吗？谢谢支持！(๑•̀ㅂ•́)و✧ <a href="/about/#%E6%8C%BA%E6%88%91">点击挺我！</a></p>
-</div>
-
-<h1 id="本站许可协议">2 &nbsp&nbsp<a href="#本站许可协议" class="headerlink" title="本站许可协议"></a>本站许可协议</h1><p>许可协议：本作品的所有内容，除个人设计创作的图像（如 logo 等）和相关的视频创作及其他特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名‐非商业性使用‐相同方式共享 4.0 国际许可协议</a>进行发布。版权 © Mr. Kin，保留所有权利。</p>
-<table>
-<thead>
-<tr>
-<th align="left">允许</th>
-<th align="left">限制</th>
-<th align="left">条件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><font style="color: green;">√</font> 修改</td>
-<td align="left"><font style="color: red;">×</font> 商标使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 保留原署名</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 分发</td>
-<td align="left"><font style="color: red;">×</font> 专利使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 状态变更说明</td>
-</tr>
-<tr>
-<td align="left"><font style="color: green;">√</font> 个人使用</td>
-<td align="left"><font style="color: red;">×</font> 商业使用</td>
-<td align="left"><font style="color: blue;">⊙</font> 相同的许可和版权声明</td>
-</tr>
-</tbody></table>
-<p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
-<h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
-<h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
-<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
-<h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
-</div>
-
-<h1 id="网站浏览适配性问题">7 &nbsp&nbsp<a href="#网站浏览适配性问题" class="headerlink" title="网站浏览适配性问题"></a>网站浏览适配性问题</h1><p>本网站基于以下条件进行 debug 测试：</p>
-<ul>
-<li>1920×1080 分辨率的笔记本屏幕</li>
-<li>火狐浏览器</li>
-<li>Win10 OS</li>
-</ul>
-<p>本站存在的问题：</p>
-<ul>
-<li>若浏览器页面缩放程度或浏览设备屏幕分辨率不同时，部分网页内容设计的位置和样式可能会与我设想中的效果不同，例如“关于我”页面中「本人」那一小节内容的图片和文字在移动端上的排版效果就很糟糕。</li>
-<li>特殊日子网站效果中的哀悼效果对 html 标签应用 filter 会破坏火狐中的 fixed 元素，而在 chrome 内核的浏览器中解析正常。<br><em>（本人不是科班出身，网站中各种问题计划会在日后的实力增长中陆续解决。）</em></li>
-</ul>
-<p><del><strong>注：网站的图标是白色Alpha透明底的图像，只有在深色模式下才能看到。（“关于我”页面「本人」小节用的头像也是白色Alpha透明底图像）</strong></del></p>
-<div class="note info no-icon"><p>网站默认启用了“深色模式”（Dark Mode），但只有在启用了深色模式的操作系统中使用支持 prefers-color-scheme 属性的浏览器才能浏览“深色模式”。</p>
-</div>
-
-<p><em><strong>关于“深色模式”问题的自我诊断：若系统启用了深色模式，而浏览器未见效时，请先排查当前使用的浏览器是否支持 prefers-color-scheme 属性。若是支持性无问题，则浏览器应该有独自设置来确定其主题。以Edge为例：版本 83.0.478.44的新版Edge（Chromium核心）中的「设置&gt;外观&gt;自定义浏览器&gt;默认主题」，该选项支持切换主题颜色「浅色」「深色」「系统默认」。</strong></em></p>
-<div class="note danger no-icon"><p><strong>正式决定：所有开发环境取消“深色模式”。本想也取消网站的，但系统不启用深色模式时便不会影响，所以就保留了网站默认启用“深色模式”，以方便那些习惯了“深色模式”的朋友。</strong></p>
-<p>近日研究 PWM 调光技术，在查询相关资料时无意中了解到有关深色模式和浅色模式的研究。</p>
-<blockquote class="blockquote-center">
-<p>多数研究表明深色字体&#x2F;浅色背景要优于浅色字体&#x2F;深色背景，<br>Bauer and Cavonius (1980) 的实验中，人们阅读前者的文字比后者准确率高 26%。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>在使用白色背景时，人眼的瞳孔会收缩（进入眼球的光线就减少了），使得视线更易聚焦；<br>而使用深色背景时，瞳孔放大，进入眼球的光线变多，但眼睛更容易眼花。</p>
-
-</blockquote>
-
-<blockquote class="blockquote-center">
-<p>正确的习惯是，不管白天黑色，都把室内的环境灯打开；<br>同时，选择和环境反差小的浅色背景。</p>
-<p style="text-align: right;">以上引用均来自知乎用户「<a href="https://www.zhihu.com/people/fanegenstein">右璵</a>」</p>
-</blockquote>
-
-<p>使用“深色模式”已将近两年多，自己确实感觉到不舒适和不方便。且有一点特别明显，“深色模式”下，我需要花费更多的注意力在聚焦上，总感觉自己看不清字。目前在切换到浅色模式（Light Mode）后，虽有些许不适应（毕竟使用了很长时间的深色模式），但总体还是往好的方向发展。</p>
-<p style="text-align: right;"> —— Mr. Kin, 2020/6/16</p></div>
 ]]></content>
   </entry>
   <entry>
