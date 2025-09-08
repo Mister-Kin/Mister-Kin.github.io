@@ -723,6 +723,8 @@
     <a href="https://hub.docker.com/r/jeessy/ddns-go">jeessy/ddns-go（动态域名解析）</a>
     <a href="https://hub.docker.com/r/codercom/code-server">codercom/code-server（浏览器版VSCode）</a>
     <a href="https://hub.docker.com/r/linuxserver/code-server">linuxserver/code-server（浏览器版VSCode）</a>
+    <a href="https://hub.docker.com/r/gotson/komga">komga</a>
+    <a href="https://hub.docker.com/r/talebook/talebook">talebook</a>
 </div>
 
 <div class="text-box">
@@ -1631,28 +1633,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>致首次使用RIME的你 -- 小狼毫输入法详细配置</title>
-    <url>/rime-input-method/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：5%</strong></p>
-</div>
-
-<p>TODO<br>前段时间，搜狗输入法被曝后台手脚不干净，强制推送618活动啥的。</p>
-<h2 id="前言：我与RIME的相遇">0.1 &nbsp&nbsp<a href="#前言：我与RIME的相遇" class="headerlink" title="前言：我与RIME的相遇"></a>前言：我与RIME的相遇</h2><p>在受不了原版的搜狗输入法的广告弹窗和响应速度后，我开始折腾起输入法。</p>
-<p>为了解决搜狗的弹窗问题，我使用了火绒安全软件的扩展工具 --- 弹窗拦截（强推一波<a href="https://www.huorong.cn/"><strong>火绒安全软件</strong></a>）。然后，弹窗是解决了。但由于本人最初安装搜狗输入法于机械盘，加上个人词库越来越庞大，搜狗的输入法的响应速度已经严重影响我的输入效率。</p>
-<p>于是，我便开始搜寻精简版的搜狗输入法。所幸的是，网络上已有大神在做这个，例如<strong>大水牛去广告精简优化版</strong> --- <a href="https://pan.baidu.com/s/1RAWTp6d6eZnCtDvC6RsEmQ"><strong>百度云链接</strong></a>（提取码：ffqz）。</p>
-<p>如此一来，响应速度的确是有所提升，可惜这种做法始终是治标不治本（其实响应速度问题也可通过安装程序于固态盘来解决）。后来在一次搜索相关开源的输入法时，我遇到了RIME。</p>
-<span id="more"></span>
-
-<p>对RIME进行简单的了解后，我便被它吸引住了。无奈的是，RIME的配置并没有图形交互界面。这对新用户来说，极为不友好。我估计这也是很多人放弃使用RIME的原因。</p>
-<p>在遍寻各途径的资料后（官网、贴吧、博客等），我发现没有一篇文章完整并系统地介绍所有配置流程。因此，我决定收集目前网上的已存资料，并将其系统化整理。望能对新入坑的朋友有所帮助，也希望更多的朋友能够使用到基于RIME框架的输入法。</p>
-<h2 id="软件简介">0.2 &nbsp&nbsp<a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h2><h2 id="软件配置">0.3 &nbsp&nbsp<a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h2><h3 id="安装">0.3.1 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="繁简转换">0.3.2 &nbsp&nbsp<a href="#繁简转换" class="headerlink" title="繁简转换"></a>繁简转换</h3><h3 id="weasel-yaml设置">0.3.3 &nbsp&nbsp<a href="#weasel-yaml设置" class="headerlink" title="weasel.yaml设置"></a>weasel.yaml设置</h3><h4 id>0.3.3.1 &nbsp&nbsp<a href="#" class="headerlink" title></a></h4>]]></content>
-      <tags>
-        <tag>开源软件</tag>
-        <tag>RIME输入法</tag>
-        <tag>软件配置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>搜索引擎</title>
     <url>/search-engine/</url>
     <content><![CDATA[<div class="note info no-icon"><p>搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。</p>
@@ -1902,6 +1882,28 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>致首次使用RIME的你 -- 小狼毫输入法详细配置</title>
+    <url>/rime-input-method/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：5%</strong></p>
+</div>
+
+<p>TODO<br>前段时间，搜狗输入法被曝后台手脚不干净，强制推送618活动啥的。</p>
+<h2 id="前言：我与RIME的相遇">0.1 &nbsp&nbsp<a href="#前言：我与RIME的相遇" class="headerlink" title="前言：我与RIME的相遇"></a>前言：我与RIME的相遇</h2><p>在受不了原版的搜狗输入法的广告弹窗和响应速度后，我开始折腾起输入法。</p>
+<p>为了解决搜狗的弹窗问题，我使用了火绒安全软件的扩展工具 --- 弹窗拦截（强推一波<a href="https://www.huorong.cn/"><strong>火绒安全软件</strong></a>）。然后，弹窗是解决了。但由于本人最初安装搜狗输入法于机械盘，加上个人词库越来越庞大，搜狗的输入法的响应速度已经严重影响我的输入效率。</p>
+<p>于是，我便开始搜寻精简版的搜狗输入法。所幸的是，网络上已有大神在做这个，例如<strong>大水牛去广告精简优化版</strong> --- <a href="https://pan.baidu.com/s/1RAWTp6d6eZnCtDvC6RsEmQ"><strong>百度云链接</strong></a>（提取码：ffqz）。</p>
+<p>如此一来，响应速度的确是有所提升，可惜这种做法始终是治标不治本（其实响应速度问题也可通过安装程序于固态盘来解决）。后来在一次搜索相关开源的输入法时，我遇到了RIME。</p>
+<span id="more"></span>
+
+<p>对RIME进行简单的了解后，我便被它吸引住了。无奈的是，RIME的配置并没有图形交互界面。这对新用户来说，极为不友好。我估计这也是很多人放弃使用RIME的原因。</p>
+<p>在遍寻各途径的资料后（官网、贴吧、博客等），我发现没有一篇文章完整并系统地介绍所有配置流程。因此，我决定收集目前网上的已存资料，并将其系统化整理。望能对新入坑的朋友有所帮助，也希望更多的朋友能够使用到基于RIME框架的输入法。</p>
+<h2 id="软件简介">0.2 &nbsp&nbsp<a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h2><h2 id="软件配置">0.3 &nbsp&nbsp<a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h2><h3 id="安装">0.3.1 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="繁简转换">0.3.2 &nbsp&nbsp<a href="#繁简转换" class="headerlink" title="繁简转换"></a>繁简转换</h3><h3 id="weasel-yaml设置">0.3.3 &nbsp&nbsp<a href="#weasel-yaml设置" class="headerlink" title="weasel.yaml设置"></a>weasel.yaml设置</h3><h4 id>0.3.3.1 &nbsp&nbsp<a href="#" class="headerlink" title></a></h4>]]></content>
+      <tags>
+        <tag>开源软件</tag>
+        <tag>RIME输入法</tag>
+        <tag>软件配置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>闪存驱动器设计</title>
     <url>/cad/flash-disk/</url>
     <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
@@ -2019,126 +2021,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>测试架</tag>
         <tag>主控</tag>
         <tag>颗粒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>笔记本硬件基础</title>
-    <url>/cad/laptop-fundamental/</url>
-    <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
-<thead>
-<tr>
-<th align="center">外型</th>
-<th align="center">A壳</th>
-<th align="center">B壳</th>
-<th align="center">C壳</th>
-<th align="center">D壳</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">位置</td>
-<td align="center">顶面的壳</td>
-<td align="center">屏幕面的外框</td>
-<td align="center">键盘面的壳</td>
-<td align="center">底面的壳</td>
-</tr>
-</tbody></table>
-<h1 id="部件介绍">2 &nbsp&nbsp<a href="#部件介绍" class="headerlink" title="部件介绍"></a>部件介绍</h1><h2 id="PCB（印刷电路板）">2.1 &nbsp&nbsp<a href="#PCB（印刷电路板）" class="headerlink" title="PCB（印刷电路板）"></a>PCB（印刷电路板）</h2><p>笔记本PCB集成度高，一般6层以上，比如6(较少)，8，10...，不像1或2层板，无法跑线。板层数越多，EMI性能越好，成本也越高。</p>
-<p>PCBA是指PCB上装配按照设定规则指定元件的成品功能板。（元件：电阻，电容，芯片，接口...）</p>
-<div class="note default no-icon"><p>注：PCB, Printed Circuit Board; PCBA, Printed Circuit Board Assembly; EMI, Electromagnetic Interference</p>
-</div>
-
-<h2 id="Chipset（芯片组）">2.2 &nbsp&nbsp<a href="#Chipset（芯片组）" class="headerlink" title="Chipset（芯片组）"></a>Chipset（芯片组）</h2><p>一般指南北桥。（目前北桥已逐渐淘汰）</p>
-<p>常见厂商有：AMD，INTEL，NVDIA，VIA，SIS。</p>
-<p>南桥：North Bridge Chipset，INTEL的为输出&#x2F;输入控制器中心（Input&#x2F;Output Controller Hub，ICH），NVIDIA的为MCP，ATI的称为IXP&#x2F;SB，AMD的为FCH。</p>
-<p>北桥：North Bridge Chipset，INTEL的为GMCH，Graphics &amp; Memory controller hub，带G有集显，无G的无集显。</p>
-<h2 id="CPU（中央处理器）">2.3 &nbsp&nbsp<a href="#CPU（中央处理器）" class="headerlink" title="CPU（中央处理器）"></a>CPU（中央处理器）</h2><p>常见厂商：AMD，INTEL。龙芯，VIA，IBM，Transmeta。</p>
-<p>不同芯片组对应不同的Intel CPU座（针脚不同）</p>
-<p>注：CPU, Center Processor Unit</p>
-<h2 id="Battery（电池）">2.4 &nbsp&nbsp<a href="#Battery（电池）" class="headerlink" title="Battery（电池）"></a>Battery（电池）</h2><ul>
-<li>组成：外壳+控制板+电芯。</li>
-<li>类型：圆柱型、方型、聚合物</li>
-<li>电芯：常见18650型锂离子电芯。单个电压3.7V，充电电压4.2V，电容量为2400mAH。三串两并：电压为3*3.7V，容量为2*2400mAH。</li>
-</ul>
-<h2 id="Adapter（适配器）">2.5 &nbsp&nbsp<a href="#Adapter（适配器）" class="headerlink" title="Adapter（适配器）"></a>Adapter（适配器）</h2><p>输入100~240V的AC（50&#x2F;60Hz），输出16~20V居多。（华硕EPC有9.5V和12V的输出）</p>
-<h1 id="笔记本和台式机的区别">3 &nbsp&nbsp<a href="#笔记本和台式机的区别" class="headerlink" title="笔记本和台式机的区别"></a>笔记本和台式机的区别</h1><ul>
-<li>笔记本自带显示系统（LCD&#x2F;LED，专用屏线接口，自带高压板，灯管）</li>
-<li>笔记本电源统一只由一个电压转出，常见16~20。台式主板由ATX电源提供12V、5V、3.3V等电压。\这个是最大区别，笔记本的工作电压是由板子转换完成（16-20V主供电输入，经PWM电路降压处理，提供待机电压等工作电压），台式主板电源完成（多种方式，不只PWM）。</li>
-<li>笔记本有充放电的电路，可用电池做替代电源。</li>
-<li>为保证笔记本移动性和续航，CPU低功率、节能设计。</li>
-<li>笔记本的保护电路多，过热保护，过电压保护。</li>
-<li>笔记本内置鼠标设备，如指点杆，触摸板。</li>
-<li>笔记本元件集成度高，MOS管多为8脚贴片。专用IC也多。（芯片功能作用原理类似，供电不是太复杂。）</li>
-<li>笔记本6-8层板，夹层中也有信号线。台式主板4层，一般只在正反面有信号线。</li>
-<li>笔记本引入EC（多功能芯片）概念，类似台式主板的IO，但功能更多，因为处理键盘的各种信号（亮度调节，声音调节等快捷键）。部分EC里会带有程序，其脚位功能由程序决定。</li>
-<li>笔记本的时序概念很重要，电压和功能的实现，都由时序控制。环环相扣，前面条件未完成，后面动作就不会执行。</li>
-<li>笔记本维修对电路图依赖很强，需要电路图分析陌生元件，且需要点位图对照。无这些的话，只能维修一些通病。（信号复杂，板子小，整合度高）</li>
-</ul>
-<h1 id="笔记本板号">4 &nbsp&nbsp<a href="#笔记本板号" class="headerlink" title="笔记本板号"></a>笔记本板号</h1><p>板号：板子型号。即工程代号，Project Code</p>
-<p>笔记本大规模的代工厂：广达（quanta），仁宝（compal），纬创（wistron），英业达（inventec），和硕联合（pegatron）。<br>二线代工厂：神达（mitac），蓝天（clevo），大众（fic），微星（msi），精英（ecs）</p>
-<p>OEM代工：品牌商设计，代工厂生产。如苹果，联想（thinkpad）。成本高<br>ODM代工：设计和生产都是代工厂。</p>
-<p>广达：DAO+板号+mb，一般为3个字，如ch3，zq5<br>仁宝：la-xxxxp<br>纬创：板号+mb（有白框）<br>华硕（asus）： 板号+main board（没有位置号，PCB丝印层无标记，若无点位图无法分析）<br>英业达：板号（很长）+mb，一般给hp做得多<br>微星：ms-板号<br>富士康：代工索尼</p>
-<h1 id="主板板子元件">5 &nbsp&nbsp<a href="#主板板子元件" class="headerlink" title="主板板子元件"></a>主板板子元件</h1><p>CPU座，北桥，南桥，内存插槽，独立显卡，显存，SPI BIOS，pice，电池接口，适配器插头，时钟芯片，ec，LCD接口，硬盘接口，键盘接口，光驱接口，读卡器槽。</p>
-<h1 id="笔记本主板架构">6 &nbsp&nbsp<a href="#笔记本主板架构" class="headerlink" title="笔记本主板架构"></a>笔记本主板架构</h1><p>修接口。供电维修看架构没用。</p>
-<p>intel双桥架构：</p>
-<ul>
-<li>CPU管理北桥。</li>
-<li>北桥管内存，独显，显示接口，与cpu的连接的总线---FSB前端总线。北桥与南桥的总线---DMI+CLINK</li>
-<li>南桥管理周边设备，网卡，迷你卡，USB，摄像头，EC，光驱，硬盘等，南桥和EC连接的总线--LPC总线，7根重要信号：LAD0，LAD1，LAD2，LAD3，LFRAME#，LCLK，LRESET#。（诊断卡接9根，外加VCC、GND）</li>
-<li>EC管理键盘，触控板，鼠标，部分挂BIOS（SPI ROM）</li>
-</ul>
-<p>intel单桥架构（无北桥）：</p>
-<ul>
-<li>CPU管理显卡，内存。CPU不管显示接口，通过PCH桥到显示接口（cpu里有集成显卡，通过FDI总线输出）</li>
-<li>pch（管理原来南桥的功能）相比原南桥，增加了显示接口（VGA，LVDS，HDMI等）管理，可能也直接管理SPI rom（BIOS）</li>
-<li>EC管理键盘，温控芯片，触摸板，挂BIOS</li>
-</ul>
-<p>AMD（ATI）双桥架构：</p>
-<ul>
-<li>CPU管内存</li>
-<li>北桥管理所有PCIE，显示接口。网卡（1000M，走PCIE）</li>
-<li>南桥管理USB，网卡（100M，走PCI。），硬盘光驱等</li>
-</ul>
-<p>AMD单桥架构：</p>
-<ul>
-<li>CPU管理内存，显卡，显示接口（这个是与intel的区别）</li>
-<li>桥（fch）管理网卡，mini-pcie，硬盘光驱，USB，EC，声卡等</li>
-<li>EC管键盘，鼠标</li>
-</ul>
-<p>intel和AMD单桥架构无时钟芯片，集成在桥。nvidia的双桥和amd相同。nvidia单桥：CPU管内存，桥管其他。</p>
-<h1 id="名词解释">7 &nbsp&nbsp<a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>复位和PG都是测电压，时钟是测频率（无示波器时，可测电压，33MHz大概1.6V，100MHz大概0.4V）。</p>
-<h2 id="供电和信号">7.1 &nbsp&nbsp<a href="#供电和信号" class="headerlink" title="供电和信号"></a>供电和信号</h2><p>供电一个可以输出电流的电压，电流较大。工作过程中，这个电压不能置高或拉低。供电被拉低，就是短路。一般，也不许置高。（动力来源）。</p>
-<p>常见有19，12，5（往上大电压给接口），3.3（给芯片），2.5，1.8，1.5，1.25，1.05，1.2，1.1，0.9，0.75V。CPU供电0.7-1.5V</p>
-<p>名称一般为：VCC，VDD，VCC3，VDDQ，VTT，VBAT，5VALW，+3VO等（有V字）。苹果的供电特殊，例如PP0V75_s3_mem</p>
-<p>符号为一个圆圈，T型，三角形。表示固定的电压，不允许置高和拉低。信号电压（例如19V）与1.5V（供电）碰在一起会变为1.5V。</p>
-<h2 id="接地">7.2 &nbsp&nbsp<a href="#接地" class="headerlink" title="接地"></a>接地</h2><p>接地是给供电构成回路。有接地，才会有电流流过设备。</p>
-<p>名称一般为：VSS、GND。</p>
-<p>符号：三角形（数字地）；倒三角形多横线（模拟地）。避免数字和模拟连在一起相互干扰。例子：数字地和模拟地通过一个0欧姆电阻PR170(值0_6)，实际测量是通路，但信号不一样。如果这个0欧姆电阻坏了，可能导致烧元件。压差相对值不一样。</p>
-<h2 id="信号">7.3 &nbsp&nbsp<a href="#信号" class="headerlink" title="信号"></a>信号</h2><p>理论上，电压信号值考虑电压变化，电流很小。在工作过程中，可根据需要置高或者拉低。电路图中的信号的箭头不完全代表信号的流向，因为画图人员的随意性。<br>信号方向考经验判断：例如PWRBTN#给南桥的；slp_s3#南桥出来的；therm_stp#温控信号看情况：过温时，温控芯片吧温控信号拉低。</p>
-<h2 id="高低电平">7.4 &nbsp&nbsp<a href="#高低电平" class="headerlink" title="高低电平"></a>高低电平</h2><p>数字逻辑电路中，高电平表示1，低电平表示0。一般规定：低电平为0-0.25V，高电平为3.5-5V。</p>
-<p>主板中，1V以上为高电平，0.7以下为低电平。</p>
-<p>结论：根据电路判断高低电平，非限定特定值。有些电路0.5就是高，有的电路1.1还是低。但0肯定是地，3.3肯定是高。</p>
-<h2 id="脉冲和跳变">7.5 &nbsp&nbsp<a href="#脉冲和跳变" class="headerlink" title="脉冲和跳变"></a>脉冲和跳变</h2><p>上升沿，下降沿。</p>
-<p>类型：高电平跳变为低电平；低电平跳变为高电平；高跳变为低再跳变为高。</p>
-<h2 id="时钟信号">7.6 &nbsp&nbsp<a href="#时钟信号" class="headerlink" title="时钟信号"></a>时钟信号</h2><p>时钟信号CLK（Clock的简写）。为数字电路工作提供一个基准，使各个相连设备统一步调工作。单位Hz。南桥晶振323.768KHz。</p>
-<p>主板上都有一个主时钟产生电路，给所有设备提供时钟，送出到cpu的频率为100MHz以上，送给PCI的是33MHz，送给PCIE的是100MHz，送给USB控制器（集成在南桥内部）的为48MHz。</p>
-<p>相连的两个设备需要相同的时钟频率和电压才能通信，如内存和北桥。</p>
-<p>时钟信号需要在主板正常通电后且时钟芯片工作正常才能测量到，用示波器和万用表（测电压?）测。100M的示波器一般测不了CPU的频率。</p>
-<h2 id="复位信号">7.7 &nbsp&nbsp<a href="#复位信号" class="headerlink" title="复位信号"></a>复位信号</h2><p>复位信号RST（RESET的简写）。复位都是从高电平向低电平跳变再回到高电平，如PCI的复位是从3.3V向0V跳变再回到3.3V就是一个正常的复位跳变。</p>
-<p>名称一般为：xxxRST#，如PCIRST#、CPURST#、IDERST#等。复位只能是瞬间低电平，主板正常工作时复位都是高电平。但不是恒高电平，不能直接接到供电上。如台式机reset键，复位开关弹不起来就一直为低电平，就不行。</p>
-<p>平常说没复位，通常指没复位电压，即复位信号测量点电压为0V。维修一般都是把复位电压修出来。</p>
-<p>所有设备的复位信号，如EC，北桥等，都是由南桥发出。开机的瞬间，便会对设备清零，使其重新工作。</p>
-<h2 id="PG信号">7.8 &nbsp&nbsp<a href="#PG信号" class="headerlink" title="PG信号"></a>PG信号</h2><p>电源好信号PG（powergood的缩写），用来描述供电正常的信号。一般高电平有效。如cpu供电芯片，只有在正常发出cpu电压后，才会发出PG信号。</p>
-<p>名称一般为：PG、PWRGD、PWROK、POK、PWRG、VTTPWRGD、CPUPWRGD等。</p>
-<h2 id="开启信号">7.9 &nbsp&nbsp<a href="#开启信号" class="headerlink" title="开启信号"></a>开启信号</h2><p>开启信号。有的芯片叫EN（enable），使能，高电平时表示开启信号。有的芯片叫SHDN#（shutdown），#表示低电平有效。综合名称和#来看，意思是低电平时关闭芯片，高电平开启。所以一般shutdown信号一般要维持高电平。</p>
-<p>注：信号带#时（低电平有效），一定要结合信号的英文全程去理解。有的带#，为低电平时主板可以正常工作。例如：VT_PWRGD_CK410#信号是cpu供电正常后发出低电平开启时钟信号。1999_SHDN#信号是低电平关闭MAX1999的控制信号，即为高电平时，主板才能正常工作。</p>
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>硬件</tag>
-        <tag>笔记本</tag>
-        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -2263,6 +2145,126 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>PCB</tag>
         <tag>电路</tag>
         <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔记本硬件基础</title>
+    <url>/cad/laptop-fundamental/</url>
+    <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
+<thead>
+<tr>
+<th align="center">外型</th>
+<th align="center">A壳</th>
+<th align="center">B壳</th>
+<th align="center">C壳</th>
+<th align="center">D壳</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">位置</td>
+<td align="center">顶面的壳</td>
+<td align="center">屏幕面的外框</td>
+<td align="center">键盘面的壳</td>
+<td align="center">底面的壳</td>
+</tr>
+</tbody></table>
+<h1 id="部件介绍">2 &nbsp&nbsp<a href="#部件介绍" class="headerlink" title="部件介绍"></a>部件介绍</h1><h2 id="PCB（印刷电路板）">2.1 &nbsp&nbsp<a href="#PCB（印刷电路板）" class="headerlink" title="PCB（印刷电路板）"></a>PCB（印刷电路板）</h2><p>笔记本PCB集成度高，一般6层以上，比如6(较少)，8，10...，不像1或2层板，无法跑线。板层数越多，EMI性能越好，成本也越高。</p>
+<p>PCBA是指PCB上装配按照设定规则指定元件的成品功能板。（元件：电阻，电容，芯片，接口...）</p>
+<div class="note default no-icon"><p>注：PCB, Printed Circuit Board; PCBA, Printed Circuit Board Assembly; EMI, Electromagnetic Interference</p>
+</div>
+
+<h2 id="Chipset（芯片组）">2.2 &nbsp&nbsp<a href="#Chipset（芯片组）" class="headerlink" title="Chipset（芯片组）"></a>Chipset（芯片组）</h2><p>一般指南北桥。（目前北桥已逐渐淘汰）</p>
+<p>常见厂商有：AMD，INTEL，NVDIA，VIA，SIS。</p>
+<p>南桥：North Bridge Chipset，INTEL的为输出&#x2F;输入控制器中心（Input&#x2F;Output Controller Hub，ICH），NVIDIA的为MCP，ATI的称为IXP&#x2F;SB，AMD的为FCH。</p>
+<p>北桥：North Bridge Chipset，INTEL的为GMCH，Graphics &amp; Memory controller hub，带G有集显，无G的无集显。</p>
+<h2 id="CPU（中央处理器）">2.3 &nbsp&nbsp<a href="#CPU（中央处理器）" class="headerlink" title="CPU（中央处理器）"></a>CPU（中央处理器）</h2><p>常见厂商：AMD，INTEL。龙芯，VIA，IBM，Transmeta。</p>
+<p>不同芯片组对应不同的Intel CPU座（针脚不同）</p>
+<p>注：CPU, Center Processor Unit</p>
+<h2 id="Battery（电池）">2.4 &nbsp&nbsp<a href="#Battery（电池）" class="headerlink" title="Battery（电池）"></a>Battery（电池）</h2><ul>
+<li>组成：外壳+控制板+电芯。</li>
+<li>类型：圆柱型、方型、聚合物</li>
+<li>电芯：常见18650型锂离子电芯。单个电压3.7V，充电电压4.2V，电容量为2400mAH。三串两并：电压为3*3.7V，容量为2*2400mAH。</li>
+</ul>
+<h2 id="Adapter（适配器）">2.5 &nbsp&nbsp<a href="#Adapter（适配器）" class="headerlink" title="Adapter（适配器）"></a>Adapter（适配器）</h2><p>输入100~240V的AC（50&#x2F;60Hz），输出16~20V居多。（华硕EPC有9.5V和12V的输出）</p>
+<h1 id="笔记本和台式机的区别">3 &nbsp&nbsp<a href="#笔记本和台式机的区别" class="headerlink" title="笔记本和台式机的区别"></a>笔记本和台式机的区别</h1><ul>
+<li>笔记本自带显示系统（LCD&#x2F;LED，专用屏线接口，自带高压板，灯管）</li>
+<li>笔记本电源统一只由一个电压转出，常见16~20。台式主板由ATX电源提供12V、5V、3.3V等电压。\这个是最大区别，笔记本的工作电压是由板子转换完成（16-20V主供电输入，经PWM电路降压处理，提供待机电压等工作电压），台式主板电源完成（多种方式，不只PWM）。</li>
+<li>笔记本有充放电的电路，可用电池做替代电源。</li>
+<li>为保证笔记本移动性和续航，CPU低功率、节能设计。</li>
+<li>笔记本的保护电路多，过热保护，过电压保护。</li>
+<li>笔记本内置鼠标设备，如指点杆，触摸板。</li>
+<li>笔记本元件集成度高，MOS管多为8脚贴片。专用IC也多。（芯片功能作用原理类似，供电不是太复杂。）</li>
+<li>笔记本6-8层板，夹层中也有信号线。台式主板4层，一般只在正反面有信号线。</li>
+<li>笔记本引入EC（多功能芯片）概念，类似台式主板的IO，但功能更多，因为处理键盘的各种信号（亮度调节，声音调节等快捷键）。部分EC里会带有程序，其脚位功能由程序决定。</li>
+<li>笔记本的时序概念很重要，电压和功能的实现，都由时序控制。环环相扣，前面条件未完成，后面动作就不会执行。</li>
+<li>笔记本维修对电路图依赖很强，需要电路图分析陌生元件，且需要点位图对照。无这些的话，只能维修一些通病。（信号复杂，板子小，整合度高）</li>
+</ul>
+<h1 id="笔记本板号">4 &nbsp&nbsp<a href="#笔记本板号" class="headerlink" title="笔记本板号"></a>笔记本板号</h1><p>板号：板子型号。即工程代号，Project Code</p>
+<p>笔记本大规模的代工厂：广达（quanta），仁宝（compal），纬创（wistron），英业达（inventec），和硕联合（pegatron）。<br>二线代工厂：神达（mitac），蓝天（clevo），大众（fic），微星（msi），精英（ecs）</p>
+<p>OEM代工：品牌商设计，代工厂生产。如苹果，联想（thinkpad）。成本高<br>ODM代工：设计和生产都是代工厂。</p>
+<p>广达：DAO+板号+mb，一般为3个字，如ch3，zq5<br>仁宝：la-xxxxp<br>纬创：板号+mb（有白框）<br>华硕（asus）： 板号+main board（没有位置号，PCB丝印层无标记，若无点位图无法分析）<br>英业达：板号（很长）+mb，一般给hp做得多<br>微星：ms-板号<br>富士康：代工索尼</p>
+<h1 id="主板板子元件">5 &nbsp&nbsp<a href="#主板板子元件" class="headerlink" title="主板板子元件"></a>主板板子元件</h1><p>CPU座，北桥，南桥，内存插槽，独立显卡，显存，SPI BIOS，pice，电池接口，适配器插头，时钟芯片，ec，LCD接口，硬盘接口，键盘接口，光驱接口，读卡器槽。</p>
+<h1 id="笔记本主板架构">6 &nbsp&nbsp<a href="#笔记本主板架构" class="headerlink" title="笔记本主板架构"></a>笔记本主板架构</h1><p>修接口。供电维修看架构没用。</p>
+<p>intel双桥架构：</p>
+<ul>
+<li>CPU管理北桥。</li>
+<li>北桥管内存，独显，显示接口，与cpu的连接的总线---FSB前端总线。北桥与南桥的总线---DMI+CLINK</li>
+<li>南桥管理周边设备，网卡，迷你卡，USB，摄像头，EC，光驱，硬盘等，南桥和EC连接的总线--LPC总线，7根重要信号：LAD0，LAD1，LAD2，LAD3，LFRAME#，LCLK，LRESET#。（诊断卡接9根，外加VCC、GND）</li>
+<li>EC管理键盘，触控板，鼠标，部分挂BIOS（SPI ROM）</li>
+</ul>
+<p>intel单桥架构（无北桥）：</p>
+<ul>
+<li>CPU管理显卡，内存。CPU不管显示接口，通过PCH桥到显示接口（cpu里有集成显卡，通过FDI总线输出）</li>
+<li>pch（管理原来南桥的功能）相比原南桥，增加了显示接口（VGA，LVDS，HDMI等）管理，可能也直接管理SPI rom（BIOS）</li>
+<li>EC管理键盘，温控芯片，触摸板，挂BIOS</li>
+</ul>
+<p>AMD（ATI）双桥架构：</p>
+<ul>
+<li>CPU管内存</li>
+<li>北桥管理所有PCIE，显示接口。网卡（1000M，走PCIE）</li>
+<li>南桥管理USB，网卡（100M，走PCI。），硬盘光驱等</li>
+</ul>
+<p>AMD单桥架构：</p>
+<ul>
+<li>CPU管理内存，显卡，显示接口（这个是与intel的区别）</li>
+<li>桥（fch）管理网卡，mini-pcie，硬盘光驱，USB，EC，声卡等</li>
+<li>EC管键盘，鼠标</li>
+</ul>
+<p>intel和AMD单桥架构无时钟芯片，集成在桥。nvidia的双桥和amd相同。nvidia单桥：CPU管内存，桥管其他。</p>
+<h1 id="名词解释">7 &nbsp&nbsp<a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>复位和PG都是测电压，时钟是测频率（无示波器时，可测电压，33MHz大概1.6V，100MHz大概0.4V）。</p>
+<h2 id="供电和信号">7.1 &nbsp&nbsp<a href="#供电和信号" class="headerlink" title="供电和信号"></a>供电和信号</h2><p>供电一个可以输出电流的电压，电流较大。工作过程中，这个电压不能置高或拉低。供电被拉低，就是短路。一般，也不许置高。（动力来源）。</p>
+<p>常见有19，12，5（往上大电压给接口），3.3（给芯片），2.5，1.8，1.5，1.25，1.05，1.2，1.1，0.9，0.75V。CPU供电0.7-1.5V</p>
+<p>名称一般为：VCC，VDD，VCC3，VDDQ，VTT，VBAT，5VALW，+3VO等（有V字）。苹果的供电特殊，例如PP0V75_s3_mem</p>
+<p>符号为一个圆圈，T型，三角形。表示固定的电压，不允许置高和拉低。信号电压（例如19V）与1.5V（供电）碰在一起会变为1.5V。</p>
+<h2 id="接地">7.2 &nbsp&nbsp<a href="#接地" class="headerlink" title="接地"></a>接地</h2><p>接地是给供电构成回路。有接地，才会有电流流过设备。</p>
+<p>名称一般为：VSS、GND。</p>
+<p>符号：三角形（数字地）；倒三角形多横线（模拟地）。避免数字和模拟连在一起相互干扰。例子：数字地和模拟地通过一个0欧姆电阻PR170(值0_6)，实际测量是通路，但信号不一样。如果这个0欧姆电阻坏了，可能导致烧元件。压差相对值不一样。</p>
+<h2 id="信号">7.3 &nbsp&nbsp<a href="#信号" class="headerlink" title="信号"></a>信号</h2><p>理论上，电压信号值考虑电压变化，电流很小。在工作过程中，可根据需要置高或者拉低。电路图中的信号的箭头不完全代表信号的流向，因为画图人员的随意性。<br>信号方向考经验判断：例如PWRBTN#给南桥的；slp_s3#南桥出来的；therm_stp#温控信号看情况：过温时，温控芯片吧温控信号拉低。</p>
+<h2 id="高低电平">7.4 &nbsp&nbsp<a href="#高低电平" class="headerlink" title="高低电平"></a>高低电平</h2><p>数字逻辑电路中，高电平表示1，低电平表示0。一般规定：低电平为0-0.25V，高电平为3.5-5V。</p>
+<p>主板中，1V以上为高电平，0.7以下为低电平。</p>
+<p>结论：根据电路判断高低电平，非限定特定值。有些电路0.5就是高，有的电路1.1还是低。但0肯定是地，3.3肯定是高。</p>
+<h2 id="脉冲和跳变">7.5 &nbsp&nbsp<a href="#脉冲和跳变" class="headerlink" title="脉冲和跳变"></a>脉冲和跳变</h2><p>上升沿，下降沿。</p>
+<p>类型：高电平跳变为低电平；低电平跳变为高电平；高跳变为低再跳变为高。</p>
+<h2 id="时钟信号">7.6 &nbsp&nbsp<a href="#时钟信号" class="headerlink" title="时钟信号"></a>时钟信号</h2><p>时钟信号CLK（Clock的简写）。为数字电路工作提供一个基准，使各个相连设备统一步调工作。单位Hz。南桥晶振323.768KHz。</p>
+<p>主板上都有一个主时钟产生电路，给所有设备提供时钟，送出到cpu的频率为100MHz以上，送给PCI的是33MHz，送给PCIE的是100MHz，送给USB控制器（集成在南桥内部）的为48MHz。</p>
+<p>相连的两个设备需要相同的时钟频率和电压才能通信，如内存和北桥。</p>
+<p>时钟信号需要在主板正常通电后且时钟芯片工作正常才能测量到，用示波器和万用表（测电压?）测。100M的示波器一般测不了CPU的频率。</p>
+<h2 id="复位信号">7.7 &nbsp&nbsp<a href="#复位信号" class="headerlink" title="复位信号"></a>复位信号</h2><p>复位信号RST（RESET的简写）。复位都是从高电平向低电平跳变再回到高电平，如PCI的复位是从3.3V向0V跳变再回到3.3V就是一个正常的复位跳变。</p>
+<p>名称一般为：xxxRST#，如PCIRST#、CPURST#、IDERST#等。复位只能是瞬间低电平，主板正常工作时复位都是高电平。但不是恒高电平，不能直接接到供电上。如台式机reset键，复位开关弹不起来就一直为低电平，就不行。</p>
+<p>平常说没复位，通常指没复位电压，即复位信号测量点电压为0V。维修一般都是把复位电压修出来。</p>
+<p>所有设备的复位信号，如EC，北桥等，都是由南桥发出。开机的瞬间，便会对设备清零，使其重新工作。</p>
+<h2 id="PG信号">7.8 &nbsp&nbsp<a href="#PG信号" class="headerlink" title="PG信号"></a>PG信号</h2><p>电源好信号PG（powergood的缩写），用来描述供电正常的信号。一般高电平有效。如cpu供电芯片，只有在正常发出cpu电压后，才会发出PG信号。</p>
+<p>名称一般为：PG、PWRGD、PWROK、POK、PWRG、VTTPWRGD、CPUPWRGD等。</p>
+<h2 id="开启信号">7.9 &nbsp&nbsp<a href="#开启信号" class="headerlink" title="开启信号"></a>开启信号</h2><p>开启信号。有的芯片叫EN（enable），使能，高电平时表示开启信号。有的芯片叫SHDN#（shutdown），#表示低电平有效。综合名称和#来看，意思是低电平时关闭芯片，高电平开启。所以一般shutdown信号一般要维持高电平。</p>
+<p>注：信号带#时（低电平有效），一定要结合信号的英文全程去理解。有的带#，为低电平时主板可以正常工作。例如：VT_PWRGD_CK410#信号是cpu供电正常后发出低电平开启时钟信号。1999_SHDN#信号是低电平关闭MAX1999的控制信号，即为高电平时，主板才能正常工作。</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>硬件</tag>
+        <tag>笔记本</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -2540,69 +2542,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>数据结构</title>
-    <url>/code/data-structure/</url>
-    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
-<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
-<li>集合的特性：<ul>
-<li>集合里的元素类型不一定相同</li>
-<li>集合里的元素没有顺序</li>
-</ul>
-</li>
-<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
-<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
-<li>列表最常见的表现形式：数组和链表<ul>
-<li>C++和Java中，数组中的元素类型必须保持一致。</li>
-<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
-</ul>
-</li>
-<li>特殊类型的列表：栈和队列</li>
-</ul>
-</li>
-<li>列表和数组的区别<ul>
-<li>数组<ul>
-<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
-<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
-</ul>
-</li>
-<li>列表<ul>
-<li>列表没有<code>索引</code>。</li>
-<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
-<ul>
-<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
-<li>时间复杂度：O(1)</li>
-</ul>
-</li>
-<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
-<li>时间复杂度：O(N)</li>
-</ul>
-</li>
-<li>插入元素<ul>
-<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
-<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
-</ul>
-</li>
-<li>删除元素：与插入元素类似<ul>
-<li>末尾删除：只需要一步</li>
-<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
-<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
-</ul>
-</li>
-</ul>
-<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数据库技术总结笔记</title>
     <url>/code/database/</url>
     <content><![CDATA[<h1 id="常见数据库">1 &nbsp&nbsp<a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h1><ul>
@@ -2727,6 +2666,69 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>mongodb</tag>
         <tag>sql</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/code/data-structure/</url>
+    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
+<li>集合的特性：<ul>
+<li>集合里的元素类型不一定相同</li>
+<li>集合里的元素没有顺序</li>
+</ul>
+</li>
+<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
+<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
+<li>列表最常见的表现形式：数组和链表<ul>
+<li>C++和Java中，数组中的元素类型必须保持一致。</li>
+<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
+</ul>
+</li>
+<li>特殊类型的列表：栈和队列</li>
+</ul>
+</li>
+<li>列表和数组的区别<ul>
+<li>数组<ul>
+<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
+<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
+</ul>
+</li>
+<li>列表<ul>
+<li>列表没有<code>索引</code>。</li>
+<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
+<ul>
+<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
+<li>时间复杂度：O(1)</li>
+</ul>
+</li>
+<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
+<li>时间复杂度：O(N)</li>
+</ul>
+</li>
+<li>插入元素<ul>
+<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
+<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
+</ul>
+</li>
+<li>删除元素：与插入元素类似<ul>
+<li>末尾删除：只需要一步</li>
+<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
+<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
   </entry>
   <entry>
     <title>docker</title>
@@ -3189,7 +3191,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#49;&#55;&#x32;&#46;&#49;&#x39;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#64;&#49;&#55;&#50;&#x2e;&#x31;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5581,6 +5583,78 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Office总结笔记</title>
+    <url>/software/office/</url>
+    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
+<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
+<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
+<li>分节符用的下一页。</li>
+</ul>
+<p>关于分页符和分节符的删除：</p>
+<ul>
+<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
+<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
+</ul>
+<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
+<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
+<li>单击时，只能使用一次。双击时，能多次使用。</li>
+</ul>
+<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
+<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
+<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
+<p>几种模式的区别：</p>
+<ul>
+<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
+<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
+</ul>
+<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
+<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
+<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
+<li>在第二页表格第一行，插入空白页。</li>
+<li>之后删除表格页。</li>
+</ol>
+<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
+<li>创建文献编号，排版文献<ol>
+<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
+<li>在数值左右分别添加 [] 符号</li>
+<li>对参考文献使用该格式进行排版</li>
+</ol>
+</li>
+<li>交叉引用，插入引用编号<ol>
+<li>「引用」选项卡 &gt; 交叉引用</li>
+<li>编号项 + 段落编号 + 插入为超链接</li>
+<li>选择所引用的参考文献</li>
+</ol>
+</li>
+<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
+</ol>
+<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
+<li>无任何数据的初始列：设置单元格式</li>
+<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
+</ul>
+<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
+<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
+<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
+<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
+</ul>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>软件</tag>
+        <tag>office</tag>
+        <tag>excel</tag>
+        <tag>word</tag>
+        <tag>ppt</tag>
+        <tag>powerpoint</tag>
+        <tag>操作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英伟达Jetson开发板踩坑记录总结</title>
     <url>/software/nvidia-jetson/</url>
     <content><![CDATA[<div class="note info no-icon"><p>文章推荐：<a href="https://www.guyuehome.com/42097">Jetson nano 系统安装</a></p>
@@ -5952,78 +6026,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>jetson</tag>
         <tag>开发板</tag>
         <tag>踩坑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Office总结笔记</title>
-    <url>/software/office/</url>
-    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
-<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
-<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
-<li>分节符用的下一页。</li>
-</ul>
-<p>关于分页符和分节符的删除：</p>
-<ul>
-<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
-<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
-</ul>
-<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
-<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
-<li>单击时，只能使用一次。双击时，能多次使用。</li>
-</ul>
-<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
-<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
-<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
-<p>几种模式的区别：</p>
-<ul>
-<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
-<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
-</ul>
-<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
-<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
-<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
-<li>在第二页表格第一行，插入空白页。</li>
-<li>之后删除表格页。</li>
-</ol>
-<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
-<li>创建文献编号，排版文献<ol>
-<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
-<li>在数值左右分别添加 [] 符号</li>
-<li>对参考文献使用该格式进行排版</li>
-</ol>
-</li>
-<li>交叉引用，插入引用编号<ol>
-<li>「引用」选项卡 &gt; 交叉引用</li>
-<li>编号项 + 段落编号 + 插入为超链接</li>
-<li>选择所引用的参考文献</li>
-</ol>
-</li>
-<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
-</ol>
-<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
-<li>无任何数据的初始列：设置单元格式</li>
-<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
-</ul>
-<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
-<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
-<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
-<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
-</ul>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>软件</tag>
-        <tag>office</tag>
-        <tag>excel</tag>
-        <tag>word</tag>
-        <tag>ppt</tag>
-        <tag>powerpoint</tag>
-        <tag>操作</tag>
       </tags>
   </entry>
   <entry>
@@ -7098,12 +7100,23 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 <h1 id="飞牛私有云fnOS（NAS总结）">15 &nbsp&nbsp<a href="#飞牛私有云fnOS（NAS总结）" class="headerlink" title="飞牛私有云fnOS（NAS总结）"></a>飞牛私有云fnOS（NAS总结）</h1><h2 id="EMBY-MetaTube实现影视刮削">15.1 &nbsp&nbsp<a href="#EMBY-MetaTube实现影视刮削" class="headerlink" title="EMBY+MetaTube实现影视刮削"></a>EMBY+MetaTube实现影视刮削</h2><ol>
 <li>在飞牛的应用中心中安装<code>EMBY</code>并通过<code>wizardstart</code>配置好帐号。</li>
-<li>打开<code>docker</code>应用，点击<code>compose</code>页面，在飞牛的存储中，选择路径存放<code>docker-compose.yaml</code>的文件（以下卷映射也是基于该路径的相对路径），输入如下内容保存运行：<br> <code>metatube的``docker-compose.yaml</code> <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">metatube:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">ghcr.io/metatube-community/metatube-server:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">metatube</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;8080:8080&quot;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">postgres</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">HTTP_PROXY=</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">HTTPS_PROXY=</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">PGID=&quot;$&#123;TRIM_UID&#125;&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">PUID=&quot;$&#123;TRIM_GID&#125;&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">run:/var/run</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">-dsn</span> <span class="string">&quot;postgres://metatube:metatube@/metatube?host=/var/run/postgresql&quot;</span> <span class="string">-port</span> <span class="number">8080</span> <span class="string">-db-auto-migrate</span> <span class="string">-db-prepared-stmt</span></span><br><span class="line"></span><br><span class="line"><span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:15-alpine</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">metatube-postgres</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">POSTGRES_USER=metatube</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">POSTGRES_PASSWORD=metatube</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">POSTGRES_DB=metatube</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">PGID=&quot;$&#123;TRIM_UID&#125;&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">PUID=&quot;$&#123;TRIM_GID&#125;&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./db:/var/lib/postgresql/data</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">run:/var/run</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">&quot;-c TimeZone=Asia/Shanghai -c log_timezone=Asia/Shanghai -c listen_addresses=&#x27;&#x27; -c unix_socket_permissions=0777&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line"><span class="attr">run:</span></span><br></pre></td></tr></table></figure></li>
+<li>打开<code>docker</code>应用，点击<code>compose</code>页面，在飞牛的存储中，创建<code>metatube</code>文件夹路径存放<code>docker-compose.yaml</code>的文件（以下卷映射也是基于该路径的相对路径），输入如下内容保存运行：<code>metatube</code>的<code>docker-compose.yaml</code> <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">metatube:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">ghcr.io/metatube-community/metatube-server:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">metatube</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8080:8080&quot;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">postgres</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">HTTP_PROXY=</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">HTTPS_PROXY=</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">run:/var/run</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">-dsn</span> <span class="string">&quot;postgres://metatube:metatube@/metatube?host=/var/run/postgresql&quot;</span> <span class="string">-port</span> <span class="number">8080</span> <span class="string">-db-auto-migrate</span> <span class="string">-db-prepared-stmt</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:15-alpine</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">metatube-postgres</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">POSTGRES_USER=metatube</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">POSTGRES_PASSWORD=metatube</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">POSTGRES_DB=metatube</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./db:/var/lib/postgresql/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">run:/var/run</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">&quot;-c TimeZone=Asia/Shanghai -c log_timezone=Asia/Shanghai -c listen_addresses=&#x27;&#x27; -c unix_socket_permissions=0777&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">run:</span></span><br></pre></td></tr></table></figure></li>
 <li>下载<a href="https://github.com/metatube-community/jellyfin-plugin-metatube/releases">Metatube</a>的插件，放置于<code>/vol1/@appdata/EmbyServer4-9/plugins</code>（应用-&gt;文件管理-&gt;管理员视角），重启EMBY应用。</li>
 <li>在<code>EMBY</code>的控制台，<code>高级-&gt;插件</code>，找到<code>Metatube</code>，点击<code>设置</code>，填入第二步的部署docker的ip+端口：就是<code>http://飞牛IP:8080</code>，点击底部的<code>保存</code>。</li>
 <li>然后在<code>EMBY</code>的控制台，<code>Emby Server-&gt;媒体库</code>，这里可以新增和调整元数据的设置参数。</li>
 </ol>
-<h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">15.2 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
+<h2 id="Talebook服务端图书馆">15.2 &nbsp&nbsp<a href="#Talebook服务端图书馆" class="headerlink" title="Talebook服务端图书馆"></a>Talebook服务端图书馆</h2><div class="note info no-icon"><ul>
+<li>Talebook配合手机APP<code>静读天下-moonreader</code>，实测无法在线阅读epub电子书，只能下载后再阅读，阅读记录可被保留。</li>
+<li>Talebook服务端批量操作没有删除选项，只能单独删除。</li>
+</ul>
+</div>
+
+<ol>
+<li>打开<code>docker</code>应用，点击<code>compose</code>页面，在飞牛的存储中，创建<code>talebook</code>文件夹路径存放<code>docker-compose.yaml</code>的文件（以下卷映射也是基于该路径的相对路径），输入如下内容保存运行：<code>talebook</code>的<code>docker-compose.yaml</code> <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="comment"># main service</span></span><br><span class="line">  <span class="attr">talebook:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">talebook/talebook</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">       <span class="bullet">-</span> <span class="string">./data:/data</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">       <span class="bullet">-</span> <span class="string">&quot;8090:80&quot;</span></span><br><span class="line">    <span class="comment">#- &quot;8443:443&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PUID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PGID=1000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">douban-rs-api</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># optional, for meta plugins</span></span><br><span class="line">  <span class="comment"># please set &quot;http://douban-rs-api&quot; in settings</span></span><br><span class="line">  <span class="attr">douban-rs-api:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">ghcr.io/cxfksword/douban-api-rs</span></span><br></pre></td></tr></table></figure></li>
+<li>访问地址：<code>http://飞牛IP:8090</code>，配置帐号&#x2F;密码&#x2F;邮件。</li>
+<li>手机APP<code>静读天下-moonreader</code>右上角，增加新书库，书库地址：<code>http://飞牛IP:8090/opds/</code>。</li>
+</ol>
+<h2 id="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。">15.3 &nbsp&nbsp<a href="#下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。" class="headerlink" title="下载应用例如QBittorrent在后台上传时可能会引导硬盘持续读取和CPU的异常占用。"></a>下载应用例如<code>QBittorrent</code>在后台上传时可能会引导硬盘持续读取和CPU的异常占用。</h2><p>问题原因：系统Swap cache功能引起引起硬盘持续读取和CPU的异常占用。</p>
 <p>解决方法：永久禁用<code>Swap cache</code>功能。</p>
 <ol>
 <li>访问PVE的fnOS虚拟机控制台或者开启SSH远程访问权限。</li>
@@ -7116,7 +7129,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">UUID=ea545bcc-cd3f-479f-902a-ab2b02db25 / ext4 errors=remount-ro 0 1</span><br><span class="line"><span class="comment"># /swapfile none swap sw 0 0</span></span><br><span class="line">UUID=676D-A1AF /boot/efi vfat <span class="built_in">umask</span>=0077 0 1</span><br></pre></td></tr></table></figure>
 
-<h2 id="应用中心安装AutoBangumi跳过首次配置页面之后，无法再次访问">15.3 &nbsp&nbsp<a href="#应用中心安装AutoBangumi跳过首次配置页面之后，无法再次访问" class="headerlink" title="应用中心安装AutoBangumi跳过首次配置页面之后，无法再次访问"></a>应用中心安装<code>AutoBangumi</code>跳过首次配置页面之后，无法再次访问</h2><p>问题现象：在应用中心安装<code>AutoBangumi</code>之后，首次访问<code>http://ip:17892/</code>端口的配置页面时，若不配置qbit的下载端口时。关闭页面，尝试二次访问该端口时，页面被拒绝访问，连接失败。通过Docker应用查看容器的运行日志：</p>
+<h2 id="应用中心安装AutoBangumi跳过首次配置页面之后，无法再次访问">15.4 &nbsp&nbsp<a href="#应用中心安装AutoBangumi跳过首次配置页面之后，无法再次访问" class="headerlink" title="应用中心安装AutoBangumi跳过首次配置页面之后，无法再次访问"></a>应用中心安装<code>AutoBangumi</code>跳过首次配置页面之后，无法再次访问</h2><p>问题现象：在应用中心安装<code>AutoBangumi</code>之后，首次访问<code>http://ip:17892/</code>端口的配置页面时，若不配置qbit的下载端口时。关闭页面，尝试二次访问该端口时，页面被拒绝访问，连接失败。通过Docker应用查看容器的运行日志：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[2025-09-02 00:30:13] ERROR     [Checker] Downloader connect failed.</span><br><span class="line">[2025-09-02 00:30:13] WARNING:  Downloader is not running.</span><br><span class="line">[2025-09-02 00:30:13] INFO:     Waiting <span class="keyword">for</span> downloader to start.</span><br></pre></td></tr></table></figure>
 
 <p>问题原因：没有配置qbit的下载端口，<code>AutoBangumi</code>未能检测到下载器。</p>
@@ -7359,6 +7372,32 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>虚拟机总结</title>
     <url>/software/virtual-machine/</url>
     <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
@@ -7435,30 +7474,54 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
 ]]></content>
       <categories>
-        <category>software</category>
+        <category>translations</category>
       </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
   </entry>
   <entry>
     <title>翻译规划（作废）</title>
@@ -8648,56 +8711,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows系统排障总结</title>
     <url>/troubleshooting/windows-troubleshooting/</url>
     <content><![CDATA[<h1 id="Windows系统版本发布日志">1 &nbsp&nbsp<a href="#Windows系统版本发布日志" class="headerlink" title="Windows系统版本发布日志"></a>Windows系统版本发布日志</h1><table>
@@ -9252,12 +9265,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#104;&#97;&#x6e;&#107;&#x73;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#99;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#104;&#x61;&#110;&#107;&#x73;&#46;&#99;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -9351,156 +9364,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
-<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
-<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
-<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
-<p>bash: <code>echo $?</code>，输出127</p>
-<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
-<p>编写程序，在标准输出上打印 Hello, World。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
-<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
-<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
-<p>解释下面程序片段是否合法。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
-</blockquote>
-<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
-<p>修正方式1：二三行添加cout对象</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>修正方式2：删除一二行多余的分号</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
-<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
-<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
-</blockquote>
-<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
-<p>编写程序，使用while循环将50到100的整数相加。</p>
-</blockquote>
-<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
-<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
-</blockquote>
-<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
-<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
-</blockquote>
-<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
-<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
-
-<p>从-100加到100，sum的终值为0。</p>
-<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
-<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
-</blockquote>
-<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
-<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
-</blockquote>
-<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
-<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
-<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
-<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
-</blockquote>
-<p>编译器可检查的错误：</p>
-<ol>
-<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
-<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
-<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
-</ol>
-<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
-<p>编写程序，从cin读取一组数，输出其和。</p>
-</blockquote>
-<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
-<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
-<ul>
-<li>Windows：ctrl+z</li>
-<li>UNIX（包括Mac OS X）：ctrl+d</li>
-</ul>
-<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
-<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
-</blockquote>
-<ol>
-<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
-<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
-</ol>
-<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
-<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
-</blockquote>
-<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
-<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
-</blockquote>
-<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
-<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
-</blockquote>
-<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
-<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
-</blockquote>
-<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
-<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
-</blockquote>
-<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
-<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
-</blockquote>
-<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
-<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
-</blockquote>
-<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
-<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -9987,9 +9850,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>第二章</tag>
       </tags>
   </entry>
   <entry>
@@ -11600,11 +11463,11 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>head-first-html-css-v2</category>
       </categories>
       <tags>
-        <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
+        <tag>第一章</tag>
         <tag>Head Fisrt HTML CSS</tag>
       </tags>
   </entry>
@@ -11636,9 +11499,9 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>head-first-html-css-v2</category>
       </categories>
       <tags>
+        <tag>第二章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>第二章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
@@ -12102,40 +11965,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
     <url>/software/blender/blender-learning-resources/</url>
     <content><![CDATA[<img data-src="/images/blender_learning_resources/cover.webp" style="width: 580px">
@@ -12304,6 +12133,40 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -12398,6 +12261,30 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <category>software</category>
         <category>blender</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
+      </tags>
   </entry>
   <entry>
     <title>Blender界面工具操作总结</title>
@@ -12758,30 +12645,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender常见问题总结——Q&amp;A</title>
-    <url>/software/blender/q-a/</url>
-    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
-<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
-<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
-<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
-<ul>
-<li>CPU比GPU性能差很多</li>
-<li>渲染Volumetrics场景</li>
-</ul>
-<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
@@ -12832,6 +12695,156 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>动画</tag>
         <tag>动画电影</tag>
         <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
+<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
+<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
+<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
+<p>bash: <code>echo $?</code>，输出127</p>
+<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
+<p>编写程序，在标准输出上打印 Hello, World。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
+<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
+<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
+<p>解释下面程序片段是否合法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
+</blockquote>
+<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
+<p>修正方式1：二三行添加cout对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>修正方式2：删除一二行多余的分号</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
+<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
+<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
+</blockquote>
+<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
+<p>编写程序，使用while循环将50到100的整数相加。</p>
+</blockquote>
+<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
+<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
+</blockquote>
+<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
+<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
+</blockquote>
+<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
+<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
+
+<p>从-100加到100，sum的终值为0。</p>
+<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
+<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
+</blockquote>
+<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
+<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
+</blockquote>
+<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
+<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
+<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
+<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
+</blockquote>
+<p>编译器可检查的错误：</p>
+<ol>
+<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
+<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
+<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
+</ol>
+<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
+<p>编写程序，从cin读取一组数，输出其和。</p>
+</blockquote>
+<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
+<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
+<ul>
+<li>Windows：ctrl+z</li>
+<li>UNIX（包括Mac OS X）：ctrl+d</li>
+</ul>
+<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
+<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
+</blockquote>
+<ol>
+<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
+<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
+</ol>
+<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
+<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
+</blockquote>
+<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
+<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
+</blockquote>
+<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
+<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
+</blockquote>
+<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
+<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
+</blockquote>
+<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
+<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
+</blockquote>
+<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
+<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
+</blockquote>
+<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
+<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
+</blockquote>
+<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
+<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第一章</tag>
       </tags>
   </entry>
   <entry>
@@ -13010,7 +13023,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#x69;&#115;&#x74;&#101;&#x72;&#x6b;&#105;&#110;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#105;&#x73;&#x74;&#101;&#x72;&#x6b;&#105;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -13122,6 +13135,11 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
   <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -13256,11 +13274,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 <li><a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a></li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>作品</title>
