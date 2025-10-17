@@ -1591,6 +1591,28 @@
 ]]></content>
   </entry>
   <entry>
+    <title>致首次使用RIME的你 -- 小狼毫输入法详细配置</title>
+    <url>/rime-input-method/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：5%</strong></p>
+</div>
+
+<p>TODO<br>前段时间，搜狗输入法被曝后台手脚不干净，强制推送618活动啥的。</p>
+<h2 id="前言：我与RIME的相遇">0.1 &nbsp&nbsp<a href="#前言：我与RIME的相遇" class="headerlink" title="前言：我与RIME的相遇"></a>前言：我与RIME的相遇</h2><p>在受不了原版的搜狗输入法的广告弹窗和响应速度后，我开始折腾起输入法。</p>
+<p>为了解决搜狗的弹窗问题，我使用了火绒安全软件的扩展工具 --- 弹窗拦截（强推一波<a href="https://www.huorong.cn/"><strong>火绒安全软件</strong></a>）。然后，弹窗是解决了。但由于本人最初安装搜狗输入法于机械盘，加上个人词库越来越庞大，搜狗的输入法的响应速度已经严重影响我的输入效率。</p>
+<p>于是，我便开始搜寻精简版的搜狗输入法。所幸的是，网络上已有大神在做这个，例如<strong>大水牛去广告精简优化版</strong> --- <a href="https://pan.baidu.com/s/1RAWTp6d6eZnCtDvC6RsEmQ"><strong>百度云链接</strong></a>（提取码：ffqz）。</p>
+<p>如此一来，响应速度的确是有所提升，可惜这种做法始终是治标不治本（其实响应速度问题也可通过安装程序于固态盘来解决）。后来在一次搜索相关开源的输入法时，我遇到了RIME。</p>
+<span id="more"></span>
+
+<p>对RIME进行简单的了解后，我便被它吸引住了。无奈的是，RIME的配置并没有图形交互界面。这对新用户来说，极为不友好。我估计这也是很多人放弃使用RIME的原因。</p>
+<p>在遍寻各途径的资料后（官网、贴吧、博客等），我发现没有一篇文章完整并系统地介绍所有配置流程。因此，我决定收集目前网上的已存资料，并将其系统化整理。望能对新入坑的朋友有所帮助，也希望更多的朋友能够使用到基于RIME框架的输入法。</p>
+<h2 id="软件简介">0.2 &nbsp&nbsp<a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h2><h2 id="软件配置">0.3 &nbsp&nbsp<a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h2><h3 id="安装">0.3.1 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="繁简转换">0.3.2 &nbsp&nbsp<a href="#繁简转换" class="headerlink" title="繁简转换"></a>繁简转换</h3><h3 id="weasel-yaml设置">0.3.3 &nbsp&nbsp<a href="#weasel-yaml设置" class="headerlink" title="weasel.yaml设置"></a>weasel.yaml设置</h3><h4 id>0.3.3.1 &nbsp&nbsp<a href="#" class="headerlink" title></a></h4>]]></content>
+      <tags>
+        <tag>开源软件</tag>
+        <tag>RIME输入法</tag>
+        <tag>软件配置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>站点导航和公告</title>
     <url>/navigation-announcement/</url>
     <content><![CDATA[<center>
@@ -1694,28 +1716,6 @@
 }
 </style>
 ]]></content>
-  </entry>
-  <entry>
-    <title>致首次使用RIME的你 -- 小狼毫输入法详细配置</title>
-    <url>/rime-input-method/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：5%</strong></p>
-</div>
-
-<p>TODO<br>前段时间，搜狗输入法被曝后台手脚不干净，强制推送618活动啥的。</p>
-<h2 id="前言：我与RIME的相遇">0.1 &nbsp&nbsp<a href="#前言：我与RIME的相遇" class="headerlink" title="前言：我与RIME的相遇"></a>前言：我与RIME的相遇</h2><p>在受不了原版的搜狗输入法的广告弹窗和响应速度后，我开始折腾起输入法。</p>
-<p>为了解决搜狗的弹窗问题，我使用了火绒安全软件的扩展工具 --- 弹窗拦截（强推一波<a href="https://www.huorong.cn/"><strong>火绒安全软件</strong></a>）。然后，弹窗是解决了。但由于本人最初安装搜狗输入法于机械盘，加上个人词库越来越庞大，搜狗的输入法的响应速度已经严重影响我的输入效率。</p>
-<p>于是，我便开始搜寻精简版的搜狗输入法。所幸的是，网络上已有大神在做这个，例如<strong>大水牛去广告精简优化版</strong> --- <a href="https://pan.baidu.com/s/1RAWTp6d6eZnCtDvC6RsEmQ"><strong>百度云链接</strong></a>（提取码：ffqz）。</p>
-<p>如此一来，响应速度的确是有所提升，可惜这种做法始终是治标不治本（其实响应速度问题也可通过安装程序于固态盘来解决）。后来在一次搜索相关开源的输入法时，我遇到了RIME。</p>
-<span id="more"></span>
-
-<p>对RIME进行简单的了解后，我便被它吸引住了。无奈的是，RIME的配置并没有图形交互界面。这对新用户来说，极为不友好。我估计这也是很多人放弃使用RIME的原因。</p>
-<p>在遍寻各途径的资料后（官网、贴吧、博客等），我发现没有一篇文章完整并系统地介绍所有配置流程。因此，我决定收集目前网上的已存资料，并将其系统化整理。望能对新入坑的朋友有所帮助，也希望更多的朋友能够使用到基于RIME框架的输入法。</p>
-<h2 id="软件简介">0.2 &nbsp&nbsp<a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h2><h2 id="软件配置">0.3 &nbsp&nbsp<a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h2><h3 id="安装">0.3.1 &nbsp&nbsp<a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="繁简转换">0.3.2 &nbsp&nbsp<a href="#繁简转换" class="headerlink" title="繁简转换"></a>繁简转换</h3><h3 id="weasel-yaml设置">0.3.3 &nbsp&nbsp<a href="#weasel-yaml设置" class="headerlink" title="weasel.yaml设置"></a>weasel.yaml设置</h3><h4 id>0.3.3.1 &nbsp&nbsp<a href="#" class="headerlink" title></a></h4>]]></content>
-      <tags>
-        <tag>开源软件</tag>
-        <tag>RIME输入法</tag>
-        <tag>软件配置</tag>
-      </tags>
   </entry>
   <entry>
     <title>搜索引擎</title>
@@ -1855,126 +1855,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       <tags>
         <tag>电脑维修</tag>
         <tag>个人店铺</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>闪存驱动器设计</title>
-    <url>/cad/flash-disk/</url>
-    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
-<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
-<p>部分店铺的网评：大树推荐，翼浪排除</p>
-</blockquote>
-<p><strong>店铺总结（个人购买经验总结）：</strong></p>
-<ul>
-<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
-<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
-<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
-</ul>
-<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
-<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
-<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
-</ul>
-<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
-<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
-<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
-<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
-</ul>
-</li>
-<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
-<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
-<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
-</ul>
-</li>
-<li>THGBMFG9C4LBAIR：64GB<ul>
-<li>颗粒从酷派平板拆出来</li>
-</ul>
-</li>
-<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
-<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
-</ul>
-</li>
-<li>NW852（7WB2D&#x2F;7ZB2D）：镁光64GB颗粒，BGA132封装，ID为2CB47832AA04。<ul>
-<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
-</ul>
-</li>
-<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
-<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
-</ul>
-</li>
-<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
-<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
-<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
-<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
-</ul>
-</li>
-<li>ID为EC1E98AF84CD，三星TLC颗粒，查到资料有U盘用SM3281BB主控芯片开这个颗粒<ul>
-<li>从威刚SX8200 Pro（容量未知）拆出来，SX8200NPB1</li>
-<li>主控：SM2262 BC（TB1M12.00） TW 2D</li>
-</ul>
-</li>
-</ul>
-<p>颗粒的部分资料：</p>
-<ul>
-<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
-</ul>
-<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
-<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
-<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
-<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
-<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
-<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
-</ul>
-<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
-<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
-<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
-<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
-</ul>
-<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
-<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
-<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
-</ul>
-<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
-<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
-<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
-<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
-</ul>
-<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
-<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
-<li>焊接颗粒到主控盘，插上电脑</li>
-<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
-<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
-<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
-<li>「量产测试」标签页点击「开始」就会开始量产</li>
-</ol>
-<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
-<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
-<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
-<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
-<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
-</ul>
-<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
-<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
-<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
-<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>量产</tag>
-        <tag>U盘</tag>
-        <tag>固态</tag>
-        <tag>开卡</tag>
-        <tag>测试架</tag>
-        <tag>主控</tag>
-        <tag>颗粒</tag>
       </tags>
   </entry>
   <entry>
@@ -2207,6 +2087,126 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>闪存驱动器设计</title>
+    <url>/cad/flash-disk/</url>
+    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
+<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+</blockquote>
+<p><strong>店铺总结（个人购买经验总结）：</strong></p>
+<ul>
+<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
+<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
+<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
+</ul>
+<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
+<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
+</ul>
+<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
+<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
+<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
+</ul>
+</li>
+<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
+<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
+<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
+</ul>
+</li>
+<li>THGBMFG9C4LBAIR：64GB<ul>
+<li>颗粒从酷派平板拆出来</li>
+</ul>
+</li>
+<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
+<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
+</ul>
+</li>
+<li>NW852（7WB2D&#x2F;7ZB2D）：镁光64GB颗粒，BGA132封装，ID为2CB47832AA04。<ul>
+<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
+</ul>
+</li>
+<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
+<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
+</ul>
+</li>
+<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
+<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
+<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
+<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
+</ul>
+</li>
+<li>ID为EC1E98AF84CD，三星TLC颗粒，查到资料有U盘用SM3281BB主控芯片开这个颗粒<ul>
+<li>从威刚SX8200 Pro（容量未知）拆出来，SX8200NPB1</li>
+<li>主控：SM2262 BC（TB1M12.00） TW 2D</li>
+</ul>
+</li>
+</ul>
+<p>颗粒的部分资料：</p>
+<ul>
+<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
+</ul>
+<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
+<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
+<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
+<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
+<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
+</ul>
+<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
+<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
+<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
+<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
+</ul>
+<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
+<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
+<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
+</ul>
+<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
+<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
+<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
+<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
+</ul>
+<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
+<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<li>焊接颗粒到主控盘，插上电脑</li>
+<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
+<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
+<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
+<li>「量产测试」标签页点击「开始」就会开始量产</li>
+</ol>
+<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
+<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
+<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
+<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
+<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
+</ul>
+<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
+<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
+<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>量产</tag>
+        <tag>U盘</tag>
+        <tag>固态</tag>
+        <tag>开卡</tag>
+        <tag>测试架</tag>
+        <tag>主控</tag>
+        <tag>颗粒</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PCB设计</title>
     <url>/cad/pcb/</url>
     <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
@@ -2401,6 +2401,42 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>力扣LeetCode</title>
+    <url>/code-training/leetcode/</url>
+    <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Programming Ability Test (PAT)</title>
+    <url>/code-training/pat/</url>
+    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
+<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
+<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
+<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
+<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
+<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>PAT</tag>
+        <tag>PTA</tag>
+        <tag>编程</tag>
+        <tag>练习</tag>
+        <tag>题库</tag>
+        <tag>题目</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bash Shell总结笔记</title>
     <url>/code/bash/</url>
     <content><![CDATA[<h1 id="Bash-的简介">1 &nbsp&nbsp<a href="#Bash-的简介" class="headerlink" title="Bash 的简介"></a>Bash 的简介</h1><p>Shell是一种特殊的交互式工具，它为用户提供了启动程序、管理文件系统中的文件以及运行在Linux系统上的进程的途径。通过命令行提示符<code>$</code>，它允许用户输入文本命令，然后解释命令，并在内核中执行。</p>
@@ -2572,25 +2608,31 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
+        <tag>编程</tag>
         <tag>笔记</tag>
         <tag>c</tag>
-        <tag>编程</tag>
         <tag>语言</tag>
       </tags>
   </entry>
   <entry>
     <title>开发总结</title>
     <url>/code/code/</url>
-    <content><![CDATA[<h1 id="语言编码的区别">1 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><ul>
+    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
+<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
+<ul>
+<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
+</ul>
+<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
+<ul>
 <li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
 <li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
 </ul>
-<h1 id="关于项目开发的语言技术栈选择">2 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
 <li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
 </ul>
-<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">3.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
 <p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>code</category>
       </categories>
@@ -3285,7 +3327,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#49;&#x39;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#55;&#x32;&#46;&#x31;&#57;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3448,56 +3490,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>github</tag>
         <tag>代码管理</tag>
         <tag>版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -3708,6 +3700,56 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>hexo</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -4264,8 +4306,8 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>编程</tag>
+        <tag>笔记</tag>
         <tag>python</tag>
       </tags>
   </entry>
@@ -4718,42 +4760,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>vscode</tag>
         <tag>编辑器</tag>
         <tag>链接</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣LeetCode</title>
-    <url>/code-training/leetcode/</url>
-    <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Programming Ability Test (PAT)</title>
-    <url>/code-training/pat/</url>
-    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
-<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
-<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
-<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
-<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
-<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>编程</tag>
-        <tag>PAT</tag>
-        <tag>PTA</tag>
-        <tag>练习</tag>
-        <tag>题库</tag>
-        <tag>题目</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -5426,6 +5432,31 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>Inkscape总结</title>
+    <url>/software/inkscape/</url>
+    <content><![CDATA[<h1 id="案例">1 &nbsp&nbsp<a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="位图转SVG">1.1 &nbsp&nbsp<a href="#位图转SVG" class="headerlink" title="位图转SVG"></a>位图转SVG</h2><p>理想适用图像类型：简单的平面图，如何字母或logo；颜色不超过三种。</p>
+<p>操作步骤：</p>
+<ol>
+<li>导入位图。（可适当放大后再操作）</li>
+<li>使用“选择工具”选中位图。</li>
+<li>菜单&gt;路径&gt;临摹位图轮廓。</li>
+<li>启用“即时预览”。在“模式”中关闭“平滑”功能（平滑会添加模糊效果，不利于转3D）。</li>
+<li>在“模式”中选择合适的“扫描算法”以创建路径。在“选项”中调整合适参数。</li>
+<li>点击“确定”即可生成图形。</li>
+<li>使用“选择工具”选中生成图形并拖动离开原图像。</li>
+<li>使用“路径节点编辑”手动调节改善形状。</li>
+<li>菜单&gt;文件&gt;另存为。（默认就是SVG）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>后期处理</tag>
+        <tag>inkscape</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给联想z500安装deepin linux（深度系统）</title>
     <url>/software/install-deepin-on-lenovo-z500/</url>
     <content><![CDATA[<h1 id="起因">1 &nbsp&nbsp<a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。</p>
@@ -5505,31 +5536,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>联想</tag>
         <tag>lenovo</tag>
         <tag>z500</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Inkscape总结</title>
-    <url>/software/inkscape/</url>
-    <content><![CDATA[<h1 id="案例">1 &nbsp&nbsp<a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="位图转SVG">1.1 &nbsp&nbsp<a href="#位图转SVG" class="headerlink" title="位图转SVG"></a>位图转SVG</h2><p>理想适用图像类型：简单的平面图，如何字母或logo；颜色不超过三种。</p>
-<p>操作步骤：</p>
-<ol>
-<li>导入位图。（可适当放大后再操作）</li>
-<li>使用“选择工具”选中位图。</li>
-<li>菜单&gt;路径&gt;临摹位图轮廓。</li>
-<li>启用“即时预览”。在“模式”中关闭“平滑”功能（平滑会添加模糊效果，不利于转3D）。</li>
-<li>在“模式”中选择合适的“扫描算法”以创建路径。在“选项”中调整合适参数。</li>
-<li>点击“确定”即可生成图形。</li>
-<li>使用“选择工具”选中生成图形并拖动离开原图像。</li>
-<li>使用“路径节点编辑”手动调节改善形状。</li>
-<li>菜单&gt;文件&gt;另存为。（默认就是SVG）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>后期处理</tag>
-        <tag>inkscape</tag>
       </tags>
   </entry>
   <entry>
@@ -8417,17 +8423,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>光猫排障破解总结</title>
-    <url>/troubleshooting/optical-modem-troubleshooting/</url>
-    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Linux系统排障总结</title>
     <url>/troubleshooting/linux-troubleshooting/</url>
     <content><![CDATA[<h1 id="Bash终端符号输入控制">1 &nbsp&nbsp<a href="#Bash终端符号输入控制" class="headerlink" title="Bash终端符号输入控制"></a>Bash终端符号输入控制</h1><table>
@@ -8732,6 +8727,17 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>故障</tag>
         <tag>命令</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>光猫排障破解总结</title>
+    <url>/troubleshooting/optical-modem-troubleshooting/</url>
+    <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="http://blog.yunduanzhuji.com/archives/1317/">http://blog.yunduanzhuji.com/archives/1317/</a>.<br>[2] 烽火HG6142A 破解超级管理员密码 改桥接[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8252962-1-1.html">https://www.right.com.cn/forum/thread-8252962-1-1.html</a>.<br>[2] 移动光猫HG6142A1烽火改桥接[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/648892946">https://zhuanlan.zhihu.com/p/648892946</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
   </entry>
   <entry>
     <title>运行库修复（Windows平台）</title>
@@ -9509,12 +9515,12 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#x63;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#104;&#97;&#x6e;&#107;&#115;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#x75;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#46;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#64;&#56;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#99;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#107;&#121;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -11468,35 +11474,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ Primer 第五版：第六章「函数」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap6/</url>
     <content><![CDATA[<h1 id="第六章：函数"><a href="#第六章：函数" class="headerlink" title="第六章：函数"></a>第六章：函数</h1><h2 id="练习6-1"><a href="#练习6-1" class="headerlink" title="练习6.1"></a>练习6.1</h2><blockquote>
@@ -11826,6 +11803,35 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>练习总结</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
       </tags>
   </entry>
   <entry>
@@ -13039,30 +13045,6 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
-    <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
-    <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
-<h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>开始建模之前，要注意建模物体的尺寸。注意观察物体外形，思考用哪些基础网格mesh创建模型会更容易点。</p>
-<p>查看当前物体的尺寸：右边侧边栏（快捷键N）&gt;item条目&gt;尺寸</p>
-<p>设置当前场景的单位：属性编辑器&gt;场景属性&gt;单位。</p>
-<p><img data-src="/1.1.png"></p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-        <category>tranining</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>练习</tag>
-        <tag>blender</tag>
-        <tag>教程</tag>
-        <tag>苹果</tag>
-        <tag>小刀</tag>
-        <tag>布料</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
@@ -13113,6 +13095,30 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
         <tag>动画</tag>
         <tag>动画电影</tag>
         <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
+    <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
+    <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
+<h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>开始建模之前，要注意建模物体的尺寸。注意观察物体外形，思考用哪些基础网格mesh创建模型会更容易点。</p>
+<p>查看当前物体的尺寸：右边侧边栏（快捷键N）&gt;item条目&gt;尺寸</p>
+<p>设置当前场景的单位：属性编辑器&gt;场景属性&gt;单位。</p>
+<p><img data-src="/1.1.png"></p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+        <category>tranining</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>练习</tag>
+        <tag>blender</tag>
+        <tag>教程</tag>
+        <tag>苹果</tag>
+        <tag>小刀</tag>
+        <tag>布料</tag>
       </tags>
   </entry>
   <entry>
@@ -13167,6 +13173,179 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
 </div></div>
 </center>
+]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>知识总结手册</title>
+    <url>/manuals/index.html</url>
+    <content><![CDATA[<h1 id="运维-系统-维修排障">1 &nbsp&nbsp<a href="#运维-系统-维修排障" class="headerlink" title="运维&#x2F;系统&#x2F;维修排障"></a>运维&#x2F;系统&#x2F;维修排障</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">软路由/虚拟化</p>
+    </div>
+    <a href="/software/pve">PVE+iKuai+OpenWrt+fnOS折腾记录</a>
+    <a href="/code/docker">Docker总结</a>
+    <a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a>
+    <a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">运维排障总结</p>
+    </div>
+    <a href="/troubleshooting/windows-troubleshooting">Windows系统排障总结</a>
+    <a href="/troubleshooting/runtime-library-repair-on-windows">运行库修复（Windows平台）</a>
+    <a href="/troubleshooting/linux-troubleshooting">Linux系统排障总结</a>
+    <a href="/troubleshooting/software-troubleshooting">计算机软件排障总结</a>
+    <a href="/troubleshooting/hardware-troubleshooting">计算机硬件排障总结</a>
+    <a href="/troubleshooting/android-troubleshooting">Android系统排障总结</a>
+    <a href="/troubleshooting/optical-modem-troubleshooting">光猫排障破解总结</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">CAD类</p>
+    </div>
+    <a href="/cad/pcb">PCB设计/电路维修</a>
+    <a href="/cad/flash-disk">闪存驱动器设计</a>
+    <a href="/cad/simulation">电路仿真设计</a>
+    <a href="/cad/cad">CAD</a>
+</div>
+
+</div>
+
+<h1 id="编程总结">2 &nbsp&nbsp<a href="#编程总结" class="headerlink" title="编程总结"></a>编程总结</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">前端常用资料</p>
+    </div>
+    <a href="https://seo.juziseo.com/tools/web_color/">WEB标准颜色表</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">编程语言</p>
+    </div>
+    <a href="/code/qt">Qt</a>
+    <a href="/code/python">Python</a>
+    <a href="/code/git">Git</a>
+    <a href="/code/c">C</a>
+    <a href="/code/css">CSS</a>
+    <a href="/code/markdown">Markdown</a>
+    <a href="/code/latex">LaTeX</a>
+    <a href="/code/bat-powershell">Bat&Powershell</a>
+    <a href="/code/bash">Bash Shell</a>
+    <a href="/code/regular-expressions">正则表达式</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">开发总结&工具总结</p>
+    </div>
+    <a href="/code/code">开发总结</a>
+    <a href="/code/database">数据库</a>
+    <a href="/code/hexo">Hexo个人博客搭建踩坑记</a>
+    <a href="/code/vscode">Visual Studio Code</a>
+    <a href="/software/virtual-machine">虚拟机总结</a>
+    <a href="/software/server">服务器</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">常见技术书籍资料</p>
+    </div>
+    <a href="https://github.com/myfreeer/cppreference2mshelp/releases">中文版cppreference参考文档</a>
+    <a href="https://github.com/zh-google-styleguide/zh-google-styleguide/releases">Google 开源项目风格指南(中文版)</a>
+    <a href="https://github.com/changkun/modern-cpp-tutorial/releases">现代 C++ 教程(Modern C++ Tutorial)</a>
+    <a href="https://github.com/progit/progit2-zh/releases/">Pro Git(中文版)</a>
+    <a href="https://github.com/yidao620c/python3-cookbook/releases">Python Cookbook</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">个人题库/题解总结</p>
+    </div>
+    <a href="/code/data-structure">数据结构</a>
+    <a href="/code-training/leetcode">力扣LeetCode</a>
+    <a href="/code-training/pat">Programming Ability Test (PAT)</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">题库/题解</p>
+    </div>
+    <a href="https://github.com/halfrost/LeetCode-Go/releases">LeetCode Cookbook(GO语言)</a>
+    <a href="https://github.com/changgyhub/leetcode_101">LeetCode 101</a>
+    <a href="https://github.com/soulmachine/leetcode">LeetCode题解</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">AI开发</p>
+    </div>
+    <a href="/software/ai">AI总结</a>
+    <a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a>
+</div>
+
+</div>
+
+<h1 id="软件操作总结">3 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page"><a href="/software/blender/blender" style="color: #fff">Blender总结</a></p>
+    </div>
+    <a href="/software/blender/interface-tools-operation">Blender界面工具操作总结</a>
+    <a href="/software/blender/q-a">Blender常见问题总结 ——Q&A</a>
+    <a href="/software/blender/examples">Blender实战案例总结</a>
+    <a href="/software/blender/code-development">Blender二次代码开发总结</a>
+    <a href="/software/blender/blender-learning-resources">Blender自学资料向（干货整理）(内容已过时，作废)</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page"><a href="/software/blender/tranining/training" style="color: #fff">Blender教程总结</a></p>
+    </div>
+    <a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">图像处理</p>
+    </div>
+    <a href="https://docs.krita.org/zh_CN/">Krita文档中心</a>
+    <a href="https://share.weiyun.com/Dea2uj0M">Krita社区中文文档</a>
+    <a href="/software/krita">Krita个人总结</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">办公</p>
+    </div>
+    <a href="/software/office">Office</a>
+</div>
+
+</div>
+
+<h1 id="书籍阅读总结">4 &nbsp&nbsp<a href="#书籍阅读总结" class="headerlink" title="书籍阅读总结"></a>书籍阅读总结</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">编程语言</p>
+    </div>
+    <a href="/code-training/cpp-primer-v5/cpp-primer-v5">C++ Primer 第五版</a>
+    <a href="/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide">QT6 C++开发指南</a>
+    <a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a>
+</div>
+
+</div>
 ]]></content>
   </entry>
   <entry>
@@ -13267,7 +13446,7 @@ QQ二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#x69;&#115;&#x74;&#x65;&#114;&#107;&#105;&#110;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#109;&#x69;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -13374,144 +13553,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
     margin-bottom: 40px;
 }
 </style>
-]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>知识总结手册</title>
-    <url>/manuals/index.html</url>
-    <content><![CDATA[<h1 id="运维-系统">1 &nbsp&nbsp<a href="#运维-系统" class="headerlink" title="运维&#x2F;系统"></a>运维&#x2F;系统</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">软路由/虚拟化</p>
-    </div>
-    <a href="/software/pve">PVE+iKuai+OpenWrt+fnOS折腾记录</a>
-    <a href="/code/docker">Docker总结</a>
-    <a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a>
-    <a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">运维排障总结</p>
-    </div>
-    <a href="/troubleshooting/windows-troubleshooting">Windows系统排障总结</a>
-    <a href="/troubleshooting/runtime-library-repair-on-windows">运行库修复（Windows平台）</a>
-    <a href="/troubleshooting/linux-troubleshooting">Linux系统排障总结</a>
-    <a href="/troubleshooting/software-troubleshooting">计算机软件排障总结</a>
-    <a href="/troubleshooting/hardware-troubleshooting">计算机硬件排障总结</a>
-    <a href="/troubleshooting/android-troubleshooting">Android系统排障总结</a>
-    <a href="/troubleshooting/optical-modem-troubleshooting">光猫排障破解总结</a>
-</div>
-
-</div>
-
-<h1 id="编程总结">2 &nbsp&nbsp<a href="#编程总结" class="headerlink" title="编程总结"></a>编程总结</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">前端常用资料</p>
-    </div>
-    <a href="https://seo.juziseo.com/tools/web_color/">WEB标准颜色表</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">常见技术书籍资料</p>
-    </div>
-    <a href="https://github.com/myfreeer/cppreference2mshelp/releases">中文版cppreference参考文档</a>
-    <a href="https://github.com/zh-google-styleguide/zh-google-styleguide/releases">Google 开源项目风格指南(中文版)</a>
-    <a href="https://github.com/changkun/modern-cpp-tutorial/releases">现代 C++ 教程(Modern C++ Tutorial)</a>
-    <a href="https://github.com/progit/progit2-zh/releases/">Pro Git(中文版)</a>
-    <a href="https://github.com/yidao620c/python3-cookbook/releases">Python Cookbook</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">题库/题解</p>
-    </div>
-    <a href="https://github.com/halfrost/LeetCode-Go/releases">LeetCode Cookbook(GO语言)</a>
-    <a href="https://github.com/changgyhub/leetcode_101">LeetCode 101</a>
-    <a href="https://github.com/soulmachine/leetcode">LeetCode题解</a>
-</div>
-
-</div>
-
-<h1 id="软件操作总结">3 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page"><a href="/software/blender/blender" style="color: #fff">Blender总结</a></p>
-    </div>
-    <a href="/software/blender/interface-tools-operation">Blender界面工具操作总结</a>
-    <a href="/software/blender/q-a">Blender常见问题总结 ——Q&A</a>
-    <a href="/software/blender/examples">Blender实战案例总结</a>
-    <a href="/software/blender/code-development">Blender二次代码开发总结</a>
-    <a href="/software/blender/blender-learning-resources">Blender自学资料向（干货整理）(内容已过时，作废)</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page"><a href="/software/blender/tranining/training" style="color: #fff">Blender教程总结</a></p>
-    </div>
-    <a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">图像处理</p>
-    </div>
-    <a href="https://docs.krita.org/zh_CN/">Krita文档中心</a>
-    <a href="https://share.weiyun.com/Dea2uj0M">Krita社区中文文档</a>
-    <a href="/software/krita">Krita个人总结</a>
-</div>
-
-</div>
-
-<ul>
-<li><a href="/software/office">Office</a></li>
-<li><a href="/software/virtual-machine">虚拟机总结</a></li>
-<li><a href="/software/server">服务器</a></li>
-</ul>
-<h1 id="编程总结-1">4 &nbsp&nbsp<a href="#编程总结-1" class="headerlink" title="编程总结"></a>编程总结</h1><ul>
-<li><a href="/code/data-structure">数据结构</a></li>
-<li><a href="/code-training/leetcode">力扣LeetCode</a></li>
-<li><a href="/code-training/pat">Programming Ability Test (PAT)</a></li>
-<li><a href="/code/code">开发总结</a></li>
-<li><a href="/code/vscode">Visual Studio Code</a></li>
-<li><a href="/code/bash">Bash Shell</a></li>
-<li><a href="/code/bat-powershell">Bat&amp;Powershell</a></li>
-<li><a href="/code/database">数据库</a></li>
-<li><a href="/code/c">C</a></li>
-<li><a href="/code/css">CSS</a></li>
-<li><a href="/code/git">Git</a></li>
-<li><a href="/code/latex">LaTeX</a></li>
-<li><a href="/code/markdown">Markdown</a></li>
-<li><a href="/code/python">Python</a></li>
-<li><a href="/code/qt">Qt</a></li>
-<li><a href="/code/hexo">Hexo个人博客搭建踩坑记</a></li>
-<li><a href="/code/regular-expressions">正则表达式</a></li>
-</ul>
-<h1 id="AI开发">5 &nbsp&nbsp<a href="#AI开发" class="headerlink" title="AI开发"></a>AI开发</h1><ul>
-<li><a href="/software/ai">AI总结</a></li>
-<li><a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a></li>
-</ul>
-<h1 id="CAD类">6 &nbsp&nbsp<a href="#CAD类" class="headerlink" title="CAD类"></a>CAD类</h1><ul>
-<li><a href="/cad/cad">CAD</a></li>
-<li><a href="/cad/pcb">PCB设计</a></li>
-<li><a href="/cad/flash-disk">闪存驱动器设计</a></li>
-<li><a href="/cad/simulation">电路仿真设计</a></li>
-</ul>
-<h1 id="书籍阅读总结">7 &nbsp&nbsp<a href="#书籍阅读总结" class="headerlink" title="书籍阅读总结"></a>书籍阅读总结</h1><ul>
-<li><a href="/code-training/cpp-primer-v5/cpp-primer-v5">C++ Primer 第五版</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide">QT6 C++开发指南</a></li>
-<li><a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a></li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -13896,69 +13937,6 @@ QQ 二维码<img data-src="/images_public/qq_qr_code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
-    <url>/about/post-offline-download/index.html</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
-<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
-<ul>
-<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
-<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
-<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
-</ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
-</div>
-
-<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
-<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
-<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
-<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
-</div>
-
-<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
-<ol>
-<li>打开火狐浏览器。</li>
-<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
-<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
-<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
-<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
-    <div class="flex-column">
-    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
-</div>
-
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
-</div>
-
-<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
-<li>保存压缩包到本地即可。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
-
-<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
-<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
-<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>第三方开源许可声明</title>
     <url>/about/third-party-declaration/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -14026,6 +14004,69 @@ CGI&后期处理
     margin-left: 25px;
 }
 </style>
+]]></content>
+  </entry>
+  <entry>
+    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
+    <url>/about/post-offline-download/index.html</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
+<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
+<ul>
+<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
+<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
+<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
+</ul>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+</div>
+
+<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
+<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
+<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+</div>
+
+<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
+<ol>
+<li>打开火狐浏览器。</li>
+<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
+<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
+<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
+<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
+    <div class="flex-column">
+    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
+</div>
+
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+</div>
+
+<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
+<li>保存压缩包到本地即可。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
+
+<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
+<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
+<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
