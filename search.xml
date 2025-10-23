@@ -128,7 +128,6 @@
     <a href="https://zh-hans.ipshu.com/country-list">全球各国IP统计（大陆港澳台分开统计）</a>
     <a href="https://ip.tool.chinaz.com/">全球IP地址查询-站长工具</a>
     <a href="https://my-ip.cc/zh-hans/">我的IP地址</a>
-    <a href="https://tool.lu/ip/">IP归属地查询</a>
     <a href="https://www.cip.cc/">IP归属地查询(CIP)</a>
 </div>
 
@@ -1761,6 +1760,126 @@
 ]]></content>
   </entry>
   <entry>
+    <title>闪存驱动器设计</title>
+    <url>/cad/flash-disk/</url>
+    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
+<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+</blockquote>
+<p><strong>店铺总结（个人购买经验总结）：</strong></p>
+<ul>
+<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
+<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
+<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
+</ul>
+<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
+<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
+</ul>
+<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
+<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
+<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
+</ul>
+</li>
+<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
+<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
+<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
+</ul>
+</li>
+<li>THGBMFG9C4LBAIR：64GB<ul>
+<li>颗粒从酷派平板拆出来</li>
+</ul>
+</li>
+<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
+<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
+</ul>
+</li>
+<li>NW852（7WB2D&#x2F;7ZB2D）：镁光64GB颗粒，BGA132封装，ID为2CB47832AA04。<ul>
+<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
+</ul>
+</li>
+<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
+<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
+</ul>
+</li>
+<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
+<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
+<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
+<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
+</ul>
+</li>
+<li>ID为EC1E98AF84CD，三星TLC颗粒，查到资料有U盘用SM3281BB主控芯片开这个颗粒<ul>
+<li>从威刚SX8200 Pro（容量未知）拆出来，SX8200NPB1</li>
+<li>主控：SM2262 BC（TB1M12.00） TW 2D</li>
+</ul>
+</li>
+</ul>
+<p>颗粒的部分资料：</p>
+<ul>
+<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
+</ul>
+<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
+<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
+<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
+<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
+<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
+</ul>
+<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
+<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
+<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
+<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
+</ul>
+<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
+<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
+<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
+</ul>
+<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
+<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
+<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
+<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
+</ul>
+<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
+<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<li>焊接颗粒到主控盘，插上电脑</li>
+<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
+<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
+<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
+<li>「量产测试」标签页点击「开始」就会开始量产</li>
+</ol>
+<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
+<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
+<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
+<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
+<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
+</ul>
+<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
+<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
+<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>量产</tag>
+        <tag>U盘</tag>
+        <tag>固态</tag>
+        <tag>开卡</tag>
+        <tag>测试架</tag>
+        <tag>主控</tag>
+        <tag>颗粒</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>飞助远程服务店（作废）</title>
     <url>/service-shop/</url>
     <content><![CDATA[<h1 id="店铺介绍">1 &nbsp&nbsp<a href="#店铺介绍" class="headerlink" title="店铺介绍"></a>店铺介绍</h1><p>本人开的一个小店，旨在通过远程操作帮助客户解决电脑系统问题。</p>
@@ -1975,126 +2094,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <categories>
         <category>cad</category>
       </categories>
-  </entry>
-  <entry>
-    <title>闪存驱动器设计</title>
-    <url>/cad/flash-disk/</url>
-    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
-<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
-<p>部分店铺的网评：大树推荐，翼浪排除</p>
-</blockquote>
-<p><strong>店铺总结（个人购买经验总结）：</strong></p>
-<ul>
-<li>南翔科技（TB）：东芝颗粒。店家会给芯片颗粒值球后再发货（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
-<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
-<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
-</ul>
-<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
-<li>一般的主控选择：不要4K上903，要4K，单贴3281，双头3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
-<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
-</ul>
-<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
-<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
-<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
-<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
-</ul>
-</li>
-<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
-<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
-<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
-</ul>
-</li>
-<li>THGBMFG9C4LBAIR：64GB<ul>
-<li>颗粒从酷派平板拆出来</li>
-</ul>
-</li>
-<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
-<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
-</ul>
-</li>
-<li>NW852（7WB2D&#x2F;7ZB2D）：镁光64GB颗粒，BGA132封装，ID为2CB47832AA04。<ul>
-<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
-</ul>
-</li>
-<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
-<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
-</ul>
-</li>
-<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
-<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
-<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
-<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
-</ul>
-</li>
-<li>ID为EC1E98AF84CD，三星TLC颗粒，查到资料有U盘用SM3281BB主控芯片开这个颗粒<ul>
-<li>从威刚SX8200 Pro（容量未知）拆出来，SX8200NPB1</li>
-<li>主控：SM2262 BC（TB1M12.00） TW 2D</li>
-</ul>
-</li>
-</ul>
-<p>颗粒的部分资料：</p>
-<ul>
-<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
-</ul>
-<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
-<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
-<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
-<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
-<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
-<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
-</ul>
-<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
-<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
-<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
-<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
-</ul>
-<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
-<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
-<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
-</ul>
-<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
-<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
-<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
-<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
-</ul>
-<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
-<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
-<li>焊接颗粒到主控盘，插上电脑</li>
-<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
-<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
-<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
-<li>「量产测试」标签页点击「开始」就会开始量产</li>
-</ol>
-<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
-<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
-<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
-<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
-<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
-</ul>
-<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
-<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
-<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
-<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>量产</tag>
-        <tag>U盘</tag>
-        <tag>固态</tag>
-        <tag>开卡</tag>
-        <tag>测试架</tag>
-        <tag>主控</tag>
-        <tag>颗粒</tag>
-      </tags>
   </entry>
   <entry>
     <title>笔记本硬件基础</title>
@@ -2612,24 +2611,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>计算机安全</title>
-    <url>/code/computer-security/</url>
-    <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
-<li>wep：几乎都能破解，注入包一分钟即可</li>
-<li>wpa&#x2F;wpa2、混合、pin：暴力破解</li>
-</ul>
-<h1 id="关于代理服务器和跳板攻击">2 &nbsp&nbsp<a href="#关于代理服务器和跳板攻击" class="headerlink" title="关于代理服务器和跳板攻击"></a>关于代理服务器和跳板攻击</h1><p>通过代理跳板，跳板越多，主机链越长（若有路由器或者交换机，可删除保存在flash内的登录日志，消除痕迹），可做到防止被攻击（隐藏IP），突破一些网址的限制访问（墙或者请求次数），隐藏身份进行攻击。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>计算机安全</tag>
-        <tag>信息安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css总结笔记</title>
     <url>/code/css/</url>
     <content><![CDATA[<h1 id="开发记录">1 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>类名含有空格（浏览器F12检查元素）时，一般是包含多个类名，空格字符在类型中无效，实际上呈现出来的是分隔符，不是空格。CSS类名选择器一般选择第一个即可。</p>
@@ -2649,6 +2630,24 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>笔记</tag>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机安全</title>
+    <url>/code/computer-security/</url>
+    <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
+<li>wep：几乎都能破解，注入包一分钟即可</li>
+<li>wpa&#x2F;wpa2、混合、pin：暴力破解</li>
+</ul>
+<h1 id="关于代理服务器和跳板攻击">2 &nbsp&nbsp<a href="#关于代理服务器和跳板攻击" class="headerlink" title="关于代理服务器和跳板攻击"></a>关于代理服务器和跳板攻击</h1><p>通过代理跳板，跳板越多，主机链越长（若有路由器或者交换机，可删除保存在flash内的登录日志，消除痕迹），可做到防止被攻击（隐藏IP），突破一些网址的限制访问（墙或者请求次数），隐藏身份进行攻击。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>计算机安全</tag>
+        <tag>信息安全</tag>
       </tags>
   </entry>
   <entry>
@@ -3301,7 +3300,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#x74;&#64;&#x31;&#x37;&#50;&#46;&#x31;&#57;&#x2e;&#x30;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#x31;&#x37;&#50;&#46;&#49;&#x39;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -7707,6 +7706,56 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>翻译规划（作废）</title>
     <url>/translations/translation-roadmap/</url>
     <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
@@ -7943,6 +7992,335 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>维护</tag>
         <tag>故障</tag>
         <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系统排障总结</title>
+    <url>/troubleshooting/linux-troubleshooting/</url>
+    <content><![CDATA[<h1 id="Bash终端符号输入控制">1 &nbsp&nbsp<a href="#Bash终端符号输入控制" class="headerlink" title="Bash终端符号输入控制"></a>Bash终端符号输入控制</h1><table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">功能</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CTRL+C</td>
+<td align="center">强行中断当前程序执行</td>
+<td align="center">发送 SIGINT 信号给前台进程组中的所有进程。常用于终止正在运行的程序</td>
+</tr>
+<tr>
+<td align="center">CTRL+Z</td>
+<td align="center">停止输入</td>
+<td align="center">任务中断维持挂起状态，任务仍在进程中运行，并没有结束（发送 SIGTSTP 信号给前台进程组中的所有进程，常用于挂起一个进程）</td>
+</tr>
+<tr>
+<td align="center">CTRL+D</td>
+<td align="center">结束当前输入（用户不再给当前程序发出指令），系统通常会结束当前程序</td>
+<td align="center">不是发送信号，而是表示一个特殊的二进制值，表示 EOF</td>
+</tr>
+</tbody></table>
+<h1 id="Bash终端常用命令">2 &nbsp&nbsp<a href="#Bash终端常用命令" class="headerlink" title="Bash终端常用命令"></a>Bash终端常用命令</h1><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">功能</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sudo -s</td>
+<td align="center">启动一个非登录的 root Shell</td>
+<td align="center">继承当前用户环境，并混合 root 的 PATH 等</td>
+</tr>
+<tr>
+<td align="center">sudo -i</td>
+<td align="center">启动一个登录的 root Shell</td>
+<td align="center">完全模拟 root 用户登录，读取 root 的配置文件（如 .profile, .bashrc）</td>
+</tr>
+<tr>
+<td align="center">sudo su<br>su</td>
+<td align="center">切换到 root 用户</td>
+<td align="center">行为类似 sudo -s，是非登录 Shell</td>
+</tr>
+<tr>
+<td align="center">sudo command</td>
+<td align="center">以 root 权限执行单条命令</td>
+<td align="center">为单条命令提供 root 环境</td>
+</tr>
+<tr>
+<td align="center"><code>init 0</code><br> <code>poweroff</code><br> <code>halt</code><br> <code>shutdown -h now</code></td>
+<td align="center">关机</td>
+<td align="center">init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一<br>它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程<br>init定义了8个运行级别(runlevel)，init 0为关机，init 6为重启<br>shutdown就是使用这种机制<br>halt和poweroff也是调用shutdown工具链实现</td>
+</tr>
+<tr>
+<td align="center"><code>init 6</code><br> <code>reboot</code><br> <code>shutdown -r now</code></td>
+<td align="center">重启</td>
+<td align="center">root权限可使用</td>
+</tr>
+<tr>
+<td align="center">nohup command &gt; &quot;command.log&quot; 2&gt;&amp;1 &amp;</td>
+<td align="center">后台运行命令，ssh中断也能保持运行</td>
+<td align="center"><code>command.log</code>是日志文件，记录命令的输出<br>如果不需要日志，输出可以重定向到&#x2F;dev&#x2F;null</td>
+</tr>
+<tr>
+<td align="center">echo $! &gt; pid</td>
+<td align="center">获取上次运行命令的进程编号</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">kill $(cat .&#x2F;pid)</td>
+<td align="center">基于pid文件的pid编号终止进程</td>
+<td align="center">kill命令发送SIGTERM（信号15）<br>kill -9强制终止进程</td>
+</tr>
+<tr>
+<td align="center">blkid</td>
+<td align="center">查看硬盘分区的UUID值</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">lsblk</td>
+<td align="center">查看硬盘分区情况</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="压缩-解压缩">3 &nbsp&nbsp<a href="#压缩-解压缩" class="headerlink" title="压缩&#x2F;解压缩"></a>压缩&#x2F;解压缩</h1><h2 id="Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument">3.1 &nbsp&nbsp<a href="#Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument" class="headerlink" title="Tar命令解压报错：Cannot change ownership to uid 197609, gid 197609: Invalid argument"></a>Tar命令解压报错：<code>Cannot change ownership to uid 197609, gid 197609: Invalid argument</code></h2><p>问题现象：使用root账户运行tar解压文件<code>tar -zxf xxx.tar.gz</code>时，出现报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar: xxx: Cannot change ownership to uid 197609, gid 197609: Invalid argument</span><br><span class="line">tar: Exiting with failure status due to previous errors</span><br></pre></td></tr></table></figure>
+
+<p>原因：在root身份下运行tar命令，tar命令试图保留root文件权限。但设置失败，因此导致错误。</p>
+<p>解决方式：添加参数<code>--no-same-owner</code>，例如<code>tar -zxf xxx.tar.gz --no-same-owner</code>。</p>
+<h1 id="包管理器">4 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">4.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">4.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
+
+<h1 id="Linux开机自启">5 &nbsp&nbsp<a href="#Linux开机自启" class="headerlink" title="Linux开机自启"></a>Linux开机自启</h1><h2 id="crontab方案">5.1 &nbsp&nbsp<a href="#crontab方案" class="headerlink" title="crontab方案"></a>crontab方案</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑当前用户的定时任务列表。若当前帐号为root，则上述命令保存的文件为/var/spool/cron/crontabs/root</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 查看当前用户的定时任务列表</span></span><br><span class="line">crontab -l</span><br><span class="line"><span class="comment"># 查看cron后台服务状态</span></span><br><span class="line">systemctl status cron.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># @reboot 参数代表重启后执行命令</span></span><br><span class="line"><span class="comment"># 注意sh脚本执行命令的工作目录，因为crontab默认目录是当前用户目录，例如/root。同时crontab运行默认不携带用户的环境变量，因此需要手动添加。</span></span><br><span class="line"><span class="comment"># 例如在command.sh开头，添加 cd $(dirname $0)，确保脚本工作在脚本所在目录下</span></span><br><span class="line">@reboot /root/command.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下补充其他一些crontab的定时配置</span></span><br><span class="line"><span class="comment"># * * * * * command_to_execute</span></span><br><span class="line"><span class="comment"># - - - - -</span></span><br><span class="line"><span class="comment"># | | | | |</span></span><br><span class="line"><span class="comment"># | | | | +----- 星期几 (0 - 7) (星期日为0或7)</span></span><br><span class="line"><span class="comment"># | | | +------- 月份 (1 - 12)</span></span><br><span class="line"><span class="comment"># | | +--------- 日 (1 - 31)</span></span><br><span class="line"><span class="comment"># | +----------- 小时 (0 - 23)</span></span><br><span class="line"><span class="comment"># +------------- 分钟 (0 - 59)</span></span><br><span class="line"><span class="comment"># 特殊符号：</span></span><br><span class="line"><span class="comment"># * : 代表所有可能的值。</span></span><br><span class="line"><span class="comment"># , : 指定多个值，例如「1,3,5」。</span></span><br><span class="line"><span class="comment"># - : 指定一个范围，例如「1-5」。</span></span><br><span class="line"><span class="comment"># / : 指定间隔频率，例如「*/2」表示每两单位。</span></span><br><span class="line">0 2 * * * /root/command.sh <span class="comment"># 每天凌晨2点执行脚本，把2改成0，就是每天凌晨0点</span></span><br><span class="line">0 17 * * 1-5 /root/command.sh <span class="comment"># 每周一到周五的下午5点执行脚本</span></span><br><span class="line">*/10 * * * * /root/command.sh <span class="comment"># 每10分钟执行一次脚本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关于crontab基础设定，直接在crontab -e编辑即可，例如在PATH中添加自定义的环境变量</span></span><br><span class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/.nvm/versions/node/v22.17.0/bin/yarn</span><br><span class="line">SHELL=/bin/bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出重定向</span></span><br><span class="line"><span class="comment"># 忽略标准输出和错误输出</span></span><br><span class="line">* * * * * /root/command.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line"><span class="comment"># 将输出重定向到文件</span></span><br><span class="line">* * * * * /root/command.sh &gt;&gt; /var/log/script.log 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+
+<h1 id="编译问题">6 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">6.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
+
+<h2 id="源码编译的程序的安装和卸载">6.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>卸载方式：</p>
+<ul>
+<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
+<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
+<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
+<li>debian系列linux可尝试使用auto-apt 和 checkinstall：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure>
+
+<h2 id="普通用户导致的编译问题">6.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
+<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
+<h2 id="常见编译错误">6.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
+<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
+<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
+</ul>
+<h1 id="账户管理">7 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">7.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自动root登录">7.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
+
+<h2 id="重置密码（ubuntu为例）">7.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
+<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
+<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
+<li>exit退出shell，选择resume回到正常启动中。</li>
+</ol>
+<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">7.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
+<h3 id="etc-passwd">7.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
+<ol>
+<li>账号名称</li>
+<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
+<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
+<li>GID，也就是群组ID</li>
+<li>关于账号的一些说明信息（暂时可以忽略）</li>
+<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
+<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
+</ol>
+<h3 id="etc-shadow">7.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
+<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
+<ol>
+<li>账户名称（密码需要与账户对应的）</li>
+<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
+<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
+<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
+<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
+<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
+<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
+<li>账号失效日期，过了这个日期账号就不能用了</li>
+<li>保留未使用</li>
+</ol>
+<h3 id="etc-shadow文件中密码的加密方式">7.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
+<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
+<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
+<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
+</div>
+
+<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
+<h1 id="硬盘和分区管理">8 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">8.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载，以下示例是写明挂载/dev/sdb，如果硬盘设备实际的路径更变后，例如变更硬盘实际物理接口，可能会导致挂载失败</span></span><br><span class="line">/dev/sdb /mnt/pan ext4 defaults 0 0</span><br><span class="line">blkid|grep /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> nano /etc/fstab <span class="comment"># 使用UUID挂载分区，即使变更硬盘实际物理接口，也不会导致挂载失败</span></span><br><span class="line"><span class="comment"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span></span><br><span class="line"><span class="comment"># options：defaults - 使用文件系统的默认挂载参数</span></span><br><span class="line"><span class="comment"># dump：0 - 不备份</span></span><br><span class="line"><span class="comment"># pass：0代表不检查。对于根目录/和efi目录/boot/efi，该值必需为1。其余分区可以设置为2。优先检查根目录后就会检查设置为2的其他分区。</span></span><br><span class="line">UUID=uuid值 /mnt/share ext4 defaults 0 2</span><br><span class="line"><span class="comment"># mount -a用于挂载配置文件 /etc/fstab 中列出的所有文件系统，可以提前测试挂载情况，不至于配置写错导致重启进入紧急模式</span></span><br><span class="line">mount -a</span><br></pre></td></tr></table></figure>
+
+<h2 id="将-home目录挂载到新分区（或新硬盘）">8.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="查看硬盘是不是固态硬盘（SSD）">8.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
+
+<h1 id="网络">9 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">9.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
+<ul>
+<li>windows：ipconfig &#x2F;a</li>
+<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
+</ul>
+<p>网卡名称解析：</p>
+<ul>
+<li>lo：表示local</li>
+<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
+<li>en：表示ethernet以太网</li>
+<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
+</ul>
+<p>例子：</p>
+<ul>
+<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
+<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
+</ul>
+<h2 id="WAKE-ON-LAN-WOL">9.2 &nbsp&nbsp<a href="#WAKE-ON-LAN-WOL" class="headerlink" title="WAKE-ON-LAN(WOL)"></a>WAKE-ON-LAN(WOL)</h2><h3 id="Linux设备发送魔包唤醒Windows设备">9.2.1 &nbsp&nbsp<a href="#Linux设备发送魔包唤醒Windows设备" class="headerlink" title="Linux设备发送魔包唤醒Windows设备"></a>Linux设备发送魔包唤醒Windows设备</h3><div class="note primary no-icon"><p>Windows设备需提前设置好：</p>
+<ol>
+<li>BIOS中开启<code>Power On By PCI-E</code></li>
+<li>网卡设置：设备管理器-&gt;选择对应Wake On Lan的网卡-&gt;电源管理-&gt;勾选「允许此设备唤醒计算机(O)」-&gt;勾选「只允许幻数据包唤醒计算机」</li>
+<li>查看windows网卡的MAC地址：<code>ipconfig /all</code>，输出信息对应物理地址<code>Physical Address</code>，这里假设获取的MAC地址为<code>AA:BB:CC:DD:EE:FF</code>，并且该windows设备已绑定静态IP为<code>192.168.1.10</code></li>
+</ol>
+</div>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在linux中安装wol工具</span></span><br><span class="line">apt install wakeonlan</span><br><span class="line"><span class="comment"># 发送唤醒包</span></span><br><span class="line">wakeonlan AA:BB:CC:DD:EE:FF</span><br></pre></td></tr></table></figure>
+
+<p>可以将上述的命令和ping命令写到脚本中，实现自动发送魔包及检测是否唤醒成功，免去每次手动输入MAC地址的麻烦（显示ping通后CTRL+C终止执行命令）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wakeonlan AA:BB:CC:DD:EE:FF</span><br><span class="line">ping 192.168.1.10</span><br></pre></td></tr></table></figure>
+
+<h2 id="ubuntu配置网卡">9.3 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">addresses:</span><br><span class="line">- 192.168.1.10/24</span><br><span class="line">gateway4: 192.168.1.1</span><br><span class="line">nameservers:</span><br><span class="line">addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
+
+<h2 id="ssh登录远程服务器">9.4 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
+</div>
+<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
+<p>查看ssh版本：<code>ssh -V</code></p>
+<h3 id="生成SSH密钥和公钥">9.4.1 &nbsp&nbsp<a href="#生成SSH密钥和公钥" class="headerlink" title="生成SSH密钥和公钥"></a>生成SSH密钥和公钥</h3><div class="note primary no-icon"><ul>
+<li>Ed25519算法：一种基于椭圆曲线密码学的公钥签名算法，使用Curve25519曲线，其密钥长度较短但安全性较高，抵抗量子计算攻击的能力强。<ul>
+<li>Ed25519在签名和验证过程中通常比RSA更快速，尤其在移动设备等资源受限环境下性能表现更为突出。</li>
+</ul>
+</li>
+<li>RSA算法：基于大整数因子分解，其密钥长度需相对较长才能保证较高的安全性，且在量子计算攻击面前相对脆弱。</li>
+</ul>
+</div>
+
+<p>生成密钥和公钥的命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用-f参数可以指定生成文件名，这样可以生成多个SSH密钥公钥，可以方便应用于不同平台或者账户</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span> -f ~/.ssh/github_id_ed25519</span><br></pre></td></tr></table></figure>
+
+<p>命令解释：</p>
+<ul>
+<li>创建时不输入密码，直接回车两次就可以免密登录，否则每次验证公钥都需要输入密码。</li>
+<li><code>-C</code>：注释，用于标识该密钥的用途或者使用者，一般常用是邮件参数。若不使用该参数作注释，则默认是基于当前计算机的用户名和计算机名称生成注释：<code>name@DESKTOP-xxxxxxx</code>。</li>
+<li>ras算法生成密钥文件为<code>id_rsa</code>，公钥文件为<code>id_rsa.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
+<li>ed25519算法生成密钥文件为<code>id_ed25519</code>，公钥文件为<code>id_ed25519.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
+</ul>
+<h3 id="上传SSH公钥到远程服务器">9.4.2 &nbsp&nbsp<a href="#上传SSH公钥到远程服务器" class="headerlink" title="上传SSH公钥到远程服务器"></a>上传SSH公钥到远程服务器</h3><h4 id="方案一：ssh-copy-id命令">9.4.2.1 &nbsp&nbsp<a href="#方案一：ssh-copy-id命令" class="headerlink" title="方案一：ssh-copy-id命令"></a>方案一：<code>ssh-copy-id</code>命令</h4><p><code>ssh-copy-id</code>命令会提示输入远程账户密码，并自动将公钥自动复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -i参数可以指定公钥文件进行上传</span></span><br><span class="line">ssh-copy-id -i ~/.ssh/id_ed25519.pub user@remote_host</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入密码验证成功之后，会输出如下信息</span></span><br><span class="line"><span class="comment"># Number of key(s) added: 1</span></span><br><span class="line"><span class="comment"># Now try logging into the machine, with: &quot;ssh &#x27;user@remote_host&#x27;&quot;</span></span><br><span class="line"><span class="comment"># and check to make sure that only the key(s) you wanted were added.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="方案二：手动上传公钥">9.4.2.2 &nbsp&nbsp<a href="#方案二：手动上传公钥" class="headerlink" title="方案二：手动上传公钥"></a>方案二：手动上传公钥</h4><ol>
+<li>先通过普通密码登录远程服务器，进入<code>~/.ssh/</code>目录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@remote_host</span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>将本机的公钥文件<code>id_ed25519.pub</code>或者<code>id_rsa.pub</code>文件内容复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件。若当前路径不存在该文件，则手动创建该文件。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 若不存在~/.ssh路径，则先创建该文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line">nano ~/.ssh/authorized_keys</span><br><span class="line"><span class="comment"># 将公钥文件内容复制到authorized_keys文件中</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>后面正常<code>ssh user@remote_host</code>即可使用SSH密钥实现无密登录。</li>
+</ol>
+<h3 id="config配置多个SSH远程服务器">9.4.3 &nbsp&nbsp<a href="#config配置多个SSH远程服务器" class="headerlink" title="config配置多个SSH远程服务器"></a>config配置多个SSH远程服务器</h3><p>可以通过<code>~/.ssh/config</code>文件配置，实现管理多个SSH连接：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 维持 SSH 连接活跃，防止连接超时中断。客户端每隔 60 秒自动发送加密的&quot;保活&quot;数据包。</span></span><br><span class="line">ServerAliveInterval 60</span><br><span class="line"></span><br><span class="line">Host * <span class="comment"># 别名使用星号*，适用于其他单个配置信息，如果指定了IdentityFile，单个服务器可以不需要再额外指定IdentityFile参数。</span></span><br><span class="line">    AddKeysToAgent <span class="built_in">yes</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定单个服务器的配置信息</span></span><br><span class="line">Host remote_host_alias <span class="comment"># 远程服务器的别名</span></span><br><span class="line">    HostName remote_host <span class="comment"># 远程服务器的ip或者域名</span></span><br><span class="line">    User user <span class="comment"># 远程服务器系统用户名</span></span><br><span class="line">    Port 22 <span class="comment"># 远程服务器ssh的端口，参数缺省默认是22</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519 <span class="comment"># 指定验证使用的密钥文件（非公钥），rsa算法指定 ~/.ssh/id_rsa</span></span><br><span class="line">    ProxyCommand ssh -W %h:%p other_remote_host_alias <span class="comment"># 在windows中，ssh需要填写完整路径C:/Windows/System32/OpenSSH/ssh.exe，否则执行代理命令会报错。-W %h:%p将SSH流量转发到目标主机的指定端口，%h自动替换为目标主机地址，%p自动替换为目标主机端口。</span></span><br></pre></td></tr></table></figure>
+
+<p>配置完成之后，可以使用别名进行连接：<code>ssh remote_host_alias</code></p>
+<h3 id="Ubuntu开启ssh服务及允许root密码登录">9.4.4 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root密码登录" class="headerlink" title="Ubuntu开启ssh服务及允许root密码登录"></a>Ubuntu开启ssh服务及允许root密码登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span> <span class="comment"># 若服务暴露在公网，不推荐开启密码登录，建议保留prohibit-password使用SSH密钥进行身份验证</span></span><br><span class="line"><span class="comment"># 是否允许密码登录</span></span><br><span class="line"><span class="comment">#PasswordAuthentication yes</span></span><br><span class="line">PasswordAuthentication no <span class="comment"># 若服务暴露在公网，推荐主动关闭密码登录</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="系统自启ssh服务">9.4.4.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用scp传递文件">9.4.5 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
+</div>
+<ol>
+<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
+<li>在PuTTY安装路径中打开终端窗口</li>
+<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
+</ol>
+<h3 id="查看SSHD的日志和登录失败的日志">9.4.6 &nbsp&nbsp<a href="#查看SSHD的日志和登录失败的日志" class="headerlink" title="查看SSHD的日志和登录失败的日志"></a>查看SSHD的日志和登录失败的日志</h3><p>在PVE的LXC容器debian中，不存在<code>/var/log/auth.log</code>文件。因此需要通过<code>journalctl</code>查看SSH服务的日志。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">journalctl -u ssh --since yesterday</span><br><span class="line">journalctl -u ssh --since <span class="string">&quot;1 hour ago&quot;</span></span><br><span class="line">journalctl -u ssh --since <span class="string">&quot;10 min ago&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行lastb，命令会读取/var/log/btmp文件内容（该文件记录了登录失败的用户名单）</span></span><br><span class="line">lastb -s yesterday -t now</span><br><span class="line">lastb -s <span class="string">&quot;-5 hours&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="远程控制软件">10 &nbsp&nbsp<a href="#远程控制软件" class="headerlink" title="远程控制软件"></a>远程控制软件</h1><h2 id="ubuntu-linux安装远程控制软件">10.1 &nbsp&nbsp<a href="#ubuntu-linux安装远程控制软件" class="headerlink" title="ubuntu linux安装远程控制软件"></a>ubuntu linux安装远程控制软件</h2><ul>
+<li>根据系统类型下载<a href="https://www.todesk.com/linux.html">官方安装包</a></li>
+<li>安装命令：<code>sudo apt-get install ./todesk-v4.7.2.0-amd64.deb</code></li>
+<li>运行命令：<code>todesk</code></li>
+</ul>
+<h2 id="arch-linux安装远程控制软件">10.2 &nbsp&nbsp<a href="#arch-linux安装远程控制软件" class="headerlink" title="arch linux安装远程控制软件"></a>arch linux安装远程控制软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
+<ul>
+<li>安装todesk：亦可下载<a href="https://www.todesk.com/linux.html">官方安装包</a>手动执行安装</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装teamviewer</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装向日葵</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure>
+
+<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
+<h1 id="开机排障">11 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">11.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
+<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
+<ul>
+<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
+<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
+</ul>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ubuntu紧急模式">11.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
+<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
+<p>编辑grub进去到救援模式：</p>
+<ol>
+<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
+<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
+<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
+</ol>
+<h2 id="开机出现initramfs-requires-a-manual-fsck">11.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
+<ul>
+<li>异常断电或者关机引起文件数据损坏</li>
+<li>系统无法启动</li>
+<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
+</ul>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="显卡驱动">12 &nbsp&nbsp<a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h1><h2 id="ubuntu-20-04安装英伟达nvidia闭源驱动">12.1 &nbsp&nbsp<a href="#ubuntu-20-04安装英伟达nvidia闭源驱动" class="headerlink" title="ubuntu 20.04安装英伟达nvidia闭源驱动"></a>ubuntu 20.04安装英伟达nvidia闭源驱动</h2><h3 id="运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version">12.1.1 &nbsp&nbsp<a href="#运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version" class="headerlink" title="运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version"></a>运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version</h3><p>故障原因：系统检测到驱动和NVML版本不一致的原因导致的。</p>
+<p>解决方法：<code>sudo reboot</code>重启系统即可。</p>
+<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.<br>[20] 【已解决】Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version: 535.161[EB&#x2F;OL]. <a href="https://blog.csdn.net/BetrayFree/article/details/137608544">https://blog.csdn.net/BetrayFree/article/details/137608544</a>.<br>[21] Runlevel  运行级别[EB&#x2F;OL]. <a href="https://en.wikipedia.org/wiki/Runlevel">https://en.wikipedia.org/wiki/Runlevel</a>.<br>[22] Linux tar: Cannot change ownership to [..]: Permission denied[EB&#x2F;OL]. <a href="https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/">https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/</a>.<br>[23] 生成新的 SSH 密钥并将其添加到 ssh-agent[EB&#x2F;OL]. <a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>.<br>[24] SSH生成SSH密钥（公钥和私钥）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_43420088/article/details/139775270">https://blog.csdn.net/qq_43420088/article/details/139775270</a>.<br>[25] 设置 SSH 跳板机[EB&#x2F;OL]. <a href="https://wwang721.github.io/myBlog/2019/10/15/ssh.html">https://wwang721.github.io/myBlog/2019/10/15/ssh.html</a>.<br>[26] linux设置开机自启动命令[EB&#x2F;OL]. <a href="https://blog.csdn.net/he_ranly/article/details/119137072">https://blog.csdn.net/he_ranly/article/details/119137072</a>.<br>[27] WakeOnLan[EB&#x2F;OL]. <a href="https://wiki.debian.org/WakeOnLan">https://wiki.debian.org/WakeOnLan</a>.<br>[28] How to View and Check SSH Logs (Linux, Ubuntu, Debian)[EB&#x2F;OL]. <a href="https://www.strongdm.com/blog/view-ssh-logs">https://www.strongdm.com/blog/view-ssh-logs</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>终端</tag>
+        <tag>笔记</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>命令</tag>
       </tags>
   </entry>
   <entry>
@@ -8392,315 +8770,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Linux系统排障总结</title>
-    <url>/troubleshooting/linux-troubleshooting/</url>
-    <content><![CDATA[<h1 id="Bash终端符号输入控制">1 &nbsp&nbsp<a href="#Bash终端符号输入控制" class="headerlink" title="Bash终端符号输入控制"></a>Bash终端符号输入控制</h1><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">功能</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CTRL+C</td>
-<td align="center">强行中断当前程序执行</td>
-<td align="center">发送 SIGINT 信号给前台进程组中的所有进程。常用于终止正在运行的程序</td>
-</tr>
-<tr>
-<td align="center">CTRL+Z</td>
-<td align="center">停止输入</td>
-<td align="center">任务中断维持挂起状态，任务仍在进程中运行，并没有结束（发送 SIGTSTP 信号给前台进程组中的所有进程，常用于挂起一个进程）</td>
-</tr>
-<tr>
-<td align="center">CTRL+D</td>
-<td align="center">结束当前输入（用户不再给当前程序发出指令），系统通常会结束当前程序</td>
-<td align="center">不是发送信号，而是表示一个特殊的二进制值，表示 EOF</td>
-</tr>
-</tbody></table>
-<h1 id="Bash终端常用命令">2 &nbsp&nbsp<a href="#Bash终端常用命令" class="headerlink" title="Bash终端常用命令"></a>Bash终端常用命令</h1><table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">功能</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>init 0</code><br> <code>poweroff</code><br> <code>halt</code><br> <code>shutdown -h now</code></td>
-<td align="center">关机</td>
-<td align="center">init是所有进程的祖先，他是Linux系统操作中不可缺少的程序之一<br>它的进程号始终为1，所以发送TERM信号给init会终止所有的用户进程<br>init定义了8个运行级别(runlevel)，init 0为关机，init 6为重启<br>shutdown就是使用这种机制<br>halt和poweroff也是调用shutdown工具链实现</td>
-</tr>
-<tr>
-<td align="center"><code>init 6</code><br> <code>reboot</code><br> <code>shutdown -r now</code></td>
-<td align="center">重启</td>
-<td align="center">root权限可使用</td>
-</tr>
-<tr>
-<td align="center">nohup command &gt; &quot;command.log&quot; 2&gt;&amp;1 &amp;</td>
-<td align="center">后台运行命令，ssh中断也能保持运行</td>
-<td align="center"><code>command.log</code>是日志文件，记录命令的输出<br>如果不需要日志，输出可以重定向到&#x2F;dev&#x2F;null</td>
-</tr>
-<tr>
-<td align="center">echo $! &gt; pid</td>
-<td align="center">获取上次运行命令的进程编号</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">kill $(cat .&#x2F;pid)</td>
-<td align="center">基于pid文件的pid编号终止进程</td>
-<td align="center">kill命令发送SIGTERM（信号15）<br>kill -9强制终止进程</td>
-</tr>
-<tr>
-<td align="center">blkid</td>
-<td align="center">查看硬盘分区的UUID值</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">lsblk</td>
-<td align="center">查看硬盘分区情况</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="压缩-解压缩">3 &nbsp&nbsp<a href="#压缩-解压缩" class="headerlink" title="压缩&#x2F;解压缩"></a>压缩&#x2F;解压缩</h1><h2 id="Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument">3.1 &nbsp&nbsp<a href="#Tar命令解压报错：Cannot-change-ownership-to-uid-197609-gid-197609-Invalid-argument" class="headerlink" title="Tar命令解压报错：Cannot change ownership to uid 197609, gid 197609: Invalid argument"></a>Tar命令解压报错：<code>Cannot change ownership to uid 197609, gid 197609: Invalid argument</code></h2><p>问题现象：使用root账户运行tar解压文件<code>tar -zxf xxx.tar.gz</code>时，出现报错</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar: xxx: Cannot change ownership to uid 197609, gid 197609: Invalid argument</span><br><span class="line">tar: Exiting with failure status due to previous errors</span><br></pre></td></tr></table></figure>
-
-<p>原因：在root身份下运行tar命令，tar命令试图保留root文件权限。但设置失败，因此导致错误。</p>
-<p>解决方式：添加参数<code>--no-same-owner</code>，例如<code>tar -zxf xxx.tar.gz --no-same-owner</code>。</p>
-<h1 id="包管理器">4 &nbsp&nbsp<a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h1><h2 id="apt">4.1 &nbsp&nbsp<a href="#apt" class="headerlink" title="apt"></a>apt</h2><h3 id="apt-update证书验证错误">4.1.1 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h3><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
-
-<h1 id="Linux开机自启">5 &nbsp&nbsp<a href="#Linux开机自启" class="headerlink" title="Linux开机自启"></a>Linux开机自启</h1><h2 id="crontab方案">5.1 &nbsp&nbsp<a href="#crontab方案" class="headerlink" title="crontab方案"></a>crontab方案</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑当前用户的定时任务列表。若当前帐号为root，则上述命令保存的文件为/var/spool/cron/crontabs/root</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 查看当前用户的定时任务列表</span></span><br><span class="line">crontab -l</span><br><span class="line"></span><br><span class="line"><span class="comment"># @reboot 参数代表重启后执行命令</span></span><br><span class="line"><span class="comment"># 注意sh脚本执行命令的工作目录，因为crontab默认目录是当前用户目录，例如/root。同时crontab运行默认不携带用户的环境变量，因此需要手动添加。</span></span><br><span class="line"><span class="comment"># 例如在command.sh开头，添加 cd $(dirname $0)，确保脚本工作在脚本所在目录下</span></span><br><span class="line">@reboot /root/command.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关于crontab基础设定，直接在crontab -e编辑即可，例如在PATH中添加自定义的环境变量</span></span><br><span class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/.nvm/versions/node/v22.17.0/bin/yarn</span><br><span class="line">SHELL=/bin/bash</span><br></pre></td></tr></table></figure>
-
-<h1 id="编译问题">6 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">6.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
-
-<h2 id="源码编译的程序的安装和卸载">6.2 &nbsp&nbsp<a href="#源码编译的程序的安装和卸载" class="headerlink" title="源码编译的程序的安装和卸载"></a>源码编译的程序的安装和卸载</h2><p>常规的编译安装过程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 建议是添加prefix参数指定安装路径，日后卸载程序只需删除该目录以及删除软链接（如果有创建的话）</span></span><br><span class="line"><span class="built_in">sudo</span> ./configure --prefix=/path_to_install</span><br><span class="line"><span class="built_in">sudo</span> make -j32</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>卸载方式：</p>
-<ul>
-<li>反安装target： make uninstall&#x2F;distclean&#x2F;veryclean</li>
-<li>make install之后目录下有一个install_mainfest.txt的文件记录安装的所有内容：<code>xargs rm &lt; install_manifest.txt</code></li>
-<li>若未指定prefix且没有install_mainfest.txt，临时目录重新安装：<code>./configure --prefix=/tmp/to_remove &amp;&amp; make install</code>，遍历<code>/tmp/to_remove</code>内的文件，把最初安装诶只的文件删除（缺点：部分文件夹可能无法删除，无法确定是系统安装或者源码编译安装）</li>
-<li>debian系列linux可尝试使用auto-apt 和 checkinstall：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install auto-apt checkinstall</span><br><span class="line"><span class="comment"># 构建生成deb包</span></span><br><span class="line">auto-apt run ./configure</span><br><span class="line">make</span><br><span class="line">checkinstall</span><br><span class="line"><span class="comment"># 完全卸载包，包名在checkinstall后有提示</span></span><br><span class="line">dpkg -r packagename</span><br><span class="line"><span class="comment"># 用生成的deb包重新安装</span></span><br><span class="line">dpkg -i ***.deb</span><br><span class="line"><span class="comment"># 列出包中安装的文件位置</span></span><br><span class="line">dpkg -L packagename</span><br><span class="line"><span class="comment"># 检查是否安装成功</span></span><br><span class="line">dpkg -l | grep packagename</span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">apt list --installed | grep packagename</span><br></pre></td></tr></table></figure>
-
-<h2 id="普通用户导致的编译问题">6.3 &nbsp&nbsp<a href="#普通用户导致的编译问题" class="headerlink" title="普通用户导致的编译问题"></a>普通用户导致的编译问题</h2><p>普通用户中如果在系统关键目录中，如<code>/opt</code>，执行<code>sudo make</code>可能会出现<code>xxx command not found</code>，这是因为有些命令在<code>sudo</code>下是不可见的，但如果不用<code>sudo</code>，<code>make</code>又无法在这些路径生成文件。</p>
-<p>解决方式：使用<code>make -f</code>参数指定<code>makefile</code>文件，让它在有权限的路径中工作。例如，将工作路径切到<code>home</code>目录中，<code>make -f /opt/xxx/xxx/makefile</code>，<code>make</code>可在<code>home</code>路径中生成文件。</p>
-<h2 id="常见编译错误">6.4 &nbsp&nbsp<a href="#常见编译错误" class="headerlink" title="常见编译错误"></a>常见编译错误</h2><ul>
-<li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
-<li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
-</ul>
-<h1 id="账户管理">7 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">7.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="自动root登录">7.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
-
-<h2 id="重置密码（ubuntu为例）">7.3 &nbsp&nbsp<a href="#重置密码（ubuntu为例）" class="headerlink" title="重置密码（ubuntu为例）"></a>重置密码（ubuntu为例）</h2><ol>
-<li>进入到救援模式中，选择root选项（root  Drop to root shell prompt），敲一次回车enter键显示：<code>root@ubuntu:~#</code></li>
-<li>重置密码命令：<code>passwd 系统账户名</code>，按提示输入两次密码确认</li>
-<li>exit退出shell，选择resume回到正常启动中。</li>
-</ol>
-<h2 id="帐号和密码文件（-etc-passwd和-etc-shadow）">7.4 &nbsp&nbsp<a href="#帐号和密码文件（-etc-passwd和-etc-shadow）" class="headerlink" title="帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）"></a>帐号和密码文件（&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow）</h2><p>Linux系统中，所有用户（包括系统管理员root）的账号和密码存储在&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow这两个文件中。其中，passwd保存的是账号，shadow保存的是账号的密码等信息（&#x2F;etc&#x2F;passwd只有root才可以修改的，&#x2F;etc&#x2F;shadow只有root才能查看）</p>
-<h3 id="etc-passwd">7.4.1 &nbsp&nbsp<a href="#etc-passwd" class="headerlink" title="&#x2F;etc&#x2F;passwd"></a>&#x2F;etc&#x2F;passwd</h3><p>示例：<code>root:x:0:0:root:/root:/bin/bash</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为7个部分。</p>
-<ol>
-<li>账号名称</li>
-<li>为密码占位符（x表示该账户需要密码才能登录，为空时，账户无须密码即可登录）。原先用来保存密码的，现在密码都放在&#x2F;etc&#x2F;shadow中，所以这里显示x。</li>
-<li>UID，也就是使用者ID。默认的系统管理员的UID为0，我们添加用户的时候最好使用1000以上的UID，1-1000范围的UID最好保留给系统用。</li>
-<li>GID，也就是群组ID</li>
-<li>关于账号的一些说明信息（暂时可以忽略）</li>
-<li>账号的家目录，家目录就是你登陆系统后默认的那个目录</li>
-<li>账号使用的shell。&#x2F;bin&#x2F;bash为可登录系统Shell，&#x2F;sbin&#x2F;nologin表示账户无法登录系统。</li>
-</ol>
-<h3 id="etc-shadow">7.4.2 &nbsp&nbsp<a href="#etc-shadow" class="headerlink" title="&#x2F;etc&#x2F;shadow"></a>&#x2F;etc&#x2F;shadow</h3><p>示例：<code>root:!:15324:0:99999:7:::</code></p>
-<p>上面每一行都代表一个用户，每一行又通过[:]分为9个部分。</p>
-<ol>
-<li>账户名称（密码需要与账户对应的）</li>
-<li>加密后的密码：如果这一栏的第一个字符为!或者*的话，说明这是一个不能登录的账户，从示例可看出ubuntu默认的就不启用root账户。（账户未设置密码时为空，设置密码后加密显示。!为无效哈希，系统会自动锁定这些账户并阻止登录，通过在&#x2F;etc&#x2F;passwd设置&#x2F;bin&#x2F;false或者&#x2F;sbin&#x2F;nologin实现禁止登录）</li>
-<li>最近改动密码的日期：上次修改密码的时间距离1970年01月01日多少天</li>
-<li>密码不可被变更的天数：设置了这个值，则表示从变更密码的日期算起，多少天内无法再次修改密码，如果是0的话，则没有限制</li>
-<li>密码需要重新变更的天数：密码经常更换才能保证安全，为了提醒某些经常不更换密码的用户，可以设置一个天数，强制让用户更换密码，也就是说该用户的密码会在多少天后过期（默认位99999天，可以理解为永不过期）</li>
-<li>密码过期预警天数：如果在5中设置了密码需要重新变更的天数，则会在密码过期的前多少天进行提醒，提示用户其密码将在多少天后过期</li>
-<li>密码过期的宽恕时间：如果在5中设置的日期过后，用户仍然没有修改密码，则该用户还可以继续使用的天数</li>
-<li>账号失效日期，过了这个日期账号就不能用了</li>
-<li>保留未使用</li>
-</ol>
-<h3 id="etc-shadow文件中密码的加密方式">7.4.3 &nbsp&nbsp<a href="#etc-shadow文件中密码的加密方式" class="headerlink" title="&#x2F;etc&#x2F;shadow文件中密码的加密方式"></a>&#x2F;etc&#x2F;shadow文件中密码的加密方式</h3><p>示例：<code>root:$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.:14838:0:99999:7:::</code></p>
-<p>示例的密码域：<code>$1$Bg1H/4mz$X89TqH7tpi9dX1B9j5YsF.</code>，密码域密文也是由三部分组成的，即：$id$salt$encrypted，详细参见linux标准源文件passwd.c中的pw_encrypt函数。</p>
-<p>加密算法：明文密码和一个叫salt的东西通过函数crypt()完成加密</p>
-<div class="note info no-icon"><p>id为1时，采用md5进行加密；id为5时，采用SHA256进行加密；id为6时，采用SHA512进行加密。</p>
-</div>
-
-<p>得知加密方式，可以复制密文到相关工具上逆向破解：</p>
-<h1 id="硬盘和分区管理">8 &nbsp&nbsp<a href="#硬盘和分区管理" class="headerlink" title="硬盘和分区管理"></a>硬盘和分区管理</h1><h2 id="挂载一个新硬盘">8.1 &nbsp&nbsp<a href="#挂载一个新硬盘" class="headerlink" title="挂载一个新硬盘"></a>挂载一个新硬盘</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk <span class="comment">#查看所有硬盘情况</span></span><br><span class="line"><span class="built_in">df</span> -lh <span class="comment">#查看硬盘占用情况，以及挂载位置</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk -l <span class="comment">#查看硬盘分区情况</span></span><br><span class="line"><span class="built_in">sudo</span> fdisk /dev/sdb <span class="comment">#给硬盘sdb创建分区</span></span><br><span class="line"><span class="built_in">sudo</span> mkfs.ext4 /dev/sdb <span class="comment">#格式化硬盘sdb，并写入文件系统</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/pan <span class="comment">#创建目录</span></span><br><span class="line"><span class="built_in">sudo</span> mount /dev/sdb /mnt/pan <span class="comment">#将硬盘sdb挂载到 /mnt/pan 目录</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/fstab <span class="comment"># 设置开机自动挂载，以下示例是写明挂载/dev/sdb，如果硬盘设备实际的路径更变后，例如变更硬盘实际物理接口，可能会导致挂载失败</span></span><br><span class="line">/dev/sdb /mnt/pan ext4 defaults 0 0</span><br><span class="line">blkid|grep /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> nano /etc/fstab <span class="comment"># 使用UUID挂载分区，即使变更硬盘实际物理接口，也不会导致挂载失败</span></span><br><span class="line"><span class="comment"># &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;</span></span><br><span class="line"><span class="comment"># options：defaults - 使用文件系统的默认挂载参数</span></span><br><span class="line"><span class="comment"># dump：0 - 不备份</span></span><br><span class="line"><span class="comment"># pass：0代表不检查。对于根目录/和efi目录/boot/efi，该值必需为1。其余分区可以设置为2。优先检查根目录后就会检查设置为2的其他分区。</span></span><br><span class="line">UUID=uuid值 /mnt/share ext4 defaults 0 2</span><br><span class="line"><span class="comment"># mount -a用于挂载配置文件 /etc/fstab 中列出的所有文件系统，可以提前测试挂载情况，不至于配置写错导致重启进入紧急模式</span></span><br><span class="line">mount -a</span><br></pre></td></tr></table></figure>
-
-<h2 id="将-home目录挂载到新分区（或新硬盘）">8.2 &nbsp&nbsp<a href="#将-home目录挂载到新分区（或新硬盘）" class="headerlink" title="将&#x2F;home目录挂载到新分区（或新硬盘）"></a>将&#x2F;home目录挂载到新分区（或新硬盘）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过包管理器安装 gparted，进行新建分区或者格式化硬盘等操作。</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /mnt/home</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /mnt/home <span class="comment"># 挂载新分区到/mnt/home</span></span><br><span class="line"><span class="built_in">sudo</span> rsync -aXS /home/ /mnt/home <span class="comment"># a归档模式（递归传输并保持文件属性），X保持扩展属性</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> /home /home_old</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> /home</span><br><span class="line"><span class="built_in">sudo</span> umount /dev/新分区</span><br><span class="line"><span class="built_in">sudo</span> mount /dev/新分区 /home</span><br><span class="line">blkid|grep /dev/新分区 <span class="comment"># 查看新分区的uuid</span></span><br><span class="line"><span class="built_in">sudo</span> gedit /etc/fstab <span class="comment"># 将新分区的uuid填入fstab</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /home_old <span class="comment"># 重启无异常，即可删除旧home目录</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="查看硬盘是不是固态硬盘（SSD）">8.3 &nbsp&nbsp<a href="#查看硬盘是不是固态硬盘（SSD）" class="headerlink" title="查看硬盘是不是固态硬盘（SSD）"></a>查看硬盘是不是固态硬盘（SSD）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line"><span class="built_in">cat</span> /sys/block/sda/queue/rotational</span><br><span class="line"></span><br><span class="line"><span class="comment"># 0表明为ssd，1是机械</span></span><br><span class="line">lsblk -d -o name,rota</span><br></pre></td></tr></table></figure>
-
-<h1 id="网络">9 &nbsp&nbsp<a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="查看网卡信息">9.1 &nbsp&nbsp<a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><p>查看ip信息：</p>
-<ul>
-<li>windows：ipconfig &#x2F;a</li>
-<li>linux: ifconfig（配置网络接口）或者iwconfig（配置无线网络接口）</li>
-</ul>
-<p>网卡名称解析：</p>
-<ul>
-<li>lo：表示local</li>
-<li>wl：表示wlan(Wireless Local Area Network)无线局域网</li>
-<li>en：表示ethernet以太网</li>
-<li>PCI接口的物理位置的坐标(bus, slot)，其中bus表示总线，slot表示插槽</li>
-</ul>
-<p>例子：</p>
-<ul>
-<li>wlp3s0表示，WLAN PCI接口位置：bus&#x3D;3, slot&#x3D;0。</li>
-<li>enp2s0表示，Etnernet PCI接口位置：bus&#x3D;2, slot&#x3D;0。</li>
-</ul>
-<h2 id="WAKE-ON-LAN-WOL">9.2 &nbsp&nbsp<a href="#WAKE-ON-LAN-WOL" class="headerlink" title="WAKE-ON-LAN(WOL)"></a>WAKE-ON-LAN(WOL)</h2><h3 id="Linux设备发送魔包唤醒Windows设备">9.2.1 &nbsp&nbsp<a href="#Linux设备发送魔包唤醒Windows设备" class="headerlink" title="Linux设备发送魔包唤醒Windows设备"></a>Linux设备发送魔包唤醒Windows设备</h3><div class="note primary no-icon"><p>Windows设备需提前设置好：</p>
-<ol>
-<li>BIOS中开启<code>Power On By PCI-E</code></li>
-<li>网卡设置：设备管理器-&gt;选择对应Wake On Lan的网卡-&gt;电源管理-&gt;勾选「允许此设备唤醒计算机(O)」-&gt;勾选「只允许幻数据包唤醒计算机」</li>
-<li>查看windows网卡的MAC地址：<code>ipconfig /all</code>，输出信息对应物理地址<code>Physical Address</code>，这里假设获取的MAC地址为<code>AA:BB:CC:DD:EE:FF</code>，并且该windows设备已绑定静态IP为<code>192.168.1.10</code></li>
-</ol>
-</div>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在linux中安装wol工具</span></span><br><span class="line">apt install wakeonlan</span><br><span class="line"><span class="comment"># 发送唤醒包</span></span><br><span class="line">wakeonlan AA:BB:CC:DD:EE:FF</span><br></pre></td></tr></table></figure>
-
-<p>可以将上述的命令和ping命令写到脚本中，实现自动发送魔包及检测是否唤醒成功，免去每次手动输入MAC地址的麻烦（显示ping通后CTRL+C终止执行命令）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wakeonlan AA:BB:CC:DD:EE:FF</span><br><span class="line">ping 192.168.1.10</span><br></pre></td></tr></table></figure>
-
-<h2 id="ubuntu配置网卡">9.3 &nbsp&nbsp<a href="#ubuntu配置网卡" class="headerlink" title="ubuntu配置网卡"></a>ubuntu配置网卡</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/netplan/01-netcfg.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态ip设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">addresses:</span><br><span class="line">- 192.168.1.10/24</span><br><span class="line">gateway4: 192.168.1.1</span><br><span class="line">nameservers:</span><br><span class="line">addresses: [8.8.8.8, 8.8.4.4]</span><br><span class="line"></span><br><span class="line"><span class="comment"># DHCP设置示例</span></span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: networkd</span><br><span class="line">  ethernets:</span><br><span class="line">eth0:</span><br><span class="line">dhcp4: <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line"><span class="built_in">sudo</span> netplan apply</span><br></pre></td></tr></table></figure>
-
-<h2 id="ssh登录远程服务器">9.4 &nbsp&nbsp<a href="#ssh登录远程服务器" class="headerlink" title="ssh登录远程服务器"></a>ssh登录远程服务器</h2><div class="note info no-icon"><p>大部分系统都预装ssh程序客户端，方便连接其他ssh服务器使用，包括windows系统。如果需要设置作为被连接的ssh端，需要自行手动安装ssh的server。</p>
-</div>
-<p>连接命令：<code>ssh 系统账户名@远程服务器ip</code>，例如<code>ssh root@192.168.1.1</code></p>
-<p>查看ssh版本：<code>ssh -V</code></p>
-<h3 id="生成SSH密钥和公钥">9.4.1 &nbsp&nbsp<a href="#生成SSH密钥和公钥" class="headerlink" title="生成SSH密钥和公钥"></a>生成SSH密钥和公钥</h3><div class="note primary no-icon"><ul>
-<li>Ed25519算法：一种基于椭圆曲线密码学的公钥签名算法，使用Curve25519曲线，其密钥长度较短但安全性较高，抵抗量子计算攻击的能力强。<ul>
-<li>Ed25519在签名和验证过程中通常比RSA更快速，尤其在移动设备等资源受限环境下性能表现更为突出。</li>
-</ul>
-</li>
-<li>RSA算法：基于大整数因子分解，其密钥长度需相对较长才能保证较高的安全性，且在量子计算攻击面前相对脆弱。</li>
-</ul>
-</div>
-
-<p>生成密钥和公钥的命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用-f参数可以指定生成文件名，这样可以生成多个SSH密钥公钥，可以方便应用于不同平台或者账户</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span> -f ~/.ssh/github_id_ed25519</span><br></pre></td></tr></table></figure>
-
-<p>命令解释：</p>
-<ul>
-<li>创建时不输入密码，直接回车两次就可以免密登录，否则每次验证公钥都需要输入密码。</li>
-<li><code>-C</code>：注释，用于标识该密钥的用途或者使用者，一般常用是邮件参数。若不使用该参数作注释，则默认是基于当前计算机的用户名和计算机名称生成注释：<code>name@DESKTOP-xxxxxxx</code>。</li>
-<li>ras算法生成密钥文件为<code>id_rsa</code>，公钥文件为<code>id_rsa.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
-<li>ed25519算法生成密钥文件为<code>id_ed25519</code>，公钥文件为<code>id_ed25519.pub</code>，默认存放位置为<code>~/.ssh/</code>。</li>
-</ul>
-<h3 id="上传SSH公钥到远程服务器">9.4.2 &nbsp&nbsp<a href="#上传SSH公钥到远程服务器" class="headerlink" title="上传SSH公钥到远程服务器"></a>上传SSH公钥到远程服务器</h3><h4 id="方案一：ssh-copy-id命令">9.4.2.1 &nbsp&nbsp<a href="#方案一：ssh-copy-id命令" class="headerlink" title="方案一：ssh-copy-id命令"></a>方案一：<code>ssh-copy-id</code>命令</h4><p><code>ssh-copy-id</code>命令会提示输入远程账户密码，并自动将公钥自动复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -i参数可以指定公钥文件进行上传</span></span><br><span class="line">ssh-copy-id -i ~/.ssh/id_ed25519.pub user@remote_host</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入密码验证成功之后，会输出如下信息</span></span><br><span class="line"><span class="comment"># Number of key(s) added: 1</span></span><br><span class="line"><span class="comment"># Now try logging into the machine, with: &quot;ssh &#x27;user@remote_host&#x27;&quot;</span></span><br><span class="line"><span class="comment"># and check to make sure that only the key(s) you wanted were added.</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="方案二：手动上传公钥">9.4.2.2 &nbsp&nbsp<a href="#方案二：手动上传公钥" class="headerlink" title="方案二：手动上传公钥"></a>方案二：手动上传公钥</h4><ol>
-<li>先通过普通密码登录远程服务器，进入<code>~/.ssh/</code>目录</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh user@remote_host</span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>将本机的公钥文件<code>id_ed25519.pub</code>或者<code>id_rsa.pub</code>文件内容复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件。若当前路径不存在该文件，则手动创建该文件。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 若不存在~/.ssh路径，则先创建该文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line">nano ~/.ssh/authorized_keys</span><br><span class="line"><span class="comment"># 将公钥文件内容复制到authorized_keys文件中</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>后面正常<code>ssh user@remote_host</code>即可使用SSH密钥实现无密登录。</li>
-</ol>
-<h3 id="config配置多个SSH远程服务器">9.4.3 &nbsp&nbsp<a href="#config配置多个SSH远程服务器" class="headerlink" title="config配置多个SSH远程服务器"></a>config配置多个SSH远程服务器</h3><p>可以通过<code>~/.ssh/config</code>文件配置，实现管理多个SSH连接：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 维持 SSH 连接活跃，防止连接超时中断。客户端每隔 60 秒自动发送加密的&quot;保活&quot;数据包。</span></span><br><span class="line">ServerAliveInterval 60</span><br><span class="line"></span><br><span class="line">Host * <span class="comment"># 别名使用星号*，适用于其他单个配置信息，如果指定了IdentityFile，单个服务器可以不需要再额外指定IdentityFile参数。</span></span><br><span class="line">    AddKeysToAgent <span class="built_in">yes</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定单个服务器的配置信息</span></span><br><span class="line">Host remote_host_alias <span class="comment"># 远程服务器的别名</span></span><br><span class="line">    HostName remote_host <span class="comment"># 远程服务器的ip或者域名</span></span><br><span class="line">    User user <span class="comment"># 远程服务器系统用户名</span></span><br><span class="line">    Port 22 <span class="comment"># 远程服务器ssh的端口，参数缺省默认是22</span></span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519 <span class="comment"># 指定验证使用的密钥文件（非公钥），rsa算法指定 ~/.ssh/id_rsa</span></span><br><span class="line">    ProxyCommand ssh -W %h:%p other_remote_host_alias <span class="comment"># 在windows中，ssh需要填写完整路径C:/Windows/System32/OpenSSH/ssh.exe，否则执行代理命令会报错。-W %h:%p将SSH流量转发到目标主机的指定端口，%h自动替换为目标主机地址，%p自动替换为目标主机端口。</span></span><br></pre></td></tr></table></figure>
-
-<p>配置完成之后，可以使用别名进行连接：<code>ssh remote_host_alias</code></p>
-<h3 id="Ubuntu开启ssh服务及允许root密码登录">9.4.4 &nbsp&nbsp<a href="#Ubuntu开启ssh服务及允许root密码登录" class="headerlink" title="Ubuntu开启ssh服务及允许root密码登录"></a>Ubuntu开启ssh服务及允许root密码登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改/etc/ssh/sshd_config文件</span></span><br><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下字段</span></span><br><span class="line"><span class="comment">#PermitRootLogin prohibit-password</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span> <span class="comment"># 若服务暴露在公网，不推荐开启密码登录，建议保留prohibit-password使用SSH密钥进行身份验证</span></span><br><span class="line"><span class="comment"># 是否允许密码登录</span></span><br><span class="line"><span class="comment">#PasswordAuthentication yes</span></span><br><span class="line">PasswordAuthentication no <span class="comment"># 若服务暴露在公网，推荐主动关闭密码登录</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启sshd服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sshd.service</span><br><span class="line"></span><br><span class="line"><span class="comment">#默认情况下，在Ubuntu 20.04上未设置root用户的密码，当尝试以root用户身份进行SSH登录时，将显示错误消息Permission denied，please try again。因此，我们需要设置root用户的密码。出现提示时，输入当前用户密码，然后输入新的根密码：</span></span><br><span class="line"><span class="built_in">sudo</span> passwd</span><br><span class="line"><span class="comment"># 输入两次密码确定即可</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="系统自启ssh服务">9.4.4.1 &nbsp&nbsp<a href="#系统自启ssh服务" class="headerlink" title="系统自启ssh服务"></a>系统自启ssh服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开机自动启动ssh命令</span></span><br><span class="line"><span class="comment"># 注意在恢复模式中设置sshd自启服务，再次重启到恢复模式中的话，仍然是未启动的，但是按正常模式启动会自启（ubuntu18.04的实测结论）</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭ssh开机自动启动命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次开启ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单次关闭ssh</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop ssh</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看ssh是否启动，看到Active: active (running)即表示成功</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl status ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 SSH 守护进程是否已经运行</span></span><br><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用scp传递文件">9.4.5 &nbsp&nbsp<a href="#使用scp传递文件" class="headerlink" title="使用scp传递文件"></a>使用scp传递文件</h3><div class="note success no-icon"><p>windows和linux之间传输更推荐使用<a href="https://winscp.net/eng/download.php">WinSCP</a>工具。</p>
-</div>
-<ol>
-<li>下载安装<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
-<li>在PuTTY安装路径中打开终端窗口</li>
-<li>拷贝命令：<code>pscp [Linux用户名]@[Linux服务器ip地址]:[Linux服务器源文件] [本地目标文件夹]</code>，示例：<code>pscp d:\Old\test.jpg root@ipaddress:/var/www/html/</code></li>
-</ol>
-<h3 id="查看SSHD的日志和登录失败的日志">9.4.6 &nbsp&nbsp<a href="#查看SSHD的日志和登录失败的日志" class="headerlink" title="查看SSHD的日志和登录失败的日志"></a>查看SSHD的日志和登录失败的日志</h3><p>在PVE的LXC容器debian中，不存在<code>/var/log/auth.log</code>文件。因此需要通过<code>journalctl</code>查看SSH服务的日志。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">journalctl -u ssh --since yesterday</span><br><span class="line">journalctl -u ssh --since <span class="string">&quot;1 hour ago&quot;</span></span><br><span class="line">journalctl -u ssh --since <span class="string">&quot;10 min ago&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行lastb，命令会读取/var/log/btmp文件内容（该文件记录了登录失败的用户名单）</span></span><br><span class="line">lastb -s yesterday -t now</span><br><span class="line">lastb -s <span class="string">&quot;-5 hours&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="远程控制软件">10 &nbsp&nbsp<a href="#远程控制软件" class="headerlink" title="远程控制软件"></a>远程控制软件</h1><h2 id="ubuntu-linux安装远程控制软件">10.1 &nbsp&nbsp<a href="#ubuntu-linux安装远程控制软件" class="headerlink" title="ubuntu linux安装远程控制软件"></a>ubuntu linux安装远程控制软件</h2><ul>
-<li>根据系统类型下载<a href="https://www.todesk.com/linux.html">官方安装包</a></li>
-<li>安装命令：<code>sudo apt-get install ./todesk-v4.7.2.0-amd64.deb</code></li>
-<li>运行命令：<code>todesk</code></li>
-</ul>
-<h2 id="arch-linux安装远程控制软件">10.2 &nbsp&nbsp<a href="#arch-linux安装远程控制软件" class="headerlink" title="arch linux安装远程控制软件"></a>arch linux安装远程控制软件</h2><p>P.S.配置好arch的“国内源”和“社区源”，安装yay。</p>
-<ul>
-<li>安装todesk：亦可下载<a href="https://www.todesk.com/linux.html">官方安装包</a>手动执行安装</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装todesk</span></span><br><span class="line">yay -S todesk</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start todeskd.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> todeskd.service</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装teamviewer</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装teamviewer</span></span><br><span class="line">yay -S teamviewer</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon start</span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon <span class="built_in">enable</span></span><br><span class="line"><span class="built_in">sudo</span> teamviewer daemon restart</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装向日葵</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装向日葵</span></span><br><span class="line">yay -S sunloginclient</span><br><span class="line"><span class="comment">#启动服务</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl start runsunloginclient.service</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> runsunloginclient.service</span><br></pre></td></tr></table></figure>
-
-<p>P.S.若遇到todesk打开系统就注销的问题，尝试下先删除teamviewer再重新安装一下，之后再打开todesk测试（yay社区编译版本的todesk和teamviewer可能存在冲突）。</p>
-<h1 id="开机排障">11 &nbsp&nbsp<a href="#开机排障" class="headerlink" title="开机排障"></a>开机排障</h1><h2 id="ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）">11.1 &nbsp&nbsp<a href="#ubuntu恢复模式（recovery-mode）-linux救援模式（rescue-mode）" class="headerlink" title="ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）"></a>ubuntu恢复模式（recovery mode）&#x2F;linux救援模式（rescue mode）</h2><p>救援模式相当于使用 SysV 作为默认的服务管理器的 Linux 发行版中的单用户模式。ubuntu和debian系列常用说法就是恢复模式，其他不同类的linux发行版更多常说救援模式。在救援模式下，将挂载所有本地文件系统，仅启动一些重要服务。但是，不会启动正常服务（例如网络服务）。一般系统无法正常启动时，进入该模式修复，例如重置root。</p>
-<p>如果同时需要网络的话，在Recovery Menu中选择network模式即可。</p>
-<ul>
-<li>若硬盘挂载失败，会自动进入到救援模式中。修正fstab表中正确的硬盘uuid，之后正确恢复到</li>
-<li>ubuntu摁一次esc键可以进入可grub选择界面，重复摁会导致无法进入的。进入到grub选择界面后，选择ubuntu的高级选项（Advanced options for Ubuntu）并选择recovery mode进入到救援模式。如果没有可选择的界面，尝试重启长摁SHIFT键或者shift+esc组合键看看，出现后可以使用上下方向键，防止自动读秒。</li>
-</ul>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=rescue.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从救援模式切换到紧急模式</span></span><br><span class="line">systemctl emergency</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit退出恢复模式，并选择recovery菜单中的resume选项</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ubuntu紧急模式">11.2 &nbsp&nbsp<a href="#ubuntu紧急模式" class="headerlink" title="ubuntu紧急模式"></a>ubuntu紧急模式</h2><p>在紧急模式中不启动任何东西。没有服务启动、没有挂载点、没有建立套接字，什么也没有。只是一个原始的 shell。</p>
-<p>从紧急模式切换到救援模式：<code>systemctl rescue</code></p>
-<p>编辑grub进去到救援模式：</p>
-<ol>
-<li>在grub选择菜单中，选择<code>Ubuntu</code>，按e键进入编辑模式</li>
-<li>在以<code>linux</code>开头的一行末尾，删除字符串<code>$vt_handoff</code>并添加字符串<code>systemd.unit=emergency.target</code></li>
-<li>修改完成后，按Ctrl+X或者F10，在救援模式中启动</li>
-</ol>
-<h2 id="开机出现initramfs-requires-a-manual-fsck">11.3 &nbsp&nbsp<a href="#开机出现initramfs-requires-a-manual-fsck" class="headerlink" title="开机出现initramfs(requires a manual fsck)"></a>开机出现initramfs(requires a manual fsck)</h2><p>问题常见于以下常见场景：</p>
-<ul>
-<li>异常断电或者关机引起文件数据损坏</li>
-<li>系统无法启动</li>
-<li>连接的驱动器（包括闪存驱动器&#x2F;SD卡这类设备）未按预期工作</li>
-</ul>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看提示中说明是哪个硬盘需要执行fsck修复（文件系统一致性检查），例如sda1</span></span><br><span class="line">fsck /dev/sda1 -y</span><br><span class="line"><span class="comment"># 等执行到出现FILE SYSTEM WAS MODIFIED即可reboot系统</span></span><br></pre></td></tr></table></figure>
-
-
-<h1 id="显卡驱动">12 &nbsp&nbsp<a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h1><h2 id="ubuntu-20-04安装英伟达nvidia闭源驱动">12.1 &nbsp&nbsp<a href="#ubuntu-20-04安装英伟达nvidia闭源驱动" class="headerlink" title="ubuntu 20.04安装英伟达nvidia闭源驱动"></a>ubuntu 20.04安装英伟达nvidia闭源驱动</h2><h3 id="运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version">12.1.1 &nbsp&nbsp<a href="#运行nvidia-smi可能出现的报错：Failed-to-initialize-NVML-Driver-library-version-mismatch-NVML-library-version" class="headerlink" title="运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version"></a>运行nvidia-smi可能出现的报错：Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version</h3><p>故障原因：系统检测到驱动和NVML版本不一致的原因导致的。</p>
-<p>解决方法：<code>sudo reboot</code>重启系统即可。</p>
-<h1 id="参考文献">13 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] ubuntu开机出现initramfs(requires a manual fsck)解决办法[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yibeimingyue/p/14261416.html">https://www.cnblogs.com/yibeimingyue/p/14261416.html</a>.<br>[2] 如何在 Ubuntu 18.04 中启动到救援模式或紧急模式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/53902139">https://zhuanlan.zhihu.com/p/53902139</a>.<br>[3] Linux下如何查看一块硬盘是不是固态硬盘（SSD）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_42303254/article/details/89317618">https://blog.csdn.net/qq_42303254/article/details/89317618</a>.<br>[4] Ubuntu 18.04 apt update failed for https repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/1229122/ubuntu%E2%80%9118%E2%80%9104%E2%80%91apt%E2%80%91update%E2%80%91failed%E2%80%91for%E2%80%91https%E2%80%91repository">https://askubuntu.com/questions/1229122/ubuntu‑18‑04‑apt‑update‑failed‑for‑https‑repository</a>.<br>[5] 将&#x2F;home 目录挂载到新分区（或新硬盘）[EB&#x2F;OL]. <a href="https://blog.51cto.com/runixcn/4605838">https://blog.51cto.com/runixcn/4605838</a>.<br>[6] ubuntu修改密码（详细版）「建议收藏」[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/2159425">https://cloud.tencent.com/developer/article/2159425</a>.<br>[7] Linux账号和密码文件 &#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;shadow[EB&#x2F;OL]. <a href="https://www.cnblogs.com/fuyuanming/p/6519758.html">https://www.cnblogs.com/fuyuanming/p/6519758.html</a>.<br>[8] What means * and ! at second field of &#x2F;etc&#x2F;shadow?[EB&#x2F;OL]. <a href="https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow">https://superuser.com/questions/623881/what-means-and-at-second-field-of-etc-shadow</a>.<br>[9] SSH and locked users[EB&#x2F;OL]. <a href="http://arlimus.github.io/articles/usepam/">http://arlimus.github.io/articles/usepam/</a>.<br>[10] Linux shadow文件中密码的加密方式[EB&#x2F;OL]. <a href="https://www.cnblogs.com/7-58/p/13328148.html">https://www.cnblogs.com/7-58/p/13328148.html</a>.<br>[11] 使用root ssh登录ubuntu22.4配置[EB&#x2F;OL]. <a href="https://www.cnblogs.com/waldron/p/16864613.html">https://www.cnblogs.com/waldron/p/16864613.html</a>.<br>[12] Windows连接ssh、scp到Ubuntu服务器[EB&#x2F;OL]. <a href="https://blog.csdn.net/renshy5/article/details/117735410">https://blog.csdn.net/renshy5/article/details/117735410</a>.<br>[13] Ubuntu下移动硬盘的分区、格式化、挂载操作[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/397440213">https://zhuanlan.zhihu.com/p/397440213</a>.<br>[14] Ubuntu ifconfig 查看网卡信息 lo enp2s0 wlp3s0 具体含义[EB&#x2F;OL]. <a href="https://blog.csdn.net/wuyujin1997/article/details/105460929">https://blog.csdn.net/wuyujin1997/article/details/105460929</a>.<br>[15] arch linux 安装teamviewer,todesk,向日葵,远程软件方法[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/e4b61f754071">https://www.jianshu.com/p/e4b61f754071</a>.<br>[16] 怎么卸载用 make install 编译安装的软件？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a>.<br>[17] Ubuntu网络配置：使用DHCP自动配置网卡[EB&#x2F;OL]. <a href="https://blog.csdn.net/VqaEditor/article/details/133605050">https://blog.csdn.net/VqaEditor/article/details/133605050</a>.<br>[18] The Ultimate Guide to Recovery and Rescue Mode in Ubuntu[EB&#x2F;OL]. <a href="https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm">https://www.fosslinux.com/113044/the-ultimate-guide-to-recovery-and-rescue-mode-in-ubuntu.htm</a>.<br>[19] 如何启动 Ubuntu 22.04 进入救援&#x2F;紧急模式[EB&#x2F;OL]. <a href="https://linux.cn/article-14750-1.html">https://linux.cn/article-14750-1.html</a>.<br>[20] 【已解决】Failed to initialize NVML: Driver&#x2F;library version mismatch NVML library version: 535.161[EB&#x2F;OL]. <a href="https://blog.csdn.net/BetrayFree/article/details/137608544">https://blog.csdn.net/BetrayFree/article/details/137608544</a>.<br>[21] Runlevel  运行级别[EB&#x2F;OL]. <a href="https://en.wikipedia.org/wiki/Runlevel">https://en.wikipedia.org/wiki/Runlevel</a>.<br>[22] Linux tar: Cannot change ownership to [..]: Permission denied[EB&#x2F;OL]. <a href="https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/">https://www.krenger.ch/blog/linux-tar-cannot-change-ownership-to-permission-denied/</a>.<br>[23] 生成新的 SSH 密钥并将其添加到 ssh-agent[EB&#x2F;OL]. <a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>.<br>[24] SSH生成SSH密钥（公钥和私钥）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_43420088/article/details/139775270">https://blog.csdn.net/qq_43420088/article/details/139775270</a>.<br>[25] 设置 SSH 跳板机[EB&#x2F;OL]. <a href="https://wwang721.github.io/myBlog/2019/10/15/ssh.html">https://wwang721.github.io/myBlog/2019/10/15/ssh.html</a>.<br>[26] linux设置开机自启动命令[EB&#x2F;OL]. <a href="https://blog.csdn.net/he_ranly/article/details/119137072">https://blog.csdn.net/he_ranly/article/details/119137072</a>.<br>[27] WakeOnLan[EB&#x2F;OL]. <a href="https://wiki.debian.org/WakeOnLan">https://wiki.debian.org/WakeOnLan</a>.<br>[28] How to View and Check SSH Logs (Linux, Ubuntu, Debian)[EB&#x2F;OL]. <a href="https://www.strongdm.com/blog/view-ssh-logs">https://www.strongdm.com/blog/view-ssh-logs</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>linux</tag>
-        <tag>终端</tag>
-        <tag>笔记</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>光猫排障破解总结</title>
     <url>/troubleshooting/optical-modem-troubleshooting/</url>
     <content><![CDATA[<h1 id="联通光猫">1 &nbsp&nbsp<a href="#联通光猫" class="headerlink" title="联通光猫"></a>联通光猫</h1><h2 id="烽火HG6142A获取超级管理员密码">1.1 &nbsp&nbsp<a href="#烽火HG6142A获取超级管理员密码" class="headerlink" title="烽火HG6142A获取超级管理员密码"></a>烽火HG6142A获取超级管理员密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取光猫的mac地址，获取地址删除-就是实际mac信息</span></span><br><span class="line">arp -a 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋能telnet，成功使能后显示Open telnet success!</span></span><br><span class="line">http://192.168.1.1/telnet?<span class="built_in">enable</span>=1&amp;key=ACC4A9338800</span><br><span class="line"><span class="comment"># 部分型号使能命令：http://192.168.1.1/cgi-bin/telnetenable.cgi?telnetenable=1&amp;key=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录telnet</span></span><br><span class="line">telnet 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录帐号</span></span><br><span class="line">admin/root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录密码：Fh@mac后六位</span></span><br><span class="line">Fh@338800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果显示有路径就是成功登录了</span></span><br><span class="line">/var <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入工厂模式</span></span><br><span class="line">load_cli factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示管理员密码命令，admin_pwd=字段就是超级密码</span></span><br><span class="line">show admin_pwd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录光猫，注意192.168.1.1页面只能登录普通账户，user：p752hj44</span></span><br><span class="line">192.168.1.1/cu.html</span><br></pre></td></tr></table></figure>
@@ -8710,56 +8779,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <categories>
         <category>troubleshooting</category>
       </categories>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
   </entry>
   <entry>
     <title>运行库修复（Windows平台）</title>
@@ -9537,12 +9556,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#110;&#107;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#49;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#107;&#x73;&#46;&#99;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#115;&#x2e;&#99;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#117;&#46;&#99;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#64;&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -9786,308 +9805,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：第三章「字符串、向量和数组」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap3/</url>
-    <content><![CDATA[<h1 id="第三章：字符串、向量和数组"><a href="#第三章：字符串、向量和数组" class="headerlink" title="第三章：字符串、向量和数组"></a>第三章：字符串、向量和数组</h1><h2 id="练习3-1"><a href="#练习3-1" class="headerlink" title="练习3.1"></a>练习3.1</h2><blockquote>
-<p>使用恰当的using声明重做1.4.1节（第11页）和2.6.2节（第67页）的练习。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_1.cpp">1.4.1</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_2.cpp">2.6.2</a></li>
-</ul>
-<p>因为较为简单，每个小节就只写一个练习了。</p>
-<p>using声明易造成名字冲突：</p>
-<ul>
-<li>使用using声明，一般建议为每个名字做独立的using声明，例如<code>using std::cin</code>，不太建议使用整个命名空间，例如<code>using namespace std</code>，易造成名字冲突。</li>
-<li>头文件不应包含using声明：易造成名字冲突。</li>
-</ul>
-<h2 id="练习3-2"><a href="#练习3-2" class="headerlink" title="练习3.2"></a>练习3.2</h2><blockquote>
-<p>编写一段程序从标准输入中一次读入一行，然后修改该程序使其一次读入一个词。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_1.cpp">一次读入一行</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_2.cpp">一次读入一个词</a></li>
-</ul>
-<h2 id="练习3-3"><a href="#练习3-3" class="headerlink" title="练习3.3"></a>练习3.3</h2><blockquote>
-<p>请说明string类的输入运算符和getline函数分别是如何处理空白字符的。</p>
-</blockquote>
-<ul>
-<li>类似 cin &gt;&gt; str 的读取，string对象会忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止。</li>
-<li>类似 getline(cin, str) 的读取，string对象会从给定的输入流中读取内容，直到遇到换行符为止（换行符被读进来，但不会存放进对象）。</li>
-</ul>
-<h2 id="练习3-4"><a href="#练习3-4" class="headerlink" title="练习3.4"></a>练习3.4</h2><blockquote>
-<p>编写一段程序读取两个字符串，比较其是否相等并输出结果。如果不相等，输出较大的那个字符串。改写上述程序，比较输入的两个字符串是否等长，如果不等长，输出长度较大的那个字符串。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_1.cpp">比较大的</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_2.cpp">长度大的</a></li>
-</ul>
-<h2 id="练习3-5"><a href="#练习3-5" class="headerlink" title="练习3.5"></a>练习3.5</h2><blockquote>
-<p>编写一段程序从标准输入中读入多个字符串并将它们连接在一起，输出连接成的大字符串。然后修改上述程序，用空格把输入的多个字符串分隔开来。</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_1.cpp">无空格分隔</a></li>
-<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_2.cpp">空格分隔</a></li>
-</ul>
-<p>string对象操作的一些总结：</p>
-<ul>
-<li><strong>定义、初始化和基本操作看下面代码（书本见P76和P77）。</strong></li>
-<li>关系运算符&lt;、&lt;&#x3D;、&gt;、&gt;&#x3D;比较规则：依次比较每个位置上的字符大小，若都一样时，则长度更长的字符串就更大。</li>
-<li><code>string</code>和字符字面值和字符串字面值混在一条语句中，必须确保加法运算符「+」两侧至少有一个<code>string</code>对象（因为标准库可以将字面值转换为<code>string</code>对象，但不允许两个字面值直接相加）</li>
-<li><code>size()</code>函数返回的是<code>string::size_type</code>类型的值，是无符号数。表达式中如果有<code>size()</code>，切记不要再使用<code>int</code>。如果需要定义变量存储<code>size()</code>函数，使用<code>auto</code>或<code>decltype</code>，例如<code>auto len = str.size()</code></li>
-<li><strong>注意字符串字面值不是<code>string</code>对象，和<code>string</code>是不同的类型（因为需要兼容C）。</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义和初始化（等号是拷贝初始化，圆括号是直接初始化）</span></span><br><span class="line">string s1;     <span class="comment">//默认初始化为空串</span></span><br><span class="line"><span class="function">string <span class="title">s2</span><span class="params">(s1)</span></span>; <span class="comment">// s2是s1的副本</span></span><br><span class="line">string s2 = s1; <span class="comment">// 同上，不过是拷贝初始化</span></span><br><span class="line">string s3 = (<span class="string">&quot;hello&quot;</span>); <span class="comment">// s3是字面值&quot;hello&quot;的副本（不包括字面值中的空字符）</span></span><br><span class="line">string s3 = <span class="string">&quot;hello&quot;</span>; <span class="comment">// 同上</span></span><br><span class="line"><span class="function">string <span class="title">s4</span><span class="params">(n, <span class="string">&#x27;c&#x27;</span>)</span></span>; <span class="comment">// s4初始化为由n个字符c组成的串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 基本操作</span></span><br><span class="line">os &lt;&lt; s; <span class="comment">// 将s写到输出流os，返回os</span></span><br><span class="line">is &gt;&gt; s; <span class="comment">// 将输入流is读取字符串赋值给s，字符串以空白分割，返回is</span></span><br><span class="line"><span class="built_in">getline</span>(is, s); <span class="comment">// 从输入流is读取一行赋值给s，返回is</span></span><br><span class="line">s.<span class="built_in">empty</span>(); <span class="comment">// s为空返回true，否则返回false</span></span><br><span class="line">s.<span class="built_in">size</span>(); <span class="comment">// 返回s中字符的个数</span></span><br><span class="line">s[n]; <span class="comment">// 返回s中第n个字符的引用，下标从0计起。</span></span><br><span class="line">s1 + s2; <span class="comment">// 返回s1和s2连接后的结果</span></span><br><span class="line">s1 = s2; <span class="comment">// 用s2的副本代替s1中原来的字符</span></span><br><span class="line">s1 == s2; <span class="comment">// 判断两个string对象是否相等，对字母大小写敏感</span></span><br><span class="line">s1 != s2;</span><br><span class="line">&lt;, &lt;=, &gt;, &gt;= ; <span class="comment">// 利用字符在字典中的顺序进行比较，对字母大小写敏感</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习3-6"><a href="#练习3-6" class="headerlink" title="练习3.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_6.cpp">练习3.6</a></h2><blockquote>
-<p>编写一段程序，使用范围for语句将字符串内的所有字符用X代替。</p>
-</blockquote>
-<p><strong>for范围语句中引用的理解：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : s)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> itr = s.<span class="built_in">begin</span>(); itr != s.<span class="built_in">end</span>(); ++itr) &#123;</span><br><span class="line">    <span class="keyword">auto</span> &amp;c = *itr; <span class="comment">// 每个迭代中用一个新引用绑定一个元素</span></span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-7"><a href="#练习3-7" class="headerlink" title="练习3.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_7.cpp">练习3.7</a></h2><blockquote>
-<p>就上一题完成的程序而言，如果将循环控制变量的类型设为char将发生什么？先估计一下结果，然后实际编程进行验证。</p>
-</blockquote>
-<p>字符串没有变化（因为c只是拷贝，即char，而非引用，即char &amp;，所以无法改变字符串的）。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="string">&quot;hello, world!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">char</span> c : str)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-8"><a href="#练习3-8" class="headerlink" title="练习3.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_8.cpp">练习3.8</a></h2><blockquote>
-<p>分别用while循环和传统for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？</p>
-</blockquote>
-<p>范围for语句更好，因为不需要直接操作索引，更简洁。</p>
-<h2 id="练习3-9"><a href="#练习3-9" class="headerlink" title="练习3.9"></a>练习3.9</h2><blockquote>
-<p>下面的程序有何作用？它合法吗？如果不合法，为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line">cout &lt;&lt; s[<span class="number">0</span>] &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
-
-<p>不合法。使用下标访问空字符串是非法的行为（通过下标访问不存在元素的行为会导致缓冲区错误buffer overflow，本质上就是下标越界，试图访问非法内存区域）。</p>
-<p><strong>只能对确知已存在的元素执行下标操作：建议设下标类型为<code>decltype(str.size())</code>，这样可以确保下标不会小于0。写程序逻辑时，自己确保下标小于<code>str.size()</code>即可（或者使用范围for语句遍历更方便，能有效地确保下标合法，不会出现下标越界）。</strong></p>
-<h2 id="练习3-10"><a href="#练习3-10" class="headerlink" title="练习3.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_10.cpp">练习3.10</a></h2><blockquote>
-<p>编写一段程序，读入一个包含标点符号的字符串，将标点符号去除后输出字符串剩余的部分。</p>
-</blockquote>
-<p><strong>C++标准库兼容C标准库</strong><br>C标准库头文件形如ctype.h，而在C++中，则是命名为cctype，即前面加一个c并且去除后缀.h。使用方式，标准库的名字可以在命名空间std找到。</p>
-<h2 id="练习3-11"><a href="#练习3-11" class="headerlink" title="练习3.11"></a>练习3.11</h2><blockquote>
-<p>下面的范围for语句合法吗？如果合法，c的类型是什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> string s = <span class="string">&quot;Keep out!&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s)&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>要根据for循环体中的代码来看是否合法，s是常量，c是string对象中字符的引用（const char &amp;）。因此如果for循环体中的代码重新给c赋值就会非法，如果不改变c的值，那么合法。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; c;  <span class="comment">// 合法</span></span><br><span class="line">c = <span class="string">&#x27;X&#x27;</span>;    <span class="comment">// 不合法</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-12"><a href="#练习3-12" class="headerlink" title="练习3.12"></a>练习3.12</h2><blockquote>
-<p>下列vector对象的定义有不正确的吗？如果有，请指出来。对于正确的，描述其执行结果；对于不正确的，说明其错误的原因。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ivec;         <span class="comment">// 在C++11当中合法，ivec的元素是vector对象</span></span><br><span class="line">vector&lt;string&gt; svec = ivec;       <span class="comment">// 不合法，类型不一样，ivec的元素是vector int，svec的元素是string</span></span><br><span class="line"><span class="function">vector&lt;string&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>, <span class="string">&quot;null&quot;</span>)</span></span>;  <span class="comment">// 合法，svec有10个字符串：&quot;null&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-13"><a href="#练习3-13" class="headerlink" title="练习3.13"></a>练习3.13</h2><blockquote>
-<p>下列的vector对象各包含多少个元素？这些元素的值分别是多少？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v1;         <span class="comment">// 0个，无值</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v2</span><span class="params">(<span class="number">10</span>)</span></span>;     <span class="comment">// 10个，都是0</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v3</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>; <span class="comment">// 10个，都是42</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v4&#123; <span class="number">10</span> &#125;;     <span class="comment">// 1个，10</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v5&#123; <span class="number">10</span>, <span class="number">42</span> &#125;; <span class="comment">// 2个，10和42</span></span><br><span class="line">vector&lt;string&gt; v6&#123; <span class="number">10</span> &#125;;  <span class="comment">// 10个，空串</span></span><br><span class="line">vector&lt;string&gt; v7&#123; <span class="number">10</span>, <span class="string">&quot;hi&quot;</span> &#125;;  <span class="comment">// 10个，都是&quot;hi&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>初始化的括号区别：</p>
-<ul>
-<li>圆括号：构造vector对象，即圆括号声明容量和初值。</li>
-<li>花括号：列表初始化，用花括号的值作为元素初始值。（当提供的值不能用来列表初始化时，就会用来构造对象。如<code>vector&lt;string&gt; v1&#123;10, &quot;hi&quot;&#125;;</code>，因为类型不同，所以构造成10个&quot;hi&quot;）</li>
-</ul>
-<h2 id="练习3-14"><a href="#练习3-14" class="headerlink" title="练习3.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_14.cpp">练习3.14</a></h2><blockquote>
-<p>编写一段程序，用cin读入一组整数并把它们存入一个vector对象。</p>
-</blockquote>
-<p><strong>vctror对象能高效增长，在定义时设定其大小意义不大。开始时创建空vector，运行时再动态添加元素。</strong></p>
-<h2 id="练习3-15"><a href="#练习3-15" class="headerlink" title="练习3.15"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_15.cpp">练习3.15</a></h2><blockquote>
-<p>改写上题的程序，不过这次读入的是字符串。</p>
-</blockquote>
-<h2 id="练习3-16"><a href="#练习3-16" class="headerlink" title="练习3.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_16.cpp">练习3.16</a></h2><blockquote>
-<p>编写一段程序，把练习3.13中vector对象的容量和具体内容输出出来。检验你之前的回答是否正确，如果不对，回过头重新学习3.3.1节（第87页）知道弄明白错在何处为止。</p>
-</blockquote>
-<h2 id="练习3-17"><a href="#练习3-17" class="headerlink" title="练习3.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_17.cpp">练习3.17</a></h2><blockquote>
-<p>从cin读入一组词并把它们存入一个vector对象，然后设法把所有词都改写为大写形式。输出改变后的结果，每个词占一行。</p>
-</blockquote>
-<h2 id="练习3-18"><a href="#练习3-18" class="headerlink" title="练习3.18"></a>练习3.18</h2><blockquote>
-<p>下面的程序合法吗？如果不合法，你准备如何修改？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; ivec;</span><br><span class="line">ivec[<span class="number">0</span>] = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
-
-<p>不合法（ivec是空vector对象，对其执行下标操作是非法行为）。修正方式：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ivec.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-19"><a href="#练习3-19" class="headerlink" title="练习3.19"></a>练习3.19</h2><blockquote>
-<p>如果想定义一个含有10个元素的vector对象，所有元素的值都是42，请列举出三种不同的实现方法，哪种方式更好呢？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">ivec1</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec2&#123; <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec3;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">    ivec<span class="number">3.</span><span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
-<p>第一种方式最好。写法简洁。</p>
-<h2 id="练习3-20"><a href="#练习3-20" class="headerlink" title="练习3.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_20.cpp">练习3.20</a></h2><blockquote>
-<p>读入一组整数并把它们存入一个vector对象，将每对相邻整数的和输出出来。改写你的程序，这次要求先输出第1个和最后1个元素的和，接着输出第2个和倒数第2个元素的和，以此类推。</p>
-</blockquote>
-<h2 id="练习3-21"><a href="#练习3-21" class="headerlink" title="练习3.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_21.cpp">练习3.21</a></h2><blockquote>
-<p>请使用迭代器重做3.3.3节（第94页）的第一个练习。</p>
-</blockquote>
-<p>迭代器的总结（本质上就是指针）：</p>
-<ul>
-<li>类似于指针，解引用运算符*，可以获取迭代器指向的内容。</li>
-<li>使用迭代器的循环体是用<code>!=</code>作为判断条件（像c或者java使用下标，多是用<code>&lt;</code>）。因为C++中标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，而只有string和vector某些库才有下标运算符。</li>
-<li>容器为空时，begin和end返回的是同一个迭代器（尾后迭代器）。</li>
-<li>尾后迭代器指示的是不存在的“尾后”元素，实际并不指示某个元素，因此不能进行递增或者解引用操作。</li>
-<li>只需读操作时，可用cbegin和cend函数。</li>
-<li>箭头运算符是结合解引用和成员访问两个操作，即<code>it-&gt;men</code>等同于<code>(*it).men</code>。</li>
-<li>使用了迭代器的循环体，不要向其所属的容器添加元素。例如，在循环体中向vector对象push_back，这会导致迭代器失效。（类似的，也不能在范围for循环中向vector对象添加元素）</li>
-</ul>
-<h2 id="练习3-22"><a href="#练习3-22" class="headerlink" title="练习3.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_22.cpp">练习3.22</a></h2><blockquote>
-<p>修改之前那个输出text第一段的程序，首先把text的第一段全都改成大写形式，然后输出它。</p>
-</blockquote>
-<h2 id="练习3-23"><a href="#练习3-23" class="headerlink" title="练习3.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_23.cpp">练习3.23</a></h2><blockquote>
-<p>编写一段程序，创建一个含有10个整数的vector对象，然后使用迭代器将所有元素的值都变成原来的两倍。输出vector对象的内容，检验程序是否正确。</p>
-</blockquote>
-<h2 id="练习3-24"><a href="#练习3-24" class="headerlink" title="练习3.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_24.cpp">练习3.24</a></h2><blockquote>
-<p>请使用迭代器重做3.3.3节（第94页）的最后一个练习。</p>
-</blockquote>
-<h2 id="练习3-25"><a href="#练习3-25" class="headerlink" title="练习3.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_25.cpp">练习3.25</a></h2><blockquote>
-<p>3.3.3节（第93页）划分分数段的程序是使用下标运算符实现的，请利用迭代器改写该程序并实现完全相同的功能。</p>
-</blockquote>
-<h2 id="练习3-26"><a href="#练习3-26" class="headerlink" title="练习3.26"></a>练习3.26</h2><blockquote>
-<p>在100页的二分搜索程序中，为什么用的是 mid &#x3D; beg + (end - beg) &#x2F; 2，而非 mid &#x3D; (beg + end) &#x2F; 2 ; ?</p>
-</blockquote>
-<p>因为两个迭代器之间支持的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>，而没有<code>+</code> 。<code>end - beg</code> 相减的结果是之间的距离，将之除以2然后与beg相加，表示将beg移动到一半的位置。</p>
-<p>迭代器运算的理解：迭代器可以加减一个数（包括加减复合赋值运算符），但两个迭代器之间的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>关系运算符。</p>
-<h2 id="练习3-27"><a href="#练习3-27" class="headerlink" title="练习3.27"></a>练习3.27</h2><blockquote>
-<p>假设txt_size是一个无参数的函数，它的返回值是int。请回答下列哪个定义是非法的？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> buf_size = <span class="number">1024</span>;</span><br><span class="line">(a) <span class="type">int</span> ia[buf_size];</span><br><span class="line">(b) <span class="type">int</span> ia[<span class="number">4</span> * <span class="number">7</span> - <span class="number">14</span>];</span><br><span class="line">(c) <span class="type">int</span> ia[<span class="built_in">txt_size</span>()];</span><br><span class="line">(d) <span class="type">char</span> st[<span class="number">11</span>] = <span class="string">&quot;fundamental&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 非法。纬度必须是一个常量表达式。</li>
-<li>(b) 合法。</li>
-<li>(c) 非法。txt_size返回的是int，不是constexpr int。</li>
-<li>(d) 非法。数组的大小应该是12，字符串字面值末尾还有个空字符&#39;\0&#39;。</li>
-</ul>
-<h2 id="练习3-28"><a href="#练习3-28" class="headerlink" title="练习3.28"></a>练习3.28</h2><blockquote>
-<p>下列数组中元素的值是什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string sa[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> ia[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	string sa2[<span class="number">10</span>];</span><br><span class="line">	<span class="type">int</span> ia2[<span class="number">10</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>sa的元素值全部为空字符串，ia的元素值全部为0。sa2的元素值全部为空字符串，ia2的元素没有被初始化，初值全部未定义。</p>
-<h2 id="练习3-29"><a href="#练习3-29" class="headerlink" title="练习3.29"></a>练习3.29</h2><blockquote>
-<p>相比于vector来说，数组有哪些缺点，请列举一些。</p>
-</blockquote>
-<ul>
-<li>数组的大小是固定的，不能随意增加元素</li>
-<li>不允许拷贝和赋值</li>
-<li>没有像vector那样的API</li>
-</ul>
-<h2 id="练习3-30"><a href="#练习3-30" class="headerlink" title="练习3.30"></a>练习3.30</h2><blockquote>
-<p>指出下面代码中的索引错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">size_t</span> array_size = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> ia[array_size];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> ix = <span class="number">1</span>; ix &lt;= array_size; ++ix)</span><br><span class="line">	ia[ix] = ix;</span><br></pre></td></tr></table></figure>
-
-<p>当ix等于10时，表达式ia[ix]属于未定义行为（UB），下标越界。</p>
-<p><strong>通常将数组下标类型定义size_t，size_t定义在cstddef头文件，是一种机器相关的无符号类型，可以表示内存中任意对象的大小（因为被设计得足够大）。</strong></p>
-<h2 id="练习3-31"><a href="#练习3-31" class="headerlink" title="练习3.31"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_31.cpp">练习3.31</a></h2><blockquote>
-<p>编写一段程序，定义一个含有10个int的数组，令每个元素的值就是其下标值。</p>
-</blockquote>
-<h2 id="练习3-32"><a href="#练习3-32" class="headerlink" title="练习3.32"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_32.cpp">练习3.32</a></h2><blockquote>
-<p>将上一题刚刚创建的数组拷贝给另外一个数组。利用vector重写程序，实现类似的功能。</p>
-</blockquote>
-<h2 id="练习3-33"><a href="#练习3-33" class="headerlink" title="练习3.33"></a>练习3.33</h2><blockquote>
-<p>对于104页的程序来说，如果不初始化scores将会发生什么？</p>
-</blockquote>
-<p>数组中所有元素的值将会未定义（有可能不是0，会有脏数据存在）。</p>
-<h2 id="练习3-34"><a href="#练习3-34" class="headerlink" title="练习3.34"></a>练习3.34</h2><blockquote>
-<p>假定p1和p2都指向同一个数组中的元素，则下面程序的功能是什么？什么情况下该程序是非法的？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">p1 += p2 - p1;</span><br></pre></td></tr></table></figure>
-
-<p>将p1移动到p2的位置，即指向同一个地址。只要p1、p2值合法，该程序任何情况下都合法。</p>
-<h2 id="练习3-35"><a href="#练习3-35" class="headerlink" title="练习3.35"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_35.cpp">练习3.35</a></h2><blockquote>
-<p>编写一段程序，利用指针将数组中的元素置为0。</p>
-</blockquote>
-<p><strong>数组与指针的总结：</strong></p>
-<ul>
-<li>数组名可以当作是首指针（编译器会自动将其转换成一个指向数组首元素的指针（函数传参、赋值给指针、表达式），但本质上数组名自身不是指针）</li>
-<li>类似迭代器，也可以获取数组的首尾指针（假设数组int array[10]&#x3D;{xxx}。<strong>类似尾迭代器，注意尾指针不指向具体元素，不能对其进行解引用或递增操作</strong>）<ul>
-<li><code>int *begin = array; int *end = &amp;array[10];</code></li>
-<li><code>int *begin = begin(array); int *end = end(array);</code> <strong>begin和end函数定义在iterator头文件（数组不是类类型，没有类似vector迭代器那种成员函数）</strong></li>
-</ul>
-</li>
-<li>两个指针相减的结果类型是ptrdiff_t，是一种带符号类型，和size_t一样也定义在cstddef头文件。</li>
-<li><strong>只要指针指向数组元素（或者尾元素的下一位置，即尾指针），都可以执行下标运算（当然，需要保证运算后的指针也是指向同一数组或者尾指针）。像数组这种C++语言内置的下标运算允许处理负值，但像标准库类型string和vector则限定下标是无符号类型。</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p = &amp;array[<span class="number">2</span>]; <span class="comment">// p指向索引为2的元素</span></span><br><span class="line"><span class="type">int</span> j = p[<span class="number">1</span>];       <span class="comment">// p[1]等价于*(p+1)，即array[3]</span></span><br><span class="line"><span class="type">int</span> k = p[<span class="number">-2</span>];      <span class="comment">// 即array[0]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-36"><a href="#练习3-36" class="headerlink" title="练习3.36"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_36.cpp">练习3.36</a></h2><blockquote>
-<p>编写一段程序，比较两个数组是否相等。再写一段程序，比较两个vector对象是否相等。</p>
-</blockquote>
-<h2 id="练习3-37"><a href="#练习3-37" class="headerlink" title="练习3.37"></a>练习3.37</h2><blockquote>
-<p>下面的程序是何含义，程序的输出结果是什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> ca[] = &#123; <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *cp = ca;</span><br><span class="line"><span class="keyword">while</span> (*cp) &#123;</span><br><span class="line">    cout &lt;&lt; *cp &lt;&lt; endl;</span><br><span class="line">    ++cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>会将ca字符数组中的元素打印出来，但是因为没有空字符&#39;\0&#39;的存在，循环不会终止，会打印出来很多无意义脏数据。</p>
-<h2 id="练习3-38"><a href="#练习3-38" class="headerlink" title="练习3.38"></a>练习3.38</h2><blockquote>
-<p>在本节中我们提到，将两个指针相加不但是非法的，而且也没什么意义。请问为什么两个指针相加没什么意义？</p>
-</blockquote>
-<p><strong>指针本质就是地址</strong>，将两个指针相减可以表示两个指针(在同一数组中)的距离，将指针加上一个整数也可以表示移动这个指针到某一位置。<strong>但是两个指针相加后的地址并没有逻辑上的意义。</strong></p>
-<p><a href="https://stackoverflow.com/questions/2935038/why-cant-i-add-pointers">参考资料</a></p>
-<h2 id="练习3-39"><a href="#练习3-39" class="headerlink" title="练习3.39"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_39.cpp">练习3.39</a></h2><blockquote>
-<p>编写一段程序，比较两个string对象。再编写一段程序，比较两个C风格字符串的内容。</p>
-</blockquote>
-<p><strong>C标准库string函数（头文件cstring）</strong></p>
-<ul>
-<li>strlen(p) 返回p的长度，不计算空字符</li>
-<li>strcmp(p1,p2) 比较p1和p2，<code>p1==p2</code>则返回0；<code>p1&gt;p2</code>则返回正值；<code>p1&lt;p2</code>则返回负值</li>
-<li>strcat(p1,p2) p2附加到p1后，再返回p1</li>
-<li>strcpy(p1,p2) p2拷贝给p1，再返回p1</li>
-</ul>
-<p><strong>注意这些函数的指针必须指向以空字符作为结束的数组</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> ca[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125; <span class="comment">// 没有以空字符结束。</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">strlen</span>(ca) &lt;&lt; endl; <span class="comment">// 严重错误，没有空字符，该函数有可能在内存中不断向前寻找，直至找到空字符。</span></span><br><span class="line"><span class="comment">// 修正方式：用字符串字面值给ca赋初值&quot;ab&quot;。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习3-40"><a href="#练习3-40" class="headerlink" title="练习3.40"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_40.cpp">练习3.40</a></h2><blockquote>
-<p>编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前面两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组当中。</p>
-</blockquote>
-<h2 id="练习3-41"><a href="#练习3-41" class="headerlink" title="练习3.41"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_41.cpp">练习3.41</a></h2><blockquote>
-<p>编写一段程序，用整型数组初始化一个vector对象。</p>
-</blockquote>
-<h2 id="练习3-42"><a href="#练习3-42" class="headerlink" title="练习3.42"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_42.cpp">练习3.42</a></h2><blockquote>
-<p>编写一段程序，将含有整数元素的vector对象拷贝给一个整型数组。</p>
-</blockquote>
-<p><strong>使用数组初始化vector对象（不能用数组初始化数组；不能用vector对象初始化数组）</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> array[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(begin(array), end(array))</span></span>; <span class="comment">// 使用首尾指针</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">subv</span><span class="params">(array + <span class="number">1</span>, array + <span class="number">3</span>)</span></span>; <span class="comment">// 数组中的部分也可用来初始化</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>混用string对象和C风格字符串</strong></p>
-<ul>
-<li>允许使用以空字符结束的字符数组来初始化或赋值给string对象</li>
-<li>string对象的加法运算允许以空字符结束的字符数组作为其中一个运算对象（加法运算符「+」两侧至少有一个string对象）</li>
-<li>string复合赋值运算中允许以空字符结束的字符数组作为右侧运算对象</li>
-<li>string对象不能直接初始化指向字符的指针，需要使用成员函数<code>c_str</code>返回指针，如<code>const char *str = s.c_str();</code></li>
-</ul>
-<h2 id="练习3-43"><a href="#练习3-43" class="headerlink" title="练习3.43"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_43.cpp">练习3.43</a></h2><blockquote>
-<p>编写3个不同版本的程序，令其均能输出ia的元素。版本1使用范围for语句管理迭代过程；版本2和版本3都使用普通for语句，其中版本2要求使用下标运算符，版本3要求使用指针。此外，在所有3个版本的程序中都要直接写出数据类型，而不能使用类型别名、auto关键字和decltype关键字。</p>
-</blockquote>
-<h2 id="练习3-44"><a href="#练习3-44" class="headerlink" title="练习3.44"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_44.cpp">练习3.44</a></h2><blockquote>
-<p>改写上一个练习中的程序，使用类型别名来代替循环控制变量的类型。</p>
-</blockquote>
-<h2 id="练习3-45"><a href="#练习3-45" class="headerlink" title="练习3.45"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_45.cpp">练习3.45</a></h2><blockquote>
-<p>再一次改写程序，这次使用auto关键字。</p>
-</blockquote>
-<p><strong>多维数组和指针的总结</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 多维数组本质上是数组的数组，初始化时内层嵌套的花括号也可去掉</span></span><br><span class="line"><span class="type">int</span> ia[<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">1</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用范围for语句处理多维数组时，要将控制变量声明为引用类型（为避免编译器将其转换成指针）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;row : ia)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;col : row)</span><br><span class="line">        ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义指向多维数组的指针注意写法（手动写较易写错，建议使用auto或者decltype）</span></span><br><span class="line"><span class="type">int</span> *ip[<span class="number">2</span>];          <span class="comment">// 整型指针的数组</span></span><br><span class="line"><span class="built_in">int</span>(*ip)[<span class="number">2</span>];         <span class="comment">// 指针，指向含有2个整数的数组</span></span><br><span class="line"><span class="built_in">int</span>(&amp;ip)[<span class="number">2</span>] = ia[<span class="number">0</span>]; <span class="comment">// 引用，指向含有2个整数的数组</span></span><br><span class="line"><span class="comment">// 类型别名简化写法，下面两行等同于int(*ip)[2];</span></span><br><span class="line"><span class="keyword">using</span> int_array = <span class="type">int</span>[<span class="number">2</span>];</span><br><span class="line">int_array *ip;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第三章</tag>
-        <tag>字符串</tag>
-        <tag>向量</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -10577,6 +10294,308 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第三章「字符串、向量和数组」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap3/</url>
+    <content><![CDATA[<h1 id="第三章：字符串、向量和数组"><a href="#第三章：字符串、向量和数组" class="headerlink" title="第三章：字符串、向量和数组"></a>第三章：字符串、向量和数组</h1><h2 id="练习3-1"><a href="#练习3-1" class="headerlink" title="练习3.1"></a>练习3.1</h2><blockquote>
+<p>使用恰当的using声明重做1.4.1节（第11页）和2.6.2节（第67页）的练习。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_1.cpp">1.4.1</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_1_2.cpp">2.6.2</a></li>
+</ul>
+<p>因为较为简单，每个小节就只写一个练习了。</p>
+<p>using声明易造成名字冲突：</p>
+<ul>
+<li>使用using声明，一般建议为每个名字做独立的using声明，例如<code>using std::cin</code>，不太建议使用整个命名空间，例如<code>using namespace std</code>，易造成名字冲突。</li>
+<li>头文件不应包含using声明：易造成名字冲突。</li>
+</ul>
+<h2 id="练习3-2"><a href="#练习3-2" class="headerlink" title="练习3.2"></a>练习3.2</h2><blockquote>
+<p>编写一段程序从标准输入中一次读入一行，然后修改该程序使其一次读入一个词。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_1.cpp">一次读入一行</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_2_2.cpp">一次读入一个词</a></li>
+</ul>
+<h2 id="练习3-3"><a href="#练习3-3" class="headerlink" title="练习3.3"></a>练习3.3</h2><blockquote>
+<p>请说明string类的输入运算符和getline函数分别是如何处理空白字符的。</p>
+</blockquote>
+<ul>
+<li>类似 cin &gt;&gt; str 的读取，string对象会忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止。</li>
+<li>类似 getline(cin, str) 的读取，string对象会从给定的输入流中读取内容，直到遇到换行符为止（换行符被读进来，但不会存放进对象）。</li>
+</ul>
+<h2 id="练习3-4"><a href="#练习3-4" class="headerlink" title="练习3.4"></a>练习3.4</h2><blockquote>
+<p>编写一段程序读取两个字符串，比较其是否相等并输出结果。如果不相等，输出较大的那个字符串。改写上述程序，比较输入的两个字符串是否等长，如果不等长，输出长度较大的那个字符串。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_1.cpp">比较大的</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_4_2.cpp">长度大的</a></li>
+</ul>
+<h2 id="练习3-5"><a href="#练习3-5" class="headerlink" title="练习3.5"></a>练习3.5</h2><blockquote>
+<p>编写一段程序从标准输入中读入多个字符串并将它们连接在一起，输出连接成的大字符串。然后修改上述程序，用空格把输入的多个字符串分隔开来。</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_1.cpp">无空格分隔</a></li>
+<li><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_5_2.cpp">空格分隔</a></li>
+</ul>
+<p>string对象操作的一些总结：</p>
+<ul>
+<li><strong>定义、初始化和基本操作看下面代码（书本见P76和P77）。</strong></li>
+<li>关系运算符&lt;、&lt;&#x3D;、&gt;、&gt;&#x3D;比较规则：依次比较每个位置上的字符大小，若都一样时，则长度更长的字符串就更大。</li>
+<li><code>string</code>和字符字面值和字符串字面值混在一条语句中，必须确保加法运算符「+」两侧至少有一个<code>string</code>对象（因为标准库可以将字面值转换为<code>string</code>对象，但不允许两个字面值直接相加）</li>
+<li><code>size()</code>函数返回的是<code>string::size_type</code>类型的值，是无符号数。表达式中如果有<code>size()</code>，切记不要再使用<code>int</code>。如果需要定义变量存储<code>size()</code>函数，使用<code>auto</code>或<code>decltype</code>，例如<code>auto len = str.size()</code></li>
+<li><strong>注意字符串字面值不是<code>string</code>对象，和<code>string</code>是不同的类型（因为需要兼容C）。</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义和初始化（等号是拷贝初始化，圆括号是直接初始化）</span></span><br><span class="line">string s1;     <span class="comment">//默认初始化为空串</span></span><br><span class="line"><span class="function">string <span class="title">s2</span><span class="params">(s1)</span></span>; <span class="comment">// s2是s1的副本</span></span><br><span class="line">string s2 = s1; <span class="comment">// 同上，不过是拷贝初始化</span></span><br><span class="line">string s3 = (<span class="string">&quot;hello&quot;</span>); <span class="comment">// s3是字面值&quot;hello&quot;的副本（不包括字面值中的空字符）</span></span><br><span class="line">string s3 = <span class="string">&quot;hello&quot;</span>; <span class="comment">// 同上</span></span><br><span class="line"><span class="function">string <span class="title">s4</span><span class="params">(n, <span class="string">&#x27;c&#x27;</span>)</span></span>; <span class="comment">// s4初始化为由n个字符c组成的串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 基本操作</span></span><br><span class="line">os &lt;&lt; s; <span class="comment">// 将s写到输出流os，返回os</span></span><br><span class="line">is &gt;&gt; s; <span class="comment">// 将输入流is读取字符串赋值给s，字符串以空白分割，返回is</span></span><br><span class="line"><span class="built_in">getline</span>(is, s); <span class="comment">// 从输入流is读取一行赋值给s，返回is</span></span><br><span class="line">s.<span class="built_in">empty</span>(); <span class="comment">// s为空返回true，否则返回false</span></span><br><span class="line">s.<span class="built_in">size</span>(); <span class="comment">// 返回s中字符的个数</span></span><br><span class="line">s[n]; <span class="comment">// 返回s中第n个字符的引用，下标从0计起。</span></span><br><span class="line">s1 + s2; <span class="comment">// 返回s1和s2连接后的结果</span></span><br><span class="line">s1 = s2; <span class="comment">// 用s2的副本代替s1中原来的字符</span></span><br><span class="line">s1 == s2; <span class="comment">// 判断两个string对象是否相等，对字母大小写敏感</span></span><br><span class="line">s1 != s2;</span><br><span class="line">&lt;, &lt;=, &gt;, &gt;= ; <span class="comment">// 利用字符在字典中的顺序进行比较，对字母大小写敏感</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习3-6"><a href="#练习3-6" class="headerlink" title="练习3.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_6.cpp">练习3.6</a></h2><blockquote>
+<p>编写一段程序，使用范围for语句将字符串内的所有字符用X代替。</p>
+</blockquote>
+<p><strong>for范围语句中引用的理解：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c : s)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> itr = s.<span class="built_in">begin</span>(); itr != s.<span class="built_in">end</span>(); ++itr) &#123;</span><br><span class="line">    <span class="keyword">auto</span> &amp;c = *itr; <span class="comment">// 每个迭代中用一个新引用绑定一个元素</span></span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-7"><a href="#练习3-7" class="headerlink" title="练习3.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_7.cpp">练习3.7</a></h2><blockquote>
+<p>就上一题完成的程序而言，如果将循环控制变量的类型设为char将发生什么？先估计一下结果，然后实际编程进行验证。</p>
+</blockquote>
+<p>字符串没有变化（因为c只是拷贝，即char，而非引用，即char &amp;，所以无法改变字符串的）。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="string">&quot;hello, world!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">char</span> c : str)</span><br><span class="line">    c = <span class="string">&#x27;X&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-8"><a href="#练习3-8" class="headerlink" title="练习3.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_8.cpp">练习3.8</a></h2><blockquote>
+<p>分别用while循环和传统for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？</p>
+</blockquote>
+<p>范围for语句更好，因为不需要直接操作索引，更简洁。</p>
+<h2 id="练习3-9"><a href="#练习3-9" class="headerlink" title="练习3.9"></a>练习3.9</h2><blockquote>
+<p>下面的程序有何作用？它合法吗？如果不合法，为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s;</span><br><span class="line">cout &lt;&lt; s[<span class="number">0</span>] &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+
+<p>不合法。使用下标访问空字符串是非法的行为（通过下标访问不存在元素的行为会导致缓冲区错误buffer overflow，本质上就是下标越界，试图访问非法内存区域）。</p>
+<p><strong>只能对确知已存在的元素执行下标操作：建议设下标类型为<code>decltype(str.size())</code>，这样可以确保下标不会小于0。写程序逻辑时，自己确保下标小于<code>str.size()</code>即可（或者使用范围for语句遍历更方便，能有效地确保下标合法，不会出现下标越界）。</strong></p>
+<h2 id="练习3-10"><a href="#练习3-10" class="headerlink" title="练习3.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_10.cpp">练习3.10</a></h2><blockquote>
+<p>编写一段程序，读入一个包含标点符号的字符串，将标点符号去除后输出字符串剩余的部分。</p>
+</blockquote>
+<p><strong>C++标准库兼容C标准库</strong><br>C标准库头文件形如ctype.h，而在C++中，则是命名为cctype，即前面加一个c并且去除后缀.h。使用方式，标准库的名字可以在命名空间std找到。</p>
+<h2 id="练习3-11"><a href="#练习3-11" class="headerlink" title="练习3.11"></a>练习3.11</h2><blockquote>
+<p>下面的范围for语句合法吗？如果合法，c的类型是什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> string s = <span class="string">&quot;Keep out!&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s)&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>要根据for循环体中的代码来看是否合法，s是常量，c是string对象中字符的引用（const char &amp;）。因此如果for循环体中的代码重新给c赋值就会非法，如果不改变c的值，那么合法。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; c;  <span class="comment">// 合法</span></span><br><span class="line">c = <span class="string">&#x27;X&#x27;</span>;    <span class="comment">// 不合法</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-12"><a href="#练习3-12" class="headerlink" title="练习3.12"></a>练习3.12</h2><blockquote>
+<p>下列vector对象的定义有不正确的吗？如果有，请指出来。对于正确的，描述其执行结果；对于不正确的，说明其错误的原因。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ivec;         <span class="comment">// 在C++11当中合法，ivec的元素是vector对象</span></span><br><span class="line">vector&lt;string&gt; svec = ivec;       <span class="comment">// 不合法，类型不一样，ivec的元素是vector int，svec的元素是string</span></span><br><span class="line"><span class="function">vector&lt;string&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>, <span class="string">&quot;null&quot;</span>)</span></span>;  <span class="comment">// 合法，svec有10个字符串：&quot;null&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-13"><a href="#练习3-13" class="headerlink" title="练习3.13"></a>练习3.13</h2><blockquote>
+<p>下列的vector对象各包含多少个元素？这些元素的值分别是多少？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v1;         <span class="comment">// 0个，无值</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v2</span><span class="params">(<span class="number">10</span>)</span></span>;     <span class="comment">// 10个，都是0</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v3</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>; <span class="comment">// 10个，都是42</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v4&#123; <span class="number">10</span> &#125;;     <span class="comment">// 1个，10</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v5&#123; <span class="number">10</span>, <span class="number">42</span> &#125;; <span class="comment">// 2个，10和42</span></span><br><span class="line">vector&lt;string&gt; v6&#123; <span class="number">10</span> &#125;;  <span class="comment">// 10个，空串</span></span><br><span class="line">vector&lt;string&gt; v7&#123; <span class="number">10</span>, <span class="string">&quot;hi&quot;</span> &#125;;  <span class="comment">// 10个，都是&quot;hi&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>初始化的括号区别：</p>
+<ul>
+<li>圆括号：构造vector对象，即圆括号声明容量和初值。</li>
+<li>花括号：列表初始化，用花括号的值作为元素初始值。（当提供的值不能用来列表初始化时，就会用来构造对象。如<code>vector&lt;string&gt; v1&#123;10, &quot;hi&quot;&#125;;</code>，因为类型不同，所以构造成10个&quot;hi&quot;）</li>
+</ul>
+<h2 id="练习3-14"><a href="#练习3-14" class="headerlink" title="练习3.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_14.cpp">练习3.14</a></h2><blockquote>
+<p>编写一段程序，用cin读入一组整数并把它们存入一个vector对象。</p>
+</blockquote>
+<p><strong>vctror对象能高效增长，在定义时设定其大小意义不大。开始时创建空vector，运行时再动态添加元素。</strong></p>
+<h2 id="练习3-15"><a href="#练习3-15" class="headerlink" title="练习3.15"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_15.cpp">练习3.15</a></h2><blockquote>
+<p>改写上题的程序，不过这次读入的是字符串。</p>
+</blockquote>
+<h2 id="练习3-16"><a href="#练习3-16" class="headerlink" title="练习3.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_16.cpp">练习3.16</a></h2><blockquote>
+<p>编写一段程序，把练习3.13中vector对象的容量和具体内容输出出来。检验你之前的回答是否正确，如果不对，回过头重新学习3.3.1节（第87页）知道弄明白错在何处为止。</p>
+</blockquote>
+<h2 id="练习3-17"><a href="#练习3-17" class="headerlink" title="练习3.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_17.cpp">练习3.17</a></h2><blockquote>
+<p>从cin读入一组词并把它们存入一个vector对象，然后设法把所有词都改写为大写形式。输出改变后的结果，每个词占一行。</p>
+</blockquote>
+<h2 id="练习3-18"><a href="#练习3-18" class="headerlink" title="练习3.18"></a>练习3.18</h2><blockquote>
+<p>下面的程序合法吗？如果不合法，你准备如何修改？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; ivec;</span><br><span class="line">ivec[<span class="number">0</span>] = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
+
+<p>不合法（ivec是空vector对象，对其执行下标操作是非法行为）。修正方式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ivec.<span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-19"><a href="#练习3-19" class="headerlink" title="练习3.19"></a>练习3.19</h2><blockquote>
+<p>如果想定义一个含有10个元素的vector对象，所有元素的值都是42，请列举出三种不同的实现方法，哪种方式更好呢？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">ivec1</span><span class="params">(<span class="number">10</span>, <span class="number">42</span>)</span></span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec2&#123; <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span>, <span class="number">42</span> &#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ivec3;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">    ivec<span class="number">3.</span><span class="built_in">push_back</span>(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+<p>第一种方式最好。写法简洁。</p>
+<h2 id="练习3-20"><a href="#练习3-20" class="headerlink" title="练习3.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_20.cpp">练习3.20</a></h2><blockquote>
+<p>读入一组整数并把它们存入一个vector对象，将每对相邻整数的和输出出来。改写你的程序，这次要求先输出第1个和最后1个元素的和，接着输出第2个和倒数第2个元素的和，以此类推。</p>
+</blockquote>
+<h2 id="练习3-21"><a href="#练习3-21" class="headerlink" title="练习3.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_21.cpp">练习3.21</a></h2><blockquote>
+<p>请使用迭代器重做3.3.3节（第94页）的第一个练习。</p>
+</blockquote>
+<p>迭代器的总结（本质上就是指针）：</p>
+<ul>
+<li>类似于指针，解引用运算符*，可以获取迭代器指向的内容。</li>
+<li>使用迭代器的循环体是用<code>!=</code>作为判断条件（像c或者java使用下标，多是用<code>&lt;</code>）。因为C++中标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，而只有string和vector某些库才有下标运算符。</li>
+<li>容器为空时，begin和end返回的是同一个迭代器（尾后迭代器）。</li>
+<li>尾后迭代器指示的是不存在的“尾后”元素，实际并不指示某个元素，因此不能进行递增或者解引用操作。</li>
+<li>只需读操作时，可用cbegin和cend函数。</li>
+<li>箭头运算符是结合解引用和成员访问两个操作，即<code>it-&gt;men</code>等同于<code>(*it).men</code>。</li>
+<li>使用了迭代器的循环体，不要向其所属的容器添加元素。例如，在循环体中向vector对象push_back，这会导致迭代器失效。（类似的，也不能在范围for循环中向vector对象添加元素）</li>
+</ul>
+<h2 id="练习3-22"><a href="#练习3-22" class="headerlink" title="练习3.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_22.cpp">练习3.22</a></h2><blockquote>
+<p>修改之前那个输出text第一段的程序，首先把text的第一段全都改成大写形式，然后输出它。</p>
+</blockquote>
+<h2 id="练习3-23"><a href="#练习3-23" class="headerlink" title="练习3.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_23.cpp">练习3.23</a></h2><blockquote>
+<p>编写一段程序，创建一个含有10个整数的vector对象，然后使用迭代器将所有元素的值都变成原来的两倍。输出vector对象的内容，检验程序是否正确。</p>
+</blockquote>
+<h2 id="练习3-24"><a href="#练习3-24" class="headerlink" title="练习3.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_24.cpp">练习3.24</a></h2><blockquote>
+<p>请使用迭代器重做3.3.3节（第94页）的最后一个练习。</p>
+</blockquote>
+<h2 id="练习3-25"><a href="#练习3-25" class="headerlink" title="练习3.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_25.cpp">练习3.25</a></h2><blockquote>
+<p>3.3.3节（第93页）划分分数段的程序是使用下标运算符实现的，请利用迭代器改写该程序并实现完全相同的功能。</p>
+</blockquote>
+<h2 id="练习3-26"><a href="#练习3-26" class="headerlink" title="练习3.26"></a>练习3.26</h2><blockquote>
+<p>在100页的二分搜索程序中，为什么用的是 mid &#x3D; beg + (end - beg) &#x2F; 2，而非 mid &#x3D; (beg + end) &#x2F; 2 ; ?</p>
+</blockquote>
+<p>因为两个迭代器之间支持的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>，而没有<code>+</code> 。<code>end - beg</code> 相减的结果是之间的距离，将之除以2然后与beg相加，表示将beg移动到一半的位置。</p>
+<p>迭代器运算的理解：迭代器可以加减一个数（包括加减复合赋值运算符），但两个迭代器之间的运算符只有<code>-</code>和<code>&gt;、&gt;=、&lt;、&lt;=</code>关系运算符。</p>
+<h2 id="练习3-27"><a href="#练习3-27" class="headerlink" title="练习3.27"></a>练习3.27</h2><blockquote>
+<p>假设txt_size是一个无参数的函数，它的返回值是int。请回答下列哪个定义是非法的？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> buf_size = <span class="number">1024</span>;</span><br><span class="line">(a) <span class="type">int</span> ia[buf_size];</span><br><span class="line">(b) <span class="type">int</span> ia[<span class="number">4</span> * <span class="number">7</span> - <span class="number">14</span>];</span><br><span class="line">(c) <span class="type">int</span> ia[<span class="built_in">txt_size</span>()];</span><br><span class="line">(d) <span class="type">char</span> st[<span class="number">11</span>] = <span class="string">&quot;fundamental&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 非法。纬度必须是一个常量表达式。</li>
+<li>(b) 合法。</li>
+<li>(c) 非法。txt_size返回的是int，不是constexpr int。</li>
+<li>(d) 非法。数组的大小应该是12，字符串字面值末尾还有个空字符&#39;\0&#39;。</li>
+</ul>
+<h2 id="练习3-28"><a href="#练习3-28" class="headerlink" title="练习3.28"></a>练习3.28</h2><blockquote>
+<p>下列数组中元素的值是什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string sa[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> ia[<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	string sa2[<span class="number">10</span>];</span><br><span class="line">	<span class="type">int</span> ia2[<span class="number">10</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>sa的元素值全部为空字符串，ia的元素值全部为0。sa2的元素值全部为空字符串，ia2的元素没有被初始化，初值全部未定义。</p>
+<h2 id="练习3-29"><a href="#练习3-29" class="headerlink" title="练习3.29"></a>练习3.29</h2><blockquote>
+<p>相比于vector来说，数组有哪些缺点，请列举一些。</p>
+</blockquote>
+<ul>
+<li>数组的大小是固定的，不能随意增加元素</li>
+<li>不允许拷贝和赋值</li>
+<li>没有像vector那样的API</li>
+</ul>
+<h2 id="练习3-30"><a href="#练习3-30" class="headerlink" title="练习3.30"></a>练习3.30</h2><blockquote>
+<p>指出下面代码中的索引错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">size_t</span> array_size = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> ia[array_size];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> ix = <span class="number">1</span>; ix &lt;= array_size; ++ix)</span><br><span class="line">	ia[ix] = ix;</span><br></pre></td></tr></table></figure>
+
+<p>当ix等于10时，表达式ia[ix]属于未定义行为（UB），下标越界。</p>
+<p><strong>通常将数组下标类型定义size_t，size_t定义在cstddef头文件，是一种机器相关的无符号类型，可以表示内存中任意对象的大小（因为被设计得足够大）。</strong></p>
+<h2 id="练习3-31"><a href="#练习3-31" class="headerlink" title="练习3.31"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_31.cpp">练习3.31</a></h2><blockquote>
+<p>编写一段程序，定义一个含有10个int的数组，令每个元素的值就是其下标值。</p>
+</blockquote>
+<h2 id="练习3-32"><a href="#练习3-32" class="headerlink" title="练习3.32"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_32.cpp">练习3.32</a></h2><blockquote>
+<p>将上一题刚刚创建的数组拷贝给另外一个数组。利用vector重写程序，实现类似的功能。</p>
+</blockquote>
+<h2 id="练习3-33"><a href="#练习3-33" class="headerlink" title="练习3.33"></a>练习3.33</h2><blockquote>
+<p>对于104页的程序来说，如果不初始化scores将会发生什么？</p>
+</blockquote>
+<p>数组中所有元素的值将会未定义（有可能不是0，会有脏数据存在）。</p>
+<h2 id="练习3-34"><a href="#练习3-34" class="headerlink" title="练习3.34"></a>练习3.34</h2><blockquote>
+<p>假定p1和p2都指向同一个数组中的元素，则下面程序的功能是什么？什么情况下该程序是非法的？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">p1 += p2 - p1;</span><br></pre></td></tr></table></figure>
+
+<p>将p1移动到p2的位置，即指向同一个地址。只要p1、p2值合法，该程序任何情况下都合法。</p>
+<h2 id="练习3-35"><a href="#练习3-35" class="headerlink" title="练习3.35"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_35.cpp">练习3.35</a></h2><blockquote>
+<p>编写一段程序，利用指针将数组中的元素置为0。</p>
+</blockquote>
+<p><strong>数组与指针的总结：</strong></p>
+<ul>
+<li>数组名可以当作是首指针（编译器会自动将其转换成一个指向数组首元素的指针（函数传参、赋值给指针、表达式），但本质上数组名自身不是指针）</li>
+<li>类似迭代器，也可以获取数组的首尾指针（假设数组int array[10]&#x3D;{xxx}。<strong>类似尾迭代器，注意尾指针不指向具体元素，不能对其进行解引用或递增操作</strong>）<ul>
+<li><code>int *begin = array; int *end = &amp;array[10];</code></li>
+<li><code>int *begin = begin(array); int *end = end(array);</code> <strong>begin和end函数定义在iterator头文件（数组不是类类型，没有类似vector迭代器那种成员函数）</strong></li>
+</ul>
+</li>
+<li>两个指针相减的结果类型是ptrdiff_t，是一种带符号类型，和size_t一样也定义在cstddef头文件。</li>
+<li><strong>只要指针指向数组元素（或者尾元素的下一位置，即尾指针），都可以执行下标运算（当然，需要保证运算后的指针也是指向同一数组或者尾指针）。像数组这种C++语言内置的下标运算允许处理负值，但像标准库类型string和vector则限定下标是无符号类型。</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p = &amp;array[<span class="number">2</span>]; <span class="comment">// p指向索引为2的元素</span></span><br><span class="line"><span class="type">int</span> j = p[<span class="number">1</span>];       <span class="comment">// p[1]等价于*(p+1)，即array[3]</span></span><br><span class="line"><span class="type">int</span> k = p[<span class="number">-2</span>];      <span class="comment">// 即array[0]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-36"><a href="#练习3-36" class="headerlink" title="练习3.36"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_36.cpp">练习3.36</a></h2><blockquote>
+<p>编写一段程序，比较两个数组是否相等。再写一段程序，比较两个vector对象是否相等。</p>
+</blockquote>
+<h2 id="练习3-37"><a href="#练习3-37" class="headerlink" title="练习3.37"></a>练习3.37</h2><blockquote>
+<p>下面的程序是何含义，程序的输出结果是什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> ca[] = &#123; <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *cp = ca;</span><br><span class="line"><span class="keyword">while</span> (*cp) &#123;</span><br><span class="line">    cout &lt;&lt; *cp &lt;&lt; endl;</span><br><span class="line">    ++cp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>会将ca字符数组中的元素打印出来，但是因为没有空字符&#39;\0&#39;的存在，循环不会终止，会打印出来很多无意义脏数据。</p>
+<h2 id="练习3-38"><a href="#练习3-38" class="headerlink" title="练习3.38"></a>练习3.38</h2><blockquote>
+<p>在本节中我们提到，将两个指针相加不但是非法的，而且也没什么意义。请问为什么两个指针相加没什么意义？</p>
+</blockquote>
+<p><strong>指针本质就是地址</strong>，将两个指针相减可以表示两个指针(在同一数组中)的距离，将指针加上一个整数也可以表示移动这个指针到某一位置。<strong>但是两个指针相加后的地址并没有逻辑上的意义。</strong></p>
+<p><a href="https://stackoverflow.com/questions/2935038/why-cant-i-add-pointers">参考资料</a></p>
+<h2 id="练习3-39"><a href="#练习3-39" class="headerlink" title="练习3.39"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_39.cpp">练习3.39</a></h2><blockquote>
+<p>编写一段程序，比较两个string对象。再编写一段程序，比较两个C风格字符串的内容。</p>
+</blockquote>
+<p><strong>C标准库string函数（头文件cstring）</strong></p>
+<ul>
+<li>strlen(p) 返回p的长度，不计算空字符</li>
+<li>strcmp(p1,p2) 比较p1和p2，<code>p1==p2</code>则返回0；<code>p1&gt;p2</code>则返回正值；<code>p1&lt;p2</code>则返回负值</li>
+<li>strcat(p1,p2) p2附加到p1后，再返回p1</li>
+<li>strcpy(p1,p2) p2拷贝给p1，再返回p1</li>
+</ul>
+<p><strong>注意这些函数的指针必须指向以空字符作为结束的数组</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> ca[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>&#125; <span class="comment">// 没有以空字符结束。</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">strlen</span>(ca) &lt;&lt; endl; <span class="comment">// 严重错误，没有空字符，该函数有可能在内存中不断向前寻找，直至找到空字符。</span></span><br><span class="line"><span class="comment">// 修正方式：用字符串字面值给ca赋初值&quot;ab&quot;。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3-40"><a href="#练习3-40" class="headerlink" title="练习3.40"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_40.cpp">练习3.40</a></h2><blockquote>
+<p>编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前面两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组当中。</p>
+</blockquote>
+<h2 id="练习3-41"><a href="#练习3-41" class="headerlink" title="练习3.41"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_41.cpp">练习3.41</a></h2><blockquote>
+<p>编写一段程序，用整型数组初始化一个vector对象。</p>
+</blockquote>
+<h2 id="练习3-42"><a href="#练习3-42" class="headerlink" title="练习3.42"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_42.cpp">练习3.42</a></h2><blockquote>
+<p>编写一段程序，将含有整数元素的vector对象拷贝给一个整型数组。</p>
+</blockquote>
+<p><strong>使用数组初始化vector对象（不能用数组初始化数组；不能用vector对象初始化数组）</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> array[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(begin(array), end(array))</span></span>; <span class="comment">// 使用首尾指针</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">subv</span><span class="params">(array + <span class="number">1</span>, array + <span class="number">3</span>)</span></span>; <span class="comment">// 数组中的部分也可用来初始化</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>混用string对象和C风格字符串</strong></p>
+<ul>
+<li>允许使用以空字符结束的字符数组来初始化或赋值给string对象</li>
+<li>string对象的加法运算允许以空字符结束的字符数组作为其中一个运算对象（加法运算符「+」两侧至少有一个string对象）</li>
+<li>string复合赋值运算中允许以空字符结束的字符数组作为右侧运算对象</li>
+<li>string对象不能直接初始化指向字符的指针，需要使用成员函数<code>c_str</code>返回指针，如<code>const char *str = s.c_str();</code></li>
+</ul>
+<h2 id="练习3-43"><a href="#练习3-43" class="headerlink" title="练习3.43"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_43.cpp">练习3.43</a></h2><blockquote>
+<p>编写3个不同版本的程序，令其均能输出ia的元素。版本1使用范围for语句管理迭代过程；版本2和版本3都使用普通for语句，其中版本2要求使用下标运算符，版本3要求使用指针。此外，在所有3个版本的程序中都要直接写出数据类型，而不能使用类型别名、auto关键字和decltype关键字。</p>
+</blockquote>
+<h2 id="练习3-44"><a href="#练习3-44" class="headerlink" title="练习3.44"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_44.cpp">练习3.44</a></h2><blockquote>
+<p>改写上一个练习中的程序，使用类型别名来代替循环控制变量的类型。</p>
+</blockquote>
+<h2 id="练习3-45"><a href="#练习3-45" class="headerlink" title="练习3.45"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap3/3_45.cpp">练习3.45</a></h2><blockquote>
+<p>再一次改写程序，这次使用auto关键字。</p>
+</blockquote>
+<p><strong>多维数组和指针的总结</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 多维数组本质上是数组的数组，初始化时内层嵌套的花括号也可去掉</span></span><br><span class="line"><span class="type">int</span> ia[<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">1</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用范围for语句处理多维数组时，要将控制变量声明为引用类型（为避免编译器将其转换成指针）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;row : ia)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;col : row)</span><br><span class="line">        ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义指向多维数组的指针注意写法（手动写较易写错，建议使用auto或者decltype）</span></span><br><span class="line"><span class="type">int</span> *ip[<span class="number">2</span>];          <span class="comment">// 整型指针的数组</span></span><br><span class="line"><span class="built_in">int</span>(*ip)[<span class="number">2</span>];         <span class="comment">// 指针，指向含有2个整数的数组</span></span><br><span class="line"><span class="built_in">int</span>(&amp;ip)[<span class="number">2</span>] = ia[<span class="number">0</span>]; <span class="comment">// 引用，指向含有2个整数的数组</span></span><br><span class="line"><span class="comment">// 类型别名简化写法，下面两行等同于int(*ip)[2];</span></span><br><span class="line"><span class="keyword">using</span> int_array = <span class="type">int</span>[<span class="number">2</span>];</span><br><span class="line">int_array *ip;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第三章</tag>
+        <tag>字符串</tag>
+        <tag>向量</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -11952,6 +11971,34 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
+<ul>
+<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
+<li>main.cpp：主程序入口文件，实现main函数</li>
+<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
+<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
+<li>widget.cpp：是实现文件</li>
+<li>res.qrc：资源文件</li>
+</ul>
+<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
+
+<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第二章</tag>
+        <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
     <url>/code-training/qt6-cpp-development-guide/chap1/</url>
     <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
@@ -12091,34 +12138,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>qt</tag>
         <tag>第一章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
-<ul>
-<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
-<li>main.cpp：主程序入口文件，实现main函数</li>
-<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
-<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
-<li>widget.cpp：是实现文件</li>
-<li>res.qrc：资源文件</li>
-</ul>
-<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
-
-<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第二章</tag>
         <tag>qt6</tag>
       </tags>
   </entry>
@@ -12384,6 +12403,66 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为飞牛fnOS设置定时自动清空回收站</title>
+    <url>/post-articles/2025-10/auto-emtpy-bin-for-fnos/</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>截止2025-10-23，fnOS 0.9.30系统版本并没有提供官方软件工具执行计划任务，来实现自动清空回收站。</p>
+<p>但手动执行清理日常使用fnOS系统中产生的回收站文件也是很繁琐。</p>
+<p>fnOS是基于Debian系统开发定制的操作系统，那么可以通过Debian的crontab功能实现自动执行命令来完成定时自动清空回收站。</p>
+<h1 id="设置步骤">2 &nbsp&nbsp<a href="#设置步骤" class="headerlink" title="设置步骤"></a>设置步骤</h1><p><strong>测试飞牛版本：fnOS 0.9.30</strong></p>
+<h2 id="开启飞牛SSH功能并登录">2.1 &nbsp&nbsp<a href="#开启飞牛SSH功能并登录" class="headerlink" title="开启飞牛SSH功能并登录"></a>开启飞牛SSH功能并登录</h2><div class="flex-column">
+<img data-src="/images/post-articles/2025-10/auto-emtpy-bin-for-fnos/enable-ssh.webp">启用飞牛fnOS的SSH功能</div>
+
+<p>开启SSH功能之后，输入如下命令登录飞牛fnOS系统：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh admin@飞牛ip</span><br><span class="line"><span class="comment"># 例如 ssh admin@192.168.1.10</span></span><br><span class="line"><span class="comment"># 然后输入帐号密码完成验证即可登录</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="设置crontab定时任务">2.2 &nbsp&nbsp<a href="#设置crontab定时任务" class="headerlink" title="设置crontab定时任务"></a>设置crontab定时任务</h2><p>首先来了解飞牛存储空间的回收站路径：<code>/vol1/1000/.@#local/trash</code>，<code>vol1</code>是代表<code>存储空间1</code>，<code>1000</code>是代表飞牛fnOS系统中的<code>第一个用户帐号</code>。</p>
+<p>运行如下命令，编辑当前用户的定时任务列表：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+
+<p>首次执行编辑时，shell会提示让你选择编辑器，输入1选择nano编辑器就行。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/auto-emtpy-bin-for-fnos/select-editor.webp">选择nano编辑器</div>
+
+<p>然后在底部输入如下crontab表达式，<code>rm -rf</code>代表强制递归删除，<code>*</code>是通配符，代表匹配了<code>/vol1/1000/.@#local/trash</code>之下所有文件和目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">0 0 * * * <span class="built_in">rm</span> -rf /vol1/1000/.@#<span class="built_in">local</span>/trash/*</span><br></pre></td></tr></table></figure>
+
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/auto-emtpy-bin-for-fnos/crontab-expression.webp">输入crontab定时删除任务表达式</div>
+
+<p>然后<code>Ctrl+S</code>键完成保存，<code>Ctrl+X</code>键退出编辑器。</p>
+<p><code>crontab -e</code>完成编辑保存之后文件实际是存储在<code>/var/spool/cron/crontabs/对应帐号名</code>，例如我的帐号名为<code>admin</code>，该帐号定时任务列表就被存储在<code>/var/spool/cron/crontabs/admin</code>文件中。</p>
+<h2 id="查看验证crontab是否配置成功">2.3 &nbsp&nbsp<a href="#查看验证crontab是否配置成功" class="headerlink" title="查看验证crontab是否配置成功"></a>查看验证crontab是否配置成功</h2><p>输入如下命令查看当前用户的定时任务列表，该命令实际上就是打印输出<code>/var/spool/cron/crontabs/admin</code>文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
+
+<p>查看输出内容跟之前输入表达式无误后，就没问题了。</p>
+<p>输入如下命令可以查看cron后台服务状态，状态显示<code>Active: active (running)</code>就代表服务正常运行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status cron.service</span><br></pre></td></tr></table></figure>
+
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/auto-emtpy-bin-for-fnos/cron-service.webp">cron后台服务状态运行正常</div>
+
+<h2 id="关闭飞牛SSH功能">2.4 &nbsp&nbsp<a href="#关闭飞牛SSH功能" class="headerlink" title="关闭飞牛SSH功能"></a>关闭飞牛SSH功能</h2><p>如果读者fnOS系统是接入公网访问的话，上述设置完成之后，切记关闭飞牛SSH功能，避免被网络攻击者恶意攻击。</p>
+<p>或者考虑更换SSH的端口、禁用密码登录仅使用密钥访问、部署Crowdsec或者Fail2Ban工具、端口敲门等手段来保证SSH服务的安全。</p>
+<h1 id="延伸内容：crontab的表达式">3 &nbsp&nbsp<a href="#延伸内容：crontab的表达式" class="headerlink" title="延伸内容：crontab的表达式"></a>延伸内容：crontab的表达式</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * * * * command_to_execute</span><br><span class="line">- - - - -</span><br><span class="line">| | | | |</span><br><span class="line">| | | | +----- 星期几 (0 - 7) (星期日为0或7)</span><br><span class="line">| | | +------- 月份 (1 - 12)</span><br><span class="line">| | +--------- 日 (1 - 31)</span><br><span class="line">| +----------- 小时 (0 - 23)</span><br><span class="line">+------------- 分钟 (0 - 59)</span><br></pre></td></tr></table></figure>
+<p>特殊符号：<br><code>*</code> : 代表所有可能的值。<br><code>,</code> : 指定多个值，例如「1,3,5」。<br><code>-</code> : 指定一个范围，例如「1-5」。<br><code>/</code> : 指定间隔频率，例如「*&#x2F;2」表示每两单位。</p>
+<p>crontab的表达式示例：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">0 2 * * * /root/command.sh <span class="comment"># 每天凌晨2点执行脚本，把2改成0，就是每天凌晨0点</span></span><br><span class="line">0 17 * * 1-5 /root/command.sh <span class="comment"># 每周一到周五的下午5点执行脚本</span></span><br><span class="line">*/10 * * * * /root/command.sh <span class="comment"># 每10分钟执行一次脚本</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 飞牛能自动清空回收站吗?[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=24685">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=24685</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>fnOS</tag>
+        <tag>飞牛</tag>
+        <tag>NAS</tag>
+        <tag>homelab</tag>
+        <tag>回收站</tag>
       </tags>
   </entry>
   <entry>
@@ -13246,6 +13325,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 ]]></content>
   </entry>
   <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>关于我</title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -13343,7 +13427,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#114;&#107;&#105;&#x6e;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -13451,11 +13535,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 }
 </style>
 ]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>知识总结手册</title>
