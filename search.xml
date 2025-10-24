@@ -2443,46 +2443,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C语言总结笔记</title>
-    <url>/code/c/</url>
-    <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>c</tag>
-        <tag>编程</tag>
-        <tag>语言</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
-<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
-<ul>
-<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
-</ul>
-<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
-<ul>
-<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
-<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
-</ul>
-<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Bat&amp;Powershell语法总结笔记</title>
     <url>/code/bat-powershell/</url>
     <content><![CDATA[<div class="note danger no-icon"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
@@ -2602,15 +2562,55 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>终端</tag>
-        <tag>笔记</tag>
         <tag>bat</tag>
         <tag>cmd</tag>
         <tag>语法</tag>
+        <tag>笔记</tag>
         <tag>windows</tag>
         <tag>运维</tag>
         <tag>powershell</tag>
         <tag>脚本</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C语言总结笔记</title>
+    <url>/code/c/</url>
+    <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>c</tag>
+        <tag>编程</tag>
+        <tag>语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
+<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
+<ul>
+<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
+</ul>
+<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
+<ul>
+<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
+<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
+</ul>
+<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
   </entry>
   <entry>
     <title>计算机安全</title>
@@ -3302,7 +3302,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#x74;&#64;&#49;&#x37;&#50;&#x2e;&#x31;&#57;&#x2e;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#55;&#x32;&#x2e;&#x31;&#x39;&#46;&#48;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3719,8 +3719,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>语法</tag>
+        <tag>笔记</tag>
         <tag>LaTeX</tag>
         <tag>TeX</tag>
         <tag>编译</tag>
@@ -4223,8 +4223,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>语法</tag>
+        <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
       </tags>
@@ -4281,8 +4281,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>编程</tag>
         <tag>笔记</tag>
+        <tag>编程</tag>
         <tag>python</tag>
       </tags>
   </entry>
@@ -4625,14 +4625,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>力扣LeetCode</title>
-    <url>/code-training/leetcode/</url>
-    <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-  </entry>
-  <entry>
     <title>VSCode配置总结笔记</title>
     <url>/code/vscode/</url>
     <content><![CDATA[<h1 id="下载及安装VSCode">1 &nbsp&nbsp<a href="#下载及安装VSCode" class="headerlink" title="下载及安装VSCode"></a>下载及安装VSCode</h1><ul>
@@ -4744,6 +4736,14 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>编辑器</tag>
         <tag>链接</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>力扣LeetCode</title>
+    <url>/code-training/leetcode/</url>
+    <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
   </entry>
   <entry>
     <title>Programming Ability Test (PAT)</title>
@@ -7761,31 +7761,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Android系统排障总结</title>
-    <url>/troubleshooting/android-troubleshooting/</url>
-    <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
-<h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol>
-<li>更新到提示你“立即安装”这一步，先不要点</li>
-<li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li>
-<li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li>
-</ol>
-<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>翻译规划（作废）</title>
     <url>/translations/translation-roadmap/</url>
     <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
@@ -7997,6 +7972,31 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>翻译</tag>
         <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android系统排障总结</title>
+    <url>/troubleshooting/android-troubleshooting/</url>
+    <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
+<h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol>
+<li>更新到提示你“立即安装”这一步，先不要点</li>
+<li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li>
+<li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li>
+</ol>
+<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -8786,6 +8786,72 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>运行库修复（Windows平台）</title>
+    <url>/troubleshooting/runtime-library-repair-on-windows/</url>
+    <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
+</div>
+
+<h1 id="什么是运行库">1 &nbsp&nbsp<a href="#什么是运行库" class="headerlink" title="什么是运行库"></a>什么是运行库</h1><h1 id="安装软件或运行软件时提示dll缺失等现象产生的原因">2 &nbsp&nbsp<a href="#安装软件或运行软件时提示dll缺失等现象产生的原因" class="headerlink" title="安装软件或运行软件时提示dll缺失等现象产生的原因"></a>安装软件或运行软件时提示dll缺失等现象产生的原因</h1><p>使用不同框架环境来开发的程序需要相对应的运行库才能正常工作，例如VC的程序需要VC运行库，VB的程序需要VB运行库，java程序需要Java Runtime一样，而使用 .Net 开发的程序需要在 .NET Framework下才能运行。</p>
+<p>而纯净的windows系统是不自带有以上这些库或者内置一个版本的库。比如windows系统不自带VC库和java runtime；win10自带的.net框架一般为4.7（老版本的win10可能为4.6或者更早）；win10自带的dx则为dx12。当系统无法提供程序所需的库时，例如没有该库，或者内置库与程序所需的版本不一致，又或者相应库文件已损坏，那么便会弹出dll缺失等运行库问题的错误提示窗口。</p>
+<h1 id="解决方法">3 &nbsp&nbsp<a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>请根据错误提示窗口的信息找对应的工具，「.dll缺失」一般排查DX或者VC库即可，「.net framework缺失」一般排查NET框架即可。</p>
+<h1 id="DX库和VC库修复：">4 &nbsp&nbsp<a href="#DX库和VC库修复：" class="headerlink" title="DX库和VC库修复："></a>DX库和VC库修复：</h1><ul>
+<li><a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">VC库微软官方下载地址</a></li>
+<li><a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">微软故障排除程序</a></li>
+<li><a href="https://blog.csdn.net/vbcom/article/details/7245186">VBcom大佬开发的DX修复工具（增强版）</a></li>
+<li><a href="https://blog.csdn.net/vbcom/article/details/6962388">VBcom大佬开发的DX修复工具（标准版）</a></li>
+</ul>
+<p>注：请注意要下载增强版，增强版才含有VC库（上述链接便是增强版的）。</p>
+<p><strong>DX修复工具修复VC失败的调试信息查看：</strong></p>
+<ol>
+<li>工具-&gt;选项-&gt;常规-&gt;（勾选）修复失败时启用调试信息</li>
+<li>执行「检测并修复」</li>
+<li>点击修复失败的项目（软件中会显示蓝色链接），如果有显示未修复文件的具体明细，右击文件选择「在线修复」。如果没有文件明细，只有针对某个C++具体版本的错误描述，右击选择「更多提示」，看完提示后再次右击项目，有可能出现「切换至详细列表」，这时候使用「在线修复」即可解决。</li>
+</ol>
+<h2 id="vc库安装时无限报错弹窗">4.1 &nbsp&nbsp<a href="#vc库安装时无限报错弹窗" class="headerlink" title="vc库安装时无限报错弹窗"></a>vc库安装时无限报错弹窗</h2><p>安装和卸载vc2017库出现弹窗，标题为<code>Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>，内容提示为 <code>vc_runtimeAdditional_x64.msi is not a valid installation package for product Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>。</p>
+<p>解决方式：使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息，然后重新安装vc库。</p>
+<h2 id="vc库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」">4.2 &nbsp&nbsp<a href="#vc库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」" class="headerlink" title="vc库安装提示「请确认C:\ProgramData\Package Cache文件夹存在并且有访问权限」"></a>vc库安装提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</h2><p>故障现象：安装vc2015-2022库失败，dx修复工具提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</p>
+<p>解决方法：</p>
+<ol>
+<li>先执行常规的卸载，然后使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息。</li>
+<li>强制删除<code>C:\ProgramData\Package Cache</code>路径下的所有文件。</li>
+<li>下载最新的<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">vc库安装包</a>安装，一般先装好x86，再装x64。</li>
+</ol>
+<h1 id="NET框架">5 &nbsp&nbsp<a href="#NET框架" class="headerlink" title=".NET框架"></a>.NET框架</h1><ul>
+<li><a href="https://dotnet.microsoft.com/zh-cn/download">.NET框架微软官方下载地址（8.0&amp;9.0）</a></li>
+<li><a href="https://dotnet.microsoft.com/download/dotnet-framework">.NET框架微软官方下载地址（3.5-4.8.1）</a></li>
+<li><a href="https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available">.NET框架修复工具微软官方下载地址</a></li>
+</ul>
+<p>注：请自己选择需要的版本下载并进行安装。建议安装或修复运行库后请重启系统。关于版本选择，请看以下说明！！！</p>
+<h2 id="注意！！！-Net-Framework版本关系">5.1 &nbsp&nbsp<a href="#注意！！！-Net-Framework版本关系" class="headerlink" title="注意！！！.Net Framework版本关系"></a>注意！！！.Net Framework版本关系</h2><p>.Net版本并非完全独立，但也不支持向下兼容。目前为止微软推出了3个版本的CLR，分别是 1.1、2.0 、4.0。 .Net 4是基于CLR4的，而.Net 2.0 3.0 3.5都是基于 CLR2.0， 3.0 3.5其实只是在2.0的基础上增加了新的功能，并没有改变CLR。</p>
+<p>换而言之，你的程序需要2.0&#x2F;3.0&#x2F;3.5之中的任意一个版本时，安装.Net 3.5 SP1就可以了。</p>
+<p>所以，如果只是想扩展系统的运行库的话，以win10 OS为例，那么只需要选择安装.Net 3.5 SP1和.Net 4.8（最新的.Net 4.X的就行，4.8是我当初写该教程时最新的版本）</p>
+<h3 id="Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954">5.1.1 &nbsp&nbsp<a href="#Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954" class="headerlink" title="Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954"></a>Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954</h3><p>问题：一般是系统更新程序WUserver无法争取获取更新文件，可能是由于精简或者相关服务项被禁用导致引起。</p>
+<p>解决方法：</p>
+<ol>
+<li>使用离线方式安装（推荐此法）</li>
+<li>恢复WUserver的正常运行，确保在线安装的功能可以正常获取更新文件</li>
+</ol>
+<p>离线方式安装步骤：</p>
+<ol>
+<li>下载当前系统版本所对应的系统镜像</li>
+<li>把source文件夹中的sxs文件夹解压出来，例如<code>C:\path\sxs</code></li>
+<li>管理员身份打开powershell，运行安装命令：<code>dism.exe /online /enable-feature /featurename:NetFX3 /Source:C:\path\sxs</code></li>
+</ol>
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] The Visual C++ missing error PLAGUE! Here’s how to fix that pesky missing .MSI file in 5 easy steps![EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=ybr5ExVOlqI">https://www.youtube.com/watch?v=ybr5ExVOlqI</a>.<br>[2] 安装.NET Framework 3.5 Error 0x800f0950 in Windows 10[EB&#x2F;OL]. <a href="https://blog.csdn.net/sinat_29315697/article/details/90438542">https://blog.csdn.net/sinat_29315697/article/details/90438542</a>.<br>[3] Win10 .Net Framework 3.5 安装错误 0x800F0954[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012722571/article/details/106336899">https://blog.csdn.net/u012722571/article/details/106336899</a>.<br>[4] DirectX修复工具使用技巧之二——手动修复C++创建失败的文件[EB&#x2F;OL]. <a href="https://blog.csdn.net/VBcom/article/details/114080642">https://blog.csdn.net/VBcom/article/details/114080642</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>运行库</tag>
+        <tag>修复</tag>
+        <tag>DirectX</tag>
+        <tag>NET Framework</tag>
+        <tag>Microsoft Visual C++ Runtime</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机软件排障总结</title>
     <url>/troubleshooting/software-troubleshooting/</url>
     <content><![CDATA[<h1 id="AIDA64">1 &nbsp&nbsp<a href="#AIDA64" class="headerlink" title="AIDA64"></a>AIDA64</h1><h2 id="AIDA64提示注册信息已损坏">1.1 &nbsp&nbsp<a href="#AIDA64提示注册信息已损坏" class="headerlink" title="AIDA64提示注册信息已损坏"></a>AIDA64提示注册信息已损坏</h2><p>aida64在windows系统时钟与互联网时钟不正确的时候，会导致报错提示「注册信息已损坏」</p>
@@ -8933,222 +8999,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行库修复（Windows平台）</title>
-    <url>/troubleshooting/runtime-library-repair-on-windows/</url>
-    <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为Windows OS。</p>
-</div>
-
-<h1 id="什么是运行库">1 &nbsp&nbsp<a href="#什么是运行库" class="headerlink" title="什么是运行库"></a>什么是运行库</h1><h1 id="安装软件或运行软件时提示dll缺失等现象产生的原因">2 &nbsp&nbsp<a href="#安装软件或运行软件时提示dll缺失等现象产生的原因" class="headerlink" title="安装软件或运行软件时提示dll缺失等现象产生的原因"></a>安装软件或运行软件时提示dll缺失等现象产生的原因</h1><p>使用不同框架环境来开发的程序需要相对应的运行库才能正常工作，例如VC的程序需要VC运行库，VB的程序需要VB运行库，java程序需要Java Runtime一样，而使用 .Net 开发的程序需要在 .NET Framework下才能运行。</p>
-<p>而纯净的windows系统是不自带有以上这些库或者内置一个版本的库。比如windows系统不自带VC库和java runtime；win10自带的.net框架一般为4.7（老版本的win10可能为4.6或者更早）；win10自带的dx则为dx12。当系统无法提供程序所需的库时，例如没有该库，或者内置库与程序所需的版本不一致，又或者相应库文件已损坏，那么便会弹出dll缺失等运行库问题的错误提示窗口。</p>
-<h1 id="解决方法">3 &nbsp&nbsp<a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>请根据错误提示窗口的信息找对应的工具，「.dll缺失」一般排查DX或者VC库即可，「.net framework缺失」一般排查NET框架即可。</p>
-<h1 id="DX库和VC库修复：">4 &nbsp&nbsp<a href="#DX库和VC库修复：" class="headerlink" title="DX库和VC库修复："></a>DX库和VC库修复：</h1><ul>
-<li><a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">VC库微软官方下载地址</a></li>
-<li><a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">微软故障排除程序</a></li>
-<li><a href="https://blog.csdn.net/vbcom/article/details/7245186">VBcom大佬开发的DX修复工具（增强版）</a></li>
-<li><a href="https://blog.csdn.net/vbcom/article/details/6962388">VBcom大佬开发的DX修复工具（标准版）</a></li>
-</ul>
-<p>注：请注意要下载增强版，增强版才含有VC库（上述链接便是增强版的）。</p>
-<p><strong>DX修复工具修复VC失败的调试信息查看：</strong></p>
-<ol>
-<li>工具-&gt;选项-&gt;常规-&gt;（勾选）修复失败时启用调试信息</li>
-<li>执行「检测并修复」</li>
-<li>点击修复失败的项目（软件中会显示蓝色链接），如果有显示未修复文件的具体明细，右击文件选择「在线修复」。如果没有文件明细，只有针对某个C++具体版本的错误描述，右击选择「更多提示」，看完提示后再次右击项目，有可能出现「切换至详细列表」，这时候使用「在线修复」即可解决。</li>
-</ol>
-<h2 id="vc库安装时无限报错弹窗">4.1 &nbsp&nbsp<a href="#vc库安装时无限报错弹窗" class="headerlink" title="vc库安装时无限报错弹窗"></a>vc库安装时无限报错弹窗</h2><p>安装和卸载vc2017库出现弹窗，标题为<code>Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>，内容提示为 <code>vc_runtimeAdditional_x64.msi is not a valid installation package for product Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>。</p>
-<p>解决方式：使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息，然后重新安装vc库。</p>
-<h2 id="vc库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」">4.2 &nbsp&nbsp<a href="#vc库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」" class="headerlink" title="vc库安装提示「请确认C:\ProgramData\Package Cache文件夹存在并且有访问权限」"></a>vc库安装提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</h2><p>故障现象：安装vc2015-2022库失败，dx修复工具提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</p>
-<p>解决方法：</p>
-<ol>
-<li>先执行常规的卸载，然后使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息。</li>
-<li>强制删除<code>C:\ProgramData\Package Cache</code>路径下的所有文件。</li>
-<li>下载最新的<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">vc库安装包</a>安装，一般先装好x86，再装x64。</li>
-</ol>
-<h1 id="NET框架">5 &nbsp&nbsp<a href="#NET框架" class="headerlink" title=".NET框架"></a>.NET框架</h1><ul>
-<li><a href="https://dotnet.microsoft.com/zh-cn/download">.NET框架微软官方下载地址（8.0&amp;9.0）</a></li>
-<li><a href="https://dotnet.microsoft.com/download/dotnet-framework">.NET框架微软官方下载地址（3.5-4.8.1）</a></li>
-<li><a href="https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available">.NET框架修复工具微软官方下载地址</a></li>
-</ul>
-<p>注：请自己选择需要的版本下载并进行安装。建议安装或修复运行库后请重启系统。关于版本选择，请看以下说明！！！</p>
-<h2 id="注意！！！-Net-Framework版本关系">5.1 &nbsp&nbsp<a href="#注意！！！-Net-Framework版本关系" class="headerlink" title="注意！！！.Net Framework版本关系"></a>注意！！！.Net Framework版本关系</h2><p>.Net版本并非完全独立，但也不支持向下兼容。目前为止微软推出了3个版本的CLR，分别是 1.1、2.0 、4.0。 .Net 4是基于CLR4的，而.Net 2.0 3.0 3.5都是基于 CLR2.0， 3.0 3.5其实只是在2.0的基础上增加了新的功能，并没有改变CLR。</p>
-<p>换而言之，你的程序需要2.0&#x2F;3.0&#x2F;3.5之中的任意一个版本时，安装.Net 3.5 SP1就可以了。</p>
-<p>所以，如果只是想扩展系统的运行库的话，以win10 OS为例，那么只需要选择安装.Net 3.5 SP1和.Net 4.8（最新的.Net 4.X的就行，4.8是我当初写该教程时最新的版本）</p>
-<h3 id="Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954">5.1.1 &nbsp&nbsp<a href="#Win10-Net-Framework-3-5-安装错误-0x800f0950-0x800F0954" class="headerlink" title="Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954"></a>Win10 .Net Framework 3.5 安装错误 0x800f0950 &#x2F; 0x800F0954</h3><p>问题：一般是系统更新程序WUserver无法争取获取更新文件，可能是由于精简或者相关服务项被禁用导致引起。</p>
-<p>解决方法：</p>
-<ol>
-<li>使用离线方式安装（推荐此法）</li>
-<li>恢复WUserver的正常运行，确保在线安装的功能可以正常获取更新文件</li>
-</ol>
-<p>离线方式安装步骤：</p>
-<ol>
-<li>下载当前系统版本所对应的系统镜像</li>
-<li>把source文件夹中的sxs文件夹解压出来，例如<code>C:\path\sxs</code></li>
-<li>管理员身份打开powershell，运行安装命令：<code>dism.exe /online /enable-feature /featurename:NetFX3 /Source:C:\path\sxs</code></li>
-</ol>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] The Visual C++ missing error PLAGUE! Here’s how to fix that pesky missing .MSI file in 5 easy steps![EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=ybr5ExVOlqI">https://www.youtube.com/watch?v=ybr5ExVOlqI</a>.<br>[2] 安装.NET Framework 3.5 Error 0x800f0950 in Windows 10[EB&#x2F;OL]. <a href="https://blog.csdn.net/sinat_29315697/article/details/90438542">https://blog.csdn.net/sinat_29315697/article/details/90438542</a>.<br>[3] Win10 .Net Framework 3.5 安装错误 0x800F0954[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012722571/article/details/106336899">https://blog.csdn.net/u012722571/article/details/106336899</a>.<br>[4] DirectX修复工具使用技巧之二——手动修复C++创建失败的文件[EB&#x2F;OL]. <a href="https://blog.csdn.net/VBcom/article/details/114080642">https://blog.csdn.net/VBcom/article/details/114080642</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>运行库</tag>
-        <tag>修复</tag>
-        <tag>DirectX</tag>
-        <tag>NET Framework</tag>
-        <tag>Microsoft Visual C++ Runtime</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
-<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
-<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
-<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
-<p>bash: <code>echo $?</code>，输出127</p>
-<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
-<p>编写程序，在标准输出上打印 Hello, World。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
-<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
-<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
-<p>解释下面程序片段是否合法。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
-</blockquote>
-<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
-<p>修正方式1：二三行添加cout对象</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>修正方式2：删除一二行多余的分号</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
-<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
-<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
-</blockquote>
-<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
-<p>编写程序，使用while循环将50到100的整数相加。</p>
-</blockquote>
-<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
-<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
-</blockquote>
-<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
-<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
-</blockquote>
-<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
-<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
-
-<p>从-100加到100，sum的终值为0。</p>
-<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
-<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
-</blockquote>
-<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
-<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
-</blockquote>
-<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
-<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
-<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
-<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
-</blockquote>
-<p>编译器可检查的错误：</p>
-<ol>
-<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
-<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
-<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
-</ol>
-<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
-<p>编写程序，从cin读取一组数，输出其和。</p>
-</blockquote>
-<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
-<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
-<ul>
-<li>Windows：ctrl+z</li>
-<li>UNIX（包括Mac OS X）：ctrl+d</li>
-</ul>
-<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
-<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
-</blockquote>
-<ol>
-<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
-<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
-</ol>
-<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
-<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
-</blockquote>
-<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
-<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
-</blockquote>
-<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
-<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
-</blockquote>
-<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
-<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
-</blockquote>
-<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
-<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
-</blockquote>
-<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
-<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
-</blockquote>
-<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
-<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
-</blockquote>
-<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
-<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -9711,12 +9561,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#110;&#107;&#121;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#56;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#115;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#107;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#49;&#46;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#x63;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#x6b;&#x73;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -9810,6 +9660,156 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：第一章「开始」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：开始"><a href="#第一章：开始" class="headerlink" title="第一章：开始"></a>第一章：开始</h1><h2 id="练习1-1"><a href="#练习1-1" class="headerlink" title="练习1.1"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_1.cpp">练习1.1</a></h2><blockquote>
+<p>查阅你使用的编译器文档，确定它所使用的文件命名约定。编译并运行第2页的main程序。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-2"><a href="#练习1-2" class="headerlink" title="练习1.2"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_2.cpp">练习1.2</a></h2><blockquote>
+<p>改写程序，让它返回-1。返回值-1通常被当作程序错误的标识。重新编译并运行你的程序，观察你的系统如何处理main返回的错误标识。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后在命令行运行程序，之后通过<code>echo</code>查看。</p>
+<p>cmd: <code>echo %ERRORLEVEL%</code>，输出-1</p>
+<p>bash: <code>echo $?</code>，输出127</p>
+<h2 id="练习1-3"><a href="#练习1-3" class="headerlink" title="练习1.3"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_3.cpp">练习1.3</a></h2><blockquote>
+<p>编写程序，在标准输出上打印 Hello, World。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello, World&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-4"><a href="#练习1-4" class="headerlink" title="练习1.4"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_4.cpp">练习1.4</a></h2><blockquote>
+<p>我们的程序使用加法运算符+来将两个数相加。编写程序使用乘法运算符*，来打印两个数的积。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span> &lt;&lt; v1 &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">              &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 * v2 &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-5"><a href="#练习1-5" class="headerlink" title="练习1.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_5.cpp">练习1.5</a></h2><blockquote>
+<p>我们将所有输出操作放在一条很长的语句中。重写程序，将每个运算对象的打印操作放在一条独立的语句中。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Enter two numbers:&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="type">int</span> v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">    std::cin &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The product of &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; and &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v2;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot; is &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; v1 * v2;</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="练习1-6"><a href="#练习1-6" class="headerlink" title="练习1.6"></a>练习1.6</h2><blockquote>
+<p>解释下面程序片段是否合法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; &quot;The sum of &quot; &lt;&lt; v1;</span><br><span class="line">          &lt;&lt; &quot; and &quot; &lt;&lt; v2;</span><br><span class="line">          &lt;&lt; &quot; is &quot; &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果程序是合法的，它的输出是什么？如果程序不合法，原因何在？应该如何修正？</p>
+</blockquote>
+<p>不合法。<br><strong>分号「;」之间会被编译器处理成一条语句，所有第二、第三行没有cout对象（&lt;&lt;运算符要求左侧的运算对象必须是一个ostream对象），所以不合法。</strong></p>
+<p>修正方式1：二三行添加cout对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>修正方式2：删除一二行多余的分号</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;The sum of &quot;</span> &lt;&lt; v1</span><br><span class="line">          &lt;&lt; <span class="string">&quot; and &quot;</span> &lt;&lt; v2</span><br><span class="line">          &lt;&lt; <span class="string">&quot; is &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-7"><a href="#练习1-7" class="headerlink" title="练习1.7"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_7.cpp">练习1.7</a></h2><blockquote>
+<p>编译一个包含不正确的嵌套注释的程序，观察编译器返回的错误信息。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* /* 内层注释 */</span> 外层注释 */</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-8"><a href="#练习1-8" class="headerlink" title="练习1.8"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_8.cpp">练习1.8</a></h2><blockquote>
+<p>指出下列哪些输出语句是合法的(如果有的话)：</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="string">&quot;/*&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;*/&quot;</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */;</span></span><br><span class="line"><span class="string">std::cout &lt;&lt; /* &quot;</span>*/<span class="string">&quot; /* &quot;</span><span class="comment">/*&quot; */</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>预测编译这些语句会产生什么样的结果，实际编译这些语句来验证你的答案（编写一个小程序，每次将上述一条语句作为其主体），改正每个编译错误。</p>
+</blockquote>
+<p>第三行不合法，编译出错，修正：增加一个双引号。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::cout &lt;&lt; <span class="comment">/* &quot;*/</span><span class="string">&quot; */&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**/ */ /*</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习1-9"><a href="#练习1-9" class="headerlink" title="练习1.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_9.cpp">练习1.9</a></h2><blockquote>
+<p>编写程序，使用while循环将50到100的整数相加。</p>
+</blockquote>
+<h2 id="练习1-10"><a href="#练习1-10" class="headerlink" title="练习1.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_10.cpp">练习1.10</a></h2><blockquote>
+<p>除了++运算符将运算对象的值增加1之外，还有一个递减运算符（--）实现将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。</p>
+</blockquote>
+<h2 id="练习1-11"><a href="#练习1-11" class="headerlink" title="练习1.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.11</a></h2><blockquote>
+<p>编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。</p>
+</blockquote>
+<h2 id="练习1-12"><a href="#练习1-12" class="headerlink" title="练习1.12"></a>练习1.12</h2><blockquote>
+<p>下面的for循环完成了什么功能？sum的终值是多少？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int sum = 0;</span><br><span class="line">for (int i = -100; i &lt;= 100; ++i)</span><br><span class="line">    sum += i;</span><br></pre></td></tr></table></figure>
+
+<p>从-100加到100，sum的终值为0。</p>
+<h2 id="练习1-13"><a href="#练习1-13" class="headerlink" title="练习1.13"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_13.cpp">练习1.13</a></h2><blockquote>
+<p>使用for循环重做1.4.1节中的所有练习（第11页）。</p>
+</blockquote>
+<h2 id="练习1-14"><a href="#练习1-14" class="headerlink" title="练习1.14"></a>练习1.14</h2><blockquote>
+<p>对比for循环和while循环，两种形式的优缺点各是什么？</p>
+</blockquote>
+<p>对比 for 循环和 while 循环的优缺点：for 循环的变量可以在语句中定义，而 while 语句中直接就是判断循环的条件，无法在语句中定义变量。如此看来，for 语句中定义的变量所占用的内存可以在循环结束后回收，减少了内存的占用。</p>
+<p><a href="http://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming">在Stack Overflow上面有与这个相似的问题</a></p>
+<h2 id="练习1-15"><a href="#练习1-15" class="headerlink" title="练习1.15"></a>练习1.15</h2><blockquote>
+<p>编写程序，包含第14页“再探编译”中讨论的常见错误。熟悉编译器生成的错误信息。</p>
+</blockquote>
+<p>编译器可检查的错误：</p>
+<ol>
+<li>语法错误（syntax error）：比如main参数列表漏掉括号；语句结束之处用冒号而非分号；字符串字面值常量两侧漏掉引号。</li>
+<li>类型错误（type error）：比如向一个期望参数为int的函数传递一个字符串字面值常量。</li>
+<li>声明错误（declaration error）：比如对来自标准库的名字忘记使用std::以及标识符名字拼写错误。</li>
+</ol>
+<h2 id="练习1-16"><a href="#练习1-16" class="headerlink" title="练习1.16"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_16.cpp">练习1.16</a></h2><blockquote>
+<p>编写程序，从cin读取一组数，输出其和。</p>
+</blockquote>
+<p><code>&lt;&lt;</code>输入运算符返回其左侧运算对象，而istream对象遇到文件结束符（end-of-file）或无效输入（类型不同）时就会变得无效，即条件变为假。</p>
+<p>从键盘向程序输入数据时，如何输入文件结束符：</p>
+<ul>
+<li>Windows：ctrl+z</li>
+<li>UNIX（包括Mac OS X）：ctrl+d</li>
+</ul>
+<h2 id="练习1-17"><a href="#练习1-17" class="headerlink" title="练习1.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.17</a></h2><blockquote>
+<p>如果输入的所有值都是相等的，本节的程序会输出什么？如果没有重复值，输出又会是怎样的？</p>
+</blockquote>
+<ol>
+<li>输入全部相等的值：程序只会打印出一个数字及它出现的次数。</li>
+<li>输入没有重复的值：程序会打印每个数值，次数都为1。</li>
+</ol>
+<h2 id="练习1-18"><a href="#练习1-18" class="headerlink" title="练习1.18"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_18.cpp">练习1.18</a></h2><blockquote>
+<p>编译并运行本节的程序，给它输入全都相等的值。再次运行程序，输入没有重复的值。</p>
+</blockquote>
+<h2 id="练习1-19"><a href="#练习1-19" class="headerlink" title="练习1.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_11.cpp">练习1.19</a></h2><blockquote>
+<p>修改你为1.4.1节练习1.11（第11页）所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。</p>
+</blockquote>
+<h2 id="练习1-20"><a href="#练习1-20" class="headerlink" title="练习1.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_20.cpp">练习1.20</a></h2><blockquote>
+<p>在网站<a href="http://www.informit.com/title/032174113">http://www.informit.com/title/032174113</a> 上，第1章的代码目录包含了头文件Sales_item.h。将它拷贝到你自己的工作目录中。用它编写一个程序，读取一组书籍销售记录，将每条记录打印到标准输出上。</p>
+</blockquote>
+<h2 id="练习1-21"><a href="#练习1-21" class="headerlink" title="练习1.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_21.cpp">练习1.21</a></h2><blockquote>
+<p>编写程序，读取两个ISBN相同的Sales_item对象，输出他们的和。</p>
+</blockquote>
+<h2 id="练习1-22"><a href="#练习1-22" class="headerlink" title="练习1.22"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_22.cpp">练习1.22</a></h2><blockquote>
+<p>编写程序，读取多个具有相同ISBN的销售记录，输出所有记录的和。</p>
+</blockquote>
+<h2 id="练习1-23"><a href="#练习1-23" class="headerlink" title="练习1.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_23.cpp">练习1.23</a></h2><blockquote>
+<p>编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录。</p>
+</blockquote>
+<h2 id="练习1-24"><a href="#练习1-24" class="headerlink" title="练习1.24"></a>练习1.24</h2><blockquote>
+<p>输入表示多个ISBN的多条销售记录来测试上一个程序，每个ISBN的记录应该聚在一起。</p>
+</blockquote>
+<h2 id="练习1-25"><a href="#练习1-25" class="headerlink" title="练习1.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap1/1_25.cpp">练习1.25</a></h2><blockquote>
+<p>借助网站上的Sales_item.h头文件，编译并运行本节给出的书店程序。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
       </tags>
   </entry>
   <entry>
@@ -12471,6 +12471,58 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>拒绝网络垃圾，识别避开内容农场</title>
+    <url>/post-articles/2025-10/content-farm-terminator/</url>
+    <content><![CDATA[<h1 id="什么是内容农场">1 &nbsp&nbsp<a href="#什么是内容农场" class="headerlink" title="什么是内容农场"></a>什么是内容农场</h1><p>相信不少朋友在网上冲浪时，经常会碰到一些内容网站，一天能产出发布几十篇文章，内容包罗万象但浅薄。</p>
+<p>查阅这些文章的内容，不少甚至是错误的，完全是机器或者纯AI生成的无意义文章。</p>
+<p>例如下面截图的这个「云原生实践」的网站，域名是<code>oryoy.com</code>，严重污染各大搜索引擎的搜索结果，尤其是bing必应搜索，污染最为严重。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/trash-website.webp">垃圾网站-内容农场</div>
+
+<p>这类网站就是内容农场（Content Farm），内容粗制滥造、缺乏求证，但这类网站SEO优化很厉害，一大堆热门关键词被搜索引擎搜录，导致搜索结果前段基本都是被内容农场填满。</p>
+<h1 id="浏览器插件推荐：终结内容农场">2 &nbsp&nbsp<a href="#浏览器插件推荐：终结内容农场" class="headerlink" title="浏览器插件推荐：终结内容农场"></a>浏览器插件推荐：终结内容农场</h1><p>「终结内容农场」插件的诞生就是为了避开浏览这些垃圾网站。</p>
+<p>插件的功能：</p>
+<ul>
+<li>自动检测搜索返回结果中的网站是否为内容农场，并加以标识，可以让用户第一时间避开点击。</li>
+<li>即使误操作点击访问了内容农场，插件也会自动弹出封锁页面，让用户能及时关闭。</li>
+<li>通过点击「查看」按钮也能查看被封锁的页面，插件会自动去除内容农场网站的广告，从而避免给它带来广告收益。</li>
+<li>除了上述功能外，插件本身也能自定义黑名单，白名单等。</li>
+</ul>
+<p>插件的安装地址：</p>
+<ul>
+<li>火狐浏览器Firefox（也支持安卓版的Firefox版本）：<a href="https://addons.mozilla.org/zh-CN/firefox/addon/content-farm-terminator">https://addons.mozilla.org/zh-CN/firefox/addon/content-farm-terminator</a></li>
+<li>微软EDGE浏览器：<a href="https://microsoftedge.microsoft.com/addons/detail/%E7%BB%88%E7%BB%93%E5%86%85%E5%AE%B9%E5%86%9C%E5%9C%BA/fgckcfkpckemdnnejbbfkkchanedbeje">https://microsoftedge.microsoft.com/addons/detail/%E7%BB%88%E7%BB%93%E5%86%85%E5%AE%B9%E5%86%9C%E5%9C%BA/fgckcfkpckemdnnejbbfkkchanedbeje</a></li>
+<li>谷歌Chrome浏览器：<a href="https://chromewebstore.google.com/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl">https://chromewebstore.google.com/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl</a></li>
+</ul>
+<p>插件项目的地址：</p>
+<ul>
+<li>主页：<a href="https://danny0838.github.io/content-farm-terminator/zh/">https://danny0838.github.io/content-farm-terminator/zh/</a></li>
+<li>Github仓库：<a href="https://github.com/danny0838/content-farm-terminator">https://github.com/danny0838/content-farm-terminator</a></li>
+</ul>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/edge-adddon.webp">插件安装页面-微软EDGE浏览器</div>
+
+<h1 id="安装实测效果">3 &nbsp&nbsp<a href="#安装实测效果" class="headerlink" title="安装实测效果"></a>安装实测效果</h1><p><strong>测试浏览器版本：Microsoft Edge v141.0.3537.99</strong></p>
+<p>浏览器安装启用「终结内容农场」插件后，若搜索返回的结果中存在内容农场站点，可以看到插件自动添加感叹号标识出来。</p>
+<p>即使误点击网站，插件也会首先弹出封锁页面。</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/addon-effect1.webp">插件自动标识出内容农场</div>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/addon-effect2.webp">插件封锁页面</div>
+</div>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>浏览器插件</tag>
+        <tag>内容农场</tag>
+        <tag>终结内容农场</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>禁用SSH服务的密码登录功能以防被爆破</title>
     <url>/post-articles/2025-10/disable-ssh-password/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>想起来家里部署的PVE服务器中，有一个映射到公网IPv4的LXC容器SSH服务并未禁用密码登录。</p>
@@ -13427,7 +13479,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#109;&#105;&#x73;&#x74;&#x65;&#114;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
