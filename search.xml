@@ -121,17 +121,20 @@
 
 <div class="text-box">
     <div class="tag-align">
-    <p class="tag-bookmark-page">IP归属地查询/域名反查IP</p>
+    <p class="tag-bookmark-page">IP归属地查询/域名反查IP/DNS泄漏查询</p>
     </div>
     <a href="https://www.ipaddress.com/">ipaddress</a>
     <a href="https://www.ip138.com/">域名反查IP/IP归属地查询(IP138)</a>
     <a href="https://ipw.cn/">IP查询（IPv4/IPv6）</a>
     <a href="http://test-ipv6.com/">IP连接测试（IPv6）</a>
+    <a href="https://testipv6.cn/">IP连接测试（IPv6, cn域名）</a>
     <a href="http://test-ipv4.com/">IP连接测试（IPv4）</a>
     <a href="https://zh-hans.ipshu.com/country-list">全球各国IP统计（大陆港澳台分开统计）</a>
     <a href="https://ip.tool.chinaz.com/">全球IP地址查询-站长工具</a>
     <a href="https://my-ip.cc/zh-hans/">我的IP地址</a>
     <a href="https://www.cip.cc/">IP归属地查询(CIP)</a>
+    <a href="https://ipleak.net/">ipleak</a>
+    <a href="https://browserleaks.com/dns">browserleaks(DNS泄漏查询)</a>
 </div>
 
 <div class="text-box">
@@ -2110,126 +2113,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>笔记本硬件基础</title>
-    <url>/cad/laptop-fundamental/</url>
-    <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
-<thead>
-<tr>
-<th align="center">外型</th>
-<th align="center">A壳</th>
-<th align="center">B壳</th>
-<th align="center">C壳</th>
-<th align="center">D壳</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">位置</td>
-<td align="center">顶面的壳</td>
-<td align="center">屏幕面的外框</td>
-<td align="center">键盘面的壳</td>
-<td align="center">底面的壳</td>
-</tr>
-</tbody></table>
-<h1 id="部件介绍">2 &nbsp&nbsp<a href="#部件介绍" class="headerlink" title="部件介绍"></a>部件介绍</h1><h2 id="PCB（印刷电路板）">2.1 &nbsp&nbsp<a href="#PCB（印刷电路板）" class="headerlink" title="PCB（印刷电路板）"></a>PCB（印刷电路板）</h2><p>笔记本PCB集成度高，一般6层以上，比如6(较少)，8，10...，不像1或2层板，无法跑线。板层数越多，EMI性能越好，成本也越高。</p>
-<p>PCBA是指PCB上装配按照设定规则指定元件的成品功能板。（元件：电阻，电容，芯片，接口...）</p>
-<div class="note default no-icon"><p>注：PCB, Printed Circuit Board; PCBA, Printed Circuit Board Assembly; EMI, Electromagnetic Interference</p>
-</div>
-
-<h2 id="Chipset（芯片组）">2.2 &nbsp&nbsp<a href="#Chipset（芯片组）" class="headerlink" title="Chipset（芯片组）"></a>Chipset（芯片组）</h2><p>一般指南北桥。（目前北桥已逐渐淘汰）</p>
-<p>常见厂商有：AMD，INTEL，NVDIA，VIA，SIS。</p>
-<p>南桥：North Bridge Chipset，INTEL的为输出&#x2F;输入控制器中心（Input&#x2F;Output Controller Hub，ICH），NVIDIA的为MCP，ATI的称为IXP&#x2F;SB，AMD的为FCH。</p>
-<p>北桥：North Bridge Chipset，INTEL的为GMCH，Graphics &amp; Memory controller hub，带G有集显，无G的无集显。</p>
-<h2 id="CPU（中央处理器）">2.3 &nbsp&nbsp<a href="#CPU（中央处理器）" class="headerlink" title="CPU（中央处理器）"></a>CPU（中央处理器）</h2><p>常见厂商：AMD，INTEL。龙芯，VIA，IBM，Transmeta。</p>
-<p>不同芯片组对应不同的Intel CPU座（针脚不同）</p>
-<p>注：CPU, Center Processor Unit</p>
-<h2 id="Battery（电池）">2.4 &nbsp&nbsp<a href="#Battery（电池）" class="headerlink" title="Battery（电池）"></a>Battery（电池）</h2><ul>
-<li>组成：外壳+控制板+电芯。</li>
-<li>类型：圆柱型、方型、聚合物</li>
-<li>电芯：常见18650型锂离子电芯。单个电压3.7V，充电电压4.2V，电容量为2400mAH。三串两并：电压为3*3.7V，容量为2*2400mAH。</li>
-</ul>
-<h2 id="Adapter（适配器）">2.5 &nbsp&nbsp<a href="#Adapter（适配器）" class="headerlink" title="Adapter（适配器）"></a>Adapter（适配器）</h2><p>输入100~240V的AC（50&#x2F;60Hz），输出16~20V居多。（华硕EPC有9.5V和12V的输出）</p>
-<h1 id="笔记本和台式机的区别">3 &nbsp&nbsp<a href="#笔记本和台式机的区别" class="headerlink" title="笔记本和台式机的区别"></a>笔记本和台式机的区别</h1><ul>
-<li>笔记本自带显示系统（LCD&#x2F;LED，专用屏线接口，自带高压板，灯管）</li>
-<li>笔记本电源统一只由一个电压转出，常见16~20。台式主板由ATX电源提供12V、5V、3.3V等电压。\这个是最大区别，笔记本的工作电压是由板子转换完成（16-20V主供电输入，经PWM电路降压处理，提供待机电压等工作电压），台式主板电源完成（多种方式，不只PWM）。</li>
-<li>笔记本有充放电的电路，可用电池做替代电源。</li>
-<li>为保证笔记本移动性和续航，CPU低功率、节能设计。</li>
-<li>笔记本的保护电路多，过热保护，过电压保护。</li>
-<li>笔记本内置鼠标设备，如指点杆，触摸板。</li>
-<li>笔记本元件集成度高，MOS管多为8脚贴片。专用IC也多。（芯片功能作用原理类似，供电不是太复杂。）</li>
-<li>笔记本6-8层板，夹层中也有信号线。台式主板4层，一般只在正反面有信号线。</li>
-<li>笔记本引入EC（多功能芯片）概念，类似台式主板的IO，但功能更多，因为处理键盘的各种信号（亮度调节，声音调节等快捷键）。部分EC里会带有程序，其脚位功能由程序决定。</li>
-<li>笔记本的时序概念很重要，电压和功能的实现，都由时序控制。环环相扣，前面条件未完成，后面动作就不会执行。</li>
-<li>笔记本维修对电路图依赖很强，需要电路图分析陌生元件，且需要点位图对照。无这些的话，只能维修一些通病。（信号复杂，板子小，整合度高）</li>
-</ul>
-<h1 id="笔记本板号">4 &nbsp&nbsp<a href="#笔记本板号" class="headerlink" title="笔记本板号"></a>笔记本板号</h1><p>板号：板子型号。即工程代号，Project Code</p>
-<p>笔记本大规模的代工厂：广达（quanta），仁宝（compal），纬创（wistron），英业达（inventec），和硕联合（pegatron）。<br>二线代工厂：神达（mitac），蓝天（clevo），大众（fic），微星（msi），精英（ecs）</p>
-<p>OEM代工：品牌商设计，代工厂生产。如苹果，联想（thinkpad）。成本高<br>ODM代工：设计和生产都是代工厂。</p>
-<p>广达：DAO+板号+mb，一般为3个字，如ch3，zq5<br>仁宝：la-xxxxp<br>纬创：板号+mb（有白框）<br>华硕（asus）： 板号+main board（没有位置号，PCB丝印层无标记，若无点位图无法分析）<br>英业达：板号（很长）+mb，一般给hp做得多<br>微星：ms-板号<br>富士康：代工索尼</p>
-<h1 id="主板板子元件">5 &nbsp&nbsp<a href="#主板板子元件" class="headerlink" title="主板板子元件"></a>主板板子元件</h1><p>CPU座，北桥，南桥，内存插槽，独立显卡，显存，SPI BIOS，pice，电池接口，适配器插头，时钟芯片，ec，LCD接口，硬盘接口，键盘接口，光驱接口，读卡器槽。</p>
-<h1 id="笔记本主板架构">6 &nbsp&nbsp<a href="#笔记本主板架构" class="headerlink" title="笔记本主板架构"></a>笔记本主板架构</h1><p>修接口。供电维修看架构没用。</p>
-<p>intel双桥架构：</p>
-<ul>
-<li>CPU管理北桥。</li>
-<li>北桥管内存，独显，显示接口，与cpu的连接的总线---FSB前端总线。北桥与南桥的总线---DMI+CLINK</li>
-<li>南桥管理周边设备，网卡，迷你卡，USB，摄像头，EC，光驱，硬盘等，南桥和EC连接的总线--LPC总线，7根重要信号：LAD0，LAD1，LAD2，LAD3，LFRAME#，LCLK，LRESET#。（诊断卡接9根，外加VCC、GND）</li>
-<li>EC管理键盘，触控板，鼠标，部分挂BIOS（SPI ROM）</li>
-</ul>
-<p>intel单桥架构（无北桥）：</p>
-<ul>
-<li>CPU管理显卡，内存。CPU不管显示接口，通过PCH桥到显示接口（cpu里有集成显卡，通过FDI总线输出）</li>
-<li>pch（管理原来南桥的功能）相比原南桥，增加了显示接口（VGA，LVDS，HDMI等）管理，可能也直接管理SPI rom（BIOS）</li>
-<li>EC管理键盘，温控芯片，触摸板，挂BIOS</li>
-</ul>
-<p>AMD（ATI）双桥架构：</p>
-<ul>
-<li>CPU管内存</li>
-<li>北桥管理所有PCIE，显示接口。网卡（1000M，走PCIE）</li>
-<li>南桥管理USB，网卡（100M，走PCI。），硬盘光驱等</li>
-</ul>
-<p>AMD单桥架构：</p>
-<ul>
-<li>CPU管理内存，显卡，显示接口（这个是与intel的区别）</li>
-<li>桥（fch）管理网卡，mini-pcie，硬盘光驱，USB，EC，声卡等</li>
-<li>EC管键盘，鼠标</li>
-</ul>
-<p>intel和AMD单桥架构无时钟芯片，集成在桥。nvidia的双桥和amd相同。nvidia单桥：CPU管内存，桥管其他。</p>
-<h1 id="名词解释">7 &nbsp&nbsp<a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>复位和PG都是测电压，时钟是测频率（无示波器时，可测电压，33MHz大概1.6V，100MHz大概0.4V）。</p>
-<h2 id="供电和信号">7.1 &nbsp&nbsp<a href="#供电和信号" class="headerlink" title="供电和信号"></a>供电和信号</h2><p>供电一个可以输出电流的电压，电流较大。工作过程中，这个电压不能置高或拉低。供电被拉低，就是短路。一般，也不许置高。（动力来源）。</p>
-<p>常见有19，12，5（往上大电压给接口），3.3（给芯片），2.5，1.8，1.5，1.25，1.05，1.2，1.1，0.9，0.75V。CPU供电0.7-1.5V</p>
-<p>名称一般为：VCC，VDD，VCC3，VDDQ，VTT，VBAT，5VALW，+3VO等（有V字）。苹果的供电特殊，例如PP0V75_s3_mem</p>
-<p>符号为一个圆圈，T型，三角形。表示固定的电压，不允许置高和拉低。信号电压（例如19V）与1.5V（供电）碰在一起会变为1.5V。</p>
-<h2 id="接地">7.2 &nbsp&nbsp<a href="#接地" class="headerlink" title="接地"></a>接地</h2><p>接地是给供电构成回路。有接地，才会有电流流过设备。</p>
-<p>名称一般为：VSS、GND。</p>
-<p>符号：三角形（数字地）；倒三角形多横线（模拟地）。避免数字和模拟连在一起相互干扰。例子：数字地和模拟地通过一个0欧姆电阻PR170(值0_6)，实际测量是通路，但信号不一样。如果这个0欧姆电阻坏了，可能导致烧元件。压差相对值不一样。</p>
-<h2 id="信号">7.3 &nbsp&nbsp<a href="#信号" class="headerlink" title="信号"></a>信号</h2><p>理论上，电压信号值考虑电压变化，电流很小。在工作过程中，可根据需要置高或者拉低。电路图中的信号的箭头不完全代表信号的流向，因为画图人员的随意性。<br>信号方向考经验判断：例如PWRBTN#给南桥的；slp_s3#南桥出来的；therm_stp#温控信号看情况：过温时，温控芯片吧温控信号拉低。</p>
-<h2 id="高低电平">7.4 &nbsp&nbsp<a href="#高低电平" class="headerlink" title="高低电平"></a>高低电平</h2><p>数字逻辑电路中，高电平表示1，低电平表示0。一般规定：低电平为0-0.25V，高电平为3.5-5V。</p>
-<p>主板中，1V以上为高电平，0.7以下为低电平。</p>
-<p>结论：根据电路判断高低电平，非限定特定值。有些电路0.5就是高，有的电路1.1还是低。但0肯定是地，3.3肯定是高。</p>
-<h2 id="脉冲和跳变">7.5 &nbsp&nbsp<a href="#脉冲和跳变" class="headerlink" title="脉冲和跳变"></a>脉冲和跳变</h2><p>上升沿，下降沿。</p>
-<p>类型：高电平跳变为低电平；低电平跳变为高电平；高跳变为低再跳变为高。</p>
-<h2 id="时钟信号">7.6 &nbsp&nbsp<a href="#时钟信号" class="headerlink" title="时钟信号"></a>时钟信号</h2><p>时钟信号CLK（Clock的简写）。为数字电路工作提供一个基准，使各个相连设备统一步调工作。单位Hz。南桥晶振323.768KHz。</p>
-<p>主板上都有一个主时钟产生电路，给所有设备提供时钟，送出到cpu的频率为100MHz以上，送给PCI的是33MHz，送给PCIE的是100MHz，送给USB控制器（集成在南桥内部）的为48MHz。</p>
-<p>相连的两个设备需要相同的时钟频率和电压才能通信，如内存和北桥。</p>
-<p>时钟信号需要在主板正常通电后且时钟芯片工作正常才能测量到，用示波器和万用表（测电压?）测。100M的示波器一般测不了CPU的频率。</p>
-<h2 id="复位信号">7.7 &nbsp&nbsp<a href="#复位信号" class="headerlink" title="复位信号"></a>复位信号</h2><p>复位信号RST（RESET的简写）。复位都是从高电平向低电平跳变再回到高电平，如PCI的复位是从3.3V向0V跳变再回到3.3V就是一个正常的复位跳变。</p>
-<p>名称一般为：xxxRST#，如PCIRST#、CPURST#、IDERST#等。复位只能是瞬间低电平，主板正常工作时复位都是高电平。但不是恒高电平，不能直接接到供电上。如台式机reset键，复位开关弹不起来就一直为低电平，就不行。</p>
-<p>平常说没复位，通常指没复位电压，即复位信号测量点电压为0V。维修一般都是把复位电压修出来。</p>
-<p>所有设备的复位信号，如EC，北桥等，都是由南桥发出。开机的瞬间，便会对设备清零，使其重新工作。</p>
-<h2 id="PG信号">7.8 &nbsp&nbsp<a href="#PG信号" class="headerlink" title="PG信号"></a>PG信号</h2><p>电源好信号PG（powergood的缩写），用来描述供电正常的信号。一般高电平有效。如cpu供电芯片，只有在正常发出cpu电压后，才会发出PG信号。</p>
-<p>名称一般为：PG、PWRGD、PWROK、POK、PWRG、VTTPWRGD、CPUPWRGD等。</p>
-<h2 id="开启信号">7.9 &nbsp&nbsp<a href="#开启信号" class="headerlink" title="开启信号"></a>开启信号</h2><p>开启信号。有的芯片叫EN（enable），使能，高电平时表示开启信号。有的芯片叫SHDN#（shutdown），#表示低电平有效。综合名称和#来看，意思是低电平时关闭芯片，高电平开启。所以一般shutdown信号一般要维持高电平。</p>
-<p>注：信号带#时（低电平有效），一定要结合信号的英文全程去理解。有的带#，为低电平时主板可以正常工作。例如：VT_PWRGD_CK410#信号是cpu供电正常后发出低电平开启时钟信号。1999_SHDN#信号是低电平关闭MAX1999的控制信号，即为高电平时，主板才能正常工作。</p>
-<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>硬件</tag>
-        <tag>笔记本</tag>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PCB设计/电路维修</title>
     <url>/cad/pcb/</url>
     <content><![CDATA[<h1 id="嵌入式代码开发">1 &nbsp&nbsp<a href="#嵌入式代码开发" class="headerlink" title="嵌入式代码开发"></a>嵌入式代码开发</h1><h2 id="开发编译器">1.1 &nbsp&nbsp<a href="#开发编译器" class="headerlink" title="开发编译器"></a>开发编译器</h2><p>开源的sdcc编译器，一个优化的ansi-c交叉编译器。</p>
@@ -2382,6 +2265,126 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>PCB</tag>
         <tag>电路</tag>
         <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔记本硬件基础</title>
+    <url>/cad/laptop-fundamental/</url>
+    <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
+<thead>
+<tr>
+<th align="center">外型</th>
+<th align="center">A壳</th>
+<th align="center">B壳</th>
+<th align="center">C壳</th>
+<th align="center">D壳</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">位置</td>
+<td align="center">顶面的壳</td>
+<td align="center">屏幕面的外框</td>
+<td align="center">键盘面的壳</td>
+<td align="center">底面的壳</td>
+</tr>
+</tbody></table>
+<h1 id="部件介绍">2 &nbsp&nbsp<a href="#部件介绍" class="headerlink" title="部件介绍"></a>部件介绍</h1><h2 id="PCB（印刷电路板）">2.1 &nbsp&nbsp<a href="#PCB（印刷电路板）" class="headerlink" title="PCB（印刷电路板）"></a>PCB（印刷电路板）</h2><p>笔记本PCB集成度高，一般6层以上，比如6(较少)，8，10...，不像1或2层板，无法跑线。板层数越多，EMI性能越好，成本也越高。</p>
+<p>PCBA是指PCB上装配按照设定规则指定元件的成品功能板。（元件：电阻，电容，芯片，接口...）</p>
+<div class="note default no-icon"><p>注：PCB, Printed Circuit Board; PCBA, Printed Circuit Board Assembly; EMI, Electromagnetic Interference</p>
+</div>
+
+<h2 id="Chipset（芯片组）">2.2 &nbsp&nbsp<a href="#Chipset（芯片组）" class="headerlink" title="Chipset（芯片组）"></a>Chipset（芯片组）</h2><p>一般指南北桥。（目前北桥已逐渐淘汰）</p>
+<p>常见厂商有：AMD，INTEL，NVDIA，VIA，SIS。</p>
+<p>南桥：North Bridge Chipset，INTEL的为输出&#x2F;输入控制器中心（Input&#x2F;Output Controller Hub，ICH），NVIDIA的为MCP，ATI的称为IXP&#x2F;SB，AMD的为FCH。</p>
+<p>北桥：North Bridge Chipset，INTEL的为GMCH，Graphics &amp; Memory controller hub，带G有集显，无G的无集显。</p>
+<h2 id="CPU（中央处理器）">2.3 &nbsp&nbsp<a href="#CPU（中央处理器）" class="headerlink" title="CPU（中央处理器）"></a>CPU（中央处理器）</h2><p>常见厂商：AMD，INTEL。龙芯，VIA，IBM，Transmeta。</p>
+<p>不同芯片组对应不同的Intel CPU座（针脚不同）</p>
+<p>注：CPU, Center Processor Unit</p>
+<h2 id="Battery（电池）">2.4 &nbsp&nbsp<a href="#Battery（电池）" class="headerlink" title="Battery（电池）"></a>Battery（电池）</h2><ul>
+<li>组成：外壳+控制板+电芯。</li>
+<li>类型：圆柱型、方型、聚合物</li>
+<li>电芯：常见18650型锂离子电芯。单个电压3.7V，充电电压4.2V，电容量为2400mAH。三串两并：电压为3*3.7V，容量为2*2400mAH。</li>
+</ul>
+<h2 id="Adapter（适配器）">2.5 &nbsp&nbsp<a href="#Adapter（适配器）" class="headerlink" title="Adapter（适配器）"></a>Adapter（适配器）</h2><p>输入100~240V的AC（50&#x2F;60Hz），输出16~20V居多。（华硕EPC有9.5V和12V的输出）</p>
+<h1 id="笔记本和台式机的区别">3 &nbsp&nbsp<a href="#笔记本和台式机的区别" class="headerlink" title="笔记本和台式机的区别"></a>笔记本和台式机的区别</h1><ul>
+<li>笔记本自带显示系统（LCD&#x2F;LED，专用屏线接口，自带高压板，灯管）</li>
+<li>笔记本电源统一只由一个电压转出，常见16~20。台式主板由ATX电源提供12V、5V、3.3V等电压。\这个是最大区别，笔记本的工作电压是由板子转换完成（16-20V主供电输入，经PWM电路降压处理，提供待机电压等工作电压），台式主板电源完成（多种方式，不只PWM）。</li>
+<li>笔记本有充放电的电路，可用电池做替代电源。</li>
+<li>为保证笔记本移动性和续航，CPU低功率、节能设计。</li>
+<li>笔记本的保护电路多，过热保护，过电压保护。</li>
+<li>笔记本内置鼠标设备，如指点杆，触摸板。</li>
+<li>笔记本元件集成度高，MOS管多为8脚贴片。专用IC也多。（芯片功能作用原理类似，供电不是太复杂。）</li>
+<li>笔记本6-8层板，夹层中也有信号线。台式主板4层，一般只在正反面有信号线。</li>
+<li>笔记本引入EC（多功能芯片）概念，类似台式主板的IO，但功能更多，因为处理键盘的各种信号（亮度调节，声音调节等快捷键）。部分EC里会带有程序，其脚位功能由程序决定。</li>
+<li>笔记本的时序概念很重要，电压和功能的实现，都由时序控制。环环相扣，前面条件未完成，后面动作就不会执行。</li>
+<li>笔记本维修对电路图依赖很强，需要电路图分析陌生元件，且需要点位图对照。无这些的话，只能维修一些通病。（信号复杂，板子小，整合度高）</li>
+</ul>
+<h1 id="笔记本板号">4 &nbsp&nbsp<a href="#笔记本板号" class="headerlink" title="笔记本板号"></a>笔记本板号</h1><p>板号：板子型号。即工程代号，Project Code</p>
+<p>笔记本大规模的代工厂：广达（quanta），仁宝（compal），纬创（wistron），英业达（inventec），和硕联合（pegatron）。<br>二线代工厂：神达（mitac），蓝天（clevo），大众（fic），微星（msi），精英（ecs）</p>
+<p>OEM代工：品牌商设计，代工厂生产。如苹果，联想（thinkpad）。成本高<br>ODM代工：设计和生产都是代工厂。</p>
+<p>广达：DAO+板号+mb，一般为3个字，如ch3，zq5<br>仁宝：la-xxxxp<br>纬创：板号+mb（有白框）<br>华硕（asus）： 板号+main board（没有位置号，PCB丝印层无标记，若无点位图无法分析）<br>英业达：板号（很长）+mb，一般给hp做得多<br>微星：ms-板号<br>富士康：代工索尼</p>
+<h1 id="主板板子元件">5 &nbsp&nbsp<a href="#主板板子元件" class="headerlink" title="主板板子元件"></a>主板板子元件</h1><p>CPU座，北桥，南桥，内存插槽，独立显卡，显存，SPI BIOS，pice，电池接口，适配器插头，时钟芯片，ec，LCD接口，硬盘接口，键盘接口，光驱接口，读卡器槽。</p>
+<h1 id="笔记本主板架构">6 &nbsp&nbsp<a href="#笔记本主板架构" class="headerlink" title="笔记本主板架构"></a>笔记本主板架构</h1><p>修接口。供电维修看架构没用。</p>
+<p>intel双桥架构：</p>
+<ul>
+<li>CPU管理北桥。</li>
+<li>北桥管内存，独显，显示接口，与cpu的连接的总线---FSB前端总线。北桥与南桥的总线---DMI+CLINK</li>
+<li>南桥管理周边设备，网卡，迷你卡，USB，摄像头，EC，光驱，硬盘等，南桥和EC连接的总线--LPC总线，7根重要信号：LAD0，LAD1，LAD2，LAD3，LFRAME#，LCLK，LRESET#。（诊断卡接9根，外加VCC、GND）</li>
+<li>EC管理键盘，触控板，鼠标，部分挂BIOS（SPI ROM）</li>
+</ul>
+<p>intel单桥架构（无北桥）：</p>
+<ul>
+<li>CPU管理显卡，内存。CPU不管显示接口，通过PCH桥到显示接口（cpu里有集成显卡，通过FDI总线输出）</li>
+<li>pch（管理原来南桥的功能）相比原南桥，增加了显示接口（VGA，LVDS，HDMI等）管理，可能也直接管理SPI rom（BIOS）</li>
+<li>EC管理键盘，温控芯片，触摸板，挂BIOS</li>
+</ul>
+<p>AMD（ATI）双桥架构：</p>
+<ul>
+<li>CPU管内存</li>
+<li>北桥管理所有PCIE，显示接口。网卡（1000M，走PCIE）</li>
+<li>南桥管理USB，网卡（100M，走PCI。），硬盘光驱等</li>
+</ul>
+<p>AMD单桥架构：</p>
+<ul>
+<li>CPU管理内存，显卡，显示接口（这个是与intel的区别）</li>
+<li>桥（fch）管理网卡，mini-pcie，硬盘光驱，USB，EC，声卡等</li>
+<li>EC管键盘，鼠标</li>
+</ul>
+<p>intel和AMD单桥架构无时钟芯片，集成在桥。nvidia的双桥和amd相同。nvidia单桥：CPU管内存，桥管其他。</p>
+<h1 id="名词解释">7 &nbsp&nbsp<a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>复位和PG都是测电压，时钟是测频率（无示波器时，可测电压，33MHz大概1.6V，100MHz大概0.4V）。</p>
+<h2 id="供电和信号">7.1 &nbsp&nbsp<a href="#供电和信号" class="headerlink" title="供电和信号"></a>供电和信号</h2><p>供电一个可以输出电流的电压，电流较大。工作过程中，这个电压不能置高或拉低。供电被拉低，就是短路。一般，也不许置高。（动力来源）。</p>
+<p>常见有19，12，5（往上大电压给接口），3.3（给芯片），2.5，1.8，1.5，1.25，1.05，1.2，1.1，0.9，0.75V。CPU供电0.7-1.5V</p>
+<p>名称一般为：VCC，VDD，VCC3，VDDQ，VTT，VBAT，5VALW，+3VO等（有V字）。苹果的供电特殊，例如PP0V75_s3_mem</p>
+<p>符号为一个圆圈，T型，三角形。表示固定的电压，不允许置高和拉低。信号电压（例如19V）与1.5V（供电）碰在一起会变为1.5V。</p>
+<h2 id="接地">7.2 &nbsp&nbsp<a href="#接地" class="headerlink" title="接地"></a>接地</h2><p>接地是给供电构成回路。有接地，才会有电流流过设备。</p>
+<p>名称一般为：VSS、GND。</p>
+<p>符号：三角形（数字地）；倒三角形多横线（模拟地）。避免数字和模拟连在一起相互干扰。例子：数字地和模拟地通过一个0欧姆电阻PR170(值0_6)，实际测量是通路，但信号不一样。如果这个0欧姆电阻坏了，可能导致烧元件。压差相对值不一样。</p>
+<h2 id="信号">7.3 &nbsp&nbsp<a href="#信号" class="headerlink" title="信号"></a>信号</h2><p>理论上，电压信号值考虑电压变化，电流很小。在工作过程中，可根据需要置高或者拉低。电路图中的信号的箭头不完全代表信号的流向，因为画图人员的随意性。<br>信号方向考经验判断：例如PWRBTN#给南桥的；slp_s3#南桥出来的；therm_stp#温控信号看情况：过温时，温控芯片吧温控信号拉低。</p>
+<h2 id="高低电平">7.4 &nbsp&nbsp<a href="#高低电平" class="headerlink" title="高低电平"></a>高低电平</h2><p>数字逻辑电路中，高电平表示1，低电平表示0。一般规定：低电平为0-0.25V，高电平为3.5-5V。</p>
+<p>主板中，1V以上为高电平，0.7以下为低电平。</p>
+<p>结论：根据电路判断高低电平，非限定特定值。有些电路0.5就是高，有的电路1.1还是低。但0肯定是地，3.3肯定是高。</p>
+<h2 id="脉冲和跳变">7.5 &nbsp&nbsp<a href="#脉冲和跳变" class="headerlink" title="脉冲和跳变"></a>脉冲和跳变</h2><p>上升沿，下降沿。</p>
+<p>类型：高电平跳变为低电平；低电平跳变为高电平；高跳变为低再跳变为高。</p>
+<h2 id="时钟信号">7.6 &nbsp&nbsp<a href="#时钟信号" class="headerlink" title="时钟信号"></a>时钟信号</h2><p>时钟信号CLK（Clock的简写）。为数字电路工作提供一个基准，使各个相连设备统一步调工作。单位Hz。南桥晶振323.768KHz。</p>
+<p>主板上都有一个主时钟产生电路，给所有设备提供时钟，送出到cpu的频率为100MHz以上，送给PCI的是33MHz，送给PCIE的是100MHz，送给USB控制器（集成在南桥内部）的为48MHz。</p>
+<p>相连的两个设备需要相同的时钟频率和电压才能通信，如内存和北桥。</p>
+<p>时钟信号需要在主板正常通电后且时钟芯片工作正常才能测量到，用示波器和万用表（测电压?）测。100M的示波器一般测不了CPU的频率。</p>
+<h2 id="复位信号">7.7 &nbsp&nbsp<a href="#复位信号" class="headerlink" title="复位信号"></a>复位信号</h2><p>复位信号RST（RESET的简写）。复位都是从高电平向低电平跳变再回到高电平，如PCI的复位是从3.3V向0V跳变再回到3.3V就是一个正常的复位跳变。</p>
+<p>名称一般为：xxxRST#，如PCIRST#、CPURST#、IDERST#等。复位只能是瞬间低电平，主板正常工作时复位都是高电平。但不是恒高电平，不能直接接到供电上。如台式机reset键，复位开关弹不起来就一直为低电平，就不行。</p>
+<p>平常说没复位，通常指没复位电压，即复位信号测量点电压为0V。维修一般都是把复位电压修出来。</p>
+<p>所有设备的复位信号，如EC，北桥等，都是由南桥发出。开机的瞬间，便会对设备清零，使其重新工作。</p>
+<h2 id="PG信号">7.8 &nbsp&nbsp<a href="#PG信号" class="headerlink" title="PG信号"></a>PG信号</h2><p>电源好信号PG（powergood的缩写），用来描述供电正常的信号。一般高电平有效。如cpu供电芯片，只有在正常发出cpu电压后，才会发出PG信号。</p>
+<p>名称一般为：PG、PWRGD、PWROK、POK、PWRG、VTTPWRGD、CPUPWRGD等。</p>
+<h2 id="开启信号">7.9 &nbsp&nbsp<a href="#开启信号" class="headerlink" title="开启信号"></a>开启信号</h2><p>开启信号。有的芯片叫EN（enable），使能，高电平时表示开启信号。有的芯片叫SHDN#（shutdown），#表示低电平有效。综合名称和#来看，意思是低电平时关闭芯片，高电平开启。所以一般shutdown信号一般要维持高电平。</p>
+<p>注：信号带#时（低电平有效），一定要结合信号的英文全程去理解。有的带#，为低电平时主板可以正常工作。例如：VT_PWRGD_CK410#信号是cpu供电正常后发出低电平开启时钟信号。1999_SHDN#信号是低电平关闭MAX1999的控制信号，即为高电平时，主板才能正常工作。</p>
+<h1 id="参考文献">8 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>硬件</tag>
+        <tag>笔记本</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -3314,7 +3317,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#64;&#x31;&#x37;&#50;&#x2e;&#x31;&#57;&#x2e;&#x30;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#64;&#x31;&#x37;&#x32;&#46;&#49;&#57;&#x2e;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -6306,7 +6309,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>。账户：root。密码：[前面步骤设置的密码]。</li>
 <li>设置网卡并确保pve能联网。</li>
 </ol>
-<h2 id="PVE升级步骤（7-4-8-x）">3.2 &nbsp&nbsp<a href="#PVE升级步骤（7-4-8-x）" class="headerlink" title="PVE升级步骤（7.4-&gt;8.x）"></a>PVE升级步骤（7.4-&gt;8.x）</h2><h3 id="替换PVE-7-4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-4最新的版本">3.2.1 &nbsp&nbsp<a href="#替换PVE-7-4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-4最新的版本" class="headerlink" title="替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.4最新的版本"></a>替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.4最新的版本</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。<code>sources.list</code>相关的源，都是执行<code>apt update</code>更新索引生效。</p>
+<h2 id="PVE升级步骤（7-4-8-x）">3.2 &nbsp&nbsp<a href="#PVE升级步骤（7-4-8-x）" class="headerlink" title="PVE升级步骤（7.4-&gt;8.x）"></a>PVE升级步骤（7.4-&gt;8.x）</h2><h3 id="替换PVE-7-4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-4最新版">3.2.1 &nbsp&nbsp<a href="#替换PVE-7-4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-4最新版" class="headerlink" title="替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.4最新版"></a>替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.4最新版</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。<code>sources.list</code>相关的源，都是执行<code>apt update</code>更新索引生效。</p>
 <div class="tabs" id="74sources"><ul class="nav-tabs"><li class="tab active"><a href="#74sources-1">PVE 7.4的Debian系统软件源</a></li><li class="tab"><a href="#74sources-2">PVE 7.4的PVE软件源</a></li><li class="tab"><a href="#74sources-3">PVE 7.4的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sources-1"><p>修改<code>/etc/apt/sources.list</code>文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="74sourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74sourcestype-1">PVE 7.4的Debian系统软件源（中科大源）</a></li><li class="tab"><a href="#74sourcestype-2">PVE 7.4的Debian系统软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74sourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="74sources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
@@ -6620,7 +6623,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ol>
 <h2 id="安装OpenWrt（LXC容器）">6.5 &nbsp&nbsp<a href="#安装OpenWrt（LXC容器）" class="headerlink" title="安装OpenWrt（LXC容器）"></a>安装OpenWrt（LXC容器）</h2><h3 id="OpenWrt根文件镜像的选择">6.5.1 &nbsp&nbsp<a href="#OpenWrt根文件镜像的选择" class="headerlink" title="OpenWrt根文件镜像的选择"></a>OpenWrt根文件镜像的选择</h3><ul>
 <li><a href="https://firmware-selector.immortalwrt.org/?target=x86/64&id=generic">ImmortalWrt</a>：推荐（本教程使用该固件）。选择<code>ROOTFS (SQUASHFS)</code>类型下载，编写教程时最新版本为<code>immortalwrt-24.10.4-x86-64-generic-squashfs-rootfs.img.gz</code>。延伸：<a href="https://downloads.immortalwrt.org/">ImmortalWrt官网下载页面</a>和<a href="https://github.com/immortalwrt">ImmortalWrt项目主页</a>。<ul>
-<li>点击「预安装的软件包」按钮，添加编辑器依赖包<code>nano</code>、主题美化包<code>luci-i18n-argon-config-zh-cn</code>和openclash包<code>luci-app-openclash</code>。这一步不操作的话，后面需要自行手动安装软件包。（luci-app-openclash后面均为它的依赖包，依赖包信息参阅<a href="https://github.com/vernesong/OpenClash">GitHub源码仓库页面</a>）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">autocore automount base-files block-mount ca-bundle default-settings-chn dnsmasq-full dropbear fdisk firewall4 fstools grub2-bios-setup i915-firmware-dmc kmod-8139cp kmod-8139too kmod-button-hotplug kmod-e1000e kmod-fs-f2fs kmod-i40e kmod-igb kmod-igbvf kmod-igc kmod-ixgbe kmod-ixgbevf kmod-nf-nathelper kmod-nf-nathelper-extra kmod-nft-offload kmod-pcnet32 kmod-r8101 kmod-r8125 kmod-r8126 kmod-r8168 kmod-tulip kmod-usb-hid kmod-usb-net kmod-usb-net-asix kmod-usb-net-asix-ax88179 kmod-usb-net-rtl8150 kmod-usb-net-rtl8152-vendor kmod-vmxnet3 libc libgcc libustream-openssl logd luci-app-package-manager luci-compat luci-lib-base luci-lib-ipkg luci-light mkf2fs mtd netifd nftables odhcp6c odhcpd-ipv6only opkg partx-utils ppp ppp-mod-pppoe procd-ujail uci uclient-fetch urandom-seed urngd kmod-amazon-ena kmod-amd-xgbe kmod-bnx2 kmod-e1000 kmod-dwmac-intel kmod-forcedeth kmod-fs-vfat kmod-tg3 kmod-drm-i915  nano luci-i18n-argon-config-zh-cn luci-app-openclash luci luci-base bash curl ipset ip-full ruby ruby-yaml unzip iptables kmod-ipt-nat iptables-mod-tproxy iptables-mod-extra kmod-tun ip6tables-mod-nat kmod-inet-diag kmod-nft-tproxy</span><br></pre></td></tr></table></figure></li>
+<li>点击「预安装的软件包」按钮，添加编辑器依赖包<code>nano</code>、主题美化包<code>luci-i18n-argon-config-zh-cn</code>和openclash包<code>luci-app-openclash</code>。自定义镜像下载需要科学上网。这一步不操作的话，后面需要自行手动安装软件包。（luci-app-openclash后面均为它的依赖包，依赖包信息参阅<a href="https://github.com/vernesong/OpenClash">GitHub源码仓库页面</a>）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">autocore automount base-files block-mount ca-bundle default-settings-chn dnsmasq-full dropbear fdisk firewall4 fstools grub2-bios-setup i915-firmware-dmc kmod-8139cp kmod-8139too kmod-button-hotplug kmod-e1000e kmod-fs-f2fs kmod-i40e kmod-igb kmod-igbvf kmod-igc kmod-ixgbe kmod-ixgbevf kmod-nf-nathelper kmod-nf-nathelper-extra kmod-nft-offload kmod-pcnet32 kmod-r8101 kmod-r8125 kmod-r8126 kmod-r8168 kmod-tulip kmod-usb-hid kmod-usb-net kmod-usb-net-asix kmod-usb-net-asix-ax88179 kmod-usb-net-rtl8150 kmod-usb-net-rtl8152-vendor kmod-vmxnet3 libc libgcc libustream-openssl logd luci-app-package-manager luci-compat luci-lib-base luci-lib-ipkg luci-light mkf2fs mtd netifd nftables odhcp6c odhcpd-ipv6only opkg partx-utils ppp ppp-mod-pppoe procd-ujail uci uclient-fetch urandom-seed urngd kmod-amazon-ena kmod-amd-xgbe kmod-bnx2 kmod-e1000 kmod-dwmac-intel kmod-forcedeth kmod-fs-vfat kmod-tg3 kmod-drm-i915  nano luci-i18n-argon-config-zh-cn luci-app-openclash luci luci-base bash curl ipset ip-full ruby ruby-yaml unzip iptables kmod-ipt-nat iptables-mod-tproxy iptables-mod-extra kmod-tun ip6tables-mod-nat kmod-inet-diag kmod-nft-tproxy</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><a href="https://downloads.openwrt.org/">OpenWrt官方固件</a></li>
@@ -6636,19 +6639,20 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <ol start="6">
 <li>手动创建LXC容器（这里不能用网页端选择LXC模板来创建，会报错），若需要后期编辑LXC虚拟机的配置项，使用命令编辑<code>nano /etc/pve/lxc/101.conf</code>。</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pct create 101 /var/lib/vz/template/cache/immortalwrt-24.10.4-x86-64-generic-rootfs.tar.gz --rootfs local-lvm:2 --ostype unmanaged --hostname openwrt --<span class="built_in">arch</span> amd64 --cores 4 --memory 512 --swap 0 -net0 bridge=vmbr4,name=eth0 -net1 bridge=vmbr4,name=eth1 --features nesting=1 --unprivileged 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pct create 101 /var/lib/vz/template/cache/immortalwrt-24.10.4-x86-64-generic-rootfs.tar.gz --rootfs local-lvm:1 --ostype unmanaged --hostname openwrt --<span class="built_in">arch</span> amd64 --cores 4 --memory 512 --swap 0 --net0 bridge=vmbr4,name=eth0 --net1 bridge=vmbr4,name=eth1 --features nesting=1 --unprivileged 0</span><br></pre></td></tr></table></figure>
 <p>参数说明：</p>
 <ul>
 <li><code>pct create 100</code>: 创建一个 ID 为 100 的容器。</li>
 <li><code>/var/lib/vz/template/cache/openwrt-x86-64-generic-rootfs.tar.gz</code>: 指定要使用的根文件系统模板的路径。这里是 OpenWRT 的根文件系统。</li>
-<li><code>--rootfs local-lvm:2</code>: 设置容器的根文件系统存储位置。local-lvm表示使用local-lvm的空间，2表示分配2GB的存储空间。</li>
+<li><code>--rootfs local-lvm:1</code>: 设置容器的根文件系统存储位置。local-lvm表示使用local-lvm的空间，1表示分配2GB的存储空间。根据自己需求调整磁盘空间大小。</li>
 <li><code>--ostype unmanaged</code>: 指定操作系统类型为&quot;unmanaged&quot;，表示 Proxmox 不会对已知操作系统进行特定优化。</li>
 <li><code>--hostname openwrt</code>: 将容器的主机名设置为 openwrt。</li>
 <li><code>--arch amd64</code>: 指定容器的架构为 64 位（amd64）。</li>
 <li><code>--cores 4</code>: 分配 4 个 CPU 核心给容器。</li>
-<li><code>--memory 512</code>: 分配 2048 MB 的内存给容器。</li>
+<li><code>--memory 512</code>: 分配 512 MB 的内存给容器。</li>
 <li><code>--swap 0</code>: 分配 0 MB 的交换空间给容器。</li>
-<li><code>--net0 bridge=vmbr0,name=eth0</code>: 配置第一个网络接口，连接到 vmbr0 桥接，并将接口命名为 eth0。</li>
+<li><code>--net0 bridge=vmbr4,name=eth0</code>: 配置第一个网络接口，连接到 vmbr4 桥接口，并将接口命名为 eth0。</li>
+<li><code>--net1 bridge=vmbr4,name=eth1</code>: 配置第二个网络接口，连接到 vmbr4 桥接口，并将接口命名为 eth1。</li>
 <li><code>--features nesting=1</code>: 启用特定功能。nesting&#x3D;1 允许嵌套虚拟化。</li>
 <li><code>--unprivileged 0</code>：表示使用特权模式（该选项一定要开启，否则OpenWrt的DNSMasq服务无法正常启动）</li>
 </ul>
@@ -7108,16 +7112,13 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li><a href="https://github.com/vernesong/OpenClash/releases/tag/TUN">Tun 游戏内核</a></li>
 </ul>
 </li>
-<li>当前发布的最新内核<ul>
-<li><a href="https://github.com/vernesong/OpenClash/tree/core/master/dev">Dev 内核</a></li>
-<li><a href="https://github.com/vernesong/OpenClash/tree/core/master/premium">Tun 内核</a></li>
+<li>当前发布的最新内核（自v0.46.031-beta起已移除Dev和TUN内核文件的支持）<ul>
+<li><a href="https://github.com/vernesong/OpenClash/tree/core/master/dev"><del>Dev 内核</del></a></li>
+<li><a href="https://github.com/vernesong/OpenClash/tree/core/master/premium"><del>Tun 内核</del></a></li>
 <li><a href="https://github.com/vernesong/OpenClash/tree/core/master/meta">Meta 内核</a></li>
 </ul>
 </li>
 </ul>
-<div class="note danger no-icon"><p>新的内核只支持fake-ip，需要上传Meta内核。</p>
-</div>
-
 <div class="note info no-icon"><p>能科学上网时，点击检查并更新，直接更新核心即可。</p>
 </div>
 
@@ -7155,7 +7156,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>根据情况可能需手动移除之前挂载的<code>/mnt/sda3</code>状态。</li>
 </ol>
 <h1 id="路由方案二：iKuai主路由-OpenWrt旁路由分流的网络拓扑">11 &nbsp&nbsp<a href="#路由方案二：iKuai主路由-OpenWrt旁路由分流的网络拓扑" class="headerlink" title="路由方案二：iKuai主路由+OpenWrt旁路由分流的网络拓扑"></a>路由方案二：iKuai主路由+OpenWrt旁路由分流的网络拓扑</h1><h2 id="iKuai主路由设置">11.1 &nbsp&nbsp<a href="#iKuai主路由设置" class="headerlink" title="iKuai主路由设置"></a>iKuai主路由设置</h2><p><a href="https://github.com/17mon/china_ip_list">大陆地区IP列表</a></p>
-<h2 id="OpenWrt旁路由设置">11.2 &nbsp&nbsp<a href="#OpenWrt旁路由设置" class="headerlink" title="OpenWrt旁路由设置"></a>OpenWrt旁路由设置</h2><div class="note danger no-icon"><p>OP网络异常又需要网络下载文件调试时：关闭OpenClash，调整「网络 -&gt; 接口 -&gt; WAN -&gt; DNS -&gt; 114.114.114.144」。这样OP就能正常访问网络了。</p>
+<h2 id="OpenWrt旁路由设置">11.2 &nbsp&nbsp<a href="#OpenWrt旁路由设置" class="headerlink" title="OpenWrt旁路由设置"></a>OpenWrt旁路由设置</h2><div class="note danger no-icon"><p>该方案选用：ImmortalWrt的LXC容器版本的OpenWrt。</p>
+<p>若OP网络异常且需要网络条件下载文件调试时：关闭OpenClash，调整「网络 -&gt; 接口 -&gt; WAN -&gt; DNS -&gt; 114.114.114.144」。这样OP就能正常访问网络了。</p>
 </div>
 
 <h3 id="网络-1">11.2.1 &nbsp&nbsp<a href="#网络-1" class="headerlink" title="网络"></a>网络</h3><h4 id="接口-LAN-1">11.2.1.1 &nbsp&nbsp<a href="#接口-LAN-1" class="headerlink" title="接口-&gt;LAN"></a>接口-&gt;LAN</h4><ul>
@@ -7193,13 +7195,39 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <ul>
 <li>转发 -&gt; DNS转发 -&gt; 127.0.0.1#7874 (7874是 OpenClash 的 DNS 监听端口)</li>
 </ul>
-<h3 id="OpenClash-1">11.2.2 &nbsp&nbsp<a href="#OpenClash-1" class="headerlink" title="OpenClash"></a>OpenClash</h3><ul>
-<li>插件设置 -&gt; 版本更新 -&gt; 编译版本「linux-amd64-v1(x86-64)」，更新分支「Master」，Smart内核「启用」 -&gt; 检查更新，选择<code>https://fastlyjsdelivr.net/</code>完成下载即可（这一步是下载OpenClash内核，如果下载不成功，需要手动下载上传）</li>
-<li>插件设置 -&gt; DNS设置 -&gt; 本地DNS劫持 -&gt; 禁用（已经设置WAN口的DNS为PaoPaoDNS的IP地址，无需劫持）</li>
-<li>覆写设置 -&gt; DNS设置<ul>
+<h3 id="OpenClash（Redir-Host模式）">11.2.2 &nbsp&nbsp<a href="#OpenClash（Redir-Host模式）" class="headerlink" title="OpenClash（Redir-Host模式）"></a>OpenClash（Redir-Host模式）</h3><div class="note info no-icon"><p>本教程适用于OpenClash v0.47.024+</p>
+</div>
+
+<ul>
+<li>插件设置<ul>
+<li>版本更新 -&gt; 编译版本「linux-amd64-v1(x86-64)」，更新分支「Master」，Smart内核「启用」 -&gt; 检查更新，选择<code>https://fastlyjsdelivr.net/</code>完成下载即可（这一步是下载OpenClash内核，如果下载不成功，需要手动下载上传）</li>
+<li>模式设置<ul>
+<li>「切换页面到Redir-Host模式」（页面底部一个红色按钮）</li>
+<li>运行模式 -&gt; Redir-Host (TUN-混合) 模式【UDP-TUN, TCP-转发】（这个模式任意选吧，笔者实际测试不影响科学上网）</li>
+</ul>
+</li>
+<li>DNS设置 -&gt; 本地DNS劫持 -&gt; 禁用（已经设置WAN口的DNS为PaoPaoDNS的IP地址，无需劫持）</li>
+<li>GEO数据库订阅<ul>
+<li>自动更新 GeoIP MMDB 数据库 -&gt; 勾选</li>
+<li>自动更新 GeoIP Dat 数据库 -&gt; 不勾选 （这个数据库默认不存在，有需要可以自行开启）</li>
+<li>自动更新 GeoSite 数据库 -&gt; 勾选</li>
+<li>自动更新 Geo ASN 数据库 -&gt; 不勾选 （这个数据库默认不存在，有需要可以自行开启）</li>
+</ul>
+</li>
+<li>大陆白名单订阅 -&gt; 自动更新 -&gt; 勾选</li>
+<li>定时重启 -&gt; 定时重启 -&gt; 勾选</li>
+</ul>
+</li>
+<li>覆写设置<ul>
+<li>DNS设置<ul>
 <li>自定义上游DNS服务器 -&gt; 勾选（这个不勾选，无法访问代理服务器）</li>
 <li>遵循规则(repect-rules) -&gt; 勾选 （这个不勾选github会访问异常）</li>
 <li>追加上游DNS -&gt; 勾选（实测勾选与否，并不影响使用）</li>
+</ul>
+</li>
+<li>Meta设置<ul>
+<li>启用TCP并发 -&gt; 勾选</li>
+<li>启用统一延迟 -&gt; 勾选</li>
 </ul>
 </li>
 <li>添加DNS<ul>
@@ -7209,13 +7237,32 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h2 id="构建本地机场订阅转换服务">11.3 &nbsp&nbsp<a href="#构建本地机场订阅转换服务" class="headerlink" title="构建本地机场订阅转换服务"></a>构建本地机场订阅转换服务</h2><p>相关核心项目：</p>
+</li>
+</ul>
+<h4 id="手动下载上传更新OpenClash内核">11.2.2.1 &nbsp&nbsp<a href="#手动下载上传更新OpenClash内核" class="headerlink" title="手动下载上传更新OpenClash内核"></a>手动下载上传更新OpenClash内核</h4><p>内核下载地址（这两种内核解压之后文件都是<code>meta</code>）：</p>
+<ul>
+<li><a href="https://github.com/vernesong/OpenClash/tree/core/master/meta">Meta 内核</a>，选择<code>clash-linux-amd64-v1.tar.gz</code>文件下载。</li>
+<li><a href="https://github.com/vernesong/OpenClash/tree/core/master/smart">Smart 内核</a>，选择<code>clash-linux-amd64-v1.tar.gz</code>文件下载。</li>
+</ul>
+<p>更新步骤：</p>
+<ol>
+<li>下载所需内核文件并解压。</li>
+<li>重命名内核文件，将<code>meta</code>重命名为<code>clash_meta</code>（适用于两种内核文件）。</li>
+<li>使用WinSCP登录openwrt虚拟机（ImmortalWrt默认开启SSH），进入到路径<code>/etc/openclash/core</code>，上传内核文件。右击属性，分配权限0755（rwxr-xr-x）。</li>
+</ol>
+<h4 id="OpenClash自定义直连域名规则集">11.2.2.2 &nbsp&nbsp<a href="#OpenClash自定义直连域名规则集" class="headerlink" title="OpenClash自定义直连域名规则集"></a>OpenClash自定义直连域名规则集</h4><ul>
+<li>方法1：覆写设置-&gt;规则设置-&gt;自定义规则-&gt;勾选（如果网站域名包含www子域名，建议写全，不写全，匹配可能失败）  <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN,cn.bing.com,DIRECT</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN,www.bing.com,DIRECT</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN,www.uupdump.cn,DIRECT</span></span><br></pre></td></tr></table></figure></li>
+<li>方法2：规则附加（rule-providersr），还未探索明白，TODO</li>
+</ul>
+<h2 id="AdGuardHome">11.3 &nbsp&nbsp<a href="#AdGuardHome" class="headerlink" title="AdGuardHome"></a>AdGuardHome</h2><p>TODO</p>
+<h2 id="PaoPaoDNS">11.4 &nbsp&nbsp<a href="#PaoPaoDNS" class="headerlink" title="PaoPaoDNS"></a>PaoPaoDNS</h2><p>TODO</p>
+<h2 id="构建本地机场订阅转换服务">11.5 &nbsp&nbsp<a href="#构建本地机场订阅转换服务" class="headerlink" title="构建本地机场订阅转换服务"></a>构建本地机场订阅转换服务</h2><p>相关核心项目：</p>
 <ul>
 <li>后端项目：<a href="https://github.com/tindy2013/subconverter">tindy2013&#x2F;subconverter</a></li>
 <li>前端项目：<a href="https://github.com/CareyWang/sub-web">CareyWang&#x2F;sub-web</a></li>
 <li>短链服务：<a href="https://github.com/CareyWang/MyUrls">CareyWang&#x2F;MyUrls</a></li>
 </ul>
-<h3 id="PVE新建一个debian虚拟机">11.3.1 &nbsp&nbsp<a href="#PVE新建一个debian虚拟机" class="headerlink" title="PVE新建一个debian虚拟机"></a>PVE新建一个debian虚拟机</h3><p>使用LXC模板（debian-12-standard），完成创建之后，并登录该debian虚拟机（可设置SSH连接）</p>
+<h3 id="PVE新建一个debian虚拟机">11.5.1 &nbsp&nbsp<a href="#PVE新建一个debian虚拟机" class="headerlink" title="PVE新建一个debian虚拟机"></a>PVE新建一个debian虚拟机</h3><p>使用LXC模板（debian-12-standard），完成创建之后，并登录该debian虚拟机（可设置SSH连接）</p>
 <ul>
 <li>容器名称：sub-converter</li>
 <li>内存：2GB（别分配1.5GB以下的内存，否则不够内存完成构建docker镜像）（构建完成docker镜像后，内存可以调整为512MB）</li>
@@ -7224,13 +7271,13 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>根磁盘：5GB（别分配2GB以下的磁盘，否则不够空间完成构建docker镜像）</li>
 <li>网络：选择已分配给主路由LAN口的网桥（我的情况是：vmbr4，IP静态地址：10.10.10.6&#x2F;24，网关：10.10.10.1）</li>
 </ul>
-<h3 id="设置优化debian虚拟机">11.3.2 &nbsp&nbsp<a href="#设置优化debian虚拟机" class="headerlink" title="设置优化debian虚拟机"></a>设置优化debian虚拟机</h3><ol>
+<h3 id="设置优化debian虚拟机">11.5.2 &nbsp&nbsp<a href="#设置优化debian虚拟机" class="headerlink" title="设置优化debian虚拟机"></a>设置优化debian虚拟机</h3><ol>
 <li>为debian修改apt镜像源：<a href="#%E6%9B%BF%E6%8D%A2PVE-8-x%E7%9A%84Debian%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%92%8CPVE%E8%BD%AF%E4%BB%B6%E6%BA%90%EF%BC%88%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%EF%BC%89">替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像）</a></li>
 <li>为debian安装docker：<a href="/code/docker/#%E4%BD%BF%E7%94%A8apt%E4%BB%93%E5%BA%93%E4%B8%BADebian%E5%AE%89%E8%A3%85docker">使用apt仓库为Debian安装docker</a></li>
 <li>为debian系统设置时区：<a href="#%E5%88%9B%E5%BB%BA%E7%9A%84LXC%E5%AE%B9%E5%99%A8debian-12%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E4%B8%8E%E5%AE%BF%E4%B8%BB%E6%9C%BA%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4">创建的LXC容器debian-12系统时间与宿主机时间不一致</a></li>
 <li>为debian系统设置UTF-8语言环境：<a href="#%E4%BD%BF%E7%94%A8debian-12%E7%9A%84CT%E6%A8%A1%E6%9D%BF%E5%88%9B%E5%BB%BALXC%E5%AE%B9%E5%99%A8SSH%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81">使用debian-12的CT模板创建LXC容器SSH终端中文乱码</a></li>
 </ol>
-<h3 id="手动重新构建前端docker镜像">11.3.3 &nbsp&nbsp<a href="#手动重新构建前端docker镜像" class="headerlink" title="手动重新构建前端docker镜像"></a>手动重新构建前端docker镜像</h3><ol>
+<h3 id="手动重新构建前端docker镜像">11.5.3 &nbsp&nbsp<a href="#手动重新构建前端docker镜像" class="headerlink" title="手动重新构建前端docker镜像"></a>手动重新构建前端docker镜像</h3><ol>
 <li>克隆前端项目</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/CareyWang/sub-web.git</span><br></pre></td></tr></table></figure>
@@ -7250,11 +7297,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t subweb-local:latest .</span><br></pre></td></tr></table></figure>
 
-<h3 id="在root账户用户路径下新建docker-compose-yml：nano-docker-compose-yml">11.3.4 &nbsp&nbsp<a href="#在root账户用户路径下新建docker-compose-yml：nano-docker-compose-yml" class="headerlink" title="在root账户用户路径下新建docker-compose.yml：nano docker-compose.yml"></a>在root账户用户路径下新建<code>docker-compose.yml</code>：<code>nano docker-compose.yml</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">services:</span><br><span class="line">  subc:</span><br><span class="line">    hostname: subc</span><br><span class="line">    restart: always</span><br><span class="line">    container_name: subc</span><br><span class="line">    image: tindy2013/subconverter:latest</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">&quot;25500:25500&quot;</span></span><br><span class="line">  subweb:</span><br><span class="line">    hostname: subweb</span><br><span class="line">    restart: always</span><br><span class="line">    container_name: subweb</span><br><span class="line">    image: subweb-local:latest</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">&quot;80:80&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="在root账户用户路径下新建docker-compose-yml：nano-docker-compose-yml">11.5.4 &nbsp&nbsp<a href="#在root账户用户路径下新建docker-compose-yml：nano-docker-compose-yml" class="headerlink" title="在root账户用户路径下新建docker-compose.yml：nano docker-compose.yml"></a>在root账户用户路径下新建<code>docker-compose.yml</code>：<code>nano docker-compose.yml</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">services:</span><br><span class="line">  subc:</span><br><span class="line">    hostname: subc</span><br><span class="line">    restart: always</span><br><span class="line">    container_name: subc</span><br><span class="line">    image: tindy2013/subconverter:latest</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">&quot;25500:25500&quot;</span></span><br><span class="line">  subweb:</span><br><span class="line">    hostname: subweb</span><br><span class="line">    restart: always</span><br><span class="line">    container_name: subweb</span><br><span class="line">    image: subweb-local:latest</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">&quot;80:80&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="运行docker-compose">11.3.5 &nbsp&nbsp<a href="#运行docker-compose" class="headerlink" title="运行docker compose"></a>运行docker compose</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose -f docker-compose.yml up -d</span><br></pre></td></tr></table></figure>
+<h3 id="运行docker-compose">11.5.5 &nbsp&nbsp<a href="#运行docker-compose" class="headerlink" title="运行docker compose"></a>运行docker compose</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose -f docker-compose.yml up -d</span><br></pre></td></tr></table></figure>
 
-<h3 id="验证服务是否运行成功">11.3.6 &nbsp&nbsp<a href="#验证服务是否运行成功" class="headerlink" title="验证服务是否运行成功"></a>验证服务是否运行成功</h3><p>访问前端页面：<a href="http://10.10.10.6/">http://10.10.10.6</a></p>
+<h3 id="验证服务是否运行成功">11.5.6 &nbsp&nbsp<a href="#验证服务是否运行成功" class="headerlink" title="验证服务是否运行成功"></a>验证服务是否运行成功</h3><p>访问前端页面：<a href="http://10.10.10.6/">http://10.10.10.6</a></p>
 <p>通过tcping验证各个端口是否都正常：</p>
 <ul>
 <li><code>tcping 10.10.10.6 80</code></li>
@@ -7730,7 +7777,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <td align="center">6层</td>
 </tr>
 </tbody></table>
-<h1 id="参考文献">21 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.<br>[40] Proxmox VE 容器或虚拟机被锁定解决办法[EB&#x2F;OL]. <a href="https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/</a>.<br>[41] kyleflower&#x2F;clash_rules[EB&#x2F;OL]. <a href="https://github.com/kyleflower/clash_rules">https://github.com/kyleflower/clash_rules</a>.<br>[42] docker搭建MyUrls短链服务,可配合sub-web食用[EB&#x2F;OL]. <a href="http://213.35.110.223:8000/2024/08/1724228021116">http://213.35.110.223:8000/2024/08/1724228021116</a>.<br>[43] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 (Docker版本)[EB&#x2F;OL]. <a href="https://crossbell.io/notes/59373-1">https://crossbell.io/notes/59373-1</a>.<br>[44] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 - 全docker完成 - mihomo内核 避坑指南[EB&#x2F;OL]. <a href="https://imgki.com/archives/718.html">https://imgki.com/archives/718.html</a>.<br>[45] 自建Clash订阅转换[EB&#x2F;OL]. <a href="https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html">https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html</a>.<br>[46] .env 配置在 Docker 中不起作用[EB&#x2F;OL]. <a href="https://github.com/CareyWang/sub-web/issues/68">https://github.com/CareyWang/sub-web/issues/68</a>.<br>[47] [BUG] 使用 Clash Meta 内核开启tun模式出现 connect error: dns resolve failed: context deadline exceeded[EB&#x2F;OL]. <a href="https://github.com/clash-verge-rev/clash-verge-rev/issues/104">https://github.com/clash-verge-rev/clash-verge-rev/issues/104</a>.<br>[48] openclash &quot;all DNS requests failed, first error: dns: bad rdata&quot;错误解决[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/670131605">https://zhuanlan.zhihu.com/p/670131605</a>.<br>[49] 我的家里pve虚拟机经常死机原来是原因这导致的[EB&#x2F;OL]. <a href="https://blog.csdn.net/u010042660/article/details/139935170">https://blog.csdn.net/u010042660/article/details/139935170</a>.<br>[50] pve节点频繁宕机问题排查[EB&#x2F;OL]. <a href="https://www.cnblogs.com/nf01/p/16296724.html">https://www.cnblogs.com/nf01/p/16296724.html</a>.<br>[51] pve8.0 cpu是1265u经常死机，进不去，需要断电重启[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/8488486698">https://tieba.baidu.com/p/8488486698</a>.<br>[52] PBS 维护任务[EB&#x2F;OL]. <a href="https://www.cnblogs.com/varden/p/15251582.html">https://www.cnblogs.com/varden/p/15251582.html</a>.<br>[53] 使用 Proxmox Backup Server 备份 Proxmox VE 的客户机与宿主机[EB&#x2F;OL]. <a href="https://blog.men.ci/backup-pve-with-pbs/">https://blog.men.ci/backup-pve-with-pbs/</a>.<br>[54] Installation[EB&#x2F;OL]. <a href="https://pbs.proxmox.com/docs/installation.html">https://pbs.proxmox.com/docs/installation.html</a>.<br>[55] CUSTOM SCHEMES USING .LINK FILES[EB&#x2F;OL]. <a href="https://wiki.debian.org/NetworkInterfaceNames#CUSTOM_SCHEMES_USING_.LINK_FILES">https://wiki.debian.org/NetworkInterfaceNames#CUSTOM_SCHEMES_USING_.LINK_FILES</a>.<br>[56] ProxmoxVE操作指南(已更新至pve8.0)[EB&#x2F;OL]. <a href="https://ifwww.com/posts/61099.html">https://ifwww.com/posts/61099.html</a>.<br>[57] Is there any purge facility to free up disk space?[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/is-there-any-purge-facility-to-free-up-disk-space.110575/">https://forum.proxmox.com/threads/is-there-any-purge-facility-to-free-up-disk-space.110575/</a>.<br>[58] Proxmox-backup logs[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/proxmox-backup-logs.98220/">https://forum.proxmox.com/threads/proxmox-backup-logs.98220/</a>.<br>[59] How does task-log-max-days work?[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/how-does-task-log-max-days-work.160627/">https://forum.proxmox.com/threads/how-does-task-log-max-days-work.160627/</a>.<br>[60] Linux日志切割神器logrotate原理介绍和配置详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/wangliang888888/article/details/134575630">https://blog.csdn.net/wangliang888888/article/details/134575630</a>.<br>[61] Linux自带神器logrotate详解[EB&#x2F;OL]. <a href="https://www.cnblogs.com/txlsz/p/13126723.html">https://www.cnblogs.com/txlsz/p/13126723.html</a>.<br>[62] 使用logrotate实现日志轮转[EB&#x2F;OL]. <a href="https://blog.csdn.net/LONG_Yi_1994/article/details/147464654">https://blog.csdn.net/LONG_Yi_1994/article/details/147464654</a>.<br>[63] 年轻人折腾的第一台独服 – PVE 7.4 + NAT 内网 + DHCP + K8S 多节点集群 + Istio + CertManager(letsencrypt)[EB&#x2F;OL]. <a href="https://doraemonext.com/archives/347.html">https://doraemonext.com/archives/347.html</a>.<br>[64] AutoBangumi安装问题[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=18727">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=18727</a>.<br>[65] MetaTube Sever deployment (后端部署)[EB&#x2F;OL]. <a href="https://metatube-community.github.io/wiki/server-deployment/#docker-compose">https://metatube-community.github.io/wiki/server-deployment/#docker-compose</a>.<br>[66] 【Docker】搭建一个媒体服务器插件后端API服务 - MetaTube[EB&#x2F;OL]. <a href="https://blog.mvui.cn/detail/7100.html">https://blog.mvui.cn/detail/7100.html</a>.<br>[67] 飞牛NAS搭建私人图书馆，实现网页、手机看电子书[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=16419">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=16419</a>.<br>[68] proxmox container uid&#x2F;gid mapping[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/proxmox-container-uid-gid-mapping.129544/">https://forum.proxmox.com/threads/proxmox-container-uid-gid-mapping.129544/</a>.<br>[69] PVE使用lxc.mount.entry，让LXC容器共享宿主机目录[EB&#x2F;OL]. <a href="https://blog.209902.xyz/archives/1715429836621">https://blog.209902.xyz/archives/1715429836621</a>.<br>[70] 准备 Mikan RSS 订阅链接[EB&#x2F;OL]. <a href="https://www.autobangumi.org/config/rss.html">https://www.autobangumi.org/config/rss.html</a>.<br>[71] 万剑归宗之刮削大法！史上最全从Emby命名规则到刮削设置一条龙图文教程！[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/aox8wp36/">https://post.smzdm.com/p/aox8wp36/</a>.<br>[72] 电影电视剧动漫 标准命名规则，jellfin、emby、kodi都适用[EB&#x2F;OL]. <a href="https://www.shejibiji.com/archives/8295">https://www.shejibiji.com/archives/8295</a>.<br>[73] [错误报告]RSS订阅为国内域名(mikanime.tv)，但torrent获取仍为mikanime.me，以致出现网络连接失败问题[EB&#x2F;OL]. <a href="https://github.com/EstrellaXD/Auto_Bangumi/issues/804">https://github.com/EstrellaXD/Auto_Bangumi/issues/804</a>.<br>[74] Upgrade from 8 to 9[EB&#x2F;OL]. <a href="https://pve.proxmox.com/wiki/Upgrade_from_8_to_9">https://pve.proxmox.com/wiki/Upgrade_from_8_to_9</a>.</p>
+<h1 id="参考文献">21 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installation Failing: &quot;Failed to prepare EFI boot using Grub&quot;[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/">https://forum.proxmox.com/threads/installation-failing-failed-to-prepare-efi-boot-using-grub.122002/</a>.<br>[2] 软路由科普系列 篇二：PVE安装iKuai OpenWrt 旁路由 基础设置 保姆级全教程[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/awrx4lxm/">https://post.smzdm.com/p/awrx4lxm/</a>.<br>[3] ProxmoxVE 7.4 升级到 8.0，详细步骤[EB&#x2F;OL]. <a href="https://blog.margrop.net/post/pve-7-upgrade-to-8/">https://blog.margrop.net/post/pve-7-upgrade-to-8/</a>.<br>[4] PVE 联网及更换国内源[EB&#x2F;OL]. <a href="https://www.cnblogs.com/pdblogs/p/16218543.html">https://www.cnblogs.com/pdblogs/p/16218543.html</a>.<br>[5] Force update from unsigned repository[EB&#x2F;OL]. <a href="https://askubuntu.com/questions/732985/force-update-from-unsigned-repository">https://askubuntu.com/questions/732985/force-update-from-unsigned-repository</a>.<br>[6] ProxmoxVE(PVE) 启用 IOMMU[EB&#x2F;OL]. <a href="https://www.insilen.com/post/501.html">https://www.insilen.com/post/501.html</a>.<br>[7] Enable IOMMU or VT-d in your motherboard BIOS[EB&#x2F;OL]. <a href="https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html">https://us.informatiweb.net/tutorials/it/bios/enable-iommu-or-vt-d-in-your-bios.html</a>.<br>[8] ProxmoxVE(PVE) 使用 IMG 镜像文件，img 转 qcow2[EB&#x2F;OL]. <a href="https://www.lxtx.tech/index.php/archives/65/">https://www.lxtx.tech/index.php/archives/65/</a>.<br>[9]『软路由踩坑指南』篇三：ESXi 8.0 虚拟机安装 iKuai 主路由及保姆级配置[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a5op28x7/">https://post.smzdm.com/p/a5op28x7/</a>.<br>[10]『软路由踩坑指南』篇四：ESXi 8.0 虚拟机安装 openWrt 路由系统终极指南[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/a7ngxeel/">https://post.smzdm.com/p/a7ngxeel/</a>.<br>[11]『软路由踩坑指南』篇五：OpenWrt 旁路由进阶篇 SmartDNS+AdGuardHome 设置 DNS 分流、秒开网页、去广告[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/axz6z7w9/">https://post.smzdm.com/p/axz6z7w9/</a>.<br>[12] [openwrt(x86)] OPenWRT 旁路由 +MosDNS+OpenClash+AdGuard Home 傻瓜配置图文教程[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-8284982-1-1.html">https://www.right.com.cn/forum/thread-8284982-1-1.html</a>.<br>[13] OpenWrt 扩容 Overlay 和 Docker 软件安装空间教程（内置硬盘版）附：Samba 网络共享设置[EB&#x2F;OL]. <a href="https://www.right.com.cn/forum/thread-7470757-1-1.html">https://www.right.com.cn/forum/thread-7470757-1-1.html</a>.<br>[14] [OpenWrt] 使用 OpenClash 科学上网[EB&#x2F;OL]. <a href="http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/">http://suyu0925.github.io/blog/2022/07/25/openwrt-openclash/</a>.<br>[15] 镜像站使用帮助-Proxmox 软件仓库[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/">https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/</a>.<br>[16] 开启直通[EB&#x2F;OL]. <a href="https://skyao.io/learning-pve/docs/pass-through/enable/">https://skyao.io/learning-pve/docs/pass-through/enable/</a>.<br>[17] [经验分享] 在线连接数测试网页，简单一键测试宽带并发连接数限制[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/thread-87196-1-1.html">https://bbs.ikuai8.com/thread-87196-1-1.html</a>.<br>[18] 禁用Swap cache[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=2492">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=2492</a>.<br>[19] 镜像站使用帮助-Debian 软件源[EB&#x2F;OL]. <a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a>.<br>[20] 第 5 章 bookworm 中需要注意的问题[EB&#x2F;OL]. <a href="https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html">https://www.debian.org/releases/bookworm//amd64/release-notes/ch-information.zh-cn.html</a>.<br>[21] 【装机帮扶站】第881期：BUG处理器能选否？聊聊12代ES处理器[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/458166029">https://zhuanlan.zhihu.com/p/458166029</a>.<br>[22] 爱快ikuai和windows电脑使用iperf3测试内网传输速度[EB&#x2F;OL]. <a href="https://www.mulingyuer.com/archives/1073/">https://www.mulingyuer.com/archives/1073/</a>.<br>[23] PVE8.3.0折腾记（一）——PVE初次安装后更换国内源[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_52626278/article/details/144147244">https://blog.csdn.net/weixin_52626278/article/details/144147244</a>.<br>[24] 解决PVE安装独显后，核显消失，无法直通的问题。[EB&#x2F;OL]. <a href="http://157.0.230.2:8090/archives/owKXsHkN">http://157.0.230.2:8090/archives/owKXsHkN</a>.<br>[25] PVE下LXC ubuntu 中文乱码解决[EB&#x2F;OL]. <a href="https://blog.csdn.net/zyr920425/article/details/131126045">https://blog.csdn.net/zyr920425/article/details/131126045</a>.<br>[26] Proxmox VE常见问题以及解决办法（持续更新）[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_40858216/article/details/106784329">https://blog.csdn.net/qq_40858216/article/details/106784329</a>.<br>[27] Proxmox VE面板节点和虚拟机提示问号，节点状态 unknown,储存一直打不开，虚拟机正常的诊断思路[EB&#x2F;OL]. <a href="https://www.wjxy.net.cn/?p=2629">https://www.wjxy.net.cn/?p=2629</a>.<br>[28] 给容器设置内核参数[EB&#x2F;OL]. <a href="https://cloud.tencent.com/developer/article/1583736">https://cloud.tencent.com/developer/article/1583736</a>.<br>[29] Using sysctls in a Kubernetes Cluster[EB&#x2F;OL]. <a href="https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters">https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/#listing-all-sysctl-parameters</a>.<br>[30] setting key &quot;vm.max_map_count&quot;: Read-only file system[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/">https://forum.proxmox.com/threads/setting-key-vm-max_map_count-read-only-file-system.28720/</a>.<br>[31] After installation with Ventoy rdinit&#x3D;&#x2F;vtoy&#x2F;vtoy[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/">https://forum.proxmox.com/threads/after-installation-with-ventoy-rdinit-vtoy-vtoy.153979/</a>.<br>[32] 升级至QEMU 9.2.0后直通失败[EB&#x2F;OL]. <a href="https://github.com/gangqizai/igd/issues/27">https://github.com/gangqizai/igd/issues/27</a>.<br>[33] 每过段时间修改编辑配置那些失效[EB&#x2F;OL]. <a href="https://bbs.ikuai8.com/forum.php?mod=viewthread&tid=146800&extra=page=1&filter=typeid&typeid=20">https://bbs.ikuai8.com/forum.php?mod=viewthread&amp;tid=146800&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D20</a>.<br>[34] proxmox安装定义磁盘分区大小[EB&#x2F;OL]. <a href="https://www.cnblogs.com/weihua2020/p/13723466.html">https://www.cnblogs.com/weihua2020/p/13723466.html</a>.<br>[35] minfree for lvm snapshots[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/">https://forum.proxmox.com/threads/minfree-for-lvm-snapshots.28977/</a>.<br>[36] Backup fails with Logical Volume already exists in volume group[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/">https://forum.proxmox.com/threads/backup-fails-with-logical-volume-already-exists-in-volume-group.42377/</a>.<br>[37] PVE8.3.1 LXC下安装 OpenWRT 记录[EB&#x2F;OL]. <a href="https://www.cnblogs.com/airoot/p/18715211">https://www.cnblogs.com/airoot/p/18715211</a>.<br>[38] LXC容器中安装openwrt作为主路由[EB&#x2F;OL]. <a href="https://blog.jmal.top/s/lxc-openwrt-main-router">https://blog.jmal.top/s/lxc-openwrt-main-router</a>.<br>[39] ping: bad address ‘openwrt.org’[EB&#x2F;OL]. <a href="https://blog.axiaoke.cn/archives/1173.html">https://blog.axiaoke.cn/archives/1173.html</a>.<br>[40] Proxmox VE 容器或虚拟机被锁定解决办法[EB&#x2F;OL]. <a href="https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">https://www.wort.cloud/post/notes/proxmox-ve-lxc%e5%ae%b9%e5%99%a8%e8%a2%ab%e9%94%81%e5%ae%9a%ef%bc%8c%e7%8a%b6%e6%80%81%e4%b8%barollback%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/</a>.<br>[41] kyleflower&#x2F;clash_rules[EB&#x2F;OL]. <a href="https://github.com/kyleflower/clash_rules">https://github.com/kyleflower/clash_rules</a>.<br>[42] docker搭建MyUrls短链服务,可配合sub-web食用[EB&#x2F;OL]. <a href="http://213.35.110.223:8000/2024/08/1724228021116">http://213.35.110.223:8000/2024/08/1724228021116</a>.<br>[43] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 (Docker版本)[EB&#x2F;OL]. <a href="https://crossbell.io/notes/59373-1">https://crossbell.io/notes/59373-1</a>.<br>[44] 自建Clash订阅转换 - Subconverter+Subweb+MyUrls搭建教程 - 全docker完成 - mihomo内核 避坑指南[EB&#x2F;OL]. <a href="https://imgki.com/archives/718.html">https://imgki.com/archives/718.html</a>.<br>[45] 自建Clash订阅转换[EB&#x2F;OL]. <a href="https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html">https://lwnlh.com/14_Self-built_Clash_Subscription_Conversion.html</a>.<br>[46] .env 配置在 Docker 中不起作用[EB&#x2F;OL]. <a href="https://github.com/CareyWang/sub-web/issues/68">https://github.com/CareyWang/sub-web/issues/68</a>.<br>[47] [BUG] 使用 Clash Meta 内核开启tun模式出现 connect error: dns resolve failed: context deadline exceeded[EB&#x2F;OL]. <a href="https://github.com/clash-verge-rev/clash-verge-rev/issues/104">https://github.com/clash-verge-rev/clash-verge-rev/issues/104</a>.<br>[48] openclash &quot;all DNS requests failed, first error: dns: bad rdata&quot;错误解决[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/670131605">https://zhuanlan.zhihu.com/p/670131605</a>.<br>[49] 我的家里pve虚拟机经常死机原来是原因这导致的[EB&#x2F;OL]. <a href="https://blog.csdn.net/u010042660/article/details/139935170">https://blog.csdn.net/u010042660/article/details/139935170</a>.<br>[50] pve节点频繁宕机问题排查[EB&#x2F;OL]. <a href="https://www.cnblogs.com/nf01/p/16296724.html">https://www.cnblogs.com/nf01/p/16296724.html</a>.<br>[51] pve8.0 cpu是1265u经常死机，进不去，需要断电重启[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/8488486698">https://tieba.baidu.com/p/8488486698</a>.<br>[52] PBS 维护任务[EB&#x2F;OL]. <a href="https://www.cnblogs.com/varden/p/15251582.html">https://www.cnblogs.com/varden/p/15251582.html</a>.<br>[53] 使用 Proxmox Backup Server 备份 Proxmox VE 的客户机与宿主机[EB&#x2F;OL]. <a href="https://blog.men.ci/backup-pve-with-pbs/">https://blog.men.ci/backup-pve-with-pbs/</a>.<br>[54] Installation[EB&#x2F;OL]. <a href="https://pbs.proxmox.com/docs/installation.html">https://pbs.proxmox.com/docs/installation.html</a>.<br>[55] CUSTOM SCHEMES USING .LINK FILES[EB&#x2F;OL]. <a href="https://wiki.debian.org/NetworkInterfaceNames#CUSTOM_SCHEMES_USING_.LINK_FILES">https://wiki.debian.org/NetworkInterfaceNames#CUSTOM_SCHEMES_USING_.LINK_FILES</a>.<br>[56] ProxmoxVE操作指南(已更新至pve8.0)[EB&#x2F;OL]. <a href="https://ifwww.com/posts/61099.html">https://ifwww.com/posts/61099.html</a>.<br>[57] Is there any purge facility to free up disk space?[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/is-there-any-purge-facility-to-free-up-disk-space.110575/">https://forum.proxmox.com/threads/is-there-any-purge-facility-to-free-up-disk-space.110575/</a>.<br>[58] Proxmox-backup logs[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/proxmox-backup-logs.98220/">https://forum.proxmox.com/threads/proxmox-backup-logs.98220/</a>.<br>[59] How does task-log-max-days work?[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/how-does-task-log-max-days-work.160627/">https://forum.proxmox.com/threads/how-does-task-log-max-days-work.160627/</a>.<br>[60] Linux日志切割神器logrotate原理介绍和配置详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/wangliang888888/article/details/134575630">https://blog.csdn.net/wangliang888888/article/details/134575630</a>.<br>[61] Linux自带神器logrotate详解[EB&#x2F;OL]. <a href="https://www.cnblogs.com/txlsz/p/13126723.html">https://www.cnblogs.com/txlsz/p/13126723.html</a>.<br>[62] 使用logrotate实现日志轮转[EB&#x2F;OL]. <a href="https://blog.csdn.net/LONG_Yi_1994/article/details/147464654">https://blog.csdn.net/LONG_Yi_1994/article/details/147464654</a>.<br>[63] 年轻人折腾的第一台独服 – PVE 7.4 + NAT 内网 + DHCP + K8S 多节点集群 + Istio + CertManager(letsencrypt)[EB&#x2F;OL]. <a href="https://doraemonext.com/archives/347.html">https://doraemonext.com/archives/347.html</a>.<br>[64] AutoBangumi安装问题[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=18727">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=18727</a>.<br>[65] MetaTube Sever deployment (后端部署)[EB&#x2F;OL]. <a href="https://metatube-community.github.io/wiki/server-deployment/#docker-compose">https://metatube-community.github.io/wiki/server-deployment/#docker-compose</a>.<br>[66] 【Docker】搭建一个媒体服务器插件后端API服务 - MetaTube[EB&#x2F;OL]. <a href="https://blog.mvui.cn/detail/7100.html">https://blog.mvui.cn/detail/7100.html</a>.<br>[67] 飞牛NAS搭建私人图书馆，实现网页、手机看电子书[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=16419">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=16419</a>.<br>[68] proxmox container uid&#x2F;gid mapping[EB&#x2F;OL]. <a href="https://forum.proxmox.com/threads/proxmox-container-uid-gid-mapping.129544/">https://forum.proxmox.com/threads/proxmox-container-uid-gid-mapping.129544/</a>.<br>[69] PVE使用lxc.mount.entry，让LXC容器共享宿主机目录[EB&#x2F;OL]. <a href="https://blog.209902.xyz/archives/1715429836621">https://blog.209902.xyz/archives/1715429836621</a>.<br>[70] 准备 Mikan RSS 订阅链接[EB&#x2F;OL]. <a href="https://www.autobangumi.org/config/rss.html">https://www.autobangumi.org/config/rss.html</a>.<br>[71] 万剑归宗之刮削大法！史上最全从Emby命名规则到刮削设置一条龙图文教程！[EB&#x2F;OL]. <a href="https://post.smzdm.com/p/aox8wp36/">https://post.smzdm.com/p/aox8wp36/</a>.<br>[72] 电影电视剧动漫 标准命名规则，jellfin、emby、kodi都适用[EB&#x2F;OL]. <a href="https://www.shejibiji.com/archives/8295">https://www.shejibiji.com/archives/8295</a>.<br>[73] [错误报告]RSS订阅为国内域名(mikanime.tv)，但torrent获取仍为mikanime.me，以致出现网络连接失败问题[EB&#x2F;OL]. <a href="https://github.com/EstrellaXD/Auto_Bangumi/issues/804">https://github.com/EstrellaXD/Auto_Bangumi/issues/804</a>.<br>[74] Upgrade from 8 to 9[EB&#x2F;OL]. <a href="https://pve.proxmox.com/wiki/Upgrade_from_8_to_9">https://pve.proxmox.com/wiki/Upgrade_from_8_to_9</a>.<br>[75] iKuai与Openwrt的有机结合：传统旁路由方案的完美替代[EB&#x2F;OL]. <a href="https://www.jackiewu.top/article/best-alternative-solution-for-transparent-gateway">https://www.jackiewu.top/article/best-alternative-solution-for-transparent-gateway</a>.<br>[76] 爱快(iKuai) DualWAN + OpenWrt 旁路网关流量无感分流，替换传统旁路由架构，实现流控和防火墙流量过滤[EB&#x2F;OL]. <a href="https://blog.gazer.win/essay/ikuai-multiwan-bypass-flow-with-openwrt.html">https://blog.gazer.win/essay/ikuai-multiwan-bypass-flow-with-openwrt.html</a>.</p>
 ]]></content>
       <categories>
         <category>software</category>
@@ -9701,12 +9748,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#x40;&#x74;&#x68;&#x61;&#110;&#107;&#121;&#111;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
 <li><a href="mailto:&#x31;&#x40;&#49;&#46;&#99;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#x73;&#46;&#99;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#111;&#117;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#x40;&#116;&#x68;&#97;&#110;&#107;&#115;&#x2e;&#x63;&#111;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -13708,24 +13755,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender教程总结</title>
-    <url>/software/blender/tranining/training/</url>
-    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
-<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
-</ul>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-        <category>tranining</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>Blender</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -13747,6 +13776,24 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>苹果</tag>
         <tag>小刀</tag>
         <tag>布料</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender教程总结</title>
+    <url>/software/blender/tranining/training/</url>
+    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
+<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
+</ul>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+        <category>tranining</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>教程</tag>
+        <tag>Blender</tag>
       </tags>
   </entry>
   <entry>
@@ -13883,7 +13930,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#x69;&#x73;&#116;&#101;&#114;&#107;&#x69;&#110;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#x73;&#116;&#101;&#x72;&#x6b;&#x69;&#110;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -14683,13 +14730,13 @@ CGI&后期处理
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/umaru/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+    <url>/live2d-models/umaru/umaru.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/umaru/umaru.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
+    <url>/live2d-models/umaru/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
   </entry>
   <entry>
     <title>艺术作品</title>
