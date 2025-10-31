@@ -2614,29 +2614,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
-<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
-<ul>
-<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
-</ul>
-<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
-<ul>
-<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
-<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
-</ul>
-<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机安全</title>
     <url>/code/computer-security/</url>
     <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
@@ -3326,8 +3303,31 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#x40;&#x31;&#55;&#50;&#x2e;&#x31;&#57;&#x2e;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#x74;&#x40;&#49;&#x37;&#50;&#x2e;&#x31;&#x39;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
+<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
+<ul>
+<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
+</ul>
+<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
+<ul>
+<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
+<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
+</ul>
+<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>code</category>
       </categories>
@@ -6135,78 +6135,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Office总结笔记</title>
-    <url>/software/office/</url>
-    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
-<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
-<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
-<li>分节符用的下一页。</li>
-</ul>
-<p>关于分页符和分节符的删除：</p>
-<ul>
-<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
-<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
-</ul>
-<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
-<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
-<li>单击时，只能使用一次。双击时，能多次使用。</li>
-</ul>
-<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
-<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
-<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
-<p>几种模式的区别：</p>
-<ul>
-<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
-<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
-</ul>
-<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
-<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
-<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
-<li>在第二页表格第一行，插入空白页。</li>
-<li>之后删除表格页。</li>
-</ol>
-<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
-<li>创建文献编号，排版文献<ol>
-<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
-<li>在数值左右分别添加 [] 符号</li>
-<li>对参考文献使用该格式进行排版</li>
-</ol>
-</li>
-<li>交叉引用，插入引用编号<ol>
-<li>「引用」选项卡 &gt; 交叉引用</li>
-<li>编号项 + 段落编号 + 插入为超链接</li>
-<li>选择所引用的参考文献</li>
-</ol>
-</li>
-<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
-</ol>
-<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
-<li>无任何数据的初始列：设置单元格式</li>
-<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
-</ul>
-<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
-<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
-<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
-<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
-</ul>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>软件</tag>
-        <tag>office</tag>
-        <tag>excel</tag>
-        <tag>word</tag>
-        <tag>ppt</tag>
-        <tag>powerpoint</tag>
-        <tag>操作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<table>
@@ -6298,7 +6226,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h2 id="i5-12400-云星Matx-Z690-NAS主板配置">2.3 &nbsp&nbsp<a href="#i5-12400-云星Matx-Z690-NAS主板配置" class="headerlink" title="i5-12400+云星Matx-Z690 NAS主板配置"></a>i5-12400+云星Matx-Z690 NAS主板配置</h2><h2 id="云星Matx-Z690-NAS主板BIOS优化设置">2.4 &nbsp&nbsp<a href="#云星Matx-Z690-NAS主板BIOS优化设置" class="headerlink" title="云星Matx-Z690 NAS主板BIOS优化设置"></a>云星Matx-Z690 NAS主板BIOS优化设置</h2><blockquote>
 <p>快速启动菜单按键：F11键<br>进入BIOS模式按键：DEL键</p>
 </blockquote>
-<h1 id="安装及升级PVE">3 &nbsp&nbsp<a href="#安装及升级PVE" class="headerlink" title="安装及升级PVE"></a>安装及升级PVE</h1><h2 id="PVE安装步骤">3.1 &nbsp&nbsp<a href="#PVE安装步骤" class="headerlink" title="PVE安装步骤"></a>PVE安装步骤</h2><ol>
+<h1 id="安装及升级PVE-Proxmox-VE">3 &nbsp&nbsp<a href="#安装及升级PVE-Proxmox-VE" class="headerlink" title="安装及升级PVE(Proxmox VE)"></a>安装及升级PVE(Proxmox VE)</h1><h2 id="PVE安装步骤">3.1 &nbsp&nbsp<a href="#PVE安装步骤" class="headerlink" title="PVE安装步骤"></a>PVE安装步骤</h2><ol>
 <li>下载PVE系统镜像：<a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">点击跳转</a>（安装步骤适用于PVE 7.x-PVE 9.x，一般选择最新版本即可。我当初编写教程时，由于机器原因是需要下载pve 7.4的iso镜像文件，因为安装pve 8.x会引起<code>bootloader setup errors</code>报错而导致安装PVE系统失败。）</li>
 <li>制作U盘启动项：<a href="https://github.com/ventoy/Ventoy/releases">ventoy</a>。拷贝镜像iso文件到U盘，启动选择pve镜像进入，选择图形安装界面。</li>
 <li>同意协议。</li>
@@ -6642,7 +6570,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>输入字母o回车进入其「其他选项」，开启外网访问web。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.1/">http://192.168.1.1:80</a>。默认账户：admin。默认密码：admin。</li>
 </ol>
-<h2 id="安装飞牛私有云fnOS（KVM虚拟机）">7.2 &nbsp&nbsp<a href="#安装飞牛私有云fnOS（KVM虚拟机）" class="headerlink" title="安装飞牛私有云fnOS（KVM虚拟机）"></a>安装飞牛私有云fnOS（KVM虚拟机）</h2><ol>
+<h2 id="安装及配置飞牛私有云fnOS（KVM虚拟机）">7.2 &nbsp&nbsp<a href="#安装及配置飞牛私有云fnOS（KVM虚拟机）" class="headerlink" title="安装及配置飞牛私有云fnOS（KVM虚拟机）"></a>安装及配置飞牛私有云fnOS（KVM虚拟机）</h2><ol>
 <li>下载飞牛私有云fnOS镜像：<a href="https://www.fnnas.com/download">点击跳转</a></li>
 <li>local-内容-上传：fnOS的安装镜像文件。</li>
 <li>创建虚拟机，命名虚拟机名称fnOS，VM编号102。</li>
@@ -6663,7 +6591,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>进入到传统Linux登录界面（无GUI），这里能看到WEB管理地址。若需要固定IP地址，在<code>iKuai</code>中找到对应MAC地址加入静态分配表即可。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.5:5666/">http://192.168.1.5:5666/</a>。首次访问会提示创建NAS<code>设备名称``超级管理员账号``密码``确认密码</code>。</li>
 </ol>
-<h3 id="飞牛私有云fnOS的硬件直通设置">7.2.1 &nbsp&nbsp<a href="#飞牛私有云fnOS的硬件直通设置" class="headerlink" title="飞牛私有云fnOS的硬件直通设置"></a>飞牛私有云fnOS的硬件直通设置</h3><p>新版PVE无需额外设置什么直通参数，系统内核自带默认开启了IOMMU支持。</p>
+<h3 id="飞牛私有云fnOS的硬件直通设置">7.2.1 &nbsp&nbsp<a href="#飞牛私有云fnOS的硬件直通设置" class="headerlink" title="飞牛私有云fnOS的硬件直通设置"></a>飞牛私有云fnOS的硬件直通设置</h3><p>新版PVE（5.15 版本以后）无需额外设置什么直通参数，系统内核自带默认开启了IOMMU支持。</p>
 <p>需要额外注意的一点是：安装飞牛系统时先不要加PCI设备，照常安装飞牛fnOS系统，正常设置完成之后，再关闭虚拟机添加PCI设备，例如核显和sata控制器（添加PCI设备-&gt;原始设备时，按默认参数即可，也无需勾选「所有功能」）。</p>
 <ul>
 <li>核显设备：Alder Lake-S GT1 [UHD Graphics 730]</li>
@@ -6771,7 +6699,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim编辑：按 i 进入修改模式，按 esc 退出编辑模式，输入:wq回车保存修改并退出</span></span><br><span class="line">vim /etc/config/network</span><br><span class="line">service network restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置文件内容（请按自己的网络拓扑需求进行修改）</span></span><br><span class="line">config interface <span class="string">&#x27;loopback&#x27;</span></span><br><span class="line">        option device <span class="string">&#x27;lo&#x27;</span></span><br><span class="line">        option proto <span class="string">&#x27;static&#x27;</span></span><br><span class="line">        option ipaddr <span class="string">&#x27;127.0.0.1&#x27;</span></span><br><span class="line">        option netmask <span class="string">&#x27;255.0.0.0&#x27;</span></span><br><span class="line"></span><br><span class="line">config globals <span class="string">&#x27;globals&#x27;</span></span><br><span class="line">        option ula_prefix <span class="string">&#x27;fdbb:d148:dd0e::/48&#x27;</span></span><br><span class="line">        option packet_steering <span class="string">&#x27;1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除br-lan网桥设备的设置</span></span><br><span class="line"><span class="comment"># config device</span></span><br><span class="line"><span class="comment">#         option name &#x27;br-lan&#x27;</span></span><br><span class="line"><span class="comment">#         option type &#x27;bridge&#x27;</span></span><br><span class="line"><span class="comment">#         list ports &#x27;eth0&#x27;</span></span><br><span class="line"></span><br><span class="line">config interface <span class="string">&#x27;lan&#x27;</span></span><br><span class="line">        option device <span class="string">&#x27;eth0&#x27;</span> <span class="comment"># 修改为eth0</span></span><br><span class="line">        option proto <span class="string">&#x27;static&#x27;</span></span><br><span class="line">        option ipaddr <span class="string">&#x27;10.10.11.1&#x27;</span> <span class="comment"># 修改IP</span></span><br><span class="line">        option netmask <span class="string">&#x27;255.255.255.0&#x27;</span></span><br><span class="line">        <span class="comment"># option ip6assign &#x27;60&#x27; 删除此项</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># WAN口修改如下</span></span><br><span class="line">config interface <span class="string">&#x27;wan&#x27;</span></span><br><span class="line">        option device <span class="string">&#x27;eth1&#x27;</span></span><br><span class="line">        option proto <span class="string">&#x27;static&#x27;</span></span><br><span class="line">        option ipaddr <span class="string">&#x27;10.10.10.3&#x27;</span></span><br><span class="line">        option netmask <span class="string">&#x27;255.255.255.0&#x27;</span></span><br><span class="line">        option gateway <span class="string">&#x27;10.10.10.1&#x27;</span></span><br><span class="line">        list dns <span class="string">&#x27;114.114.114.114&#x27;</span></span><br><span class="line">        option broadcast <span class="string">&#x27;10.10.10.255&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Proxmox-Backup-Server的安装及配置（PBS备份服务器）（LXC容器）">9.2 &nbsp&nbsp<a href="#Proxmox-Backup-Server的安装及配置（PBS备份服务器）（LXC容器）" class="headerlink" title="Proxmox Backup Server的安装及配置（PBS备份服务器）（LXC容器）"></a>Proxmox Backup Server的安装及配置（PBS备份服务器）（LXC容器）</h2><h3 id="安装Proxmox-Backup-Server">9.2.1 &nbsp&nbsp<a href="#安装Proxmox-Backup-Server" class="headerlink" title="安装Proxmox Backup Server"></a>安装Proxmox Backup Server</h3><ol>
+<h2 id="安装、配置及升级PBS-Proxmox-Backup-Server-（LXC容器）">9.2 &nbsp&nbsp<a href="#安装、配置及升级PBS-Proxmox-Backup-Server-（LXC容器）" class="headerlink" title="安装、配置及升级PBS(Proxmox Backup Server)（LXC容器）"></a>安装、配置及升级PBS(Proxmox Backup Server)（LXC容器）</h2><h3 id="安装Proxmox-Backup-Server">9.2.1 &nbsp&nbsp<a href="#安装Proxmox-Backup-Server" class="headerlink" title="安装Proxmox Backup Server"></a>安装Proxmox Backup Server</h3><ol>
 <li>创建LXC容器配置（debian-12-standard_12.7-1_amd64）<ul>
 <li>核心：2</li>
 <li>内存：512MB</li>
@@ -7386,7 +7314,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li><code>tcping 10.10.10.6 80</code></li>
 <li><code>tcping 10.10.10.6 25500</code></li>
 </ul>
-<h1 id="PVE总结">15 &nbsp&nbsp<a href="#PVE总结" class="headerlink" title="PVE总结"></a>PVE总结</h1><h2 id="PVE-Proxmox-VE-虚拟机各硬件模型总结">15.1 &nbsp&nbsp<a href="#PVE-Proxmox-VE-虚拟机各硬件模型总结" class="headerlink" title="PVE(Proxmox VE)虚拟机各硬件模型总结"></a>PVE(Proxmox VE)虚拟机各硬件模型总结</h2><p>TODO</p>
+<h1 id="PVE-Proxmox-VE-总结">15 &nbsp&nbsp<a href="#PVE-Proxmox-VE-总结" class="headerlink" title="PVE(Proxmox VE)总结"></a>PVE(Proxmox VE)总结</h1><h2 id="PVE-Proxmox-VE-虚拟机各硬件模型总结">15.1 &nbsp&nbsp<a href="#PVE-Proxmox-VE-虚拟机各硬件模型总结" class="headerlink" title="PVE(Proxmox VE)虚拟机各硬件模型总结"></a>PVE(Proxmox VE)虚拟机各硬件模型总结</h2><p>TODO</p>
 <h2 id="PVE服务器的网络拓扑思路">15.2 &nbsp&nbsp<a href="#PVE服务器的网络拓扑思路" class="headerlink" title="PVE服务器的网络拓扑思路"></a>PVE服务器的网络拓扑思路</h2><p>一般而言，TODO</p>
 <p><code>vmbr0</code>为PVE初始创建的默认网桥，一般设置如下参数：</p>
 <ul>
@@ -7872,6 +7800,78 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>openwrt</tag>
         <tag>虚拟机</tag>
         <tag>fnOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Office总结笔记</title>
+    <url>/software/office/</url>
+    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
+<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
+<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
+<li>分节符用的下一页。</li>
+</ul>
+<p>关于分页符和分节符的删除：</p>
+<ul>
+<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
+<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
+</ul>
+<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
+<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
+<li>单击时，只能使用一次。双击时，能多次使用。</li>
+</ul>
+<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
+<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
+<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
+<p>几种模式的区别：</p>
+<ul>
+<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
+<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
+</ul>
+<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
+<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
+<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
+<li>在第二页表格第一行，插入空白页。</li>
+<li>之后删除表格页。</li>
+</ol>
+<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
+<li>创建文献编号，排版文献<ol>
+<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
+<li>在数值左右分别添加 [] 符号</li>
+<li>对参考文献使用该格式进行排版</li>
+</ol>
+</li>
+<li>交叉引用，插入引用编号<ol>
+<li>「引用」选项卡 &gt; 交叉引用</li>
+<li>编号项 + 段落编号 + 插入为超链接</li>
+<li>选择所引用的参考文献</li>
+</ol>
+</li>
+<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
+</ol>
+<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
+<li>无任何数据的初始列：设置单元格式</li>
+<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
+</ul>
+<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
+<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
+<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
+<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
+</ul>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>软件</tag>
+        <tag>office</tag>
+        <tag>excel</tag>
+        <tag>word</tag>
+        <tag>ppt</tag>
+        <tag>powerpoint</tag>
+        <tag>操作</tag>
       </tags>
   </entry>
   <entry>
@@ -9827,12 +9827,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#x63;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#x61;&#x6e;&#107;&#x73;&#x2e;&#99;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#x61;&#x6e;&#107;&#121;&#111;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -9926,101 +9926,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>电脑</tag>
         <tag>维护</tag>
         <tag>故障</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
-<li>HTML和CSS是用来创建网页的语言。</li>
-<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
-<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
-<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
-<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
-<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
-<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
-<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
-<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
-<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
-<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
-<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
-<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
-<li>可以使用CSS在HTML中指定元素的特性．</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
-<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>第一章</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -10166,11 +10071,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -10655,11 +10560,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
         <tag>第二章</tag>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
       </tags>
   </entry>
   <entry>
@@ -10954,10 +10859,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第三章</tag>
         <tag>字符串</tag>
         <tag>向量</tag>
@@ -11701,10 +11606,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第四章</tag>
         <tag>表达式</tag>
       </tags>
@@ -11872,10 +11777,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五章</tag>
         <tag>语句</tag>
       </tags>
@@ -12204,10 +12109,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第六章</tag>
         <tag>函数</tag>
       </tags>
@@ -12234,11 +12139,300 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cpp-primer-v5</category>
       </categories>
       <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
         <tag>C++</tag>
         <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
         <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
+<li>HTML和CSS是用来创建网页的语言。</li>
+<li>Web服务器存储并提供由HTML和CSS创建的网页。浏览器获取页面，并根据HTML和CSS显示网页的内容。</li>
+<li>HTML是超文本标记语言（HyperText Markup Language）的缩写，用来建立网页的结构。</li>
+<li>CSS是层叠样式表（Cascading Style Sheets）的缩写，用来控制HTML的表现。</li>
+<li>通过HTML，利用标记来标示内容提供结构。把匹配标记以及它们包围的内容称为元素。</li>
+<li>元素由3部分组成：一个开始标记、内容和一个结束标记。不过有些元素（比如<code>&lt;img&gt;</code>）有所例外。</li>
+<li>开始标记可以有属性。比如本章出现的一个属性：type。</li>
+<li>结束标记在左尖括号后面、标记名前面有一个“&#x2F;”，以明确这是结束标记。</li>
+<li>所有页面都要有一个<code>&lt;html&gt;</code>元素，其中要有一个<code>&lt;head&gt;</code>元素和一个<code>&lt;body&gt;</code>元素。</li>
+<li>网页的信息放在<code>&lt;head&gt;</code>元素里。</li>
+<li><code>&lt;body&gt;</code>元素里的内容是用户在浏览器里看到的东西。</li>
+<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让HTML更有可读性。</li>
+<li>可以在<code>&lt;style&gt;</code>元素中写CSS规则，为HTML网页增加CSS。<code>&lt;style&gt;</code>元素总要放在<code>&lt;head&gt;</code>元素里。</li>
+<li>可以使用CSS在HTML中指定元素的特性．</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>Starbuzz Coffee：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/index.html">index.html</a></li>
+<li>Starbuzz Coffee&#39;s Mission： <a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap1/mission.html">mission.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>第一章</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap1/</url>
+    <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
+<li>跨平台应用程序开发框架</li>
+<li>首次发布于1995年5月</li>
+<li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li>
+</ul>
+<h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table>
+<thead>
+<tr>
+<th align="center">目标设备</th>
+<th align="center">目标平台</th>
+<th align="center">主机平台</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center">桌面Linux</td>
+<td align="center">桌面Linux</td>
+</tr>
+<tr>
+<td align="center">计算机</td>
+<td align="center">macOS</td>
+<td align="center">macOS</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Android</td>
+<td align="center">桌面Linux、 macOS、Windows</td>
+</tr>
+<tr>
+<td align="center">移动设备</td>
+<td align="center">iOS</td>
+<td align="center">macOS</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">手机Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">嵌入式Linux</td>
+<td align="center">桌面Linux</td>
+</tr>
+<tr>
+<td align="center">嵌入式设备</td>
+<td align="center">QNX</td>
+<td align="center">桌面Linux、 Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">VxWorks</td>
+<td align="center">桌面Linux、 Windows</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">嵌入式Windows</td>
+<td align="center">Windows</td>
+</tr>
+<tr>
+<td align="center">单片机</td>
+<td align="center">FreeRTOS或无操作系统</td>
+<td align="center">Windows、 桌面Linux</td>
+</tr>
+</tbody></table>
+<p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p>
+<h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p>
+<ul>
+<li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li>
+<li>开源许可：<ul>
+<li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li>
+<li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p>
+<h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol>
+<li>C++ 和 QML<ul>
+<li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li>
+<li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li>
+<li>C++和QML可以混合使用。</li>
+</ul>
+</li>
+<li>Python<ul>
+<li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li>
+<li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li>
+</ul>
+</li>
+</ol>
+<h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p>
+<ul>
+<li>支持 C++ 17 标准。</li>
+<li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li>
+<li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li>
+<li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li>
+<li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li>
+</ul>
+<h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p>
+</div>
+
+<p>自Qt5.1.5起，Qt官方只提供在线安装包。</p>
+<p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p>
+<p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p>
+<h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p>
+<ul>
+<li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li>
+<li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li>
+</ul>
+<p>Qt Creator新建工程的一些总结：</p>
+<ol>
+<li>应用类型：<ul>
+<li>Widgets：widget界面</li>
+<li>Console：控制台程序</li>
+<li>Quick：QML实现的界面</li>
+</ul>
+</li>
+<li>base class基础类：<ul>
+<li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li>
+<li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li>
+<li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li>
+</ul>
+</li>
+<li>翻译文件：i18国际化语言</li>
+</ol>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第一章</tag>
+        <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
+<ul>
+<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
+<li>main.cpp：主程序入口文件，实现main函数</li>
+<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
+<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
+<li>widget.cpp：是实现文件</li>
+<li>res.qrc：资源文件</li>
+</ul>
+<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
+
+<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>第二章</tag>
+        <tag>qt6</tag>
       </tags>
   </entry>
   <entry>
@@ -12480,880 +12674,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>雅思</tag>
         <tag>IELTS</tag>
         <tag>词汇</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第一章「认识Qt」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap1/</url>
-    <content><![CDATA[<h1 id="第一章：认识Qt">1 &nbsp&nbsp<a href="#第一章：认识Qt" class="headerlink" title="第一章：认识Qt"></a>第一章：认识Qt</h1><h2 id="Qt简介">1.1 &nbsp&nbsp<a href="#Qt简介" class="headerlink" title="Qt简介"></a>Qt简介</h2><ul>
-<li>跨平台应用程序开发框架</li>
-<li>首次发布于1995年5月</li>
-<li>qt官网：<a href="http://www.qt.io/">www.qt.io</a></li>
-</ul>
-<h3 id="跨平台开发能力">1.1.1 &nbsp&nbsp<a href="#跨平台开发能力" class="headerlink" title="跨平台开发能力"></a>跨平台开发能力</h3><table>
-<thead>
-<tr>
-<th align="center">目标设备</th>
-<th align="center">目标平台</th>
-<th align="center">主机平台</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center">桌面Linux</td>
-<td align="center">桌面Linux</td>
-</tr>
-<tr>
-<td align="center">计算机</td>
-<td align="center">macOS</td>
-<td align="center">macOS</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">Android</td>
-<td align="center">桌面Linux、 macOS、Windows</td>
-</tr>
-<tr>
-<td align="center">移动设备</td>
-<td align="center">iOS</td>
-<td align="center">macOS</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">手机Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">嵌入式Linux</td>
-<td align="center">桌面Linux</td>
-</tr>
-<tr>
-<td align="center">嵌入式设备</td>
-<td align="center">QNX</td>
-<td align="center">桌面Linux、 Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">VxWorks</td>
-<td align="center">桌面Linux、 Windows</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">嵌入式Windows</td>
-<td align="center">Windows</td>
-</tr>
-<tr>
-<td align="center">单片机</td>
-<td align="center">FreeRTOS或无操作系统</td>
-<td align="center">Windows、 桌面Linux</td>
-</tr>
-</tbody></table>
-<p>Qt 源代码编译后生成目标平台的原生二进制代码，不像Java那样需要虚拟机，运行效率更高。</p>
-<h3 id="Qt许可的类型">1.1.2 &nbsp&nbsp<a href="#Qt许可的类型" class="headerlink" title="Qt许可的类型"></a>Qt许可的类型</h3><p>Qt 的许可类型</p>
-<ul>
-<li>商业许可：按年付费。模块更多，开发者可以不公开自己的源码。</li>
-<li>开源许可：<ul>
-<li>GPLv2 &#x2F; GPLv3 许可：使用了 GLP 许可的 Qt 代码允许销售，但必须开源。 GPLv3还要求公开相关硬件信息。</li>
-<li>LGPLv3 许可：与 GPL 类似，但更宽松。若只是链接或调用 GPL 许可协议的 Qt 代码，可以不开源。</li>
-</ul>
-</li>
-</ul>
-<h3 id="安装包">1.1.3 &nbsp&nbsp<a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p>Qt 安装包：根据目标设备不同，提供了不同的安装包。</p>
-<h3 id="Qt支持的开发语言">1.1.4 &nbsp&nbsp<a href="#Qt支持的开发语言" class="headerlink" title="Qt支持的开发语言"></a>Qt支持的开发语言</h3><ol>
-<li>C++ 和 QML<ul>
-<li>Qt 对标准C++语言进行了扩展，引入了信号与槽等机制。</li>
-<li>QML （ Qt Meta Language） 是一个用来描述应用程序界面的声明式脚本语言。</li>
-<li>C++和QML可以混合使用。</li>
-</ul>
-</li>
-<li>Python<ul>
-<li>Qt C++可以被转换Python绑定，使用 Python 调用 Qt 类库进行GUI程序开发。</li>
-<li>常用的 Qt 类库 Python 绑定有： PyQt （GPLv3 许可）和 PySide （LGPLv3 许可）</li>
-</ul>
-</li>
-</ol>
-<h3 id="Qt6新特性">1.1.5 &nbsp&nbsp<a href="#Qt6新特性" class="headerlink" title="Qt6新特性"></a>Qt6新特性</h3><p>2020 年 12 月正式发布了 Qt6.0 ，引入的主要新特性包括：</p>
-<ul>
-<li>支持 C++ 17 标准。</li>
-<li>Qt 核心库的改动：新的属性和绑定系统；全面支持Unicode 字符串；修改了 QList 的实现方式，将 QVector 类和 QList 类统一为 QList 类； QMetaType 和 QVariant 几乎被重写。</li>
-<li>新的图形架构： Qt5 中 3D 渲染依赖 0penGL。Qt6 中引入了新的技术 RHI （rendering hardware interface），它是一个抽象层，使得 Qt 可以使用平台本地化的 3D 图形 API（Linux：Vulkan 、Windows：Direct 3D、macOS：Metal）。</li>
-<li>CMake 构建系统： Qt6 仍然支持 qmake，但建议使用 CMake。</li>
-<li>其他（多媒体、网络、 Qt Quick 3D 等模块的改进）。</li>
-</ul>
-<h2 id="Qt的安装">1.2 &nbsp&nbsp<a href="#Qt的安装" class="headerlink" title="Qt的安装"></a>Qt的安装</h2><div class="note info no-icon"><p>个人推荐：手动选择组件编译安装Qt。详见<a href="/code/qt/#Qt%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91">Qt源码编译</a>。</p>
-</div>
-
-<p>自Qt5.1.5起，Qt官方只提供在线安装包。</p>
-<p>官方下载链接：<a href="https://download.qt.io/official_releases/online_installers/">点击跳转</a>。<br>清华镜像下载链接：<a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/online_installers/">点击跳转</a></p>
-<p>本人是从源码编译安装Qt，具体的在线安装步骤不再总结。</p>
-<h2 id="编写一个Hello-World程序">1.3 &nbsp&nbsp<a href="#编写一个Hello-World程序" class="headerlink" title="编写一个Hello World程序"></a>编写一个Hello World程序</h2><p>Qt Creator 简介：</p>
-<ul>
-<li>Qt Creator 为应用程序开发人员提供了一个完整的跨平台、集成开发环境 (IDE) ，以便为桌面、嵌入式和移动设备平台（如 Android 和iOS）创建应用程序。</li>
-<li>Qt Creator 提供了在整个应用程序开发生命周期所需的工具，从创建项目到将应用程序部署到目标平台。</li>
-</ul>
-<p>Qt Creator新建工程的一些总结：</p>
-<ol>
-<li>应用类型：<ul>
-<li>Widgets：widget界面</li>
-<li>Console：控制台程序</li>
-<li>Quick：QML实现的界面</li>
-</ul>
-</li>
-<li>base class基础类：<ul>
-<li>QMainWindow：主窗口类，包括菜单栏、工具栏、状态栏</li>
-<li>QWidget ：可以创建一个空白的窗口，是所有界面组件的基类</li>
-<li>QDialog ：对话框类（比如创建工程弹出的窗口就是对话框类型，对话式窗口，比如下一步按钮继续执行）</li>
-</ul>
-</li>
-<li>翻译文件：i18国际化语言</li>
-</ol>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第一章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
-<ul>
-<li>CMakeLists.txt：cmake构建系统的项目配置文件，存储了各种项目设置</li>
-<li>main.cpp：主程序入口文件，实现main函数</li>
-<li>widget.ui：使用XML格式描述元件及布局的界面文件</li>
-<li>widget.h：窗口类定义头文件，用到了.ui文件（Generate form）</li>
-<li>widget.cpp：是实现文件</li>
-<li>res.qrc：资源文件</li>
-</ul>
-<p>指针的命名空间换名。Ui_Widget没有父类，不是窗口类。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Ui&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Widget</span>: <span class="keyword">public</span> Ui Widget &#123;&#125;;</span><br><span class="line">&#125; <span class="comment">// namespace Ui</span></span><br></pre></td></tr></table></figure>
-
-<p>Qt项目构建过程基本原理：Qt C++头文件经过MOC（Meta-object Compiler），窗口UI文件通过UIC，资源文件通过RCC转换成标准C++程序，之后通过标准C++编译器生成可执行文件。</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>第二章</tag>
-        <tag>qt6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
-    <url>/software/blender/blender-learning-resources/</url>
-    <content><![CDATA[<img data-src="/images/software/blender/blender-learning-resources/cover.webp" style="width: 580px">
-
-<p>本文主要介绍自学资料的获取途径。</p>
-<h2 id="官方资料【强烈推荐】">0.1 &nbsp&nbsp<a href="#官方资料【强烈推荐】" class="headerlink" title="官方资料【强烈推荐】"></a>官方资料【强烈推荐】</h2><h3 id="Blender官方用户手册（User-Manual）【强烈推荐】">0.1.1 &nbsp&nbsp<a href="#Blender官方用户手册（User-Manual）【强烈推荐】" class="headerlink" title="Blender官方用户手册（User Manual）【强烈推荐】"></a>Blender官方用户手册（User Manual）<strong>【强烈推荐】</strong></h3><p>获取条件：不需翻墙。</p>
-<p>描述：手册是一个十分重要的学习资源，其中包含着大量的关于Blender的基本知识及基础操作，不懂操作时，多翻翻手册。我推荐各位是去看英文文档的，因为这领域不少术语都没有很好的中文翻译。并且目前手册还有不少模块并没有中文化翻译，这也属正常，因为文档的翻译总是落后于源文档的更新，但文档翻译参与者数量不多也是一大原因。本人目前参与Krita文档的中文化翻译，对此感触颇深，这领域的翻译者着实太少了，像Krita的文档翻译者，用手指头就能数过来了。目前本人暂无过多精力，可能未来会有计划参与Blender的文档中文化翻译。</p>
-<p>入口：<a href="https://docs.blender.org/manual/en/dev/">官方手册链接</a></p>
-<span id="more"></span>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/manual-279.webp">2.79版本用户手册页面部分截图</div>
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/manual-280.webp">2.80版本用户手册页面部分截图</div>
-</div>
-
-<p><strong>注：2.8手册刚刚开写，所以内容跟2.79基本一样。(目前网站上已可以正常切换中文版手册)<del>且现在官网上也无法正常切换到中文版的手册，估计是官方忙着写新手册吧。</del></strong></p>
-<h3 id="Blender官方完整文档（Blender-WiKi）【推荐】">0.1.2 &nbsp&nbsp<a href="#Blender官方完整文档（Blender-WiKi）【推荐】" class="headerlink" title="Blender官方完整文档（Blender WiKi）【推荐】"></a>Blender官方完整文档（Blender WiKi）<strong>【推荐】</strong></h3><p>条件：不需翻墙。</p>
-<p>描述：WiKi上记录着很多Blender的资料，包括各版本的发布记录，记录详情可在Reference&#x2F;Release Notes条目中找到，在这你能了解到Blender各模块发展情况。此外，WiKi上还有FAQ等内容，这些就不多介绍了。</p>
-<p>入口：<a href="https://wiki.blender.org/">Wiki网站链接</a></p>
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/developer-wiki.webp">WiKi网站部分截图
-</div>
-
-<h3 id="Blender官网网站支持页面（Support）【推荐】">0.1.3 &nbsp&nbsp<a href="#Blender官网网站支持页面（Support）【推荐】" class="headerlink" title="Blender官网网站支持页面（Support）【推荐】"></a>Blender官网网站支持页面（Support）<strong>【推荐】</strong></h3><p>条件：不需翻墙。</p>
-<p>描述：该页面包含许多链接。如下图，文档类、教程类，社区支持等。用户手册地址都可以从这访问。教程类列出很多链接，其中含有Blender Cloud，经济条件允许的朋友可以选择支持下，注册为云成员。云上面有很多录制的视频教程，它也包含着开源电影的相关资源。云上面有一个《Blender Inside Out》系列视频，这个十分适合从其他三维平台转到Blender上的朋友去学习，讲得很细致。但因为里面有着很多硬基础知识，因此不适合完全零基础的人。（这个系列我也搬运到B站上，目前完成了第一章翻译，其余暂时都还是油管的机翻字幕，视频请戳<a href="https://www.bilibili.com/video/av21352168">这里</a>）</p>
-<p>入口：<a href="https://www.blender.org/support/">Support页面链接</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/support.webp">Support页面部分截图</div>
-</div>
-
-<h3 id="Blender官方教程（Blender-Old-WiKi）【旧址】【不推荐】">0.1.4 &nbsp&nbsp<a href="#Blender官方教程（Blender-Old-WiKi）【旧址】【不推荐】" class="headerlink" title="Blender官方教程（Blender Old WiKi）【旧址】【不推荐】"></a><del>Blender官方教程（Blender Old WiKi）</del><strong>【旧址】【不推荐】</strong></h3><p>条件：不需翻墙。注：可能部分外部教程链接需要翻墙或者失效了。</p>
-<p>描述：其实就是旧WiKi，但该旧WiKi已全部迁至新WiKi地址了，且该网站已经停止更新。大部分内容都是文字。</p>
-<p>入口：<a href="https://en.blender.org/">教程网站新链接</a></p>
-<p>旧址：<del><a href="https://wiki.blender.org/index.php/Doc:2.6/Tutorials">https://wiki.blender.org/index.php/Doc:2.6/Tutorials</a></del> 【已失效，新入口在上方】</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/wiki2.6.webp">旧WiKi部分截图</div>
-</div>
-
-<h2 id="站点推荐">0.2 &nbsp&nbsp<a href="#站点推荐" class="headerlink" title="站点推荐"></a>站点推荐</h2><h3 id="国外篇">0.2.1 &nbsp&nbsp<a href="#国外篇" class="headerlink" title="国外篇"></a>国外篇</h3><h4 id="Blender-Guru-【强烈推荐】">0.2.1.1 &nbsp&nbsp<a href="#Blender-Guru-【强烈推荐】" class="headerlink" title="Blender Guru 【强烈推荐】"></a>Blender Guru 【强烈推荐】</h4><p>条件：无需翻墙。但实际上该站点的视频是存放于油管上的，所以想看视频是需要搭梯子翻出去的。</p>
-<p>描述：Guru站点我不必多言了，相信很多朋友都看过Guru站点的教程，教程都是免费的。Guru站点有个一个初学者的系列视频，十分适合完全三维零基础的朋友去学习，就是下方右图的“甜甜圈&quot;视频系列。（视频请戳<a href="https://www.blenderguru.com/tutorials/blender-beginner-tutorial-series">这里</a>）。站长Andrew Price是个十分帅气幽默的小伙。想了解Guru网站的成立由来可以戳这个：<a href="https://www.blenderguru.com/about/">Guru站点由来</a></p>
-<p>入口：<a href="https://www.blenderguru.com/">Guru站点链接</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/andrew-price.webp" style="width: 611px">Andrew Price 本人</div>
-<div class="flex-column"><img data-src="/images/software/blender/blender-learning-resources/blender-guru.webp">Guru站点部分截图</div>
-</div>
-
-
-<p><strong>注：后面国外篇的站点，本人不经常访问，不太了解详情，所以有些就不作描述了</strong></p>
-<h4 id="Blender-Community-【推荐】">0.2.1.2 &nbsp&nbsp<a href="#Blender-Community-【推荐】" class="headerlink" title="Blender Community 【推荐】"></a>Blender Community 【推荐】</h4><p>入口：<a href="https://blender.community/c/">Blender Community站点</a></p>
-<h4 id="Creative-Shrimp-【推荐】">0.2.1.3 &nbsp&nbsp<a href="#Creative-Shrimp-【推荐】" class="headerlink" title="Creative Shrimp 【推荐】"></a>Creative Shrimp 【推荐】</h4><p>描述：没怎么具体了解过，我猜应该是Gleb Alexandrov搭建的。最初是通过Gleb的一个加速渲染的视频了解到他的，视频详情请戳<a href="https://www.bilibili.com/video/av22416165/"><strong>这里</strong></a>。</p>
-<p>入口：<a href="http://www.creativeshrimp.com/">Creative Shrimp站点链接</a></p>
-<h4 id="CG-Geek">0.2.1.4 &nbsp&nbsp<a href="#CG-Geek" class="headerlink" title="CG Geek"></a>CG Geek</h4><p>入口：<a href="https://www.deviantart.com/cg-geek">CG Geek站点链接</a></p>
-<h4 id="CG-Masters">0.2.1.5 &nbsp&nbsp<a href="#CG-Masters" class="headerlink" title="CG Masters"></a>CG Masters</h4><p>入口：<a href="https://cgmasters.net/">CG Masters站点链接</a></p>
-<h4 id="Blender-Cookie">0.2.1.6 &nbsp&nbsp<a href="#Blender-Cookie" class="headerlink" title="Blender Cookie"></a>Blender Cookie</h4><p>入口：<a href="https://cgcookie.com/">Blender Cookie站点链接</a></p>
-<h4 id="BlenderDiplom">0.2.1.7 &nbsp&nbsp<a href="#BlenderDiplom" class="headerlink" title="BlenderDiplom"></a>BlenderDiplom</h4><p>描述：Blender官方云上有一本关于Cycles引擎教程的电子书——《The Cycles Encylopedia v1.4》，该书的两位作者都活跃于该站点上。</p>
-<p>入口：<a href="http://www.blenderdiplom.com/en/">BlenderDiplom站点链接</a></p>
-<h4 id="Blender-Nation">0.2.1.8 &nbsp&nbsp<a href="#Blender-Nation" class="headerlink" title="Blender Nation"></a>Blender Nation</h4><p>入口：<a href="https://www.blendernation.com/">Blender Nation站点链接</a></p>
-<h4 id="Blender-Artists">0.2.1.9 &nbsp&nbsp<a href="#Blender-Artists" class="headerlink" title="Blender Artists"></a>Blender Artists</h4><p>入口：<a href="https://blenderartists.org/">Blender Artists站点链接</a></p>
-<h4 id="Blender-Nerd【不推荐】">0.2.1.10 &nbsp&nbsp<a href="#Blender-Nerd【不推荐】" class="headerlink" title="Blender Nerd【不推荐】"></a><del>Blender Nerd</del>【不推荐】</h4><p>描述：该站点目前改成了Richard Harby，不清楚该站点什么规划。以前不怎么上这站点，所以我不做跟进了解。</p>
-<p>入口：<a href="http://www.blendernerd.com/">Blender Nerd站点链接</a></p>
-<h3 id="国内篇">0.2.2 &nbsp&nbsp<a href="#国内篇" class="headerlink" title="国内篇"></a>国内篇</h3><h4 id="Blender中国社区（斑斓中国）【推荐】">0.2.2.1 &nbsp&nbsp<a href="#Blender中国社区（斑斓中国）【推荐】" class="headerlink" title="Blender中国社区（斑斓中国）【推荐】"></a>Blender中国社区（斑斓中国）【推荐】</h4><p>入口：<a href="http://www.blendercn.org/">斑斓中国站点链接</a></p>
-<h4 id="Blender-Get-【推荐】">0.2.2.2 &nbsp&nbsp<a href="#Blender-Get-【推荐】" class="headerlink" title="Blender Get 【推荐】"></a>Blender Get 【推荐】</h4><p>描述：Blender Get是罗聪翼先生搭建的站点，罗先生著有全球首本中文著作《Blender权威指南》。</p>
-<p>入口：<a href="http://www.blenderget.com/">Blender Get站点链接</a></p>
-<h2 id="B站篇UP推荐">0.3 &nbsp&nbsp<a href="#B站篇UP推荐" class="headerlink" title="B站篇UP推荐"></a>B站篇UP推荐</h2><h3 id="翻译UP">0.3.1 &nbsp&nbsp<a href="#翻译UP" class="headerlink" title="翻译UP"></a>翻译UP</h3><h4 id="Mr-Kin-【强烈推荐】">0.3.1.1 &nbsp&nbsp<a href="#Mr-Kin-【强烈推荐】" class="headerlink" title="Mr. Kin 【强烈推荐】"></a>Mr. Kin 【强烈推荐】</h4><div class="flex-row-left-start">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/comical-face.webp" style="width: 200px">没错，就是我，滑稽护体。
-</div>
-</div>
-
-<p><a href="https://space.bilibili.com/17025250/#/">空间入口请戳</a>。<strong>（明示支持三连，滑稽.jpg）</strong></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/my-bili-zone.webp">我的Bilibili空间截图
-</div>
-</div>
-
-<h4 id="随波远流">0.3.1.2 &nbsp&nbsp<a href="#随波远流" class="headerlink" title="随波远流"></a>随波远流</h4><p><a href="https://space.bilibili.com/24808665/#/">空间入口请戳</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/suibozhuliu-zone.webp">随波远流的Bilibili空间截图
-</div>
-</div>
-
-<h4 id="CGGAP">0.3.1.3 &nbsp&nbsp<a href="#CGGAP" class="headerlink" title="CGGAP"></a>CGGAP</h4><p><a href="https://space.bilibili.com/50678221/#/">空间入口请戳</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/cggap-zone.webp">CGGA的Bilibili空间截图
-</div>
-</div>
-
-<p><strong>注：其他不作介绍了，大家自己去寻找吧！</strong></p>
-<h3 id="原创UP">0.3.2 &nbsp&nbsp<a href="#原创UP" class="headerlink" title="原创UP"></a>原创UP</h3><h4 id="blenderCN-黑马赛克-【推荐】">0.3.2.1 &nbsp&nbsp<a href="#blenderCN-黑马赛克-【推荐】" class="headerlink" title="blenderCN-黑马赛克 【推荐】"></a>blenderCN-黑马赛克 【推荐】</h4><p><a href="https://space.bilibili.com/7549097/#/">空间入口请戳</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/blendercn-zone.webp">blenderCN-黑马赛克的Bilibili空间截图
-</div>
-</div>
-
-<h4 id="顺子老师">0.3.2.2 &nbsp&nbsp<a href="#顺子老师" class="headerlink" title="顺子老师"></a>顺子老师</h4><p><a href="https://space.bilibili.com/38988725/#/">空间入口请戳</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/shunzi-zone.webp">顺子老师的Bilibili空间截图
-</div>
-</div>
-
-<h4 id="我是栗子菌">0.3.2.3 &nbsp&nbsp<a href="#我是栗子菌" class="headerlink" title="我是栗子菌"></a>我是栗子菌</h4><p><a href="https://space.bilibili.com/20444678/#/">空间入口请戳</a></p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/blender/blender-learning-resources/shunzi-zone.webp">我是栗子菌的Bilibili空间截图
-</div>
-</div>
-
-<p><strong>注：其他不作介绍了，大家自己去寻找吧！</strong></p>
-<h2 id="Youtube专讲【强烈推荐】">0.4 &nbsp&nbsp<a href="#Youtube专讲【强烈推荐】" class="headerlink" title="Youtube专讲【强烈推荐】"></a>Youtube专讲【强烈推荐】</h2><h3 id="概述">0.4.1 &nbsp&nbsp<a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>条件：翻墙。也可通过镜像链接来访问，即不需翻墙，但肯定不如原网站链接好使，且油管的镜像链接经常失效。<strong>推荐搭梯子翻墙</strong>，不推荐使用镜像链接直翻。</p>
-<p>作为全球最大的视频网站，油管有着许多优质的教程，以上有些站点的视频教程便是放在油管上的，例如Guru。建议朋友们上油管搜索教程，搜索也是有不少技巧的，以下列出一些关键字：</p>
-<ul>
-<li>搜索Blender，关键字【blender】</li>
-<li>搜索教程时，关键字【tutorial】或【training】</li>
-<li>具体搜索某个模块时，比如建模，关键字【modeling】；角色建模，关键字【character modeling】</li>
-<li>纹理贴图，关键字【texture】</li>
-<li>材质，关键字【material】</li>
-<li>渲染，关键字【rendering】</li>
-<li>灯光，关键字【lighting】</li>
-<li>动画，关键字【animate】【animation】</li>
-<li>其余以此类推</li>
-</ul>
-<p>关于油管的使用，对于英文不太好的朋友来说，如果视频没有自带中文字幕，可以选择观看油管的自动翻译字幕。如果原视频带有其他语言的字幕，此时自动翻译的质量还是不错的。但如果原视频没有自带任何字幕，只能看机器是否能够识别出来语言来了，例如视频开头若有很长一段背景音乐就无法识别了。使用选项如下图：<br><img data-src="/images/software/blender/blender-learning-resources/youtube.webp"></p>
-<h3 id="Youtuber推荐">0.4.2 &nbsp&nbsp<a href="#Youtuber推荐" class="headerlink" title="Youtuber推荐"></a>Youtuber推荐</h3><ul>
-<li>Blender Developers</li>
-<li>Blender</li>
-<li>Blender Guru</li>
-<li>Daniel Kreuter</li>
-<li>CG Master</li>
-<li>CG Geek</li>
-<li>Gleb Alexandrov</li>
-<li>CG Cookie - Blender Training</li>
-</ul>
-<p><strong>注：其他靠大家寻找了，不过多列举了。</strong></p>
-<h2 id="结语">0.5 &nbsp&nbsp<a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>关于英语资料的阅读技巧：</p>
-<ul>
-<li>提高英语水平 —— 应对所有状况</li>
-<li>给浏览器装上页面翻译的拓展插件 —— 应对网站上文字类资料</li>
-<li>Youtube的自动翻译选项 —— 应对视频（前提：油管上有该视频且满足自动翻译的条件）</li>
-</ul>
-<p>以上很多资料都是英文居多，非以英语为母语的我们，观看时难免会有阅读障碍。拿我自己举个例子吧，虽然我能看懂听译这些教程，但其实速度上远远不及阅读中文的速度，相比于看英文，看中文的速度就像是开挂加速的。而这对于想要快速通过教程资料上手BL的朋友们来说，中文无疑是成为了一个很重要的因素。所以，这也是我做翻译的一个原因，同时也是为了方便自个看吧。但由于个人精力有限，因此我此前搬运的大部分视频教程的中文字幕是油管上的机翻字幕，所以也同时贴出英文字幕（油管上英文字幕准确率还是可以的）。至于有些没字幕的，才会去听译，但听译极其耗费时间和精力。</p>
-<p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿选择我认为较为重要的机翻教程教程进行精翻。</p>
-<p>Anyways, 其实掌握了基础的语法和音标，把词汇量提上去，英语学习基本上是没有障碍的了。汉语是语义型语言，注重内容的意会性；英语是语法型语言，表现形式完整、严谨。这一点认识对于英语的学习来说也是很重要的，意识到这个，要有针对性地学习，我们就不能用汉语的思维去学习英语。而关于词汇量的提高方法，不赘述了，仅告诫大家一点，切忌死记硬背，放在语境中去理解来记更好，比如多去阅读英文资料。更多时候英文资料看不看得下去，其实是<strong>心态问题</strong>。</p>
-<p>Alright! Hope you guys could enjoy learning Blender! Adios!</p>
-<p><em><strong>注：最后呼吁喜欢这领域且英语不错的朋友能够参与该领域的翻译，无论是文档或是程序本体亦或是教程视频。十分感谢！欢迎和我交流！</strong></em></p>
-<p><a href="https://www.bilibili.com/read/cv553195">本文B站链接</a></p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>开源软件</tag>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>资料整理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender二次代码开发总结</title>
-    <url>/software/blender/code-development/</url>
-    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
-<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
-</ul>
-<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
-<li>cycles API直接查看cycles源码，properties.py</li>
-<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
-<li>blender排错cmd工具：blender_debug_log.bat</li>
-</ul>
-<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
-<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
-<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
-<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
-<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
-<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
-<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
-<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
-<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
-<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
-<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
-</ul>
-<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
-<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
-<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
-</ul>
-<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
-</div>
-<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
-<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
-<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
-<p>具体context override代码的使用例子：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender界面工具操作总结</title>
-    <url>/software/blender/interface-tools-operation/</url>
-    <content><![CDATA[<h1 id="3D-视窗（3D-Viewport）">1 &nbsp&nbsp<a href="#3D-视窗（3D-Viewport）" class="headerlink" title="3D 视窗（3D Viewport）"></a>3D 视窗（3D Viewport）</h1><p>3D视图用于和3D场景交互，例如建模、动画、纹理绘制等。</p>
-<h2 id="交互确认与取消（Confirm-Cancel）">1.1 &nbsp&nbsp<a href="#交互确认与取消（Confirm-Cancel）" class="headerlink" title="交互确认与取消（Confirm&#x2F;Cancel）"></a>交互确认与取消（Confirm&#x2F;Cancel）</h2><table>
-<thead>
-<tr>
-<th align="center">交互状态</th>
-<th align="center">interactive state</th>
-<th align="center">快捷键</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">确认</td>
-<td align="center">confirm</td>
-<td align="center">LMB or Enter</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">取消</td>
-<td align="center">cancel</td>
-<td align="center">RMB or ESC</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h2 id="视窗导航（Menu-View）">1.2 &nbsp&nbsp<a href="#视窗导航（Menu-View）" class="headerlink" title="视窗导航（Menu&gt;View）"></a>视窗导航（Menu&gt;View）</h2><p><strong>gizmo位于3D视窗右上角，数字或标点符号快捷键位于数字键盘区</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视窗导航功能</th>
-<th align="center">view function</th>
-<th align="center">快捷键</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">环绕</td>
-<td align="center">orbit</td>
-<td align="center">MMB or Gizmo球体 or 4862</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">平移</td>
-<td align="center">pan</td>
-<td align="center">Shift+Drag MMB or Gizmo手掌</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">缩放</td>
-<td align="center">zoom in or out</td>
-<td align="center">滚轮 or Gizmo放大镜 or +‑</td>
-<td align="center">平滑缩放：Ctrl+Drag MMB</td>
-</tr>
-<tr>
-<td align="center">框选选中对象</td>
-<td align="center">frame selected</td>
-<td align="center">.</td>
-<td align="center">最大化显示选中物体</td>
-</tr>
-<tr>
-<td align="center">查看活动摄像机</td>
-<td align="center">view active camera</td>
-<td align="center">Gizmo摄像机 or 0</td>
-<td align="center">切换到摄像视图</td>
-</tr>
-<tr>
-<td align="center">透视&#x2F;正交视图</td>
-<td align="center">perspective&#x2F;orthographic projection</td>
-<td align="center">Gizmo网格</td>
-<td align="center">透视：近大远小；正交：观察模型准确性（2d草图）</td>
-</tr>
-</tbody></table>
-<h2 id="选择（Menu-Select）">1.3 &nbsp&nbsp<a href="#选择（Menu-Select）" class="headerlink" title="选择（Menu&gt;Select）"></a>选择（Menu&gt;Select）</h2><p><strong>多选模式下，亮橙色是当前激活物体，关系到属性编辑器显示的内容。</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">选择功能</th>
-<th align="center">select function</th>
-<th align="center">快捷键</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">选择</td>
-<td align="center">select</td>
-<td align="center">LMB</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">添选</td>
-<td align="center">add select</td>
-<td align="center">Shift+LMB</td>
-<td align="center">继续点击已选择的，可取消</td>
-</tr>
-<tr>
-<td align="center">全选</td>
-<td align="center">select all</td>
-<td align="center">A</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">取消所有</td>
-<td align="center">deselect all</td>
-<td align="center">LMB（空白处） or Alt+A or Double A</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">框选（默认激活）</td>
-<td align="center">select box</td>
-<td align="center">Drag LMB</td>
-<td align="center">取消选择：Ctrl+Drag MMB</td>
-</tr>
-<tr>
-<td align="center">框选（快捷键激活的状态）</td>
-<td align="center">select box</td>
-<td align="center">B</td>
-<td align="center">取消选择：Drag MMB</td>
-</tr>
-<tr>
-<td align="center">刷选</td>
-<td align="center">select circle</td>
-<td align="center">C</td>
-<td align="center">取消选择：Drag MMB</td>
-</tr>
-<tr>
-<td align="center">套索选择</td>
-<td align="center">select lasso</td>
-<td align="center">Shift+Space, L</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p>P.S. 选择菜单中的Select More&#x2F;Less只在编辑模式下生效</p>
-<span id="more"></span>
-
-<h2 id="界面（UI）">1.4 &nbsp&nbsp<a href="#界面（UI）" class="headerlink" title="界面（UI）"></a>界面（UI）</h2><table>
-<thead>
-<tr>
-<th align="center">界面操作</th>
-<th align="center">interface operate</th>
-<th align="center">快捷键</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">最大化&#x2F;恢复当前窗口</td>
-<td align="center">toggle maximize area</td>
-<td align="center">Ctrl+Space</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">工作区选项卡的切换</td>
-<td align="center">cycle workspace</td>
-<td align="center">Ctrl+PageUp&#x2F;PageDown</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">左边工具栏</td>
-<td align="center">toolbar</td>
-<td align="center">T</td>
-<td align="center">查看子项：Hold LMB</td>
-</tr>
-<tr>
-<td align="center">右边侧边栏</td>
-<td align="center">sidebar</td>
-<td align="center">N</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">3d游标</td>
-<td align="center">3d cursor</td>
-<td align="center">Shift+RMB</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<ul>
-<li>底部信息栏可根据当前鼠标事件提示用户</li>
-<li>拖动视窗边界可以调整窗口大小，右键边界处可拆分合并窗口（拖动四角也行，拆分：鼠标拖动要保持在同一窗口；合并：鼠标拖动到另一窗口）</li>
-<li>删除视窗：右键边界处合并窗口</li>
-</ul>
-<h2 id="变换物体（Menu-Object-Transform）">1.5 &nbsp&nbsp<a href="#变换物体（Menu-Object-Transform）" class="headerlink" title="变换物体（Menu&gt;Object&gt;Transform）"></a>变换物体（Menu&gt;Object&gt;Transform）</h2><table>
-<thead>
-<tr>
-<th align="center">变换物体</th>
-<th align="center">transform object</th>
-<th align="center">快捷键</th>
-<th align="center">注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">移动</td>
-<td align="center">grab</td>
-<td align="center">G</td>
-<td align="center">重置移动：Alt+G</td>
-</tr>
-<tr>
-<td align="center">旋转</td>
-<td align="center">rotate</td>
-<td align="center">R</td>
-<td align="center">重置缩放：Alt+R</td>
-</tr>
-<tr>
-<td align="center">缩放</td>
-<td align="center">scale</td>
-<td align="center">S</td>
-<td align="center">重置缩放：Alt+S</td>
-</tr>
-<tr>
-<td align="center">吸附饼菜单</td>
-<td align="center">snap pie menu</td>
-<td align="center">Shift+S</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p><strong>工具栏中工具切换：Shift+Space</strong></p>
-<p>**快捷键模式：LMB确认，RMB取消。**未确认之前，都可以通过更改快捷键（包括三种变换之间可直接切换，不限于一种变换内切换），查看对应效果。</p>
-<h3 id="移动（Grab，G）">1.5.1 &nbsp&nbsp<a href="#移动（Grab，G）" class="headerlink" title="移动（Grab，G）"></a>移动（Grab，G）</h3><ul>
-<li>工具栏：内部白线（自由移动）、三个轴（箭头）、平面（两轴之间的小平面）</li>
-<li>快捷键模式G：默认：自由移动；单轴移动：X&#x2F;Y&#x2F;Z；双轴移动：Shift+X&#x2F;Y&#x2F;Z（移除单轴，结果就是双轴）</li>
-<li>重置移动：Alt+G</li>
-</ul>
-<h3 id="旋转（Rorate，R）">1.5.2 &nbsp&nbsp<a href="#旋转（Rorate，R）" class="headerlink" title="旋转（Rorate，R）"></a>旋转（Rorate，R）</h3><ul>
-<li>工具栏：三弧线、内部轨迹球（鼠标悬停在弧线内显示）、最外部的白线（当前视角按物体原点旋转）</li>
-<li>快捷键模式R（内部模式切换R）：默认：自由旋转；单轴旋转：X&#x2F;Y&#x2F;Z；轨迹球：R；双轴旋转：Shift+X&#x2F;Y&#x2F;Z（移除单轴，结果就是双轴）</li>
-<li>重置旋转：Alt+R</li>
-</ul>
-<h3 id="缩放（Scale，S）">1.5.3 &nbsp&nbsp<a href="#缩放（Scale，S）" class="headerlink" title="缩放（Scale，S）"></a>缩放（Scale，S）</h3><ul>
-<li>工具栏：内部&#x2F;外部白线（自由缩放）、三个轴（方块）、平面（两轴之间的小平面）</li>
-<li>快捷键模式G：默认：自由缩放；单轴缩放：X&#x2F;Y&#x2F;Z；双轴缩放：Shift+X&#x2F;Y&#x2F;Z（移除单轴，结果就是双轴）</li>
-<li>重置缩放：Alt+S</li>
-</ul>
-<h3 id="吸附（Shift-Tab）">1.5.4 &nbsp&nbsp<a href="#吸附（Shift-Tab）" class="headerlink" title="吸附（Shift+Tab）"></a>吸附（Shift+Tab）</h3><p>Shift+Tab激活</p>
-<ul>
-<li>顶点（吸附时，鼠标悬停在其他顶点上）</li>
-</ul>
-<h3 id="精度控制（按住shift-Ctrl）">1.5.5 &nbsp&nbsp<a href="#精度控制（按住shift-Ctrl）" class="headerlink" title="精度控制（按住shift&#x2F;Ctrl）"></a>精度控制（按住shift&#x2F;Ctrl）</h3><ul>
-<li>精确控制：按住Shift（十分之一的速度变换）</li>
-<li>按吸附方案：按住Ctrl（确保未启用吸附功能，已启用的状态下，Ctrl是禁用吸附）<ul>
-<li>增量方案snap&gt;increment，变化量递增（非连续量），但不是默认模式那种连续量</li>
-<li>顶点</li>
-<li>面</li>
-</ul>
-</li>
-</ul>
-<h3 id="变换坐标系和变换轴心点">1.5.6 &nbsp&nbsp<a href="#变换坐标系和变换轴心点" class="headerlink" title="变换坐标系和变换轴心点"></a>变换坐标系和变换轴心点</h3><p>位置：正上方</p>
-<ul>
-<li>坐标系：<ul>
-<li>全局坐标系</li>
-<li>局部坐标系：物体自身轴。全局坐标系下快速访问：double X&#x2F;Y&#x2F;Z</li>
-</ul>
-</li>
-<li>轴心点：默认是质心点</li>
-</ul>
-<h3 id="比例化编辑（Proportional-Editing，O）">1.5.7 &nbsp&nbsp<a href="#比例化编辑（Proportional-Editing，O）" class="headerlink" title="比例化编辑（Proportional Editing，O）"></a>比例化编辑（Proportional Editing，O）</h3><h2 id="添加和删除物体（Shift-A；X）">1.6 &nbsp&nbsp<a href="#添加和删除物体（Shift-A；X）" class="headerlink" title="添加和删除物体（Shift+A；X）"></a>添加和删除物体（Shift+A；X）</h2><p>Menu&gt;Add<br>Menu&gt;Object&gt;Delete</p>
-<p>删除物体：X（D确认，只有这个方式有确认）；Delete</p>
-<h1 id="大纲视图编辑器">2 &nbsp&nbsp<a href="#大纲视图编辑器" class="headerlink" title="大纲视图编辑器"></a>大纲视图编辑器</h1><p>类似其他软件的组管理或层管理。</p>
-<p>图标解释</p>
-<ul>
-<li>倒三角：网格</li>
-<li>灯泡：灯光</li>
-<li>摄像机</li>
-<li>箱子：集合</li>
-<li>眼镜：控制视窗隐藏</li>
-<li>相机：控制渲染</li>
-</ul>
-<p>新建集合或移动物体到某集合</p>
-<ul>
-<li>M</li>
-<li>RMB Menu，选择Move to Collection（新建需要两次Enter）。</li>
-<li>直接在大纲视图操作</li>
-</ul>
-<p>链接物体到集合：Shift+M（不建议将一个物体链接到多个集合，不好追踪管理）；取消链接需要在大纲视图里操作：LMB&gt;Unlink</p>
-<p>大纲视图的操作</p>
-<ul>
-<li>新建集合，RMB空白处</li>
-<li>在已有集合下新建：RMB集合名字；选中集合名字，C新建</li>
-<li>重命名：Double LMB</li>
-<li>移动：LMB（drag）</li>
-<li>展开&#x2F;折叠：+-</li>
-</ul>
-<h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>Tab进入编辑模式或者使用建模工作区选项卡。</p>
-<h2 id="多边形概念">3.1 &nbsp&nbsp<a href="#多边形概念" class="headerlink" title="多边形概念"></a>多边形概念</h2><p>点、线、面（三角面triangle、四边面quad、多边面n-gon）、多边形建模（polygon&#x2F;polys）</p>
-<p>面的类型效果：尽量使用四边面，利于动画的网格变形，进行表面细分也合理。某些复杂形状的情况，多边面的变形和细分效果比四边面好。</p>
-<h2 id="物体模式和编辑模式">3.2 &nbsp&nbsp<a href="#物体模式和编辑模式" class="headerlink" title="物体模式和编辑模式"></a>物体模式和编辑模式</h2><p>编辑模式是用以物体的网格（mesh）数据，部分非mesh物体（如骨架曲线，晶格也有编辑模式，不过不是用以操作mesh，只是用以操作相关的物体数据）</p>
-<p>可同时选择多个物体进入编辑模式，但注意无法将它们的mesh相连接。</p>
-<h3 id="物体模式下合并物体（Ctrl-J）">3.2.1 &nbsp&nbsp<a href="#物体模式下合并物体（Ctrl-J）" class="headerlink" title="物体模式下合并物体（Ctrl+J）"></a>物体模式下合并物体（Ctrl+J）</h3><p>选好物体：</p>
-<ul>
-<li>Menu&gt;Obejct&gt;Join</li>
-<li>Crtl+J</li>
-</ul>
-<h3 id="编辑模式下分离mesh（P）">3.2.2 &nbsp&nbsp<a href="#编辑模式下分离mesh（P）" class="headerlink" title="编辑模式下分离mesh（P）"></a>编辑模式下分离mesh（P）</h3><p>选好mesh：</p>
-<ul>
-<li>Menu&gt;Menu&gt;Seperate</li>
-<li>P</li>
-</ul>
-<h2 id="mesh选择点线面模式（主键盘123；Shift-123）">3.3 &nbsp&nbsp<a href="#mesh选择点线面模式（主键盘123；Shift-123）" class="headerlink" title="mesh选择点线面模式（主键盘123；Shift+123）"></a>mesh选择点线面模式（主键盘123；Shift+123）</h2><ul>
-<li>左上角图标；多选：Shift+图标</li>
-<li>快捷键（主键盘）：123；多选：Shift+123</li>
-</ul>
-<h2 id="快速选择技巧">3.4 &nbsp&nbsp<a href="#快速选择技巧" class="headerlink" title="快速选择技巧"></a>快速选择技巧</h2><ul>
-<li>加选：Shift</li>
-<li>最短路径：Ctrl（在uv展开中标记缝合边很有用）</li>
-<li>循环边(loop)：按住Alt+LMB选择点线面（根据模式）</li>
-<li>并排边(ring)：按住Ctrl+Alt+LMB选择</li>
-<li>加选&#x2F;减选（已选中部分mesh）：Ctrl+Plus&#x2F;Minus。效果是在已选中的范围基础上加选或减选。</li>
-<li>关联选择（适合选择孤立部分，物体由多个孤立mesh组成）<ul>
-<li>已选中部分mesh：Ctrl+L</li>
-<li>未选中任何mesh：鼠标悬停，L</li>
-</ul>
-</li>
-</ul>
-<p>基本选择方式在编辑模式下都可用。</p>
-<h2 id="点工具（Ctrl-V）">3.5 &nbsp&nbsp<a href="#点工具（Ctrl-V）" class="headerlink" title="点工具（Ctrl+V）"></a>点工具（Ctrl+V）</h2><h3 id="连接顶点路径（connect-vertex-path，J）">3.5.1 &nbsp&nbsp<a href="#连接顶点路径（connect-vertex-path，J）" class="headerlink" title="连接顶点路径（connect vertex path，J）"></a>连接顶点路径（connect vertex path，J）</h3><p>连接同一个面的两个顶点，或者相连两个面的顶点</p>
-<h2 id="线工具（Ctrl-E）">3.6 &nbsp&nbsp<a href="#线工具（Ctrl-E）" class="headerlink" title="线工具（Ctrl+E）"></a>线工具（Ctrl+E）</h2><h2 id="边线倒角（Bevel，Ctrl-B-滚轮）">3.7 &nbsp&nbsp<a href="#边线倒角（Bevel，Ctrl-B-滚轮）" class="headerlink" title="边线倒角（Bevel，Ctrl+B&gt;滚轮）"></a>边线倒角（Bevel，Ctrl+B&gt;滚轮）</h2><p><strong>倒角能让物体更加真实，一般用于硬表面建模。</strong></p>
-<p><strong>除了倒角工具，倒角修改器也可以实现倒角。</strong></p>
-<ul>
-<li>段数（segments）：段数越高，越圆滑</li>
-<li>材质编号（material index）：通过调整材质编号给倒角使用材质列表中的材质。</li>
-</ul>
-<h3 id="桥接循环边（bridge-edge-loop）">3.7.1 &nbsp&nbsp<a href="#桥接循环边（bridge-edge-loop）" class="headerlink" title="桥接循环边（bridge edge loop）"></a>桥接循环边（bridge edge loop）</h3><h2 id="环切和滑动（Loop-Cut，Ctrl-R-滚轮，重新滑动GG）">3.8 &nbsp&nbsp<a href="#环切和滑动（Loop-Cut，Ctrl-R-滚轮，重新滑动GG）" class="headerlink" title="环切和滑动（Loop Cut，Ctrl+R&gt;滚轮，重新滑动GG）"></a>环切和滑动（Loop Cut，Ctrl+R&gt;滚轮，重新滑动GG）</h2><ul>
-<li>默认环切：</li>
-<li>偏移量环切：</li>
-</ul>
-<p>快捷键模式和工具栏模式的区别</p>
-<ul>
-<li>快捷键模式：Ctrl+R（滚轮确定环切次数），LMB确认方位后进入滑动模式，RMB取消就是保持中间切割（确保当前激活工具不是环切，否则Ctrl+R就直接进入滑动模式，因为环切工具激活时，本身就可通过鼠标确认方位）</li>
-<li>工具栏模式：LMB直接切换，按住LMB滑动（或者Ctrl+R）</li>
-</ul>
-<h2 id="面工具（Ctrl-F）">3.9 &nbsp&nbsp<a href="#面工具（Ctrl-F）" class="headerlink" title="面工具（Ctrl+F）"></a>面工具（Ctrl+F）</h2><h3 id="挤出（Extrude，E，到光标Ctrl-RMB）">3.9.1 &nbsp&nbsp<a href="#挤出（Extrude，E，到光标Ctrl-RMB）" class="headerlink" title="挤出（Extrude，E，到光标Ctrl+RMB）"></a>挤出（Extrude，E，到光标Ctrl+RMB）</h3><p><strong>快捷键实现单个轴向上挤出各个面：E，用s在单轴上，如z缩放。</strong></p>
-<ul>
-<li>默认挤出选区（region）</li>
-<li>挤出流形（manifold）</li>
-<li>沿法线挤出（along normals）：相邻的面挤出时，各个面仍会相连。不像individual，就是单独挤出面。</li>
-<li>挤出各个面（individual）：单独挤出。适合在选中面的情况下操作。比如挤出后，再单独操作啥的（例如调整变换轴心点为各自的原点，可单独缩放调整各个面）</li>
-<li>挤出到光标（to cursor）（激活该工具时LMB；快速实现Ctrl+RMB）</li>
-</ul>
-<h2 id="内插面（Inset-Faces，I）">3.10 &nbsp&nbsp<a href="#内插面（Inset-Faces，I）" class="headerlink" title="内插面（Inset Faces，I）"></a>内插面（Inset Faces，I）</h2><p><strong>挤出工具实现内插面：按e移动后右键取消，通过s缩小。</strong></p>
-<h2 id="顶点倒角（Bevel，Ctrl-Shift-B-滚轮）">3.11 &nbsp&nbsp<a href="#顶点倒角（Bevel，Ctrl-Shift-B-滚轮）" class="headerlink" title="顶点倒角（Bevel，Ctrl+Shift+B&gt;滚轮）"></a>顶点倒角（Bevel，Ctrl+Shift+B&gt;滚轮）</h2><h2 id="切割（Knife，K）">3.12 &nbsp&nbsp<a href="#切割（Knife，K）" class="headerlink" title="切割（Knife，K）"></a>切割（Knife，K）</h2><p><strong>切分（bisect）一般用于创建物体的横截面</strong></p>
-<p>确认：空格&#x2F;Enter</p>
-<ul>
-<li>切割（knife）：默认切割方式</li>
-<li>切分（bisect）：根据面或者线直接切分开来，不是默认靠点分割。该方式还可以移动切割的线条，或者通过面板去掉一半或填充面</li>
-</ul>
-<h1 id="参考资料">4 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Blender. Blender 2.80 Fundamentals[EB&#x2F;OL]. <a href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6">https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
-        <tag>界面</tag>
-        <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender常见问题总结——Q&amp;A</title>
-    <url>/software/blender/q-a/</url>
-    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
-<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
-<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
-<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
-<ul>
-<li>CPU比GPU性能差很多</li>
-<li>渲染Volumetrics场景</li>
-</ul>
-<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
       </tags>
   </entry>
   <entry>
@@ -13892,6 +13212,686 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender自学资料向（干货整理）(内容已过时，作废)</title>
+    <url>/software/blender/blender-learning-resources/</url>
+    <content><![CDATA[<img data-src="/images/software/blender/blender-learning-resources/cover.webp" style="width: 580px">
+
+<p>本文主要介绍自学资料的获取途径。</p>
+<h2 id="官方资料【强烈推荐】">0.1 &nbsp&nbsp<a href="#官方资料【强烈推荐】" class="headerlink" title="官方资料【强烈推荐】"></a>官方资料【强烈推荐】</h2><h3 id="Blender官方用户手册（User-Manual）【强烈推荐】">0.1.1 &nbsp&nbsp<a href="#Blender官方用户手册（User-Manual）【强烈推荐】" class="headerlink" title="Blender官方用户手册（User Manual）【强烈推荐】"></a>Blender官方用户手册（User Manual）<strong>【强烈推荐】</strong></h3><p>获取条件：不需翻墙。</p>
+<p>描述：手册是一个十分重要的学习资源，其中包含着大量的关于Blender的基本知识及基础操作，不懂操作时，多翻翻手册。我推荐各位是去看英文文档的，因为这领域不少术语都没有很好的中文翻译。并且目前手册还有不少模块并没有中文化翻译，这也属正常，因为文档的翻译总是落后于源文档的更新，但文档翻译参与者数量不多也是一大原因。本人目前参与Krita文档的中文化翻译，对此感触颇深，这领域的翻译者着实太少了，像Krita的文档翻译者，用手指头就能数过来了。目前本人暂无过多精力，可能未来会有计划参与Blender的文档中文化翻译。</p>
+<p>入口：<a href="https://docs.blender.org/manual/en/dev/">官方手册链接</a></p>
+<span id="more"></span>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/manual-279.webp">2.79版本用户手册页面部分截图</div>
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/manual-280.webp">2.80版本用户手册页面部分截图</div>
+</div>
+
+<p><strong>注：2.8手册刚刚开写，所以内容跟2.79基本一样。(目前网站上已可以正常切换中文版手册)<del>且现在官网上也无法正常切换到中文版的手册，估计是官方忙着写新手册吧。</del></strong></p>
+<h3 id="Blender官方完整文档（Blender-WiKi）【推荐】">0.1.2 &nbsp&nbsp<a href="#Blender官方完整文档（Blender-WiKi）【推荐】" class="headerlink" title="Blender官方完整文档（Blender WiKi）【推荐】"></a>Blender官方完整文档（Blender WiKi）<strong>【推荐】</strong></h3><p>条件：不需翻墙。</p>
+<p>描述：WiKi上记录着很多Blender的资料，包括各版本的发布记录，记录详情可在Reference&#x2F;Release Notes条目中找到，在这你能了解到Blender各模块发展情况。此外，WiKi上还有FAQ等内容，这些就不多介绍了。</p>
+<p>入口：<a href="https://wiki.blender.org/">Wiki网站链接</a></p>
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/developer-wiki.webp">WiKi网站部分截图
+</div>
+
+<h3 id="Blender官网网站支持页面（Support）【推荐】">0.1.3 &nbsp&nbsp<a href="#Blender官网网站支持页面（Support）【推荐】" class="headerlink" title="Blender官网网站支持页面（Support）【推荐】"></a>Blender官网网站支持页面（Support）<strong>【推荐】</strong></h3><p>条件：不需翻墙。</p>
+<p>描述：该页面包含许多链接。如下图，文档类、教程类，社区支持等。用户手册地址都可以从这访问。教程类列出很多链接，其中含有Blender Cloud，经济条件允许的朋友可以选择支持下，注册为云成员。云上面有很多录制的视频教程，它也包含着开源电影的相关资源。云上面有一个《Blender Inside Out》系列视频，这个十分适合从其他三维平台转到Blender上的朋友去学习，讲得很细致。但因为里面有着很多硬基础知识，因此不适合完全零基础的人。（这个系列我也搬运到B站上，目前完成了第一章翻译，其余暂时都还是油管的机翻字幕，视频请戳<a href="https://www.bilibili.com/video/av21352168">这里</a>）</p>
+<p>入口：<a href="https://www.blender.org/support/">Support页面链接</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/support.webp">Support页面部分截图</div>
+</div>
+
+<h3 id="Blender官方教程（Blender-Old-WiKi）【旧址】【不推荐】">0.1.4 &nbsp&nbsp<a href="#Blender官方教程（Blender-Old-WiKi）【旧址】【不推荐】" class="headerlink" title="Blender官方教程（Blender Old WiKi）【旧址】【不推荐】"></a><del>Blender官方教程（Blender Old WiKi）</del><strong>【旧址】【不推荐】</strong></h3><p>条件：不需翻墙。注：可能部分外部教程链接需要翻墙或者失效了。</p>
+<p>描述：其实就是旧WiKi，但该旧WiKi已全部迁至新WiKi地址了，且该网站已经停止更新。大部分内容都是文字。</p>
+<p>入口：<a href="https://en.blender.org/">教程网站新链接</a></p>
+<p>旧址：<del><a href="https://wiki.blender.org/index.php/Doc:2.6/Tutorials">https://wiki.blender.org/index.php/Doc:2.6/Tutorials</a></del> 【已失效，新入口在上方】</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/wiki2.6.webp">旧WiKi部分截图</div>
+</div>
+
+<h2 id="站点推荐">0.2 &nbsp&nbsp<a href="#站点推荐" class="headerlink" title="站点推荐"></a>站点推荐</h2><h3 id="国外篇">0.2.1 &nbsp&nbsp<a href="#国外篇" class="headerlink" title="国外篇"></a>国外篇</h3><h4 id="Blender-Guru-【强烈推荐】">0.2.1.1 &nbsp&nbsp<a href="#Blender-Guru-【强烈推荐】" class="headerlink" title="Blender Guru 【强烈推荐】"></a>Blender Guru 【强烈推荐】</h4><p>条件：无需翻墙。但实际上该站点的视频是存放于油管上的，所以想看视频是需要搭梯子翻出去的。</p>
+<p>描述：Guru站点我不必多言了，相信很多朋友都看过Guru站点的教程，教程都是免费的。Guru站点有个一个初学者的系列视频，十分适合完全三维零基础的朋友去学习，就是下方右图的“甜甜圈&quot;视频系列。（视频请戳<a href="https://www.blenderguru.com/tutorials/blender-beginner-tutorial-series">这里</a>）。站长Andrew Price是个十分帅气幽默的小伙。想了解Guru网站的成立由来可以戳这个：<a href="https://www.blenderguru.com/about/">Guru站点由来</a></p>
+<p>入口：<a href="https://www.blenderguru.com/">Guru站点链接</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/andrew-price.webp" style="width: 611px">Andrew Price 本人</div>
+<div class="flex-column"><img data-src="/images/software/blender/blender-learning-resources/blender-guru.webp">Guru站点部分截图</div>
+</div>
+
+
+<p><strong>注：后面国外篇的站点，本人不经常访问，不太了解详情，所以有些就不作描述了</strong></p>
+<h4 id="Blender-Community-【推荐】">0.2.1.2 &nbsp&nbsp<a href="#Blender-Community-【推荐】" class="headerlink" title="Blender Community 【推荐】"></a>Blender Community 【推荐】</h4><p>入口：<a href="https://blender.community/c/">Blender Community站点</a></p>
+<h4 id="Creative-Shrimp-【推荐】">0.2.1.3 &nbsp&nbsp<a href="#Creative-Shrimp-【推荐】" class="headerlink" title="Creative Shrimp 【推荐】"></a>Creative Shrimp 【推荐】</h4><p>描述：没怎么具体了解过，我猜应该是Gleb Alexandrov搭建的。最初是通过Gleb的一个加速渲染的视频了解到他的，视频详情请戳<a href="https://www.bilibili.com/video/av22416165/"><strong>这里</strong></a>。</p>
+<p>入口：<a href="http://www.creativeshrimp.com/">Creative Shrimp站点链接</a></p>
+<h4 id="CG-Geek">0.2.1.4 &nbsp&nbsp<a href="#CG-Geek" class="headerlink" title="CG Geek"></a>CG Geek</h4><p>入口：<a href="https://www.deviantart.com/cg-geek">CG Geek站点链接</a></p>
+<h4 id="CG-Masters">0.2.1.5 &nbsp&nbsp<a href="#CG-Masters" class="headerlink" title="CG Masters"></a>CG Masters</h4><p>入口：<a href="https://cgmasters.net/">CG Masters站点链接</a></p>
+<h4 id="Blender-Cookie">0.2.1.6 &nbsp&nbsp<a href="#Blender-Cookie" class="headerlink" title="Blender Cookie"></a>Blender Cookie</h4><p>入口：<a href="https://cgcookie.com/">Blender Cookie站点链接</a></p>
+<h4 id="BlenderDiplom">0.2.1.7 &nbsp&nbsp<a href="#BlenderDiplom" class="headerlink" title="BlenderDiplom"></a>BlenderDiplom</h4><p>描述：Blender官方云上有一本关于Cycles引擎教程的电子书——《The Cycles Encylopedia v1.4》，该书的两位作者都活跃于该站点上。</p>
+<p>入口：<a href="http://www.blenderdiplom.com/en/">BlenderDiplom站点链接</a></p>
+<h4 id="Blender-Nation">0.2.1.8 &nbsp&nbsp<a href="#Blender-Nation" class="headerlink" title="Blender Nation"></a>Blender Nation</h4><p>入口：<a href="https://www.blendernation.com/">Blender Nation站点链接</a></p>
+<h4 id="Blender-Artists">0.2.1.9 &nbsp&nbsp<a href="#Blender-Artists" class="headerlink" title="Blender Artists"></a>Blender Artists</h4><p>入口：<a href="https://blenderartists.org/">Blender Artists站点链接</a></p>
+<h4 id="Blender-Nerd【不推荐】">0.2.1.10 &nbsp&nbsp<a href="#Blender-Nerd【不推荐】" class="headerlink" title="Blender Nerd【不推荐】"></a><del>Blender Nerd</del>【不推荐】</h4><p>描述：该站点目前改成了Richard Harby，不清楚该站点什么规划。以前不怎么上这站点，所以我不做跟进了解。</p>
+<p>入口：<a href="http://www.blendernerd.com/">Blender Nerd站点链接</a></p>
+<h3 id="国内篇">0.2.2 &nbsp&nbsp<a href="#国内篇" class="headerlink" title="国内篇"></a>国内篇</h3><h4 id="Blender中国社区（斑斓中国）【推荐】">0.2.2.1 &nbsp&nbsp<a href="#Blender中国社区（斑斓中国）【推荐】" class="headerlink" title="Blender中国社区（斑斓中国）【推荐】"></a>Blender中国社区（斑斓中国）【推荐】</h4><p>入口：<a href="http://www.blendercn.org/">斑斓中国站点链接</a></p>
+<h4 id="Blender-Get-【推荐】">0.2.2.2 &nbsp&nbsp<a href="#Blender-Get-【推荐】" class="headerlink" title="Blender Get 【推荐】"></a>Blender Get 【推荐】</h4><p>描述：Blender Get是罗聪翼先生搭建的站点，罗先生著有全球首本中文著作《Blender权威指南》。</p>
+<p>入口：<a href="http://www.blenderget.com/">Blender Get站点链接</a></p>
+<h2 id="B站篇UP推荐">0.3 &nbsp&nbsp<a href="#B站篇UP推荐" class="headerlink" title="B站篇UP推荐"></a>B站篇UP推荐</h2><h3 id="翻译UP">0.3.1 &nbsp&nbsp<a href="#翻译UP" class="headerlink" title="翻译UP"></a>翻译UP</h3><h4 id="Mr-Kin-【强烈推荐】">0.3.1.1 &nbsp&nbsp<a href="#Mr-Kin-【强烈推荐】" class="headerlink" title="Mr. Kin 【强烈推荐】"></a>Mr. Kin 【强烈推荐】</h4><div class="flex-row-left-start">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/comical-face.webp" style="width: 200px">没错，就是我，滑稽护体。
+</div>
+</div>
+
+<p><a href="https://space.bilibili.com/17025250/#/">空间入口请戳</a>。<strong>（明示支持三连，滑稽.jpg）</strong></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/my-bili-zone.webp">我的Bilibili空间截图
+</div>
+</div>
+
+<h4 id="随波远流">0.3.1.2 &nbsp&nbsp<a href="#随波远流" class="headerlink" title="随波远流"></a>随波远流</h4><p><a href="https://space.bilibili.com/24808665/#/">空间入口请戳</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/suibozhuliu-zone.webp">随波远流的Bilibili空间截图
+</div>
+</div>
+
+<h4 id="CGGAP">0.3.1.3 &nbsp&nbsp<a href="#CGGAP" class="headerlink" title="CGGAP"></a>CGGAP</h4><p><a href="https://space.bilibili.com/50678221/#/">空间入口请戳</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/cggap-zone.webp">CGGA的Bilibili空间截图
+</div>
+</div>
+
+<p><strong>注：其他不作介绍了，大家自己去寻找吧！</strong></p>
+<h3 id="原创UP">0.3.2 &nbsp&nbsp<a href="#原创UP" class="headerlink" title="原创UP"></a>原创UP</h3><h4 id="blenderCN-黑马赛克-【推荐】">0.3.2.1 &nbsp&nbsp<a href="#blenderCN-黑马赛克-【推荐】" class="headerlink" title="blenderCN-黑马赛克 【推荐】"></a>blenderCN-黑马赛克 【推荐】</h4><p><a href="https://space.bilibili.com/7549097/#/">空间入口请戳</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/blendercn-zone.webp">blenderCN-黑马赛克的Bilibili空间截图
+</div>
+</div>
+
+<h4 id="顺子老师">0.3.2.2 &nbsp&nbsp<a href="#顺子老师" class="headerlink" title="顺子老师"></a>顺子老师</h4><p><a href="https://space.bilibili.com/38988725/#/">空间入口请戳</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/shunzi-zone.webp">顺子老师的Bilibili空间截图
+</div>
+</div>
+
+<h4 id="我是栗子菌">0.3.2.3 &nbsp&nbsp<a href="#我是栗子菌" class="headerlink" title="我是栗子菌"></a>我是栗子菌</h4><p><a href="https://space.bilibili.com/20444678/#/">空间入口请戳</a></p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/blender/blender-learning-resources/shunzi-zone.webp">我是栗子菌的Bilibili空间截图
+</div>
+</div>
+
+<p><strong>注：其他不作介绍了，大家自己去寻找吧！</strong></p>
+<h2 id="Youtube专讲【强烈推荐】">0.4 &nbsp&nbsp<a href="#Youtube专讲【强烈推荐】" class="headerlink" title="Youtube专讲【强烈推荐】"></a>Youtube专讲【强烈推荐】</h2><h3 id="概述">0.4.1 &nbsp&nbsp<a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>条件：翻墙。也可通过镜像链接来访问，即不需翻墙，但肯定不如原网站链接好使，且油管的镜像链接经常失效。<strong>推荐搭梯子翻墙</strong>，不推荐使用镜像链接直翻。</p>
+<p>作为全球最大的视频网站，油管有着许多优质的教程，以上有些站点的视频教程便是放在油管上的，例如Guru。建议朋友们上油管搜索教程，搜索也是有不少技巧的，以下列出一些关键字：</p>
+<ul>
+<li>搜索Blender，关键字【blender】</li>
+<li>搜索教程时，关键字【tutorial】或【training】</li>
+<li>具体搜索某个模块时，比如建模，关键字【modeling】；角色建模，关键字【character modeling】</li>
+<li>纹理贴图，关键字【texture】</li>
+<li>材质，关键字【material】</li>
+<li>渲染，关键字【rendering】</li>
+<li>灯光，关键字【lighting】</li>
+<li>动画，关键字【animate】【animation】</li>
+<li>其余以此类推</li>
+</ul>
+<p>关于油管的使用，对于英文不太好的朋友来说，如果视频没有自带中文字幕，可以选择观看油管的自动翻译字幕。如果原视频带有其他语言的字幕，此时自动翻译的质量还是不错的。但如果原视频没有自带任何字幕，只能看机器是否能够识别出来语言来了，例如视频开头若有很长一段背景音乐就无法识别了。使用选项如下图：<br><img data-src="/images/software/blender/blender-learning-resources/youtube.webp"></p>
+<h3 id="Youtuber推荐">0.4.2 &nbsp&nbsp<a href="#Youtuber推荐" class="headerlink" title="Youtuber推荐"></a>Youtuber推荐</h3><ul>
+<li>Blender Developers</li>
+<li>Blender</li>
+<li>Blender Guru</li>
+<li>Daniel Kreuter</li>
+<li>CG Master</li>
+<li>CG Geek</li>
+<li>Gleb Alexandrov</li>
+<li>CG Cookie - Blender Training</li>
+</ul>
+<p><strong>注：其他靠大家寻找了，不过多列举了。</strong></p>
+<h2 id="结语">0.5 &nbsp&nbsp<a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>关于英语资料的阅读技巧：</p>
+<ul>
+<li>提高英语水平 —— 应对所有状况</li>
+<li>给浏览器装上页面翻译的拓展插件 —— 应对网站上文字类资料</li>
+<li>Youtube的自动翻译选项 —— 应对视频（前提：油管上有该视频且满足自动翻译的条件）</li>
+</ul>
+<p>以上很多资料都是英文居多，非以英语为母语的我们，观看时难免会有阅读障碍。拿我自己举个例子吧，虽然我能看懂听译这些教程，但其实速度上远远不及阅读中文的速度，相比于看英文，看中文的速度就像是开挂加速的。而这对于想要快速通过教程资料上手BL的朋友们来说，中文无疑是成为了一个很重要的因素。所以，这也是我做翻译的一个原因，同时也是为了方便自个看吧。但由于个人精力有限，因此我此前搬运的大部分视频教程的中文字幕是油管上的机翻字幕，所以也同时贴出英文字幕（油管上英文字幕准确率还是可以的）。至于有些没字幕的，才会去听译，但听译极其耗费时间和精力。</p>
+<p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿选择我认为较为重要的机翻教程教程进行精翻。</p>
+<p>Anyways, 其实掌握了基础的语法和音标，把词汇量提上去，英语学习基本上是没有障碍的了。汉语是语义型语言，注重内容的意会性；英语是语法型语言，表现形式完整、严谨。这一点认识对于英语的学习来说也是很重要的，意识到这个，要有针对性地学习，我们就不能用汉语的思维去学习英语。而关于词汇量的提高方法，不赘述了，仅告诫大家一点，切忌死记硬背，放在语境中去理解来记更好，比如多去阅读英文资料。更多时候英文资料看不看得下去，其实是<strong>心态问题</strong>。</p>
+<p>Alright! Hope you guys could enjoy learning Blender! Adios!</p>
+<p><em><strong>注：最后呼吁喜欢这领域且英语不错的朋友能够参与该领域的翻译，无论是文档或是程序本体亦或是教程视频。十分感谢！欢迎和我交流！</strong></em></p>
+<p><a href="https://www.bilibili.com/read/cv553195">本文B站链接</a></p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>开源软件</tag>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>资料整理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender二次代码开发总结</title>
+    <url>/software/blender/code-development/</url>
+    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
+<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
+</ul>
+<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
+<li>cycles API直接查看cycles源码，properties.py</li>
+<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
+<li>blender排错cmd工具：blender_debug_log.bat</li>
+</ul>
+<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
+<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
+<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
+<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
+<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
+<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
+<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
+<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
+<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
+<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
+<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
+</ul>
+<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
+<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
+<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
+</ul>
+<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
+</div>
+<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
+<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
+<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
+<p>具体context override代码的使用例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blender界面工具操作总结</title>
+    <url>/software/blender/interface-tools-operation/</url>
+    <content><![CDATA[<h1 id="3D-视窗（3D-Viewport）">1 &nbsp&nbsp<a href="#3D-视窗（3D-Viewport）" class="headerlink" title="3D 视窗（3D Viewport）"></a>3D 视窗（3D Viewport）</h1><p>3D视图用于和3D场景交互，例如建模、动画、纹理绘制等。</p>
+<h2 id="交互确认与取消（Confirm-Cancel）">1.1 &nbsp&nbsp<a href="#交互确认与取消（Confirm-Cancel）" class="headerlink" title="交互确认与取消（Confirm&#x2F;Cancel）"></a>交互确认与取消（Confirm&#x2F;Cancel）</h2><table>
+<thead>
+<tr>
+<th align="center">交互状态</th>
+<th align="center">interactive state</th>
+<th align="center">快捷键</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">确认</td>
+<td align="center">confirm</td>
+<td align="center">LMB or Enter</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">取消</td>
+<td align="center">cancel</td>
+<td align="center">RMB or ESC</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h2 id="视窗导航（Menu-View）">1.2 &nbsp&nbsp<a href="#视窗导航（Menu-View）" class="headerlink" title="视窗导航（Menu&gt;View）"></a>视窗导航（Menu&gt;View）</h2><p><strong>gizmo位于3D视窗右上角，数字或标点符号快捷键位于数字键盘区</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视窗导航功能</th>
+<th align="center">view function</th>
+<th align="center">快捷键</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">环绕</td>
+<td align="center">orbit</td>
+<td align="center">MMB or Gizmo球体 or 4862</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">平移</td>
+<td align="center">pan</td>
+<td align="center">Shift+Drag MMB or Gizmo手掌</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">缩放</td>
+<td align="center">zoom in or out</td>
+<td align="center">滚轮 or Gizmo放大镜 or +‑</td>
+<td align="center">平滑缩放：Ctrl+Drag MMB</td>
+</tr>
+<tr>
+<td align="center">框选选中对象</td>
+<td align="center">frame selected</td>
+<td align="center">.</td>
+<td align="center">最大化显示选中物体</td>
+</tr>
+<tr>
+<td align="center">查看活动摄像机</td>
+<td align="center">view active camera</td>
+<td align="center">Gizmo摄像机 or 0</td>
+<td align="center">切换到摄像视图</td>
+</tr>
+<tr>
+<td align="center">透视&#x2F;正交视图</td>
+<td align="center">perspective&#x2F;orthographic projection</td>
+<td align="center">Gizmo网格</td>
+<td align="center">透视：近大远小；正交：观察模型准确性（2d草图）</td>
+</tr>
+</tbody></table>
+<h2 id="选择（Menu-Select）">1.3 &nbsp&nbsp<a href="#选择（Menu-Select）" class="headerlink" title="选择（Menu&gt;Select）"></a>选择（Menu&gt;Select）</h2><p><strong>多选模式下，亮橙色是当前激活物体，关系到属性编辑器显示的内容。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">选择功能</th>
+<th align="center">select function</th>
+<th align="center">快捷键</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">选择</td>
+<td align="center">select</td>
+<td align="center">LMB</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">添选</td>
+<td align="center">add select</td>
+<td align="center">Shift+LMB</td>
+<td align="center">继续点击已选择的，可取消</td>
+</tr>
+<tr>
+<td align="center">全选</td>
+<td align="center">select all</td>
+<td align="center">A</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">取消所有</td>
+<td align="center">deselect all</td>
+<td align="center">LMB（空白处） or Alt+A or Double A</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">框选（默认激活）</td>
+<td align="center">select box</td>
+<td align="center">Drag LMB</td>
+<td align="center">取消选择：Ctrl+Drag MMB</td>
+</tr>
+<tr>
+<td align="center">框选（快捷键激活的状态）</td>
+<td align="center">select box</td>
+<td align="center">B</td>
+<td align="center">取消选择：Drag MMB</td>
+</tr>
+<tr>
+<td align="center">刷选</td>
+<td align="center">select circle</td>
+<td align="center">C</td>
+<td align="center">取消选择：Drag MMB</td>
+</tr>
+<tr>
+<td align="center">套索选择</td>
+<td align="center">select lasso</td>
+<td align="center">Shift+Space, L</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>P.S. 选择菜单中的Select More&#x2F;Less只在编辑模式下生效</p>
+<span id="more"></span>
+
+<h2 id="界面（UI）">1.4 &nbsp&nbsp<a href="#界面（UI）" class="headerlink" title="界面（UI）"></a>界面（UI）</h2><table>
+<thead>
+<tr>
+<th align="center">界面操作</th>
+<th align="center">interface operate</th>
+<th align="center">快捷键</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">最大化&#x2F;恢复当前窗口</td>
+<td align="center">toggle maximize area</td>
+<td align="center">Ctrl+Space</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">工作区选项卡的切换</td>
+<td align="center">cycle workspace</td>
+<td align="center">Ctrl+PageUp&#x2F;PageDown</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">左边工具栏</td>
+<td align="center">toolbar</td>
+<td align="center">T</td>
+<td align="center">查看子项：Hold LMB</td>
+</tr>
+<tr>
+<td align="center">右边侧边栏</td>
+<td align="center">sidebar</td>
+<td align="center">N</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3d游标</td>
+<td align="center">3d cursor</td>
+<td align="center">Shift+RMB</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>底部信息栏可根据当前鼠标事件提示用户</li>
+<li>拖动视窗边界可以调整窗口大小，右键边界处可拆分合并窗口（拖动四角也行，拆分：鼠标拖动要保持在同一窗口；合并：鼠标拖动到另一窗口）</li>
+<li>删除视窗：右键边界处合并窗口</li>
+</ul>
+<h2 id="变换物体（Menu-Object-Transform）">1.5 &nbsp&nbsp<a href="#变换物体（Menu-Object-Transform）" class="headerlink" title="变换物体（Menu&gt;Object&gt;Transform）"></a>变换物体（Menu&gt;Object&gt;Transform）</h2><table>
+<thead>
+<tr>
+<th align="center">变换物体</th>
+<th align="center">transform object</th>
+<th align="center">快捷键</th>
+<th align="center">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">移动</td>
+<td align="center">grab</td>
+<td align="center">G</td>
+<td align="center">重置移动：Alt+G</td>
+</tr>
+<tr>
+<td align="center">旋转</td>
+<td align="center">rotate</td>
+<td align="center">R</td>
+<td align="center">重置缩放：Alt+R</td>
+</tr>
+<tr>
+<td align="center">缩放</td>
+<td align="center">scale</td>
+<td align="center">S</td>
+<td align="center">重置缩放：Alt+S</td>
+</tr>
+<tr>
+<td align="center">吸附饼菜单</td>
+<td align="center">snap pie menu</td>
+<td align="center">Shift+S</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><strong>工具栏中工具切换：Shift+Space</strong></p>
+<p>**快捷键模式：LMB确认，RMB取消。**未确认之前，都可以通过更改快捷键（包括三种变换之间可直接切换，不限于一种变换内切换），查看对应效果。</p>
+<h3 id="移动（Grab，G）">1.5.1 &nbsp&nbsp<a href="#移动（Grab，G）" class="headerlink" title="移动（Grab，G）"></a>移动（Grab，G）</h3><ul>
+<li>工具栏：内部白线（自由移动）、三个轴（箭头）、平面（两轴之间的小平面）</li>
+<li>快捷键模式G：默认：自由移动；单轴移动：X&#x2F;Y&#x2F;Z；双轴移动：Shift+X&#x2F;Y&#x2F;Z（移除单轴，结果就是双轴）</li>
+<li>重置移动：Alt+G</li>
+</ul>
+<h3 id="旋转（Rorate，R）">1.5.2 &nbsp&nbsp<a href="#旋转（Rorate，R）" class="headerlink" title="旋转（Rorate，R）"></a>旋转（Rorate，R）</h3><ul>
+<li>工具栏：三弧线、内部轨迹球（鼠标悬停在弧线内显示）、最外部的白线（当前视角按物体原点旋转）</li>
+<li>快捷键模式R（内部模式切换R）：默认：自由旋转；单轴旋转：X&#x2F;Y&#x2F;Z；轨迹球：R；双轴旋转：Shift+X&#x2F;Y&#x2F;Z（移除单轴，结果就是双轴）</li>
+<li>重置旋转：Alt+R</li>
+</ul>
+<h3 id="缩放（Scale，S）">1.5.3 &nbsp&nbsp<a href="#缩放（Scale，S）" class="headerlink" title="缩放（Scale，S）"></a>缩放（Scale，S）</h3><ul>
+<li>工具栏：内部&#x2F;外部白线（自由缩放）、三个轴（方块）、平面（两轴之间的小平面）</li>
+<li>快捷键模式G：默认：自由缩放；单轴缩放：X&#x2F;Y&#x2F;Z；双轴缩放：Shift+X&#x2F;Y&#x2F;Z（移除单轴，结果就是双轴）</li>
+<li>重置缩放：Alt+S</li>
+</ul>
+<h3 id="吸附（Shift-Tab）">1.5.4 &nbsp&nbsp<a href="#吸附（Shift-Tab）" class="headerlink" title="吸附（Shift+Tab）"></a>吸附（Shift+Tab）</h3><p>Shift+Tab激活</p>
+<ul>
+<li>顶点（吸附时，鼠标悬停在其他顶点上）</li>
+</ul>
+<h3 id="精度控制（按住shift-Ctrl）">1.5.5 &nbsp&nbsp<a href="#精度控制（按住shift-Ctrl）" class="headerlink" title="精度控制（按住shift&#x2F;Ctrl）"></a>精度控制（按住shift&#x2F;Ctrl）</h3><ul>
+<li>精确控制：按住Shift（十分之一的速度变换）</li>
+<li>按吸附方案：按住Ctrl（确保未启用吸附功能，已启用的状态下，Ctrl是禁用吸附）<ul>
+<li>增量方案snap&gt;increment，变化量递增（非连续量），但不是默认模式那种连续量</li>
+<li>顶点</li>
+<li>面</li>
+</ul>
+</li>
+</ul>
+<h3 id="变换坐标系和变换轴心点">1.5.6 &nbsp&nbsp<a href="#变换坐标系和变换轴心点" class="headerlink" title="变换坐标系和变换轴心点"></a>变换坐标系和变换轴心点</h3><p>位置：正上方</p>
+<ul>
+<li>坐标系：<ul>
+<li>全局坐标系</li>
+<li>局部坐标系：物体自身轴。全局坐标系下快速访问：double X&#x2F;Y&#x2F;Z</li>
+</ul>
+</li>
+<li>轴心点：默认是质心点</li>
+</ul>
+<h3 id="比例化编辑（Proportional-Editing，O）">1.5.7 &nbsp&nbsp<a href="#比例化编辑（Proportional-Editing，O）" class="headerlink" title="比例化编辑（Proportional Editing，O）"></a>比例化编辑（Proportional Editing，O）</h3><h2 id="添加和删除物体（Shift-A；X）">1.6 &nbsp&nbsp<a href="#添加和删除物体（Shift-A；X）" class="headerlink" title="添加和删除物体（Shift+A；X）"></a>添加和删除物体（Shift+A；X）</h2><p>Menu&gt;Add<br>Menu&gt;Object&gt;Delete</p>
+<p>删除物体：X（D确认，只有这个方式有确认）；Delete</p>
+<h1 id="大纲视图编辑器">2 &nbsp&nbsp<a href="#大纲视图编辑器" class="headerlink" title="大纲视图编辑器"></a>大纲视图编辑器</h1><p>类似其他软件的组管理或层管理。</p>
+<p>图标解释</p>
+<ul>
+<li>倒三角：网格</li>
+<li>灯泡：灯光</li>
+<li>摄像机</li>
+<li>箱子：集合</li>
+<li>眼镜：控制视窗隐藏</li>
+<li>相机：控制渲染</li>
+</ul>
+<p>新建集合或移动物体到某集合</p>
+<ul>
+<li>M</li>
+<li>RMB Menu，选择Move to Collection（新建需要两次Enter）。</li>
+<li>直接在大纲视图操作</li>
+</ul>
+<p>链接物体到集合：Shift+M（不建议将一个物体链接到多个集合，不好追踪管理）；取消链接需要在大纲视图里操作：LMB&gt;Unlink</p>
+<p>大纲视图的操作</p>
+<ul>
+<li>新建集合，RMB空白处</li>
+<li>在已有集合下新建：RMB集合名字；选中集合名字，C新建</li>
+<li>重命名：Double LMB</li>
+<li>移动：LMB（drag）</li>
+<li>展开&#x2F;折叠：+-</li>
+</ul>
+<h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>Tab进入编辑模式或者使用建模工作区选项卡。</p>
+<h2 id="多边形概念">3.1 &nbsp&nbsp<a href="#多边形概念" class="headerlink" title="多边形概念"></a>多边形概念</h2><p>点、线、面（三角面triangle、四边面quad、多边面n-gon）、多边形建模（polygon&#x2F;polys）</p>
+<p>面的类型效果：尽量使用四边面，利于动画的网格变形，进行表面细分也合理。某些复杂形状的情况，多边面的变形和细分效果比四边面好。</p>
+<h2 id="物体模式和编辑模式">3.2 &nbsp&nbsp<a href="#物体模式和编辑模式" class="headerlink" title="物体模式和编辑模式"></a>物体模式和编辑模式</h2><p>编辑模式是用以物体的网格（mesh）数据，部分非mesh物体（如骨架曲线，晶格也有编辑模式，不过不是用以操作mesh，只是用以操作相关的物体数据）</p>
+<p>可同时选择多个物体进入编辑模式，但注意无法将它们的mesh相连接。</p>
+<h3 id="物体模式下合并物体（Ctrl-J）">3.2.1 &nbsp&nbsp<a href="#物体模式下合并物体（Ctrl-J）" class="headerlink" title="物体模式下合并物体（Ctrl+J）"></a>物体模式下合并物体（Ctrl+J）</h3><p>选好物体：</p>
+<ul>
+<li>Menu&gt;Obejct&gt;Join</li>
+<li>Crtl+J</li>
+</ul>
+<h3 id="编辑模式下分离mesh（P）">3.2.2 &nbsp&nbsp<a href="#编辑模式下分离mesh（P）" class="headerlink" title="编辑模式下分离mesh（P）"></a>编辑模式下分离mesh（P）</h3><p>选好mesh：</p>
+<ul>
+<li>Menu&gt;Menu&gt;Seperate</li>
+<li>P</li>
+</ul>
+<h2 id="mesh选择点线面模式（主键盘123；Shift-123）">3.3 &nbsp&nbsp<a href="#mesh选择点线面模式（主键盘123；Shift-123）" class="headerlink" title="mesh选择点线面模式（主键盘123；Shift+123）"></a>mesh选择点线面模式（主键盘123；Shift+123）</h2><ul>
+<li>左上角图标；多选：Shift+图标</li>
+<li>快捷键（主键盘）：123；多选：Shift+123</li>
+</ul>
+<h2 id="快速选择技巧">3.4 &nbsp&nbsp<a href="#快速选择技巧" class="headerlink" title="快速选择技巧"></a>快速选择技巧</h2><ul>
+<li>加选：Shift</li>
+<li>最短路径：Ctrl（在uv展开中标记缝合边很有用）</li>
+<li>循环边(loop)：按住Alt+LMB选择点线面（根据模式）</li>
+<li>并排边(ring)：按住Ctrl+Alt+LMB选择</li>
+<li>加选&#x2F;减选（已选中部分mesh）：Ctrl+Plus&#x2F;Minus。效果是在已选中的范围基础上加选或减选。</li>
+<li>关联选择（适合选择孤立部分，物体由多个孤立mesh组成）<ul>
+<li>已选中部分mesh：Ctrl+L</li>
+<li>未选中任何mesh：鼠标悬停，L</li>
+</ul>
+</li>
+</ul>
+<p>基本选择方式在编辑模式下都可用。</p>
+<h2 id="点工具（Ctrl-V）">3.5 &nbsp&nbsp<a href="#点工具（Ctrl-V）" class="headerlink" title="点工具（Ctrl+V）"></a>点工具（Ctrl+V）</h2><h3 id="连接顶点路径（connect-vertex-path，J）">3.5.1 &nbsp&nbsp<a href="#连接顶点路径（connect-vertex-path，J）" class="headerlink" title="连接顶点路径（connect vertex path，J）"></a>连接顶点路径（connect vertex path，J）</h3><p>连接同一个面的两个顶点，或者相连两个面的顶点</p>
+<h2 id="线工具（Ctrl-E）">3.6 &nbsp&nbsp<a href="#线工具（Ctrl-E）" class="headerlink" title="线工具（Ctrl+E）"></a>线工具（Ctrl+E）</h2><h2 id="边线倒角（Bevel，Ctrl-B-滚轮）">3.7 &nbsp&nbsp<a href="#边线倒角（Bevel，Ctrl-B-滚轮）" class="headerlink" title="边线倒角（Bevel，Ctrl+B&gt;滚轮）"></a>边线倒角（Bevel，Ctrl+B&gt;滚轮）</h2><p><strong>倒角能让物体更加真实，一般用于硬表面建模。</strong></p>
+<p><strong>除了倒角工具，倒角修改器也可以实现倒角。</strong></p>
+<ul>
+<li>段数（segments）：段数越高，越圆滑</li>
+<li>材质编号（material index）：通过调整材质编号给倒角使用材质列表中的材质。</li>
+</ul>
+<h3 id="桥接循环边（bridge-edge-loop）">3.7.1 &nbsp&nbsp<a href="#桥接循环边（bridge-edge-loop）" class="headerlink" title="桥接循环边（bridge edge loop）"></a>桥接循环边（bridge edge loop）</h3><h2 id="环切和滑动（Loop-Cut，Ctrl-R-滚轮，重新滑动GG）">3.8 &nbsp&nbsp<a href="#环切和滑动（Loop-Cut，Ctrl-R-滚轮，重新滑动GG）" class="headerlink" title="环切和滑动（Loop Cut，Ctrl+R&gt;滚轮，重新滑动GG）"></a>环切和滑动（Loop Cut，Ctrl+R&gt;滚轮，重新滑动GG）</h2><ul>
+<li>默认环切：</li>
+<li>偏移量环切：</li>
+</ul>
+<p>快捷键模式和工具栏模式的区别</p>
+<ul>
+<li>快捷键模式：Ctrl+R（滚轮确定环切次数），LMB确认方位后进入滑动模式，RMB取消就是保持中间切割（确保当前激活工具不是环切，否则Ctrl+R就直接进入滑动模式，因为环切工具激活时，本身就可通过鼠标确认方位）</li>
+<li>工具栏模式：LMB直接切换，按住LMB滑动（或者Ctrl+R）</li>
+</ul>
+<h2 id="面工具（Ctrl-F）">3.9 &nbsp&nbsp<a href="#面工具（Ctrl-F）" class="headerlink" title="面工具（Ctrl+F）"></a>面工具（Ctrl+F）</h2><h3 id="挤出（Extrude，E，到光标Ctrl-RMB）">3.9.1 &nbsp&nbsp<a href="#挤出（Extrude，E，到光标Ctrl-RMB）" class="headerlink" title="挤出（Extrude，E，到光标Ctrl+RMB）"></a>挤出（Extrude，E，到光标Ctrl+RMB）</h3><p><strong>快捷键实现单个轴向上挤出各个面：E，用s在单轴上，如z缩放。</strong></p>
+<ul>
+<li>默认挤出选区（region）</li>
+<li>挤出流形（manifold）</li>
+<li>沿法线挤出（along normals）：相邻的面挤出时，各个面仍会相连。不像individual，就是单独挤出面。</li>
+<li>挤出各个面（individual）：单独挤出。适合在选中面的情况下操作。比如挤出后，再单独操作啥的（例如调整变换轴心点为各自的原点，可单独缩放调整各个面）</li>
+<li>挤出到光标（to cursor）（激活该工具时LMB；快速实现Ctrl+RMB）</li>
+</ul>
+<h2 id="内插面（Inset-Faces，I）">3.10 &nbsp&nbsp<a href="#内插面（Inset-Faces，I）" class="headerlink" title="内插面（Inset Faces，I）"></a>内插面（Inset Faces，I）</h2><p><strong>挤出工具实现内插面：按e移动后右键取消，通过s缩小。</strong></p>
+<h2 id="顶点倒角（Bevel，Ctrl-Shift-B-滚轮）">3.11 &nbsp&nbsp<a href="#顶点倒角（Bevel，Ctrl-Shift-B-滚轮）" class="headerlink" title="顶点倒角（Bevel，Ctrl+Shift+B&gt;滚轮）"></a>顶点倒角（Bevel，Ctrl+Shift+B&gt;滚轮）</h2><h2 id="切割（Knife，K）">3.12 &nbsp&nbsp<a href="#切割（Knife，K）" class="headerlink" title="切割（Knife，K）"></a>切割（Knife，K）</h2><p><strong>切分（bisect）一般用于创建物体的横截面</strong></p>
+<p>确认：空格&#x2F;Enter</p>
+<ul>
+<li>切割（knife）：默认切割方式</li>
+<li>切分（bisect）：根据面或者线直接切分开来，不是默认靠点分割。该方式还可以移动切割的线条，或者通过面板去掉一半或填充面</li>
+</ul>
+<h1 id="参考资料">4 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Blender. Blender 2.80 Fundamentals[EB&#x2F;OL]. <a href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6">https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
+        <tag>界面</tag>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
@@ -14120,7 +14120,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#115;&#116;&#101;&#x72;&#107;&#105;&#110;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -14232,6 +14232,11 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
   <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -14401,11 +14406,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 
 </div>
 ]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>作品</title>
