@@ -143,7 +143,6 @@
     </div>
     <a href="https://wormhole.app/">Wormhole简单私密文件共享</a>
     <a href="https://fastsend.ing/zh">点对点Fast Send</a>
-    <a href="https://snapdrop.net/">snapdrop（仅局域网）</a>
 </div>
 
 <div class="text-box">
@@ -481,6 +480,13 @@
     <p class="tag-bookmark-page">邮件客户端</p>
     </div>
     <a href="https://www.thunderbird.net/zh-CN/thunderbird/all/">Thunderbird雷鸟</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">音乐播放器平台</p>
+    </div>
+    <a href="https://music.163.com/#/download">网易云音乐</a>
 </div>
 
 </div>
@@ -825,12 +831,14 @@
     <p class="tag-bookmark-page">SSH传输|局域网传输|远程传输</p>
     </div>
     <a href="https://winscp.net/eng/download.php">WinSCP</a>
-    <a href="https://localsend.org/zh-CN/download">LocalSend</a>
+    <a href="https://localsend.org/zh-CN/download">LocalSend(跨平台应用)</a>
+    <a href="https://landrop.app/">LANDrop(跨平台应用)</a>
+    <a href="https://pairdrop.net/#">PairDrop(网页端)</a>
     <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>
-    <a href="https://snapdrop.net/">snapdrop（局域网）</a>
     <a href="https://github.com/sz3/libcimbar">libcimbar（光波传输/二维码）</a>
     <a href="https://github.com/divan/txqr">TXQR（光波传输/二维码）</a>
     <a href="https://github.com/ggerganov/ggwave">ggwave（声波传输）</a>
+    <!-- <a href="https://snapdrop.net/">snapdrop（局域网，已被LimeWire收购，移除收录）</a> -->
 </div>
 
 <div class="text-box">
@@ -2669,69 +2677,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>数据结构</title>
-    <url>/code/data-structure/</url>
-    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
-<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
-<li>集合的特性：<ul>
-<li>集合里的元素类型不一定相同</li>
-<li>集合里的元素没有顺序</li>
-</ul>
-</li>
-<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
-<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
-<li>列表最常见的表现形式：数组和链表<ul>
-<li>C++和Java中，数组中的元素类型必须保持一致。</li>
-<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
-</ul>
-</li>
-<li>特殊类型的列表：栈和队列</li>
-</ul>
-</li>
-<li>列表和数组的区别<ul>
-<li>数组<ul>
-<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
-<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
-</ul>
-</li>
-<li>列表<ul>
-<li>列表没有<code>索引</code>。</li>
-<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
-<ul>
-<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
-<li>时间复杂度：O(1)</li>
-</ul>
-</li>
-<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
-<li>时间复杂度：O(N)</li>
-</ul>
-</li>
-<li>插入元素<ul>
-<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
-<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
-</ul>
-</li>
-<li>删除元素：与插入元素类似<ul>
-<li>末尾删除：只需要一步</li>
-<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
-<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
-</ul>
-</li>
-</ul>
-<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数据库技术总结笔记</title>
     <url>/code/database/</url>
     <content><![CDATA[<h1 id="常见数据库">1 &nbsp&nbsp<a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h1><ul>
@@ -2856,6 +2801,69 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>mongodb</tag>
         <tag>sql</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/code/data-structure/</url>
+    <content><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li>集合的定义：由一个或多个确定的元素所构成的整体。</li>
+<li>集合的特性：<ul>
+<li>集合里的元素类型不一定相同</li>
+<li>集合里的元素没有顺序</li>
+</ul>
+</li>
+<li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul>
+<li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li>
+<li>列表最常见的表现形式：数组和链表<ul>
+<li>C++和Java中，数组中的元素类型必须保持一致。</li>
+<li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li>
+</ul>
+</li>
+<li>特殊类型的列表：栈和队列</li>
+</ul>
+</li>
+<li>列表和数组的区别<ul>
+<li>数组<ul>
+<li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li>
+<li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li>
+</ul>
+</li>
+<li>列表<ul>
+<li>列表没有<code>索引</code>。</li>
+<li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p>
+<ul>
+<li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul>
+<li>时间复杂度：O(1)</li>
+</ul>
+</li>
+<li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul>
+<li>时间复杂度：O(N)</li>
+</ul>
+</li>
+<li>插入元素<ul>
+<li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li>
+<li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li>
+</ul>
+</li>
+<li>删除元素：与插入元素类似<ul>
+<li>末尾删除：只需要一步</li>
+<li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li>
+<li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
   </entry>
   <entry>
     <title>docker</title>
@@ -3318,7 +3326,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#x74;&#64;&#49;&#55;&#50;&#46;&#x31;&#x39;&#x2e;&#x30;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#64;&#49;&#x37;&#x32;&#x2e;&#x31;&#57;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -4437,7 +4445,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方式：这是启用debug-and-release编译源码导致的，debug和release同时编译易出问题，因此建议分开编译。</p>
 <h3 id="编译的字符报错或者其他问题">7.4.6 &nbsp&nbsp<a href="#编译的字符报错或者其他问题" class="headerlink" title="编译的字符报错或者其他问题"></a>编译的字符报错或者其他问题</h3><p>问题：编译可能提示找不到路径或者字符报错等其他问题，可能是由于中文路径引起。</p>
 <p>解决方式：路径中不要含有中文字符，可以在磁盘根目录下操作，这样可保证路径总字符不会很多。</p>
-<h3 id="终端编译报错：The-input-line-is-too-long">7.4.7 &nbsp&nbsp<a href="#终端编译报错：The-input-line-is-too-long" class="headerlink" title="终端编译报错：The input line is too long"></a>终端编译报错：The input line is too long</h3><p>报错信息：</p>
+<h3 id="终端编译报错：The-input-line-is-too-long">7.4.7 &nbsp&nbsp<a href="#终端编译报错：The-input-line-is-too-long" class="headerlink" title="终端编译报错：The input line is too long"></a>终端编译报错：The input line is too long</h3><div class="note info no-icon"><p>该报错现象根据系统和终端版本表现不同，Windows11 25H2 26200.7019版本和Git-2.51.0版本的bash终端，实测多次编译也不会出现该报错。</p>
+</div>
+
+<p>报错信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">The input line is too long.</span><br><span class="line">The syntax of the command is incorrect.</span><br></pre></td></tr></table></figure>
 
 <p>问题原因：单个终端实例多次运行命令，导致累积长度超过8191个字符，触发了命令行长度限制报错。该现象常见于终端窗口里面多次运行编译命令引起，不知道为啥多次会累积计算这个长度。例如我从<code>qtbase</code>-&gt;<code>qt5compat</code>编译总共6个模块，在编译第五个<code>qtsvg</code>模块时，在尝试执行BAT编译脚本就会出现该报错。</p>
@@ -6196,6 +6207,76 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>虚拟机总结</title>
+    <url>/software/virtual-machine/</url>
+    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
+<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
+<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
+<p>解决方法：</p>
+<ol>
+<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
+<li>Containers</li>
+<li>Hyper-V</li>
+<li>Virtual Machine Platform</li>
+<li>Windows Hypervisor Platform</li>
+<li>Windows Sandbox</li>
+<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
+</ul>
+</li>
+<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
+</ol>
+<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
+<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
+<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
+<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
+<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
+<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
+<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
+<li><a href="https://github.com/intel/haxm">haxm</a></li>
+</ul>
+<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
+<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<table>
@@ -6310,58 +6391,86 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>访问WEB管理地址并登录：<a href="https://192.168.1.2:8006/">https://192.168.1.2:8006</a>。账户：root。密码：[前面步骤设置的密码]。</li>
 <li>设置网卡并确保pve能联网。</li>
 </ol>
-<h2 id="PVE升级步骤（7-4-8-x）">3.2 &nbsp&nbsp<a href="#PVE升级步骤（7-4-8-x）" class="headerlink" title="PVE升级步骤（7.4-&gt;8.x）"></a>PVE升级步骤（7.4-&gt;8.x）</h2><h3 id="替换PVE-7-4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-4最新版">3.2.1 &nbsp&nbsp<a href="#替换PVE-7-4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-4最新版" class="headerlink" title="替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.4最新版"></a>替换PVE 7.4的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.4最新版</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。<code>sources.list</code>相关的源，都是执行<code>apt update</code>更新索引生效。</p>
-<div class="tabs" id="74sources"><ul class="nav-tabs"><li class="tab active"><a href="#74sources-1">PVE 7.4的Debian系统软件源</a></li><li class="tab"><a href="#74sources-2">PVE 7.4的PVE软件源</a></li><li class="tab"><a href="#74sources-3">PVE 7.4的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sources-1"><p>修改<code>/etc/apt/sources.list</code>文件内容</p>
+<h2 id="PVE升级步骤（7-x-8-x）">3.2 &nbsp&nbsp<a href="#PVE升级步骤（7-x-8-x）" class="headerlink" title="PVE升级步骤（7.x-&gt;8.x）"></a>PVE升级步骤（7.x-&gt;8.x）</h2><h3 id="替换PVE-7-x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-x最新版">3.2.1 &nbsp&nbsp<a href="#替换PVE-7-x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-7-x最新版" class="headerlink" title="替换PVE 7.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.x最新版"></a>替换PVE 7.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 7.x最新版</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。<code>sources.list</code>相关的源，都是执行<code>apt update</code>更新索引生效。</p>
+<div class="tabs" id="7xsources"><ul class="nav-tabs"><li class="tab active"><a href="#7xsources-1">PVE 7.x的Debian系统软件源</a></li><li class="tab"><a href="#7xsources-2">PVE 7.x的PVE软件源</a></li><li class="tab"><a href="#7xsources-3">PVE 7.x的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="7xsources-1"><p>修改<code>/etc/apt/sources.list</code>文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-<div class="tabs" id="74sourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74sourcestype-1">PVE 7.4的Debian系统软件源（中科大源）</a></li><li class="tab"><a href="#74sourcestype-2">PVE 7.4的Debian系统软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74sourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="74sources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
+<div class="tabs" id="74sourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74sourcestype-1">PVE 7.x的Debian系统软件源（中科大源）</a></li><li class="tab"><a href="#74sourcestype-2">PVE 7.x的Debian系统软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74sourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74sourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment">#deb http://ftp.debian.org/debian bullseye-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment">#deb http://security.debian.org bullseye-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="7xsources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak</span><br></pre></td></tr></table></figure>
-<div class="tabs" id="74pvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74pvesourcestype-1">PVE 7.4的PVE软件源（中科大源）</a></li><li class="tab"><a href="#74pvesourcestype-2">PVE 7.4的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74pvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74pvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="74sources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。其中<code>ceph.list</code>的<code>https://mirrors.ustc.edu.cn/proxmox/debian/$CEPH_CODENAME</code>还可以通过在对应系统版本中执行命令<code>ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;</code>获取<code>$CEPH_CODENAME</code>值。</p>
+<div class="tabs" id="7xpvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#7xpvesourcestype-1">PVE 7.x的PVE软件源（中科大源）</a></li><li class="tab"><a href="#7xpvesourcestype-2">PVE 7.x的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="7xpvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="7xpvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bullseye pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="7xsources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。</p>
+<p>其中<code>ceph.list</code>的<code>https://mirrors.ustc.edu.cn/proxmox/debian/$CEPH_CODENAME</code>还可以通过在对应系统版本中执行命令<code>ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;</code>获取<code>$CEPH_CODENAME</code>值。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
-<div class="tabs" id="74cephsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#74cephsourcestype-1">PVE 7.4的CEPH分布式源（中科大源）</a></li><li class="tab"><a href="#74cephsourcestype-2">PVE 7.4的CEPH分布式源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="74cephsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-pacific bullseye no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="74cephsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/ceph-pacific bullseye no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
-<h3 id="升级到PVE-7-4最新的版本">3.2.2 &nbsp&nbsp<a href="#升级到PVE-7-4最新的版本" class="headerlink" title="升级到PVE 7.4最新的版本"></a>升级到PVE 7.4最新的版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="7xcephsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#7xcephsourcestype-1">PVE 7.x的CEPH分布式源（中科大源）</a></li><li class="tab"><a href="#7xcephsourcestype-2">PVE 7.x的CEPH分布式源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="7xcephsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-pacific bullseye no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="7xcephsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/ceph-pacific bullseye no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
+<h3 id="升级到PVE-7-x最新的版本">3.2.2 &nbsp&nbsp<a href="#升级到PVE-7-x最新的版本" class="headerlink" title="升级到PVE 7.x最新的版本"></a>升级到PVE 7.x最新的版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
 <h3 id="检查版本升级的兼容性">3.2.3 &nbsp&nbsp<a href="#检查版本升级的兼容性" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve7to8</span><br></pre></td></tr></table></figure>
 <h3 id="替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-8-x">3.2.4 &nbsp&nbsp<a href="#替换PVE-8-x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-8-x" class="headerlink" title="替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 8.x"></a>替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 8.x</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。<code>sources.list</code>相关的源，都是执行<code>apt update</code>更新索引生效。</p>
 <div class="tabs" id="8xsources"><ul class="nav-tabs"><li class="tab active"><a href="#8xsources-1">PVE 8.x的Debian系统软件源</a></li><li class="tab"><a href="#8xsources-2">PVE 8.x的PVE软件源</a></li><li class="tab"><a href="#8xsources-3">PVE 8.x的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xsources-1"><p>修改&#x2F;etc&#x2F;apt&#x2F;sources.list文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="8xsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xsourcestype-1">PVE 8.x的中科大镜像源</a></li><li class="tab"><a href="#8xsourcestype-2">PVE 8.x的清华镜像源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org bookworm-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian bookworm-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org bookworm-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="8xsources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak</span><br></pre></td></tr></table></figure>
-<div class="tabs" id="8xpvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xpvesourcestype-1">PVE 8.x的PVE软件源（中科大源）</a></li><li class="tab"><a href="#8xpvesourcestype-2">PVE 8.x的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xpvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xpvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="8xsources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。其中<code>ceph.list</code>的<code>https://mirrors.ustc.edu.cn/proxmox/debian/$CEPH_CODENAME</code>还可以通过在对应系统版本中执行命令<code>ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;</code>获取<code>$CEPH_CODENAME</code>值。</p>
+<div class="tabs" id="8xpvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xpvesourcestype-1">PVE 8.x的PVE软件源（中科大源）</a></li><li class="tab"><a href="#8xpvesourcestype-2">PVE 8.x的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xpvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xpvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bookworm pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="8xsources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。</p>
+<p>其中<code>ceph.list</code>的<code>https://mirrors.ustc.edu.cn/proxmox/debian/$CEPH_CODENAME</code>还可以通过在对应系统版本中执行命令<code>ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;</code>获取<code>$CEPH_CODENAME</code>值。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="8xcephsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#8xcephsourcestype-1">PVE 8.x的CEPH分布式源（中科大源）</a></li><li class="tab"><a href="#8xcephsourcestype-2">PVE 8.x的CEPH分布式源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="8xcephsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="8xcephsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/ceph-quincy bookworm no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
-<h3 id="替换LXC模板（CT-Templates）镜像源">3.2.5 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h3><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行<code>systemctl restart pvedaemon</code>后生效。</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm.bak</span><br></pre></td></tr></table></figure>
-<div class="tabs" id="lxcsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#lxcsourcestype-1">PVE LXC模板（CT Templates）（中科大源）</a></li><li class="tab"><a href="#lxcsourcestype-2">PVE LXC模板（CT Templates）（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="lxcsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.ustc.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="lxcsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.tuna.tsinghua.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure></div></div></div>
 
-<h3 id="开始正式升级（7-4-8-x）">3.2.6 &nbsp&nbsp<a href="#开始正式升级（7-4-8-x）" class="headerlink" title="开始正式升级（7.4-&gt;8.x）"></a>开始正式升级（7.4-&gt;8.x）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+<h3 id="开始正式升级（7-x-8-x）">3.2.5 &nbsp&nbsp<a href="#开始正式升级（7-x-8-x）" class="headerlink" title="开始正式升级（7.x-&gt;8.x）"></a>开始正式升级（7.x-&gt;8.x）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
 </div>
 <p>升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/issue -&gt; Proxmox VE will auto-generate this file on boot, and it has only cosmetic effects on the login console.</span><br><span class="line">Using the default <span class="string">&quot;No&quot;</span> (keep your currently-installed version) is safe here.</span><br><span class="line"></span><br><span class="line">/etc/lvm/lvm.conf -&gt; Changes relevant <span class="keyword">for</span> Proxmox VE will be updated, and a newer config version might be useful.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br><span class="line"></span><br><span class="line">/etc/ssh/sshd_config -&gt; If you have not changed this file manually, the only differences should be a replacement of ChallengeResponseAuthentication no with KbdInteractiveAuthentication no and some irrelevant changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#).</span></span><br><span class="line">If this is the <span class="keyword">case</span>, both options are safe, though we would recommend installing the package maintainer<span class="string">&#x27;s version in order to move away from the deprecated ChallengeResponseAuthentication option. If there are other changes, we suggest to inspect them closely and decide accordingly.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">/etc/default/grub -&gt; Here you may want to take special care, as this is normally only asked for if you changed it manually, e.g., for adding some kernel command line option.</span></span><br><span class="line"><span class="string">It&#x27;</span>s recommended to check the difference <span class="keyword">for</span> any relevant change, note that changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#) are not relevant.</span></span><br><span class="line">If unsure, we suggested to selected <span class="string">&quot;No&quot;</span> (keep your currently-installed version)</span><br></pre></td></tr></table></figure>
 
-<h2 id="PVE升级步骤（8-4-9-x）">3.3 &nbsp&nbsp<a href="#PVE升级步骤（8-4-9-x）" class="headerlink" title="PVE升级步骤（8.4-&gt;9.x）"></a>PVE升级步骤（8.4-&gt;9.x）</h2><h3 id="升级到PVE-8-4最新的版本">3.3.1 &nbsp&nbsp<a href="#升级到PVE-8-4最新的版本" class="headerlink" title="升级到PVE 8.4最新的版本"></a>升级到PVE 8.4最新的版本</h3><p><strong>推荐先操作替换PVE 8.x版本系统的软件源（国内镜像），之后再进行更新操作。详情参阅「<a href="#PVE%E5%8D%87%E7%BA%A7%E6%AD%A5%E9%AA%A4%EF%BC%887-4-8-x%EF%BC%89">PVE 升级步骤（7.4-&gt;8.x）</a>」，这里不再赘述。</strong></p>
+<h2 id="PVE升级步骤（8-x-9-x）">3.3 &nbsp&nbsp<a href="#PVE升级步骤（8-x-9-x）" class="headerlink" title="PVE升级步骤（8.x-&gt;9.x）"></a>PVE升级步骤（8.x-&gt;9.x）</h2><h3 id="升级到PVE-8-x最新的版本">3.3.1 &nbsp&nbsp<a href="#升级到PVE-8-x最新的版本" class="headerlink" title="升级到PVE 8.x最新的版本"></a>升级到PVE 8.x最新的版本</h3><p><strong>更新之前，推荐先操作替换PVE 8.x版本系统的软件源（国内镜像）。详情参阅「<a href="#%E6%9B%BF%E6%8D%A2PVE-8-x%E7%9A%84Debian%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%92%8CPVE%E8%BD%AF%E4%BB%B6%E6%BA%90%EF%BC%88%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%EF%BC%89%EF%BC%8C%E6%96%B9%E4%BE%BF%E5%8D%87%E7%BA%A7%E5%88%B0PVE-8-x">替换PVE 8.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 8.x</a>」，这里不再赘述。</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8x-update-to-lateset.webp">执行apt命令升级</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8x-lastest-check-version.webp">pveversion查看当前版本</div>
+</div>
+
 <h3 id="检查版本升级的兼容性-1">3.3.2 &nbsp&nbsp<a href="#检查版本升级的兼容性-1" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
 
-<p>笔者遇到两个警告WARN和一个失败FAIL。解决警告和失败之后，重新运行检查脚本程序<code>pve8to9</code>，检查没有问题则进行下一步替换镜像源。</p>
-<p>警告1：提示有正在运行的客户端，检查程序推荐考虑迁移或者关闭。这个警告笔者是无视的，毕竟主路由和DNS服务器部署在这些虚拟机上，若是关闭，笔者还得额外调整PVE网络参数才能联网。</p>
+<p>笔者遇到两个警告WARN和一个失败FAIL。</p>
+<p>警告1：提示有正在运行的客户端，检查程序推荐考虑迁移或者关闭。这个警告笔者是无视的，毕竟HomeLab的主路由和DNS递归查询等服务都是部署在这些虚拟机上，若是关闭，笔者还得额外调整网络参数才能联网。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: 9 running guest(s) detected - consider migrating or stopping them.</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-warning1.webp">pve8to9警告信息1</div>
 
 <p>警告2：提示本系统缺乏Intel微码，可无视该警告。想要消除警告，就使用命令安装微码<code>apt install intel-microcode</code>。AMD的CPU机器的微码安装命令为<code>apt install amd64-microcode</code>。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: The matching CPU microcode package &#x27;intel-microcode&#x27; could not be found! Consider installing it to receive the latest security and bug fixes for your CPU.</span><br><span class="line">        Ensure you enable the &#x27;non-free-firmware&#x27; component in the apt sources and run:</span><br><span class="line">        apt install intel-microcode</span><br></pre></td></tr></table></figure>
 
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-warning2.webp">pve8to9警告信息2</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-install-intel-microcode.webp">安装Intel处理器微码</div>
+</div>
+
 <p>失败：这是因为PVE 9.x版本是基于<code>Debian Trixie</code>版本开发的，这个版本中<code>systemd-boot</code>已经被拆分成三个包<code>systemd-boot-efi</code>、<code>systemd-boot-tools</code>和<code>systemd-boot</code>，因此检查脚本若提示要卸载移除，最好是移除它。解决方法是运行卸载命令<code>apt remove systemd-boot</code>。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FAIL: systemd-boot meta-package installed. This will cause problems on upgrades of other boot-related packages. Remove &#x27;systemd-boot&#x27; See https://pve.proxmox.com/wiki/Upgrade_from_8_to_9#sd-boot-warning for more information.</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-fail.webp">pve8to9失败信息</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-remove-systemd-boot.webp">移除systemd-boot</div>
+</div>
+
+<p>注意解在决警告和失败之后，请重新运行检查脚本程序<code>pve8to9</code>，检查没有问题则进行下一步替换PVE 9.x镜像源。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/rerun-pve8to9.webp">重新运行检查脚本程序pve8to9</div>
 
 <h3 id="替换PVE-9-x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-9-x">3.3.3 &nbsp&nbsp<a href="#替换PVE-9-x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE-9-x" class="headerlink" title="替换PVE 9.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 9.x"></a>替换PVE 9.x的Debian系统软件源和PVE软件源（国内镜像），方便升级到PVE 9.x</h3><p>注：推荐中科大源，清华源可能会遇到大型NAT局域网宽带频繁访问而导致被禁用IP，从而导致出现403 Forbidden。<code>sources.list</code>相关的源，都是执行<code>apt update</code>更新索引生效。</p>
 <div class="tabs" id="9xsources"><ul class="nav-tabs"><li class="tab active"><a href="#9xsources-1">PVE 9.x的Debian系统软件源</a></li><li class="tab"><a href="#9xsources-2">PVE 9.x的PVE软件源</a></li><li class="tab"><a href="#9xsources-3">PVE 9.x的CEPH分布式源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="9xsources-1"><p>修改&#x2F;etc&#x2F;apt&#x2F;sources.list文件内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="9xsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#9xsourcestype-1">PVE 9.x的中科大镜像源</a></li><li class="tab"><a href="#9xsourcestype-2">PVE 9.x的清华镜像源</a></li></ul><div class="tab-content"><div class="tab-pane active" id="9xsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org trixie-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security trixie-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="9xsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie-updates main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org trixie-security main contrib</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security trixie-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="9xsources-2"><p>删除pve-enterprise.list，新建pve-no-subscription.list。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak</span><br></pre></td></tr></table></figure>
-<div class="tabs" id="9xpvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#9xpvesourcestype-1">PVE 9.x的PVE软件源（中科大源）</a></li><li class="tab"><a href="#9xpvesourcestype-2">PVE 9.x的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="9xpvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="9xpvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="9xsources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。其中<code>ceph.list</code>的<code>https://mirrors.ustc.edu.cn/proxmox/debian/$CEPH_CODENAME</code>还可以通过在对应系统版本中执行命令<code>ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;</code>获取<code>$CEPH_CODENAME</code>值。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="9xpvesourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#9xpvesourcestype-1">PVE 9.x的PVE软件源（中科大源）</a></li><li class="tab"><a href="#9xpvesourcestype-2">PVE 9.x的PVE软件源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="9xpvesourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="9xpvesourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure></div></div></div></div><div class="tab-pane" id="9xsources-3"><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。</p>
+<p>其中<code>ceph.list</code>的<code>https://mirrors.ustc.edu.cn/proxmox/debian/$CEPH_CODENAME</code>还可以通过在对应系统版本中执行命令<code>ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;</code>获取<code>$CEPH_CODENAME</code>值。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="9xcephsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#9xcephsourcestype-1">PVE 9.x的CEPH分布式源（中科大源）</a></li><li class="tab"><a href="#9xcephsourcestype-2">PVE 9.x的CEPH分布式源（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="9xcephsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-squid trixie no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="9xcephsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/ceph-squid trixie no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br></pre></td></tr></table></figure></div></div></div></div></div></div>
-<h3 id="替换LXC模板（CT-Templates）镜像源-1">3.3.4 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源-1" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h3><p>之前已替换过的国内镜像的则跳过此步骤，需要操作替换的参阅「<a href="#%E6%9B%BF%E6%8D%A2LXC%E6%A8%A1%E6%9D%BF%EF%BC%88CT-Templates%EF%BC%89%E9%95%9C%E5%83%8F%E6%BA%90">替换LXC模板（CT Templates）镜像源</a>」</p>
-<h3 id="开始正式升级（8-4-9-x）">3.3.5 &nbsp&nbsp<a href="#开始正式升级（8-4-9-x）" class="headerlink" title="开始正式升级（8.4-&gt;9.x）"></a>开始正式升级（8.4-&gt;9.x）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="开始正式升级（8-x-9-x）">3.3.4 &nbsp&nbsp<a href="#开始正式升级（8-x-9-x）" class="headerlink" title="开始正式升级（8.x-&gt;9.x）"></a>开始正式升级（8.x-&gt;9.x）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
 </div>
 <p>升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）：</p>
@@ -6369,22 +6478,34 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>以下是实操选择的参数：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Configuration file <span class="string">&#x27;/etc/issue&#x27;</span></span><br><span class="line"> ==&gt; Modified (by you or by a script) since installation.</span><br><span class="line"> ==&gt; Package distributor has shipped an updated version.</span><br><span class="line">   What would you like to <span class="keyword">do</span> about it ?  Your options are:</span><br><span class="line">    Y or I  : install the package maintainer<span class="string">&#x27;s version</span></span><br><span class="line"><span class="string">    N or O  : keep your currently-installed version</span></span><br><span class="line"><span class="string">      D     : show the differences between the versions</span></span><br><span class="line"><span class="string">      Z     : start a shell to examine the situation</span></span><br><span class="line"><span class="string"> The default action is to keep your current version.</span></span><br><span class="line"><span class="string">*** issue (Y/I/N/O/D/Z) [default=N] ?</span></span><br><span class="line"><span class="string">输入N回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuring libc6:amd64 ├────────────────────────────────────────────┐</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ There are services installed on your system which need to be restarted when certain libraries, such as libpam,    │</span></span><br><span class="line"><span class="string"> │ libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the system, you will  │</span></span><br><span class="line"><span class="string"> │ normally be prompted on each upgrade for the list of services you wish to restart.  You can choose this option    │</span></span><br><span class="line"><span class="string"> │ to avoid being prompted; instead, all necessary restarts will be done for you automatically so you can avoid      │</span></span><br><span class="line"><span class="string"> │ being asked questions on each library upgrade.                                                                    │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ Restart services during package upgrades without asking?                                                          │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │                                  &lt;Yes&gt;                                     &lt;No&gt;                                   │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span></span><br><span class="line"><span class="string">选择Yes回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuration file &#x27;</span>/etc/lvm/lvm.conf<span class="string">&#x27;</span></span><br><span class="line"><span class="string"> ==&gt; Modified (by you or by a script) since installation.</span></span><br><span class="line"><span class="string"> ==&gt; Package distributor has shipped an updated version.</span></span><br><span class="line"><span class="string">   What would you like to do about it ?  Your options are:</span></span><br><span class="line"><span class="string">    Y or I  : install the package maintainer&#x27;</span>s version</span><br><span class="line">    N or O  : keep your currently-installed version</span><br><span class="line">      D     : show the differences between the versions</span><br><span class="line">      Z     : start a shell to examine the situation</span><br><span class="line"> The default action is to keep your current version.</span><br><span class="line">*** lvm.conf (Y/I/N/O/D/Z) [default=N] ?</span><br><span class="line">输入Y回车</span><br></pre></td></tr></table></figure>
 
-<h3 id="屏蔽PVE-9-x企业源pve-enterprise-sources">3.3.6 &nbsp&nbsp<a href="#屏蔽PVE-9-x企业源pve-enterprise-sources" class="headerlink" title="屏蔽PVE 9.x企业源pve-enterprise.sources"></a>屏蔽PVE 9.x企业源<code>pve-enterprise.sources</code></h3><p>成功升级至PVE 9.x之后，会自动生成一个<code>DEB822</code>格式的企业源<code>pve-enterprise.sources</code>文件，需要手动屏蔽它，否则WEB后台和<code>apt update</code>会有提示。</p>
+<h3 id="屏蔽PVE-9-x企业源pve-enterprise-sources">3.3.5 &nbsp&nbsp<a href="#屏蔽PVE-9-x企业源pve-enterprise-sources" class="headerlink" title="屏蔽PVE 9.x企业源pve-enterprise.sources"></a>屏蔽PVE 9.x企业源<code>pve-enterprise.sources</code></h3><p>成功升级至PVE 9.x之后，会自动生成一个<code>DEB822</code>格式的企业源<code>pve-enterprise.sources</code>文件，需要手动屏蔽它，否则WEB后台和<code>apt update</code>会有提示。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.sources /etc/apt/sources.list.d/pve-enterprise.sources.bak</span><br><span class="line">apt update -y</span><br></pre></td></tr></table></figure>
 
-<h2 id="去除PVE未订阅提示">3.4 &nbsp&nbsp<a href="#去除PVE未订阅提示" class="headerlink" title="去除PVE未订阅提示"></a>去除PVE未订阅提示</h2><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。PVE 9.x版本执行该方法之后，WEB后台的「软件包版本」按钮无法响应，暂未排查到问题，后面有时间再跟进。</strong></p>
+<h3 id="成功升级PVE-9-x">3.3.6 &nbsp&nbsp<a href="#成功升级PVE-9-x" class="headerlink" title="成功升级PVE 9.x"></a>成功升级PVE 9.x</h3><p>以下就是升级到最新的PVE 9.x版本的WEB后台界面了。</p>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve9x-web-control.webp">PVE 9.x的WEB后台界面</div>
+
+<h2 id="移除无用的包">3.4 &nbsp&nbsp<a href="#移除无用的包" class="headerlink" title="移除无用的包"></a>移除无用的包</h2><p>运行如下如下命令，移除无用的包，节省服务器空间：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt autoremove</span><br></pre></td></tr></table></figure>
+
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-auto-remove.webp">移除无用的包</div>
+
+<h2 id="后续PVE系统日常更新：">3.5 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="去除PVE未订阅提示">3.6 &nbsp&nbsp<a href="#去除PVE未订阅提示" class="headerlink" title="去除PVE未订阅提示"></a>去除PVE未订阅提示</h2><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。实测PVE 9.x版本执行该方法之后，WEB后台的「软件包版本」按钮无法响应，暂未排查到问题，后面有时间再跟进。</strong></p>
 <ul>
 <li><code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure>
 <div class="flex-column">
-<img data-src="/images/software/pve/no-subscribe.webp">「无有效订阅」的提示弹窗</div>
+<img data-src="/images/software/pve/pve-no-subscribe.webp">「无有效订阅」的提示弹窗</div>
 
-<h2 id="移除无用的包">3.5 &nbsp&nbsp<a href="#移除无用的包" class="headerlink" title="移除无用的包"></a>移除无用的包</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt autoremove</span><br></pre></td></tr></table></figure>
+<h2 id="替换LXC模板（CT-Templates）镜像源">3.7 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h2><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行<code>systemctl restart pvedaemon</code>后生效。</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm.bak</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="lxcsourcestype"><ul class="nav-tabs"><li class="tab active"><a href="#lxcsourcestype-1">PVE LXC模板（CT Templates）（中科大源）</a></li><li class="tab"><a href="#lxcsourcestype-2">PVE LXC模板（CT Templates）（清华源）</a></li></ul><div class="tab-content"><div class="tab-pane active" id="lxcsourcestype-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.ustc.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="lxcsourcestype-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.tuna.tsinghua.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure></div></div></div>
 
-<h2 id="网卡mac地址绑定网卡名称">3.6 &nbsp&nbsp<a href="#网卡mac地址绑定网卡名称" class="headerlink" title="网卡mac地址绑定网卡名称"></a>网卡mac地址绑定网卡名称</h2><p>如果PVE宿主机经常要变更硬件的话，这个步骤的操作很重要，详看<a href="#PVE%E5%AE%BF%E4%B8%BB%E6%9C%BA%E6%9B%B4%E6%9B%BF%E7%A1%AC%E4%BB%B6%E5%90%8E%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%81%94%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5%E5%90%8E%E5%8F%B0">PVE宿主机更替硬件后导致失联无法访问网页后台</a></p>
-<h2 id="后续PVE系统日常更新：">3.7 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
-
+<h2 id="网卡mac地址绑定网卡名称">3.8 &nbsp&nbsp<a href="#网卡mac地址绑定网卡名称" class="headerlink" title="网卡mac地址绑定网卡名称"></a>网卡mac地址绑定网卡名称</h2><p>如果PVE宿主机经常要变更硬件的话，这个步骤的操作很重要，详看<a href="#PVE%E5%AE%BF%E4%B8%BB%E6%9C%BA%E6%9B%B4%E6%9B%BF%E7%A1%AC%E4%BB%B6%E5%90%8E%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%81%94%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5%E5%90%8E%E5%8F%B0">PVE宿主机更替硬件后导致失联无法访问网页后台</a></p>
 <h1 id="PVE安装和使用遇到的坑">4 &nbsp&nbsp<a href="#PVE安装和使用遇到的坑" class="headerlink" title="PVE安装和使用遇到的坑"></a>PVE安装和使用遇到的坑</h1><h2 id="PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda">4.1 &nbsp&nbsp<a href="#PVE安装到99-时出现unable-to-install-the-EFI-boot-loader-on-dev-sda" class="headerlink" title="PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;"></a>PVE安装到99%时出现unable to install the EFI boot loader on &#39;&#x2F;dev&#x2F;sda&#39;</h2><p>报错信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bootloader setup errors:</span><br><span class="line">- failed to prepare EFI boot using Grub on &#x27;/dev/sda2&#x27;: unable to install the EFI boot loader on &#x27;/dev/sda&#x27;</span><br></pre></td></tr></table></figure>
 
@@ -7824,108 +7945,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>虚拟机总结</title>
-    <url>/software/virtual-machine/</url>
-    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VMware网卡端口转发实现连接ssh">1.2 &nbsp&nbsp<a href="#VMware网卡端口转发实现连接ssh" class="headerlink" title="VMware网卡端口转发实现连接ssh"></a>VMware网卡端口转发实现连接ssh</h2><h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
-<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
-<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
-<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
-<p>解决方法：</p>
-<ol>
-<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
-<li>Containers</li>
-<li>Hyper-V</li>
-<li>Virtual Machine Platform</li>
-<li>Windows Hypervisor Platform</li>
-<li>Windows Sandbox</li>
-<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
-</ul>
-</li>
-<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
-</ol>
-<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
-<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
-<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
-<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
-<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
-<li><a href="https://www.yundongfang.com/Yun115717.html">如何在 QEMU 中安装 Windows 11</a></li>
-<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
-<li><a href="https://github.com/intel/haxm">haxm</a></li>
-</ul>
-<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
-<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>翻译计划</title>
     <url>/translations/translation-plan/</url>
     <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
@@ -8187,6 +8206,38 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>翻译</tag>
         <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
       </tags>
   </entry>
   <entry>
@@ -9776,12 +9827,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#x75;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#x40;&#x31;&#46;&#x63;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#x38;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#46;&#99;&#111;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#x31;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#116;&#104;&#97;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -12956,6 +13007,117 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>PVE虚拟化系统升级小记（8.x-&gt;9.x）</title>
+    <url>/post-articles/2025-10/pve8to9/</url>
+    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>企业软件开发商<code>Proxmox Server Solutions GmbH</code>在2025年8月5日发布了<code>Proxmox VE</code>9.0版本，这两天终于得空给家里的HomeLab机器操作升级，因此记录一下从PVE 8.x升级到PVE 9.x步骤。</p>
+<p>为了方便软件包下载，一般需要将linux系统的替换成国内镜像源。这样操作更新时，系统访问的是国内镜像服务器，网络速率就不会受限于每秒几十KB。以下内容替换使用的镜像源均为中科大源。</p>
+<h1 id="升级到PVE-8-x最新的版本">2 &nbsp&nbsp<a href="#升级到PVE-8-x最新的版本" class="headerlink" title="升级到PVE 8.x最新的版本"></a>升级到PVE 8.x最新的版本</h1><p><strong>一般更新操作，都是推荐替换国内镜像源再操作。由于本文主要阐述升级步骤，这里不再赘述如何替换PVE 8.x版本系统的软件源，如想了解可参阅我的博客。</strong></p>
+<p>输入如下命令完成升级并查看当前PVE版本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8x-update-to-lateset.webp">执行apt命令升级</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8x-lastest-check-version.webp">pveversion查看当前版本</div>
+</div>
+
+<h1 id="检查版本升级的兼容性">3 &nbsp&nbsp<a href="#检查版本升级的兼容性" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h1><p>输入如下命令调用升级检查脚本命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
+
+<p>笔者遇到两个警告WARN和一个失败FAIL。</p>
+<p>警告1：提示有正在运行的客户端，检查程序推荐考虑迁移或者关闭。这个警告笔者是无视的，毕竟HomeLab的主路由和DNS递归查询等服务都是部署在这些虚拟机上，若是关闭，笔者还得额外调整网络参数才能联网。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: 9 running guest(s) detected - consider migrating or stopping them.</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-warning1.webp">pve8to9警告信息1</div>
+
+<p>警告2：提示本系统缺乏Intel微码，可无视该警告。想要消除警告，就使用命令安装微码<code>apt install intel-microcode</code>。AMD的CPU机器的微码安装命令为<code>apt install amd64-microcode</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: The matching CPU microcode package &#x27;intel-microcode&#x27; could not be found! Consider installing it to receive the latest security and bug fixes for your CPU.</span><br><span class="line">        Ensure you enable the &#x27;non-free-firmware&#x27; component in the apt sources and run:</span><br><span class="line">        apt install intel-microcode</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-warning2.webp">pve8to9警告信息2</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-install-intel-microcode.webp">安装Intel处理器微码</div>
+</div>
+
+<p>失败：这是因为PVE 9.x版本是基于<code>Debian Trixie</code>版本开发的，这个版本中<code>systemd-boot</code>已经被拆分成三个包<code>systemd-boot-efi</code>、<code>systemd-boot-tools</code>和<code>systemd-boot</code>，因此检查脚本若提示要卸载移除，最好是移除它。解决方法是运行卸载命令<code>apt remove systemd-boot</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FAIL: systemd-boot meta-package installed. This will cause problems on upgrades of other boot-related packages. Remove &#x27;systemd-boot&#x27; See https://pve.proxmox.com/wiki/Upgrade_from_8_to_9#sd-boot-warning for more information.</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-fail.webp">pve8to9失败信息</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-remove-systemd-boot.webp">移除systemd-boot</div>
+</div>
+
+<p>注意解在决警告和失败之后，请重新运行检查脚本程序<code>pve8to9</code>，检查没有问题则进行下一步替换PVE 9.x镜像源。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/rerun-pve8to9.webp">重新运行检查脚本程序pve8to9</div>
+
+<h1 id="替换PVE-9-x的软件源">4 &nbsp&nbsp<a href="#替换PVE-9-x的软件源" class="headerlink" title="替换PVE 9.x的软件源"></a>替换PVE 9.x的软件源</h1><h2 id="替换Debian系统软件源">4.1 &nbsp&nbsp<a href="#替换Debian系统软件源" class="headerlink" title="替换Debian系统软件源"></a>替换Debian系统软件源</h2><p>修改&#x2F;etc&#x2F;apt&#x2F;sources.list文件内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>使用如下内容覆盖文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org trixie-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security trixie-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
+
+<h2 id="替换PVE软件源">4.2 &nbsp&nbsp<a href="#替换PVE软件源" class="headerlink" title="替换PVE软件源"></a>替换PVE软件源</h2><p>删除pve-enterprise.list，新建pve-no-subscription.list，参照如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure>
+
+<h2 id="替换CEPH分布式源">4.3 &nbsp&nbsp<a href="#替换CEPH分布式源" class="headerlink" title="替换CEPH分布式源"></a>替换CEPH分布式源</h2><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-squid trixie no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
+
+<h1 id="开始正式升级（8-4-9-x）">5 &nbsp&nbsp<a href="#开始正式升级（8-4-9-x）" class="headerlink" title="开始正式升级（8.4-&gt;9.x）"></a>开始正式升级（8.4-&gt;9.x）</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
+</div>
+<p>升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/issue -&gt; Proxmox VE will auto-generate this file on boot, and it has only cosmetic effects on the login console.</span><br><span class="line">Using the default <span class="string">&quot;No&quot;</span> (keep your currently-installed version) is safe here.</span><br><span class="line"></span><br><span class="line">/etc/lvm/lvm.conf -&gt; Changes relevant <span class="keyword">for</span> Proxmox VE will be updated, and a newer config version might be useful.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br><span class="line"></span><br><span class="line">/etc/ssh/sshd_config -&gt; If you have not changed this file manually, the only differences should be a replacement of ChallengeResponseAuthentication no with KbdInteractiveAuthentication no and some irrelevant changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#).</span></span><br><span class="line">If this is the <span class="keyword">case</span>, both options are safe, though we would recommend installing the package maintainer<span class="string">&#x27;s version in order to move away from the deprecated ChallengeResponseAuthentication option. If there are other changes, we suggest to inspect them closely and decide accordingly.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">/etc/default/grub -&gt; Here you may want to take special care, as this is normally only asked for if you changed it manually, e.g., for adding some kernel command line option.</span></span><br><span class="line"><span class="string">It&#x27;</span>s recommended to check the difference <span class="keyword">for</span> any relevant change, note that changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#) are not relevant.</span></span><br><span class="line">If unsure, we suggested to selected <span class="string">&quot;No&quot;</span> (keep your currently-installed version)</span><br><span class="line"></span><br><span class="line">/etc/chrony/chrony.conf -&gt; If you made <span class="built_in">local</span> changes you might want to move them out of the global config into the conf.d or, <span class="keyword">for</span> custom <span class="keyword">time</span> sources, the sources.d folder.</span><br><span class="line">See the /etc/chrony/conf.d/README and /etc/chrony/sources.d/README files on your system <span class="keyword">for</span> detaily.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br></pre></td></tr></table></figure>
+<p>以下是实操选择的参数：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Configuration file <span class="string">&#x27;/etc/issue&#x27;</span></span><br><span class="line"> ==&gt; Modified (by you or by a script) since installation.</span><br><span class="line"> ==&gt; Package distributor has shipped an updated version.</span><br><span class="line">   What would you like to <span class="keyword">do</span> about it ?  Your options are:</span><br><span class="line">    Y or I  : install the package maintainer<span class="string">&#x27;s version</span></span><br><span class="line"><span class="string">    N or O  : keep your currently-installed version</span></span><br><span class="line"><span class="string">      D     : show the differences between the versions</span></span><br><span class="line"><span class="string">      Z     : start a shell to examine the situation</span></span><br><span class="line"><span class="string"> The default action is to keep your current version.</span></span><br><span class="line"><span class="string">*** issue (Y/I/N/O/D/Z) [default=N] ?</span></span><br><span class="line"><span class="string">输入N回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuring libc6:amd64 ├────────────────────────────────────────────┐</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ There are services installed on your system which need to be restarted when certain libraries, such as libpam,    │</span></span><br><span class="line"><span class="string"> │ libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the system, you will  │</span></span><br><span class="line"><span class="string"> │ normally be prompted on each upgrade for the list of services you wish to restart.  You can choose this option    │</span></span><br><span class="line"><span class="string"> │ to avoid being prompted; instead, all necessary restarts will be done for you automatically so you can avoid      │</span></span><br><span class="line"><span class="string"> │ being asked questions on each library upgrade.                                                                    │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ Restart services during package upgrades without asking?                                                          │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │                                  &lt;Yes&gt;                                     &lt;No&gt;                                   │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span></span><br><span class="line"><span class="string">选择Yes回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuration file &#x27;</span>/etc/lvm/lvm.conf<span class="string">&#x27;</span></span><br><span class="line"><span class="string"> ==&gt; Modified (by you or by a script) since installation.</span></span><br><span class="line"><span class="string"> ==&gt; Package distributor has shipped an updated version.</span></span><br><span class="line"><span class="string">   What would you like to do about it ?  Your options are:</span></span><br><span class="line"><span class="string">    Y or I  : install the package maintainer&#x27;</span>s version</span><br><span class="line">    N or O  : keep your currently-installed version</span><br><span class="line">      D     : show the differences between the versions</span><br><span class="line">      Z     : start a shell to examine the situation</span><br><span class="line"> The default action is to keep your current version.</span><br><span class="line">*** lvm.conf (Y/I/N/O/D/Z) [default=N] ?</span><br><span class="line">输入Y回车</span><br></pre></td></tr></table></figure>
+
+<h1 id="屏蔽PVE-9-x企业源pve-enterprise-sources">6 &nbsp&nbsp<a href="#屏蔽PVE-9-x企业源pve-enterprise-sources" class="headerlink" title="屏蔽PVE 9.x企业源pve-enterprise.sources"></a>屏蔽PVE 9.x企业源<code>pve-enterprise.sources</code></h1><p>成功升级至PVE 9.x之后，会自动生成一个<code>DEB822</code>格式的企业源<code>pve-enterprise.sources</code>文件，需要手动屏蔽它，否则WEB后台和<code>apt update</code>会有提示。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.sources /etc/apt/sources.list.d/pve-enterprise.sources.bak</span><br><span class="line">apt update -y</span><br></pre></td></tr></table></figure>
+
+<h1 id="移除无用的包">7 &nbsp&nbsp<a href="#移除无用的包" class="headerlink" title="移除无用的包"></a>移除无用的包</h1><p>运行如下如下命令，移除无用的包，节省服务器空间：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt autoremove</span><br></pre></td></tr></table></figure>
+
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-auto-remove.webp">移除无用的包</div>
+
+<h1 id="替换LXC模板（CT-Templates）镜像源">8 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h1><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行<code>systemctl restart pvedaemon</code>后生效。</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.ustc.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure>
+
+<h1 id="去除PVE未订阅提示">9 &nbsp&nbsp<a href="#去除PVE未订阅提示" class="headerlink" title="去除PVE未订阅提示"></a>去除PVE未订阅提示</h1><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。实测PVE 9.x版本执行该方法之后，WEB后台的「软件包版本」按钮无法响应，暂未排查到问题，后面有时间再跟进。</strong></p>
+<ul>
+<li><code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve-no-subscribe.webp">「无有效订阅」的提示弹窗</div>
+
+<h1 id="后续PVE系统日常更新：">10 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update -y &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h1 id="后记">11 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>以下就是升级到最新的PVE 9.x版本的WEB后台界面了。</p>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve9x-web-control.webp">PVE 9.x的WEB后台界面</div>
+
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Upgrade from 8 to 9[EB&#x2F;OL]. <a href="https://pve.proxmox.com/wiki/Upgrade_from_8_to_9">https://pve.proxmox.com/wiki/Upgrade_from_8_to_9</a>.<br>[2] Proxmox[EB&#x2F;OL]. <a href="https://mirrors.ustc.edu.cn/help/proxmox.html">https://mirrors.ustc.edu.cn/help/proxmox.html</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>PVE</tag>
+        <tag>升级</tag>
+        <tag>Proxmox</tag>
+        <tag>HomeLab</tag>
+        <tag>服务器</tag>
+        <tag>虚拟化系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>飞牛fnOS影视刮削的文件命名技巧</title>
     <url>/post-articles/2025-10/video-scraping-renaming-for-fnos/</url>
     <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用飞牛影视有一段日子了，整体感觉上还行，数据刮削算是比较省心，今天抽空来聊聊我在这方面的经验。</p>
@@ -13773,13 +13935,31 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>翻译</tag>
-        <tag>blender</tag>
         <tag>字幕</tag>
+        <tag>blender</tag>
         <tag>英语</tag>
         <tag>开放动画</tag>
         <tag>动画</tag>
         <tag>动画电影</tag>
         <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender教程总结</title>
+    <url>/software/blender/tranining/training/</url>
+    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
+<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
+</ul>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+        <category>tranining</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>Blender</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -13805,60 +13985,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>小刀</tag>
         <tag>布料</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Blender教程总结</title>
-    <url>/software/blender/tranining/training/</url>
-    <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
-<li><a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>：苹果、小刀</li>
-</ul>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-        <category>tranining</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>教程</tag>
-        <tag>Blender</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>404 Not Found：该页无法显示</title>
-    <url>//404.html</url>
-    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
-
-<div class="navigation-border">
-<center>
-<a href="/navigation-announcement">
-<button class="navigation-button-box">站点导航和公告</button></a>
-<a href="/">
-<button class="navigation-button-box">回主页</button></a>
-</center></div>
-
-<div class="navigation-border">
-<center>
-<a href="/archives">
-<button class="navigation-button-box">所有文章</button></a>
-<a href="/about#联系方式">
-<button class="navigation-button-box">联系我</button></a>
-<a href="/about">
-<button class="navigation-button-box">关于我</button></a>
-<a href="/about/about-site/">
-<button class="navigation-button-box">关于本站</button></a>
-</center></div>
-
-<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
-
-<center>
-<div style="text-align: center; width: 50%;">
-可以听歌，稍作休息~
-<div style="text-align: left">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
-</div></div>
-</center>
-]]></content>
   </entry>
   <entry>
     <title>关于我</title>
@@ -13958,7 +14084,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#x72;&#x6b;&#105;&#110;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -14071,6 +14197,42 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>404 Not Found：该页无法显示</title>
+    <url>//404.html</url>
+    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
+
+<div class="navigation-border">
+<center>
+<a href="/navigation-announcement">
+<button class="navigation-button-box">站点导航和公告</button></a>
+<a href="/">
+<button class="navigation-button-box">回主页</button></a>
+</center></div>
+
+<div class="navigation-border">
+<center>
+<a href="/archives">
+<button class="navigation-button-box">所有文章</button></a>
+<a href="/about#联系方式">
+<button class="navigation-button-box">联系我</button></a>
+<a href="/about">
+<button class="navigation-button-box">关于我</button></a>
+<a href="/about/about-site/">
+<button class="navigation-button-box">关于本站</button></a>
+</center></div>
+
+<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
+
+<center>
+<div style="text-align: center; width: 50%;">
+可以听歌，稍作休息~
+<div style="text-align: left">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
+</div></div>
+</center>
+]]></content>
   </entry>
   <entry>
     <title>知识总结手册</title>
@@ -14397,6 +14559,86 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>第三方开源许可声明</title>
+    <url>/about/third-party-declaration/index.html</url>
+    <content><![CDATA[<div class="wrap">
+
+<div class="left">
+<div class="center-bold">
+编程&写作
+</div>
+
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a>: <a href="https://github.com/Microsoft/vscode/blob/master/LICENSE.txt">MIT</a></li>
+<li><a href="https://tug.org/texlive/">Tex Live</a>: <a href="https://tug.org/texlive/copying.html">TeX Live Licensing</a></li>
+<li><a href="https://git-scm.com/">Git</a>: <a href="https://github.com/git/git/blob/master/COPYING">GPL v2</a></li>
+</ul>
+
+<div class="center-bold">
+CGI&后期处理
+</div>
+<ul>
+<li><a href="https://www.blender.org">Blender</a>: <a href="https://www.blender.org/about/license/">GPL</a></li>
+<li><a href="http://ffmpeg.org">FFmpeg</a>: <a href="http://ffmpeg.org/legal.html">LGPL v2.1 / GPL v2</a></li>
+<li><a href="https://krita.org/en/">Krita</a>: <a href="https://docs.krita.org/en/KritaFAQ.html?highlight=license#license-rights-and-the-krita-foundation">Krita's GNU GPL license</a></li>
+<li><a href="https://inkscape.org/">Inkscape</a>: <a href="https://inkscape.org/about/license/">GPL</a></li>
+<li><a href="https://www.audacityteam.org/">Audacity</a>: <a href="https://www.audacityteam.org/about/license/">GPL v2</a></li>
+<li><a href="https://www.gimp.org">GIMP</a>: <a href="https://www.gimp.org/about/COPYING">GPL</a></li>
+</ul>
+</div>
+
+<div class="right">
+<div class="center-bold">
+网站建设
+</div>
+<ul>
+<li><a href="http://nodejs.cn/">Node</a>: <a href="https://github.com/nodejs/node/blob/master/LICENSE">MIT</a></li>
+<li><a href="https://classic.yarnpkg.com">Yarn</a>: <a href="https://github.com/yarnpkg/yarn/blob/master/LICENSE">BSD 2-Clause</a></li>
+</ul>
+
+<div class="center-bold">
+开源字体
+</div>
+<ul>
+<li><a href="https://github.com/adobe-fonts">Adobe Fonts</a>: <a href="https://github.com/adobe-fonts/source-serif-pro/blob/release/LICENSE.md">SIL OFL v1.1</a></li>
+</ul>
+
+<div class="center-bold">
+已弃用
+</div>
+<ul>
+<li><a href="https://handbrake.fr">Handbrake</a>: <a href="https://github.com/HandBrake/HandBrake/blob/master/LICENSE">GPL v2</a></li>
+</ul>
+</div>
+
+</div>
+
+<style type="text/css">
+.wrap{
+    display: flex;
+}
+.left {
+    flex-grow: 1;
+    margin-right: 25px;
+}
+.right {
+    flex-grow: 1;
+    margin-left: 25px;
+}
+</style>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/live2d-models/umaru/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/live2d-models/umaru/umaru.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
+  </entry>
+  <entry>
     <title>更新日志</title>
     <url>/about/logs/index.html</url>
     <content><![CDATA[<div class="note info no-icon"><p>注：本页面用来记录本博客的建设日志。（从2021&#x2F;11&#x2F;11起，只记录博客功能的变化，如dependence更新、新功能等，但不再记录博客文档内容变化。）</p>
@@ -14624,6 +14866,12 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>艺术作品</title>
+    <url>/works/artworks/index.html</url>
+    <content><![CDATA[<p>TODO</p>
+]]></content>
+  </entry>
+  <entry>
     <title>博文离线下载 - PDF 及 LaTeX 源码</title>
     <url>/about/post-offline-download/index.html</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
@@ -14684,92 +14932,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 <li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
 <li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>第三方开源许可声明</title>
-    <url>/about/third-party-declaration/index.html</url>
-    <content><![CDATA[<div class="wrap">
-
-<div class="left">
-<div class="center-bold">
-编程&写作
-</div>
-
-<ul>
-<li><a href="https://code.visualstudio.com/">Visual Studio Code</a>: <a href="https://github.com/Microsoft/vscode/blob/master/LICENSE.txt">MIT</a></li>
-<li><a href="https://tug.org/texlive/">Tex Live</a>: <a href="https://tug.org/texlive/copying.html">TeX Live Licensing</a></li>
-<li><a href="https://git-scm.com/">Git</a>: <a href="https://github.com/git/git/blob/master/COPYING">GPL v2</a></li>
-</ul>
-
-<div class="center-bold">
-CGI&后期处理
-</div>
-<ul>
-<li><a href="https://www.blender.org">Blender</a>: <a href="https://www.blender.org/about/license/">GPL</a></li>
-<li><a href="http://ffmpeg.org">FFmpeg</a>: <a href="http://ffmpeg.org/legal.html">LGPL v2.1 / GPL v2</a></li>
-<li><a href="https://krita.org/en/">Krita</a>: <a href="https://docs.krita.org/en/KritaFAQ.html?highlight=license#license-rights-and-the-krita-foundation">Krita's GNU GPL license</a></li>
-<li><a href="https://inkscape.org/">Inkscape</a>: <a href="https://inkscape.org/about/license/">GPL</a></li>
-<li><a href="https://www.audacityteam.org/">Audacity</a>: <a href="https://www.audacityteam.org/about/license/">GPL v2</a></li>
-<li><a href="https://www.gimp.org">GIMP</a>: <a href="https://www.gimp.org/about/COPYING">GPL</a></li>
-</ul>
-</div>
-
-<div class="right">
-<div class="center-bold">
-网站建设
-</div>
-<ul>
-<li><a href="http://nodejs.cn/">Node</a>: <a href="https://github.com/nodejs/node/blob/master/LICENSE">MIT</a></li>
-<li><a href="https://classic.yarnpkg.com">Yarn</a>: <a href="https://github.com/yarnpkg/yarn/blob/master/LICENSE">BSD 2-Clause</a></li>
-</ul>
-
-<div class="center-bold">
-开源字体
-</div>
-<ul>
-<li><a href="https://github.com/adobe-fonts">Adobe Fonts</a>: <a href="https://github.com/adobe-fonts/source-serif-pro/blob/release/LICENSE.md">SIL OFL v1.1</a></li>
-</ul>
-
-<div class="center-bold">
-已弃用
-</div>
-<ul>
-<li><a href="https://handbrake.fr">Handbrake</a>: <a href="https://github.com/HandBrake/HandBrake/blob/master/LICENSE">GPL v2</a></li>
-</ul>
-</div>
-
-</div>
-
-<style type="text/css">
-.wrap{
-    display: flex;
-}
-.left {
-    flex-grow: 1;
-    margin-right: 25px;
-}
-.right {
-    flex-grow: 1;
-    margin-left: 25px;
-}
-</style>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/umaru/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/umaru/umaru.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
-  </entry>
-  <entry>
-    <title>艺术作品</title>
-    <url>/works/artworks/index.html</url>
-    <content><![CDATA[<p>TODO</p>
 ]]></content>
   </entry>
   <entry>
