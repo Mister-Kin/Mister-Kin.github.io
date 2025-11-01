@@ -2614,6 +2614,29 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>开发总结</title>
+    <url>/code/code/</url>
+    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
+<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
+<ul>
+<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
+</ul>
+<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
+<ul>
+<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
+<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
+</ul>
+<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
+<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
+<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机安全</title>
     <url>/code/computer-security/</url>
     <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
@@ -3303,31 +3326,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#x74;&#x40;&#49;&#x37;&#50;&#x2e;&#x31;&#x39;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#49;&#55;&#50;&#x2e;&#x31;&#x39;&#x2e;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>开发总结</title>
-    <url>/code/code/</url>
-    <content><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p>
-<p>基于Mozilla Public License Version 2.0并附加以下条款：</p>
-<ul>
-<li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li>
-</ul>
-<h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p>
-<ul>
-<li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li>
-<li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li>
-</ul>
-<h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
-</ul>
-<h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
-<p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
       <categories>
         <category>code</category>
       </categories>
@@ -4777,34 +4777,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>Programming Ability Test (PAT)</title>
-    <url>/code-training/pat/</url>
-    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
-<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
-<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
-<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
-<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
-<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>编程</tag>
-        <tag>PAT</tag>
-        <tag>PTA</tag>
-        <tag>练习</tag>
-        <tag>题库</tag>
-        <tag>题目</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英文词典常用缩写</title>
     <url>/english/abbr/</url>
     <content><![CDATA[<ul>
@@ -4852,6 +4824,34 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>英文</tag>
         <tag>词典</tag>
         <tag>缩写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Programming Ability Test (PAT)</title>
+    <url>/code-training/pat/</url>
+    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
+<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
+<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
+<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
+<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
+<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>编程</tag>
+        <tag>PAT</tag>
+        <tag>PTA</tag>
+        <tag>练习</tag>
+        <tag>题库</tag>
+        <tag>题目</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -6135,6 +6135,78 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Office总结笔记</title>
+    <url>/software/office/</url>
+    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
+<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
+<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
+<li>分节符用的下一页。</li>
+</ul>
+<p>关于分页符和分节符的删除：</p>
+<ul>
+<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
+<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
+</ul>
+<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
+<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
+<li>单击时，只能使用一次。双击时，能多次使用。</li>
+</ul>
+<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
+<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
+<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
+<p>几种模式的区别：</p>
+<ul>
+<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
+<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
+</ul>
+<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
+<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
+<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
+<li>在第二页表格第一行，插入空白页。</li>
+<li>之后删除表格页。</li>
+</ol>
+<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
+<li>创建文献编号，排版文献<ol>
+<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
+<li>在数值左右分别添加 [] 符号</li>
+<li>对参考文献使用该格式进行排版</li>
+</ol>
+</li>
+<li>交叉引用，插入引用编号<ol>
+<li>「引用」选项卡 &gt; 交叉引用</li>
+<li>编号项 + 段落编号 + 插入为超链接</li>
+<li>选择所引用的参考文献</li>
+</ol>
+</li>
+<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
+</ol>
+<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
+<li>无任何数据的初始列：设置单元格式</li>
+<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
+</ul>
+<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
+<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
+<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
+<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
+</ul>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>软件</tag>
+        <tag>office</tag>
+        <tag>excel</tag>
+        <tag>word</tag>
+        <tag>ppt</tag>
+        <tag>powerpoint</tag>
+        <tag>操作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<table>
@@ -6472,7 +6544,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </li>
 <li>临时解决方案（不推荐）：显示器直连PVE宿主机器，登录帐号。但这个方法不推荐，如果机器网卡很多的话，压根无法知道哪个网卡是以前的管理口。  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看当前所有网卡名称</span></span><br><span class="line">ip addr</span><br><span class="line"><span class="comment"># 把查看到新的网卡名称，更新到/etc/network/interfaces文件中</span></span><br><span class="line">nano /etc/network/interfaces</span><br><span class="line">systemctl restart network</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="PVE硬件直通">6 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><div class="note default no-icon"><p>如果机器本身就支持VT-X和VT-d等CPU虚拟化和直通硬件功能，则PVE启用IOMMU方面不需要额外设置。只需要设置好主板BIOS对应的CPU虚拟化和直通硬件功能即可，因为安装PVE系统阶段就会自动设置好启动IOMMU。</p>
+<h1 id="PVE硬件直通">6 &nbsp&nbsp<a href="#PVE硬件直通" class="headerlink" title="PVE硬件直通"></a>PVE硬件直通</h1><div class="note danger no-icon"><p>如果机器本身就支持VT-X和VT-d等CPU虚拟化和直通硬件功能，则PVE启用IOMMU方面不需要额外设置。只需要设置好主板BIOS对应的CPU虚拟化和直通硬件功能即可，因为安装PVE系统阶段就会自动设置好启动IOMMU。</p>
 </div>
 
 <p>IOMMU允许系统设备在虚拟内存中进行寻址，也就是将虚拟内存地址映射为物理内存地址，让实体设备可以在虚拟的内存环境中工作，这样可以帮助系统扩充内存容量，提升性能。</p>
@@ -6799,7 +6871,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h3 id="升级Proxmox-Backup-Server（pbs3-4-1-pbs4-x）">9.2.4 &nbsp&nbsp<a href="#升级Proxmox-Backup-Server（pbs3-4-1-pbs4-x）" class="headerlink" title="升级Proxmox Backup Server（pbs3.4.1-&gt;pbs4.x）"></a>升级Proxmox Backup Server（pbs3.4.1-&gt;pbs4.x）</h3><ol>
 <li>添加Proxmox Backup Server的软件源 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/apt/sources.list.d/pbs-enterprise.list</span><br><span class="line"></span><br><span class="line">deb http://mirrors.ustc.edu.cn/proxmox/debian/pbs trixie pbs-no-subscription</span><br></pre></td></tr></table></figure></li>
 <li>添加Proxmox的GPG Key，使用APT安装proxmox-backup-server包（可以尝试直接安装看看，若报错再下载GPG KEY，笔者测试时没有下载GPG KEY） <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://enterprise.proxmox.com/debian/proxmox-release-trixie.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-trixie.gpg</span><br><span class="line">apt update &amp;&amp; apt install proxmox-backup-server -y</span><br></pre></td></tr></table></figure></li>
-<li>升级中会出现一些交互界面，以下是实操选择的参数： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Configuration file <span class="string">&#x27;/etc/issue&#x27;</span></span><br><span class="line">==&gt; Modified (by you or by a script) since installation.</span><br><span class="line">==&gt; Package distributor has shipped an updated version.</span><br><span class="line">What would you like to <span class="keyword">do</span> about it ?  Your options are:</span><br><span class="line">    Y or I  : install the package maintainer<span class="string">&#x27;s version</span></span><br><span class="line"><span class="string">    N or O  : keep your currently-installed version</span></span><br><span class="line"><span class="string">    D     : show the differences between the versions</span></span><br><span class="line"><span class="string">    Z     : start a shell to examine the situation</span></span><br><span class="line"><span class="string">The default action is to keep your current version.</span></span><br><span class="line"><span class="string">*** issue (Y/I/N/O/D/Z) [default=N] ? N</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">┌────────────────────────────────────────────┤ Configuring libc6:amd64 ├────────────────────────────────────────────┐</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">│ There are services installed on your system which need to be restarted when certain libraries, such as libpam,    │</span></span><br><span class="line"><span class="string">│ libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the system, you will  │</span></span><br><span class="line"><span class="string">│ normally be prompted on each upgrade for the list of services you wish to restart.  You can choose this option    │</span></span><br><span class="line"><span class="string">│ to avoid being prompted; instead, all necessary restarts will be done for you automatically so you can avoid      │</span></span><br><span class="line"><span class="string">│ being asked questions on each library upgrade.                                                                    │</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">│ Restart services during package upgrades without asking?                                                          │</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">│                                  &lt;Yes&gt;                                     &lt;No&gt;                                   │</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span></span><br><span class="line"><span class="string">选择Yes回车</span></span><br></pre></td></tr></table></figure></li>
+<li>升级中会出现一些交互界面，以下是实操选择的参数： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Configuration file <span class="string">&#x27;/etc/issue&#x27;</span></span><br><span class="line">==&gt; Modified (by you or by a script) since installation.</span><br><span class="line">==&gt; Package distributor has shipped an updated version.</span><br><span class="line">What would you like to <span class="keyword">do</span> about it ?  Your options are:</span><br><span class="line">    Y or I  : install the package maintainer<span class="string">&#x27;s version</span></span><br><span class="line"><span class="string">    N or O  : keep your currently-installed version</span></span><br><span class="line"><span class="string">    D     : show the differences between the versions</span></span><br><span class="line"><span class="string">    Z     : start a shell to examine the situation</span></span><br><span class="line"><span class="string">The default action is to keep your current version.</span></span><br><span class="line"><span class="string">*** issue (Y/I/N/O/D/Z) [default=N] ?</span></span><br><span class="line"><span class="string">输入N回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">┌────────────────────────────────────────────┤ Configuring libc6:amd64 ├────────────────────────────────────────────┐</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">│ There are services installed on your system which need to be restarted when certain libraries, such as libpam,    │</span></span><br><span class="line"><span class="string">│ libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the system, you will  │</span></span><br><span class="line"><span class="string">│ normally be prompted on each upgrade for the list of services you wish to restart.  You can choose this option    │</span></span><br><span class="line"><span class="string">│ to avoid being prompted; instead, all necessary restarts will be done for you automatically so you can avoid      │</span></span><br><span class="line"><span class="string">│ being asked questions on each library upgrade.                                                                    │</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">│ Restart services during package upgrades without asking?                                                          │</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">│                                  &lt;Yes&gt;                                     &lt;No&gt;                                   │</span></span><br><span class="line"><span class="string">│                                                                                                                   │</span></span><br><span class="line"><span class="string">└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span></span><br><span class="line"><span class="string">选择Yes回车</span></span><br></pre></td></tr></table></figure></li>
 <li>屏蔽PBS 4.x企业源<code>pbs-enterprise.sources</code>：成功升级至PVE 9.x之后，会自动生成一个<code>DEB822</code>格式的企业源<code>pbs-enterprise.sources</code>文件，需要手动屏蔽它，否则WEB后台和<code>apt update</code>会有提示。</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pbs-enterprise.sources /etc/apt/sources.list.d/pbs-enterprise.sources.bak</span><br><span class="line">apt update -y</span><br></pre></td></tr></table></figure>
@@ -7189,7 +7261,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>详细配置参数：</p>
 <ul>
 <li>插件设置<ul>
-<li>版本更新 -&gt; 编译版本「linux-amd64-v1(x86-64)」，更新分支「Master」，Smart内核「启用」 -&gt; 检查更新，选择<code>https://fastlyjsdelivr.net/</code>完成下载即可（这一步是下载OpenClash内核，如果下载不成功，需要手动下载上传）</li>
+<li>版本更新 -&gt; 编译版本「linux-amd64-v1(x86-64)」，更新分支「Master」，Smart内核「停用」 -&gt; 检查更新，选择<code>https://fastlyjsdelivr.net/</code>完成下载即可（这一步是下载OpenClash内核，如果下载不成功，需要手动下载上传）</li>
 <li>模式设置<ul>
 <li>「切换页面到Redir-Host模式」（页面底部一个红色按钮）</li>
 <li>运行模式 -&gt; Redir-Host (TUN-混合) 模式【UDP-TUN, TCP-转发】（这个模式任意选吧，笔者实际测试不影响科学上网）</li>
@@ -7490,7 +7562,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>Extended: 加长版</li>
 </ul>
 <h3 id="AutoBangumi">19.1.2 &nbsp&nbsp<a href="#AutoBangumi" class="headerlink" title="AutoBangumi"></a>AutoBangumi</h3><ul>
-<li>Mikan的RSS订阅地址：即使不注册登录网站，每个番剧左上角都可以获取订阅地址。注册帐号唯一的优势是一个RSS地址可以自动获取和管理所有的番剧订阅：例如<code>https://mikanime.tv/RSS/MyBangumi?token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></li>
+<li>Mikan的RSS订阅地址：即使不注册登录网站，每个番剧左上角都可以获取订阅地址。注册帐号唯一的优势是一个RSS地址可以自动获取和管理所有的番剧订阅：例如<code>https://mikanime.tv/RSS/MyBangumi?token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>，帐号的RSS地址在「主页」和「订阅」页面按日期点击筛选有项目的位置就会出现RSS的链接图标。</li>
 <li>AutoBangumi的下载设置<ul>
 <li>下载器类型：<code>qbittorrent</code></li>
 <li>下载器地址：<code>http://飞牛ip:8085</code></li>
@@ -7800,78 +7872,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>openwrt</tag>
         <tag>虚拟机</tag>
         <tag>fnOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Office总结笔记</title>
-    <url>/software/office/</url>
-    <content><![CDATA[<h1 id="Word">1 &nbsp&nbsp<a href="#Word" class="headerlink" title="Word"></a>Word</h1><h2 id="页码排版问题">1.1 &nbsp&nbsp<a href="#页码排版问题" class="headerlink" title="页码排版问题"></a>页码排版问题</h2><ul>
-<li>分页符前后的页眉页脚是一样的，分节符前后才有可能不一样。</li>
-<li>分节符后面的页眉页脚一般都是默认继承前面的格式的，可以取消“链接到前一个”。</li>
-<li>分节符用的下一页。</li>
-</ul>
-<p>关于分页符和分节符的删除：</p>
-<ul>
-<li>视图删除法：进入菜单「视图」&gt;「大纲视图」或者「草稿视图」等，找到想要删除的符号，按 delete 键进行删除。</li>
-<li>在菜单「开始」的文字样式左边，显示&#x2F;隐藏编辑标记（箭头符号）。点击显示符号，然后 delete 删除。</li>
-</ul>
-<h2 id="格式刷">1.2 &nbsp&nbsp<a href="#格式刷" class="headerlink" title="格式刷"></a>格式刷</h2><ul>
-<li>选中需要复制样式的文字，然后点击菜单「开始」&gt;「格式刷」。然后选中其他需要应用的文字。</li>
-<li>单击时，只能使用一次。双击时，能多次使用。</li>
-</ul>
-<h2 id="自动目录">1.3 &nbsp&nbsp<a href="#自动目录" class="headerlink" title="自动目录"></a>自动目录</h2><p>在菜单「视图」&gt;「大纲视图」对需要生成目录的标题进行级别排版后，点击菜单「引用」&gt;「目录」&gt;「自动目录 1」。</p>
-<h2 id="页眉页脚样式的删除，如下划线">1.4 &nbsp&nbsp<a href="#页眉页脚样式的删除，如下划线" class="headerlink" title="页眉页脚样式的删除，如下划线"></a>页眉页脚样式的删除，如下划线</h2><p>双击页眉页脚进入「设计模式」编辑。在「开始」&gt;「样式」下拉 &gt;「清除格式」</p>
-<h2 id="LaTeX公式输入">1.5 &nbsp&nbsp<a href="#LaTeX公式输入" class="headerlink" title="LaTeX公式输入"></a>LaTeX公式输入</h2><p>插入公式的快捷键 alt+&#x3D;</p>
-<p>几种模式的区别：</p>
-<ul>
-<li>&#x2F;Unicode：输入空格即可将当前 latex 语句转换成公式。</li>
-<li>LaTeX：写完所有 LaTeX 语法，通过转换「当前‑专业」功能才能完成转换。（无法通过空格转换）</li>
-</ul>
-<p>P.S.「全部‑专业」功能会对当前文档使用转换功能</p>
-<h2 id="在表格（最外框那种，占满整个页面）下方插入空行">1.6 &nbsp&nbsp<a href="#在表格（最外框那种，占满整个页面）下方插入空行" class="headerlink" title="在表格（最外框那种，占满整个页面）下方插入空行"></a>在表格（最外框那种，占满整个页面）下方插入空行</h2><ol>
-<li>在表格的最下方一行按 TAB 键，生成第二页表格。</li>
-<li>在第二页表格第一行，插入空白页。</li>
-<li>之后删除表格页。</li>
-</ol>
-<h2 id="参考文献的引用及自动更新">1.7 &nbsp&nbsp<a href="#参考文献的引用及自动更新" class="headerlink" title="参考文献的引用及自动更新"></a>参考文献的引用及自动更新</h2><ol>
-<li>创建文献编号，排版文献<ol>
-<li>「开始」选项卡 &gt; 有序编号 &gt; 定义新编号格式（D）</li>
-<li>在数值左右分别添加 [] 符号</li>
-<li>对参考文献使用该格式进行排版</li>
-</ol>
-</li>
-<li>交叉引用，插入引用编号<ol>
-<li>「引用」选项卡 &gt; 交叉引用</li>
-<li>编号项 + 段落编号 + 插入为超链接</li>
-<li>选择所引用的参考文献</li>
-</ol>
-</li>
-<li>自动更新域：右键插入的引用编号 &gt; 更新域（全局更新：ctrl+A 之后按 F9&gt; 更新页码）</li>
-</ol>
-<h1 id="Excel">2 &nbsp&nbsp<a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><h2 id="标准化统一整列数据的格式">2.1 &nbsp&nbsp<a href="#标准化统一整列数据的格式" class="headerlink" title="标准化统一整列数据的格式"></a>标准化统一整列数据的格式</h2><ul>
-<li>无任何数据的初始列：设置单元格式</li>
-<li>一列已有数据，包含数字格式、文本格式等不同格式：这个情况使用「设置单元格式」功能并不会对已有数据进行格式化修改。正确的方法是：选中该列数据，选择菜单栏“数据”选项卡---“分列”后单击下一步，再下一步，再如图的选项卡中，选择要把该列数据变更为“常规”还是“文本”或其他。如有特殊需求，可点击“高级”。</li>
-</ul>
-<h2 id="边框颜色修改问题">2.2 &nbsp&nbsp<a href="#边框颜色修改问题" class="headerlink" title="边框颜色修改问题"></a>边框颜色修改问题</h2><p>设置顺序：先选颜色，再在预设里选择边框样式（外边框和内部）。</p>
-<p>注意顺序不能搞错，必须先选颜色，再选边框。</p>
-<h1 id="安卓android-Office">3 &nbsp&nbsp<a href="#安卓android-Office" class="headerlink" title="安卓android Office"></a>安卓android Office</h1><ul>
-<li>excel表格别用其中的创建自定义视图功能，这功能是创建一个新的视图，完完全全改变单元格的全部样式（对应视图）。如果只是需要修改单元格特定格式，在编辑模式下完成即可。</li>
-</ul>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] EXCEL将一列不同格式的数据变成同一格式[EB&#x2F;OL]. <a href="https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html">https://jingyan.baidu.com/article/3ea51489faf0a252e61bba1e.html</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>软件</tag>
-        <tag>office</tag>
-        <tag>excel</tag>
-        <tag>word</tag>
-        <tag>ppt</tag>
-        <tag>powerpoint</tag>
-        <tag>操作</tag>
       </tags>
   </entry>
   <entry>
@@ -9827,12 +9827,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#111;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#x6b;&#x79;&#111;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#x61;&#110;&#x6b;&#115;&#46;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -12385,29 +12385,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>QT6 C++开发指南：习题答案</title>
-    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
-    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
-<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>qt6-cpp-development-guide</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>qt</tag>
-        <tag>C++</tag>
-        <tag>qt6</tag>
-        <tag>开发</tag>
-        <tag>第一版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qt6 C++开发指南：第二章「GUI程序设计基踹」习题答案</title>
     <url>/code-training/qt6-cpp-development-guide/chap2/</url>
     <content><![CDATA[<h1 id="第二章：GUI程序设计基础">1 &nbsp&nbsp<a href="#第二章：GUI程序设计基础" class="headerlink" title="第二章：GUI程序设计基础"></a>第二章：GUI程序设计基础</h1><p>项目目录文件结构：</p>
@@ -12433,6 +12410,29 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>qt</tag>
         <tag>第二章</tag>
         <tag>qt6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QT6 C++开发指南：习题答案</title>
+    <url>/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide/</url>
+    <content><![CDATA[<p><em>习题代码和总结笔记主要参照视频教程<a href="https://www.bilibili.com/video/BV1km4y1k7CW/">《Qt6 C++开发指南》2023（上册，完整版）</a></em></p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/qt6_cpp_development_guide/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/qt6-cpp-development-guide/chap1/">第一章「认识Qt」习题答案</a></li>
+<li><a href="/code-training/qt6-cpp-development-guide/chap2/">第二章「GUI程序设计基础」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>qt6-cpp-development-guide</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>qt</tag>
+        <tag>C++</tag>
+        <tag>qt6</tag>
+        <tag>开发</tag>
+        <tag>第一版</tag>
       </tags>
   </entry>
   <entry>
@@ -13380,6 +13380,40 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -13423,40 +13457,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>software</category>
         <category>blender</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
-      </tags>
   </entry>
   <entry>
     <title>Blender实战案例总结</title>
@@ -14120,7 +14120,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#x73;&#x74;&#x65;&#x72;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#x2e;&#x6d;&#x69;&#115;&#x74;&#101;&#x72;&#107;&#x69;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -14920,13 +14920,13 @@ CGI&后期处理
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/umaru/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+    <url>/live2d-models/umaru/umaru.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/umaru/umaru.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
+    <url>/live2d-models/umaru/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
   </entry>
   <entry>
     <title>艺术作品</title>
