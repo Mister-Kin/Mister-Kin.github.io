@@ -2650,24 +2650,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
-    <title>计算机安全</title>
-    <url>/code/computer-security/</url>
-    <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
-<li>wep：几乎都能破解，注入包一分钟即可</li>
-<li>wpa&#x2F;wpa2、混合、pin：暴力破解</li>
-</ul>
-<h1 id="关于代理服务器和跳板攻击">2 &nbsp&nbsp<a href="#关于代理服务器和跳板攻击" class="headerlink" title="关于代理服务器和跳板攻击"></a>关于代理服务器和跳板攻击</h1><p>通过代理跳板，跳板越多，主机链越长（若有路由器或者交换机，可删除保存在flash内的登录日志，消除痕迹），可做到防止被攻击（隐藏IP），突破一些网址的限制访问（墙或者请求次数），隐藏身份进行攻击。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>计算机安全</tag>
-        <tag>信息安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css总结笔记</title>
     <url>/code/css/</url>
     <content><![CDATA[<h1 id="开发记录">1 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>类名含有空格（浏览器F12检查元素）时，一般是包含多个类名，空格字符在类型中无效，实际上呈现出来的是分隔符，不是空格。CSS类名选择器一般选择第一个即可。</p>
@@ -2687,6 +2669,24 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>笔记</tag>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机安全</title>
+    <url>/code/computer-security/</url>
+    <content><![CDATA[<h1 id="网络安全">1 &nbsp&nbsp<a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="无线网络的加密形式">1.1 &nbsp&nbsp<a href="#无线网络的加密形式" class="headerlink" title="无线网络的加密形式"></a>无线网络的加密形式</h2><ul>
+<li>wep：几乎都能破解，注入包一分钟即可</li>
+<li>wpa&#x2F;wpa2、混合、pin：暴力破解</li>
+</ul>
+<h1 id="关于代理服务器和跳板攻击">2 &nbsp&nbsp<a href="#关于代理服务器和跳板攻击" class="headerlink" title="关于代理服务器和跳板攻击"></a>关于代理服务器和跳板攻击</h1><p>通过代理跳板，跳板越多，主机链越长（若有路由器或者交换机，可删除保存在flash内的登录日志，消除痕迹），可做到防止被攻击（隐藏IP），突破一些网址的限制访问（墙或者请求次数），隐藏身份进行攻击。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>计算机安全</tag>
+        <tag>信息安全</tag>
       </tags>
   </entry>
   <entry>
@@ -3339,7 +3339,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#x74;&#x40;&#x31;&#55;&#x32;&#x2e;&#x31;&#x39;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#x31;&#x39;&#46;&#x30;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -6220,6 +6220,32 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>服务器</title>
+    <url>/software/server/</url>
+    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
+<ul>
+<li>继续续费使用服务器</li>
+<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
+<li>保存快照制作成镜像再上传到oss下载</li>
+</ul>
+<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
+<ol>
+<li>在轻量级应用服务器的管理页面创建一个快照。</li>
+<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
+<li>创建好的镜像共享到ecs</li>
+<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
+<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
+<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
+<li>本地虚拟机软件运行镜像。</li>
+</ol>
+<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+  </entry>
+  <entry>
     <title>PVE+iKuai+OpenWrt+fnOS折腾记录</title>
     <url>/software/pve/</url>
     <content><![CDATA[<table>
@@ -7887,32 +7913,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>服务器</title>
-    <url>/software/server/</url>
-    <content><![CDATA[<h1 id="云服务器">1 &nbsp&nbsp<a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h1><h2 id="取回过期未释放的阿里云服务器数据">1.1 &nbsp&nbsp<a href="#取回过期未释放的阿里云服务器数据" class="headerlink" title="取回过期未释放的阿里云服务器数据"></a>取回过期未释放的阿里云服务器数据</h2><p>取回方法：</p>
-<ul>
-<li>继续续费使用服务器</li>
-<li>购买新的阿里云服务器或者转移到其他阿里云服务器</li>
-<li>保存快照制作成镜像再上传到oss下载</li>
-</ul>
-<p>Linux云服务器可以通过制作镜像上传到oss下载。</p>
-<ol>
-<li>在轻量级应用服务器的管理页面创建一个快照。</li>
-<li>创建自定义镜像：输入自定义的镜像描述和名称后点击确定。</li>
-<li>创建好的镜像共享到ecs</li>
-<li>阿里云控制台里进入ecs-&gt;选择镜像-&gt;选择共享镜像即可看见刚刚共享的轻量级服务器镜像。点击操作列上的复制镜像，填入信息后点击确定。</li>
-<li>导出镜像：复制成功后就可以在自定义镜像列表看见镜像，选择操作列上的导出镜像，填入你的oss信息。oss创建过程大概就是开通oss服务再创建bucket，需注意创建bucket时地域需要和镜像所在地域一致。</li>
-<li>下载镜像：在控制台进入oss-&gt;进入bucket列表，选择你刚刚导出镜像的bucket-&gt;进入文件管理页面即可看见导出的镜像，点击下载即可。这里会消耗oss流量，大约会花费几块钱费用。</li>
-<li>本地虚拟机软件运行镜像。</li>
-</ol>
-<p>Windows云服务器：由于不支持导出Windows和来自镜像市场的镜像。因此无法导出上传到oss再下载。处理方法步骤是也和Linux云服务器一样，但在导出镜像步骤中，因为无法导出。可以选择操作列上的「创建实例」功能）——即按量付费购买一台esc。然后选按量付费，充值100块钱。快速备份好数据，再退订释放购买esc，等待退款（过程就看使用时长，越短时间花费越少，不到半个小时大概两三毛钱）。</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 取回过期未释放的阿里云服务器数据[EB&#x2F;OL]. <a href="https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE">https://www.lushihuan.com/archives/%E5%8F%96%E5%9B%9E%E8%BF%87%E6%9C%9F%E6%9C%AA%E9%87%8A%E6%94%BE%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE</a>.<br>[2] 取回阿里云过期未释放服务器数据 Windows 系统[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv13853339/">https://www.bilibili.com/read/cv13853339/</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>虚拟机总结</title>
     <url>/software/virtual-machine/</url>
     <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（20-04之后版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（20.04之后版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools <span class="comment"># 仅基础功能（无GUI）</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line">vmware-toolbox-cmd -v <span class="comment"># 验证安装，若输出显示版本号代表安装成功，如12.4.5.49651 (build-23787635)</span></span><br></pre></td></tr></table></figure>
@@ -8036,6 +8036,31 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>翻译</tag>
         <tag>计划</tag>
         <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android系统排障总结</title>
+    <url>/troubleshooting/android-troubleshooting/</url>
+    <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
+<h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol>
+<li>更新到提示你“立即安装”这一步，先不要点</li>
+<li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li>
+<li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li>
+</ol>
+<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>维修</tag>
+        <tag>系统</tag>
+        <tag>计算机</tag>
+        <tag>电脑</tag>
+        <tag>维护</tag>
+        <tag>故障</tag>
+        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -8250,31 +8275,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>翻译</tag>
         <tag>计划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android系统排障总结</title>
-    <url>/troubleshooting/android-troubleshooting/</url>
-    <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
-<h1 id="在保留root的情况下（保留Magisk）升级系统">2 &nbsp&nbsp<a href="#在保留root的情况下（保留Magisk）升级系统" class="headerlink" title="在保留root的情况下（保留Magisk）升级系统"></a>在保留root的情况下（保留Magisk）升级系统</h1><ol>
-<li>更新到提示你“立即安装”这一步，先不要点</li>
-<li>调出Magisk小窗，点Magisk旁边的安装，选择安装到未使用的槽位，然后会提示你重启，不要点重启，点“立即安装”会自动重启</li>
-<li>重启后检查更新，检查Magisk、ROOT还在不在，再把模块都打开再重启一遍检查</li>
-</ol>
-<h1 id="参考资料">3 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Realme真我GT Neo3更新系统会掉ROOT吗-怎么保留Magsik更新系统[EB&#x2F;OL]. <a href="http://m.romjd.com/reviews/content/6069">http://m.romjd.com/reviews/content/6069</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>维修</tag>
-        <tag>系统</tag>
-        <tag>计算机</tag>
-        <tag>电脑</tag>
-        <tag>维护</tag>
-        <tag>故障</tag>
-        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -9285,7 +9285,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
     <content><![CDATA[<h1 id="Windows系统版本发布日志">1 &nbsp&nbsp<a href="#Windows系统版本发布日志" class="headerlink" title="Windows系统版本发布日志"></a>Windows系统版本发布日志</h1><table>
 <thead>
 <tr>
-<th align="center"><a href="https://learn.microsoft.com/en-us/windows/release-health/windows-message-center">Windows消息中心</a></th>
+<th align="center"><a href="https://learn.microsoft.com/en-us/windows/release-health/windows-message-center">Windows消息中心-英</a></th>
 <th align="center"><a href="https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information">Windows 11版本发布日志-英</a></th>
 <th align="center"><a href="https://learn.microsoft.com/en-us/windows/release-health/release-information">Windows 10版本发布日志-英</a></th>
 </tr>
@@ -9294,6 +9294,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <td align="center"><a href="https://learn.microsoft.com/en-us/windows/release-health/windows-server-release-info">Windows Server版本发布日志</a></td>
 <td align="center"><a href="https://learn.microsoft.com/zh-cn/windows/release-health/windows11-release-information">Windows 11版本发布日志-中</a></td>
 <td align="center"><a href="https://learn.microsoft.com/zh-cn/windows/release-health/release-information">Windows 10版本发布日志-中</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://learn.microsoft.com/en-us/windows/whats-new/">Windows版本新增内容-英</a></td>
+<td align="center"><a href="https://learn.microsoft.com/en-us/windows/whats-new/windows-11-overview">Windows 11版本新增内容-英</a></td>
+<td align="center"><a href="https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-22h2">Windows 10版本新增内容-英</a></td>
 </tr>
 </tbody></table>
 <h1 id="Windows常用工具命令">2 &nbsp&nbsp<a href="#Windows常用工具命令" class="headerlink" title="Windows常用工具命令"></a>Windows常用工具命令</h1><ul>
@@ -9839,12 +9844,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#46;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#x63;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#x61;&#110;&#x6b;&#x73;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#x61;&#x6e;&#107;&#121;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#64;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#117;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#49;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#x38;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#97;&#x6e;&#x6b;&#115;&#x2e;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -13426,6 +13431,51 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender二次代码开发总结</title>
+    <url>/software/blender/code-development/</url>
+    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
+<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
+</ul>
+<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
+<li>cycles API直接查看cycles源码，properties.py</li>
+<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
+<li>blender排错cmd工具：blender_debug_log.bat</li>
+</ul>
+<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
+<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
+<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
+<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
+<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
+<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
+<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
+<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
+<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
+<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
+<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
+<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
+</ul>
+<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
+<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
+<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
+</ul>
+<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
+</div>
+<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
+<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
+<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
+<p>具体context override代码的使用例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Blender实战案例总结</title>
     <url>/software/blender/examples/</url>
     <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
@@ -13475,128 +13525,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>software</category>
         <category>blender</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Blender二次代码开发总结</title>
-    <url>/software/blender/code-development/</url>
-    <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
-<li><a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a></li>
-</ul>
-<h1 id="开发技巧">2 &nbsp&nbsp<a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h1><ul>
-<li>cycles API直接查看cycles源码，properties.py</li>
-<li>blender -r -R注册blend后缀名文件，小r为静默注册-v显示版本</li>
-<li>blender排错cmd工具：blender_debug_log.bat</li>
-</ul>
-<p>用户偏好设置-开发额外选项+Python工具提示+工具提示</p>
-<p>开启「开发额外选项」后，右键UI组件，可以查看源代码。</p>
-<p>在寻找UI组件所在类目时，可查看Python工具提示信息。</p>
-<p>在查找一些操作命令时，可以在blender里操作后在控制台看执行的语句。活用blender控制台进行调试。</p>
-<p>live edit状态去除bl_info（meta元数据），其余状态一样</p>
-<p>Operator 的 bl_label 的 translation context 必须为 Operator。<br>Operator 的 bl_description 的 translation context 必须为 *。</p>
-<p>blender主程序目录下，有debug.cmd工具可以用于生成blender崩溃的日志。</p>
-<h1 id="常见API总结">3 &nbsp&nbsp<a href="#常见API总结" class="headerlink" title="常见API总结"></a>常见API总结</h1><ul>
-<li>插件信息说明：<a href="https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo#Script_Meta_Info">见info字典元素</a></li>
-<li>bpy.types：Header, Menu, Panel, Operator。前三个都是需要定义draw函数来实现UI，Operator一般用来定义操作的execute函数。</li>
-<li><a href="https://docs.blender.org/api/current/bpy.props.html#">Props属性</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMaps.html#bpy.types.KeyMaps">KeyMaps类</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.KeyMapItems.html#bpy.types.KeyMapItem">KeyMapItem类</a></li>
-</ul>
-<h1 id="插件升级功能">4 &nbsp&nbsp<a href="#插件升级功能" class="headerlink" title="插件升级功能"></a>插件升级功能</h1><ul>
-<li><a href="https://theduckcow.com/2016/addon-updater-tutorial/">https://theduckcow.com/2016/addon-updater-tutorial/</a></li>
-<li><a href="https://github.com/CGCookie/blender-addon-updater">https://github.com/CGCookie/blender-addon-updater</a></li>
-</ul>
-<h1 id="常见问题总结">5 &nbsp&nbsp<a href="#常见问题总结" class="headerlink" title="常见问题总结"></a>常见问题总结</h1><h2 id="调用operator出现poll-函数报错">5.1 &nbsp&nbsp<a href="#调用operator出现poll-函数报错" class="headerlink" title="调用operator出现poll()函数报错"></a>调用operator出现poll()函数报错</h2><div class="note info no-icon"><p>在Blender的插件开发中，业务逻辑功能若能避免使用bpy.ops函数就尽量避免使用，因为大量使用ops函数不仅影响性能，而且还可能引发poll函数RuntimeError异常。二次代码开发，更推荐使用Blender原生API类接口实现业务逻辑功能。</p>
-</div>
-<p>问题现象：RuntimeError: Operator bpy.ops.object.empty_image_add.poll() failed, context is incorrect</p>
-<p>问题原因：Blender代码设计中，很多operator都有一个poll函数专门用于检测鼠标指针是否在一个有效的窗口区域或者检测当前物体是否在正确的模式中（例如编辑模式，权重绘制模式），如果poll函数返回失败值的话，就会引发RuntimeError异常。</p>
-<p>解决方法：<br>context override的代码实现，如下代码适用于所有blender版本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextExecuterOverride</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, window, screen, area, region</span>):</span><br><span class="line">        <span class="variable language_">self</span>.window, <span class="variable language_">self</span>.screen, <span class="variable language_">self</span>.area, <span class="variable language_">self</span>.region = window, screen, area, region</span><br><span class="line">        <span class="variable language_">self</span>.legacy = <span class="keyword">not</span> <span class="built_in">hasattr</span>(bpy.context, <span class="string">&quot;temp_override&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.copy()</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;window&#x27;</span>] = window</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;screen&#x27;</span>] = screen</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;area&#x27;</span>] = area</span><br><span class="line">            <span class="variable language_">self</span>.context[<span class="string">&#x27;region&#x27;</span>] = region</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="variable language_">self</span>.context = bpy.context.temp_override(window=window, screen=screen, area=area, region=region)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__enter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__enter__()</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__exit__</span>(<span class="params">self, exc_type, exc_value, traceback</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.legacy:</span><br><span class="line">            <span class="variable language_">self</span>.context.__exit__(<span class="variable language_">self</span>, exc_type, exc_value, traceback)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContextScriptExecuter</span>():</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, area_type, ui_type=<span class="literal">None</span>, script=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.area_type = area_type</span><br><span class="line">        <span class="variable language_">self</span>.ui_type = ui_type <span class="keyword">if</span> ui_type <span class="keyword">else</span> area_type</span><br><span class="line">        <span class="variable language_">self</span>.script = script</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">script_content</span>(<span class="params">self, override</span>):</span><br><span class="line">        <span class="variable language_">self</span>.script(override)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute_script</span>(<span class="params">self</span>):</span><br><span class="line">        window = bpy.context.window</span><br><span class="line">        screen = window.screen</span><br><span class="line">        areas = [area <span class="keyword">for</span> area <span class="keyword">in</span> screen.areas <span class="keyword">if</span> area.<span class="built_in">type</span> == <span class="variable language_">self</span>.area_type]</span><br><span class="line">        area = areas[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(areas) <span class="keyword">else</span> screen.areas[<span class="number">0</span>]</span><br><span class="line">        prev_ui_type = area.ui_type</span><br><span class="line">        area.ui_type = <span class="variable language_">self</span>.ui_type</span><br><span class="line">        regions = [region <span class="keyword">for</span> region <span class="keyword">in</span> area.regions <span class="keyword">if</span> region.<span class="built_in">type</span> == <span class="string">&#x27;WINDOW&#x27;</span>]</span><br><span class="line">        region = regions[<span class="number">0</span>] <span class="keyword">if</span> <span class="built_in">len</span>(regions) <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">with</span> ContextExecuterOverride(window=window, screen=screen, area=area, region=region) <span class="keyword">as</span> override:</span><br><span class="line">            <span class="variable language_">self</span>.script_content(override)</span><br><span class="line">        area.ui_type = prev_ui_type</span><br></pre></td></tr></table></figure>
-<p>具体context override代码的使用例子：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bpy.ops.object.empty_image_add()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.<span class="built_in">object</span>.empty_image_add(</span><br><span class="line">            override.context, filepath=blueprint_front</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.<span class="built_in">object</span>.empty_image_add(filepath=blueprint_front_path)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br><span class="line"><span class="comment"># bpy.ops.view3d.view_axis()函数例子</span></span><br><span class="line">ContextScriptExecuter(</span><br><span class="line">    area_type=<span class="string">&quot;VIEW_3D&quot;</span>,</span><br><span class="line">    script=<span class="keyword">lambda</span> override: (</span><br><span class="line">        bpy.ops.view3d.view_axis(override.context, <span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> override.legacy</span><br><span class="line">        <span class="keyword">else</span> bpy.ops.view3d.view_axis(<span class="built_in">type</span>=<span class="string">&quot;FRONT&quot;</span>)</span><br><span class="line">    ),</span><br><span class="line">).execute_script()</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Blender常见问题总结——Q&amp;A</title>
-    <url>/software/blender/q-a/</url>
-    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
-<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
-<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
-<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
-<ul>
-<li>CPU比GPU性能差很多</li>
-<li>渲染Volumetrics场景</li>
-</ul>
-<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
   </entry>
   <entry>
     <title>Blender界面工具操作总结</title>
@@ -13957,6 +13885,83 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -14132,7 +14137,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#x69;&#115;&#116;&#101;&#x72;&#107;&#x69;&#x6e;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#109;&#x69;&#x73;&#116;&#101;&#114;&#x6b;&#x69;&#x6e;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -14415,11 +14420,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>作品</title>
     <url>/works/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -14494,6 +14494,11 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>关于本站</title>
     <url>/about/about-site/index.html</url>
     <content><![CDATA[<h1 id="初衷">1 &nbsp&nbsp<a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>最初只是想建立用来记录自己的一些学习及心得杂记。网络给予我一个便捷的方式去获取知识，让我学习到了很多东西，从博客搭建到电脑维修、从程序编写到影视后期、从……到……，大多技能都实现了自学。</p>
@@ -14529,7 +14534,7 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 <p><em>许可注意：若想对本作品进行转载、引用亦或是进行二次创作时，请详细阅读上述相关协议内容（若不理解，请点击链接跳转阅读）。为保障本人权利，对于违反者，本人将依法予以处理！同时会向搜索引擎提交<a href="https://www.copyright.gov/legislation/dmca.pdf">DMCA</a>的投诉申请。望周知！—— Mr. Kin</em></p>
 <h1 id="勘误声明">3 &nbsp&nbsp<a href="#勘误声明" class="headerlink" title="勘误声明"></a>勘误声明</h1><p>虽本人写作时已尽力保证其内容的正确性，但因个人知识面和经验的局限性以及计算机技术等相关技术日新月异，本作品内容或存在一些错误之处。欢迎<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>以更正错误，不胜感激！—— Mr. Kin</p>
 <h1 id="侵权声明">4 &nbsp&nbsp<a href="#侵权声明" class="headerlink" title="侵权声明"></a>侵权声明</h1><p>若本站采用的第三方内容侵犯了你的版权，请<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系我</a>进行处理，谢谢！—— Mr. Kin</p>
-<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据**中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”**本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
+<h1 id="免责声明">5 &nbsp&nbsp<a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><p>根据<strong>中国《<a href="https://ipc.court.gov.cn/zh-cn/news/view-407.html">计算机软件保护条例</a>》第十七条规定：“为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。”</strong>，本站分享的任何逆向破解软件，版权所有者归原软件著作权人。仅供个人使用或学习研究，严禁商业或非法用途，严禁用于打包恶意软件推广，否则后果由用户承担责任，特此说明。—— Mr. Kin</p>
 <h1 id="关于本站博文的几点声明">6 &nbsp&nbsp<a href="#关于本站博文的几点声明" class="headerlink" title="关于本站博文的几点声明"></a>关于本站博文的几点声明</h1><div class="note info no-icon"><p><strong>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
 </div>
 
