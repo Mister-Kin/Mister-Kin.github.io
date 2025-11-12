@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2025-11-11T14:15:49.000Z</updated>
+  <updated>2025-11-12T10:32:16.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows累积更新KB5068861发布推送：修复「任务管理器」无法正常结束的BUG</title>
+    <link href="https://mister-kin.github.io/post-articles/2025-11/windows-kb5068861/"/>
+    <id>https://mister-kin.github.io/post-articles/2025-11/windows-kb5068861/</id>
+    <published>2025-11-12T09:14:06.000Z</published>
+    <updated>2025-11-12T10:32:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>上月末，微软推送KB5067036累积更新后，引入了一个新BUG会导致「关闭任务管理器后，任务管理器进程可能会继续在后台运行」。</p><p>该KB5067036累积更新，适用于系统内部版本号26x00.7019，详细对应系统内部版本号26200.7019（即Windows 11 25H2）和26100.7019（即Windows 11 24H2）。</p><p>这些未能正确关闭的进程每个会占用系统内存资源，长期使用的情况下会导致整体系统性能受到影响，对于那些习惯使用睡眠或者休眠模式的用户来说，尤为明显。系统在长期未重启的情况下，日常使用任务管理器的过程中，累积了很多后台任务管理器进程，导致用户的内存资源在不知不觉中被吃掉。</p><h1 id="BUG确认被修复">2 &nbsp&nbsp<a href="#BUG确认被修复" class="headerlink" title="BUG确认被修复"></a>BUG确认被修复</h1><p>今日早些时候，微软终于推送了KB5068861累积更新，修复了这个BUG。</p><p><strong>笔者安装该累积更新后实测，确认该BUG确实已被修复了。强烈推荐26x00.7019版本的用户下载安装该累积更新。</strong></p><p>通过反复打开并关闭任务管理器，然后通过终端尝试查找关闭<code>taskmgr.exe</code>进程：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /im taskmgr.exe</span><br></pre></td></tr></table></figure><p>系统提示无法找到<code>taskmgr.exe</code>进程：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ERROR: <span class="title">The</span> <span class="title">process</span> &quot;<span class="title">taskmgr.exe</span>&quot; <span class="title">not</span> <span class="title">found</span>.</span></span><br></pre></td></tr></table></figure><h1 id="KB5068861累积更新内容">3 &nbsp&nbsp<a href="#KB5068861累积更新内容" class="headerlink" title="KB5068861累积更新内容"></a>KB5068861累积更新内容</h1><p>KB5068861累积更新，适用于系统内部版本号26x00.7171，详细对应系统内部版本号26200.7171（即Windows 11 25H2）和26100.7171（即Windows 11 24H2）。该版本大致更新内容如下：</p><ul><li>[游戏]<ul><li>已修复：此更新解决了影响游戏手持设备的问题。 这些设备无法保持低功耗状态，这导致电池消耗得更快。</li><li>已修复：此更新解决了某些手持游戏设备上的问题，即使用内置游戏板登录后，控制器可能在大约五秒钟内在应用中不响应，从而导致延迟。 提交密码或 PIN 后，登录屏幕上的触摸键盘会自动隐藏。</li></ul></li><li>[存储] 已修复：此更新解决了创建存储群集时可能导致某些存储空间不可访问或存储空间直通失败的问题。</li><li>[系统实用工具 (已知问题)] 已修复：此更新解决了以下问题：使用“关闭”按钮关闭任务管理器不会完全结束该过程，从而留下可能会随时间推移降低性能的后台实例。  安装 KB5067036 后可能会发生这种情况。</li><li>[语音访问] 已修复：此更新解决了未连接麦克风且未安装语音模型时，语音 访问 在初始设置期间失败的问题。</li><li>[窗口管理] 已修复：此更新解决了选择桌面可能会意外打开 任务视图的问题。</li><li>[网络]已修复：此更新修复了 HTTP.sys 请求分析器中的问题，这是一个读取和处理 HTTP 请求的 Windows 组件。 分析程序允许在 HTTP&#x2F;1.1 区块扩展内单行中断，其中 RFC 9112 标准要求回车和换行符 (CRLF) 序列终止每个区块。 当前端代理是设置的一部分时，这可能会导致分析差异。<br>若要关闭严格分析，请使用以下注册表项：<br>注册表项： [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters]<br>注册表值： &quot;HttpAllowLenientChunkExtParsing&quot;&#x3D;dword:00000001<br>要设置的数据：1</li></ul><h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] November 11, 2025—KB5068861 (OS Builds 26200.7171 and 26100.7171)[EB&#x2F;OL]. <a href="https://support.microsoft.com/en-us/topic/november-11-2025-kb5068861-os-builds-26200-7171-and-26100-7171-2e0512e4-3ad4-4da6-958c-a468a1af949e">https://support.microsoft.com/en-us/topic/november-11-2025-kb5068861-os-builds-26200-7171-and-26100-7171-2e0512e4-3ad4-4da6-958c-a468a1af949e</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="post-articles" scheme="https://mister-kin.github.io/categories/post-articles/"/>
+    
+    <category term="2025-11" scheme="https://mister-kin.github.io/categories/post-articles/2025-11/"/>
+    
+    
+    <category term="Windows" scheme="https://mister-kin.github.io/tags/Windows/"/>
+    
+    <category term="KB5068861" scheme="https://mister-kin.github.io/tags/KB5068861/"/>
+    
+    <category term="累积更新" scheme="https://mister-kin.github.io/tags/%E7%B4%AF%E7%A7%AF%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>PVE清理旧内核</title>
@@ -693,32 +726,6 @@
     
     
     <category term="code-training" scheme="https://mister-kin.github.io/categories/code-training/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>搜索引擎</title>
-    <link href="https://mister-kin.github.io/search-engine/"/>
-    <id>https://mister-kin.github.io/search-engine/</id>
-    <published>2024-10-03T15:25:47.000Z</published>
-    <updated>2025-01-02T11:33:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note info no-icon"><p>搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。</p></div><h1 id="常见搜索需求">1 &nbsp&nbsp<a href="#常见搜索需求" class="headerlink" title="常见搜索需求"></a>常见搜索需求</h1><ul><li>信息资讯</li><li>知识技能</li><li>素材文件</li><li>工具软件</li></ul><h1 id="搜索效率">2 &nbsp&nbsp<a href="#搜索效率" class="headerlink" title="搜索效率"></a>搜索效率</h1><ul><li>一般而言：谷歌&gt;必应&gt;公众号&gt;短视频&gt;百度</li><li>网页搜索：谷歌&gt;搜狗搜索引擎（可搜索公众号文章）&gt;微信APP搜索</li><li>PDF搜索：谷歌限定文件格式语法&gt;垂直类网站</li><li>科研PDF：谷歌学术&gt;SCI-HUB</li></ul><h1 id="谷歌搜索语法">3 &nbsp&nbsp<a href="#谷歌搜索语法" class="headerlink" title="谷歌搜索语法"></a>谷歌搜索语法</h1><ul><li>限定关键词：<code>&quot;关键词&quot;</code>，英文双引号包含关键词</li><li>限定标题：<code>intitle:关键词</code>。此时，关键词并不是限定状态，因此关键词中的字符也可能是乱序查询的。</li><li>限定标题+限定关键词：<code>intitle:&quot;关键词&quot;</code>。此种用法，关键词是限定状态，要求完整出现，不能乱序。</li><li>限定标题+多个关键词：<code>allintitle:关键词1 关键词2</code></li><li>限定内容关键词：<code>intext:关键词</code></li><li>限定网址关键词：<code>inurl:关键词</code>，如<code>inurl:cctv</code></li><li>限定网址来源：<code>site:网址</code>，如<code>site:cctv.com</code>，域名的www可不输入。</li><li>限定图片尺寸：<code>imagesize:分辨率</code>，如<code>imagesize:1920x1080</code></li><li>限定文件格式：<code>filetype:文件后缀名</code>，如<code>filetype:pdf</code></li></ul><h1 id="油管直链转制">4 &nbsp&nbsp<a href="#油管直链转制" class="headerlink" title="油管直链转制"></a>油管直链转制</h1><p>youtube-&gt;9xyoutube</p><h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 搜索技术，普通人变强的唯一外挂。全套详细宝藏教程~[EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=tiN6T1LewmQ&t=31s">https://www.youtube.com/watch?v=tiN6T1LewmQ&amp;t=31s</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;div class=&quot;note info no-icon&quot;&gt;&lt;p&gt;搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;常见搜索需求&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#常见搜索需求&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
     
     
   </entry>
