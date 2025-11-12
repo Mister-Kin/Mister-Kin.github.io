@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2025-11-12T10:32:16.000Z</updated>
+  <updated>2025-11-12T15:26:54.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>著名激活工具MAS更新v3.8</title>
+    <link href="https://mister-kin.github.io/post-articles/2025-11/mas-38/"/>
+    <id>https://mister-kin.github.io/post-articles/2025-11/mas-38/</id>
+    <published>2025-11-12T11:47:31.000Z</published>
+    <updated>2025-11-12T15:26:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Gtihub上著名的Windows和Office激活工具Microsoft Activation Scripts (MAS)，最近更新到了v3.8版本。</p><p>本次更新移除了KMS38激活的功能，主要原因是26100.7019内部版本号开始，该激活方式已失效。推荐用户改用HWID或TSforge方式激活。</p><p>最新版MAS激活脚本文件获取方式见文章末尾。</p><h1 id="v3-8版本更新内容">2 &nbsp&nbsp<a href="#v3-8版本更新内容" class="headerlink" title="v3.8版本更新内容"></a>v3.8版本更新内容</h1><ul><li>HWID<ul><li>为WNC版本添加了激活支持。</li></ul></li><li>KMS38<ul><li>从内部版本26100.7019开始，Microsoft完全弃用了clip-based的KMS许可证迁移功能。结论是KMS38已失效。详细信息参阅「<a href="https://massgrave.dev/kms38">kms38</a>」。</li><li>KMS38现已从MAS脚本中删除。建议用户改用HWID或TSforge激活。</li><li>如果仍希望在旧的Windows版本上使用它或将其保留用于存档目的，可以从<a href="https://github.com/massgravel/Microsoft-Activation-Scripts/blob/ab6b572af940fa0ea4255b327eb6f69a274d6725/MAS/Separate-Files-Version/Activators/KMS38_Activation.cmd">此处</a>下载脚本。</li></ul></li><li>TSforge<ul><li>从内部版本26100.7019开始，如果实际的期限更长，Windows将始终显示并保持在180天剩余的KMS宽限期。KMS4k信息将根据此更改进行更新。</li><li>添加了对PPIPro的ESU支持（在19045.6388中添加）。</li><li>修复了筛选中ESUID未显示在手动选项中的问题。</li><li>添加了刷新ESU状态的命令。</li></ul></li><li>更改Windows版本<ul><li>更改了密钥首选项顺序，以便可以安装HWID密钥。</li><li>为“IoTEnterprise”版本添加了[GAC,notLTSC]信息，以避免与其LTSC版本“IoTEnterpriseS”混淆。</li></ul></li><li>解决问题<ul><li>该脚本现在将自动选择Office16.0C2R的“快速修复”选项。</li><li>在重建ClipSVC许可证之前添加了更多条件。</li></ul></li><li>检查激活状态<ul><li>修复了CAS中的一个问题，即当ADBA处于活动状态时，会显示KMS客户端信息。</li></ul></li><li>其他<ul><li>错误处理和信息方面的其他一些小改进。</li></ul></li></ul><h1 id="最新版MAS下载地址">3 &nbsp&nbsp<a href="#最新版MAS下载地址" class="headerlink" title="最新版MAS下载地址"></a>最新版MAS下载地址</h1><h2 id="PowerShell获取">3.1 &nbsp&nbsp<a href="#PowerShell获取" class="headerlink" title="PowerShell获取"></a>PowerShell获取</h2><ul><li>Windows 8, 10, 11：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://get.activated.win | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure></li><li>如果上面一条的命令不生效，例如网络被阻断，可以尝试这条命令（适用于Windows10或者11）：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">iex</span> (curl.exe <span class="literal">-s</span> <span class="literal">--doh-url</span> https://<span class="number">1.1</span>.<span class="number">1.1</span>/dns<span class="literal">-query</span> https://get.activated.win | <span class="built_in">Out-String</span>)</span><br></pre></td></tr></table></figure></li><li>Windows 7及之后版本：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">iex</span> ((<span class="built_in">New-Object</span> Net.WebClient).DownloadString(<span class="string">&#x27;https://get.activated.win&#x27;</span>))</span><br></pre></td></tr></table></figure></li></ul><h2 id="传统下载方式">3.2 &nbsp&nbsp<a href="#传统下载方式" class="headerlink" title="传统下载方式"></a>传统下载方式</h2><ul><li><a href="https://dev.azure.com/massgrave/Microsoft-Activation-Scripts/_apis/git/repositories/Microsoft-Activation-Scripts/items?path=/MAS/All-In-One-Version-KL/MAS_AIO.cmd&download=true">MAS_AIO.cmd</a></li><li><a href="https://dev.azure.com/massgrave/Microsoft-Activation-Scripts/_apis/git/repositories/Microsoft-Activation-Scripts/items?format=zip">full ZIP</a></li></ul><h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] v3.8 R.I.P. KMS38[EB&#x2F;OL]. <a href="https://github.com/massgravel/Microsoft-Activation-Scripts/releases/tag/3.8">https://github.com/massgravel/Microsoft-Activation-Scripts/releases/tag/3.8</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Gtihub上著名的Windows和Office激活工具Microsoft Activation Scripts</summary>
+        
+      
+    
+    
+    
+    <category term="post-articles" scheme="https://mister-kin.github.io/categories/post-articles/"/>
+    
+    <category term="2025-11" scheme="https://mister-kin.github.io/categories/post-articles/2025-11/"/>
+    
+    
+    <category term="脚本" scheme="https://mister-kin.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+    <category term="Windows" scheme="https://mister-kin.github.io/tags/Windows/"/>
+    
+    <category term="激活工具" scheme="https://mister-kin.github.io/tags/%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Office" scheme="https://mister-kin.github.io/tags/Office/"/>
+    
+    <category term="MAS" scheme="https://mister-kin.github.io/tags/MAS/"/>
+    
+    <category term="免费" scheme="https://mister-kin.github.io/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+    <category term="开源" scheme="https://mister-kin.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows累积更新KB5068861发布推送：修复「任务管理器」无法正常结束的BUG</title>
@@ -702,31 +743,6 @@
     <category term="算法" scheme="https://mister-kin.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="数据结构" scheme="https://mister-kin.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣LeetCode</title>
-    <link href="https://mister-kin.github.io/code-training/leetcode/"/>
-    <id>https://mister-kin.github.io/code-training/leetcode/</id>
-    <published>2025-01-12T19:10:57.000Z</published>
-    <updated>2025-09-26T13:13:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code-training" scheme="https://mister-kin.github.io/categories/code-training/"/>
-    
     
   </entry>
   
