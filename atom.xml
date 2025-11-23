@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2025-11-22T10:31:22.000Z</updated>
+  <updated>2025-11-23T16:19:04.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -17,13 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>三种方法屏蔽PVE虚拟化系统无有效订阅提示弹窗</title>
+    <link href="https://mister-kin.github.io/post-articles/2025-11/three-ways-disable-subscribe-for-pve/"/>
+    <id>https://mister-kin.github.io/post-articles/2025-11/three-ways-disable-subscribe-for-pve/</id>
+    <published>2025-11-22T14:13:13.000Z</published>
+    <updated>2025-11-23T16:19:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前在探索<a href="/post-articles/2025-11/correct-way-disable-subscribe-for-pve9x/">正确屏蔽PVE 9.x版本系统无有效订阅提示弹窗的方法</a>时，浏览了网络上不少相关技术帖子，累计总结记录了三种方法。今天来聊聊这三种方法的原理和不同点。</p><h1 id="方法一：修改订阅状态检测逻辑">2 &nbsp&nbsp<a href="#方法一：修改订阅状态检测逻辑" class="headerlink" title="方法一：修改订阅状态检测逻辑"></a>方法一：修改订阅状态检测逻辑</h1><p>这是笔者自行探索总结出来的方法。</p><ul><li>原理：通过修改订阅状态检测的条件判断，将严格不等于<code>!==</code>改为严格等于<code>===</code>，本质上仅替换一个字符。当系统检测订阅状态时，原本需要状态为&quot;active&quot;才不显示警告，修改后只要状态不是&quot;active&quot;就不会触发警告弹窗，从而实现屏蔽了未订阅提示。</li><li>优缺点：<strong>完美适配PVE 9.x版本</strong>，不会导致PVE的WEB后台「软件包版本」按钮无法响应。</li><li>适用PVE版本范围：经测试PVE 8.x和PVE 9.x版本有效，理论上兼容PVE 7.x及以前版本。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">line_num=$(grep -n <span class="string">&quot;res.data.status.toLowerCase() !== &#x27;active&#x27;&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js | <span class="built_in">head</span> -1 | <span class="built_in">cut</span> -d: -f1)</span><br><span class="line">sed -i <span class="string">&quot;<span class="variable">$&#123;line_num&#125;</span>s/!==/===/&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><h1 id="方法二：禁用弹窗显示函数">3 &nbsp&nbsp<a href="#方法二：禁用弹窗显示函数" class="headerlink" title="方法二：禁用弹窗显示函数"></a>方法二：禁用弹窗显示函数</h1><p>该方法是从Github上<a href="https://github.com/Mapleawaa/PVE-Tools-9">PVE-Tools-9</a>项目中找到的。</p><ul><li>原理：通过将Ext.Msg.show函数调用替换为void表达式，使弹窗显示函数失效。void操作符会计算表达式但返回undefined，从而阻止了弹窗的实际显示。</li><li>优缺点：<strong>不能完美适配PVE 9.x版本</strong>，导致PVE的WEB后台「软件包版本」按钮无法响应。</li><li>适用PVE版本范围：理论上兼容所有版本。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">sed -Ezi <span class="string">&quot;s/(Ext.Msg.show\(\&#123;\s+title: gettext\(&#x27;No valid sub)/void\(\&#123; \/\/\1/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><h1 id="方法三：重写条件判断表达式">4 &nbsp&nbsp<a href="#方法三：重写条件判断表达式" class="headerlink" title="方法三：重写条件判断表达式"></a>方法三：重写条件判断表达式</h1><p>这是网络上流传最广的方法，绝大部分教程都是基于此方法。</p><ul><li>原理：彻底重写订阅检测的条件判断逻辑，将复杂的条件检查替换为简单的false值。通过两个sed命令分别处理条件语句的起始部分和状态检测部分，使整个条件判断永远返回false，从而跳过弹窗显示代码。</li><li>优缺点：<strong>同方法二，不能完美适配PVE 9.x版本</strong>，会导致「软件包版本」按钮无法响应。</li><li>适用PVE版本范围：理论上兼容所有版本。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><h1 id="后记">5 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>上述三种方法同样适用于屏蔽PBS备份系统的无有效订阅提示弹窗，即<code>Proxmox Backup Server</code>，修改文件操作完成之后重启PBS代理服务即可。</p><p>此外，对于PBS系统来说，这三种方法均能正确实现屏蔽作用，无其他影响。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart proxmox-backup-proxy</span><br></pre></td></tr></table></figure><h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] PVE-Tools[EB&#x2F;OL]. <a href="https://github.com/Mapleawaa/PVE-Tools-9/blob/main/PVE-Tools.sh">https://github.com/Mapleawaa/PVE-Tools-9/blob/main/PVE-Tools.sh</a>.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;之前在探索&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="post-articles" scheme="https://mister-kin.github.io/categories/post-articles/"/>
+    
+    <category term="2025-11" scheme="https://mister-kin.github.io/categories/post-articles/2025-11/"/>
+    
+    
+    <category term="虚拟化系统" scheme="https://mister-kin.github.io/tags/%E8%99%9A%E6%8B%9F%E5%8C%96%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="PVE" scheme="https://mister-kin.github.io/tags/PVE/"/>
+    
+    <category term="Proxmox" scheme="https://mister-kin.github.io/tags/Proxmox/"/>
+    
+    <category term="HomeLab" scheme="https://mister-kin.github.io/tags/HomeLab/"/>
+    
+    <category term="服务器" scheme="https://mister-kin.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="屏蔽订阅弹窗" scheme="https://mister-kin.github.io/tags/%E5%B1%8F%E8%94%BD%E8%AE%A2%E9%98%85%E5%BC%B9%E7%AA%97/"/>
+    
+    <category term="PBS" scheme="https://mister-kin.github.io/tags/PBS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>正确屏蔽PVE 9.x版本系统无有效订阅提示弹窗的方法</title>
     <link href="https://mister-kin.github.io/post-articles/2025-11/correct-way-disable-subscribe-for-pve9x/"/>
     <id>https://mister-kin.github.io/post-articles/2025-11/correct-way-disable-subscribe-for-pve9x/</id>
     <published>2025-11-22T04:52:00.000Z</published>
-    <updated>2025-11-22T10:31:22.000Z</updated>
+    <updated>2025-11-23T16:19:04.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前在<a href="/post-articles/2025-10/pve8to9/">PVE虚拟化系统升级小记（8.x-&gt;9.x）</a>中有提到过，PVE 9.x版本执行屏蔽无有效订阅提示弹窗的老方法之后，会导致PVE的WEB后台「软件包版本」按钮无法响应。</p><p>经过重新对<code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code>文件代码的分析和修改测试，笔者总结出另一种可行的新方法。</p><h1 id="问题分析">2 &nbsp&nbsp<a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>PVE 9.x的版本，除了每次登录WEB后台会显示无有效订阅提示弹窗之外，在点击「软件包版本」按钮时，首先也会弹出「无有效订阅」的提示弹窗，然后再跳转到软件包版本页面。</p><p>以前版本没有这种逻辑。笔者推测应该是这个原因导致旧方法不能完美适配PVE 9.x版本。</p><div class="flex-column"><img data-src="/images/post-articles/2025-11/correct-way-disable-subscribe-for-pve9x/pve9x-check-version.webp">PVE 9.x版本「软件包版本」按钮的逻辑</div><p>旧方法的命令操作步骤：该方法核心原理修改替换关系表达式条件，但无法完美适配PVE 9.x版本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><h1 id="新方法：完美适配PVE-9-x版本">3 &nbsp&nbsp<a href="#新方法：完美适配PVE-9-x版本" class="headerlink" title="新方法：完美适配PVE 9.x版本"></a>新方法：完美适配PVE 9.x版本</h1><p>新方法的核心原理是替换关系表达式符号，其本质仅仅是替换一个字符而已，即将<code>!==</code>替换为<code>===</code>，不同于旧方法原理的修改替换关系表达式条件。</p><p>新方法的命令操作步骤：新方法完美适配PVE 9.x版本，不会导致PVE的WEB后台「软件包版本」按钮无法响应。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">line_num=$(grep -n <span class="string">&quot;res.data.status.toLowerCase() !== &#x27;active&#x27;&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js | <span class="built_in">head</span> -1 | <span class="built_in">cut</span> -d: -f1)</span><br><span class="line">sed -i <span class="string">&quot;<span class="variable">$&#123;line_num&#125;</span>s/!==/===/&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><div class="flex-column"><img data-src="/images/post-articles/2025-11/correct-way-disable-subscribe-for-pve9x/pve9x-check-version-no-popup.webp">新方法的效果：完美适配PVE 9.x版本</div><h1 id="后记">4 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>这个新方法同样适用于屏蔽PBS备份系统的无有效订阅提示弹窗，即<code>Proxmox Backup Server</code>，修改文件操作完成之后重启PBS代理服务即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart proxmox-backup-proxy</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前在<a href="/post-articles/2025-10/pve8to9/">PVE虚拟化系统升级小记（8.x-&gt;9.x）</a>中有提到过，PVE 9.x版本执行屏蔽无有效订阅提示弹窗的老方法之后，会导致PVE的WEB后台「软件包版本」按钮无法响应。</p><p>经过重新对<code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code>文件代码的分析和修改测试，笔者总结出另一种可行的新方法。</p><h1 id="问题分析">2 &nbsp&nbsp<a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>PVE 9.x的版本，除了每次登录WEB后台会显示无有效订阅提示弹窗之外，在点击「软件包版本」按钮时，首先也会弹出「无有效订阅」的提示弹窗，然后再跳转到软件包版本页面。</p><p>以前版本没有这种逻辑。笔者推测应该是这个原因导致旧方法不能完美适配PVE 9.x版本。</p><div class="flex-column"><img data-src="/images/software/pve/pve9x-check-package-version.webp">PVE 9.x版本「软件包版本」按钮的逻辑</div><p>旧方法的命令操作步骤：该方法核心原理修改替换关系表达式条件，但无法完美适配PVE 9.x版本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><h1 id="新方法：完美适配PVE-9-x版本">3 &nbsp&nbsp<a href="#新方法：完美适配PVE-9-x版本" class="headerlink" title="新方法：完美适配PVE 9.x版本"></a>新方法：完美适配PVE 9.x版本</h1><p>新方法的核心原理是替换关系表达式符号，其本质仅仅是替换一个字符而已，即将<code>!==</code>替换为<code>===</code>，不同于旧方法原理的修改替换关系表达式条件。</p><p>新方法的命令操作步骤：新方法完美适配PVE 9.x版本，不会导致PVE的WEB后台「软件包版本」按钮无法响应。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line"></span><br><span class="line">line_num=$(grep -n <span class="string">&quot;res.data.status.toLowerCase() !== &#x27;active&#x27;&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js | <span class="built_in">head</span> -1 | <span class="built_in">cut</span> -d: -f1)</span><br><span class="line">sed -i <span class="string">&quot;<span class="variable">$&#123;line_num&#125;</span>s/!==/===/&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line"></span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure><div class="flex-column"><img data-src="/images/software/pve/pve9x-check-package-version-no-popup.webp">新方法的效果：完美适配PVE 9.x版本</div><h1 id="后记">4 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>这个新方法同样适用于屏蔽PBS备份系统的无有效订阅提示弹窗，即<code>Proxmox Backup Server</code>，修改文件操作完成之后重启PBS代理服务即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart proxmox-backup-proxy</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -52,6 +93,8 @@
     <category term="服务器" scheme="https://mister-kin.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="屏蔽订阅弹窗" scheme="https://mister-kin.github.io/tags/%E5%B1%8F%E8%94%BD%E8%AE%A2%E9%98%85%E5%BC%B9%E7%AA%97/"/>
+    
+    <category term="PBS" scheme="https://mister-kin.github.io/tags/PBS/"/>
     
   </entry>
   
@@ -706,31 +749,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;关于开源协议&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#关于开源协议&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构</title>
-    <link href="https://mister-kin.github.io/code/data-structure/"/>
-    <id>https://mister-kin.github.io/code/data-structure/</id>
-    <published>2025-01-16T18:09:44.000Z</published>
-    <updated>2025-02-27T16:00:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="数组和字符串">1 &nbsp&nbsp<a href="#数组和字符串" class="headerlink" title="数组和字符串"></a>数组和字符串</h1><h2 id="数组">1.1 &nbsp&nbsp<a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul><li>集合的定义：由一个或多个确定的元素所构成的整体。</li><li>集合的特性：<ul><li>集合里的元素类型不一定相同</li><li>集合里的元素没有顺序</li></ul></li><li>列表（又称线性列表）的定义：是一种数据项构成的有限序列，即按照一定的线性顺序，排列而成的数据项的集合。<ul><li>列表的概念是在集合的特征上形成的，它具有顺序，且长度是可变的。</li><li>列表最常见的表现形式：数组和链表<ul><li>C++和Java中，数组中的元素类型必须保持一致。</li><li>Python数组叫list，元素类型可以不同，具有更多高级功能。</li></ul></li><li>特殊类型的列表：栈和队列</li></ul></li><li>列表和数组的区别<ul><li>数组<ul><li>数组有<code>索引</code>，用来标识每项数据在数组中的位置，且在大多数编程语言中，索引是从 0 算起的。</li><li>数组中的元素在内存中是连续存储，且每个元素占用的相同大小内存。</li></ul></li><li>列表<ul><li>列表没有<code>索引</code>。</li><li>列表中的元素在内存中可能彼此相邻，也可能不相邻。例如链表。</li></ul></li></ul></li></ul><h2 id="数组的操作">1.2 &nbsp&nbsp<a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><p>对于数组，计算机会在内存中为其申请一段<strong>连续</strong>的空间，并且会记下<strong>索引为 0 处的内存地址</strong>。</p><ul><li>读取元素：读取数组中的元素，是通过访问索引的方式来读取的，索引一般从 0 开始。寻找索引为2的元素，实际就是在索引为0的元素内存地址上偏移+2得到新地址的元素。<ul><li>时间复杂度：O(1)</li></ul></li><li>查找元素：由于只保存了索引为 0 处的内存地址，因此需要从数组开头逐步向后查找。<ul><li>时间复杂度：O(N)</li></ul></li><li>插入元素<ul><li>末尾插入：只需要一步（根据数组的长度和位置计算出需插入元素的内存地址插入即可）。</li><li>中间插入：需要在数组中腾出空间，才能继续操作插入（这种操作，更推荐使用链表）。</li></ul></li><li>删除元素：与插入元素类似<ul><li>末尾删除：只需要一步</li><li>中间删除：删除中间元素后，后面的元素需要对该位置进行操作</li><li>时间复杂度：O(N)。数组长度<code>N</code>，例如删除第一个元素，总步骤数：<code>1+(N-1)=N</code>。（<code>1</code>为删除操作，<code>N-1</code>为移动操作）</li></ul></li></ul><h2 id="字符串">1.3 &nbsp&nbsp<a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是由字符串数组形成的。</p><h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 数组和字符串[EB&#x2F;OL]. <a href="https://leetcode.cn/leetbook/detail/array-and-string/">https://leetcode.cn/leetbook/detail/array-and-string/</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;数组和字符串&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#数组和字符串&quot; class=&quot;headerlink&quot; title=&quot;数组和字符串&quot;&gt;&lt;/a&gt;数组和字符串&lt;/h1&gt;&lt;h2 id=&quot;数组&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#数组&quot;</summary>
         
       
     
