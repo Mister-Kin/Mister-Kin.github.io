@@ -6,7 +6,7 @@
   <link href="https://mister-kin.github.io/atom.xml" rel="self"/>
   
   <link href="https://mister-kin.github.io/"/>
-  <updated>2025-11-23T16:19:04.000Z</updated>
+  <updated>2025-11-30T07:43:56.000Z</updated>
   <id>https://mister-kin.github.io/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络排障总结</title>
+    <link href="https://mister-kin.github.io/troubleshooting/network-troubleshooting/"/>
+    <id>https://mister-kin.github.io/troubleshooting/network-troubleshooting/</id>
+    <published>2025-11-25T19:28:14.000Z</published>
+    <updated>2025-11-30T07:43:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ping工具">1 &nbsp&nbsp<a href="#ping工具" class="headerlink" title="ping工具"></a>ping工具</h1><p>ping命令是属于网络层的ICMP协议的，用于检查IP的连通性或网络连接速度，是无法用于检测IP的端口状态。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  验证本地计算机上TCP/IP协议栈是否正常工作，TCP/IP协议栈是一个整体基础套件，并非指单个协议</span></span><br><span class="line"><span class="comment"># localhost 是一个域名，在过去它指向 127.0.0.1 这个 IP 地址。在操作系统支持 ipv6 后，它同时还指向 ipv6 的地址 [::1]</span></span><br><span class="line">ping 127.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证本机 IP 地址是否配置完成或者网卡物理属性是否完好，本机IP地址：192.168.1.55</span></span><br><span class="line">ping 192.168.1.55</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证从本机到网关的物理线路是否连通，网关地址：192.168.1.1</span></span><br><span class="line">ping 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以用于测试特定时长的网络连通性，例如是否存在网卡断流</span></span><br><span class="line"><span class="comment"># ping 1800次，ping每秒进行一次，1800次相当于30分钟</span></span><br><span class="line">ping qq.com -n 1800</span><br><span class="line"></span><br><span class="line"><span class="comment"># -t 持续发送Ping请求</span></span><br><span class="line"><span class="comment"># -l 1400，设置发送的 ICMP 回显请求数据包的大小 为 1400 字节。Windows 默认发送 32 字节</span></span><br><span class="line"><span class="comment"># -f，在数据包中设置 &quot;不分段&quot;（Don&#x27;t Fragment）标志。这指示数据包在传输路径中不允许被路由器分片。若路由器的MTU为1500字节，则不分段能设置最大数据为1472字节数据（1500-20字节IP头-8字节ICMP头）</span></span><br><span class="line">ping qq.com -t -l 1400 -f</span><br></pre></td></tr></table></figure><h1 id="tracert工具">2 &nbsp&nbsp<a href="#tracert工具" class="headerlink" title="tracert工具"></a>tracert工具</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示从本机到目标主机的路由信息</span></span><br><span class="line"><span class="comment"># 目标地址跟踪数据包到达目的主机的路径，可以探测网络故障是发生在哪一个位置</span></span><br><span class="line">tracert qq.com</span><br></pre></td></tr></table></figure><h1 id="telnet工具">3 &nbsp&nbsp<a href="#telnet工具" class="headerlink" title="telnet工具"></a>telnet工具</h1><ul><li>应用层协议命令，用于远程登录，也可用于检测IP的端口状态，但无法查看ping值和实现监控。</li><li>Windows系统有自带，但默认未启用，需要在「启用或关闭Windows功能」中勾选启用<code>Telnet Client</code>。</li></ul><h1 id="tcping工具">4 &nbsp&nbsp<a href="#tcping工具" class="headerlink" title="tcping工具"></a>tcping工具</h1><p>传输层协议命令。通过TCP的握手和挥手的时间差来判断端口的打开与延迟），可用于检测IP端口状态和查看ping值，即使源地址禁用ICMP协议的ping，也可以通过tcping来监控网络状态。</p><p>如下有一些三方实现的tcping仓库链接：</p><ul><li><a href="https://github.com/pouriyajamshidi/tcping">pouriyajamshidi&#x2F;tcping</a></li><li><a href="https://github.com/cloverstd/tcping">cloverstd&#x2F;tcping</a></li><li><a href="https://elifulkerson.com/projects/tcping.php">elifulkerson&#x2F;tcping</a></li></ul><h1 id="ipconfig工具">5 &nbsp&nbsp<a href="#ipconfig工具" class="headerlink" title="ipconfig工具"></a>ipconfig工具</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示本机网卡IP地址</span></span><br><span class="line">ipconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新DNS缓存</span></span><br><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure><h1 id="iperf3工具">6 &nbsp&nbsp<a href="#iperf3工具" class="headerlink" title="iperf3工具"></a>iperf3工具</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -c 以客户端模式运行，后面接服务端地址，-p 指定端口，-n 指定传输数据量，1T代表1TB数据</span></span><br><span class="line">iperf3 -c 192.168.1.1 -p 5201 -n 1tb</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s 以服务端模式运行，-p 指定端口</span></span><br><span class="line">iperf3 -s -p 5201</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ping工具&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#ping工具&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="troubleshooting" scheme="https://mister-kin.github.io/categories/troubleshooting/"/>
+    
+    
+    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="故障" scheme="https://mister-kin.github.io/tags/%E6%95%85%E9%9A%9C/"/>
+    
+    <category term="网络" scheme="https://mister-kin.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="排障" scheme="https://mister-kin.github.io/tags/%E6%8E%92%E9%9A%9C/"/>
+    
+    <category term="调试" scheme="https://mister-kin.github.io/tags/%E8%B0%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>飞牛fnOS | 二次修改AutoBangumi的RSS条目名称和URL</title>
+    <link href="https://mister-kin.github.io/post-articles/2025-11/modify-autobangumi-rss-item-for-fnos/"/>
+    <id>https://mister-kin.github.io/post-articles/2025-11/modify-autobangumi-rss-item-for-fnos/</id>
+    <published>2025-11-24T12:30:32.000Z</published>
+    <updated>2025-11-30T07:43:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一般RSS订阅链接导入到AutoBangumi之后，是无法二次修改RSS条目名称和URL的，正如AutoBangumi软件界面上没有任何UI可供用户操作修改。</p><p>但是某些情况下是想要实现二次修改，而非删除并重新导入。</p><p>以我的一个使用场景为例，以前在下载《仙逆》剧集时，使用的RSS订阅链接是基于mikan搜索结果的RSS链接<code>https://mikanime.tv/RSS/Search?searchstr=%E4%BB%99%E9%80%86</code>。因此<br>AutoBangumi自动识别该RSS条目的名称为「国漫」，而AutoBangumi会根据该名称创建创建对应名称的文件夹。</p><p>而我一直想要重命名这条RSS条目的名称和重新修改对应URL，如果考虑删除并重新导入RSS链接的话，后台qBittorrent需要重新同时接收处理一百多个下载任务。这么大量的处理任务，意味着qBittorrent将一段时间内都无法正常影响，这显然是不可接受的。</p><p>那还有没有其他办法能实现二次修改呢？其实有，从数据库角度入手即可。AutoBangumi数据库是基于SQLite，因此可以通过修改SQLite数据库文件来实现二次修改。</p><div class="flex-row"><div class="flex-column"><img data-src="/images/post-articles/2025-11/modify-autobangumi-rss-item-for-fnos/bangumi-list.webp">bangumi列表</div><div class="flex-column"><img data-src="/images/post-articles/2025-11/modify-autobangumi-rss-item-for-fnos/rss-item-change-before.webp">RSS条目</div></div><h1 id="测试平台">1 &nbsp&nbsp<a href="#测试平台" class="headerlink" title="测试平台"></a>测试平台</h1><ul><li>飞牛: fnOS 1.0.0</li><li>AutoBangumi: 3.1.18</li></ul><h1 id="准备工作">2 &nbsp&nbsp<a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><blockquote><p>当然，你也可以选择使用Navicat这类可视化工具来操作修改数据库，GUI操作比较简单，这里不再展开叙述。</p></blockquote><h2 id="SQLite命令行操作工具">2.1 &nbsp&nbsp<a href="#SQLite命令行操作工具" class="headerlink" title="SQLite命令行操作工具"></a>SQLite命令行操作工具</h2><p><code>sqlite-tools-win-x64</code>下载地址：<a href="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</a></p><p>解压<code>sqlite-tools-win-x64-3510000.zip</code>，其中的<code>sqlite3.exe</code>程序就是SQLite命令行操作工具。</p><h2 id="AutoBangumi的数据库文件">2.2 &nbsp&nbsp<a href="#AutoBangumi的数据库文件" class="headerlink" title="AutoBangumi的数据库文件"></a>AutoBangumi的数据库文件</h2><p>AutoBangumi数据库文件路径如下：</p><ul><li>文件管理路径：<code>应用文件-&gt;AutoBangumi-&gt;data-&gt;data.db</code></li><li>对应的系统原始路径：<code>/vol1/@appshare/AutoBangumi/data/data.db</code></li></ul><div class="flex-column"><img data-src="/images/post-articles/2025-11/modify-autobangumi-rss-item-for-fnos/database-path.webp">数据库文件路径</div><h2 id="AutoBangumi数据库的表结构">2.3 &nbsp&nbsp<a href="#AutoBangumi数据库的表结构" class="headerlink" title="AutoBangumi数据库的表结构"></a>AutoBangumi数据库的表结构</h2><p><code>bangumi</code>表结构和<code>rssitem</code>表结构如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">sqlite&gt; .schema bangumi</span><br><span class="line"><span class="comment"># bangumi表结构</span></span><br><span class="line">CREATE TABLE bangumi (</span><br><span class="line">        <span class="built_in">id</span> INTEGER NOT NULL,</span><br><span class="line">        official_title VARCHAR NOT NULL,</span><br><span class="line">        year VARCHAR,</span><br><span class="line">        title_raw VARCHAR NOT NULL,</span><br><span class="line">        season INTEGER NOT NULL,</span><br><span class="line">        season_raw VARCHAR,</span><br><span class="line">        group_name VARCHAR,</span><br><span class="line">        dpi VARCHAR,</span><br><span class="line">        <span class="built_in">source</span> VARCHAR,</span><br><span class="line">        subtitle VARCHAR,</span><br><span class="line">        eps_collect BOOLEAN NOT NULL,</span><br><span class="line">        <span class="string">&quot;offset&quot;</span> INTEGER NOT NULL,</span><br><span class="line">        filter VARCHAR NOT NULL,</span><br><span class="line">        rss_link VARCHAR NOT NULL,</span><br><span class="line">        poster_link VARCHAR,</span><br><span class="line">        added BOOLEAN NOT NULL,</span><br><span class="line">        rule_name VARCHAR,</span><br><span class="line">        save_path VARCHAR,</span><br><span class="line">        deleted BOOLEAN NOT NULL,</span><br><span class="line">        PRIMARY KEY (<span class="built_in">id</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">sqlite&gt; .schema rssitem</span><br><span class="line"><span class="comment"># rssitem表结构</span></span><br><span class="line">CREATE TABLE rssitem (</span><br><span class="line">        <span class="built_in">id</span> INTEGER NOT NULL,</span><br><span class="line">        name VARCHAR,</span><br><span class="line">        url VARCHAR NOT NULL,</span><br><span class="line">        aggregate BOOLEAN NOT NULL,</span><br><span class="line">        parser VARCHAR NOT NULL,</span><br><span class="line">        enabled BOOLEAN NOT NULL,</span><br><span class="line">        PRIMARY KEY (<span class="built_in">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h1 id="实操演示：修改RSS条目名称和URL">3 &nbsp&nbsp<a href="#实操演示：修改RSS条目名称和URL" class="headerlink" title="实操演示：修改RSS条目名称和URL"></a>实操演示：修改RSS条目名称和URL</h1><h2 id="停用应用并下载数据库文件">3.1 &nbsp&nbsp<a href="#停用应用并下载数据库文件" class="headerlink" title="停用应用并下载数据库文件"></a>停用应用并下载数据库文件</h2><p>在下载<code>data.db</code>文件之前，需要先在「应用中心」停用AutoBangumi应用，避免有新数据写入。</p><h2 id="修改数据库中的数据">3.2 &nbsp&nbsp<a href="#修改数据库中的数据" class="headerlink" title="修改数据库中的数据"></a>修改数据库中的数据</h2><blockquote><p>以下操作均为在Windows系统中使用Git Bash终端执行。</p></blockquote><p>接下来，以修改一条RSS条目的名称和URL为例，具体操作步骤：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开data.db数据库文件</span></span><br><span class="line">./sqlite3 data.db</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列举所有表名</span></span><br><span class="line">sqlite&gt; .tables</span><br><span class="line">bangumi  rssitem  torrent  user</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询bangumi表中数据</span></span><br><span class="line">sqlite&gt; <span class="keyword">select</span> * from bangumi;</span><br><span class="line">3|仙逆||Renegade Immortal|1||GM-Team|1080P||GB|1|0|720,\d+-\d|https://mikanime.tv/RSS/Search?searchstr=%E4%BB%99%E9%80%86|posters/d7bfd97a.jpg|1||/vol1/1000/下载/仙逆/Season 1|0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询rssitem表中数据</span></span><br><span class="line">sqlite&gt; <span class="keyword">select</span> * from rssitem;</span><br><span class="line">3|国漫|https://mikanime.tv/RSS/Search?searchstr=%E4%BB%99%E9%80%86|0|mikan|1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改数据库中的数据</span></span><br><span class="line">sqlite&gt; update rssitem <span class="built_in">set</span> name=<span class="string">&#x27;仙逆&#x27;</span> <span class="built_in">where</span> <span class="built_in">id</span>=3;</span><br><span class="line">sqlite&gt; update rssitem <span class="built_in">set</span> url=<span class="string">&#x27;https://mikanime.tv/RSS/Search?searchstr=GM-Team+%E4%BB%99%E9%80%86&#x27;</span> <span class="built_in">where</span> <span class="built_in">id</span>=3;</span><br><span class="line">sqlite&gt; update bangumi <span class="built_in">set</span> rss_link =<span class="string">&#x27;https://mikanime.tv/RSS/Search?searchstr=GM-Team+%E4%BB%99%E9%80%86&#x27;</span> <span class="built_in">where</span> <span class="built_in">id</span>=3;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 二次查询表中数据，以确认查案最新数据</span></span><br><span class="line">sqlite&gt; <span class="keyword">select</span> * from bangumi;</span><br><span class="line">3|仙逆||Renegade Immortal|1||GM-Team|1080P||GB|1|0|720,\d+-\d|https://mikanime.tv/RSS/Search?searchstr=GM-Team+%E4%BB%99%E9%80%86|posters/d7bfd97a.jpg|1||/vol1/1000/下载/仙逆/Season 1|0</span><br><span class="line"></span><br><span class="line">sqlite&gt; <span class="keyword">select</span> * from rssitem;</span><br><span class="line">3|仙逆|https://mikanime.tv/RSS/Search?searchstr=GM-Team+%E4%BB%99%E9%80%86|0|mikan|1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出sqlite提示符</span></span><br><span class="line">sqlite&gt; .quit</span><br></pre></td></tr></table></figure><p>注：如果修改RSS条目中的URL字段的话，建议同时更新<code>rssitem</code>和<code>bangumi</code>两个表的对应数据，避免出现潜在问题。</p><h2 id="上传覆盖数据库文件并重启应用">3.3 &nbsp&nbsp<a href="#上传覆盖数据库文件并重启应用" class="headerlink" title="上传覆盖数据库文件并重启应用"></a>上传覆盖数据库文件并重启应用</h2><p>修改完成后，将修改后的<code>data.db</code>文件上传到<code>应用文件-&gt;AutoBangumi-&gt;data-&gt;data.db</code>，覆盖原始的<code>data.db</code>文件。</p><p>然后重新启用AutoBangumi应用，即可看到修改后的RSS条目名称和URL。</p><div class="flex-column"><img data-src="/images/post-articles/2025-11/modify-autobangumi-rss-item-for-fnos/rss-item-change-after.webp">修改后的RSS条目</div>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一般RSS订阅链接导入到AutoBangumi之后，是无法二次修改RSS条目名称和URL的，正如AutoBangumi软件界面上没有任何UI可供用户操作修改。&lt;/p&gt;
+&lt;p&gt;但是某些情况下是想要实现二次修改，而非删除并重新导入。&lt;/p&gt;
+&lt;p&gt;以我的一个使用场景为例，以前在</summary>
+        
+      
+    
+    
+    
+    <category term="post-articles" scheme="https://mister-kin.github.io/categories/post-articles/"/>
+    
+    <category term="2025-11" scheme="https://mister-kin.github.io/categories/post-articles/2025-11/"/>
+    
+    
+    <category term="fnOS" scheme="https://mister-kin.github.io/tags/fnOS/"/>
+    
+    <category term="飞牛" scheme="https://mister-kin.github.io/tags/%E9%A3%9E%E7%89%9B/"/>
+    
+    <category term="AutoBangumi" scheme="https://mister-kin.github.io/tags/AutoBangumi/"/>
+    
+    <category term="mikan" scheme="https://mister-kin.github.io/tags/mikan/"/>
+    
+    <category term="NAS" scheme="https://mister-kin.github.io/tags/NAS/"/>
+    
+    <category term="HomeLab" scheme="https://mister-kin.github.io/tags/HomeLab/"/>
+    
+  </entry>
   
   <entry>
     <title>三种方法屏蔽PVE虚拟化系统无有效订阅提示弹窗</title>
@@ -692,70 +768,6 @@
     <category term="公钥" scheme="https://mister-kin.github.io/tags/%E5%85%AC%E9%92%A5/"/>
     
     <category term="密钥" scheme="https://mister-kin.github.io/tags/%E5%AF%86%E9%92%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI总结</title>
-    <link href="https://mister-kin.github.io/software/ai/"/>
-    <id>https://mister-kin.github.io/software/ai/</id>
-    <published>2025-02-27T15:56:16.000Z</published>
-    <updated>2025-02-27T20:02:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="LLM大模型">1 &nbsp&nbsp<a href="#LLM大模型" class="headerlink" title="LLM大模型"></a>LLM大模型</h1><h2 id="Ollama安装教程">1.1 &nbsp&nbsp<a href="#Ollama安装教程" class="headerlink" title="Ollama安装教程"></a>Ollama安装教程</h2><ol><li>下载<a href="https://ollama.com/download">Ollama安装包</a></li><li>安装路径<ul><li>默认路径：不使用参数，直接运行安装的话，路径为<code>C:\Users\xxx\AppData\Local\Programs\Ollama</code></li><li>自定义路径安装：<code>OllamaSetup.exe /DIR=&quot;D:\ollama&quot;</code></li></ul></li><li>修改模型路径<ol><li>新建系统环境变量：变量名：<code>OLLAMA_MODELS</code>，变量值：<code>D:\ollama\models</code></li><li>若默认模型路径<code>C:\Users\xxx\.ollama\models</code>已经拉取下载存在模型文件的话，在添加了系统环境变量之后，将<code>C:\Users\xxx\.ollama\models</code>路径下的<code>blobs</code>和<code>manifests</code>两个子文件夹剪切移动至<code>D:\ollama\models</code>下即可</li><li>重启ollama后台进程，运行<code>ollama list</code>验证模型迁移是否成功。</li></ol></li></ol><p>常见的ollama命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Usage:</span><br><span class="line">  ollama [flags]</span><br><span class="line">  ollama [command]</span><br><span class="line"></span><br><span class="line">Available Commands:</span><br><span class="line">  serve       Start ollama</span><br><span class="line">  create      Create a model from a Modelfile</span><br><span class="line">  show        Show information for a model</span><br><span class="line">  run         Run a model</span><br><span class="line">  stop        Stop a running model</span><br><span class="line">  pull        Pull a model from a registry</span><br><span class="line">  push        Push a model to a registry</span><br><span class="line">  list        List models</span><br><span class="line">  ps          List running models</span><br><span class="line">  cp          Copy a model</span><br><span class="line">  rm          Remove a model</span><br><span class="line">  help        Help about any command</span><br><span class="line"></span><br><span class="line">Flags:</span><br><span class="line">  -h, --help      help for ollama</span><br><span class="line">  -v, --version   Show version information</span><br><span class="line"></span><br><span class="line">Use &quot;ollama [command] --help&quot; for more information about a command.</span><br></pre></td></tr></table></figure><h1 id="Stable-Diffusion">2 &nbsp&nbsp<a href="#Stable-Diffusion" class="headerlink" title="Stable Diffusion"></a>Stable Diffusion</h1><h2 id="ComfyUI本地手动安装">2.1 &nbsp&nbsp<a href="#ComfyUI本地手动安装" class="headerlink" title="ComfyUI本地手动安装"></a>ComfyUI本地手动安装</h2><ol><li>克隆ComfyUI仓库：<code>git clone https://github.com/comfyanonymous/ComfyUI.git</code></li><li>安装PyTorch：<code>pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu126</code></li><li>安装依赖：<code>pip install -r requirements.txt</code></li><li>SD模型存放路径：<code>models/checkpoints</code></li><li>VAE模型存放路径：<code>models/vae</code></li><li>安装ComfyUI-Manager：在<code>ComfyUI/custom_nodes</code>路径下运行：<code>git clone https://github.com/ltdrdata/ComfyUI-Manager.git</code>，并刷新网页。</li><li>运行ComfyUI：<code>python main.py --front-end-version Comfy-Org/ComfyUI_frontend@latest</code></li></ol><h2 id="Stable-Diffusion-Webui局域网多人共享">2.2 &nbsp&nbsp<a href="#Stable-Diffusion-Webui局域网多人共享" class="headerlink" title="Stable Diffusion Webui局域网多人共享"></a>Stable Diffusion Webui局域网多人共享</h2><p>默认情况下，Stable Diffusion Webui实现的局域网共享，无法实现多人队列提交，并且SD模型和VAE模型是全局设置，一人改变会导致后台改变，而网页端显示的值并未变化更新。</p><p>队列提交&#x2F;多人共享使用的一些插件实现：</p><ul><li><a href="https://github.com/ArtVentureX/sd-webui-agent-scheduler">sd-webui-agent-scheduler</a></li><li><a href="https://github.com/wolverinn/stable-diffusion-multi-user">stable-diffusion-multi-user</a></li></ul><p>多人共享使用的一些问题讨论：</p><ul><li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/11531">multiple users use it at the same time</a></li></ul><h2 id="Stable-Diffusion-Webui多卡算力">2.3 &nbsp&nbsp<a href="#Stable-Diffusion-Webui多卡算力" class="headerlink" title="Stable Diffusion Webui多卡算力"></a>Stable Diffusion Webui多卡算力</h2><p>当前Webui并未支持多卡同时加速计算，通过共享实例进程实现多人使用（队列提交）均衡多卡负载倒是可以实现。</p><h1 id="Yolo目标检测框架">3 &nbsp&nbsp<a href="#Yolo目标检测框架" class="headerlink" title="Yolo目标检测框架"></a>Yolo目标检测框架</h1><h2 id="毛囊检测">3.1 &nbsp&nbsp<a href="#毛囊检测" class="headerlink" title="毛囊检测"></a>毛囊检测</h2><ul><li>数据集：<ul><li><a href="https://universe.roboflow.com/project-0iwdt/hair-tootr/dataset/3">hair Image Dataset</a></li><li><a href="https://drive.google.com/file/d/1rMw8OzgxuTOSqKD8EBPN_BYXW18q9d3H/view">FDU_HairFollicleDataset.zip</a></li></ul></li><li>论文资料<ul><li><a href="https://dl.acm.org/doi/abs/10.1007/978-3-031-44207-0_4">A New Dataset for Hair Follicle Recognition and Classification in Robot-Aided Hair Transplantation</a></li><li>上一篇论文镜像链接（附有数据集下载链接，已明写在上一小节）<a href="https://link.springer.com/chapter/10.1007/978-3-031-44207-0_4">A New Dataset for Hair Follicle Recognition and Classification in Robot-Aided Hair Transplantation</a></li></ul></li></ul><h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Accelerate doesn&#39;t use multi GPU with automatic1111[EB&#x2F;OL]. <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/13942">https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/13942</a>.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;LLM大模型&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#LLM大模型&quot; class=&quot;headerlink&quot; title=&quot;LLM大模型&quot;&gt;&lt;/a&gt;LLM大模型&lt;/h1&gt;&lt;h2 id=&quot;Ollama安装教程&quot;&gt;1.1 &amp;nbsp&amp;nbsp&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="software" scheme="https://mister-kin.github.io/categories/software/"/>
-    
-    
-    <category term="总结" scheme="https://mister-kin.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="SD" scheme="https://mister-kin.github.io/tags/SD/"/>
-    
-    <category term="stable diffusion" scheme="https://mister-kin.github.io/tags/stable-diffusion/"/>
-    
-    <category term="stable diffusion webui" scheme="https://mister-kin.github.io/tags/stable-diffusion-webui/"/>
-    
-    <category term="AIGC" scheme="https://mister-kin.github.io/tags/AIGC/"/>
-    
-    <category term="AI" scheme="https://mister-kin.github.io/tags/AI/"/>
-    
-    <category term="yolo" scheme="https://mister-kin.github.io/tags/yolo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发总结</title>
-    <link href="https://mister-kin.github.io/code/code/"/>
-    <id>https://mister-kin.github.io/code/code/</id>
-    <published>2025-01-19T18:32:31.000Z</published>
-    <updated>2025-10-17T22:47:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="关于开源协议">1 &nbsp&nbsp<a href="#关于开源协议" class="headerlink" title="关于开源协议"></a>关于开源协议</h1><p>如果想要基于已有开源协议上附加个别自定协议，可以参考如下内容：</p><p>基于Mozilla Public License Version 2.0并附加以下条款：</p><ul><li>非商业性使用 — 不得将此项目及其衍生的项目的源代码和二进制产品用于任何商业和盈利用途</li></ul><h1 id="语言编码的区别">2 &nbsp&nbsp<a href="#语言编码的区别" class="headerlink" title="语言编码的区别"></a>语言编码的区别</h1><p>语言码对照表参考资料：<a href="https://simplelocalize.io/data/locales/">List of locale codes</a></p><ul><li>zh-CN：中国大陆区域的中文。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。</li><li>zh-Hans：简体中文。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。</li></ul><h1 id="关于项目开发的语言技术栈选择">3 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul><li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li></ul><h1 id="开发记录">4 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">4.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p><p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p><h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;关于开源协议&quot;&gt;1 &amp;nbsp&amp;nbsp&lt;a href=&quot;#关于开源协议&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="https://mister-kin.github.io/categories/code/"/>
-    
     
   </entry>
   
