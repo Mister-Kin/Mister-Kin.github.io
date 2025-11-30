@@ -117,6 +117,129 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start">0.1 &nbsp&nbsp<a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post">0.1.1 &nbsp&nbsp<a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server">0.1.2 &nbsp&nbsp<a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files">0.1.3 &nbsp&nbsp<a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">0.1.4 &nbsp&nbsp<a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>站点导航和公告</title>
+    <url>/navigation-announcement/</url>
+    <content><![CDATA[<center>
+<div style="margin-top: -35px; margin-bottom: 25px">
+
+<div class="dropdown-menu">
+    <button class="dropdown-menu-btn">软件作品</button>
+    <div class="dropdown-menu-content">
+        <a href="/works/software-works/toggle-language/">切换语言</a>
+        <a href="/works/software-works/batch-tools/">批处理工具</a>
+    </div>
+</div>
+<div class="dropdown-menu">
+    <button class="dropdown-menu-btn">艺术作品</button>
+    <div class="dropdown-menu-content">
+    </div>
+</div>
+<div class="dropdown-menu">
+    <button class="dropdown-menu-btn">关于我</button>
+    <div class="dropdown-menu-content">
+        <a href="/about">关于我</a>
+        <a href="/about/#联系方式">联系我</a>
+        <a href="/about/#关注我">关注我</a>
+        <a href="/about/#免费支持我">支持我</a>
+    </div>
+</div>
+<div class="dropdown-menu">
+    <button class="dropdown-menu-btn">关于本站</button>
+    <div class="dropdown-menu-content">
+        <a href="/about/about-site">关于本站</a>
+        <a href="/about/about-site/#本站许可协议">许可说明</a>
+        <a href="/about/logs">更新日志</a>
+        <a href="/about/third-party-declaration/">第三方声明</a>
+        <a href="/about/post-offline-download/">离线下载</a>
+    </div>
+</div>
+
+</div>
+<div class="note info no-icon"><p><strong>置顶公告1：若需交流，请通过邮箱或QQ联系我，其他方式我基本不看！！！具体联系方式请点击并详看<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">「联系我」</a>。</strong></p>
+</div>
+
+<div class="note info no-icon"><p><strong>置顶公告2：本站一些重要的博文会有对应的PDF及LaTeX源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
+</div>
+
+<div class="note danger no-icon"><p><strong>当前公告：随缘更新</strong></p>
+</div>
+
+</center>
+
+<style type="text/css">
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu-btn {
+    background: var(--btn-default-bg);
+    border: 5px solid var(--btn-default-border-color);
+    border-radius: 5px;
+    color: var(--btn-default-color);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 2;
+    padding: 0 12px;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    margin-right: -5px;
+}
+.dropdown-menu:hover .dropdown-menu-btn {
+    background: var(--btn-default-hover-bg);
+    border-color: var(--btn-default-hover-border-color);
+    color: var(--btn-default-hover-color);
+    cursor: pointer;
+}
+.dropdown-menu-content {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    border: 3px solid var(--btn-default-border-color);
+    border-radius: 3px;
+    width: 100%;
+}
+.dropdown-menu:hover .dropdown-menu-content {
+    display: block;
+    border-color: var(--btn-default-hover-border-color);
+}
+.dropdown-menu-content a {
+    display: block;
+    font-size: 22px;
+    color: var(--btn-default-color);
+    background-color: var(--btn-default-bg);
+    padding:  5px 5px;
+}
+.dropdown-menu-content a:hover {
+    color: var(--btn-default-hover-color);
+    background: var(--btn-default-hover-bg);
+    cursor: pointer;
+}
+</style>
+]]></content>
+  </entry>
+  <entry>
     <title>网站收藏夹</title>
     <url>/bookmark/</url>
     <content><![CDATA[<h1 id="软件查找"><a href="#软件查找" class="headerlink" title="软件查找"></a>软件查找</h1><div class="text-box-container">
@@ -911,15 +1034,39 @@
     <a href="https://www.yuque.com/ccllcc/share/psbeta">Photoshop Beta 版使用指南</a>
 </div>
 
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">iPad绘画</p>
+    </div>
+    <a href="https://apps.apple.com/cn/app/procreate/id425073498">Procreate</a>
+    <a href="https://apps.apple.com/cn/app/lazyshare-%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%88%9B%E4%BD%9C-%E6%9B%B4lazy/id1542746926">LazyShare</a>
+    <a href="https://apps.apple.com/cn/app/head-model-studio-%E8%89%BA%E6%9C%AF%E7%A0%94%E7%A9%B6/id1527028690">Head Model Studio</a>
+    <a href="https://apps.apple.com/cn/app/poseit/id1567797324">Poseit</a>
 </div>
 
-<h1 id="CG设计软件素材"><a href="#CG设计软件素材" class="headerlink" title="CG设计软件素材"></a>CG设计软件素材</h1><div class="text-box-container">
+</div>
+
+<h1 id="CG设计软件素材-参考资料"><a href="#CG设计软件素材-参考资料" class="headerlink" title="CG设计软件素材&#x2F;参考资料"></a>CG设计软件素材&#x2F;参考资料</h1><div class="text-box-container">
 
 <div class="text-box">
     <div class="tag-align">
     <p class="tag-bookmark-page">参考蓝图</p>
     </div>
     <a href="https://drawingdatabase.com/">Blueprints for 3D modeling</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">人体姿势参考</p>
+    </div>
+    <a href="https://webapp.magicposer.com/">Magic Poser</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">颜色|色彩|色卡</p>
+    </div>
+    <a href="https://www.wxsecai.com/index.html">色采(色卡)</a>
 </div>
 
 <div class="text-box">
@@ -1675,7 +1822,7 @@
 
 </div>
 
-<h1 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h1><div class="text-box-container">
+<h1 id="AI大模型"><a href="#AI大模型" class="headerlink" title="AI大模型"></a>AI大模型</h1><div class="text-box-container">
 
 <div class="text-box">
     <div class="tag-align">
@@ -1693,6 +1840,13 @@
     <a href="https://www.comfyuidoc.com/zh/">ComfyUI用户手册</a>
     <a href="https://www.stablediffusion-cn.com/">Stable Diffusion中文网</a>
     <a href="https://docs.stablediffusion.cn/article/3.html">Stable Diffusion WebUI从入门到卸载</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">Stable Diffusion插件扩展</p>
+    </div>
+    <a href="https://github.com/vivoCameraResearch/SDMatte">SDMatte(基于SD模型的抠图技术)</a>
 </div>
 
 <div class="text-box">
@@ -1847,129 +2001,6 @@
         <tag>导航</tag>
         <tag>推荐</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start">0.1 &nbsp&nbsp<a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post">0.1.1 &nbsp&nbsp<a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server">0.1.2 &nbsp&nbsp<a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files">0.1.3 &nbsp&nbsp<a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">0.1.4 &nbsp&nbsp<a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>站点导航和公告</title>
-    <url>/navigation-announcement/</url>
-    <content><![CDATA[<center>
-<div style="margin-top: -35px; margin-bottom: 25px">
-
-<div class="dropdown-menu">
-    <button class="dropdown-menu-btn">软件作品</button>
-    <div class="dropdown-menu-content">
-        <a href="/works/software-works/toggle-language/">切换语言</a>
-        <a href="/works/software-works/batch-tools/">批处理工具</a>
-    </div>
-</div>
-<div class="dropdown-menu">
-    <button class="dropdown-menu-btn">艺术作品</button>
-    <div class="dropdown-menu-content">
-    </div>
-</div>
-<div class="dropdown-menu">
-    <button class="dropdown-menu-btn">关于我</button>
-    <div class="dropdown-menu-content">
-        <a href="/about">关于我</a>
-        <a href="/about/#联系方式">联系我</a>
-        <a href="/about/#关注我">关注我</a>
-        <a href="/about/#免费支持我">支持我</a>
-    </div>
-</div>
-<div class="dropdown-menu">
-    <button class="dropdown-menu-btn">关于本站</button>
-    <div class="dropdown-menu-content">
-        <a href="/about/about-site">关于本站</a>
-        <a href="/about/about-site/#本站许可协议">许可说明</a>
-        <a href="/about/logs">更新日志</a>
-        <a href="/about/third-party-declaration/">第三方声明</a>
-        <a href="/about/post-offline-download/">离线下载</a>
-    </div>
-</div>
-
-</div>
-<div class="note info no-icon"><p><strong>置顶公告1：若需交流，请通过邮箱或QQ联系我，其他方式我基本不看！！！具体联系方式请点击并详看<a href="/about#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">「联系我」</a>。</strong></p>
-</div>
-
-<div class="note info no-icon"><p><strong>置顶公告2：本站一些重要的博文会有对应的PDF及LaTeX源码，可以下载用以离线查看，具体详看「<a href="/about/post-offline-download/">博文离线下载</a>」。</strong></p>
-</div>
-
-<div class="note danger no-icon"><p><strong>当前公告：随缘更新</strong></p>
-</div>
-
-</center>
-
-<style type="text/css">
-.dropdown-menu {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-menu-btn {
-    background: var(--btn-default-bg);
-    border: 5px solid var(--btn-default-border-color);
-    border-radius: 5px;
-    color: var(--btn-default-color);
-    display: inline-block;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 2;
-    padding: 0 12px;
-    text-decoration: none;
-    transition-property: background-color;
-    transition-delay: 0s;
-    transition-duration: .2s;
-    transition-timing-function: ease-in-out;
-    margin-right: -5px;
-}
-.dropdown-menu:hover .dropdown-menu-btn {
-    background: var(--btn-default-hover-bg);
-    border-color: var(--btn-default-hover-border-color);
-    color: var(--btn-default-hover-color);
-    cursor: pointer;
-}
-.dropdown-menu-content {
-    display: none;
-    position: absolute;
-    z-index: 9999;
-    border: 3px solid var(--btn-default-border-color);
-    border-radius: 3px;
-    width: 100%;
-}
-.dropdown-menu:hover .dropdown-menu-content {
-    display: block;
-    border-color: var(--btn-default-hover-border-color);
-}
-.dropdown-menu-content a {
-    display: block;
-    font-size: 22px;
-    color: var(--btn-default-color);
-    background-color: var(--btn-default-bg);
-    padding:  5px 5px;
-}
-.dropdown-menu-content a:hover {
-    color: var(--btn-default-hover-color);
-    background: var(--btn-default-hover-bg);
-    cursor: pointer;
-}
-</style>
-]]></content>
   </entry>
   <entry>
     <title>致首次使用RIME的你 -- 小狼毫输入法详细配置</title>
@@ -3494,7 +3525,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#64;&#49;&#55;&#50;&#46;&#49;&#57;&#46;&#48;&#46;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x37;&#x32;&#x2e;&#x31;&#x39;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -3661,56 +3692,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>github</tag>
         <tag>代码管理</tag>
         <tag>版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX语法总结笔记</title>
-    <url>/code/latex/</url>
-    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
-<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
-</ul>
-<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
-<li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
-</ul>
-</li>
-<li>取消勾选<code>安装 Texworks 前端</code></li>
-</ul>
-</li>
-<li>其他选项保持默认，然后点击开始安装。</li>
-<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
-</ul>
-</li>
-<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
-</ol>
-<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
-<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
-<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
-<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
-<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>语法</tag>
-        <tag>笔记</tag>
-        <tag>LaTeX</tag>
-        <tag>TeX</tag>
-        <tag>编译</tag>
-        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -3921,6 +3902,56 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>hexo</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法总结笔记</title>
+    <url>/code/latex/</url>
+    <content><![CDATA[<h1 id="Latex环境的安装与配置">1 &nbsp&nbsp<a href="#Latex环境的安装与配置" class="headerlink" title="Latex环境的安装与配置"></a>Latex环境的安装与配置</h1><h2 id="Texlive发行版的下载">1.1 &nbsp&nbsp<a href="#Texlive发行版的下载" class="headerlink" title="Texlive发行版的下载"></a>Texlive发行版的下载</h2><ul>
+<li><a href="https://tug.org/texlive/">官网导航下载地址</a>，点击<code>an ISO image or via torrent</code>-&gt;<code>download from a nearby CTAN mirror</code>-&gt;下载最新的iso文件。</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像下载地址</a>，点击<code>获取下载链接</code>-&gt;<code>应用软件</code>-&gt;<code>TeX 排版系统</code>-&gt;<code>TeX Live 2024 (Windows &amp; Linux)</code>。</li>
+</ul>
+<h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
+<li>加载镜像，双击执行install-tl-windows.bat</li>
+<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
+<li>点击<code>Advanced</code><ul>
+<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>Chinese</li>
+<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
+<li>US and UK English</li>
+</ul>
+</li>
+<li>取消勾选<code>安装 Texworks 前端</code></li>
+</ul>
+</li>
+<li>其他选项保持默认，然后点击开始安装。</li>
+<li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+</ul>
+</li>
+<li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
+</ol>
+<h2 id="VS-Code的相应配置">1.3 &nbsp&nbsp<a href="#VS-Code的相应配置" class="headerlink" title="VS Code的相应配置"></a>VS Code的相应配置</h2><p>关于在VSC中建立latex的snippets 用户代码片段时，若需要输出 \ 换行命令，需要在 json 里输入六个 \\\ 才能真正输出\的，个人想法是VSC传递机制非标准化，不符合 标准的转义字符输出。</p>
+<h1 id="文档元素">2 &nbsp&nbsp<a href="#文档元素" class="headerlink" title="文档元素"></a>文档元素</h1><h2 id="图片">2.1 &nbsp&nbsp<a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="自适应缩放大小">2.1.1 &nbsp&nbsp<a href="#自适应缩放大小" class="headerlink" title="自适应缩放大小"></a>自适应缩放大小</h3><p>使用width参数缩放到0.5倍的文本宽度，scale参数就是图片相对于原尺寸缩放，比较难以控制。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 此处用textwidth文本宽度，或者也可以用linewidth线宽</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h!]</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\linewidth</span>]&#123;figure&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;锚点文字&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;图片注解&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在minipage环境中，可以直接使用整倍线宽，就是minipage的宽度</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.48<span class="keyword">\linewidth</span>&#125;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=<span class="keyword">\linewidth</span>]&#123;developer<span class="built_in">_</span>hint&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;UI提示方案菜单：开发者模式&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;开发者提示方案&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="宏包">3 &nbsp&nbsp<a href="#宏包" class="headerlink" title="宏包"></a>宏包</h1><h2 id="moderncv">3.1 &nbsp&nbsp<a href="#moderncv" class="headerlink" title="moderncv"></a>moderncv</h2><p>moderncv的宏包是分文件编写的，具体语法参照texmf-dist\tex\latex\moderncv中的各个模块。</p>
+<h1 id="常见问题">4 &nbsp&nbsp<a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="reference-bib中参考文献中的title中写法">4.1 &nbsp&nbsp<a href="#reference-bib中参考文献中的title中写法" class="headerlink" title="reference.bib中参考文献中的title中写法"></a>reference.bib中参考文献中的title中写法</h2><p>和LaTeX语法一样，如果有特殊符号，一样要使用反斜杠标注，例如_要写成_，不然编译会导致所有参考文献没有输出。</p>
+<h2 id="大型LaTeX文档中的input命令">4.2 &nbsp&nbsp<a href="#大型LaTeX文档中的input命令" class="headerlink" title="大型LaTeX文档中的input命令"></a>大型LaTeX文档中的input命令</h2><p>编写大型的LaTeX文档，在子文件中的input命令的路径应输入完整，即从项目顶层路径。input命令仅仅是插入该文档，不会做其他工作。</p>
+<p>例如项目文件夹为<code>main</code>，下设<code>sub/subsub/</code>两层文件夹，sub中的tex文件要想插入subsub中的tex文件，应为<code>\input&#123;sub/subsub/xxx.tex&#125;</code>，而非<code>\input&#123;subsub/xxx.tex&#125;</code>。原因就是input仅仅是做插入，当main中的tex文件插入sub中xxx.tex，如果仅仅输入<code>\input&#123;subsub/xxx.tex&#125;</code>，编译时main根本就找不到文件，路径缺失了sub。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 【latex】LaTeX调整图片大小的方法；自动调整合适的大小[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_39589455/article/details/128533896">https://blog.csdn.net/weixin_39589455/article/details/128533896</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>语法</tag>
+        <tag>笔记</tag>
+        <tag>LaTeX</tag>
+        <tag>TeX</tag>
+        <tag>编译</tag>
+        <tag>排版</tag>
       </tags>
   </entry>
   <entry>
@@ -4511,29 +4542,34 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <thead>
 <tr>
 <th align="center">资源名称</th>
-<th align="center">官方源下载地址</th>
+<th align="center">中科大镜像源下载地址</th>
 <th align="center">清华镜像源下载地址</th>
+<th align="center">官方源下载地址</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">Qt资源总站</td>
-<td align="center"><a href="https://download.qt.io/">点击跳转</a></td>
+<td align="center"><a href="https://mirrors.ustc.edu.cn/qtproject/">点击跳转</a></td>
 <td align="center"><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/">点击跳转</a></td>
+<td align="center"><a href="https://download.qt.io/">点击跳转</a></td>
 </tr>
 <tr>
 <td align="center">Qt源代码</td>
-<td align="center"><a href="https://download.qt.io/official_releases/qt/">点击跳转</a></td>
+<td align="center"><a href="https://mirrors.ustc.edu.cn/qtproject/official_releases/qt/">点击跳转</a></td>
 <td align="center"><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qt/">点击跳转</a></td>
+<td align="center"><a href="https://download.qt.io/official_releases/qt/">点击跳转</a></td>
 </tr>
 <tr>
 <td align="center">Qt Creator</td>
-<td align="center"><a href="https://download.qt.io/official_releases/qtcreator/">点击跳转</a></td>
+<td align="center"><a href="https://mirrors.ustc.edu.cn/qtproject/official_releases/qtcreator/">点击跳转</a></td>
 <td align="center"><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qtcreator/">点击跳转</a></td>
+<td align="center"><a href="https://download.qt.io/official_releases/qtcreator/">点击跳转</a></td>
 </tr>
 <tr>
 <td align="center">Qt Linguist</td>
-<td align="center"><a href="https://download.qt.io/linguist_releases/">点击跳转</a></td>
+<td align="center"><a href="https://mirrors.ustc.edu.cn/qtproject/linguist_releases/">点击跳转</a></td>
 <td align="center"><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/linguist_releases/">点击跳转</a></td>
+<td align="center"><a href="https://download.qt.io/linguist_releases/">点击跳转</a></td>
 </tr>
 </tbody></table>
 <h1 id="Qt-Creator的总结">5 &nbsp&nbsp<a href="#Qt-Creator的总结" class="headerlink" title="Qt Creator的总结"></a>Qt Creator的总结</h1><h2 id="安装Qt-Creator提示要求联网登录帐号">5.1 &nbsp&nbsp<a href="#安装Qt-Creator提示要求联网登录帐号" class="headerlink" title="安装Qt Creator提示要求联网登录帐号"></a>安装Qt Creator提示要求联网登录帐号</h2><p>断网再打开Qt Creator的安装包，等跳过检测联网帐号的界面后就可以启用网络继续安装。</p>
@@ -4624,167 +4660,173 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h2 id="Qt各模块的介绍及其依赖项：">7.5 &nbsp&nbsp<a href="#Qt各模块的介绍及其依赖项：" class="headerlink" title="Qt各模块的介绍及其依赖项："></a>Qt各模块的介绍及其依赖项：</h2><table>
 <thead>
 <tr>
-<th>Module</th>
-<th>Required submodules</th>
-<th>Development packages required</th>
-<th>Description</th>
+<th align="left">Module</th>
+<th align="left">Required submodules</th>
+<th align="left">Development packages required</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>qtbase</td>
-<td></td>
-<td></td>
-<td>Qt core, start with this.</td>
+<td align="left">qtbase</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Qt core, start with this.</td>
 </tr>
 <tr>
-<td>qtimageformats</td>
-<td></td>
-<td>libmng-dev</td>
-<td>Support for loading various extra image formats <br> <br> TIFF, MNG, WebP</td>
+<td align="left">qtimageformats</td>
+<td align="left"></td>
+<td align="left">libmng-dev</td>
+<td align="left">Support for loading various extra image formats <br> <br> TIFF, MNG, WebP</td>
 </tr>
 <tr>
-<td>qtsvg</td>
-<td></td>
-<td></td>
-<td>Support for SVG vector graphics</td>
+<td align="left">qtsvg</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Support for SVG vector graphics</td>
 </tr>
 <tr>
-<td>qtshadertools</td>
-<td></td>
-<td></td>
-<td>Tools for the cross-platform Qt shader pipeline</td>
+<td align="left">qtshadertools</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Tools for the cross-platform Qt shader pipeline</td>
 </tr>
 <tr>
-<td>qttools</td>
-<td>qtdeclarative</td>
-<td>QDoc requires clang to be installed (See section about documentation above): <br> <br> clang-11 libclang-11-dev libclang-common-11-dev</td>
-<td>Various Qt tools: <br> <strong>QtAssistant</strong> <br> Qt Designer <br> Qt Linguist <br> <strong>QDoc</strong> <br> etc</td>
+<td align="left">qttools</td>
+<td align="left">qtdeclarative</td>
+<td align="left">QDoc requires clang to be installed (See section about documentation above): <br> <br> clang-11 libclang-11-dev libclang-common-11-dev</td>
+<td align="left">Various Qt tools: <br> <strong>QtAssistant</strong> <br> Qt Designer <br> Qt Linguist <br> <strong>QDoc</strong> <br> etc</td>
 </tr>
 <tr>
-<td>qtserialbus</td>
-<td></td>
-<td></td>
-<td>Serial bus (CAN bus, ModBus) support</td>
+<td align="left">qtserialbus</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Serial bus (CAN bus, ModBus) support</td>
 </tr>
 <tr>
-<td>qtserialport</td>
-<td>qtserialbus</td>
-<td></td>
-<td>Serial port support</td>
+<td align="left">qtserialport</td>
+<td align="left">qtserialbus</td>
+<td align="left"></td>
+<td align="left">Serial port support</td>
 </tr>
 <tr>
-<td>qtlocation</td>
-<td>qtserialport</td>
-<td></td>
-<td>Positioning (GPS) and location (Map) services</td>
+<td align="left">qtlocation</td>
+<td align="left">qtserialport</td>
+<td align="left"></td>
+<td align="left">Positioning (GPS) and location (Map) services</td>
 </tr>
 <tr>
-<td>qtdeclarative</td>
-<td>qtshadertools</td>
-<td></td>
-<td>Qt Quick &#x2F; QML</td>
+<td align="left">qtdeclarative</td>
+<td align="left">qtshadertools</td>
+<td align="left"></td>
+<td align="left">Qt Quick &#x2F; QML</td>
 </tr>
 <tr>
-<td>qtmultimedia</td>
-<td>qtdeclarative</td>
-<td>For ffmpeg backend (prefered backend since 6.5): <br> ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libswresample-dev libswscale-dev <br> <br>  For gstreamer backend: <br> libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa <br> <br> For pulseaudio support: <br> pulseaudio libpulse-dev <br> <br> For plain ALSA: <br> libasound2-dev</td>
-<td>Multimedia (audio&#x2F;video) support <br> Audio play, record <br> Video play <br> Video input, capture</td>
+<td align="left">qtmultimedia</td>
+<td align="left">qtdeclarative</td>
+<td align="left">For ffmpeg backend (prefered backend since 6.5): <br> ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libswresample-dev libswscale-dev <br> <br> Note: ffmpeg backend requires pulseaudio <br> <br> For gstreamer backend: <br> libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-alsa <br> <br> For pulseaudio support: <br> pulseaudio libpulse-dev <br> <br> For plain ALSA: <br> libasound2-dev</td>
+<td align="left">Multimedia (audio&#x2F;video) support <br> Audio play, record <br> Video play <br> Video input, capture</td>
 </tr>
 <tr>
-<td>qt3d</td>
-<td></td>
-<td></td>
-<td></td>
+<td align="left">qt3d</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Qt 3D provides functionality for near-realtime simulation systems with support for 2D and 3D rendering in both Qt C++ and Qt Quick applications.</td>
 </tr>
 <tr>
-<td>qtquick3d</td>
-<td></td>
-<td></td>
-<td>A high-level API for creating 3D content and 3D user interfaces based on Qt Quick</td>
+<td align="left">qtquick3d</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">A high-level API for creating 3D content and 3D user interfaces based on Qt Quick</td>
 </tr>
 <tr>
-<td>qtquick3dphysics</td>
-<td></td>
-<td></td>
-<td>A physics engine for use with Qt Quick 3D</td>
+<td align="left">qtquick3dphysics</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">A physics engine for use with Qt Quick 3D</td>
 </tr>
 <tr>
-<td>qtdatavis3d</td>
-<td></td>
-<td></td>
-<td></td>
+<td align="left">qtdatavis3d</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td>qtsensors</td>
-<td>qtmultimedia</td>
-<td></td>
-<td>Support for various device sensors</td>
+<td align="left">qtsensors</td>
+<td align="left">qtmultimedia</td>
+<td align="left"></td>
+<td align="left">Support for various device sensors</td>
 </tr>
 <tr>
-<td>qtnetworkauth</td>
-<td></td>
-<td></td>
-<td>Network authentication protocol support (OAuth)</td>
+<td align="left">qtnetworkauth</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Network authentication protocol support (OAuth)</td>
 </tr>
 <tr>
-<td>qtconnectivity</td>
-<td></td>
-<td>bluez libbluetooth-dev</td>
-<td>Bluetooth and NFC connectivity support</td>
+<td align="left">qtconnectivity</td>
+<td align="left"></td>
+<td align="left">bluez libbluetooth-dev</td>
+<td align="left">Bluetooth and NFC connectivity support</td>
 </tr>
 <tr>
-<td>qtwebsockets</td>
-<td>qtdeclarative</td>
-<td></td>
-<td>Websockets support</td>
+<td align="left">qtwebsockets</td>
+<td align="left">qtdeclarative</td>
+<td align="left"></td>
+<td align="left">Websockets support</td>
 </tr>
 <tr>
-<td>qtcharts</td>
-<td>qtdeclarative</td>
-<td></td>
-<td>Charting controls</td>
+<td align="left">qtwebchannel</td>
+<td align="left">qtwebsockets</td>
+<td align="left"></td>
+<td align="left">Enabled peer-to-peer communication between a server (QML&#x2F;C++ application) and a client (HTML&#x2F;JavaScript or QML application)</td>
 </tr>
 <tr>
-<td>qtwayland</td>
-<td></td>
-<td>libwayland-dev</td>
-<td>Wayland support</td>
+<td align="left">qtcharts</td>
+<td align="left">qtdeclarative</td>
+<td align="left"></td>
+<td align="left">Charting controls</td>
 </tr>
 <tr>
-<td>qtvirtualkeyboard</td>
-<td>qtsvg</td>
-<td></td>
-<td>Provides on-screen keyboard</td>
+<td align="left">qtwayland</td>
+<td align="left"></td>
+<td align="left">libwayland-dev</td>
+<td align="left">Wayland support</td>
 </tr>
 <tr>
-<td>qtwebengine</td>
-<td>qtdeclarative</td>
-<td>flex bison gperf libre2-dev libnss3-dev nodejs libdrm-dev libxdamage-dev libsnappy-dev</td>
-<td>WebEngine.</td>
+<td align="left">qtvirtualkeyboard</td>
+<td align="left">qtsvg</td>
+<td align="left"></td>
+<td align="left">Provides input framework and reference implementation for  virtual on-screen keyboard.</td>
 </tr>
 <tr>
-<td>qtgrpc</td>
-<td></td>
-<td></td>
-<td>Support for gRPC</td>
+<td align="left">qtwebengine</td>
+<td align="left">qtdeclarative</td>
+<td align="left">flex bison gperf libre2-dev libnss3-dev nodejs libdrm-dev libxdamage-dev libsnappy-dev</td>
+<td align="left">WebEngine.</td>
 </tr>
 <tr>
-<td>qthttpserver</td>
-<td></td>
-<td></td>
-<td>Qt HTTP Server</td>
+<td align="left">qtgrpc</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Support for gRPC</td>
 </tr>
 <tr>
-<td>qtspeech</td>
-<td></td>
-<td></td>
-<td>Text To Speech with Flite</td>
+<td align="left">qthttpserver</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Qt HTTP Server</td>
 </tr>
 <tr>
-<td>qt5compat</td>
-<td></td>
-<td></td>
-<td>Unsupported Qt 5 compatibility code.</td>
+<td align="left">qtspeech</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Text To Speech with Flite</td>
+</tr>
+<tr>
+<td align="left">qt5compat</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Unsupported Qt 5 compatibility code.</td>
 </tr>
 </tbody></table>
 <h1 id="Qt的许可协议和费用问题">8 &nbsp&nbsp<a href="#Qt的许可协议和费用问题" class="headerlink" title="Qt的许可协议和费用问题"></a>Qt的许可协议和费用问题</h1><p>使用LGPL协议开发闭源程序，若使用动态链接的形式，可以以任何形式发布应用程序，只需声明使用Qt开发即可。</p>
@@ -4948,6 +4990,34 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>Programming Ability Test (PAT)</title>
+    <url>/code-training/pat/</url>
+    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
+<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
+<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
+<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
+<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
+<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>编程</tag>
+        <tag>PAT</tag>
+        <tag>PTA</tag>
+        <tag>练习</tag>
+        <tag>题库</tag>
+        <tag>题目</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英文词典常用缩写</title>
     <url>/english/abbr/</url>
     <content><![CDATA[<ul>
@@ -4995,34 +5065,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>英文</tag>
         <tag>词典</tag>
         <tag>缩写</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Programming Ability Test (PAT)</title>
-    <url>/code-training/pat/</url>
-    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
-<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
-<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
-<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
-<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
-<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>编程</tag>
-        <tag>PAT</tag>
-        <tag>PTA</tag>
-        <tag>练习</tag>
-        <tag>题库</tag>
-        <tag>题目</tag>
-        <tag>算法</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -5101,6 +5143,44 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>编程</tag>
         <tag>英文</tag>
         <tag>术语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英文词汇日常总结</title>
+    <url>/english/daily/</url>
+    <content><![CDATA[<ul>
+<li>anode &#x2F;ˈænəʊd&#x2F;　n.阳极，（电解池）正极</li>
+<li>cathode &#x2F;ˈkæθəʊd&#x2F;　n.阴极，（电解池）负极<ul>
+<li>同kathode</li>
+</ul>
+</li>
+<li>recursive adj.递归的，循环</li>
+<li>melancholy &#x2F;ˈmelənkəli&#x2F;　n.忧郁，伤悲 adj.（令人）悲哀的，沮丧的</li>
+<li>melody n.旋律；曲调；（尤指）主旋律</li>
+<li>remark n.注意 v.察觉</li>
+<li>introspection n.内省；反省</li>
+<li>one..., the other...（总数量两个）<ul>
+<li>one..., another...（总数量两个以上，another在此处自身代指的事物就表明超过一个）</li>
+</ul>
+</li>
+<li>sugar buns infml.(主要美国和加拿大) 感情用语，同sweatheart</li>
+<li>get it 明白了一些之前不明白的事情</li>
+<li>got it 明白了某件事情的表达（事情的传达）</li>
+<li>get wasted 喝醉了，烂醉如泥的<ul>
+<li>形容微醺：tipsy buzzed</li>
+<li>形容大醉：hammered blasted get plastered shit-faced（语气较重，看场合用）</li>
+</ul>
+</li>
+<li>make yourself useful 让对方别闲着，干点事情</li>
+</ul>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>英文</tag>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -5208,44 +5288,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>英文</tag>
         <tag>术语</tag>
         <tag>电力</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英文词汇日常总结</title>
-    <url>/english/daily/</url>
-    <content><![CDATA[<ul>
-<li>anode &#x2F;ˈænəʊd&#x2F;　n.阳极，（电解池）正极</li>
-<li>cathode &#x2F;ˈkæθəʊd&#x2F;　n.阴极，（电解池）负极<ul>
-<li>同kathode</li>
-</ul>
-</li>
-<li>recursive adj.递归的，循环</li>
-<li>melancholy &#x2F;ˈmelənkəli&#x2F;　n.忧郁，伤悲 adj.（令人）悲哀的，沮丧的</li>
-<li>melody n.旋律；曲调；（尤指）主旋律</li>
-<li>remark n.注意 v.察觉</li>
-<li>introspection n.内省；反省</li>
-<li>one..., the other...（总数量两个）<ul>
-<li>one..., another...（总数量两个以上，another在此处自身代指的事物就表明超过一个）</li>
-</ul>
-</li>
-<li>sugar buns infml.(主要美国和加拿大) 感情用语，同sweatheart</li>
-<li>get it 明白了一些之前不明白的事情</li>
-<li>got it 明白了某件事情的表达（事情的传达）</li>
-<li>get wasted 喝醉了，烂醉如泥的<ul>
-<li>形容微醺：tipsy buzzed</li>
-<li>形容大醉：hammered blasted get plastered shit-faced（语气较重，看场合用）</li>
-</ul>
-</li>
-<li>make yourself useful 让对方别闲着，干点事情</li>
-</ul>
-]]></content>
-      <categories>
-        <category>english</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>英文</tag>
-        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -5754,6 +5796,186 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Krita总结</title>
+    <url>/software/krita/</url>
+    <content><![CDATA[<h1 id="软件基础">1 &nbsp&nbsp<a href="#软件基础" class="headerlink" title="软件基础"></a>软件基础</h1><p>多功能拾色器：三角形外环是色相环，点击&#x2F;拖动可选择三角形内部颜色，三角形显示内容随着对色相环的操作而变化。</p>
+<h2 id="文件格式">1.1 &nbsp&nbsp<a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h2><ul>
+<li>kra：krita文档，专用格式文件</li>
+<li>jpg：有损压缩格式，导出时保持默认80%即可，平衡了画质和文件大小。</li>
+<li>png：无损压缩格式，选择较小文件体积。</li>
+</ul>
+<h2 id="PPI和DPI">1.2 &nbsp&nbsp<a href="#PPI和DPI" class="headerlink" title="PPI和DPI"></a>PPI和DPI</h2><ul>
+<li>PPI：ixels Per Inch，即每英寸像素数，也可以理解成像素&#x2F;英寸（pixels&#x2F;inch）</li>
+<li>DPI：Dots Per Inch，即每英寸点数，也可以理解成点&#x2F;英寸（dots&#x2F;inch）<br>一般打印时，可认为图片ppi&#x3D;dpi。</li>
+</ul>
+<h2 id="快捷键">1.3 &nbsp&nbsp<a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>手绘笔刷工具：B（橡皮擦也归类为笔刷）。按住V可以临时切换到直线工具拉直线。</li>
+<li>调整笔刷大小：Shift+左右拖动</li>
+<li>笔刷橡皮擦模式：E。把当前笔刷切换到橡皮擦模式，然后用来擦除。但不是橡皮擦，Krita中橡皮檫是笔刷。</li>
+<li>切换到上一个使用的笔刷：&#x2F;。反复切换可在上一个和当前笔刷中切换。</li>
+<li>调暗笔刷颜色：K</li>
+<li>调亮笔刷颜色：L</li>
+<li>降低不透明度：I</li>
+<li>提高不透明度：O</li>
+<li>临时吸色到前景色：Ctrl+左键</li>
+<li>裁剪工具：C（也可以用于扩大&#x2F;缩小画布，确保勾选应用到图像，而不是图层）</li>
+<li>撤销：Ctrl+Z</li>
+<li>重做：Ctrl+Shift+Z</li>
+<li>旋转画布：Shift+鼠标中键+移动（数字键：左旋4右旋6重置旋转5）</li>
+<li>缩放画布：Ctrl+中键+上下移动。100%大小：1。缩放到视图大小：2。</li>
+<li>移动画布：<code>按一下空格+按住左键拖动</code>&#x2F;<code>中键+移动</code></li>
+<li>镜像显示：M</li>
+<li>工具的右键功能<ul>
+<li>手绘笔刷工具：有笔刷选择、拾色器、缩放、旋转、镜像显示等。</li>
+<li>选区工具：有全选，取消选择，反选等。</li>
+</ul>
+</li>
+<li>图层操作<ul>
+<li>通过点击内容反向选中图层：按住R+点击内容（Shift+R可以连续选择多个）</li>
+<li>新增颜料图层：Ins</li>
+<li>新建图层组：Ctrl+G，会将当前选中的图层放进新建后的图层组内。</li>
+<li>取消图层编组：Ctrl+Alt+G</li>
+<li>向下合并图层：Ctrl+E</li>
+<li>删除图层：Shift+Del</li>
+<li>选择图层不透明区域：Ctrl+点击图层缩略图</li>
+<li>建立剪贴编组（继承透明度）：Ctrl+Shift+G</li>
+<li>单独显示图层&#x2F;图层组：ALT+左键点击图层，无需点击眼睛（右键图层，单独显示图层，然后选择对应图层即为该图层）</li>
+</ul>
+</li>
+<li>选区（<strong>选区建立后只能在选区中绘制</strong>）<ul>
+<li>矩形选区工具：Ctrl+R</li>
+<li>多边形选区（多边形套索）</li>
+<li>手绘轮廓选区（套索）：手绘轮廓选区中按住 Ctrl 后提起笔尖在下笔会临时切换到多边形选区</li>
+<li>增加选区：按住 Shift 在已有选区上添加</li>
+<li>减少选区：按住 Alt 在已有选区上减少</li>
+<li>保留选区相交部分：按住 Shift+Alt 在已有选区上留下相交部分</li>
+<li>反向选择：Ctrl+Shift+I</li>
+<li>取消选择：Ctrl+Shift+A</li>
+</ul>
+</li>
+<li>变形（调整已绘制好内容）：Ctrl+T，可用来移动<ul>
+<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
+<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
+<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
+<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
+<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
+</ul>
+</li>
+<li>移动图层：T</li>
+<li>搜索功能：Ctrl+Enter</li>
+<li>填充工具：F</li>
+<li>删除当前选中内容：Del（若存在选区，则仅对选区内操作）</li>
+</ul>
+<h2 id="多功能右键">1.4 &nbsp&nbsp<a href="#多功能右键" class="headerlink" title="多功能右键"></a>多功能右键</h2><p>右键面板功能：</p>
+<ul>
+<li>选取颜色（色相环外边的一层是使用过的历史颜色）</li>
+<li>选择笔刷（笔刷标签）</li>
+<li>笔刷面板参数</li>
+<li>镜像显示</li>
+<li>旋转画布（右键面板最外边的一层）</li>
+<li>缩放画布（滑轨）</li>
+</ul>
+<h2 id="图层">1.5 &nbsp&nbsp<a href="#图层" class="headerlink" title="图层"></a>图层</h2><ul>
+<li>图层：从上往下遮盖合成显示（图层组内的图层优先合成，除非图层组设置为穿透混合模式）</li>
+<li>图层混合模式：某些绘画方式会利用混合模式来进行一些操作。</li>
+<li>图层不透明度：数值越低越透明，数值越高越不透明。</li>
+<li>新建颜料图层：一般用于绘画的图层。</li>
+<li>命名图层：双击图层名即可。</li>
+<li>新建图层组：整理归纳图层，类似于文件夹。新建按钮下拉菜单-&gt;新增图层组</li>
+<li>取消图层编组：右键选择图层组-&gt;图层组-&gt;取消图层编组</li>
+<li>向下合并图层：右键选择图层组-&gt;向下合并图层</li>
+<li>删除图层：垃圾桶按钮</li>
+<li>隐藏&#x2F;显示图层：图层左边的眼睛图标（隐藏的图层不参与图层合成，Krita中透明会用灰白棋盘格表示）</li>
+<li>调整图层所在层级：拖拽图层调整即可</li>
+<li>锁定图层：图层右边的锁按钮（锁定的图层，除了隐藏&#x2F;显示图层，其他操作无法进行）</li>
+<li>锁定透明：图层右边的灰白棋盘按钮。锁定透明是为了防止不小心涂到已有颜色区域外而存在的功能。例如启用锁定透明后，再进行绘画涂色会被限定在已有颜色的部分，不会影响画布其他空白区域。</li>
+<li>继承透明：图层右边的<code>α</code>按钮。继承透明类似锁定透明，两者都可用来防止涂出已有颜色范围的。差别是继承透明不局限于单个图层，会按图层合成顺序继承透明。<ul>
+<li>常见使用方式1：若启用继承透明的图层和被继承透明的图层都在图层组内，那么直接启用继承透明即可</li>
+<li>常见使用方式2:：若启用继承透明的图层和被继承透明的图层不在图层组内<br>1、先建立图层组<br>2、移动底色图层进图层组<br>3、在图层组内，底色图层上新建图层<br>4、在新建的图层上启用继承透明<br>5、在新建的图层上绘制（此时就不会超出范围了）</li>
+<li><strong>常见使用方式2便捷操作：选中底色图层，然后按下 Ctrl+Shift+G（建立剪贴编组），右键底色图层-图层组-建立剪贴编组，在新建的图层上绘制。</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="选区和变形（调整已绘制好内容）">1.6 &nbsp&nbsp<a href="#选区和变形（调整已绘制好内容）" class="headerlink" title="选区和变形（调整已绘制好内容）"></a>选区和变形（调整已绘制好内容）</h2><ol>
+<li>通过点击内容反向选中图层：按住R+点击内容</li>
+<li>切换到手绘轮廓选区工具选中想要调整的部分（若手绘选区不能形成一个封闭区，该工具可自行连接选区）</li>
+<li>切换到变形工具（Ctrl+T）对选中部分进行调整（右键选区-变形-变形工具）</li>
+<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
+<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
+<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
+<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
+<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
+<li>调整好后需要切换回手绘笔刷工具（B）才能继续绘画。</li>
+</ol>
+<h2 id="线稿与填色技巧">1.7 &nbsp&nbsp<a href="#线稿与填色技巧" class="headerlink" title="线稿与填色技巧"></a>线稿与填色技巧</h2><ul>
+<li>让线条平滑<ul>
+<li>手绘笔刷工具的防抖和笔画平滑，笔刷选项中默认为「基本-只平滑笔画棱角」。</li>
+<li>绘制长线条或者使用鼠标的时候，可以选则后两种，有额外的细调选项可调整。</li>
+</ul>
+</li>
+<li>给线稿填色<ul>
+<li>线稿无缺口：需确保线稿无缺口，有缺口会导致填充至外部。<ol>
+<li>新建图层并命名</li>
+<li>将线稿图层置顶，线稿图层置顶有助于获得良好的线稿效果</li>
+<li>切换到填充工具（F）</li>
+<li>调整填充工具选项以获得良好填充效果：<ul>
+<li>采样图层：分图层进行填充时，推荐切换为所有图层</li>
+<li>扩大&#x2F;缩小填充区域：1px或者更高的扩大数值让线稿边缘在填充后不会出现灰杂色。线稿不能非常细，否则这个会导致填充到线稿外面。</li>
+<li>色差阈值：控制忽略颜色差异的程度，数值越大越把类似颜色当做一样的处理，例如数值越大，灰色线条和白色底色当做同色处理。</li>
+</ul>
+</li>
+<li>选取想要使用的颜色对底色图层进行填充。</li>
+<li>在底色填充完之后，新建图层进行相关细化，例如绘制阴影亮部之类细节。</li>
+</ol>
+</li>
+<li>线稿有缺口：若想对存在缺口的线稿进行填充，可使用智能填色蒙版工具。</li>
+</ul>
+</li>
+</ul>
+<h1 id="快捷键优化设置">2 &nbsp&nbsp<a href="#快捷键优化设置" class="headerlink" title="快捷键优化设置"></a>快捷键优化设置</h1><ul>
+<li>压感笔设置：鼠标右键，鼠标中键。</li>
+</ul>
+<h1 id="Krita优化设置">3 &nbsp&nbsp<a href="#Krita优化设置" class="headerlink" title="Krita优化设置"></a>Krita优化设置</h1><ul>
+<li>软件的UI比例异常<ul>
+<li>Windows系统设置-&gt;显示-&gt;缩放与布局</li>
+<li>设置-&gt;配置 krita-&gt;常规-&gt;窗口-&gt;启用高分辨率（Hi-DPI）支持（该项目启用即代表同步Windows的缩放设置）</li>
+</ul>
+</li>
+<li>设置-&gt;配置 krita-&gt;显示-&gt;首选渲染器-&gt;Direct3D 11 - 通过ANGLE转译</li>
+<li>数位板相关设置<ul>
+<li>确保数位板和显示屏映射比例为 1:1</li>
+<li>确保数位板&#x2F;数位屏双击时笔尖间距为关闭（wacom 的设备需要关闭双击时笔尖间距，避免导致绘画线条变成直线）</li>
+<li>设置-&gt;配置 krita-&gt;数位板设置-&gt;WinTab（如果数位板没有压感，可以切换此设置）</li>
+</ul>
+</li>
+</ul>
+<h1 id="实战案例">4 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="按图层内容大小导出图层">4.1 &nbsp&nbsp<a href="#按图层内容大小导出图层" class="headerlink" title="按图层内容大小导出图层"></a>按图层内容大小导出图层</h2><ol>
+<li>保存当前工作内容为 kra 格式文件</li>
+<li>菜单-&gt;工具-&gt;脚本-&gt;图层导出工具</li>
+<li>选中之前保存的 kra 文件</li>
+<li>初始目录：处选择导出位置</li>
+<li>勾选-&gt;按图层内容调整导出大小（图层内容可以超出画布！）</li>
+<li>选择图像拓展名为 PNG（该格式才能保存透明通道）</li>
+<li>点 OK 输出</li>
+</ol>
+<h2 id="导入PS的-abr-格式笔刷文件">4.2 &nbsp&nbsp<a href="#导入PS的-abr-格式笔刷文件" class="headerlink" title="导入PS的 abr 格式笔刷文件"></a>导入PS的 abr 格式笔刷文件</h2><p>所有能导入 PS 笔刷的其他软件都是有限度支持！因为不同软件的笔刷引擎不可能完全一样，无论什么其他软件都需要导入后手动调整来贴合原始效果。</p>
+<p>目前只能从 PS 的 abr 格式笔刷文件导入画笔笔尖形状（PS 内叫法），之后需要自行设置相关参数调整。</p>
+<h2 id="白底黑图片转透明底白图片">4.3 &nbsp&nbsp<a href="#白底黑图片转透明底白图片" class="headerlink" title="白底黑图片转透明底白图片"></a>白底黑图片转透明底白图片</h2><ol>
+<li>导入图片</li>
+<li>菜单&gt;滤镜&gt;颜色&gt;颜色转为透明度（不做遮罩，否则不好反相）</li>
+<li>菜单&gt;滤镜&gt;调整&gt;反相</li>
+<li>导出图片</li>
+</ol>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>后期处理</tag>
+        <tag>krita</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英伟达Jetson开发板踩坑记录总结</title>
     <url>/software/nvidia-jetson/</url>
     <content><![CDATA[<div class="note info no-icon"><p>文章推荐：<a href="https://www.guyuehome.com/42097">Jetson nano 系统安装</a></p>
@@ -6197,186 +6419,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>ppt</tag>
         <tag>powerpoint</tag>
         <tag>操作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Krita总结</title>
-    <url>/software/krita/</url>
-    <content><![CDATA[<h1 id="软件基础">1 &nbsp&nbsp<a href="#软件基础" class="headerlink" title="软件基础"></a>软件基础</h1><p>多功能拾色器：三角形外环是色相环，点击&#x2F;拖动可选择三角形内部颜色，三角形显示内容随着对色相环的操作而变化。</p>
-<h2 id="文件格式">1.1 &nbsp&nbsp<a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h2><ul>
-<li>kra：krita文档，专用格式文件</li>
-<li>jpg：有损压缩格式，导出时保持默认80%即可，平衡了画质和文件大小。</li>
-<li>png：无损压缩格式，选择较小文件体积。</li>
-</ul>
-<h2 id="PPI和DPI">1.2 &nbsp&nbsp<a href="#PPI和DPI" class="headerlink" title="PPI和DPI"></a>PPI和DPI</h2><ul>
-<li>PPI：ixels Per Inch，即每英寸像素数，也可以理解成像素&#x2F;英寸（pixels&#x2F;inch）</li>
-<li>DPI：Dots Per Inch，即每英寸点数，也可以理解成点&#x2F;英寸（dots&#x2F;inch）<br>一般打印时，可认为图片ppi&#x3D;dpi。</li>
-</ul>
-<h2 id="快捷键">1.3 &nbsp&nbsp<a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>手绘笔刷工具：B（橡皮擦也归类为笔刷）。按住V可以临时切换到直线工具拉直线。</li>
-<li>调整笔刷大小：Shift+左右拖动</li>
-<li>笔刷橡皮擦模式：E。把当前笔刷切换到橡皮擦模式，然后用来擦除。但不是橡皮擦，Krita中橡皮檫是笔刷。</li>
-<li>切换到上一个使用的笔刷：&#x2F;。反复切换可在上一个和当前笔刷中切换。</li>
-<li>调暗笔刷颜色：K</li>
-<li>调亮笔刷颜色：L</li>
-<li>降低不透明度：I</li>
-<li>提高不透明度：O</li>
-<li>临时吸色到前景色：Ctrl+左键</li>
-<li>裁剪工具：C（也可以用于扩大&#x2F;缩小画布，确保勾选应用到图像，而不是图层）</li>
-<li>撤销：Ctrl+Z</li>
-<li>重做：Ctrl+Shift+Z</li>
-<li>旋转画布：Shift+鼠标中键+移动（数字键：左旋4右旋6重置旋转5）</li>
-<li>缩放画布：Ctrl+中键+上下移动。100%大小：1。缩放到视图大小：2。</li>
-<li>移动画布：<code>按一下空格+按住左键拖动</code>&#x2F;<code>中键+移动</code></li>
-<li>镜像显示：M</li>
-<li>工具的右键功能<ul>
-<li>手绘笔刷工具：有笔刷选择、拾色器、缩放、旋转、镜像显示等。</li>
-<li>选区工具：有全选，取消选择，反选等。</li>
-</ul>
-</li>
-<li>图层操作<ul>
-<li>通过点击内容反向选中图层：按住R+点击内容（Shift+R可以连续选择多个）</li>
-<li>新增颜料图层：Ins</li>
-<li>新建图层组：Ctrl+G，会将当前选中的图层放进新建后的图层组内。</li>
-<li>取消图层编组：Ctrl+Alt+G</li>
-<li>向下合并图层：Ctrl+E</li>
-<li>删除图层：Shift+Del</li>
-<li>选择图层不透明区域：Ctrl+点击图层缩略图</li>
-<li>建立剪贴编组（继承透明度）：Ctrl+Shift+G</li>
-<li>单独显示图层&#x2F;图层组：ALT+左键点击图层，无需点击眼睛（右键图层，单独显示图层，然后选择对应图层即为该图层）</li>
-</ul>
-</li>
-<li>选区（<strong>选区建立后只能在选区中绘制</strong>）<ul>
-<li>矩形选区工具：Ctrl+R</li>
-<li>多边形选区（多边形套索）</li>
-<li>手绘轮廓选区（套索）：手绘轮廓选区中按住 Ctrl 后提起笔尖在下笔会临时切换到多边形选区</li>
-<li>增加选区：按住 Shift 在已有选区上添加</li>
-<li>减少选区：按住 Alt 在已有选区上减少</li>
-<li>保留选区相交部分：按住 Shift+Alt 在已有选区上留下相交部分</li>
-<li>反向选择：Ctrl+Shift+I</li>
-<li>取消选择：Ctrl+Shift+A</li>
-</ul>
-</li>
-<li>变形（调整已绘制好内容）：Ctrl+T，可用来移动<ul>
-<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
-<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
-<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
-<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
-<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
-</ul>
-</li>
-<li>移动图层：T</li>
-<li>搜索功能：Ctrl+Enter</li>
-<li>填充工具：F</li>
-<li>删除当前选中内容：Del（若存在选区，则仅对选区内操作）</li>
-</ul>
-<h2 id="多功能右键">1.4 &nbsp&nbsp<a href="#多功能右键" class="headerlink" title="多功能右键"></a>多功能右键</h2><p>右键面板功能：</p>
-<ul>
-<li>选取颜色（色相环外边的一层是使用过的历史颜色）</li>
-<li>选择笔刷（笔刷标签）</li>
-<li>笔刷面板参数</li>
-<li>镜像显示</li>
-<li>旋转画布（右键面板最外边的一层）</li>
-<li>缩放画布（滑轨）</li>
-</ul>
-<h2 id="图层">1.5 &nbsp&nbsp<a href="#图层" class="headerlink" title="图层"></a>图层</h2><ul>
-<li>图层：从上往下遮盖合成显示（图层组内的图层优先合成，除非图层组设置为穿透混合模式）</li>
-<li>图层混合模式：某些绘画方式会利用混合模式来进行一些操作。</li>
-<li>图层不透明度：数值越低越透明，数值越高越不透明。</li>
-<li>新建颜料图层：一般用于绘画的图层。</li>
-<li>命名图层：双击图层名即可。</li>
-<li>新建图层组：整理归纳图层，类似于文件夹。新建按钮下拉菜单-&gt;新增图层组</li>
-<li>取消图层编组：右键选择图层组-&gt;图层组-&gt;取消图层编组</li>
-<li>向下合并图层：右键选择图层组-&gt;向下合并图层</li>
-<li>删除图层：垃圾桶按钮</li>
-<li>隐藏&#x2F;显示图层：图层左边的眼睛图标（隐藏的图层不参与图层合成，Krita中透明会用灰白棋盘格表示）</li>
-<li>调整图层所在层级：拖拽图层调整即可</li>
-<li>锁定图层：图层右边的锁按钮（锁定的图层，除了隐藏&#x2F;显示图层，其他操作无法进行）</li>
-<li>锁定透明：图层右边的灰白棋盘按钮。锁定透明是为了防止不小心涂到已有颜色区域外而存在的功能。例如启用锁定透明后，再进行绘画涂色会被限定在已有颜色的部分，不会影响画布其他空白区域。</li>
-<li>继承透明：图层右边的<code>α</code>按钮。继承透明类似锁定透明，两者都可用来防止涂出已有颜色范围的。差别是继承透明不局限于单个图层，会按图层合成顺序继承透明。<ul>
-<li>常见使用方式1：若启用继承透明的图层和被继承透明的图层都在图层组内，那么直接启用继承透明即可</li>
-<li>常见使用方式2:：若启用继承透明的图层和被继承透明的图层不在图层组内<br>1、先建立图层组<br>2、移动底色图层进图层组<br>3、在图层组内，底色图层上新建图层<br>4、在新建的图层上启用继承透明<br>5、在新建的图层上绘制（此时就不会超出范围了）</li>
-<li><strong>常见使用方式2便捷操作：选中底色图层，然后按下 Ctrl+Shift+G（建立剪贴编组），右键底色图层-图层组-建立剪贴编组，在新建的图层上绘制。</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="选区和变形（调整已绘制好内容）">1.6 &nbsp&nbsp<a href="#选区和变形（调整已绘制好内容）" class="headerlink" title="选区和变形（调整已绘制好内容）"></a>选区和变形（调整已绘制好内容）</h2><ol>
-<li>通过点击内容反向选中图层：按住R+点击内容</li>
-<li>切换到手绘轮廓选区工具选中想要调整的部分（若手绘选区不能形成一个封闭区，该工具可自行连接选区）</li>
-<li>切换到变形工具（Ctrl+T）对选中部分进行调整（右键选区-变形-变形工具）</li>
-<li>调整位置：变形区域内，鼠标显示四向箭头，回车应用</li>
-<li>调整旋转：变形区域外，鼠标显示相互追尾的箭头圆形，回车应用</li>
-<li>调整宽高：四边可调整宽高，四角可同时调整宽高，回车应用</li>
-<li>调整大小（等比缩放）：按住 Shift 来操作控制点可以等比缩放，回车应用</li>
-<li>调整形状：对变形区域右键-液化变形（或其他变形方式）。或在变形工具的工具选项面板点击液化图标切换到液化变形。回车应用。</li>
-<li>调整好后需要切换回手绘笔刷工具（B）才能继续绘画。</li>
-</ol>
-<h2 id="线稿与填色技巧">1.7 &nbsp&nbsp<a href="#线稿与填色技巧" class="headerlink" title="线稿与填色技巧"></a>线稿与填色技巧</h2><ul>
-<li>让线条平滑<ul>
-<li>手绘笔刷工具的防抖和笔画平滑，笔刷选项中默认为「基本-只平滑笔画棱角」。</li>
-<li>绘制长线条或者使用鼠标的时候，可以选则后两种，有额外的细调选项可调整。</li>
-</ul>
-</li>
-<li>给线稿填色<ul>
-<li>线稿无缺口：需确保线稿无缺口，有缺口会导致填充至外部。<ol>
-<li>新建图层并命名</li>
-<li>将线稿图层置顶，线稿图层置顶有助于获得良好的线稿效果</li>
-<li>切换到填充工具（F）</li>
-<li>调整填充工具选项以获得良好填充效果：<ul>
-<li>采样图层：分图层进行填充时，推荐切换为所有图层</li>
-<li>扩大&#x2F;缩小填充区域：1px或者更高的扩大数值让线稿边缘在填充后不会出现灰杂色。线稿不能非常细，否则这个会导致填充到线稿外面。</li>
-<li>色差阈值：控制忽略颜色差异的程度，数值越大越把类似颜色当做一样的处理，例如数值越大，灰色线条和白色底色当做同色处理。</li>
-</ul>
-</li>
-<li>选取想要使用的颜色对底色图层进行填充。</li>
-<li>在底色填充完之后，新建图层进行相关细化，例如绘制阴影亮部之类细节。</li>
-</ol>
-</li>
-<li>线稿有缺口：若想对存在缺口的线稿进行填充，可使用智能填色蒙版工具。</li>
-</ul>
-</li>
-</ul>
-<h1 id="快捷键优化设置">2 &nbsp&nbsp<a href="#快捷键优化设置" class="headerlink" title="快捷键优化设置"></a>快捷键优化设置</h1><ul>
-<li>压感笔设置：鼠标右键，鼠标中键。</li>
-</ul>
-<h1 id="Krita优化设置">3 &nbsp&nbsp<a href="#Krita优化设置" class="headerlink" title="Krita优化设置"></a>Krita优化设置</h1><ul>
-<li>软件的UI比例异常<ul>
-<li>Windows系统设置-&gt;显示-&gt;缩放与布局</li>
-<li>设置-&gt;配置 krita-&gt;常规-&gt;窗口-&gt;启用高分辨率（Hi-DPI）支持（该项目启用即代表同步Windows的缩放设置）</li>
-</ul>
-</li>
-<li>设置-&gt;配置 krita-&gt;显示-&gt;首选渲染器-&gt;Direct3D 11 - 通过ANGLE转译</li>
-<li>数位板相关设置<ul>
-<li>确保数位板和显示屏映射比例为 1:1</li>
-<li>确保数位板&#x2F;数位屏双击时笔尖间距为关闭（wacom 的设备需要关闭双击时笔尖间距，避免导致绘画线条变成直线）</li>
-<li>设置-&gt;配置 krita-&gt;数位板设置-&gt;WinTab（如果数位板没有压感，可以切换此设置）</li>
-</ul>
-</li>
-</ul>
-<h1 id="实战案例">4 &nbsp&nbsp<a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h1><h2 id="按图层内容大小导出图层">4.1 &nbsp&nbsp<a href="#按图层内容大小导出图层" class="headerlink" title="按图层内容大小导出图层"></a>按图层内容大小导出图层</h2><ol>
-<li>保存当前工作内容为 kra 格式文件</li>
-<li>菜单-&gt;工具-&gt;脚本-&gt;图层导出工具</li>
-<li>选中之前保存的 kra 文件</li>
-<li>初始目录：处选择导出位置</li>
-<li>勾选-&gt;按图层内容调整导出大小（图层内容可以超出画布！）</li>
-<li>选择图像拓展名为 PNG（该格式才能保存透明通道）</li>
-<li>点 OK 输出</li>
-</ol>
-<h2 id="导入PS的-abr-格式笔刷文件">4.2 &nbsp&nbsp<a href="#导入PS的-abr-格式笔刷文件" class="headerlink" title="导入PS的 abr 格式笔刷文件"></a>导入PS的 abr 格式笔刷文件</h2><p>所有能导入 PS 笔刷的其他软件都是有限度支持！因为不同软件的笔刷引擎不可能完全一样，无论什么其他软件都需要导入后手动调整来贴合原始效果。</p>
-<p>目前只能从 PS 的 abr 格式笔刷文件导入画笔笔尖形状（PS 内叫法），之后需要自行设置相关参数调整。</p>
-<h2 id="白底黑图片转透明底白图片">4.3 &nbsp&nbsp<a href="#白底黑图片转透明底白图片" class="headerlink" title="白底黑图片转透明底白图片"></a>白底黑图片转透明底白图片</h2><ol>
-<li>导入图片</li>
-<li>菜单&gt;滤镜&gt;颜色&gt;颜色转为透明度（不做遮罩，否则不好反相）</li>
-<li>菜单&gt;滤镜&gt;调整&gt;反相</li>
-<li>导出图片</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>后期处理</tag>
-        <tag>krita</tag>
       </tags>
   </entry>
   <entry>
@@ -8164,6 +8206,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>fnOS</tag>
         <tag>飞牛</tag>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
+        <tag>openclash</tag>
       </tags>
   </entry>
   <entry>
@@ -9365,7 +9409,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 <h1 id="ipconfig工具">5 &nbsp&nbsp<a href="#ipconfig工具" class="headerlink" title="ipconfig工具"></a>ipconfig工具</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 显示本机网卡IP地址</span></span><br><span class="line">ipconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新DNS缓存</span></span><br><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
 
-<h1 id="iperf3工具">6 &nbsp&nbsp<a href="#iperf3工具" class="headerlink" title="iperf3工具"></a>iperf3工具</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -c 以客户端模式运行，后面接服务端地址，-p 指定端口，-n 指定传输数据量，1T代表1TB数据</span></span><br><span class="line">iperf3 -c 192.168.1.1 -p 5201 -n 1tb</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s 以服务端模式运行，-p 指定端口</span></span><br><span class="line">iperf3 -s -p 5201</span><br></pre></td></tr></table></figure>
+<h1 id="nslookup工具">6 &nbsp&nbsp<a href="#nslookup工具" class="headerlink" title="nslookup工具"></a>nslookup工具</h1><p>查询域名系统（DNS）记录，该工具也会自动显示出当前系统的DNS服务器地址。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查询qq.com的DNS记录的IP地址</span></span><br><span class="line">nslookup qq.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 反查IP对应的域名，该用法不常用</span></span><br><span class="line">nslookup 1.1.1.1</span><br></pre></td></tr></table></figure>
+
+<h1 id="iperf3工具">7 &nbsp&nbsp<a href="#iperf3工具" class="headerlink" title="iperf3工具"></a>iperf3工具</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -c 以客户端模式运行，后面接服务端地址，-p 指定端口，-n 指定传输数据量，1T代表1TB数据</span></span><br><span class="line">iperf3 -c 192.168.1.1 -p 5201 -n 1tb</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s 以服务端模式运行，-p 指定端口</span></span><br><span class="line">iperf3 -s -p 5201</span><br></pre></td></tr></table></figure>
+
+<h1 id="Windows常用重置网络命令">8 &nbsp&nbsp<a href="#Windows常用重置网络命令" class="headerlink" title="Windows常用重置网络命令"></a>Windows常用重置网络命令</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重置 Windows 的网络核心组件（Winsock 目录）到初始纯净状态</span></span><br><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -10148,12 +10197,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#104;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#x75;&#46;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#x2e;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#46;&#x63;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#115;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#64;&#49;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#97;&#110;&#107;&#115;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -12107,6 +12156,35 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ Primer 第五版：第六章「函数」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap6/</url>
     <content><![CDATA[<h1 id="第六章：函数"><a href="#第六章：函数" class="headerlink" title="第六章：函数"></a>第六章：函数</h1><h2 id="练习6-1"><a href="#练习6-1" class="headerlink" title="练习6.1"></a>练习6.1</h2><blockquote>
@@ -12439,35 +12517,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -12505,28 +12554,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
-    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
-    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
-<ul>
-<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
-<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-        <tag>第二版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap2/</url>
     <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
@@ -12560,6 +12587,28 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Head Fisrt HTML CSS 第二版：习题答案</title>
+    <url>/code-training/head-first-html-css-v2/head-first-html-css-v2/</url>
+    <content><![CDATA[<p>本书代码文件的官方下载链接：<a href="https://wickedlysmart.com/hfhtmlcss/">点击跳转</a><br>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/">点击跳转</a></p>
+<ul>
+<li><a href="/code-training/head-first-html-css-v2/chap1/">第一章「Web 语言：认识 HTML」习题答案</a></li>
+<li><a href="/code-training/head-first-html-css-v2/chap2/">第二章「认识HTML中的“HT”：深入理解超文本」习题答案</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+        <tag>第二版</tag>
       </tags>
   </entry>
   <entry>
@@ -13125,58 +13174,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>拒绝网络垃圾，识别避开内容农场</title>
-    <url>/post-articles/2025-10/content-farm-terminator/</url>
-    <content><![CDATA[<h1 id="什么是内容农场">1 &nbsp&nbsp<a href="#什么是内容农场" class="headerlink" title="什么是内容农场"></a>什么是内容农场</h1><p>相信不少朋友在网上冲浪时，经常会碰到一些内容网站，一天能产出发布几十篇文章，内容包罗万象但浅薄。</p>
-<p>查阅这些文章的内容，不少甚至是错误的，完全是机器或者纯AI生成的无意义文章。</p>
-<p>例如下面截图的这个「云原生实践」的网站，域名是<code>oryoy.com</code>，严重污染各大搜索引擎的搜索结果，尤其是bing必应搜索，污染最为严重。</p>
-<div class="flex-column">
-<img data-src="/images/post-articles/2025-10/content-farm-terminator/trash-website.webp">垃圾网站-内容农场</div>
-
-<p>这类网站就是内容农场（Content Farm），内容粗制滥造、缺乏求证，但这类网站SEO优化很厉害，一大堆热门关键词被搜索引擎搜录，导致搜索结果前段基本都是被内容农场填满。</p>
-<h1 id="浏览器插件推荐：终结内容农场">2 &nbsp&nbsp<a href="#浏览器插件推荐：终结内容农场" class="headerlink" title="浏览器插件推荐：终结内容农场"></a>浏览器插件推荐：终结内容农场</h1><p>「终结内容农场」插件的诞生就是为了避开浏览这些垃圾网站。</p>
-<p>插件的功能：</p>
-<ul>
-<li>自动检测搜索返回结果中的网站是否为内容农场，并加以标识，可以让用户第一时间避开点击。</li>
-<li>即使误操作点击访问了内容农场，插件也会自动弹出封锁页面，让用户能及时关闭。</li>
-<li>通过点击「查看」按钮也能查看被封锁的页面，插件会自动去除内容农场网站的广告，从而避免给它带来广告收益。</li>
-<li>除了上述功能外，插件本身也能自定义黑名单，白名单等。</li>
-</ul>
-<p>插件的安装地址：</p>
-<ul>
-<li>火狐浏览器Firefox（也支持安卓版的Firefox版本）：<a href="https://addons.mozilla.org/zh-CN/firefox/addon/content-farm-terminator">https://addons.mozilla.org/zh-CN/firefox/addon/content-farm-terminator</a></li>
-<li>微软EDGE浏览器：<a href="https://microsoftedge.microsoft.com/addons/detail/%E7%BB%88%E7%BB%93%E5%86%85%E5%AE%B9%E5%86%9C%E5%9C%BA/fgckcfkpckemdnnejbbfkkchanedbeje">https://microsoftedge.microsoft.com/addons/detail/%E7%BB%88%E7%BB%93%E5%86%85%E5%AE%B9%E5%86%9C%E5%9C%BA/fgckcfkpckemdnnejbbfkkchanedbeje</a></li>
-<li>谷歌Chrome浏览器：<a href="https://chromewebstore.google.com/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl">https://chromewebstore.google.com/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl</a></li>
-</ul>
-<p>插件项目的地址：</p>
-<ul>
-<li>主页：<a href="https://danny0838.github.io/content-farm-terminator/zh/">https://danny0838.github.io/content-farm-terminator/zh/</a></li>
-<li>Github仓库：<a href="https://github.com/danny0838/content-farm-terminator">https://github.com/danny0838/content-farm-terminator</a></li>
-</ul>
-<div class="flex-column">
-<img data-src="/images/post-articles/2025-10/content-farm-terminator/edge-adddon.webp">插件安装页面-微软EDGE浏览器</div>
-
-<h1 id="安装实测效果">3 &nbsp&nbsp<a href="#安装实测效果" class="headerlink" title="安装实测效果"></a>安装实测效果</h1><p><strong>测试浏览器版本：Microsoft Edge v141.0.3537.99</strong></p>
-<p>浏览器安装启用「终结内容农场」插件后，若搜索返回的结果中存在内容农场站点，可以看到插件自动添加感叹号标识出来。</p>
-<p>即使误点击网站，插件也会首先弹出封锁页面。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/post-articles/2025-10/content-farm-terminator/addon-effect1.webp">插件自动标识出内容农场</div>
-<div class="flex-column">
-<img data-src="/images/post-articles/2025-10/content-farm-terminator/addon-effect2.webp">插件封锁页面</div>
-</div>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2025-10</category>
-      </categories>
-      <tags>
-        <tag>浏览器插件</tag>
-        <tag>内容农场</tag>
-        <tag>终结内容农场</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为飞牛fnOS设置定时自动清空回收站</title>
     <url>/post-articles/2025-10/auto-emtpy-bin-for-fnos/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>截止2025-10-23，fnOS 0.9.30系统版本并没有提供官方软件工具执行计划任务，来实现自动清空回收站。</p>
@@ -13234,6 +13231,58 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>NAS</tag>
         <tag>homelab</tag>
         <tag>回收站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拒绝网络垃圾，识别避开内容农场</title>
+    <url>/post-articles/2025-10/content-farm-terminator/</url>
+    <content><![CDATA[<h1 id="什么是内容农场">1 &nbsp&nbsp<a href="#什么是内容农场" class="headerlink" title="什么是内容农场"></a>什么是内容农场</h1><p>相信不少朋友在网上冲浪时，经常会碰到一些内容网站，一天能产出发布几十篇文章，内容包罗万象但浅薄。</p>
+<p>查阅这些文章的内容，不少甚至是错误的，完全是机器或者纯AI生成的无意义文章。</p>
+<p>例如下面截图的这个「云原生实践」的网站，域名是<code>oryoy.com</code>，严重污染各大搜索引擎的搜索结果，尤其是bing必应搜索，污染最为严重。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/trash-website.webp">垃圾网站-内容农场</div>
+
+<p>这类网站就是内容农场（Content Farm），内容粗制滥造、缺乏求证，但这类网站SEO优化很厉害，一大堆热门关键词被搜索引擎搜录，导致搜索结果前段基本都是被内容农场填满。</p>
+<h1 id="浏览器插件推荐：终结内容农场">2 &nbsp&nbsp<a href="#浏览器插件推荐：终结内容农场" class="headerlink" title="浏览器插件推荐：终结内容农场"></a>浏览器插件推荐：终结内容农场</h1><p>「终结内容农场」插件的诞生就是为了避开浏览这些垃圾网站。</p>
+<p>插件的功能：</p>
+<ul>
+<li>自动检测搜索返回结果中的网站是否为内容农场，并加以标识，可以让用户第一时间避开点击。</li>
+<li>即使误操作点击访问了内容农场，插件也会自动弹出封锁页面，让用户能及时关闭。</li>
+<li>通过点击「查看」按钮也能查看被封锁的页面，插件会自动去除内容农场网站的广告，从而避免给它带来广告收益。</li>
+<li>除了上述功能外，插件本身也能自定义黑名单，白名单等。</li>
+</ul>
+<p>插件的安装地址：</p>
+<ul>
+<li>火狐浏览器Firefox（也支持安卓版的Firefox版本）：<a href="https://addons.mozilla.org/zh-CN/firefox/addon/content-farm-terminator">https://addons.mozilla.org/zh-CN/firefox/addon/content-farm-terminator</a></li>
+<li>微软EDGE浏览器：<a href="https://microsoftedge.microsoft.com/addons/detail/%E7%BB%88%E7%BB%93%E5%86%85%E5%AE%B9%E5%86%9C%E5%9C%BA/fgckcfkpckemdnnejbbfkkchanedbeje">https://microsoftedge.microsoft.com/addons/detail/%E7%BB%88%E7%BB%93%E5%86%85%E5%AE%B9%E5%86%9C%E5%9C%BA/fgckcfkpckemdnnejbbfkkchanedbeje</a></li>
+<li>谷歌Chrome浏览器：<a href="https://chromewebstore.google.com/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl">https://chromewebstore.google.com/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl</a></li>
+</ul>
+<p>插件项目的地址：</p>
+<ul>
+<li>主页：<a href="https://danny0838.github.io/content-farm-terminator/zh/">https://danny0838.github.io/content-farm-terminator/zh/</a></li>
+<li>Github仓库：<a href="https://github.com/danny0838/content-farm-terminator">https://github.com/danny0838/content-farm-terminator</a></li>
+</ul>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/edge-adddon.webp">插件安装页面-微软EDGE浏览器</div>
+
+<h1 id="安装实测效果">3 &nbsp&nbsp<a href="#安装实测效果" class="headerlink" title="安装实测效果"></a>安装实测效果</h1><p><strong>测试浏览器版本：Microsoft Edge v141.0.3537.99</strong></p>
+<p>浏览器安装启用「终结内容农场」插件后，若搜索返回的结果中存在内容农场站点，可以看到插件自动添加感叹号标识出来。</p>
+<p>即使误点击网站，插件也会首先弹出封锁页面。</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/addon-effect1.webp">插件自动标识出内容农场</div>
+<div class="flex-column">
+<img data-src="/images/post-articles/2025-10/content-farm-terminator/addon-effect2.webp">插件封锁页面</div>
+</div>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>浏览器插件</tag>
+        <tag>内容农场</tag>
+        <tag>终结内容农场</tag>
       </tags>
   </entry>
   <entry>
@@ -13302,6 +13351,29 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>Nvidia APP</tag>
         <tag>GPU温度管理技巧</tag>
         <tag>控制风扇转速</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客添加robots.txt、ads.txt等文件到站点根目录</title>
+    <url>/post-articles/2025-10/hexo-add-robots/</url>
+    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果想要添加一些文件到Hexo博客站点的根目录之下，该如何实现？例如添加<code>robots.txt</code>规范爬虫的规则文件或者AdSense的<code>ads.txt</code>的验证文件。</p>
+<h1 id="配置方法">2 &nbsp&nbsp<a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h1><p>从hexo博客的目录结构和构建方法来看，一般有两个路径可存放：</p>
+<ul>
+<li>将文件置于根目录之下的<code>source</code>文件夹内：这种方式，在运行<code>hexo generate</code>构建时，会自动拷贝文件到<code>public</code>目录之下。</li>
+<li>将文件置于根目录之下的<code>public</code>文件夹内：这种方式，只适合每次手动添加。因为运行<code>hexo clean</code>命令时，<code>public</code>目录会被先清除之后再通过<code>hexo generate</code>重建。</li>
+</ul>
+<h1 id="总结">3 &nbsp&nbsp<a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>如果该资源文件一般不怎么需要频繁改动时，则推荐放到<code>source</code>文件夹内。</p>
+<p>如果是经常需要改动的话，可以配置CI&#x2F;CD等工作流实现自动生成或者获取最新文件，置于<code>public</code>文件夹内。</p>
+<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 给博客增加 Sitemap 和 Robots（Hexo）[EB&#x2F;OL]. <a href="https://www.guozhenyi.com/post/2025/03/14/hexo-site-add-sitemap-and-robots.html">https://www.guozhenyi.com/post/2025/03/14/hexo-site-add-sitemap-and-robots.html</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>robots.txt</tag>
+        <tag>ads.txt</tag>
       </tags>
   </entry>
   <entry>
@@ -13408,34 +13480,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
         <tag>PVE</tag>
         <tag>升级</tag>
         <tag>Proxmox</tag>
-        <tag>HomeLab</tag>
         <tag>服务器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客添加robots.txt、ads.txt等文件到站点根目录</title>
-    <url>/post-articles/2025-10/hexo-add-robots/</url>
-    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果想要添加一些文件到Hexo博客站点的根目录之下，该如何实现？例如添加<code>robots.txt</code>规范爬虫的规则文件或者AdSense的<code>ads.txt</code>的验证文件。</p>
-<h1 id="配置方法">2 &nbsp&nbsp<a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h1><p>从hexo博客的目录结构和构建方法来看，一般有两个路径可存放：</p>
-<ul>
-<li>将文件置于根目录之下的<code>source</code>文件夹内：这种方式，在运行<code>hexo generate</code>构建时，会自动拷贝文件到<code>public</code>目录之下。</li>
-<li>将文件置于根目录之下的<code>public</code>文件夹内：这种方式，只适合每次手动添加。因为运行<code>hexo clean</code>命令时，<code>public</code>目录会被先清除之后再通过<code>hexo generate</code>重建。</li>
-</ul>
-<h1 id="总结">3 &nbsp&nbsp<a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>如果该资源文件一般不怎么需要频繁改动时，则推荐放到<code>source</code>文件夹内。</p>
-<p>如果是经常需要改动的话，可以配置CI&#x2F;CD等工作流实现自动生成或者获取最新文件，置于<code>public</code>文件夹内。</p>
-<h1 id="参考文献">4 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 给博客增加 Sitemap 和 Robots（Hexo）[EB&#x2F;OL]. <a href="https://www.guozhenyi.com/post/2025/03/14/hexo-site-add-sitemap-and-robots.html">https://www.guozhenyi.com/post/2025/03/14/hexo-site-add-sitemap-and-robots.html</a>.</p>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2025-10</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>robots.txt</tag>
-        <tag>ads.txt</tag>
       </tags>
   </entry>
   <entry>
@@ -13561,9 +13610,9 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
         <tag>PVE</tag>
         <tag>Proxmox</tag>
-        <tag>HomeLab</tag>
         <tag>服务器</tag>
         <tag>屏蔽订阅弹窗</tag>
         <tag>PBS</tag>
@@ -13750,7 +13799,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
     <content><![CDATA[<p>一般RSS订阅链接导入到AutoBangumi之后，是无法二次修改RSS条目名称和URL的，正如AutoBangumi软件界面上没有任何UI可供用户操作修改。</p>
 <p>但是某些情况下是想要实现二次修改，而非删除并重新导入。</p>
 <p>以我的一个使用场景为例，以前在下载《仙逆》剧集时，使用的RSS订阅链接是基于mikan搜索结果的RSS链接<code>https://mikanime.tv/RSS/Search?searchstr=%E4%BB%99%E9%80%86</code>。因此<br>AutoBangumi自动识别该RSS条目的名称为「国漫」，而AutoBangumi会根据该名称创建创建对应名称的文件夹。</p>
-<p>而我一直想要重命名这条RSS条目的名称和重新修改对应URL，如果考虑删除并重新导入RSS链接的话，后台qBittorrent需要重新同时接收处理一百多个下载任务。这么大量的处理任务，意味着qBittorrent将一段时间内都无法正常影响，这显然是不可接受的。</p>
+<p>而我一直想要重命名这条RSS条目的名称和重新修改对应URL，如果考虑删除并重新导入RSS链接的话，后台qBittorrent需要重新同时接收处理一百多个下载任务。这么大量的处理任务，意味着qBittorrent将一段时间内都无法正常响应，这显然是不可接受的。</p>
 <p>那还有没有其他办法能实现二次修改呢？其实有，从数据库角度入手即可。AutoBangumi数据库是基于SQLite，因此可以通过修改SQLite数据库文件来实现二次修改。</p>
 <div class="flex-row">
 <div class="flex-column">
@@ -13799,10 +13848,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>fnOS</tag>
         <tag>飞牛</tag>
+        <tag>HomeLab</tag>
         <tag>AutoBangumi</tag>
         <tag>mikan</tag>
         <tag>NAS</tag>
-        <tag>HomeLab</tag>
       </tags>
   </entry>
   <entry>
@@ -13834,9 +13883,9 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
         <tag>PVE</tag>
         <tag>Proxmox</tag>
-        <tag>HomeLab</tag>
         <tag>服务器</tag>
         <tag>清理旧内核</tag>
       </tags>
@@ -13881,10 +13930,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
         <tag>PVE</tag>
         <tag>升级</tag>
         <tag>Proxmox</tag>
-        <tag>HomeLab</tag>
         <tag>服务器</tag>
         <tag>LXC</tag>
         <tag>Debian</tag>
@@ -13933,10 +13982,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
         <tag>PVE</tag>
         <tag>升级</tag>
         <tag>Proxmox</tag>
-        <tag>HomeLab</tag>
         <tag>服务器</tag>
         <tag>PBS</tag>
         <tag>备份服务器</tag>
@@ -13982,9 +14031,9 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
         <tag>PVE</tag>
         <tag>Proxmox</tag>
-        <tag>HomeLab</tag>
         <tag>服务器</tag>
         <tag>屏蔽订阅弹窗</tag>
         <tag>PBS</tag>
@@ -14284,6 +14333,57 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>（可选）修改<code>.gitignore</code>文件，新增如下内容： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">buildzh/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 「切换语言」使用手册 - Blender 插件，参考文献小节[EB&#x2F;OL]. <a href="https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">https://mister-kin.github.io/works/software-works/toggle-language/#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE</a>.<br>[2] poll() failed, context incorrect? - Example: bpy.ops.view3d.background_image_add()[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add">https://blender.stackexchange.com/questions/6101/poll-failed-context-incorrect-example-bpy-ops-view3d-background-image-add</a>.<br>[3] Context override[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/context-override/">https://b3d.interplanety.org/en/context-override/</a>.<br>[4] Blender 插件开发 技巧&#x2F;误区&#x2F;指南&#x2F;笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_36288357/article/details/143528487">https://blog.csdn.net/qq_36288357/article/details/143528487</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blender实战案例总结</title>
+    <url>/software/blender/examples/</url>
+    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
+<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
+<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
+<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
+</ul>
+</li>
+<li>建模后添加细分修改器，右键平滑</li>
+</ul>
+<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
+<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
+<li>切换到顶视图-7键。</li>
+<li>菜单&gt;文件&gt;导入&gt;SVG</li>
+<li>缩放视图找到SVG。</li>
+<li>右键set origin，调整“原点”至物体中心。</li>
+<li>shift+s键对齐“原点”至世界中心</li>
+<li>选中并缩放至合适大小。</li>
+<li>右键convert to，转换到Mesh。</li>
+<li>选中网格物体，TAB键进入“编辑模式”。</li>
+<li>A键选中所有网格。</li>
+<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
+<li>E键挤出面。</li>
+<li>TAB键回到“物体模式”。</li>
+</ol>
+<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
+<ol>
+<li>创建合适的立方体（粒子场）</li>
+<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
+<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
+<li>创建灰尘物体模型</li>
+<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
+<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
+<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
+<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
+<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
+<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
+</ol>
+<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
+<p># 符号，blender会将其判为驱动器表达式。</p>
+<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
+<li>shift + D 复制并对齐片段</li>
+<li>shift + R 重操操作</li>
+</ol>
 ]]></content>
       <categories>
         <category>software</category>
@@ -14673,57 +14773,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>Blender实战案例总结</title>
-    <url>/software/blender/examples/</url>
-    <content><![CDATA[<h1 id="精确建模">1 &nbsp&nbsp<a href="#精确建模" class="headerlink" title="精确建模"></a>精确建模</h1><ul>
-<li>N面板可以控制物体尺寸查看，查看当前模型的尺寸。缩放到精确尺寸后，ctrl+a应用变化。</li>
-<li>object mode变换可能会导致系数变化，Ctrl+A可以重置缩放系数，全部归并至系数1（以当前尺寸为基础）<ul>
-<li>（edit mode不会改变物体属性，只是改变物体内部的点线面分布）不推荐在物体模式下进行单轴向缩放，旋转还是会考虑在物体模式</li>
-</ul>
-</li>
-<li>建模后添加细分修改器，右键平滑</li>
-</ul>
-<p>注：系数为负数时，从blender导出资产到UE4会导致模型法线变反还是模型变黑？</p>
-<h1 id="SVG转3D网格">2 &nbsp&nbsp<a href="#SVG转3D网格" class="headerlink" title="SVG转3D网格"></a>SVG转3D网格</h1><ol>
-<li>切换到顶视图-7键。</li>
-<li>菜单&gt;文件&gt;导入&gt;SVG</li>
-<li>缩放视图找到SVG。</li>
-<li>右键set origin，调整“原点”至物体中心。</li>
-<li>shift+s键对齐“原点”至世界中心</li>
-<li>选中并缩放至合适大小。</li>
-<li>右键convert to，转换到Mesh。</li>
-<li>选中网格物体，TAB键进入“编辑模式”。</li>
-<li>A键选中所有网格。</li>
-<li>切换到侧视图-3或1键。（按住Ctrl时为视图反方向）</li>
-<li>E键挤出面。</li>
-<li>TAB键回到“物体模式”。</li>
-</ol>
-<h1 id="灰尘例子动画">3 &nbsp&nbsp<a href="#灰尘例子动画" class="headerlink" title="灰尘例子动画"></a>灰尘例子动画</h1><p>无特殊说明，则都是在粒子标签内操作。</p>
-<ol>
-<li>创建合适的立方体（粒子场）</li>
-<li>选择立方体，属性编辑器&gt;粒子标签&gt;新建粒子系统</li>
-<li>粒子类型&gt;发射体；发射&gt;源&gt;发射源&gt;体积</li>
-<li>创建灰尘物体模型</li>
-<li>渲染&gt;渲染为&gt;物体（此为单个效果，用集合来实现多个），物体&gt;选择灰尘物体模型</li>
-<li>渲染&gt;缩放&gt;数值调整；缩放随机性&gt;1</li>
-<li>1键切换到前视图，ctrl+alt+0并左击相机视角边框处以选中相机，按G调整相机视角；属性编辑器&gt;相机属性&gt;镜头&gt;焦距&gt;数值调整。</li>
-<li>启用旋转功能&gt;坐标系轴向&gt;normal；随机&gt;数值调整；相位&gt;数值调整；随机相位&gt;数值调整</li>
-<li>选中立方体，属性编辑器&gt;材质&gt;表面&gt;移除材质，材质&gt;体积&gt;原理化体积&gt;密度调0.14</li>
-<li>属性编辑器&gt;世界属性&gt;颜色调至黑色（除去环境亮度）</li>
-</ol>
-<h1 id="无限旋转循环">4 &nbsp&nbsp<a href="#无限旋转循环" class="headerlink" title="无限旋转循环"></a>无限旋转循环</h1><p>物体属性&gt;旋转（选一个方向）&gt;输入「#frame&#x2F;30」</p>
-<p># 符号，blender会将其判为驱动器表达式。</p>
-<h1 id="VSE无限循环片段">5 &nbsp&nbsp<a href="#VSE无限循环片段" class="headerlink" title="VSE无限循环片段"></a>VSE无限循环片段</h1><ol>
-<li>shift + D 复制并对齐片段</li>
-<li>shift + R 重操操作</li>
-</ol>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-  </entry>
-  <entry>
     <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
     <url>/translations/blender-animation/sprite-fright/</url>
     <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
@@ -14952,7 +15001,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#x69;&#x73;&#x74;&#101;&#x72;&#x6b;&#x69;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#109;&#105;&#115;&#x74;&#x65;&#114;&#107;&#105;&#110;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -16058,59 +16107,6 @@ CGI&后期处理
 ]]></content>
   </entry>
   <entry>
-    <title>雨滴皮肤</title>
-    <url>/works/software-works/rainmeter-skins/index.html</url>
-    <content><![CDATA[<div class="note danger no-icon"><p>本项目已不再维护！</p>
-<p>This project is no longer maintained!</p>
-</div>
-
-<table>
-<thead>
-<tr>
-<th align="center">皮肤下载链接</th>
-<th align="center">项目代码仓库链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://github.com/Mister-Kin/RainmeterSkins/releases/latest">点击跳转</a></td>
-<td align="center"><a href="https://github.com/Mister-Kin/RainmeterSkins">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>基于一些皮肤，我的个人修改订制的雨滴皮肤。<a href="https://www.rainmeter.net/">雨滴</a>是一款免费的、开源的、面向Windows个人电脑的应用程序，支持在桌面上运行雨滴皮肤。</p>
-<h1 id="皮肤列表">2 &nbsp&nbsp<a href="#皮肤列表" class="headerlink" title="皮肤列表"></a>皮肤列表</h1><ul>
-<li>倒影时钟：显示基本时钟、年月日等信息</li>
-<li>文字启动器：极致简便的启动器，没有图形元素，只显示程序应用名称，点击名称即可启动程序</li>
-<li>系统信息：显示基本系统信息，如开机时间、CPU内存占用、网速监测等</li>
-<li>雨滴预设系统信息：雨滴软件自带的预设皮肤，显示基本的系统信息，修改及订制后增加支持监测网速</li>
-</ul>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/reflection_clock.webp">「倒影时钟」皮肤效果图</div>
-<div class="flex-column">
-<img data-src="./images/text_launcher.webp">「文字启动器」皮肤效果图</div>
-</div>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/system_info.webp">「系统信息」皮肤效果图</div>
-<div class="flex-column">
-<img data-src="./images/system_info_preset.webp">「雨滴预设系统信息」皮肤效果图</div>
-</div>
-
-<h1 id="用法">3 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">3.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">3.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
-<li>皮肤下载地址：<a href="https://github.com/Mister-Kin/RainmeterSkins/releases/latest">点击跳转</a>，下载「rainmeter_skins_collection_2023.06.27.7z」或者「雨滴皮肤汇总_2023.06.27.7z」文件（两个文件内容一样，下载任意一个即可）。</li>
-<li>Rainmeter 版本要求：<a href="https://www.rainmeter.net/">v4.5.17+</a></li>
-</ul>
-<h3 id="安装步骤">3.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
-<li>安装Rainmeter</li>
-<li>解压「rainmeter_skins_collection_2023.06.27.7z」或者「雨滴皮肤汇总_2023.06.27.7z」文件，得到rmskin后缀名的雨滴皮肤文件。</li>
-<li>双击rmskin文件，点击确定安装。</li>
-</ol>
-<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p>雨滴皮肤 © Mr. Kin，所有文件均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0</a> 许可协议进行发布。</p>
-<p>由 Mr. Kin 著作并维护。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>「切换语言」使用手册v1.6.3 - Blender 插件</title>
     <url>/works/software-works/toggle-language/index.html</url>
     <content><![CDATA[<img data-src="./images/tl-cover.webp">
@@ -16684,5 +16680,58 @@ CGI&后期处理
 <h1 id="作者">5 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.<br>[32] How to Create Extensions[EB&#x2F;OL]. <a href="https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html">https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html</a>.<br>[33] How can I call a specific keymap to draw within my AddonPreferences?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#">https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#</a>.<br>[34] addon_keymap_template[EB&#x2F;OL]. <a href="https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template">https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template</a>.<br>[35] How to draw a custom KeyMapItem.properties[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059">https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059</a>.<br>[36] UI: Operator Confirm Dialog Changes #117564[EB&#x2F;OL]. <a href="https://projects.blender.org/blender/blender/pulls/117564">https://projects.blender.org/blender/blender/pulls/117564</a>.<br>[37] WindowManager(ID)[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm">https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm</a>.<br>[38] Switching workspaces in Blender using Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/">https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/</a>.<br>[39] How to create an Empty of type Image and assign a picture with Python?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#">https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#</a>.<br>[40] How to add empty object not using bpy.ops?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops">https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops</a>.<br>[41] How to use BPY to create an Image empty?[EB&#x2F;OL]. <a href="https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430">https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430</a>.<br>[42] Footnotes in longtable captions[EB&#x2F;OL]. <a href="https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions">https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions</a>.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以前（不含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以后（含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共18种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本的插件不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:7" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+  </entry>
+  <entry>
+    <title>雨滴皮肤</title>
+    <url>/works/software-works/rainmeter-skins/index.html</url>
+    <content><![CDATA[<div class="note danger no-icon"><p>本项目已不再维护！</p>
+<p>This project is no longer maintained!</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th align="center">皮肤下载链接</th>
+<th align="center">项目代码仓库链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://github.com/Mister-Kin/RainmeterSkins/releases/latest">点击跳转</a></td>
+<td align="center"><a href="https://github.com/Mister-Kin/RainmeterSkins">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h1 id="简介">1 &nbsp&nbsp<a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>基于一些皮肤，我的个人修改订制的雨滴皮肤。<a href="https://www.rainmeter.net/">雨滴</a>是一款免费的、开源的、面向Windows个人电脑的应用程序，支持在桌面上运行雨滴皮肤。</p>
+<h1 id="皮肤列表">2 &nbsp&nbsp<a href="#皮肤列表" class="headerlink" title="皮肤列表"></a>皮肤列表</h1><ul>
+<li>倒影时钟：显示基本时钟、年月日等信息</li>
+<li>文字启动器：极致简便的启动器，没有图形元素，只显示程序应用名称，点击名称即可启动程序</li>
+<li>系统信息：显示基本系统信息，如开机时间、CPU内存占用、网速监测等</li>
+<li>雨滴预设系统信息：雨滴软件自带的预设皮肤，显示基本的系统信息，修改及订制后增加支持监测网速</li>
+</ul>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/reflection_clock.webp">「倒影时钟」皮肤效果图</div>
+<div class="flex-column">
+<img data-src="./images/text_launcher.webp">「文字启动器」皮肤效果图</div>
+</div>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/system_info.webp">「系统信息」皮肤效果图</div>
+<div class="flex-column">
+<img data-src="./images/system_info_preset.webp">「雨滴预设系统信息」皮肤效果图</div>
+</div>
+
+<h1 id="用法">3 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">3.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">3.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
+<li>皮肤下载地址：<a href="https://github.com/Mister-Kin/RainmeterSkins/releases/latest">点击跳转</a>，下载「rainmeter_skins_collection_2023.06.27.7z」或者「雨滴皮肤汇总_2023.06.27.7z」文件（两个文件内容一样，下载任意一个即可）。</li>
+<li>Rainmeter 版本要求：<a href="https://www.rainmeter.net/">v4.5.17+</a></li>
+</ul>
+<h3 id="安装步骤">3.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<li>安装Rainmeter</li>
+<li>解压「rainmeter_skins_collection_2023.06.27.7z」或者「雨滴皮肤汇总_2023.06.27.7z」文件，得到rmskin后缀名的雨滴皮肤文件。</li>
+<li>双击rmskin文件，点击确定安装。</li>
+</ol>
+<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p>雨滴皮肤 © Mr. Kin，所有文件均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0</a> 许可协议进行发布。</p>
+<p>由 Mr. Kin 著作并维护。</p>
+]]></content>
   </entry>
 </search>
