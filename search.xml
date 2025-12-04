@@ -668,6 +668,7 @@
     <p class="tag-bookmark-page">Blender插件资源</p>
     </div>
     <a href="https://blenderesse.gumroad.com/">Blenderesse免费插件</a>
+    <a href="https://unicornhunter.gumroad.com/">Samuel Francis免费插件</a>
 </div>
 
 <div class="text-box">
@@ -2868,8 +2869,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C语言总结笔记</title>
-    <url>/code/c/</url>
+    <title>C&amp;C++语言总结笔记</title>
+    <url>/code/c-cpp/</url>
     <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
 
 <h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
@@ -3517,14 +3518,14 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#x37;&#50;&#x2e;&#49;&#x39;&#x2e;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#x6f;&#x74;&#x40;&#49;&#55;&#50;&#46;&#x31;&#x39;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
       </categories>
   </entry>
   <entry>
-    <title>Git总结笔记</title>
+    <title>Git版本控制总结笔记</title>
     <url>/code/git/</url>
     <content><![CDATA[<h1 id="三维模型等二进制文件的版本控制">1 &nbsp&nbsp<a href="#三维模型等二进制文件的版本控制" class="headerlink" title="三维模型等二进制文件的版本控制"></a>三维模型等二进制文件的版本控制</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
 <p>Perforce Helix Core官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
@@ -3578,13 +3579,13 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <div class="note danger no-icon"><p>一般来说，操作第二个步骤即可。但如果引用的git仓库链接的依赖，他们本身也有依赖于<code>git://</code>协议的依赖时，只操作第二步就仍无法解决问题。需要同时配置第一个步骤的操作。</p>
 </div>
 
-<h1 id="Git日志">4 &nbsp&nbsp<a href="#Git日志" class="headerlink" title="Git日志"></a>Git日志</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 筛选作者，格式化查看日期和提交信息 %s参数为查看short commit message，%B是查看完整的信息</span></span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %s&quot;</span> --<span class="built_in">date</span>=short</span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %B&quot;</span> --<span class="built_in">date</span>=short</span><br></pre></td></tr></table></figure>
+<h1 id="log日志">4 &nbsp&nbsp<a href="#log日志" class="headerlink" title="log日志"></a>log日志</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 筛选作者，格式化查看日期和提交信息 %s参数为查看short commit message，%B是查看完整的信息</span></span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %s&quot;</span> --<span class="built_in">date</span>=short</span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %B&quot;</span> --<span class="built_in">date</span>=short</span><br></pre></td></tr></table></figure>
 
-<h1 id="pull（拉取）">5 &nbsp&nbsp<a href="#pull（拉取）" class="headerlink" title="pull（拉取）"></a>pull（拉取）</h1><h2 id="github从远程仓库拉取">5.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
+<h1 id="pull拉取">5 &nbsp&nbsp<a href="#pull拉取" class="headerlink" title="pull拉取"></a>pull拉取</h1><h2 id="github从远程仓库拉取">5.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="github从上游拉取未并入主干的拉取请求-pull-request">5.2 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
 
-<h1 id="clone（克隆）">6 &nbsp&nbsp<a href="#clone（克隆）" class="headerlink" title="clone（克隆）"></a>clone（克隆）</h1><h2 id="常规克隆">6.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><p>git clone http链接（可以不包含.git后缀）</p>
+<h1 id="clone克隆">6 &nbsp&nbsp<a href="#clone克隆" class="headerlink" title="clone克隆"></a>clone克隆</h1><h2 id="常规克隆">6.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><p>git clone http链接（可以不包含.git后缀）</p>
 <h2 id="wget从Github仓库下载特定的文件夹">6.2 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
 
 <h2 id="克隆特定分支">6.3 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br><span class="line">git <span class="built_in">clone</span> --recursive -b branch—name url</span><br></pre></td></tr></table></figure>
@@ -3592,14 +3593,14 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h2 id="克隆远程仓库中的指定文件或者文件夹">6.4 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h2><p>以克隆blender手册翻译的简中为例：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line"><span class="comment"># 为当前目录初始化一个git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加上游git链接</span></span><br><span class="line">git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line"><span class="comment"># 设置稀疏检出的筛选目录，sparse-checkout文件里写入要拉取的文件或者文件夹。匹配规则类似.gitignore</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout</span><br><span class="line"><span class="comment"># 或者使用sparse-checkout set命令设置设置稀疏检出的筛选目录</span></span><br><span class="line">git sparse-checkout <span class="built_in">set</span> <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"><span class="comment"># 开启稀疏检出</span></span><br><span class="line">git config core.sparsecheckout <span class="literal">true</span></span><br><span class="line"><span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
 
-<h1 id="commit（提交）">7 &nbsp&nbsp<a href="#commit（提交）" class="headerlink" title="commit（提交）"></a>commit（提交）</h1><h2 id="commit信息的规范化">7.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
+<h1 id="commit提交">7 &nbsp&nbsp<a href="#commit提交" class="headerlink" title="commit提交"></a>commit提交</h1><h2 id="commit信息的规范化">7.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
 <ul>
 <li>chore</li>
 <li>fix</li>
 <li>feat</li>
 <li>docs</li>
 </ul>
-<h1 id="release（发布）">8 &nbsp&nbsp<a href="#release（发布）" class="headerlink" title="release（发布）"></a>release（发布）</h1><h2 id="常规发布">8.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
+<h1 id="release发布">8 &nbsp&nbsp<a href="#release发布" class="headerlink" title="release发布"></a>release发布</h1><h2 id="常规发布">8.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
 <h2 id="release-note的规范化">8.2 &nbsp&nbsp<a href="#release-note的规范化" class="headerlink" title="release note的规范化"></a>release note的规范化</h2><ul>
 <li>Breaking Changes</li>
 <li>Changes</li>
@@ -3621,7 +3622,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>还有另外一种方式，在github网站上删除该reop，并重新建立同名repo再推送。</p>
 <h2 id="从所有commit中清除特定文件">10.2 &nbsp&nbsp<a href="#从所有commit中清除特定文件" class="headerlink" title="从所有commit中清除特定文件"></a>从所有commit中清除特定文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --index-filter <span class="string">&#x27;git rm --cached --ignore-unmatch filename&#x27;</span> HEAD <span class="comment">#（*.pdf）</span></span><br><span class="line">git <span class="built_in">rm</span> -rf --ignore-unmatch .git/refs/original <span class="comment">#删除git的备份</span></span><br><span class="line">git reflog expire --expire=now --all <span class="comment">#使所有散落的object失效</span></span><br><span class="line">git fsck --full --unreachable <span class="comment">#检查是否有散落的object, 验证数据库中对象的连接性和有效性</span></span><br><span class="line">git repack -A -d <span class="comment">#重新打包所有对象，并删除旧的打包文件</span></span><br><span class="line">git gc --aggressive --prune=now <span class="comment">#git的垃圾清理车最终删除那些对象, --aggressive 此选项将导致git gc更积极地优化存储库</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="分支管理">11 &nbsp&nbsp<a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="常规操作">11.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
+<h1 id="branch分支">11 &nbsp&nbsp<a href="#branch分支" class="headerlink" title="branch分支"></a>branch分支</h1><h2 id="常规操作">11.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="多人协作的工作流">11.2 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h2><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。</p>
 <h2 id="常规分支管理项目">11.3 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
@@ -5434,7 +5435,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>AI总结</title>
+    <title>AI大模型总结</title>
     <url>/software/ai/</url>
     <content><![CDATA[<h1 id="LLM大模型">1 &nbsp&nbsp<a href="#LLM大模型" class="headerlink" title="LLM大模型"></a>LLM大模型</h1><h2 id="Ollama安装教程">1.1 &nbsp&nbsp<a href="#Ollama安装教程" class="headerlink" title="Ollama安装教程"></a>Ollama安装教程</h2><ol>
 <li>下载<a href="https://ollama.com/download">Ollama安装包</a></li>
@@ -5611,6 +5612,22 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Audacity总结&amp;音频处理</title>
+    <url>/software/audacity/</url>
+    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
+<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>audacity</tag>
+        <tag>音频</tag>
+        <tag>后期处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CG基础</title>
     <url>/software/cg-fundamentals/</url>
     <content><![CDATA[<h1 id="三维制作的规范">1 &nbsp&nbsp<a href="#三维制作的规范" class="headerlink" title="三维制作的规范"></a>三维制作的规范</h1><ol>
@@ -5636,22 +5653,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>CG</tag>
         <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Audacity总结&amp;音频处理</title>
-    <url>/software/audacity/</url>
-    <content><![CDATA[<h1 id="安装openvino-plugins-ai-audacity找不到组件">1 &nbsp&nbsp<a href="#安装openvino-plugins-ai-audacity找不到组件" class="headerlink" title="安装openvino-plugins-ai-audacity找不到组件"></a>安装openvino-plugins-ai-audacity找不到组件</h1><p>运行openvino-plugins-ai-audacity安装程序后，默认是没有启用组件的。</p>
-<p>解决方法：编辑-&gt;偏好设置-&gt;模块-&gt;mod-openvino-&gt;已启用</p>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Installed in Program Files&#x2F;Audacity but does not show up in Audacity[EB&#x2F;OL]. <a href="https://github.com/intel/openvino%E2%80%91plugins%E2%80%91ai%E2%80%91audacity/issues/132">https://github.com/intel/openvino‑plugins‑ai‑audacity/issues/132</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>audacity</tag>
-        <tag>音频</tag>
-        <tag>后期处理</tag>
       </tags>
   </entry>
   <entry>
@@ -6823,7 +6824,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <div class="note default no-icon"><p>如果是1265u的机器，可能是C状态的问题。编辑<code>/etc/default/grub</code>，在<code>GRUB_CMDLINE_LINUX_DEFAULT</code>追加<code>intel_idle.max_cstate=2</code>参数，然后<code>update-grub</code>，最后在BIOS中设置关闭C状态。</p>
 </div>
 
-<h2 id="安装独立显卡的机器启动异常的参数调整">4.13 &nbsp&nbsp<a href="#安装独立显卡的机器启动异常的参数调整" class="headerlink" title="安装独立显卡的机器启动异常的参数调整"></a>安装独立显卡的机器启动异常的参数调整</h2><p>TODO。该问题主要问题是输出显示的问题，BIOS可以设置参数调整。另外修改grub参数也能忽略设备异常启动，但这种方式是临时使用，不建议用于正式环境。<br>拆开独显，只留核显安装pve，可以不用改任何参数。</p>
+<h2 id="安装独立显卡的机器启动异常的参数调整">4.13 &nbsp&nbsp<a href="#安装独立显卡的机器启动异常的参数调整" class="headerlink" title="安装独立显卡的机器启动异常的参数调整"></a>安装独立显卡的机器启动异常的参数调整</h2><p>TODO。该问题主要是输出显示的问题（系统未能选择正确的显示输出方式），BIOS可以设置参数调整。另外修改grub参数也能忽略设备异常启动，但这种方式是临时使用，不建议用于正式环境。<br>拆开独显，只留核显安装pve，可以不用改任何参数。</p>
 <h2 id="PVE宕机故障的排查手段">4.14 &nbsp&nbsp<a href="#PVE宕机故障的排查手段" class="headerlink" title="PVE宕机故障的排查手段"></a>PVE宕机故障的排查手段</h2><ul>
 <li>PVE管理后台-&gt;PVE节点-&gt;系统-&gt;系统日志</li>
 <li>排障思路：</li>
@@ -6987,6 +6988,17 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>点击启动虚拟机。</li>
 <li>pve中用shell：<code>vi /etc/config/network</code>，将lan口ip改为<code>192.168.1.3</code>，<code>reboot</code>重启。vim编辑：按i进入修改模式，按esc退出编辑模式，输入:wq回车保存修改并退出。</li>
 <li>访问WEB管理地址并登录：<a href="http://192.168.1.3/">http://192.168.1.3</a>。默认账户：root。默认密码：password。</li>
+</ol>
+<h3 id="扩容Overlay软件安装空间">6.3.3 &nbsp&nbsp<a href="#扩容Overlay软件安装空间" class="headerlink" title="扩容Overlay软件安装空间"></a>扩容Overlay软件安装空间</h3><ol>
+<li>关闭openwrt虚拟机。</li>
+<li>硬件&gt;硬盘&gt;更多，调整磁盘大小（只能增加大小，按需增加所需硬盘的空间大小）。</li>
+<li>打开openwrt虚拟机。</li>
+<li>系统&gt;磁盘管理L：将新增磁盘大小新建一个分区并格式化为ext4，保存并应用</li>
+<li>挂载刚才新增的分区，举例sda3：<code>mount /dev/sda3 /mnt/sda3</code>，保存并应用。</li>
+<li>拷贝源overlay目录的文件到新分区内：<code>cp -r /overlay/* /mnt/sda3</code>。</li>
+<li>系统&gt;挂载点：添加sda3挂载点为「作为外部overlay使用（&#x2F;overlay）」，保存并应用。</li>
+<li>重启openwrt虚拟机，检查扩容情况。</li>
+<li>根据情况可能需手动移除之前挂载的<code>/mnt/sda3</code>状态。</li>
 </ol>
 <h1 id="创建PVE虚拟机KVM遇到的坑">7 &nbsp&nbsp<a href="#创建PVE虚拟机KVM遇到的坑" class="headerlink" title="创建PVE虚拟机KVM遇到的坑"></a>创建PVE虚拟机KVM遇到的坑</h1><h2 id="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。">7.1 &nbsp&nbsp<a href="#添加EFI磁盘后，启动无法引导磁盘，出现shell界面。" class="headerlink" title="添加EFI磁盘后，启动无法引导磁盘，出现shell界面。"></a>添加EFI磁盘后，启动无法引导磁盘，出现shell界面。</h2><p>原因：创建EFI磁盘时，勾选了添加密钥。</p>
 <p>解决方法：创建EFI磁盘时，取消勾选添加密钥。</p>
@@ -7511,17 +7523,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </li>
 <li>配置订阅：设置自动更新，更新间隔60分钟</li>
 </ul>
-<h3 id="扩容Overlay软件安装空间">12.2.7 &nbsp&nbsp<a href="#扩容Overlay软件安装空间" class="headerlink" title="扩容Overlay软件安装空间"></a>扩容Overlay软件安装空间</h3><ol>
-<li>关闭openwrt虚拟机。</li>
-<li>硬件&gt;硬盘&gt;更多，调整磁盘大小（只能增加大小，按需增加所需硬盘的空间大小）。</li>
-<li>打开openwrt虚拟机。</li>
-<li>系统&gt;磁盘管理L：将新增磁盘大小新建一个分区并格式化为ext4，保存并应用</li>
-<li>挂载刚才新增的分区，举例sda3：<code>mount /dev/sda3 /mnt/sda3</code>，保存并应用。</li>
-<li>拷贝源overlay目录的文件到新分区内：<code>cp -r /overlay/* /mnt/sda3</code>。</li>
-<li>系统&gt;挂载点：添加sda3挂载点为「作为外部overlay使用（&#x2F;overlay）」，保存并应用。</li>
-<li>重启openwrt虚拟机，检查扩容情况。</li>
-<li>根据情况可能需手动移除之前挂载的<code>/mnt/sda3</code>状态。</li>
-</ol>
 <h1 id="HomeLab路由方案二：iKuai主路由-OpenWrt旁路由分流的网络拓扑">13 &nbsp&nbsp<a href="#HomeLab路由方案二：iKuai主路由-OpenWrt旁路由分流的网络拓扑" class="headerlink" title="HomeLab路由方案二：iKuai主路由+OpenWrt旁路由分流的网络拓扑"></a>HomeLab路由方案二：iKuai主路由+OpenWrt旁路由分流的网络拓扑</h1><h2 id="iKuai主路由设置">13.1 &nbsp&nbsp<a href="#iKuai主路由设置" class="headerlink" title="iKuai主路由设置"></a>iKuai主路由设置</h2><p><a href="https://github.com/17mon/china_ip_list">大陆地区IP列表</a></p>
 <h2 id="OpenWrt旁路由设置">13.2 &nbsp&nbsp<a href="#OpenWrt旁路由设置" class="headerlink" title="OpenWrt旁路由设置"></a>OpenWrt旁路由设置</h2><div class="note danger no-icon"><p>该方案选用：ImmortalWrt的LXC容器版本的OpenWrt。</p>
 <p>若OP网络异常且需要网络条件下载文件调试时：关闭OpenClash，调整「网络 -&gt; 接口 -&gt; WAN -&gt; DNS -&gt; 114.114.114.144」。这样OP就能正常访问网络了。</p>
@@ -7855,6 +7856,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
+<h2 id="OpenClash启动失败：no-space-left-on-device-path-etc-openclash">17.2 &nbsp&nbsp<a href="#OpenClash启动失败：no-space-left-on-device-path-etc-openclash" class="headerlink" title="OpenClash启动失败：no space left on device path=/etc/openclash"></a>OpenClash启动失败：<code>no space left on device path=/etc/openclash</code></h2><p>问题：OpenClash启动失败，报错日志为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">initial configuration directory error=can<span class="string">&#x27;t initial MMDB: can&#x27;</span>t download MMDB: write /etc/openclash/Country.mmdb: no space left on device path=/etc/openclash</span><br></pre></td></tr></table></figure>
+
+<p>原因：OpenWrt系统空间满了，请排查<code>Overlay</code>软件安装空间，若满请操作扩容。</p>
+<p>解决方法：请参阅「<a href="#%E6%89%A9%E5%AE%B9Overlay%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%A9%BA%E9%97%B4">扩容Overlay软件安装空间</a>」</p>
 <h1 id="飞牛fnOS（私有云NAS总结）">18 &nbsp&nbsp<a href="#飞牛fnOS（私有云NAS总结）" class="headerlink" title="飞牛fnOS（私有云NAS总结）"></a>飞牛fnOS（私有云NAS总结）</h1><h2 id="影视及下载相关">18.1 &nbsp&nbsp<a href="#影视及下载相关" class="headerlink" title="影视及下载相关"></a>影视及下载相关</h2><h3 id="关于飞牛影视刮削的文件命名规则">18.1.1 &nbsp&nbsp<a href="#关于飞牛影视刮削的文件命名规则" class="headerlink" title="关于飞牛影视刮削的文件命名规则"></a>关于飞牛影视刮削的文件命名规则</h3><div class="note danger no-icon"><p>飞牛影视刮削数据源是TMDB，参见官方论坛帖子「<a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=32333">不知道飞牛影视刮削是直连TMDB和IMDB？</a>」。</p>
 </div>
 
@@ -8254,7 +8260,10 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
   <entry>
     <title>虚拟机总结</title>
     <url>/software/virtual-machine/</url>
-    <content><![CDATA[<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果虚拟机具有 GUI（X11 等），选择安装桌面包，否则安装普通包open-vm-tools</span></span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启虚拟机</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证安装，若输出显示版本号代表安装成功，如13.0.0.0 (build-24696409)</span></span><br><span class="line">vmware-toolbox-cmd -v</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<blockquote>
+<p>虚拟机桌面系统一般建议设置「关闭密码登录」「关闭屏保和自动熄屏」，windows同时建议关闭「」系统更新</p>
+</blockquote>
+<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果虚拟机具有 GUI（X11 等），选择安装桌面包，否则安装普通包open-vm-tools</span></span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启虚拟机</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证安装，若输出显示版本号代表安装成功，如13.0.0.0 (build-24696409)</span></span><br><span class="line">vmware-toolbox-cmd -v</span><br></pre></td></tr></table></figure>
 
 <h2 id="VMware实现连接虚拟机ssh">1.2 &nbsp&nbsp<a href="#VMware实现连接虚拟机ssh" class="headerlink" title="VMware实现连接虚拟机ssh"></a>VMware实现连接虚拟机ssh</h2><p>以ubuntu为例，安装和配置好<code>openssh-server</code>之后，右键虚拟机标签-&gt;SSH-&gt;配置SSH（配置ubuntu用户名和SSH端口）-&gt;连接到SSH，然后VMware会自动调用Windows终端CMD连接SSH，这个<code>192.168.132.x</code>是安装VMware创建的虚拟网卡，Ubuntu虚拟机内置网卡获取的IP也是基于这个网段：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入Ubuntu密码</span></span><br><span class="line">username@192.168.132.128<span class="string">&#x27;s password:</span></span><br></pre></td></tr></table></figure>
@@ -9729,6 +9738,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </tr>
 </thead>
 <tbody><tr>
+<td align="center">程序UAC提权</td>
+<td align="center"><code>Ctrl + Shift + Enter</code></td>
+<td align="center"><code>Win+S</code>搜索应用程序，以该快捷键启用程序</td>
+</tr>
+<tr>
 <td align="center">任务管理器</td>
 <td align="center"><code>Ctrl + Shift + Esc</code></td>
 <td align="center"></td>
@@ -9758,7 +9772,17 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </li>
 <li>解决方法2：科学上网代理到外网服务器。</li>
 </ul>
-<h1 id="微软商店应用">6 &nbsp&nbsp<a href="#微软商店应用" class="headerlink" title="微软商店应用"></a>微软商店应用</h1><h2 id="下载微软商店应用离线安装包">6.1 &nbsp&nbsp<a href="#下载微软商店应用离线安装包" class="headerlink" title="下载微软商店应用离线安装包"></a>下载微软商店应用离线安装包</h2><p>微软商店应用下载地址解析站点（下载通道一般选默认的RP）：<a href="https://store.rg-adguard.net/">https://store.rg-adguard.net/</a></p>
+<h1 id="微软商店应用">6 &nbsp&nbsp<a href="#微软商店应用" class="headerlink" title="微软商店应用"></a>微软商店应用</h1><h2 id="安装或重装微软商店MicrosoftStore">6.1 &nbsp&nbsp<a href="#安装或重装微软商店MicrosoftStore" class="headerlink" title="安装或重装微软商店MicrosoftStore"></a>安装或重装微软商店MicrosoftStore</h2><p>主要针对如下场景：</p>
+<ul>
+<li>Windows LTSC没有预装微软商店</li>
+<li>普通Windows版本重装微软商店</li>
+</ul>
+<p>解决方法：</p>
+<ul>
+<li>CMD&#x2F;PowerShell：<code>wsreset -i</code></li>
+<li>PowerShell：<code>Get-AppxPackage -AllUsers -Name Microsoft.WindowsStore | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register &quot;$($_.InstallLocation)\AppXManifest.xml&quot;&#125;</code></li>
+</ul>
+<h2 id="下载微软商店应用离线安装包">6.2 &nbsp&nbsp<a href="#下载微软商店应用离线安装包" class="headerlink" title="下载微软商店应用离线安装包"></a>下载微软商店应用离线安装包</h2><p>微软商店应用下载地址解析站点（下载通道一般选默认的RP）：<a href="https://store.rg-adguard.net/">https://store.rg-adguard.net/</a></p>
 <p>微软商店应用在线链接：</p>
 <table>
 <thead>
@@ -9908,27 +9932,22 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <td align="center">不安装也能正常截图和录屏<br>暂未查明该组件实际作用</td>
 </tr>
 </tbody></table>
-<h2 id="重装微软预装UWP应用">6.2 &nbsp&nbsp<a href="#重装微软预装UWP应用" class="headerlink" title="重装微软预装UWP应用"></a>重装微软预装UWP应用</h2><h3 id="依据AppXManifest-xml重装">6.2.1 &nbsp&nbsp<a href="#依据AppXManifest-xml重装" class="headerlink" title="依据AppXManifest.xml重装"></a>依据<code>AppXManifest.xml</code>重装</h3><p>cmd命令行终端运行：</p>
+<h2 id="重装微软预装UWP应用">6.3 &nbsp&nbsp<a href="#重装微软预装UWP应用" class="headerlink" title="重装微软预装UWP应用"></a>重装微软预装UWP应用</h2><h3 id="依据AppXManifest-xml重装">6.3.1 &nbsp&nbsp<a href="#依据AppXManifest-xml重装" class="headerlink" title="依据AppXManifest.xml重装"></a>依据<code>AppXManifest.xml</code>重装</h3><p>cmd命令行终端运行：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 如果office365hub有打开的话，则强制关闭该进程，通过WWAHost关闭</span></span><br><span class="line">powershell -command &quot;Get-AppxPackage -AllUsers | Foreach &#123;<span class="keyword">if</span> (Get-Process -Name \&quot;WWAHost\&quot; -ErrorAction SilentlyContinue) &#123; Stop-Process -Name \&quot;WWAHost\&quot; -Force &#125; ; Add-AppxPackage -DisableDevelopmentMode -Register -ForceApplicationShutdown \&quot;$($_.InstallLocation)\AppXManifest.xml\&quot; &#125;&quot;</span><br></pre></td></tr></table></figure>
 
 <p>powershell终端运行（allUsers参数是针对系统所有账户，verbose参数是输出每条日志信息）：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">Get-AppXPackage -AllUsers -Name Microsoft.MicrosoftEdge | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register &quot;$($_.InstallLocation)\AppXManifest.xml&quot; -Verbose&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="根据离线包重装">6.2.2 &nbsp&nbsp<a href="#根据离线包重装" class="headerlink" title="根据离线包重装"></a>根据离线包重装</h3><p>cmd命令行终端运行（install_uwp_apps函数提供多个参数，可以安装相应依赖包）：</p>
+<h3 id="根据离线包重装">6.3.2 &nbsp&nbsp<a href="#根据离线包重装" class="headerlink" title="根据离线包重装"></a>根据离线包重装</h3><p>cmd命令行终端运行（install_uwp_apps函数提供多个参数，可以安装相应依赖包）：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">:ps_add_appxpackage</span><br><span class="line"><span class="comment">@REM 如果office365hub有打开的话，则强制关闭该进程</span></span><br><span class="line">tasklist | <span class="built_in">find</span> &quot;WWAHost.exe&quot; &gt;<span class="built_in">nul</span> &amp;&amp; <span class="built_in">taskkill</span> /f /im &quot;WWAHost.exe&quot; &gt;<span class="built_in">nul</span></span><br><span class="line"><span class="built_in">echo</span> 开始安装「%~<span class="number">1</span>」</span><br><span class="line">powershell -command &quot;Add-AppxPackage -ForceApplicationShutdown &#x27;<span class="variable">%SystemDrive%</span>\Sysprep\%~<span class="number">1</span>&#x27;&quot;</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="keyword">exit</span> /b</span><br><span class="line"></span><br><span class="line">:install_uwp_apps</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">1</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="built_in">echo</span> 开始安装/更新「%~<span class="number">1</span>」</span><br><span class="line">    <span class="built_in">echo</span>.</span><br><span class="line">    <span class="keyword">call</span> :draw_line &quot;-&quot;</span><br><span class="line">    <span class="built_in">echo</span>.</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    <span class="keyword">exit</span> /b</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">2</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">2</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">3</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">3</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">4</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">4</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">5</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">5</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">6</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">6</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">7</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">7</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;%~<span class="number">8</span>&quot; <span class="keyword">NEQ</span> &quot;&quot; (</span><br><span class="line">    <span class="keyword">call</span> :ps_add_appxpackage &quot;%~<span class="number">8</span>&quot;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">call</span> :draw_line &quot;=&quot;</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="keyword">exit</span> /b</span><br><span class="line"></span><br><span class="line"><span class="keyword">call</span> :install_uwp_apps &quot;微软商店&quot; &quot;Microsoft.UI.Xaml.<span class="number">2</span>.<span class="number">8</span>_8.<span class="number">2310</span>.<span class="number">30001</span>.<span class="number">0</span>_x64__8wekyb3d8bbwe.Appx&quot; &quot;Microsoft.<span class="built_in">NET</span>.Native.Framework.<span class="number">2</span>.<span class="number">2</span>_2.<span class="number">2</span>.<span class="number">29512</span>.<span class="number">0</span>_x64__8wekyb3d8bbwe.Appx&quot; &quot;Microsoft.<span class="built_in">NET</span>.Native.Runtime.<span class="number">2</span>.<span class="number">2</span>_2.<span class="number">2</span>.<span class="number">28604</span>.<span class="number">0</span>_x64__8wekyb3d8bbwe.Appx&quot; &quot;Microsoft.VCLibs.<span class="number">140</span>.<span class="number">00</span>_14.<span class="number">0</span>.<span class="number">33519</span>.<span class="number">0</span>_x64__8wekyb3d8bbwe.Appx&quot; &quot;Microsoft.VCLibs.<span class="number">140</span>.<span class="number">00</span>.UWPDesktop_14.<span class="number">0</span>.<span class="number">33519</span>.<span class="number">0</span>_x64__8wekyb3d8bbwe.Appx&quot; &quot;Microsoft.WindowsStore_22403.<span class="number">1401</span>.<span class="number">3</span>.<span class="number">0</span>_neutral_~_8wekyb3d8bbwe.Msixbundle&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="xbox手柄插入提示：无法打开此-ms-gamebar-链接">6.3 &nbsp&nbsp<a href="#xbox手柄插入提示：无法打开此-ms-gamebar-链接" class="headerlink" title="xbox手柄插入提示：无法打开此&quot;ms-gamebar&quot;链接"></a>xbox手柄插入提示：无法打开此&quot;ms-gamebar&quot;链接</h2><p>解决方法：</p>
+<h2 id="xbox手柄插入提示：无法打开此-ms-gamebar-链接">6.4 &nbsp&nbsp<a href="#xbox手柄插入提示：无法打开此-ms-gamebar-链接" class="headerlink" title="xbox手柄插入提示：无法打开此&quot;ms-gamebar&quot;链接"></a>xbox手柄插入提示：无法打开此&quot;ms-gamebar&quot;链接</h2><p>解决方法：</p>
 <ol>
 <li>重新卸载并安装xbox game bar</li>
 <li>注册表禁用</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reg add &quot;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR&quot; /v &quot;AppCaptureEnabled&quot; /t &quot;REG_DWORD&quot; /d &quot;0&quot; /f</span><br><span class="line">reg add &quot;HKCU\System\GameConfigStore&quot; /v &quot;GameDVR_Enabled&quot; /t &quot;REG_DWORD&quot; /d &quot;0&quot; /f</span><br></pre></td></tr></table></figure>
 
-<h2 id="Windows-LTSC安装微软商店MicrosoftStore">6.4 &nbsp&nbsp<a href="#Windows-LTSC安装微软商店MicrosoftStore" class="headerlink" title="Windows LTSC安装微软商店MicrosoftStore"></a>Windows LTSC安装微软商店MicrosoftStore</h2><p>解决方法：</p>
-<ul>
-<li>CMD&#x2F;PowerShell：<code>wsreset -i</code></li>
-<li>PowerShell：<code>Get-AppxPackage -AllUsers -Name Microsoft.WindowsStore | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register &quot;$($_.InstallLocation)\AppXManifest.xml&quot;&#125;</code></li>
-</ul>
 <h1 id="系统更新">7 &nbsp&nbsp<a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h1><h2 id="无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到-Internet">7.1 &nbsp&nbsp<a href="#无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到-Internet" class="headerlink" title="无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet"></a>无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet</h2><ul>
 <li>解决方法1：执行系统自带诊断程序：<code>C:\Windows\diagnostics\system\WindowsUpdate\DiagPackage.diagpkg</code></li>
 <li>解决方法2:<ol>
@@ -10166,10 +10185,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>选择加载<code>C:\Windows\System32\DriverStore</code>，勾选包含子文文件夹。</li>
 </ol>
 <p>P.S.一般手动指定加载后，后续重新拔插相同设备也无需再二次加载。</p>
-<h1 id="电源计划">21 &nbsp&nbsp<a href="#电源计划" class="headerlink" title="电源计划"></a>电源计划</h1><h2 id="Windows电源计划">21.1 &nbsp&nbsp<a href="#Windows电源计划" class="headerlink" title="Windows电源计划"></a>Windows电源计划</h2><h3 id="隐藏的处理器电源计划设置">21.1.1 &nbsp&nbsp<a href="#隐藏的处理器电源计划设置" class="headerlink" title="隐藏的处理器电源计划设置"></a>隐藏的处理器电源计划设置</h3><p>通过<code>powercfg</code>命令设置显示（终端管理员身份运行），恢复隐藏使用<code>+ATTRIB_HIDE</code>即可，更多的选项参见「<a href="https://www.bilibili.com/read/cv22139721/">Windows10和11隐藏的处理器电源管理选项</a>」：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 显示（处理器性能核心放置最小核心数量）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">0</span>cc5b647-c1df-<span class="number">4637</span>-<span class="number">891</span>a-dec35c318583 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（针对第1类处理器电源效率的处理器性能核心放置最小核心数量）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">0</span>cc5b647-c1df-<span class="number">4637</span>-<span class="number">891</span>a-dec35c318584 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（生效的异类策略）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">7</span>f2f5cfa-f10c-<span class="number">4823</span>-b5e1-e93ae85f46b5 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（异类线程调度策略）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">93</span>b8b6dc-<span class="number">0698</span>-<span class="number">4</span>d1c-<span class="number">9</span>ee4-<span class="number">0644</span>e900c85d -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（异类短运行线程调度策略）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR bae08b81-<span class="number">2</span>d5e-<span class="number">4688</span>-ad6a-<span class="number">13243356654</span>b -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（延迟敏感度提示处理器性能）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">619</span>b7505-<span class="number">003</span>b-<span class="number">4</span>e82-b7a6-<span class="number">4</span>dd29c300971 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（针对第 1 类处理器电源效率的延迟敏感度提示处理器性能）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">619</span>b7505-<span class="number">003</span>b-<span class="number">4</span>e82-b7a6-<span class="number">4</span>dd29c300972 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（允许节流状态）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">3</span>b04d4fd-<span class="number">1</span>cc7-<span class="number">4</span>f23-ab1c-d1337819c4bb -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（处理器性能核心放置过度利用阈值）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">943</span>c8cb6-<span class="number">6</span>f93-<span class="number">4227</span>-ad87-e9a3feec08d1 -ATTRIB_HIDE</span><br></pre></td></tr></table></figure>
+<h1 id="电源计划">21 &nbsp&nbsp<a href="#电源计划" class="headerlink" title="电源计划"></a>电源计划</h1><h2 id="Windows电源计划">21.1 &nbsp&nbsp<a href="#Windows电源计划" class="headerlink" title="Windows电源计划"></a>Windows电源计划</h2><h3 id="切换电源计划">21.1.1 &nbsp&nbsp<a href="#切换电源计划" class="headerlink" title="切换电源计划"></a>切换电源计划</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 以下是常见四个电源计划对应的GUID，一般专业版系统上默认已存在平衡/高性能/节能三个方案，卓越性能默认并未自动创建</span></span><br><span class="line">powercfg /list</span><br><span class="line">电源方案 GUID: <span class="number">381</span>b4222-f694-<span class="number">41</span>f0-<span class="number">9685</span>-ff5bb260df2e  (平衡)</span><br><span class="line">电源方案 GUID: <span class="number">8</span>c5e7fda-e8bf-<span class="number">4</span>a96-<span class="number">9</span>a85-a6e23a8c635c  (高性能)</span><br><span class="line">电源方案 GUID: a1841308-<span class="number">3541</span>-<span class="number">4</span>fab-bc81-f71556f20b4a  (节能)</span><br><span class="line">电源方案 GUID: e9a42b02-d5df-<span class="number">448</span>d-aa00-<span class="number">03</span>f14749eb61  (卓越性能)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 切换到卓越性能模式（用新的GUID复制一份卓越性能模式，然后再切换新方案）</span></span><br><span class="line">powercfg -duplicatescheme e9a42b02-d5df-<span class="number">448</span>d-aa00-<span class="number">03</span>f14749eb61 a7fde286-<span class="number">5574</span>-<span class="number">4</span>ee9-<span class="number">98</span>a5-<span class="number">8</span>b35a2f2a826</span><br><span class="line">powercfg -s a7fde286-<span class="number">5574</span>-<span class="number">4</span>ee9-<span class="number">98</span>a5-<span class="number">8</span>b35a2f2a826</span><br></pre></td></tr></table></figure>
 
-<h3 id="处理器电源管理参数的设置说明">21.1.2 &nbsp&nbsp<a href="#处理器电源管理参数的设置说明" class="headerlink" title="处理器电源管理参数的设置说明"></a>处理器电源管理参数的设置说明</h3><p>不同的系统的平衡模式下，对处理器的调度有所不同，Windows Server不需要休眠，而Windows10和Windows11都偏向节能和性能的均衡设定，以下对处理器电源管理的部分设定做进一步的说明：</p>
+<h3 id="隐藏的处理器电源计划设置">21.1.2 &nbsp&nbsp<a href="#隐藏的处理器电源计划设置" class="headerlink" title="隐藏的处理器电源计划设置"></a>隐藏的处理器电源计划设置</h3><p>通过<code>powercfg</code>命令设置显示（终端管理员身份运行），恢复隐藏使用<code>+ATTRIB_HIDE</code>即可，更多的选项参见「<a href="https://www.bilibili.com/read/cv22139721/">Windows10和11隐藏的处理器电源管理选项</a>」：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 显示（处理器性能核心放置最小核心数量）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">0</span>cc5b647-c1df-<span class="number">4637</span>-<span class="number">891</span>a-dec35c318583 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（针对第1类处理器电源效率的处理器性能核心放置最小核心数量）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">0</span>cc5b647-c1df-<span class="number">4637</span>-<span class="number">891</span>a-dec35c318584 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（生效的异类策略）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">7</span>f2f5cfa-f10c-<span class="number">4823</span>-b5e1-e93ae85f46b5 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（异类线程调度策略）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">93</span>b8b6dc-<span class="number">0698</span>-<span class="number">4</span>d1c-<span class="number">9</span>ee4-<span class="number">0644</span>e900c85d -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（异类短运行线程调度策略）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR bae08b81-<span class="number">2</span>d5e-<span class="number">4688</span>-ad6a-<span class="number">13243356654</span>b -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（延迟敏感度提示处理器性能）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">619</span>b7505-<span class="number">003</span>b-<span class="number">4</span>e82-b7a6-<span class="number">4</span>dd29c300971 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（针对第 1 类处理器电源效率的延迟敏感度提示处理器性能）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">619</span>b7505-<span class="number">003</span>b-<span class="number">4</span>e82-b7a6-<span class="number">4</span>dd29c300972 -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（允许节流状态）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">3</span>b04d4fd-<span class="number">1</span>cc7-<span class="number">4</span>f23-ab1c-d1337819c4bb -ATTRIB_HIDE</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">@REM 显示（处理器性能核心放置过度利用阈值）</span></span><br><span class="line">powercfg -attributes SUB_PROCESSOR <span class="number">943</span>c8cb6-<span class="number">6</span>f93-<span class="number">4227</span>-ad87-e9a3feec08d1 -ATTRIB_HIDE</span><br></pre></td></tr></table></figure>
+
+<h3 id="处理器电源管理参数的设置说明">21.1.3 &nbsp&nbsp<a href="#处理器电源管理参数的设置说明" class="headerlink" title="处理器电源管理参数的设置说明"></a>处理器电源管理参数的设置说明</h3><p>不同的系统的平衡模式下，对处理器的调度有所不同，Windows Server不需要休眠，而Windows10和Windows11都偏向节能和性能的均衡设定，以下对处理器电源管理的部分设定做进一步的说明：</p>
 <ol>
 <li>处理器性能核心放置最小核心数量：此项设定小核心（高效处理器）的休眠设定（在任务管理器中显示该核心为已停止状态），如果设置为100%，代表小核心不再休眠，Windows 10中设置为100%，主要的缘故在于Window10发行时，没有12、13、14代处理器，所以该项设置默认为所有小核不休眠，但Windows11 中设置为4%，代表支持小核心休眠。</li>
 <li>针对第1类处理器电源效率的处理器性能核心放置最小核心数量：此项设定大核心（高性能处理器和超线程）的休眠设定（在任务管理器中显示该核心或超线程为已停止状态），如果设置为100%，代表大核不再休眠，如果设置为50%代表休眠超线程，如果设置为0%代表所有的大核随机休眠。</li>
@@ -10192,7 +10213,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </li>
 <li>延迟敏感度提示处理器性能&#x2F;针对第 1 类处理器电源效率的延迟敏感度提示处理器性能：此两项设定主要设定小核&#x2F;大核的休眠与唤醒的敏感程度，12、13、14代处理器建议设置为Windows11的默认设置99%。能够快速唤醒已停止的处理器核心参与工作，也可以快速让没负载的核心快速的进入停止状态。如果是不希望核心进入休眠状态，随时都打满鸡血，那可以直接设定所有核心与超线程不休眠，永远处于亢奋状态。</li>
 </ol>
-<h3 id="处理器电源管理参数的设置">21.1.3 &nbsp&nbsp<a href="#处理器电源管理参数的设置" class="headerlink" title="处理器电源管理参数的设置"></a>处理器电源管理参数的设置</h3><blockquote>
+<h3 id="处理器电源管理参数的设置">21.1.4 &nbsp&nbsp<a href="#处理器电源管理参数的设置" class="headerlink" title="处理器电源管理参数的设置"></a>处理器电源管理参数的设置</h3><blockquote>
 <p><a href="https://forums.guru3d.com/threads/windows-power-plan-settings-explorer-utility.416058/">GUI界面设置程序：PowerSettingsExplorer</a></p>
 </blockquote>
 <p>通过<code>powercfg</code>命令设置（终端管理员身份运行）：</p>
@@ -10284,12 +10305,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#49;&#46;&#99;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#64;&#x74;&#x68;&#x61;&#110;&#107;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#x2e;&#x63;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#x2e;&#x63;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#46;&#x63;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#110;&#107;&#x73;&#46;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -10326,17 +10347,18 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>WIN+R：msconfig-&gt;「引导」-&gt;选中我们需要默认启动的操作系统-&gt;「设为默认值」</li>
 <li>高级系统设置-&gt;高级-&gt;启动和故障恢复-&gt;设置-&gt;默认操作系统</li>
 </ol>
-<h1 id="封装系统">3 &nbsp&nbsp<a href="#封装系统" class="headerlink" title="封装系统"></a>封装系统</h1><h2 id="关于IT天空论坛工具的锁定主页的行为">3.1 &nbsp&nbsp<a href="#关于IT天空论坛工具的锁定主页的行为" class="headerlink" title="关于IT天空论坛工具的锁定主页的行为"></a>关于IT天空论坛工具的锁定主页的行为</h2><p>锁定情况：EasyImageX2是优启通里面的系统安装器，在优启通里面是去广告的，但是换到另一个pe运行它又是带广告的；万能驱动用it天空的系统封装软件封装后可以去广告，移出来运行又会有广告。</p>
+<h1 id="无人值守部署系统">3 &nbsp&nbsp<a href="#无人值守部署系统" class="headerlink" title="无人值守部署系统"></a>无人值守部署系统</h1><h2 id="自动分区硬盘部署镜像">3.1 &nbsp&nbsp<a href="#自动分区硬盘部署镜像" class="headerlink" title="自动分区硬盘部署镜像"></a>自动分区硬盘部署镜像</h2><p><a href="https://www.tenforums.com/installation-upgrade/182945-automate-diskpart-clean-install.html">https://www.tenforums.com/installation-upgrade/182945-automate-diskpart-clean-install.html</a></p>
+<h1 id="封装系统">4 &nbsp&nbsp<a href="#封装系统" class="headerlink" title="封装系统"></a>封装系统</h1><h2 id="关于IT天空论坛工具的锁定主页的行为">4.1 &nbsp&nbsp<a href="#关于IT天空论坛工具的锁定主页的行为" class="headerlink" title="关于IT天空论坛工具的锁定主页的行为"></a>关于IT天空论坛工具的锁定主页的行为</h2><p>锁定情况：EasyImageX2是优启通里面的系统安装器，在优启通里面是去广告的，但是换到另一个pe运行它又是带广告的；万能驱动用it天空的系统封装软件封装后可以去广告，移出来运行又会有广告。</p>
 <p>实现原理：优启通启动的时候会在注册表生产一个当前机器的密钥字符串，然后EasyImageX2去解密判断，判断正确就免广告。同理万能驱动也是。注册表位置：<code>HKEY_LOCAL_MACHINE\SOFTWARE\EasyDrv7\</code>，但是仍然无法通过预先在系统中写入该注册表内容来去除推广包软件和主页绑定，因为是根据当前硬件信息生成一个key的。</p>
-<h2 id="万能驱动的精简">3.2 &nbsp&nbsp<a href="#万能驱动的精简" class="headerlink" title="万能驱动的精简"></a>万能驱动的精简</h2><p>精简思路：softext文件夹内的几个安装包和驱动的压缩包是可删的，但所有e7e文件不可删（softext的e7e若删除，则会报错篡改；驱动压缩包对应的e7e若删除，则会导致卡100%的问题）。一般，驱动文件删除显卡驱动即可，oem和通用的。这种精简方式只适合在部署阶段中调用，无法在桌面环境下运行（会报错文件不完整或者软件被篡改）。如果想要精简并同时可以在桌面环境中运行的话，需要用老版的主程序替代。</p>
-<h2 id="DISM的系统打包（备份）">3.3 &nbsp&nbsp<a href="#DISM的系统打包（备份）" class="headerlink" title="DISM的系统打包（备份）"></a>DISM的系统打包（备份）</h2><p>备份操作，会将驱动器的映像捕获到新的 .wim 文件中：</p>
+<h2 id="万能驱动的精简">4.2 &nbsp&nbsp<a href="#万能驱动的精简" class="headerlink" title="万能驱动的精简"></a>万能驱动的精简</h2><p>精简思路：softext文件夹内的几个安装包和驱动的压缩包是可删的，但所有e7e文件不可删（softext的e7e若删除，则会报错篡改；驱动压缩包对应的e7e若删除，则会导致卡100%的问题）。一般，驱动文件删除显卡驱动即可，oem和通用的。这种精简方式只适合在部署阶段中调用，无法在桌面环境下运行（会报错文件不完整或者软件被篡改）。如果想要精简并同时可以在桌面环境中运行的话，需要用老版的主程序替代。</p>
+<h2 id="DISM的系统打包（备份）">4.3 &nbsp&nbsp<a href="#DISM的系统打包（备份）" class="headerlink" title="DISM的系统打包（备份）"></a>DISM的系统打包（备份）</h2><p>备份操作，会将驱动器的映像捕获到新的 .wim 文件中：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">Dism /Capture-Image /ImageFile:D:\Windows10Pro-<span class="number">2024</span>-<span class="number">04</span>-<span class="number">13</span>.wim /CaptureDir:C:\ /Name:Windows10Pro-<span class="number">2024</span>-<span class="number">04</span>-<span class="number">13</span> /compress:max</span><br></pre></td></tr></table></figure>
 <p>可以同时指定使用配置文件来打包wim镜像，比如捕获文件时排除休眠文件<code>hiberfil.sys</code>等，参见「<a href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-configuration-list-and-wimscriptini-files-winnext?view=windows-11">DISM 配置列表文件</a>」：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">Dism /Capture-Image /ImageFile:D:\Windows10Pro-<span class="number">2024</span>-<span class="number">04</span>-<span class="number">13</span>.wim /CaptureDir:C:\ /Name:Windows10Pro-<span class="number">2024</span>-<span class="number">04</span>-<span class="number">13</span> /ConfigFile:config_list.ini /compress:max</span><br></pre></td></tr></table></figure>
 <p>config_list.ini文件内容</p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[ExclusionList]</span></span><br><span class="line">\$ntfs.log</span><br><span class="line">\hiberfil.sys</span><br><span class="line">\pagefile.sys</span><br><span class="line">\swapfile.sys</span><br><span class="line">\System Volume Information</span><br><span class="line">\RECYCLER</span><br><span class="line">\Windows\CSC</span><br><span class="line"></span><br><span class="line"><span class="section">[CompressionExclusionList]</span></span><br><span class="line">*.mp3</span><br><span class="line">*.zip</span><br><span class="line">*.cab</span><br><span class="line">\WINDOWS\inf\*.pnf</span><br></pre></td></tr></table></figure>
 
-<h2 id="DISM的系统恢复（应用）">3.4 &nbsp&nbsp<a href="#DISM的系统恢复（应用）" class="headerlink" title="DISM的系统恢复（应用）"></a>DISM的系统恢复（应用）</h2><p>关于使用系统自带命令工具来操作格式化硬盘，恢复镜像等操作，实际用法可参见「<a href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions-sample-scripts?view=windows-11">部署实验室示例脚本</a>」</p>
+<h2 id="DISM的系统恢复（应用）">4.4 &nbsp&nbsp<a href="#DISM的系统恢复（应用）" class="headerlink" title="DISM的系统恢复（应用）"></a>DISM的系统恢复（应用）</h2><p>关于使用系统自带命令工具来操作格式化硬盘，恢复镜像等操作，实际用法可参见「<a href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions-sample-scripts?view=windows-11">部署实验室示例脚本</a>」</p>
 <p>恢复操作，此命令将对指定的分区应用 Windows 映像文件 (.wim)：</p>
 <blockquote>
 <p>一般推荐同时使用<code>/Verify</code>和<code>/NoRpFix</code>参数，但在我实际应用中，wim镜像打包都OK，但是还原会有概率导致出问题（<code>/NoRpFix</code>还没测试过，也可能是因为中文字符的缘故，以往测试时<code>/Name</code>参数使用中文字符<code>专业版</code>，而非<code>Pro</code>）。</p>
@@ -10345,8 +10367,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>bcdboot重建系统引导（UEFI）：</p>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="variable">%win_drive_letter%</span>:\Windows\System32\bcdboot <span class="variable">%win_drive_letter%</span>:\Windows /s <span class="variable">%efi_drive_letter%</span>: /f UEFI /l zh-cn</span><br></pre></td></tr></table></figure>
 
-<h1 id="WinPE">4 &nbsp&nbsp<a href="#WinPE" class="headerlink" title="WinPE"></a>WinPE</h1><h2 id="WinPE的二次修改封装">4.1 &nbsp&nbsp<a href="#WinPE的二次修改封装" class="headerlink" title="WinPE的二次修改封装"></a>WinPE的二次修改封装</h2><h3 id="ISO镜像">4.1.1 &nbsp&nbsp<a href="#ISO镜像" class="headerlink" title="ISO镜像"></a>ISO镜像</h3><p>ISO镜像的二次修改和打包工具：<a href="http://www.anyburn.com/">AnyBurn</a>，使用软件中的「编辑镜像文件」功能即可，这样就可以完美保留原镜像的引导启动数据。（不推荐用UltraISO，界面老旧且难用，主要是ISO的引导信息不好弄）</p>
-<h3 id="WIM镜像">4.1.2 &nbsp&nbsp<a href="#WIM镜像" class="headerlink" title="WIM镜像"></a>WIM镜像</h3><p>wim镜像的二次修改，dism使用命令参见「<a href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11">DISM 映像管理命令行选项</a>」：</p>
+<h1 id="WinPE">5 &nbsp&nbsp<a href="#WinPE" class="headerlink" title="WinPE"></a>WinPE</h1><h2 id="WinPE的二次修改封装">5.1 &nbsp&nbsp<a href="#WinPE的二次修改封装" class="headerlink" title="WinPE的二次修改封装"></a>WinPE的二次修改封装</h2><h3 id="ISO镜像">5.1.1 &nbsp&nbsp<a href="#ISO镜像" class="headerlink" title="ISO镜像"></a>ISO镜像</h3><p>ISO镜像的二次修改和打包工具：<a href="http://www.anyburn.com/">AnyBurn</a>，使用软件中的「编辑镜像文件」功能即可，这样就可以完美保留原镜像的引导启动数据。（不推荐用UltraISO，界面老旧且难用，主要是ISO的引导信息不好弄）</p>
+<h3 id="WIM镜像">5.1.2 &nbsp&nbsp<a href="#WIM镜像" class="headerlink" title="WIM镜像"></a>WIM镜像</h3><p>wim镜像的二次修改，dism使用命令参见「<a href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11">DISM 映像管理命令行选项</a>」：</p>
 <ul>
 <li>单版本：解压后就是系统本身，这种直接解压进行二次修改，然后dism++重新打包即可，记得勾选「可启动镜像」的选项。</li>
 <li>多版本（dism如何一直提示镜像已经被加载过，使用<code>dism /cleanup-wim</code>命令强制卸载所有镜像）<ol>
@@ -10356,21 +10378,21 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ol>
   <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">Dism /Export-Image /SourceImageFile:<span class="number">11</span>pex64.wim /SourceIndex:<span class="number">1</span> /DestinationImageFile:<span class="number">11</span>pex64.wim</span><br><span class="line">Dism /Export-Image /SourceImageFile:<span class="number">11</span>pex64.wim /SourceIndex:<span class="number">2</span> /DestinationImageFile:<span class="number">11</span>pex64.wim</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="关于加载PE后出现「-windows-system32-drivers-cdrom-sys」驱动加载错误的分析">4.2 &nbsp&nbsp<a href="#关于加载PE后出现「-windows-system32-drivers-cdrom-sys」驱动加载错误的分析" class="headerlink" title="关于加载PE后出现「\windows\system32\drivers\cdrom.sys」驱动加载错误的分析"></a>关于加载PE后出现「\windows\system32\drivers\cdrom.sys」驱动加载错误的分析</h2><p>问题现象：无论是更换pe版本或者更换U盘亦或是用其他分区方案制作PE，当选择U盘PE引导项加载时，都会出现这个「\windows\system32\drivers\cdrom.sys」报错提示，无法进入系统。</p>
+<h2 id="关于加载PE后出现「-windows-system32-drivers-cdrom-sys」驱动加载错误的分析">5.2 &nbsp&nbsp<a href="#关于加载PE后出现「-windows-system32-drivers-cdrom-sys」驱动加载错误的分析" class="headerlink" title="关于加载PE后出现「\windows\system32\drivers\cdrom.sys」驱动加载错误的分析"></a>关于加载PE后出现「\windows\system32\drivers\cdrom.sys」驱动加载错误的分析</h2><p>问题现象：无论是更换pe版本或者更换U盘亦或是用其他分区方案制作PE，当选择U盘PE引导项加载时，都会出现这个「\windows\system32\drivers\cdrom.sys」报错提示，无法进入系统。</p>
 <p>问题原因：硬件稳定性引起系统层面的问题，一般是内存多一些，CPU或者硬盘有小概率可能会导致这样。</p>
 <p>解决方法：从硬件排障手段入手排查，尝试拔插内存或者单根内存测试下是否会这样。</p>
-<h2 id="PE内引导到特定设备">4.3 &nbsp&nbsp<a href="#PE内引导到特定设备" class="headerlink" title="PE内引导到特定设备"></a>PE内引导到特定设备</h2><p>关于自动化分区和还原系统之后，若想自动引导到硬盘系统，而非USB的PE系统，一般有如下几个方案：</p>
+<h2 id="PE内引导到特定设备">5.3 &nbsp&nbsp<a href="#PE内引导到特定设备" class="headerlink" title="PE内引导到特定设备"></a>PE内引导到特定设备</h2><p>关于自动化分区和还原系统之后，若想自动引导到硬盘系统，而非USB的PE系统，一般有如下几个方案：</p>
 <ul>
 <li>BIOS设置硬盘启动项：华硕主板实测无效，即使设置了BBS硬盘启动项（BBS还需要开启CSM选项保存重启），仍然是会引导至USB设备上。若设置关闭了USB的BBS，即使可以实现，但首次启动会报错提示找不到合适的启动设备。</li>
 <li>PE通过BOOTICE工具的UEFI功能引导至BIOS界面或者修改<code>UEFI OS</code>指定为硬盘系统和引导位置（默认是指定到U盘的）</li>
 <li>bcdedit修改引导启动项（BOOTICE好像也是通过bcdedit修改的）</li>
 </ul>
-<h2 id="获取特定硬盘分区的GUID">4.4 &nbsp&nbsp<a href="#获取特定硬盘分区的GUID" class="headerlink" title="获取特定硬盘分区的GUID"></a>获取特定硬盘分区的GUID</h2><ul>
+<h2 id="获取特定硬盘分区的GUID">5.4 &nbsp&nbsp<a href="#获取特定硬盘分区的GUID" class="headerlink" title="获取特定硬盘分区的GUID"></a>获取特定硬盘分区的GUID</h2><ul>
 <li>命令行程序：<code>mountvol</code></li>
 <li>分区工具：<code>DiskGenius</code>，选择特定分区查看GUID（非分区类型GUID）</li>
 </ul>
-<h1 id="应答文件-unattend-xml-系统部署">5 &nbsp&nbsp<a href="#应答文件-unattend-xml-系统部署" class="headerlink" title="应答文件 (unattend.xml)系统部署"></a>应答文件 (unattend.xml)系统部署</h1><p>使用应答文件自动完成安装和部署系统，在联网的情况下，因为存在联网服务器检测系统版本和更新状态，因此比拔掉网线断网的情况会会多占用2-3分钟左右的时间。（倘若插上网线联网状态一直卡在这个阶段的话，即可能由于连接服务器失败，需手动拔掉网线，让它检测判断并跳过该阶段）</p>
-<h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 万能驱动 v7.23.925.3（2023.11.08 发布）[EB&#x2F;OL]. <a href="https://www.puresys.net/1147.html">https://www.puresys.net/1147.html</a>.<br>[7] easyImageX2和万能驱动有种奇特的现象[EB&#x2F;OL]. <a href="http://wuyou.net/forum.php?mod=viewthread&tid=422066">http://wuyou.net/forum.php?mod=viewthread&amp;tid=422066</a>.<br>[8] Force DISM to unmount&#x2F;delete a mounted Windows WIM[EB&#x2F;OL]. <a href="https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim">https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim</a>.<br>[9] All In One 把该用到的都封到安装镜像中！[EB&#x2F;OL]. <a href="http://m.cfan.com.cn/pcarticle/128008">http://m.cfan.com.cn/pcarticle/128008</a>.<br>[10] Booting is unsuccessful from &quot;Windows Boot Manager&quot; on the top of boot order in EFI setup. The booting is successful from Disk 0.[EB&#x2F;OL]. <a href="https://www.veritas.com/support/en_US/article.100015603">https://www.veritas.com/support/en_US/article.100015603</a>.<br>[11] BOOTICE -&gt; UEFI -&gt; UEFI boot entry configuration file ? (management of UEFI startup items)[EB&#x2F;OL]. <a href="http://reboot.pro/index.php?showtopic=21508">http://reboot.pro/index.php?showtopic=21508</a>.</p>
+<h1 id="应答文件-unattend-xml-系统部署">6 &nbsp&nbsp<a href="#应答文件-unattend-xml-系统部署" class="headerlink" title="应答文件 (unattend.xml)系统部署"></a>应答文件 (unattend.xml)系统部署</h1><p>使用应答文件自动完成安装和部署系统，在联网的情况下，因为存在联网服务器检测系统版本和更新状态，因此比拔掉网线断网的情况会会多占用2-3分钟左右的时间。（倘若插上网线联网状态一直卡在这个阶段的话，即可能由于连接服务器失败，需手动拔掉网线，让它检测判断并跳过该阶段）</p>
+<h1 id="参考文献">7 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 支持win7的最后一代CPU?支持win7系统推荐(支持8&#x2F;9&#x2F;10&#x2F;11&#x2F;12&#x2F;13代cpu)[EB&#x2F;OL]. <a href="http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html">http://w7.dnxtc.net/zixun/zuzhuangjiaocheng/2023-04-16/11866.html</a>.<br>[2] 10代11代主板装win7开机蓝屏A5解决办法[EB&#x2F;OL]. <a href="https://www.yweihu.com/post/242.html">https://www.yweihu.com/post/242.html</a>.<br>[3] 微软又给Windows11增加了限制？[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/514063607">https://zhuanlan.zhihu.com/p/514063607</a>.<br>[4] 在虚拟机上安装gho、esd（wim）系统镜像文件[EB&#x2F;OL]. <a href="https://www.cnblogs.com/-mrl/p/9634227.html">https://www.cnblogs.com/-mrl/p/9634227.html</a>.<br>[5] Methods to install Windows from WinPE[EB&#x2F;OL]. <a href="https://www.aioboot.com/en/install-windows/">https://www.aioboot.com/en/install-windows/</a>.<br>[6] 万能驱动 v7.23.925.3（2023.11.08 发布）[EB&#x2F;OL]. <a href="https://www.puresys.net/1147.html">https://www.puresys.net/1147.html</a>.<br>[7] easyImageX2和万能驱动有种奇特的现象[EB&#x2F;OL]. <a href="http://wuyou.net/forum.php?mod=viewthread&tid=422066">http://wuyou.net/forum.php?mod=viewthread&amp;tid=422066</a>.<br>[8] Force DISM to unmount&#x2F;delete a mounted Windows WIM[EB&#x2F;OL]. <a href="https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim">https://superuser.com/questions/1091544/force-dism-to-unmount-delete-a-mounted-windows-wim</a>.<br>[9] All In One 把该用到的都封到安装镜像中！[EB&#x2F;OL]. <a href="http://m.cfan.com.cn/pcarticle/128008">http://m.cfan.com.cn/pcarticle/128008</a>.<br>[10] Booting is unsuccessful from &quot;Windows Boot Manager&quot; on the top of boot order in EFI setup. The booting is successful from Disk 0.[EB&#x2F;OL]. <a href="https://www.veritas.com/support/en_US/article.100015603">https://www.veritas.com/support/en_US/article.100015603</a>.<br>[11] BOOTICE -&gt; UEFI -&gt; UEFI boot entry configuration file ? (management of UEFI startup items)[EB&#x2F;OL]. <a href="http://reboot.pro/index.php?showtopic=21508">http://reboot.pro/index.php?showtopic=21508</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -12603,6 +12625,42 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
+    <url>/code-training/head-first-html-css-v2/chap2/</url>
+    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
+<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
+<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
+<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
+<li>文字或图像都可以用作链接的标签。</li>
+<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
+<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
+<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
+<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
+<li>“..”表示“父文件夹”。</li>
+<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
+<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
+<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
+<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
+</ul>
+<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
+<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
+<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>head-first-html-css-v2</category>
+      </categories>
+      <tags>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第二章</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -12634,42 +12692,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>第一章</tag>
         <tag>习题答案</tag>
         <tag>练习总结</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>Head Fisrt HTML CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Head Fisrt HTML CSS第二版：第二章「认识HTML中的“HT”：深入理解超文本」习题答案</title>
-    <url>/code-training/head-first-html-css-v2/chap2/</url>
-    <content><![CDATA[<h1 id="第二章：认识HTML中的“HT”：深入理解超文本"><a href="#第二章：认识HTML中的“HT”：深入理解超文本" class="headerlink" title="第二章：认识HTML中的“HT”：深入理解超文本"></a>第二章：认识HTML中的“HT”：深入理解超文本</h1><h2 id="章节总结（详见书籍P69）"><a href="#章节总结（详见书籍P69）" class="headerlink" title="章节总结（详见书籍P69）"></a>章节总结（详见书籍P69）</h2><ul>
-<li>从一个页面链接到另一个页面时，需使用<code>&lt;a&gt;</code>元素。</li>
-<li><code>&lt;a&gt;</code>元素的href属性指定了链接的目标文件。</li>
-<li><code>&lt;a&gt;</code>元素的内容是链接的标签。这个标签就是在网页上看到的链接文本。默认地，这个标签会有下划线，指示这是可以单击的。</li>
-<li>文字或图像都可以用作链接的标签。</li>
-<li>单击一个链接时，浏览器会加载href属性中指定的Web页面。</li>
-<li>可以链接到相同文件夹中的文件，也可链接到其他文件夹中的文件。</li>
-<li>相对路径是相对于链接的源Web页面指向网站中其他文件的一个链接。就像在地图上一样，终点总是相对于起点。</li>
-<li>使用“..”可以链接到源文件上一层文件夹中的一个文件 。</li>
-<li>“..”表示“父文件夹”。</li>
-<li>记住要用“&#x2F;”（斜线）字符分隔路径中的各个部分 。</li>
-<li>指向一个图像的路径不正确时 ，会在Web页面上看到一个损坏的图像。</li>
-<li>为网站选择的文件名和文件夹名中不要使用空格。</li>
-<li>最好在构建网站初期组织网站文件，这样就不用在网站升级时修改一大堆的路径。</li>
-</ul>
-<h2 id="本章节练习文件"><a href="#本章节练习文件" class="headerlink" title="本章节练习文件"></a>本章节练习文件</h2><ul>
-<li>原始的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/lounge/">lounge</a></li>
-<li>最终的lounge文件资源：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/head_first_html_css_v2/chap2/completelounge/">completelounge</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>head-first-html-css-v2</category>
-      </categories>
-      <tags>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第二章</tag>
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
@@ -14407,7 +14429,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="Blender用户手册本地编译">6 &nbsp&nbsp<a href="#Blender用户手册本地编译" class="headerlink" title="Blender用户手册本地编译"></a>Blender用户手册本地编译</h1><p>目前Blender用户手册翻译工作已实现WEB网页接口，使用Blender ID注册登录即可：<a href="https://translate.blender.org/projects/blender-manual/manual">https://translate.blender.org/projects/blender-manual/manual</a></p>
 <ol>
 <li>克隆blender-manual原文手册(英文)仓库： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 --filter=blob:none https://projects.blender.org/blender/blender-manual.git</span><br></pre></td></tr></table></figure></li>
-<li>克隆特定语言的翻译文件仓库（以简中zh-hans为例）：在<code>blender-manual</code>路径下执行克隆 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 --filter=blob:none --sparse https://projects.blender.org/blender/blender-manual-translations locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line">git sparse-checkout <span class="built_in">set</span> zh-hans</span><br></pre></td></tr></table></figure></li>
+<li>克隆特定语言的翻译文件仓库（以简中zh-hans为例）：在<code>blender-manual</code>路径下执行克隆（稀疏检出sparse） <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth 1 --filter=blob:none --sparse https://projects.blender.org/blender/blender-manual-translations locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line">git sparse-checkout <span class="built_in">set</span> zh-hans</span><br></pre></td></tr></table></figure></li>
 <li>安装构建环境，执行命令：<code>make setup</code></li>
 <li>然后<code>blender-manual</code>路径下创建如下BAT脚本（默认使用UTF-8编码）：可以同时执行<code>makeen.bat</code>和<code>makezh.bat</code>。<code>make.bat</code>不添加任何参数，默认执行构建就是<code>livehtml</code>。<ol>
 <li>拷贝<code>make.bat</code>并重命名为<code>makeen.bat</code>，找到并修改如下内容，主要是增加参数方便构建翻译语言的版本：  <figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM 找到这行内容：set BUILDDIR=build，修改成</span></span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%BUILDDIR%</span>&quot; == &quot;&quot; <span class="built_in">set</span> BUILDDIR=build</span><br></pre></td></tr></table></figure></li>
@@ -14954,42 +14976,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>404 Not Found：该页无法显示</title>
-    <url>//404.html</url>
-    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
-
-<div class="navigation-border">
-<center>
-<a href="/navigation-announcement">
-<button class="navigation-button-box">站点导航和公告</button></a>
-<a href="/">
-<button class="navigation-button-box">回主页</button></a>
-</center></div>
-
-<div class="navigation-border">
-<center>
-<a href="/archives">
-<button class="navigation-button-box">所有文章</button></a>
-<a href="/about#联系方式">
-<button class="navigation-button-box">联系我</button></a>
-<a href="/about">
-<button class="navigation-button-box">关于我</button></a>
-<a href="/about/about-site/">
-<button class="navigation-button-box">关于本站</button></a>
-</center></div>
-
-<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
-
-<center>
-<div style="text-align: center; width: 50%;">
-可以听歌，稍作休息~
-<div style="text-align: left">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
-</div></div>
-</center>
-]]></content>
-  </entry>
-  <entry>
     <title>关于我</title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -15087,7 +15073,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h1 id="联系方式">7 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#109;&#x69;&#115;&#x74;&#101;&#114;&#x6b;&#105;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#x6d;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -15197,8 +15183,44 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
+    <title>404 Not Found：该页无法显示</title>
+    <url>//404.html</url>
+    <content><![CDATA[<p class="center-bold" style="font-size: 35px;">很抱歉，阁下所访问的地址并不存在!</p>
+
+<div class="navigation-border">
+<center>
+<a href="/navigation-announcement">
+<button class="navigation-button-box">站点导航和公告</button></a>
+<a href="/">
+<button class="navigation-button-box">回主页</button></a>
+</center></div>
+
+<div class="navigation-border">
+<center>
+<a href="/archives">
+<button class="navigation-button-box">所有文章</button></a>
+<a href="/about#联系方式">
+<button class="navigation-button-box">联系我</button></a>
+<a href="/about">
+<button class="navigation-button-box">关于我</button></a>
+<a href="/about/about-site/">
+<button class="navigation-button-box">关于本站</button></a>
+</center></div>
+
+<p class="center-bold">可利用侧边栏的搜索功能对本站进行检索，以获取相关信息。</p>
+
+<center>
+<div style="text-align: center; width: 50%;">
+可以听歌，稍作休息~
+<div style="text-align: left">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=488249475&auto=0&height=66"></iframe>
+</div></div>
+</center>
+]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -15322,10 +15344,10 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
     <a href="/code/bat-powershell">Bat&Powershell</a>
     <a href="/code/bash">Bash Shell</a>
     <a href="/code/regular-expressions">正则表达式</a>
-    <a href="/code/qt">Qt</a>
-    <a href="/code/c">C</a>
+    <a href="/code/git">Git版本控制</a>
+    <a href="/code/qt">Qt开发</a>
+    <a href="/code/c-cpp">C&C++语言</a>
     <a href="/code/python">Python</a>
-    <a href="/code/git">Git</a>
     <a href="/code/css">CSS</a>
     <a href="/code/markdown">Markdown</a>
     <a href="/code/latex">LaTeX</a>
@@ -15357,7 +15379,7 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
     <div class="tag-align">
     <p class="tag-bookmark-page">AI开发</p>
     </div>
-    <a href="/software/ai">AI总结</a>
+    <a href="/software/ai">AI大模型总结</a>
     <a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a>
 </div>
 
@@ -15433,11 +15455,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 
 </div>
 ]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>作品</title>
@@ -15978,27 +15995,14 @@ CGI&后期处理
     <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
   <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>艺术作品</title>
     <url>/works/artworks/index.html</url>
     <content><![CDATA[<p>TODO</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>软件作品</title>
-    <url>/works/software-works/index.html</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/works/software-works/toggle-language">
-<button class="navigation-button-box">切换语言</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/batch-tools">
-<button class="navigation-button-box">批处理工具</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/rainmeter-skins">
-<button class="navigation-button-box">雨滴皮肤</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/autojs-scripts">
-<button class="navigation-button-box">Auto.js脚本</button></a>
-</div>
 ]]></content>
   </entry>
   <entry>
@@ -16038,7 +16042,7 @@ CGI&后期处理
 </ul>
 <h1 id="Workflow">4 &nbsp&nbsp<a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h1><p>Unlock phone by Xposed Edge Pro, and execute Auto.js scripts using shell commands in Xposed Edge Pro.</p>
 <p>For example, following shell command is used for executing<br>Auto.js scripts in Xposed Edge Pro. In this case, the script is mihoyo.js.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">am start -n org.autojs.autojs/.external.open.RunIntentActivity -d file:///storage/emulated/0/脚本/mihoyo.js -t text/javascript</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">am start -n org.autojs.autojs/.external.open.RunIntentActivity -d file:///storage/emulated/0/脚本/mihoyo.js -t text/javascript</span><br><span class="line"></span><br><span class="line">am start -n org.autojs.autojs/.external.open.RunIntentActivity -d /sdcard/脚本/xxx.js -t application/x-javascript</span><br></pre></td></tr></table></figure>
 
 <p><strong>Note</strong>: It&#39;s not recommended to use Auto.js to unlock phone because of it&#39;s unstable background service. Instead, it&#39;s reliable to use Xposed Edge Pro to light up the screen, unlock phone by recorded gestures or simulated tap operation and execute Auto.js scripts by shell commands.</p>
 <h1 id="Author">5 &nbsp&nbsp<a href="#Author" class="headerlink" title="Author"></a>Author</h1><p><strong>Auto.js Scripts</strong> © Mr. Kin, all files may not be used for commercial purposes.</p>
@@ -16834,5 +16838,23 @@ CGI&后期处理
 <h1 id="作者">5 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.<br>[32] How to Create Extensions[EB&#x2F;OL]. <a href="https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html">https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html</a>.<br>[33] How can I call a specific keymap to draw within my AddonPreferences?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#">https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#</a>.<br>[34] addon_keymap_template[EB&#x2F;OL]. <a href="https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template">https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template</a>.<br>[35] How to draw a custom KeyMapItem.properties[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059">https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059</a>.<br>[36] UI: Operator Confirm Dialog Changes #117564[EB&#x2F;OL]. <a href="https://projects.blender.org/blender/blender/pulls/117564">https://projects.blender.org/blender/blender/pulls/117564</a>.<br>[37] WindowManager(ID)[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm">https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm</a>.<br>[38] Switching workspaces in Blender using Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/">https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/</a>.<br>[39] How to create an Empty of type Image and assign a picture with Python?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#">https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#</a>.<br>[40] How to add empty object not using bpy.ops?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops">https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops</a>.<br>[41] How to use BPY to create an Image empty?[EB&#x2F;OL]. <a href="https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430">https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430</a>.<br>[42] Footnotes in longtable captions[EB&#x2F;OL]. <a href="https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions">https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions</a>.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以前（不含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以后（含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共18种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本的插件不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:7" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+  </entry>
+  <entry>
+    <title>软件作品</title>
+    <url>/works/software-works/index.html</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/works/software-works/toggle-language">
+<button class="navigation-button-box">切换语言</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/batch-tools">
+<button class="navigation-button-box">批处理工具</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/rainmeter-skins">
+<button class="navigation-button-box">雨滴皮肤</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/autojs-scripts">
+<button class="navigation-button-box">Auto.js脚本</button></a>
+</div>
+]]></content>
   </entry>
 </search>
