@@ -175,6 +175,7 @@
     <a href="https://my-ip.cc/zh-hans/">我的IP地址</a>
     <a href="https://www.cip.cc/">IP归属地查询(CIP)</a>
     <a href="https://ipleak.net/">ipleak</a>
+    <a href="https://lookup.icann.org/">域名状态查询</a>
     <a href="https://browserleaks.com/dns">browserleaks(DNS泄漏查询)</a>
     <a href="https://downforeveryoneorjustme.com/">downforeveryoneorjustme查看网站是否下线</a>
     <a href="https://downdetector.com/">Downdetector查看网站是否下线</a>
@@ -401,7 +402,10 @@
     <div class="tag-align">
     <p class="tag-bookmark-page">书籍</p>
     </div>
-    <a href="https://zh.annas-archive.org/">安娜的档案</a>
+    <a href="https://annas-archive.li">安娜的档案(li域名)</a>
+    <a href="https://z-library.sk/">ZLibary(Z-Library)</a>
+    <!-- <a href="https://annas-archive.2rdh.com/">安娜的档案和ZLibary镜像地址</a> -->
+    <!-- <a href="https://zh.annas-archive.org/">安娜的档案</a> 已挂 -->
     <a href="https://www.jiumodiary.com/">鸠摩搜索</a>
     <a href="https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-zh.md">免费编程书籍</a>
     <a href="https://zhuanlan.zhihu.com/p/98625180">全网最全绘画优秀书籍推荐</a>
@@ -1322,6 +1326,7 @@
     <a href="https://www.python.org/">Python</a>
     <a href="https://www.anaconda.com/download/success">Anaconda</a>
     <a href="https://docs.anaconda.com/free/miniconda/">Miniconda</a>
+    <a href="https://nuitka.net/">Nuitka(Python exe打包器)</a>
 </div>
 
 <div class="text-box">
@@ -1458,6 +1463,7 @@
     </div>
     <a href="https://www.wireshark.org/download.html">Wireshark</a>
     <a href="https://sniffmaster.net/download.html">Sniff Master抓包大师</a>
+    <a href="https://github.com/emanuele-f/PCAPdroid/releases">PCAPdroid安卓抓包</a>
     <a href="https://github.com/pouriyajamshidi/tcping">pouriyajamshidi/tcping</a>
     <a href="https://github.com/cloverstd/tcping">cloverstd/tcping</a>
     <a href="https://elifulkerson.com/projects/tcping.php">elifulkerson/tcping</a>
@@ -2322,6 +2328,26 @@
     </div>
     <a href="https://www.jwxba.com/">叫我修吧</a> 慎重，平台黑，干技术不推荐。
 </div> -->
+
+</div>
+
+<h1 id="硬件报价查询"><a href="#硬件报价查询" class="headerlink" title="硬件报价查询"></a>硬件报价查询</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">PC配置报价</p>
+    </div>
+    <a href="https://zj.zol.com.cn/">中关村模拟攒机</a>
+    <a href="https://pcpartpicker.com/">PCPartPicker</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">存储颗粒报价</p>
+    </div>
+    <a href="https://www.chinaflashmarket.com/">CFM闪存市场(MemoryS)</a>
+    <a href="https://www.dramexchange.com/">DRAMeXchange</a>
+</div>
 
 </div>
 
@@ -4178,7 +4204,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </li>
 </ul>
 <h1 id="关于项目开发的语言技术栈选择">4 &nbsp&nbsp<a href="#关于项目开发的语言技术栈选择" class="headerlink" title="关于项目开发的语言技术栈选择"></a>关于项目开发的语言技术栈选择</h1><ul>
-<li>B&#x2F;S（Browser&#x2F;Server）业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+<li>B&#x2F;S（Browser&#x2F;Server，浏览器&#x2F;服务器模式）。web应用可以实现跨平台，客户端零维护，但是个性化能力低，响应速度较慢。<ul>
+<li>业务开发一般推荐Java，相关技术栈和框架比较成熟。而不推荐C++，效率太低。</li>
+</ul>
+</li>
+<li>C&#x2F;S（Client&#x2F;Server，客户端&#x2F;服务器模式）桌面级应用，响应速度快，安全性强，个性化能力强，响应数据较快。</li>
 </ul>
 <h1 id="开发记录">5 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="关于字节的一些记录">5.1 &nbsp&nbsp<a href="#关于字节的一些记录" class="headerlink" title="关于字节的一些记录"></a>关于字节的一些记录</h2><p>int在机器上占一个字长，而32位机器中，一个字长就是4Byte，64位机器 一个字长就是8Byte。这里指的是在64位机器上的运行64位操作系统，计算的sizeof(int)。</p>
 <p>这个说法不太正确，gcc编译64bit的程序，sizeof(int)输出为4，即4Byte，32bit。</p>
@@ -4647,7 +4677,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#49;&#x37;&#50;&#x2e;&#49;&#x39;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#x74;&#x40;&#x31;&#55;&#50;&#46;&#x31;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -6793,302 +6823,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>总结</tag>
         <tag>英文</tag>
         <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender手册翻译进度</title>
-    <url>/translations/blender-manual/</url>
-    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
-<table>
-<thead>
-<tr>
-<th align="center">Blender手册链接</th>
-<th align="center">我的DBO主页</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
-<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
-</tr>
-</tbody></table>
-<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
-<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
-<li><input checked disabled type="checkbox"> 简介</li>
-<li><input disabled type="checkbox"> 设置你的项目</li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>进度</tag>
-        <tag>blender</tag>
-        <tag>手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译计划</title>
-    <url>/translations/translation-plan/</url>
-    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
-<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
-<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
-<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
-<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
-<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
-<td align="center">惊悚小精灵</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
-<td align="center">每日蠢事</td>
-<td align="center">已翻译</td>
-<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">完成进度</th>
-<th align="center">字幕下载</th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
-        <tag>字幕</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻译规划（作废）</title>
-    <url>/translations/translation-roadmap/</url>
-    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
-</div>
-
-<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
-<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
-<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
-</div>
-
-<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
-
-<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
-<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">待完成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
-<td align="center">没时间学Blender？</td>
-<td align="center">1P</td>
-<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
-</tr>
-</tbody></table>
-<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-<th align="center">完成进度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
-<td align="center">从里到外学习Blender</td>
-<td align="center">56P</td>
-<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
-<td align="center">Blender Cycles节点编辑器教程</td>
-<td align="center">3P</td>
-<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
-<td align="center">照明和烘培的工作流 - Blender教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
-<td align="center">18种加速 Blender Cycles 渲染的方法</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
-<td align="center">Blender教程-快速流体动画</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
-<td align="center">Blender Cycles烟雾模拟教程</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
-<td align="center">Blender建模介绍</td>
-<td align="center">24P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
-<td align="center">Blender贴图绘制</td>
-<td align="center">22P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
-<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
-<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
-<td align="center">官方Blender开源电影</td>
-<td align="center">9P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
-<td align="center">漫画教程 - Krita</td>
-<td align="center">7P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
-<td align="center">krita漫画模板生成工具</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
-<td align="center">Krita漫画自动上色 - Gmic插件</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
-<td align="center">Natron新手教程-介绍概述</td>
-<td align="center">1P</td>
-<td align="center">未精翻</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
-<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
-<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
-<td align="center">17P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
-<td align="center">Radeon ProRender 实时光线追踪</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
-<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
-<td align="center">1P</td>
-<td align="center">未精翻（等支持BL 2.8后开始）</td>
-</tr>
-</tbody></table>
-<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
-<li>暂无</li>
-</ul>
-<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
-<td align="center">Blender真的很难学吗？</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<p><strong><center>Blender 插件教程</center></strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">视频名</th>
-<th align="center">中译名</th>
-<th align="center">视频总数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
-<td align="center">Blender VSE快速功能演示</td>
-<td align="center">1P</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
-<td align="center">Radeon Pro Render 官方宣传视频</td>
-<td align="center">1P</td>
-</tr>
-</tbody></table>
-<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
-<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
-</ul>
-<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
-<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
-<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
-</ul>
-<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
-<p>目前暂定两个文档：</p>
-<ul>
-<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
-<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>translations</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>计划</tag>
       </tags>
   </entry>
   <entry>
@@ -10166,6 +9900,302 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
   </entry>
   <entry>
+    <title>Blender手册翻译进度</title>
+    <url>/translations/blender-manual/</url>
+    <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Blender手册链接</th>
+<th align="center">我的DBO主页</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://docs.blender.org/manual/zh-hans/latest/">点击跳转</a></td>
+<td align="center"><a href="https://projects.blender.org/1355093365">点击跳转</a></td>
+</tr>
+</tbody></table>
+<p>以下记录我平时闲暇时间维护Blender手册简体中文翻译的进度，</p>
+<h1 id="视频编辑">1 &nbsp&nbsp<a href="#视频编辑" class="headerlink" title="视频编辑"></a>视频编辑</h1><ul>
+<li><input checked disabled type="checkbox"> 简介</li>
+<li><input disabled type="checkbox"> 设置你的项目</li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>进度</tag>
+        <tag>blender</tag>
+        <tag>手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译计划</title>
+    <url>/translations/translation-plan/</url>
+    <content><![CDATA[<h1 id="计划重启缘由">1 &nbsp&nbsp<a href="#计划重启缘由" class="headerlink" title="计划重启缘由"></a>计划重启缘由</h1><p>2018年末之际，我发布了一篇博文<a href="/translations/translation-roadmap/">「翻译规划（作废）」</a>，计划着翻译一些视频教程和文档等，但因诸多原因，一直未能有效按计划进行，后来也就不了了之，将此篇博文就此作废。现在看来，这个计划完成的进度可能都不及5%，真的是个巨难填补的巨坑啊，哈哈哈……</p>
+<p>翻译本身就是无偿行为，毕竟原作品不是自己创作的，平台投稿时又无法投原创自制。一想到这个，就没啥了驱动力，毕竟没法总是为爱发电。</p>
+<p>由于编写<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>时需要进行测试，因此又接触到了视频压制和字幕处理。在测试的过程中，又有想法要重新开启翻译计划。</p>
+<p>不过本次的计划重启，与上次那样庞大的目标的不同，这次的翻译目标仅限于自己的看过并感兴趣的视频。</p>
+<h1 id="翻译计划表">2 &nbsp&nbsp<a href="#翻译计划表" class="headerlink" title="翻译计划表"></a>翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的视频链接。</strong></p>
+<h2 id="Blender开放动画电影">2.1 &nbsp&nbsp<a href="#Blender开放动画电影" class="headerlink" title="Blender开放动画电影"></a>Blender开放动画电影</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1eS4y1j7ay/">Sprite Fright</a></td>
+<td align="center">惊悚小精灵</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/BV1iW4113786?p=4">The Daily Dweebs</a></td>
+<td align="center">每日蠢事</td>
+<td align="center">已翻译</td>
+<td align="center"><a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">点击跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="Blender-fundamental-教程">2.2 &nbsp&nbsp<a href="#Blender-fundamental-教程" class="headerlink" title="Blender fundamental 教程"></a>Blender fundamental 教程</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">完成进度</th>
+<th align="center">字幕下载</th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+        <tag>字幕</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻译规划（作废）</title>
+    <url>/translations/translation-roadmap/</url>
+    <content><![CDATA[<div class="note danger no-icon"><p><strong>注：本文撰写进度：90%</strong></p>
+</div>
+
+<h1 id="计划声明">1 &nbsp&nbsp<a href="#计划声明" class="headerlink" title="计划声明"></a>计划声明</h1><p>开个大坑，期望自己能够一直坚持做下去吧！在此开个页面算是打卡吧，也方便大家了解进度及访问相应的链接。</p>
+<h2 id="B站视频教程翻译">1.1 &nbsp&nbsp<a href="#B站视频教程翻译" class="headerlink" title="B站视频教程翻译"></a>B站视频教程翻译</h2><p>目前本人已暂停搬运教程，正在编写一个字幕处理程序，以此加快我翻译的速度。程序完成后，会重新开始译制教程，并在过往的投稿中选择我认为较为重要的机翻教程教程进行精翻。</p>
+<div class="note info no-icon"><p>**程序完成进度：10%。**啊，无奈，缓慢的编写进度！ (ಥ﹏ಥ)</p>
+</div>
+
+<h2 id="文档翻译">1.2 &nbsp&nbsp<a href="#文档翻译" class="headerlink" title="文档翻译"></a>文档翻译</h2><span id="more"></span>
+
+<h1 id="B站翻译计划表">2 &nbsp&nbsp<a href="#B站翻译计划表" class="headerlink" title="B站翻译计划表"></a>B站翻译计划表</h1><p><strong>注：点击列表中的英文视频名即可访问相应的B站链接。</strong></p>
+<h2 id="未完成（已搬运）">2.1 &nbsp&nbsp<a href="#未完成（已搬运）" class="headerlink" title="未完成（已搬运）"></a>未完成（已搬运）</h2><h2 id="精翻熟肉">2.2 &nbsp&nbsp<a href="#精翻熟肉" class="headerlink" title="精翻熟肉"></a>精翻熟肉</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">待完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22248395/">Too Busy to Learn Blender</a></td>
+<td align="center">没时间学Blender？</td>
+<td align="center">1P</td>
+<td align="center">应评论第六楼朋友的要求，细调06：36左右的字幕</td>
+</tr>
+</tbody></table>
+<h2 id="机翻（即未完成精翻）">2.3 &nbsp&nbsp<a href="#机翻（即未完成精翻）" class="headerlink" title="机翻（即未完成精翻）"></a>机翻（即未完成精翻）</h2><table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+<th align="center">完成进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21352168/">Blender Inside Out</a></td>
+<td align="center">从里到外学习Blender</td>
+<td align="center">56P</td>
+<td align="center">已精翻共7P（P1-P6），剩余机翻共48P（P7-P56）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23309388/">The Cycles Node Editor</a></td>
+<td align="center">Blender Cycles节点编辑器教程</td>
+<td align="center">3P</td>
+<td align="center">已精翻共P1（P1），剩余机翻共2P（P2-P3）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22416165/">Lighting and Baking Workflow- Blender Tutorial</a></td>
+<td align="center">照明和烘培的工作流 - Blender教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22437199/">18 Ways to Speed Up Blender Cycles Rendering</a></td>
+<td align="center">18种加速 Blender Cycles 渲染的方法</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22518346/">Blender Tutorial Quick Water Animation</a></td>
+<td align="center">Blender教程-快速流体动画</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22533845/">Smoke Simulation Tutorial - Blender Cycles</a></td>
+<td align="center">Blender Cycles烟雾模拟教程</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22675108/">Introduction to Modeling in Blender</a></td>
+<td align="center">Blender建模介绍</td>
+<td align="center">24P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22696450/">Blender Blend&amp;Paint</a></td>
+<td align="center">Blender贴图绘制</td>
+<td align="center">22P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22732936/">Money doesn&#39;t interest me - Creator of Blender talks about its future</a></td>
+<td align="center">我对钱不感兴趣 - Blender创造者谈及它的未来</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22800138/">How I learned to draw&#39; with RossDraws</a></td>
+<td align="center">如何跟RossDraws学画画？【Ross Tran采访】</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22903574/">Official Blender Open Movies</a></td>
+<td align="center">官方Blender开源电影</td>
+<td align="center">9P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22909325/">Comic book tutorial - Krita</a></td>
+<td align="center">漫画教程 - Krita</td>
+<td align="center">7P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22915300/">A comicpage creator for Krita</a></td>
+<td align="center">krita漫画模板生成工具</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22668940/">Auto-Flatting Comic with Krita (+Gmic plugin)</a></td>
+<td align="center">Krita漫画自动上色 - Gmic插件</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23002211/">Natron for Beginners - Intro _ Overview</a></td>
+<td align="center">Natron新手教程-介绍概述</td>
+<td align="center">1P</td>
+<td align="center">未精翻</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22529905/">A New FREE Render Engine!</a></td>
+<td align="center">一个新的免费渲染引擎（Radeon Pro Render）</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23636374/">AMD Radeon™ ProRender</a></td>
+<td align="center">AMD Radeon™ ProRender 官方教程 - 无字幕</td>
+<td align="center">17P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23634562/">Real-Time Ray Tracing with Radeon ProRender</a></td>
+<td align="center">Radeon ProRender 实时光线追踪</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av23635797/">Radeon™ ProRender Real Time Ray Tracing Explained</a></td>
+<td align="center">Radeon™ ProRender 实时光线追踪解释</td>
+<td align="center">1P</td>
+<td align="center">未精翻（等支持BL 2.8后开始）</td>
+</tr>
+</tbody></table>
+<h2 id="未搬运">2.4 &nbsp&nbsp<a href="#未搬运" class="headerlink" title="未搬运"></a>未搬运</h2><ul>
+<li>暂无</li>
+</ul>
+<h2 id="已完成">2.5 &nbsp&nbsp<a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><p><strong><center>Blender 教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22327776">Is Blender Actually Hard to Learn</a></td>
+<td align="center">Blender真的很难学吗？</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<p><strong><center>Blender 插件教程</center></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">视频名</th>
+<th align="center">中译名</th>
+<th align="center">视频总数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.bilibili.com/video/av21226233">VSE Quick Functions Demo 0.91</a></td>
+<td align="center">Blender VSE快速功能演示</td>
+<td align="center">1P</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.bilibili.com/video/av22523468/">Radeon Pro Render</a></td>
+<td align="center">Radeon Pro Render 官方宣传视频</td>
+<td align="center">1P</td>
+</tr>
+</tbody></table>
+<h1 id="文档翻译计划表">3 &nbsp&nbsp<a href="#文档翻译计划表" class="headerlink" title="文档翻译计划表"></a>文档翻译计划表</h1><h2 id="开源软件的参考文档翻译">3.1 &nbsp&nbsp<a href="#开源软件的参考文档翻译" class="headerlink" title="开源软件的参考文档翻译"></a>开源软件的参考文档翻译</h2><h2 id="已参与">3.2 &nbsp&nbsp<a href="#已参与" class="headerlink" title="已参与"></a>已参与</h2><ul>
+<li><a href="https://docs.krita.org/en/">Krita文档翻译</a></li>
+</ul>
+<h2 id="未参与（计划）">3.3 &nbsp&nbsp<a href="#未参与（计划）" class="headerlink" title="未参与（计划）"></a>未参与（计划）</h2><ul>
+<li><a href="https://docs.blender.org/manual/en/dev/">Blender文档</a></li>
+<li><a href="https://docs.gimp.org/2.10/zh_CN/">GIMP文档</a></li>
+</ul>
+<h2 id="渲染器的参考文档翻译（未实施）">3.4 &nbsp&nbsp<a href="#渲染器的参考文档翻译（未实施）" class="headerlink" title="渲染器的参考文档翻译（未实施）"></a>渲染器的参考文档翻译（未实施）</h2><p>这些文档在官网上没有提供在线文档浏览，因此我有想法在Github上开个公共 Repo 来建立翻译的储存库，也方便文档有新内容时可以实时更新吧！有想法的朋友可以共同参与！</p>
+<p>目前暂定两个文档：</p>
+<ul>
+<li><a href="https://www.amd.com/en/technologies/radeon-prorender-downloads">Redoen Pro Render 的文档</a></li>
+<li><a href="http://www.mitsuba-renderer.org/docs.html">Mitsuba Render 的文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>translations</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android系统排障总结</title>
     <url>/troubleshooting/android-troubleshooting/</url>
     <content><![CDATA[<h1 id="安卓系统免杀后台进程设置步骤（包含各个安卓系统）">1 &nbsp&nbsp<a href="#安卓系统免杀后台进程设置步骤（包含各个安卓系统）" class="headerlink" title="安卓系统免杀后台进程设置步骤（包含各个安卓系统）"></a>安卓系统免杀后台进程设置步骤（包含各个安卓系统）</h1><p><a href="https://dontkillmyapp.com/">https://dontkillmyapp.com/</a></p>
@@ -10579,14 +10609,15 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>ATX规格冗余电源设计：<a href="https://www.silverstonetek.com/cn/product/info/power-supplies/gm900a_gf/">银欣Gemini 900A Gold</a></li>
 <li>1U电源</li>
 </ul>
-<h1 id="屏幕">14 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
+<h1 id="服务器的排插">14 &nbsp&nbsp<a href="#服务器的排插" class="headerlink" title="服务器的排插"></a>服务器的排插</h1><p>机房&#x2F;机柜的供电排插名称为：电源分配单元（Power Distribution Unit，简称PDU）</p>
+<h1 id="屏幕">15 &nbsp&nbsp<a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h1><p>屏幕不断闪，并且可以看到总是选定一个东西：键位被卡住，一直在输入键值</p>
 <p>屏幕的常见故障：</p>
 <ul>
 <li>竖线：一般是脱焊。</li>
 <li>束带：坏cof，压屏更换。</li>
 </ul>
-<h2 id="AC97与HD-Audio前置音频连接针脚定义">14.1 &nbsp&nbsp<a href="#AC97与HD-Audio前置音频连接针脚定义" class="headerlink" title="AC97与HD-Audio前置音频连接针脚定义"></a>AC97与HD-Audio前置音频连接针脚定义</h2><p><a href="https://www.docin.com/p-2418893040.html">https://www.docin.com/p-2418893040.html</a></p>
-<h1 id="硬盘">15 &nbsp&nbsp<a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h1><h1 id="硬盘SMART表分析">16 &nbsp&nbsp<a href="#硬盘SMART表分析" class="headerlink" title="硬盘SMART表分析"></a>硬盘SMART表分析</h1><ul>
+<h2 id="AC97与HD-Audio前置音频连接针脚定义">15.1 &nbsp&nbsp<a href="#AC97与HD-Audio前置音频连接针脚定义" class="headerlink" title="AC97与HD-Audio前置音频连接针脚定义"></a>AC97与HD-Audio前置音频连接针脚定义</h2><p><a href="https://www.docin.com/p-2418893040.html">https://www.docin.com/p-2418893040.html</a></p>
+<h1 id="硬盘">16 &nbsp&nbsp<a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h1><h1 id="硬盘SMART表分析">17 &nbsp&nbsp<a href="#硬盘SMART表分析" class="headerlink" title="硬盘SMART表分析"></a>硬盘SMART表分析</h1><ul>
 <li>机械：<ul>
 <li>05 (Dec: 05) Reallocated Sectors Count (重定向扇区计数)<ul>
 <li>核心逻辑：当硬盘发现物理坏道时，会将数据重新映射到备用扇区。</li>
@@ -10634,35 +10665,35 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 </ul>
-<h2 id="测试工具">16.1 &nbsp&nbsp<a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h2><p>固态：</p>
+<h2 id="测试工具">17.1 &nbsp&nbsp<a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h2><p>固态：</p>
 <ul>
 <li><a href="https://crystalmark.info/en/software/crystaldiskinfo/">CrystalDiskInfo</a>和<a href="https://crystalmark.info/en/software/crystaldiskmark/">CrystalDiskMark</a></li>
 <li><a href="https://www.alex-is.de/PHP/fusion/infusions/downloads/downloads.php">AS SSD Benchmark</a></li>
 <li>三星固态：<a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">三星魔术师软件（Magician）</a></li>
 <li>系统自带工具winsat：测试C盘：<code>winsat disk -drive C</code>。WinSAT 工具运行整体系统测试命令：<code>winsat formal -v</code>。</li>
 </ul>
-<h2 id="固件更新">16.2 &nbsp&nbsp<a href="#固件更新" class="headerlink" title="固件更新"></a>固件更新</h2><ul>
+<h2 id="固件更新">17.2 &nbsp&nbsp<a href="#固件更新" class="headerlink" title="固件更新"></a>固件更新</h2><ul>
 <li>三星固态<ul>
 <li><a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">三星魔术师</a></li>
 <li>U盘方案：<a href="https://semiconductor.samsung.com/cn/consumer-storage/support/tools/">下载ISO固件</a>，使用ventoy加载镜像。</li>
 </ul>
 </li>
 </ul>
-<h2 id="硬盘-系统启动项">16.3 &nbsp&nbsp<a href="#硬盘-系统启动项" class="headerlink" title="硬盘&#x2F;系统启动项"></a>硬盘&#x2F;系统启动项</h2><p>华硕主板有Hard Drive BBS Priorities（硬盘BBS属性，需要开启CSM保存重启进入BIOS界面才能看到），专门针对硬盘设置启动项，若不开启CSM，只能识别到UEFI的系统windows boot manager项（UEFI需要安装好系统和创建好引导，BIOS才能正常识别到）。</p>
+<h2 id="硬盘-系统启动项">17.3 &nbsp&nbsp<a href="#硬盘-系统启动项" class="headerlink" title="硬盘&#x2F;系统启动项"></a>硬盘&#x2F;系统启动项</h2><p>华硕主板有Hard Drive BBS Priorities（硬盘BBS属性，需要开启CSM保存重启进入BIOS界面才能看到），专门针对硬盘设置启动项，若不开启CSM，只能识别到UEFI的系统windows boot manager项（UEFI需要安装好系统和创建好引导，BIOS才能正常识别到）。</p>
 <p>USB设备也有BBS设置。</p>
-<h2 id="磁盘分区表格式">16.4 &nbsp&nbsp<a href="#磁盘分区表格式" class="headerlink" title="磁盘分区表格式"></a>磁盘分区表格式</h2><p>一般来说，磁盘分区表有两种格式：MBR和GPT。</p>
-<h3 id="MBR">16.4.1 &nbsp&nbsp<a href="#MBR" class="headerlink" title="MBR"></a>MBR</h3><p>MBR分区表在windows操作系统下最多支持4个主分区或3个主分区+1个扩展分区（包含多个逻辑分区），扩展分区必须划分为逻辑分区才能使用，1个扩展分区可以划分多个逻辑分区。MBR分区表不支持容量大于2.2TB的分区(一些硬盘制造商将他们的容量较大的磁盘升级到了4KB的扇区，这意味着MBR的有效容量上限提升到了16 TB)</p>
-<h3 id="GPT">16.4.2 &nbsp&nbsp<a href="#GPT" class="headerlink" title="GPT"></a>GPT</h3><p>GPT分区表对分区数量没有限制，没有主分区和逻辑分区之分，但在windows系统上最多只能读取128个分区。</p>
-<h2 id="引导模式">16.5 &nbsp&nbsp<a href="#引导模式" class="headerlink" title="引导模式"></a>引导模式</h2><p>UEFI的引导文件为winload.efi，而Legacy的引导文件为winload.exe。</p>
-<h3 id="UEFI-BIOS">16.5.1 &nbsp&nbsp<a href="#UEFI-BIOS" class="headerlink" title="UEFI BIOS"></a>UEFI BIOS</h3><p>基本引导原理：UEFIBIOS-&gt;EFI系统分区（FAT32格式的分区）-&gt;\efi\Microsoft\boot\bootmgfw.efi-&gt;efi\Microsoft\BCD-&gt;\Windows\system32\winload.efi</p>
-<h3 id="Legacy-BIOS">16.5.2 &nbsp&nbsp<a href="#Legacy-BIOS" class="headerlink" title="Legacy BIOS"></a>Legacy BIOS</h3><p>基本引导原理：LegacyBIOS-&gt;MBR-&gt;“活动的主分区”-&gt;\bootmgr-&gt;\Boot\BCD-&gt;\Windows\system32\winload.exe</p>
-<h2 id="磁盘分区表和引导模式的组合">16.6 &nbsp&nbsp<a href="#磁盘分区表和引导模式的组合" class="headerlink" title="磁盘分区表和引导模式的组合"></a>磁盘分区表和引导模式的组合</h2><ul>
+<h2 id="磁盘分区表格式">17.4 &nbsp&nbsp<a href="#磁盘分区表格式" class="headerlink" title="磁盘分区表格式"></a>磁盘分区表格式</h2><p>一般来说，磁盘分区表有两种格式：MBR和GPT。</p>
+<h3 id="MBR">17.4.1 &nbsp&nbsp<a href="#MBR" class="headerlink" title="MBR"></a>MBR</h3><p>MBR分区表在windows操作系统下最多支持4个主分区或3个主分区+1个扩展分区（包含多个逻辑分区），扩展分区必须划分为逻辑分区才能使用，1个扩展分区可以划分多个逻辑分区。MBR分区表不支持容量大于2.2TB的分区(一些硬盘制造商将他们的容量较大的磁盘升级到了4KB的扇区，这意味着MBR的有效容量上限提升到了16 TB)</p>
+<h3 id="GPT">17.4.2 &nbsp&nbsp<a href="#GPT" class="headerlink" title="GPT"></a>GPT</h3><p>GPT分区表对分区数量没有限制，没有主分区和逻辑分区之分，但在windows系统上最多只能读取128个分区。</p>
+<h2 id="引导模式">17.5 &nbsp&nbsp<a href="#引导模式" class="headerlink" title="引导模式"></a>引导模式</h2><p>UEFI的引导文件为winload.efi，而Legacy的引导文件为winload.exe。</p>
+<h3 id="UEFI-BIOS">17.5.1 &nbsp&nbsp<a href="#UEFI-BIOS" class="headerlink" title="UEFI BIOS"></a>UEFI BIOS</h3><p>基本引导原理：UEFIBIOS-&gt;EFI系统分区（FAT32格式的分区）-&gt;\efi\Microsoft\boot\bootmgfw.efi-&gt;efi\Microsoft\BCD-&gt;\Windows\system32\winload.efi</p>
+<h3 id="Legacy-BIOS">17.5.2 &nbsp&nbsp<a href="#Legacy-BIOS" class="headerlink" title="Legacy BIOS"></a>Legacy BIOS</h3><p>基本引导原理：LegacyBIOS-&gt;MBR-&gt;“活动的主分区”-&gt;\bootmgr-&gt;\Boot\BCD-&gt;\Windows\system32\winload.exe</p>
+<h2 id="磁盘分区表和引导模式的组合">17.6 &nbsp&nbsp<a href="#磁盘分区表和引导模式的组合" class="headerlink" title="磁盘分区表和引导模式的组合"></a>磁盘分区表和引导模式的组合</h2><ul>
 <li>Legacy BIOS+MBR：传统引导最常见的组合方式。</li>
 <li>UEFI BIOS+GPT：UEFI引导最常见的组合方式。</li>
 <li>UEFI BIOS+MBR：windows镜像自带的安装引导工具不支持。开启CSM模式或者将UEFI设置成Legacy模式（传统模式），调整设置后本质上就是Legacy BIOS+MBR组合。</li>
 <li>Legacy BIOS+GPT：windows镜像自带的安装引导工具不支持。windows不可用，无法正常引导开启系统，本质上是bootmgr读不了GPT格式，其实可以通过更换三方引导工具实现引导。Legacy BIOS + GPT + GRUB + Linux是可行的。</li>
 </ul>
-<h2 id="无分区直接使用硬盘">16.7 &nbsp&nbsp<a href="#无分区直接使用硬盘" class="headerlink" title="无分区直接使用硬盘"></a>无分区直接使用硬盘</h2><ul>
+<h2 id="无分区直接使用硬盘">17.7 &nbsp&nbsp<a href="#无分区直接使用硬盘" class="headerlink" title="无分区直接使用硬盘"></a>无分区直接使用硬盘</h2><ul>
 <li>windows10&#x2F;11：无法实现。</li>
 <li>linux：直接mkfs使用就是无分区格式化，并且常见win pe内部工具均无法识别这种形式的数据，会被认为无数据盘。</li>
 </ul>
@@ -10676,26 +10707,37 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>HDD - Hard Disk Drive，硬盘驱动器</li>
 <li>FDD - Floppy Disk Drive，软盘驱动器（软盘的0扇区就是PBR）</li>
 </ul>
-<h2 id="数据恢复">16.8 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000，软硬件捆绑使用，收录很多硬盘的固件。</p>
+<h2 id="数据恢复">17.8 &nbsp&nbsp<a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h2><p>专业数据恢复软件：PC3000，软硬件捆绑使用，收录很多硬盘的固件。</p>
 <ul>
 <li>机械盘：删除后无写入操作大多可正常恢复。</li>
 <li>ssd：因为存在trim机制。基本很难恢复。SSD TRIM一个过程，有助于随着时间的推移继续保持固态硬盘的性能。Trim的工作原理是定期擦除不再使用的数据块。标记TRIM后的数据并不总是直接删除，因为需要一个复杂的过程来确定何时删除（由硬盘GC机制控制）。而定期trim，不仅可以释放硬盘空间，还可以帮助SSD性能更好，寿命更长（固态的设计结构所致）。</li>
 </ul>
-<h1 id="打印机">17 &nbsp&nbsp<a href="#打印机" class="headerlink" title="打印机"></a>打印机</h1><h2 id="安装打印机驱动">17.1 &nbsp&nbsp<a href="#安装打印机驱动" class="headerlink" title="安装打印机驱动"></a>安装打印机驱动</h2><p>部分hp高端型号，比如打印机扫描机一体的大型机，安装驱动时，可以直接点击设置主页-&gt;设备-&gt;打印机和扫描机-&gt;添加打印机或者扫描机（windows会自动安装驱动，包括扫描机驱动）</p>
-<h2 id="打印机共享">17.2 &nbsp&nbsp<a href="#打印机共享" class="headerlink" title="打印机共享"></a>打印机共享</h2><p>Windows平台下的打印机共享方式（以下两种方式都是很老旧的技术，都存在安全负担，终极方式是更换物理设备，使用网络打印机）：</p>
+<h1 id="打印机">18 &nbsp&nbsp<a href="#打印机" class="headerlink" title="打印机"></a>打印机</h1><h2 id="安装打印机驱动">18.1 &nbsp&nbsp<a href="#安装打印机驱动" class="headerlink" title="安装打印机驱动"></a>安装打印机驱动</h2><p>部分hp高端型号，比如打印机扫描机一体的大型机，安装驱动时，可以直接点击设置主页-&gt;设备-&gt;打印机和扫描机-&gt;添加打印机或者扫描机（windows会自动安装驱动，包括扫描机驱动）</p>
+<h2 id="打印机共享">18.2 &nbsp&nbsp<a href="#打印机共享" class="headerlink" title="打印机共享"></a>打印机共享</h2><p>Windows平台下的打印机共享方式（以下两种方式都是很老旧的技术，都存在安全负担，终极方式是更换物理设备，使用网络打印机）：</p>
 <ul>
 <li>Windows SMB协议：由于微软发布打印机安全补丁及对SMB协议的升级，导致这种方式设置麻烦，且容易失效，例如出现<code>0x0000011b</code>的错误。</li>
 <li>LPD&#x2F;LPR组件：服务端安装「LPD打印服务」；客户端安装「LPR端口监视器」，然后在客户端添加打印机，使用创建LPR端口的方式，然后填入LPD的共享打印机IP地址和和共享打印机的名称。</li>
 </ul>
-<h1 id="USB设备">18 &nbsp&nbsp<a href="#USB设备" class="headerlink" title="USB设备"></a>USB设备</h1><h2 id="插上U盘不识别，驱动未安装，报错28">18.1 &nbsp&nbsp<a href="#插上U盘不识别，驱动未安装，报错28" class="headerlink" title="插上U盘不识别，驱动未安装，报错28"></a>插上U盘不识别，驱动未安装，报错28</h2><ol>
+<h1 id="USB设备">19 &nbsp&nbsp<a href="#USB设备" class="headerlink" title="USB设备"></a>USB设备</h1><h2 id="插上U盘不识别，驱动未安装，报错28">19.1 &nbsp&nbsp<a href="#插上U盘不识别，驱动未安装，报错28" class="headerlink" title="插上U盘不识别，驱动未安装，报错28"></a>插上U盘不识别，驱动未安装，报错28</h2><ol>
 <li>设备管理器，右键异常驱动设备</li>
 <li>更新驱动程序</li>
 <li>浏览我的电脑以查找驱动程序(R)</li>
 <li>选择加载<code>C:\Windows\System32\DriverStore</code>，勾选包含子文文件夹。</li>
 </ol>
 <p>P.S.一般手动指定加载后，后续重新拔插相同设备也无需再二次加载。</p>
-<h1 id="其它类别">19 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">19.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
-<h1 id="参考文献">20 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.<br>[4] zen3的whea18错误个人见解[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/7213032582#/">https://tieba.baidu.com/p/7213032582#/</a>.<br>[5] 网卡参数设置建议与各个网卡参数含义详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/Windgs_YF/article/details/104893741">https://blog.csdn.net/Windgs_YF/article/details/104893741</a>.<br>[6] 无需三方工具，Windows 命令行轻松实现 SSD 测速[EB&#x2F;OL]. <a href="https://www.sysgeek.cn/windows-ssd-speed-test/">https://www.sysgeek.cn/windows-ssd-speed-test/</a>.<br>[7] 硬盘不分区，直接格式化，硬盘第一个扇区里面会变成什么样子？还存在分区表吗？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/531775025">https://www.zhihu.com/question/531775025</a>.<br>[8] [显卡] ATX3.0 16pin的供电线插拔寿命真的只有30次吗？[EB&#x2F;OL]. <a href="https://www.chiphell.com/thread-2453340-1-1.html">https://www.chiphell.com/thread-2453340-1-1.html</a>.<br>[9] 微星Z490-A PRO每个内存槽支持不同最高频率的疑惑. <a href="https://nga.178.com/read.php?tid=22378405&rand=676">https://nga.178.com/read.php?tid=22378405&amp;rand=676</a>.<br>[10] 华硕奥创软件重新安装无法识别主板问题解决.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/672994457">https://zhuanlan.zhihu.com/p/672994457</a>.<br>[11] 华硕奥创中心无法识别主板问题.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/576492004">https://zhuanlan.zhihu.com/p/576492004</a>.<br>[12] [主板] 开新帖说明AM5开机自检慢的解决方法.[EB&#x2F;OL]. <a href="https://www.chiphell.com/thread-2504587-1-1.html">https://www.chiphell.com/thread-2504587-1-1.html</a>.<br>[13] Memory Context Restore. Causing blue screens?.[EB&#x2F;OL]. <a href="https://forum-en.msi.com/index.php?threads/memory-context-restore-causing-blue-screens.388576/">https://forum-en.msi.com/index.php?threads/memory-context-restore-causing-blue-screens.388576/</a>.<br>[14] [硬件求助] 开机一分钟，自检50秒，DDR5的锅还是主板的锅？(已解决，快了1倍).[EB&#x2F;OL]. <a href="https://g.nga.cn/read.php?tid=36577093&rand=242">https://g.nga.cn/read.php?tid=36577093&amp;rand=242</a>.<br>[15] 华硕主板如何设置开机第一启动项方法大全[EB&#x2F;OL]. <a href="https://www.zhihu.com/tardis/zm/art/67107055">https://www.zhihu.com/tardis/zm/art/67107055</a>.<br>[16] 小科普 | BIOS设置选项详细解释①——CPU核心篇[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv253846/">https://www.bilibili.com/read/cv253846/</a>.<br>[17] UEFI+GPT、Legacy+MBR引导模式介绍 &amp; 引导修复[EB&#x2F;OL]. <a href="https://blog.csdn.net/dglxlcl/article/details/85085901">https://blog.csdn.net/dglxlcl/article/details/85085901</a>.<br>[18] BIOS + GPT + GRUB + Linux + Windows 折腾笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/o_alpha/article/details/102959192">https://blog.csdn.net/o_alpha/article/details/102959192</a>.<br>[19] [主板]华硕 Power LED故障排除不上电&#x2F;不开机&#x2F;无显示[EB&#x2F;OL]. <a href="https://rog.asus.com.cn/support/faq/1046157/">https://rog.asus.com.cn/support/faq/1046157/</a>.<br>[20] PC电源的保持时间是用来做什么的？[EB&#x2F;OL]. <a href="https://www.expreview.com/58036.html#">https://www.expreview.com/58036.html#</a>.</p>
+<h2 id="大容量U盘，Windows不识别，DiskGenius可以识别">19.2 &nbsp&nbsp<a href="#大容量U盘，Windows不识别，DiskGenius可以识别" class="headerlink" title="大容量U盘，Windows不识别，DiskGenius可以识别"></a>大容量U盘，Windows不识别，DiskGenius可以识别</h2><p>该BUG问题现象表征为如下几点：</p>
+<ol>
+<li>U盘插入电脑时，系统会发出提示音，提示有设备接入。</li>
+<li>文件资源管理器，没有显示U盘的盘符。</li>
+<li>设备管理器，无法识别有U盘设备。</li>
+<li>Windows的磁盘管理工具，无法识别有U盘设备。</li>
+<li>通过终端命令行提示符进入<code>diskpart</code>工具，执行<code>list disk</code>命令，也无法识别有U盘设备。</li>
+<li>但蹊跷的是，在DiskGenius中，U盘可以正常识别，并能通过DG完成文件读取。</li>
+</ol>
+<p>故障原因：推测是Windows中某个涉及存储管理的内核组件未能正确通过「USB大容量存储设备」驱动实现硬件通信，导致「文件资源管理器」「设备管理器」等这些上层工具都集体失明。而DiskGenius并不通过该内核组件去完成硬件识别通信，因此全程未受影响</p>
+<p>解决方法：设备管理器-&gt;通用串行总线控制器，卸载「USB大容量存储设备」并重新点击「扫描检测硬件改动」按钮。</p>
+<h1 id="其它类别">20 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="电脑维修级别">20.1 &nbsp&nbsp<a href="#电脑维修级别" class="headerlink" title="电脑维修级别"></a>电脑维修级别</h2><p>计算机维修可分为两个级别,即一级维修和二级维修。一级指替换配件测试维修，二级指芯片级维修。</p>
+<h1 id="参考文献">21 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 華碩電腦股份有限公司. ROG MAXIMUS Z790 HERO 用户手册[M&#x2F;OL]. 第三版. 2022: 29. <a href="https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO">https://dlsvr04.asus.com.cn/pub/ASUS/mb/LGA1700/ROG_MAXIMUS_Z790_HERO/C21512_ROG_MAXIMUS_Z790_HERO_V3_WEB.pdf?model=ROG%20MAXIMUS%20Z790%20HERO</a>.<br>[2] 回复：cup‑fan 和 cpu‑opt 有啥区别？？？[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/6018187267?pn=2">https://tieba.baidu.com/p/6018187267?pn=2</a>.<br>[3] No q‑fan control for cpu_opt R4BE[EB&#x2F;OL]. <a href="https://rog.asus.com/forum/showthread.php?43080%E2%80%91No%E2%80%91q%E2%80%91fan%E2%80%91control%E2%80%91for%E2%80%91cpu_opt%E2%80%91R4BE">https://rog.asus.com/forum/showthread.php?43080‑No‑q‑fan‑control‑for‑cpu_opt‑R4BE</a>.<br>[4] zen3的whea18错误个人见解[EB&#x2F;OL]. <a href="https://tieba.baidu.com/p/7213032582#/">https://tieba.baidu.com/p/7213032582#/</a>.<br>[5] 网卡参数设置建议与各个网卡参数含义详解[EB&#x2F;OL]. <a href="https://blog.csdn.net/Windgs_YF/article/details/104893741">https://blog.csdn.net/Windgs_YF/article/details/104893741</a>.<br>[6] 无需三方工具，Windows 命令行轻松实现 SSD 测速[EB&#x2F;OL]. <a href="https://www.sysgeek.cn/windows-ssd-speed-test/">https://www.sysgeek.cn/windows-ssd-speed-test/</a>.<br>[7] 硬盘不分区，直接格式化，硬盘第一个扇区里面会变成什么样子？还存在分区表吗？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/531775025">https://www.zhihu.com/question/531775025</a>.<br>[8] [显卡] ATX3.0 16pin的供电线插拔寿命真的只有30次吗？[EB&#x2F;OL]. <a href="https://www.chiphell.com/thread-2453340-1-1.html">https://www.chiphell.com/thread-2453340-1-1.html</a>.<br>[9] 微星Z490-A PRO每个内存槽支持不同最高频率的疑惑. <a href="https://nga.178.com/read.php?tid=22378405&rand=676">https://nga.178.com/read.php?tid=22378405&amp;rand=676</a>.<br>[10] 华硕奥创软件重新安装无法识别主板问题解决.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/672994457">https://zhuanlan.zhihu.com/p/672994457</a>.<br>[11] 华硕奥创中心无法识别主板问题.[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/576492004">https://zhuanlan.zhihu.com/p/576492004</a>.<br>[12] [主板] 开新帖说明AM5开机自检慢的解决方法.[EB&#x2F;OL]. <a href="https://www.chiphell.com/thread-2504587-1-1.html">https://www.chiphell.com/thread-2504587-1-1.html</a>.<br>[13] Memory Context Restore. Causing blue screens?.[EB&#x2F;OL]. <a href="https://forum-en.msi.com/index.php?threads/memory-context-restore-causing-blue-screens.388576/">https://forum-en.msi.com/index.php?threads/memory-context-restore-causing-blue-screens.388576/</a>.<br>[14] [硬件求助] 开机一分钟，自检50秒，DDR5的锅还是主板的锅？(已解决，快了1倍).[EB&#x2F;OL]. <a href="https://g.nga.cn/read.php?tid=36577093&rand=242">https://g.nga.cn/read.php?tid=36577093&amp;rand=242</a>.<br>[15] 华硕主板如何设置开机第一启动项方法大全[EB&#x2F;OL]. <a href="https://www.zhihu.com/tardis/zm/art/67107055">https://www.zhihu.com/tardis/zm/art/67107055</a>.<br>[16] 小科普 | BIOS设置选项详细解释①——CPU核心篇[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv253846/">https://www.bilibili.com/read/cv253846/</a>.<br>[17] UEFI+GPT、Legacy+MBR引导模式介绍 &amp; 引导修复[EB&#x2F;OL]. <a href="https://blog.csdn.net/dglxlcl/article/details/85085901">https://blog.csdn.net/dglxlcl/article/details/85085901</a>.<br>[18] BIOS + GPT + GRUB + Linux + Windows 折腾笔记[EB&#x2F;OL]. <a href="https://blog.csdn.net/o_alpha/article/details/102959192">https://blog.csdn.net/o_alpha/article/details/102959192</a>.<br>[19] [主板]华硕 Power LED故障排除不上电&#x2F;不开机&#x2F;无显示[EB&#x2F;OL]. <a href="https://rog.asus.com.cn/support/faq/1046157/">https://rog.asus.com.cn/support/faq/1046157/</a>.<br>[20] PC电源的保持时间是用来做什么的？[EB&#x2F;OL]. <a href="https://www.expreview.com/58036.html#">https://www.expreview.com/58036.html#</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -12837,12 +12879,12 @@ title UDP Packet
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#x68;&#x61;&#110;&#x6b;&#121;&#111;&#x75;&#x2e;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#x31;&#46;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#56;&#x2e;&#x63;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#97;&#110;&#107;&#x73;&#x2e;&#99;&#x6f;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#99;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#117;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -16017,6 +16059,117 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>PVE虚拟化系统升级小记（8.x-&gt;9.x）</title>
+    <url>/post-articles/2025-10/pve8to9/</url>
+    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>企业软件开发商<code>Proxmox Server Solutions GmbH</code>在2025年8月5日发布了<code>Proxmox VE</code>9.0版本，这两天终于得空给家里的HomeLab机器操作升级，因此记录一下从PVE 8.x升级到PVE 9.x步骤。</p>
+<p>为了方便软件包下载，一般需要将linux系统的替换成国内镜像源。这样操作更新时，系统访问的是国内镜像服务器，网络速率就不会受限于每秒几十KB。以下内容替换使用的镜像源均为中科大源。</p>
+<h1 id="升级到PVE-8-x最新的版本">2 &nbsp&nbsp<a href="#升级到PVE-8-x最新的版本" class="headerlink" title="升级到PVE 8.x最新的版本"></a>升级到PVE 8.x最新的版本</h1><p><strong>一般更新操作，都是推荐替换国内镜像源再操作。由于本文主要阐述升级步骤，这里不再赘述如何替换PVE 8.x版本系统的软件源，如想了解可参阅我的博客。</strong></p>
+<p>输入如下命令完成升级并查看当前PVE版本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8x-update-to-lateset.webp">执行apt命令升级</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8x-lastest-check-version.webp">pveversion查看当前版本</div>
+</div>
+
+<h1 id="检查版本升级的兼容性">3 &nbsp&nbsp<a href="#检查版本升级的兼容性" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h1><p>输入如下命令调用升级检查脚本命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
+
+<p>笔者遇到两个警告WARN和一个失败FAIL。</p>
+<p>警告1：提示有正在运行的客户端，检查程序推荐考虑迁移或者关闭。这个警告笔者是无视的，毕竟HomeLab的主路由和DNS递归查询等服务都是部署在这些虚拟机上，若是关闭，笔者还得额外调整网络参数才能联网。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: 9 running guest(s) detected - consider migrating or stopping them.</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-warning1.webp">pve8to9警告信息1</div>
+
+<p>警告2：提示本系统缺乏Intel微码，可无视该警告。想要消除警告，就使用命令安装微码<code>apt install intel-microcode</code>。AMD的CPU机器的微码安装命令为<code>apt install amd64-microcode</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: The matching CPU microcode package &#x27;intel-microcode&#x27; could not be found! Consider installing it to receive the latest security and bug fixes for your CPU.</span><br><span class="line">        Ensure you enable the &#x27;non-free-firmware&#x27; component in the apt sources and run:</span><br><span class="line">        apt install intel-microcode</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-warning2.webp">pve8to9警告信息2</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-install-intel-microcode.webp">安装Intel处理器微码</div>
+</div>
+
+<p>失败：这是因为PVE 9.x版本是基于<code>Debian Trixie</code>版本开发的，这个版本中<code>systemd-boot</code>已经被拆分成三个包<code>systemd-boot-efi</code>、<code>systemd-boot-tools</code>和<code>systemd-boot</code>，因此检查脚本若提示要卸载移除，最好是移除它。解决方法是运行卸载命令<code>apt remove systemd-boot</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FAIL: systemd-boot meta-package installed. This will cause problems on upgrades of other boot-related packages. Remove &#x27;systemd-boot&#x27; See https://pve.proxmox.com/wiki/Upgrade_from_8_to_9#sd-boot-warning for more information.</span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve8to9-fail.webp">pve8to9失败信息</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-remove-systemd-boot.webp">移除systemd-boot</div>
+</div>
+
+<p>注意解在决警告和失败之后，请重新运行检查脚本程序<code>pve8to9</code>，检查没有问题则进行下一步替换PVE 9.x镜像源。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/rerun-pve8to9.webp">重新运行检查脚本程序pve8to9</div>
+
+<h1 id="替换PVE-9-x的软件源">4 &nbsp&nbsp<a href="#替换PVE-9-x的软件源" class="headerlink" title="替换PVE 9.x的软件源"></a>替换PVE 9.x的软件源</h1><h2 id="替换Debian系统软件源">4.1 &nbsp&nbsp<a href="#替换Debian系统软件源" class="headerlink" title="替换Debian系统软件源"></a>替换Debian系统软件源</h2><p>修改&#x2F;etc&#x2F;apt&#x2F;sources.list文件内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>使用如下内容覆盖文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org trixie-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security trixie-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
+
+<h2 id="替换PVE软件源">4.2 &nbsp&nbsp<a href="#替换PVE软件源" class="headerlink" title="替换PVE软件源"></a>替换PVE软件源</h2><p>删除pve-enterprise.list，新建pve-no-subscription.list，参照如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure>
+
+<h2 id="替换CEPH分布式源">4.3 &nbsp&nbsp<a href="#替换CEPH分布式源" class="headerlink" title="替换CEPH分布式源"></a>替换CEPH分布式源</h2><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-squid trixie no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
+
+<h1 id="开始正式升级（8-x-9-x）">5 &nbsp&nbsp<a href="#开始正式升级（8-x-9-x）" class="headerlink" title="开始正式升级（8.x-&gt;9.x）"></a>开始正式升级（8.x-&gt;9.x）</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
+</div>
+<p>升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/issue -&gt; Proxmox VE will auto-generate this file on boot, and it has only cosmetic effects on the login console.</span><br><span class="line">Using the default <span class="string">&quot;No&quot;</span> (keep your currently-installed version) is safe here.</span><br><span class="line"></span><br><span class="line">/etc/lvm/lvm.conf -&gt; Changes relevant <span class="keyword">for</span> Proxmox VE will be updated, and a newer config version might be useful.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br><span class="line"></span><br><span class="line">/etc/ssh/sshd_config -&gt; If you have not changed this file manually, the only differences should be a replacement of ChallengeResponseAuthentication no with KbdInteractiveAuthentication no and some irrelevant changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#).</span></span><br><span class="line">If this is the <span class="keyword">case</span>, both options are safe, though we would recommend installing the package maintainer<span class="string">&#x27;s version in order to move away from the deprecated ChallengeResponseAuthentication option. If there are other changes, we suggest to inspect them closely and decide accordingly.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">/etc/default/grub -&gt; Here you may want to take special care, as this is normally only asked for if you changed it manually, e.g., for adding some kernel command line option.</span></span><br><span class="line"><span class="string">It&#x27;</span>s recommended to check the difference <span class="keyword">for</span> any relevant change, note that changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#) are not relevant.</span></span><br><span class="line">If unsure, we suggested to selected <span class="string">&quot;No&quot;</span> (keep your currently-installed version)</span><br><span class="line"></span><br><span class="line">/etc/chrony/chrony.conf -&gt; If you made <span class="built_in">local</span> changes you might want to move them out of the global config into the conf.d or, <span class="keyword">for</span> custom <span class="keyword">time</span> sources, the sources.d folder.</span><br><span class="line">See the /etc/chrony/conf.d/README and /etc/chrony/sources.d/README files on your system <span class="keyword">for</span> detaily.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br></pre></td></tr></table></figure>
+<p>以下是实操选择的参数：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Configuration file <span class="string">&#x27;/etc/issue&#x27;</span></span><br><span class="line"> ==&gt; Modified (by you or by a script) since installation.</span><br><span class="line"> ==&gt; Package distributor has shipped an updated version.</span><br><span class="line">   What would you like to <span class="keyword">do</span> about it ?  Your options are:</span><br><span class="line">    Y or I  : install the package maintainer<span class="string">&#x27;s version</span></span><br><span class="line"><span class="string">    N or O  : keep your currently-installed version</span></span><br><span class="line"><span class="string">      D     : show the differences between the versions</span></span><br><span class="line"><span class="string">      Z     : start a shell to examine the situation</span></span><br><span class="line"><span class="string"> The default action is to keep your current version.</span></span><br><span class="line"><span class="string">*** issue (Y/I/N/O/D/Z) [default=N] ?</span></span><br><span class="line"><span class="string">输入N回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuring libc6:amd64 ├────────────────────────────────────────────┐</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ There are services installed on your system which need to be restarted when certain libraries, such as libpam,    │</span></span><br><span class="line"><span class="string"> │ libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the system, you will  │</span></span><br><span class="line"><span class="string"> │ normally be prompted on each upgrade for the list of services you wish to restart.  You can choose this option    │</span></span><br><span class="line"><span class="string"> │ to avoid being prompted; instead, all necessary restarts will be done for you automatically so you can avoid      │</span></span><br><span class="line"><span class="string"> │ being asked questions on each library upgrade.                                                                    │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ Restart services during package upgrades without asking?                                                          │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │                                  &lt;Yes&gt;                                     &lt;No&gt;                                   │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span></span><br><span class="line"><span class="string">选择Yes回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuration file &#x27;</span>/etc/lvm/lvm.conf<span class="string">&#x27;</span></span><br><span class="line"><span class="string"> ==&gt; Modified (by you or by a script) since installation.</span></span><br><span class="line"><span class="string"> ==&gt; Package distributor has shipped an updated version.</span></span><br><span class="line"><span class="string">   What would you like to do about it ?  Your options are:</span></span><br><span class="line"><span class="string">    Y or I  : install the package maintainer&#x27;</span>s version</span><br><span class="line">    N or O  : keep your currently-installed version</span><br><span class="line">      D     : show the differences between the versions</span><br><span class="line">      Z     : start a shell to examine the situation</span><br><span class="line"> The default action is to keep your current version.</span><br><span class="line">*** lvm.conf (Y/I/N/O/D/Z) [default=N] ?</span><br><span class="line">输入Y回车</span><br></pre></td></tr></table></figure>
+
+<h1 id="屏蔽PVE-9-x企业源pve-enterprise-sources">6 &nbsp&nbsp<a href="#屏蔽PVE-9-x企业源pve-enterprise-sources" class="headerlink" title="屏蔽PVE 9.x企业源pve-enterprise.sources"></a>屏蔽PVE 9.x企业源<code>pve-enterprise.sources</code></h1><p>成功升级至PVE 9.x之后，会自动生成一个<code>DEB822</code>格式的企业源<code>pve-enterprise.sources</code>文件，需要手动屏蔽它，否则WEB后台和<code>apt update</code>会有提示。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.sources /etc/apt/sources.list.d/pve-enterprise.sources.bak</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
+
+<h1 id="移除无用的包">7 &nbsp&nbsp<a href="#移除无用的包" class="headerlink" title="移除无用的包"></a>移除无用的包</h1><p>运行如下如下命令，移除无用的包，节省服务器空间：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt autoremove</span><br></pre></td></tr></table></figure>
+
+<div class="flex-column">
+<img data-src="/images/software/pve/apt-auto-remove.webp">移除无用的包</div>
+
+<h1 id="替换LXC模板（CT-Templates）镜像源">8 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h1><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行<code>systemctl restart pvedaemon</code>后生效。</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.ustc.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure>
+
+<h1 id="去除PVE未订阅提示">9 &nbsp&nbsp<a href="#去除PVE未订阅提示" class="headerlink" title="去除PVE未订阅提示"></a>去除PVE未订阅提示</h1><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。实测PVE 9.x版本执行该方法之后，WEB后台的「软件包版本」按钮无法响应，暂未排查到问题，后面有时间再跟进。</strong></p>
+<ul>
+<li><code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve-no-subscribe.webp">「无有效订阅」的提示弹窗</div>
+
+<h1 id="后续PVE系统日常更新：">10 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h1 id="后记">11 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>以下就是升级到最新的PVE 9.x版本的WEB后台界面了。</p>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve9x-web-control.webp">PVE 9.x的WEB后台界面</div>
+
+<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Upgrade from 8 to 9[EB&#x2F;OL]. <a href="https://pve.proxmox.com/wiki/Upgrade_from_8_to_9">https://pve.proxmox.com/wiki/Upgrade_from_8_to_9</a>.<br>[2] Proxmox[EB&#x2F;OL]. <a href="https://mirrors.ustc.edu.cn/help/proxmox.html">https://mirrors.ustc.edu.cn/help/proxmox.html</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
+        <tag>PVE</tag>
+        <tag>升级</tag>
+        <tag>Proxmox</tag>
+        <tag>服务器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>飞牛fnOS影视刮削的文件命名技巧</title>
     <url>/post-articles/2025-10/video-scraping-renaming-for-fnos/</url>
     <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用飞牛影视有一段日子了，整体感觉上还行，数据刮削算是比较省心，今天抽空来聊聊我在这方面的经验。</p>
@@ -16384,117 +16537,6 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>PVE虚拟化系统升级小记（8.x-&gt;9.x）</title>
-    <url>/post-articles/2025-10/pve8to9/</url>
-    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>企业软件开发商<code>Proxmox Server Solutions GmbH</code>在2025年8月5日发布了<code>Proxmox VE</code>9.0版本，这两天终于得空给家里的HomeLab机器操作升级，因此记录一下从PVE 8.x升级到PVE 9.x步骤。</p>
-<p>为了方便软件包下载，一般需要将linux系统的替换成国内镜像源。这样操作更新时，系统访问的是国内镜像服务器，网络速率就不会受限于每秒几十KB。以下内容替换使用的镜像源均为中科大源。</p>
-<h1 id="升级到PVE-8-x最新的版本">2 &nbsp&nbsp<a href="#升级到PVE-8-x最新的版本" class="headerlink" title="升级到PVE 8.x最新的版本"></a>升级到PVE 8.x最新的版本</h1><p><strong>一般更新操作，都是推荐替换国内镜像源再操作。由于本文主要阐述升级步骤，这里不再赘述如何替换PVE 8.x版本系统的软件源，如想了解可参阅我的博客。</strong></p>
-<p>输入如下命令完成升级并查看当前PVE版本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br><span class="line">pveversion</span><br></pre></td></tr></table></figure>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pve8x-update-to-lateset.webp">执行apt命令升级</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/pve8x-lastest-check-version.webp">pveversion查看当前版本</div>
-</div>
-
-<h1 id="检查版本升级的兼容性">3 &nbsp&nbsp<a href="#检查版本升级的兼容性" class="headerlink" title="检查版本升级的兼容性"></a>检查版本升级的兼容性</h1><p>输入如下命令调用升级检查脚本命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
-
-<p>笔者遇到两个警告WARN和一个失败FAIL。</p>
-<p>警告1：提示有正在运行的客户端，检查程序推荐考虑迁移或者关闭。这个警告笔者是无视的，毕竟HomeLab的主路由和DNS递归查询等服务都是部署在这些虚拟机上，若是关闭，笔者还得额外调整网络参数才能联网。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: 9 running guest(s) detected - consider migrating or stopping them.</span><br></pre></td></tr></table></figure>
-<div class="flex-column">
-<img data-src="/images/software/pve/pve8to9-warning1.webp">pve8to9警告信息1</div>
-
-<p>警告2：提示本系统缺乏Intel微码，可无视该警告。想要消除警告，就使用命令安装微码<code>apt install intel-microcode</code>。AMD的CPU机器的微码安装命令为<code>apt install amd64-microcode</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WARN: The matching CPU microcode package &#x27;intel-microcode&#x27; could not be found! Consider installing it to receive the latest security and bug fixes for your CPU.</span><br><span class="line">        Ensure you enable the &#x27;non-free-firmware&#x27; component in the apt sources and run:</span><br><span class="line">        apt install intel-microcode</span><br></pre></td></tr></table></figure>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pve8to9-warning2.webp">pve8to9警告信息2</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/apt-install-intel-microcode.webp">安装Intel处理器微码</div>
-</div>
-
-<p>失败：这是因为PVE 9.x版本是基于<code>Debian Trixie</code>版本开发的，这个版本中<code>systemd-boot</code>已经被拆分成三个包<code>systemd-boot-efi</code>、<code>systemd-boot-tools</code>和<code>systemd-boot</code>，因此检查脚本若提示要卸载移除，最好是移除它。解决方法是运行卸载命令<code>apt remove systemd-boot</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FAIL: systemd-boot meta-package installed. This will cause problems on upgrades of other boot-related packages. Remove &#x27;systemd-boot&#x27; See https://pve.proxmox.com/wiki/Upgrade_from_8_to_9#sd-boot-warning for more information.</span><br></pre></td></tr></table></figure>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pve8to9-fail.webp">pve8to9失败信息</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/apt-remove-systemd-boot.webp">移除systemd-boot</div>
-</div>
-
-<p>注意解在决警告和失败之后，请重新运行检查脚本程序<code>pve8to9</code>，检查没有问题则进行下一步替换PVE 9.x镜像源。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pve8to9</span><br></pre></td></tr></table></figure>
-<div class="flex-column">
-<img data-src="/images/software/pve/rerun-pve8to9.webp">重新运行检查脚本程序pve8to9</div>
-
-<h1 id="替换PVE-9-x的软件源">4 &nbsp&nbsp<a href="#替换PVE-9-x的软件源" class="headerlink" title="替换PVE 9.x的软件源"></a>替换PVE 9.x的软件源</h1><h2 id="替换Debian系统软件源">4.1 &nbsp&nbsp<a href="#替换Debian系统软件源" class="headerlink" title="替换Debian系统软件源"></a>替换Debian系统软件源</h2><p>修改&#x2F;etc&#x2F;apt&#x2F;sources.list文件内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-
-<p>使用如下内容覆盖文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"><span class="comment"># deb http://ftp.debian.org/debian trixie-updates main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware</span><br><span class="line"><span class="comment"># security updates</span></span><br><span class="line"><span class="comment"># deb http://security.debian.org trixie-security main contrib</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/debian-security trixie-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
-
-<h2 id="替换PVE软件源">4.2 &nbsp&nbsp<a href="#替换PVE软件源" class="headerlink" title="替换PVE软件源"></a>替换PVE软件源</h2><p>删除pve-enterprise.list，新建pve-no-subscription.list，参照如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription &gt; /etc/apt/sources.list.d/pve-no-subscription.list</span><br></pre></td></tr></table></figure>
-
-<h2 id="替换CEPH分布式源">4.3 &nbsp&nbsp<a href="#替换CEPH分布式源" class="headerlink" title="替换CEPH分布式源"></a>替换CEPH分布式源</h2><p>修改<code>/etc/apt/sources.list.d/ceph.list</code>和<code>/usr/share/perl5/PVE/CLI/pveceph.pm</code>文件内容。<code>pveceph.pm</code>推荐是更新系统之后再操作，否则更新系统之后<code>pveceph.pm</code>会覆盖回默认的域名<code>http://download.proxmox.com</code>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak</span><br><span class="line"><span class="built_in">echo</span> deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-squid trixie no-subscription &gt; /etc/apt/sources.list.d/ceph.list</span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/CLI/pveceph.pm /usr/share/perl5/PVE/CLI/pveceph.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g&quot;</span> /usr/share/perl5/PVE/CLI/pveceph.pm</span><br></pre></td></tr></table></figure>
-
-<h1 id="开始正式升级（8-x-9-x）">5 &nbsp&nbsp<a href="#开始正式升级（8-x-9-x）" class="headerlink" title="开始正式升级（8.x-&gt;9.x）"></a>开始正式升级（8.x-&gt;9.x）</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
-<div class="note info no-icon"><p>升级若遇到提示<code>Upgrade wants to remove package &#39;proxmox-ve&#39;</code>的话，在升级前尝试执行<code>apt remove linux-image-amd64</code>。</p>
-</div>
-<p>升级中会出现一些交互界面，下面是官网的建议（不清楚的选项，可以选择推荐参数）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/issue -&gt; Proxmox VE will auto-generate this file on boot, and it has only cosmetic effects on the login console.</span><br><span class="line">Using the default <span class="string">&quot;No&quot;</span> (keep your currently-installed version) is safe here.</span><br><span class="line"></span><br><span class="line">/etc/lvm/lvm.conf -&gt; Changes relevant <span class="keyword">for</span> Proxmox VE will be updated, and a newer config version might be useful.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br><span class="line"></span><br><span class="line">/etc/ssh/sshd_config -&gt; If you have not changed this file manually, the only differences should be a replacement of ChallengeResponseAuthentication no with KbdInteractiveAuthentication no and some irrelevant changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#).</span></span><br><span class="line">If this is the <span class="keyword">case</span>, both options are safe, though we would recommend installing the package maintainer<span class="string">&#x27;s version in order to move away from the deprecated ChallengeResponseAuthentication option. If there are other changes, we suggest to inspect them closely and decide accordingly.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">/etc/default/grub -&gt; Here you may want to take special care, as this is normally only asked for if you changed it manually, e.g., for adding some kernel command line option.</span></span><br><span class="line"><span class="string">It&#x27;</span>s recommended to check the difference <span class="keyword">for</span> any relevant change, note that changes <span class="keyword">in</span> comments (lines starting with <span class="comment">#) are not relevant.</span></span><br><span class="line">If unsure, we suggested to selected <span class="string">&quot;No&quot;</span> (keep your currently-installed version)</span><br><span class="line"></span><br><span class="line">/etc/chrony/chrony.conf -&gt; If you made <span class="built_in">local</span> changes you might want to move them out of the global config into the conf.d or, <span class="keyword">for</span> custom <span class="keyword">time</span> sources, the sources.d folder.</span><br><span class="line">See the /etc/chrony/conf.d/README and /etc/chrony/sources.d/README files on your system <span class="keyword">for</span> detaily.</span><br><span class="line">If you did not make extra changes yourself and are unsure it<span class="string">&#x27;s suggested to choose &quot;Yes&quot; (install the package maintainer&#x27;</span>s version) here.</span><br></pre></td></tr></table></figure>
-<p>以下是实操选择的参数：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Configuration file <span class="string">&#x27;/etc/issue&#x27;</span></span><br><span class="line"> ==&gt; Modified (by you or by a script) since installation.</span><br><span class="line"> ==&gt; Package distributor has shipped an updated version.</span><br><span class="line">   What would you like to <span class="keyword">do</span> about it ?  Your options are:</span><br><span class="line">    Y or I  : install the package maintainer<span class="string">&#x27;s version</span></span><br><span class="line"><span class="string">    N or O  : keep your currently-installed version</span></span><br><span class="line"><span class="string">      D     : show the differences between the versions</span></span><br><span class="line"><span class="string">      Z     : start a shell to examine the situation</span></span><br><span class="line"><span class="string"> The default action is to keep your current version.</span></span><br><span class="line"><span class="string">*** issue (Y/I/N/O/D/Z) [default=N] ?</span></span><br><span class="line"><span class="string">输入N回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuring libc6:amd64 ├────────────────────────────────────────────┐</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ There are services installed on your system which need to be restarted when certain libraries, such as libpam,    │</span></span><br><span class="line"><span class="string"> │ libc, and libssl, are upgraded. Since these restarts may cause interruptions of service for the system, you will  │</span></span><br><span class="line"><span class="string"> │ normally be prompted on each upgrade for the list of services you wish to restart.  You can choose this option    │</span></span><br><span class="line"><span class="string"> │ to avoid being prompted; instead, all necessary restarts will be done for you automatically so you can avoid      │</span></span><br><span class="line"><span class="string"> │ being asked questions on each library upgrade.                                                                    │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │ Restart services during package upgrades without asking?                                                          │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> │                                  &lt;Yes&gt;                                     &lt;No&gt;                                   │</span></span><br><span class="line"><span class="string"> │                                                                                                                   │</span></span><br><span class="line"><span class="string"> └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span></span><br><span class="line"><span class="string">选择Yes回车</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Configuration file &#x27;</span>/etc/lvm/lvm.conf<span class="string">&#x27;</span></span><br><span class="line"><span class="string"> ==&gt; Modified (by you or by a script) since installation.</span></span><br><span class="line"><span class="string"> ==&gt; Package distributor has shipped an updated version.</span></span><br><span class="line"><span class="string">   What would you like to do about it ?  Your options are:</span></span><br><span class="line"><span class="string">    Y or I  : install the package maintainer&#x27;</span>s version</span><br><span class="line">    N or O  : keep your currently-installed version</span><br><span class="line">      D     : show the differences between the versions</span><br><span class="line">      Z     : start a shell to examine the situation</span><br><span class="line"> The default action is to keep your current version.</span><br><span class="line">*** lvm.conf (Y/I/N/O/D/Z) [default=N] ?</span><br><span class="line">输入Y回车</span><br></pre></td></tr></table></figure>
-
-<h1 id="屏蔽PVE-9-x企业源pve-enterprise-sources">6 &nbsp&nbsp<a href="#屏蔽PVE-9-x企业源pve-enterprise-sources" class="headerlink" title="屏蔽PVE 9.x企业源pve-enterprise.sources"></a>屏蔽PVE 9.x企业源<code>pve-enterprise.sources</code></h1><p>成功升级至PVE 9.x之后，会自动生成一个<code>DEB822</code>格式的企业源<code>pve-enterprise.sources</code>文件，需要手动屏蔽它，否则WEB后台和<code>apt update</code>会有提示。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list.d/pve-enterprise.sources /etc/apt/sources.list.d/pve-enterprise.sources.bak</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
-
-<h1 id="移除无用的包">7 &nbsp&nbsp<a href="#移除无用的包" class="headerlink" title="移除无用的包"></a>移除无用的包</h1><p>运行如下如下命令，移除无用的包，节省服务器空间：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt autoremove</span><br></pre></td></tr></table></figure>
-
-<div class="flex-column">
-<img data-src="/images/software/pve/apt-auto-remove.webp">移除无用的包</div>
-
-<h1 id="替换LXC模板（CT-Templates）镜像源">8 &nbsp&nbsp<a href="#替换LXC模板（CT-Templates）镜像源" class="headerlink" title="替换LXC模板（CT Templates）镜像源"></a>替换LXC模板（CT Templates）镜像源</h1><p>修改<code>/usr/share/perl5/PVE/APLInfo.pm</code>文件内容，<strong>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行<code>systemctl restart pvedaemon</code>后生效。</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm.bak</span><br><span class="line">sed -i <span class="string">&quot;s#http://download.proxmox.com/images#https://mirrors.ustc.edu.cn/proxmox/images#g&quot;</span> /usr/share/perl5/PVE/APLInfo.pm</span><br></pre></td></tr></table></figure>
-
-<h1 id="去除PVE未订阅提示">9 &nbsp&nbsp<a href="#去除PVE未订阅提示" class="headerlink" title="去除PVE未订阅提示"></a>去除PVE未订阅提示</h1><p><strong>完成如下文件内容修改后，注销浏览器当前的PVE登录信息，并重新登录就没有提示弹窗了。实测PVE 9.x版本执行该方法之后，WEB后台的「软件包版本」按钮无法响应，暂未排查到问题，后面有时间再跟进。</strong></p>
-<ul>
-<li><code>/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</code></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak</span><br><span class="line">sed -i <span class="string">&quot;s/if (res === null || res === undefined || \!res || res/if(/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">sed -i <span class="string">&quot;s/.data.status.toLowerCase() !== &#x27;active&#x27;/false/g&quot;</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js</span><br><span class="line">systemctl restart pveproxy</span><br></pre></td></tr></table></figure>
-<div class="flex-column">
-<img data-src="/images/software/pve/pve-no-subscribe.webp">「无有效订阅」的提示弹窗</div>
-
-<h1 id="后续PVE系统日常更新：">10 &nbsp&nbsp<a href="#后续PVE系统日常更新：" class="headerlink" title="后续PVE系统日常更新："></a>后续PVE系统日常更新：</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
-
-<h1 id="后记">11 &nbsp&nbsp<a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>以下就是升级到最新的PVE 9.x版本的WEB后台界面了。</p>
-<div class="flex-column">
-<img data-src="/images/software/pve/pve9x-web-control.webp">PVE 9.x的WEB后台界面</div>
-
-<h1 id="参考文献">12 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Upgrade from 8 to 9[EB&#x2F;OL]. <a href="https://pve.proxmox.com/wiki/Upgrade_from_8_to_9">https://pve.proxmox.com/wiki/Upgrade_from_8_to_9</a>.<br>[2] Proxmox[EB&#x2F;OL]. <a href="https://mirrors.ustc.edu.cn/help/proxmox.html">https://mirrors.ustc.edu.cn/help/proxmox.html</a>.</p>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2025-10</category>
-      </categories>
-      <tags>
-        <tag>虚拟化系统</tag>
-        <tag>HomeLab</tag>
-        <tag>PVE</tag>
-        <tag>Proxmox</tag>
-        <tag>服务器</tag>
-        <tag>升级</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PVE清理旧内核</title>
     <url>/post-articles/2025-11/pve-kernel-cleaner/</url>
     <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家里HomeLab的PVE虚拟化系统服务器，历经几次小版本升级和一次大版本更新，系统上已经有不少个内核。</p>
@@ -16572,9 +16614,9 @@ title UDP Packet
         <tag>虚拟化系统</tag>
         <tag>HomeLab</tag>
         <tag>PVE</tag>
+        <tag>升级</tag>
         <tag>Proxmox</tag>
         <tag>服务器</tag>
-        <tag>升级</tag>
         <tag>LXC</tag>
         <tag>Debian</tag>
       </tags>
@@ -16624,10 +16666,10 @@ title UDP Packet
         <tag>虚拟化系统</tag>
         <tag>HomeLab</tag>
         <tag>PVE</tag>
+        <tag>升级</tag>
         <tag>Proxmox</tag>
         <tag>服务器</tag>
         <tag>PBS</tag>
-        <tag>升级</tag>
         <tag>备份服务器</tag>
       </tags>
   </entry>
@@ -17123,46 +17165,6 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>PVE&amp;PBS小版本日常升级的两种方式</title>
-    <url>/post-articles/2026-01/two-ways-for-pve-pbs-minor-upgrade/</url>
-    <content><![CDATA[<p>简单聊聊PVE(Proxmox VE)和PBS(Proxmox Backup Server)小版本日常升级的两种方式，一种是常规的命令升级，另一种是WEB后台的升级按钮。</p>
-<h1 id="方式一：常规命令升级">1 &nbsp&nbsp<a href="#方式一：常规命令升级" class="headerlink" title="方式一：常规命令升级"></a>方式一：常规命令升级</h1><p>这种命令升级的方式，对于PVE和PBS系统都适用，命令也都一致。通过SSH登录服务器，操作输入执行命令即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
-
-<h1 id="方式二：WEB后台升级按钮">2 &nbsp&nbsp<a href="#方式二：WEB后台升级按钮" class="headerlink" title="方式二：WEB后台升级按钮"></a>方式二：WEB后台升级按钮</h1><p>在PVE(Proxmox VE)和PBS(Proxmox Backup Server)系统的WEB后台中，都有设计「更新」模块可以查看当前系统中是否存在软件更新，同时也有提供「升级」按钮。这个WEB按钮本质上就是WEB后台提前帮我们输入了升级命令。</p>
-<h2 id="PVE系统的升级按钮">2.1 &nbsp&nbsp<a href="#PVE系统的升级按钮" class="headerlink" title="PVE系统的升级按钮"></a>PVE系统的升级按钮</h2><p>PVE(Proxmox VE)系统的升级按钮位置：节点<code>pve</code>（这个节点名称是主机名hostname）-&gt;<code>更新</code>-&gt;<code>&gt;_升级</code>。点击<code>&gt;_升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pve-minor-upgrade-button.webp">PVE的升级按钮</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/pve-minor-upgrade-popup.webp">PVE的升级弹窗</div>
-</div>
-
-<h2 id="PBS系统的升级按钮">2.2 &nbsp&nbsp<a href="#PBS系统的升级按钮" class="headerlink" title="PBS系统的升级按钮"></a>PBS系统的升级按钮</h2><p>PBS(Proxmox Backup Server)系统的升级按钮位置：<code>管理</code>-&gt;<code>更新</code>-&gt;<code>升级</code>。点击<code>升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pbs-minor-upgrade-button.webp">PBS的升级按钮</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/pbs-minor-upgrade-popup.webp">PBS的升级弹窗</div>
-</div>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2026-01</category>
-      </categories>
-      <tags>
-        <tag>虚拟化系统</tag>
-        <tag>HomeLab</tag>
-        <tag>PVE</tag>
-        <tag>Proxmox</tag>
-        <tag>服务器</tag>
-        <tag>PBS</tag>
-        <tag>升级</tag>
-        <tag>LXC</tag>
-        <tag>Debian</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个诡异的驱动BUG问题排查记录：大容量U盘在Windows设备管理器中无法识别，但DiskGenius可以识别</title>
     <url>/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/</url>
     <content><![CDATA[<p>前日，在Windows平台上遇到一个十分诡异的BUG问题。我本人自制的IS903大容量U盘，在Windows11 24H2系统中（平台是AMD的x86），无法被系统的文件管理器读取到。一开始还以为是这个自制U盘挂了，最后花了十分多分钟才排障解决这个问题。因此记录一下这个问题排障过程。</p>
@@ -17200,7 +17202,7 @@ title UDP Packet
 <img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-driver.webp">卸载「USB大容量存储设备」设备</div>
 
 <p>这个BUG问题的诡异之处就是，Windows很多自带组件和工具都无法识别到U盘设备，反倒是DiskGenius可以正常识别。</p>
-<p>我推测是Windows中某个涉及存储管理的内核组件未能正确通过「USB大容量存储设备」驱动实现硬件通信，导致「文件资源管理器」「设备管理器」等这些上层工具都集体失明。通过卸载并重新加载相应驱动后，Windows相关底层组件被强制刷新加载设备，因此恢复正常。而DdiskGenius并不通过该内核组件去完成硬件识别通信，因此全程未受影响。</p>
+<p>我推测是Windows中某个涉及存储管理的内核组件未能正确通过「USB大容量存储设备」驱动实现硬件通信，导致「文件资源管理器」「设备管理器」等这些上层工具都集体失明。通过卸载并重新加载相应驱动后，Windows相关底层组件被强制刷新加载设备，因此恢复正常。而DiskGenius并不通过该内核组件去完成硬件识别通信，因此全程未受影响。</p>
 ]]></content>
       <categories>
         <category>post-articles</category>
@@ -17217,56 +17219,56 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+    <title>飞牛fnOS被曝重大安全漏洞。扩散通知，抓紧升级你的飞牛系统。</title>
+    <url>/post-articles/2026-02/fnos-critical-security/</url>
+    <content><![CDATA[<h1 id="官方公告通知">1 &nbsp&nbsp<a href="#官方公告通知" class="headerlink" title="官方公告通知"></a>官方公告通知</h1><p>2026-02-01日04:31，也就是今日(周日)凌晨四点半，广州铁刃公司在公众号平台上发布一篇《重要安全更新通知》文章。</p>
+<blockquote>
+<p>这个公告主要意思就是说<code>fnOS v1.1.15</code>之前的版本代码存在缺陷，有系统漏洞，请各位用户尽快升级至目前最新的<code>v1.1.18</code>版本。此次安全问题，官方共发布推送了<code>v1.1.15</code>和<code>v1.1.18</code>两版紧急修复固件。</p>
+</blockquote>
+<p>详细公告内容可以点击查看「<a href="https://mp.weixin.qq.com/s/LzkLcy92m5O24up_9c4NUA">重要安全更新通知</a>」。</p>
+<p>如果还有朋友还停留在飞牛fnOS旧版本的话，请抓紧升级飞牛系统版本，并做好对应的网络访问权限安全防护。</p>
+<p>当然，如果你是内网使用的话，并且不考虑任何外网访问的途径，可以不用担心这个问题。</p>
+<h1 id="系统安全漏洞的分析">2 &nbsp&nbsp<a href="#系统安全漏洞的分析" class="headerlink" title="系统安全漏洞的分析"></a>系统安全漏洞的分析</h1><p>这些天，这个漏洞安全事件一直在发酵，很多网络帖子都在讨论这个问题。</p>
+<p>我看了一些相关话题的帖子，<strong>很多都提及到一个「路径穿越漏洞」，就是指在未登录授权凭证的条件下，可以访问并遍历系统敏感目录。</strong></p>
+<p>不需要鉴权就能访问获取文件，这种漏洞安全性很严重。其中官方论坛有一个帖子提到，有不法分子(攻击者)通过这个漏洞获取文件<code>飞牛系统地址:5666/app-center-static/serviceicon/myapp/%7B0%7D?size=../../../../usr/trim/etc/rsa_private_key.pem</code>，进而拿到<code>longtoken</code>利用<code>cookie</code>登录飞牛fnOS系统，然后在系统中下发并持久化木马程序。</p>
+<p>还有一个是涉及到websocket鉴权漏洞，测试的链接是<code>飞牛系统地址:5666/websocket?type=main</code>，目前这个我还未找到比较详细的资料。感兴趣的朋友可以查看本文的参考文献链接或者搜索相关资料。</p>
+<blockquote>
+<p>【郑重声明】本文提及的任何漏洞信息，旨在提醒用户注意网络安全。任何人不得将其用于非法用途，否则产生的后果由使用者本人承担，与本文作者无关。</p>
+</blockquote>
+<h1 id="中招的应对方法">3 &nbsp&nbsp<a href="#中招的应对方法" class="headerlink" title="中招的应对方法"></a>中招的应对方法</h1><p>如果有朋友的飞牛设备仍停留在旧版本，并且出现了「设备连接数异常」「经常断网无法连接」「网卡超时」等问题，可以检查以下特征，判断是否已经中招被植入木马病毒。</p>
+<p>目前披露的几个常见感染特征是：</p>
+<ul>
+<li>出现网络连接突然失效、网卡超时等情况</li>
+<li>存在<code>/usr/sbin/gots</code>、<code>/usr/trim/bin/trim_https_cgi</code>等病毒文件：使用命令<code>ls</code>查看是否存在这些文件</li>
+<li>存在<code>snd_pcap</code>恶意内核模块，这个是恶意程序创建的模块：使用<code>cat /etc/modules</code>命令排查</li>
+<li><code>/usr/trim/bin/system_startup.sh</code>文件中存在异常的<code>wget</code>命令：使用命令命令<code>cat</code>查看文件内容进行排查</li>
+<li>无法使用官方的更新功能，提示错误或异常</li>
 </ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+<p>已经中招的朋友，请断开外部网络进行隔离（物理断网优先），在断网环境下进行排查和清除木马，详细可参考这篇文章《fnos 恶意程序分析》：<code>https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=53230</code>进行修复，并立即升级系统版本。切记清理完成前不要恢复联网，贸然联网可能导致恶意程序成功回连，被二次下发任务进一步破坏你的数据。</p>
+<p>进一步检查，可以通过<code>crontab -l</code>命令检查任务计划等，这里不再展开了。</p>
+<h1 id="聊聊作为普通用户的个人看法和系统加固建议">4 &nbsp&nbsp<a href="#聊聊作为普通用户的个人看法和系统加固建议" class="headerlink" title="聊聊作为普通用户的个人看法和系统加固建议"></a>聊聊作为普通用户的个人看法和系统加固建议</h1><p>感觉这种网安漏洞问题是NAS系统厂商必经之路，印象中之前绿联NAS也前后被曝出过几次安全漏洞问题，事情发酵也不小。</p>
+<p>飞牛官方这个周末肯定是不好过，凌晨四点半发布公告，也说明了问题的严重性。作为普通用户，真的无法奢望有百分百安全的系统，毕竟用户体量大之后，就有攻击价值，总会有不法分子尝试寻找漏洞。</p>
+<p>系统加固方面的建议：</p>
+<ol>
+<li>内网使用其实最安全，只要不暴露在外网，不法分子怎么都扫描不到，也连接不进来。</li>
+<li>有需要设置外网访问途径的，能VPN组网就VPN组网，这样可以降低被扫描的风险。</li>
+<li>开启飞牛自带的防火墙，控制好出入站规则。有用FNID实现远程的话，如果实在担心的话，可以先关闭。我看了不少帖子有零星的反馈说可以成功连入的案例。</li>
+<li><strong>有开启SSH功能的，请设置仅密钥登录并禁止ROOT账户登录</strong>。详细设置教程可以参考我以前的文章「<a href="https://mp.weixin.qq.com/s/YGxWwuB5WUTlZThpKSGTsQ?token=1144548863&lang=zh_CN">禁用飞牛fnOS的SSH密码登录，避免被爆破登录入侵</a>」。当然，进一步者可以部署<code>Fail2Ban</code>、<code>Crowdsec</code>工具禁止恶意登录IP或者端口敲门的方案来保护SSH服务。</li>
+<li>有用iKuai做主路由的朋友并且开启IPv6的话，记得设置ACL规则控制出入，否则在iKuai的IPv6默认规则模式下，你的所有设备都是裸奔在公网之上。</li>
+</ol>
+<p><strong>数据无价！！！这种NAS的网络安全问题，咱们还是留心做好防护才行。</strong></p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 系统可能存在漏洞[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=52304">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=52304</a>.<br>[2] fnos 恶意程序分析[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=53230">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=53230</a>.<br>[3] 飞牛 OS 疑似 0day 漏洞，许多用户设备遭到攻击，请尽快检查设备或暂停使用[EB&#x2F;OL]. <a href="https://www.v2ex.com/t/1189672">https://www.v2ex.com/t/1189672</a>.<br>[4] 【漏洞预警】国产飞牛系统 fnOS 出现安全漏洞[EB&#x2F;OL]. <a href="https://blog.h-acker.cn/forum-post/3762.html">https://blog.h-acker.cn/forum-post/3762.html</a>.<br>[5] 飞牛NAS(fnOS)严重安全漏洞(app-center-static)的分析及修复方式[EB&#x2F;OL]. <a href="https://blog.fyun.org/fnos-nas.html">https://blog.fyun.org/fnos-nas.html</a>.<br>[6] 紧急安全提醒！飞牛OS最新版仍然存在漏洞 请立即断开网络连接[EB&#x2F;OL]. <a href="https://www.landiannews.com/archives/111678.html">https://www.landiannews.com/archives/111678.html</a>.</p>
 ]]></content>
       <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
+        <category>post-articles</category>
+        <category>2026-02</category>
       </categories>
       <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
+        <tag>fnOS</tag>
+        <tag>飞牛</tag>
+        <tag>安全漏洞</tag>
+        <tag>重要安全更新</tag>
+        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
@@ -17435,6 +17437,46 @@ title UDP Packet
         <tag>翻译</tag>
         <tag>blender</tag>
         <tag>资料整理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PVE&amp;PBS小版本日常升级的两种方式</title>
+    <url>/post-articles/2026-01/two-ways-for-pve-pbs-minor-upgrade/</url>
+    <content><![CDATA[<p>简单聊聊PVE(Proxmox VE)和PBS(Proxmox Backup Server)小版本日常升级的两种方式，一种是常规的命令升级，另一种是WEB后台的升级按钮。</p>
+<h1 id="方式一：常规命令升级">1 &nbsp&nbsp<a href="#方式一：常规命令升级" class="headerlink" title="方式一：常规命令升级"></a>方式一：常规命令升级</h1><p>这种命令升级的方式，对于PVE和PBS系统都适用，命令也都一致。通过SSH登录服务器，操作输入执行命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h1 id="方式二：WEB后台升级按钮">2 &nbsp&nbsp<a href="#方式二：WEB后台升级按钮" class="headerlink" title="方式二：WEB后台升级按钮"></a>方式二：WEB后台升级按钮</h1><p>在PVE(Proxmox VE)和PBS(Proxmox Backup Server)系统的WEB后台中，都有设计「更新」模块可以查看当前系统中是否存在软件更新，同时也有提供「升级」按钮。这个WEB按钮本质上就是WEB后台提前帮我们输入了升级命令。</p>
+<h2 id="PVE系统的升级按钮">2.1 &nbsp&nbsp<a href="#PVE系统的升级按钮" class="headerlink" title="PVE系统的升级按钮"></a>PVE系统的升级按钮</h2><p>PVE(Proxmox VE)系统的升级按钮位置：节点<code>pve</code>（这个节点名称是主机名hostname）-&gt;<code>更新</code>-&gt;<code>&gt;_升级</code>。点击<code>&gt;_升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pve-minor-upgrade-button.webp">PVE的升级按钮</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/pve-minor-upgrade-popup.webp">PVE的升级弹窗</div>
+</div>
+
+<h2 id="PBS系统的升级按钮">2.2 &nbsp&nbsp<a href="#PBS系统的升级按钮" class="headerlink" title="PBS系统的升级按钮"></a>PBS系统的升级按钮</h2><p>PBS(Proxmox Backup Server)系统的升级按钮位置：<code>管理</code>-&gt;<code>更新</code>-&gt;<code>升级</code>。点击<code>升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/software/pve/pbs-minor-upgrade-button.webp">PBS的升级按钮</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/pbs-minor-upgrade-popup.webp">PBS的升级弹窗</div>
+</div>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2026-01</category>
+      </categories>
+      <tags>
+        <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
+        <tag>PVE</tag>
+        <tag>升级</tag>
+        <tag>Proxmox</tag>
+        <tag>服务器</tag>
+        <tag>PBS</tag>
+        <tag>LXC</tag>
+        <tag>Debian</tag>
       </tags>
   </entry>
   <entry>
@@ -17964,6 +18006,59 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
     <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
     <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
@@ -18131,7 +18226,7 @@ title UDP Packet
 <h1 id="联系方式">5 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#x72;&#107;&#105;&#110;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -19136,6 +19231,167 @@ CGI&后期处理
 ]]></content>
   </entry>
   <entry>
+    <title>「批处理工具」使用手册</title>
+    <url>/works/software-works/batch-tools/index.html</url>
+    <content><![CDATA[<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一些方便工作的批处理程序。</p>
+<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>TODO</p>
+<h2 id="程序目前实现的功能">1.2 &nbsp&nbsp<a href="#程序目前实现的功能" class="headerlink" title="程序目前实现的功能"></a>程序目前实现的功能</h2><ul>
+<li>ffmpeg.sh<ul>
+<li>个人工作：批量操作媒体资源</li>
+<li>压缩媒体资源</li>
+<li>图片转换器：图片格式互转</li>
+<li>视频转换器：视频格式互转</li>
+<li>音频转换器：音频格式互转</li>
+<li>音频元数据标签工具</li>
+<li>音频封面图工具：获取、添加、删除</li>
+<li>媒体资源工具：合并、分割、缩放</li>
+</ul>
+</li>
+<li>text.sh<ul>
+<li>合并文本文件</li>
+</ul>
+</li>
+<li>ffmpeg.bat（不再维护bat）<ul>
+<li>给图片添加版权水印并压缩</li>
+<li>图片压缩</li>
+<li>合并音视频</li>
+<li>视频转封装</li>
+<li>视频压缩：转 hevc 编码</li>
+<li>显卡加速图片序列合成视频</li>
+</ul>
+</li>
+</ul>
+<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
+<li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
+<li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
+<li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
+</ul>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/download_ffmpeg.webp">下载FFmpeg</div>
+<div class="flex-column">
+<img data-src="./images/download_git.webp">下载Git for Windows</div>
+<div class="flex-column">
+<img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
+</div>
+
+<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="FFmpeg配置">2.1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h4><ol>
+<li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
+<li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
+<li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
+</ol>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/1.1.webp">解压重命名放于C盘</div>
+<div class="flex-column">
+<img data-src="./images/1.2.webp">运行对话框</div>
+<div class="flex-column">
+<img data-src="./images/1.3.webp">打开高级系统设置</div>
+<div class="flex-column">
+<img data-src="./images/1.4.webp">打开环境变量</div>
+</div>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/1.5.webp">编辑系统变量Path</div>
+<div class="flex-column">
+<img data-src="./images/1.6.webp">添加一个新路径</div>
+<div class="flex-column">
+<img data-src="./images/1.7.webp">定位路径</div>
+<div class="flex-column">
+<img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
+</div>
+
+<h4 id="安装Git-for-Windows">2.1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h4><p>一路默认安装下去，终端使用Git Bash。</p>
+<h4 id="批处理工具配置">2.1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h4><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
+<div class="flex-column">
+<img data-src="./images/1.9.webp">批处理工具程序路径</div>
+
+<h2 id="使用方法">2.2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol>
+<li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
+<li>输入批处理工具程序的路径，回车执行。</li>
+<li>按菜单提示选择对应功能。</li>
+<li>输入需要操作媒体文件的文件夹路径。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/2.1.webp">输入程序路径执行</div>
+<div class="flex-column">
+<img data-src="./images/2.2.webp">输入操作路径执行</div>
+
+<h2 id="程序功能">2.3 &nbsp&nbsp<a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h2><ul>
+<li>ffmpeg.sh<ul>
+<li>个人工作：批量操作媒体资源<ul>
+<li>给图片添加版权文字水印并压缩</li>
+<li>给视频添加文字版权水印（libx264）</li>
+<li>图片序列导出mp4格式视频（libx264）</li>
+<li>重编码视频导出mp4格式视频（libx264）</li>
+<li>添加字幕（硬编码，libx264）</li>
+<li>显卡加速将图片序列合成为视频（不再维护该功能）</li>
+</ul>
+</li>
+<li>压缩媒体资源<ul>
+<li>压缩图片（原格式压缩或者转换为webp格式）</li>
+<li>压缩视频，转换为hevc编码的mp4格式（libx265）</li>
+</ul>
+</li>
+<li>图片转换器：图片格式互转<ul>
+<li>图片转png格式</li>
+</ul>
+</li>
+<li>视频转换器：视频格式互转<ul>
+<li>视频转mp4格式</li>
+</ul>
+</li>
+<li>音频转换器：音频格式互转<ul>
+<li>无损音频转m4a格式</li>
+</ul>
+</li>
+<li>音频元数据标签工具<ul>
+<li>根据元数据标签重命名音频文件</li>
+<li>根据音频文件名修改元数据标签</li>
+<li>设置音频文件的专辑名</li>
+<li>设置音频文件的歌曲名</li>
+<li>设置音频文件的歌手名</li>
+</ul>
+</li>
+<li>音频封面图工具：获取、添加、删除<ul>
+<li>获取音频封面图</li>
+<li>添加音频封面图</li>
+<li>删除音频封面图</li>
+</ul>
+</li>
+<li>媒体资源工具：合并、分割、缩放<ul>
+<li>合并音视频：mp4+m4a&#x2F;mp3</li>
+<li>分割视频</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>text.sh<ul>
+<li>合并文本文件<ul>
+<li>合并文本文件（文件首尾拼接）</li>
+<li>合并文本文件（逐行拼接合并）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ffmpeg.bat（不再维护bat）<ul>
+<li>给图片添加版权水印并压缩</li>
+<li>图片压缩：转 webp</li>
+<li>合并音视频：mp4 + m4a</li>
+<li>视频转封装：flv -&gt; mp4</li>
+<li>视频压缩：转 hevc 编码（libx265）</li>
+<li>显卡加速图片序列合成视频：普通录屏（jpg + wav -&gt; h264_nvenc + aac）</li>
+<li>显卡加速图片序列合成视频：CG（png + wav -&gt; h264_nvenc + aac）</li>
+</ul>
+</li>
+</ul>
+<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Arch Linux &#x2F; Mac<br>Shell: Git Bash &#x2F; Zsh</p>
+<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>批处理工具</strong> © Mr. Kin，所有文件均采用 <a href="https://github.com/Mister-Kin/BatchTools/blob/master/LICENSE">WTFPL</a> 许可协议进行发布。</p>
+<p>由 Mr. Kin 著作并维护。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>雨滴皮肤</title>
     <url>/works/software-works/rainmeter-skins/index.html</url>
     <content><![CDATA[<div class="note danger no-icon"><p>本项目已不再维护！</p>
@@ -19762,166 +20018,5 @@ CGI&后期处理
 <h1 id="作者">5 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.<br>[32] How to Create Extensions[EB&#x2F;OL]. <a href="https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html">https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html</a>.<br>[33] How can I call a specific keymap to draw within my AddonPreferences?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#">https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#</a>.<br>[34] addon_keymap_template[EB&#x2F;OL]. <a href="https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template">https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template</a>.<br>[35] How to draw a custom KeyMapItem.properties[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059">https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059</a>.<br>[36] UI: Operator Confirm Dialog Changes #117564[EB&#x2F;OL]. <a href="https://projects.blender.org/blender/blender/pulls/117564">https://projects.blender.org/blender/blender/pulls/117564</a>.<br>[37] WindowManager(ID)[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm">https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm</a>.<br>[38] Switching workspaces in Blender using Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/">https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/</a>.<br>[39] How to create an Empty of type Image and assign a picture with Python?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#">https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#</a>.<br>[40] How to add empty object not using bpy.ops?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops">https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops</a>.<br>[41] How to use BPY to create an Image empty?[EB&#x2F;OL]. <a href="https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430">https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430</a>.<br>[42] Footnotes in longtable captions[EB&#x2F;OL]. <a href="https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions">https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions</a>.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以前（不含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以后（含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共18种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本的插件不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:7" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
-  </entry>
-  <entry>
-    <title>「批处理工具」使用手册</title>
-    <url>/works/software-works/batch-tools/index.html</url>
-    <content><![CDATA[<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一些方便工作的批处理程序。</p>
-<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>TODO</p>
-<h2 id="程序目前实现的功能">1.2 &nbsp&nbsp<a href="#程序目前实现的功能" class="headerlink" title="程序目前实现的功能"></a>程序目前实现的功能</h2><ul>
-<li>ffmpeg.sh<ul>
-<li>个人工作：批量操作媒体资源</li>
-<li>压缩媒体资源</li>
-<li>图片转换器：图片格式互转</li>
-<li>视频转换器：视频格式互转</li>
-<li>音频转换器：音频格式互转</li>
-<li>音频元数据标签工具</li>
-<li>音频封面图工具：获取、添加、删除</li>
-<li>媒体资源工具：合并、分割、缩放</li>
-</ul>
-</li>
-<li>text.sh<ul>
-<li>合并文本文件</li>
-</ul>
-</li>
-<li>ffmpeg.bat（不再维护bat）<ul>
-<li>给图片添加版权水印并压缩</li>
-<li>图片压缩</li>
-<li>合并音视频</li>
-<li>视频转封装</li>
-<li>视频压缩：转 hevc 编码</li>
-<li>显卡加速图片序列合成视频</li>
-</ul>
-</li>
-</ul>
-<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
-<li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
-<li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
-<li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
-</ul>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/download_ffmpeg.webp">下载FFmpeg</div>
-<div class="flex-column">
-<img data-src="./images/download_git.webp">下载Git for Windows</div>
-<div class="flex-column">
-<img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
-</div>
-
-<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="FFmpeg配置">2.1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h4><ol>
-<li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
-<li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
-<li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
-</ol>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/1.1.webp">解压重命名放于C盘</div>
-<div class="flex-column">
-<img data-src="./images/1.2.webp">运行对话框</div>
-<div class="flex-column">
-<img data-src="./images/1.3.webp">打开高级系统设置</div>
-<div class="flex-column">
-<img data-src="./images/1.4.webp">打开环境变量</div>
-</div>
-
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/1.5.webp">编辑系统变量Path</div>
-<div class="flex-column">
-<img data-src="./images/1.6.webp">添加一个新路径</div>
-<div class="flex-column">
-<img data-src="./images/1.7.webp">定位路径</div>
-<div class="flex-column">
-<img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
-</div>
-
-<h4 id="安装Git-for-Windows">2.1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h4><p>一路默认安装下去，终端使用Git Bash。</p>
-<h4 id="批处理工具配置">2.1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h4><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
-<div class="flex-column">
-<img data-src="./images/1.9.webp">批处理工具程序路径</div>
-
-<h2 id="使用方法">2.2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol>
-<li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
-<li>输入批处理工具程序的路径，回车执行。</li>
-<li>按菜单提示选择对应功能。</li>
-<li>输入需要操作媒体文件的文件夹路径。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/2.1.webp">输入程序路径执行</div>
-<div class="flex-column">
-<img data-src="./images/2.2.webp">输入操作路径执行</div>
-
-<h2 id="程序功能">2.3 &nbsp&nbsp<a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h2><ul>
-<li>ffmpeg.sh<ul>
-<li>个人工作：批量操作媒体资源<ul>
-<li>给图片添加版权文字水印并压缩</li>
-<li>给视频添加文字版权水印（libx264）</li>
-<li>图片序列导出mp4格式视频（libx264）</li>
-<li>重编码视频导出mp4格式视频（libx264）</li>
-<li>添加字幕（硬编码，libx264）</li>
-<li>显卡加速将图片序列合成为视频（不再维护该功能）</li>
-</ul>
-</li>
-<li>压缩媒体资源<ul>
-<li>压缩图片（原格式压缩或者转换为webp格式）</li>
-<li>压缩视频，转换为hevc编码的mp4格式（libx265）</li>
-</ul>
-</li>
-<li>图片转换器：图片格式互转<ul>
-<li>图片转png格式</li>
-</ul>
-</li>
-<li>视频转换器：视频格式互转<ul>
-<li>视频转mp4格式</li>
-</ul>
-</li>
-<li>音频转换器：音频格式互转<ul>
-<li>无损音频转m4a格式</li>
-</ul>
-</li>
-<li>音频元数据标签工具<ul>
-<li>根据元数据标签重命名音频文件</li>
-<li>根据音频文件名修改元数据标签</li>
-<li>设置音频文件的专辑名</li>
-<li>设置音频文件的歌曲名</li>
-<li>设置音频文件的歌手名</li>
-</ul>
-</li>
-<li>音频封面图工具：获取、添加、删除<ul>
-<li>获取音频封面图</li>
-<li>添加音频封面图</li>
-<li>删除音频封面图</li>
-</ul>
-</li>
-<li>媒体资源工具：合并、分割、缩放<ul>
-<li>合并音视频：mp4+m4a&#x2F;mp3</li>
-<li>分割视频</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>text.sh<ul>
-<li>合并文本文件<ul>
-<li>合并文本文件（文件首尾拼接）</li>
-<li>合并文本文件（逐行拼接合并）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>ffmpeg.bat（不再维护bat）<ul>
-<li>给图片添加版权水印并压缩</li>
-<li>图片压缩：转 webp</li>
-<li>合并音视频：mp4 + m4a</li>
-<li>视频转封装：flv -&gt; mp4</li>
-<li>视频压缩：转 hevc 编码（libx265）</li>
-<li>显卡加速图片序列合成视频：普通录屏（jpg + wav -&gt; h264_nvenc + aac）</li>
-<li>显卡加速图片序列合成视频：CG（png + wav -&gt; h264_nvenc + aac）</li>
-</ul>
-</li>
-</ul>
-<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Arch Linux &#x2F; Mac<br>Shell: Git Bash &#x2F; Zsh</p>
-<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>批处理工具</strong> © Mr. Kin，所有文件均采用 <a href="https://github.com/Mister-Kin/BatchTools/blob/master/LICENSE">WTFPL</a> 许可协议进行发布。</p>
-<p>由 Mr. Kin 著作并维护。</p>
-]]></content>
   </entry>
 </search>
