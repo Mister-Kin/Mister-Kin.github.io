@@ -176,6 +176,7 @@
     <a href="https://www.cip.cc/">IP归属地查询(CIP)</a>
     <a href="https://ipleak.net/">ipleak</a>
     <a href="https://lookup.icann.org/">域名状态查询</a>
+    <a href="https://www.whois.com/whois/">域名状态(whois)</a>
     <a href="https://browserleaks.com/dns">browserleaks(DNS泄漏查询)</a>
     <a href="https://downforeveryoneorjustme.com/">downforeveryoneorjustme查看网站是否下线</a>
     <a href="https://downdetector.com/">Downdetector查看网站是否下线</a>
@@ -3981,6 +3982,23 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>C&amp;C++语言总结笔记</title>
+    <url>/code/c-cpp/</url>
+    <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>c</tag>
+        <tag>编程</tag>
+        <tag>语言</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bat&amp;Powershell语法总结笔记</title>
     <url>/code/bat-powershell/</url>
     <content><![CDATA[<div class="note danger no-icon"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
@@ -4131,31 +4149,14 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>终端</tag>
+        <tag>笔记</tag>
         <tag>bat</tag>
         <tag>cmd</tag>
         <tag>语法</tag>
-        <tag>笔记</tag>
         <tag>windows</tag>
         <tag>运维</tag>
         <tag>powershell</tag>
         <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C&amp;C++语言总结笔记</title>
-    <url>/code/c-cpp/</url>
-    <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>c</tag>
-        <tag>编程</tag>
-        <tag>语言</tag>
       </tags>
   </entry>
   <entry>
@@ -4677,7 +4678,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#x74;&#x40;&#x31;&#55;&#50;&#46;&#x31;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#x31;&#57;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5241,8 +5242,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>语法</tag>
         <tag>笔记</tag>
+        <tag>语法</tag>
         <tag>LaTeX</tag>
         <tag>TeX</tag>
         <tag>编译</tag>
@@ -5745,8 +5746,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>语法</tag>
         <tag>笔记</tag>
+        <tag>语法</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
       </tags>
@@ -5803,8 +5804,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>编程</tag>
+        <tag>笔记</tag>
         <tag>python</tag>
       </tags>
   </entry>
@@ -10905,7 +10906,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <h2 id="apt-update证书验证错误">4.2 &nbsp&nbsp<a href="#apt-update证书验证错误" class="headerlink" title="apt update证书验证错误"></a>apt update证书验证错误</h2><p>错误信息：Certificate verification failed: The certificate is NOT trusted.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --reinstall ca-certificates</span><br></pre></td></tr></table></figure>
 
-<h1 id="Linux开机自启">5 &nbsp&nbsp<a href="#Linux开机自启" class="headerlink" title="Linux开机自启"></a>Linux开机自启</h1><h2 id="crontab方案">5.1 &nbsp&nbsp<a href="#crontab方案" class="headerlink" title="crontab方案"></a>crontab方案</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑当前用户的定时任务列表。若当前帐号为root，则上述命令保存的文件为/var/spool/cron/crontabs/root</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 查看当前用户的定时任务列表</span></span><br><span class="line">crontab -l</span><br><span class="line"><span class="comment"># 查看cron后台服务状态</span></span><br><span class="line">systemctl status cron.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># @reboot 参数代表重启后执行命令</span></span><br><span class="line"><span class="comment"># 注意sh脚本执行命令的工作目录，因为crontab默认目录是当前用户目录，例如/root。同时crontab运行默认不携带用户的环境变量，因此需要手动添加。</span></span><br><span class="line"><span class="comment"># 例如在command.sh开头，添加 cd $(dirname $0)，确保脚本工作在脚本所在目录下</span></span><br><span class="line">@reboot /root/command.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下补充其他一些crontab的定时配置</span></span><br><span class="line"><span class="comment"># * * * * * command_to_execute</span></span><br><span class="line"><span class="comment"># - - - - -</span></span><br><span class="line"><span class="comment"># | | | | |</span></span><br><span class="line"><span class="comment"># | | | | +----- 星期几 (0 - 7) (星期日为0或7)</span></span><br><span class="line"><span class="comment"># | | | +------- 月份 (1 - 12)</span></span><br><span class="line"><span class="comment"># | | +--------- 日 (1 - 31)</span></span><br><span class="line"><span class="comment"># | +----------- 小时 (0 - 23)</span></span><br><span class="line"><span class="comment"># +------------- 分钟 (0 - 59)</span></span><br><span class="line"><span class="comment"># 特殊符号：</span></span><br><span class="line"><span class="comment"># * : 代表所有可能的值。</span></span><br><span class="line"><span class="comment"># , : 指定多个值，例如「1,3,5」。</span></span><br><span class="line"><span class="comment"># - : 指定一个范围，例如「1-5」。</span></span><br><span class="line"><span class="comment"># / : 指定间隔频率，例如「*/2」表示每两单位。</span></span><br><span class="line">0 2 * * * /root/command.sh <span class="comment"># 每天凌晨2点执行脚本，把2改成0，就是每天凌晨0点</span></span><br><span class="line">0 17 * * 1-5 /root/command.sh <span class="comment"># 每周一到周五的下午5点执行脚本</span></span><br><span class="line">*/10 * * * * /root/command.sh <span class="comment"># 每10分钟执行一次脚本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关于crontab基础设定，直接在crontab -e编辑即可，例如在PATH中添加自定义的环境变量</span></span><br><span class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/.nvm/versions/node/v22.17.0/bin/yarn</span><br><span class="line">SHELL=/bin/bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出重定向</span></span><br><span class="line"><span class="comment"># 忽略标准输出和错误输出</span></span><br><span class="line">* * * * * /root/command.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line"><span class="comment"># 将输出重定向到文件</span></span><br><span class="line">* * * * * /root/command.sh &gt;&gt; /var/log/script.log 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<h1 id="Linux开机自启">5 &nbsp&nbsp<a href="#Linux开机自启" class="headerlink" title="Linux开机自启"></a>Linux开机自启</h1><h2 id="crontab方案">5.1 &nbsp&nbsp<a href="#crontab方案" class="headerlink" title="crontab方案"></a>crontab方案</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑当前用户的计划任务列表。若当前帐号为root，则上述命令保存的文件为/var/spool/cron/crontabs/root</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 查看当前用户的计划任务列表</span></span><br><span class="line">crontab -l</span><br><span class="line"><span class="comment"># 查看cron后台服务状态</span></span><br><span class="line">systemctl status cron.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># @reboot 参数代表重启后执行命令</span></span><br><span class="line"><span class="comment"># 注意sh脚本执行命令的工作目录，因为crontab默认目录是当前用户目录，例如/root。同时crontab运行默认不携带用户的环境变量，因此需要手动添加。</span></span><br><span class="line"><span class="comment"># 例如在command.sh开头，添加 cd $(dirname $0)，确保脚本工作在脚本所在目录下</span></span><br><span class="line">@reboot /root/command.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下补充其他一些crontab的定时配置</span></span><br><span class="line"><span class="comment"># * * * * * command_to_execute</span></span><br><span class="line"><span class="comment"># - - - - -</span></span><br><span class="line"><span class="comment"># | | | | |</span></span><br><span class="line"><span class="comment"># | | | | +----- 星期几 (0 - 7) (星期日为0或7)</span></span><br><span class="line"><span class="comment"># | | | +------- 月份 (1 - 12)</span></span><br><span class="line"><span class="comment"># | | +--------- 日 (1 - 31)</span></span><br><span class="line"><span class="comment"># | +----------- 小时 (0 - 23)</span></span><br><span class="line"><span class="comment"># +------------- 分钟 (0 - 59)</span></span><br><span class="line"><span class="comment"># 特殊符号：</span></span><br><span class="line"><span class="comment"># * : 代表所有可能的值。</span></span><br><span class="line"><span class="comment"># , : 指定多个值，例如「1,3,5」。</span></span><br><span class="line"><span class="comment"># - : 指定一个范围，例如「1-5」。</span></span><br><span class="line"><span class="comment"># / : 指定间隔频率，例如「*/2」表示每两单位。</span></span><br><span class="line">0 2 * * * /root/command.sh <span class="comment"># 每天凌晨2点执行脚本，把2改成0，就是每天凌晨0点</span></span><br><span class="line">0 17 * * 1-5 /root/command.sh <span class="comment"># 每周一到周五的下午5点执行脚本</span></span><br><span class="line">*/10 * * * * /root/command.sh <span class="comment"># 每10分钟执行一次脚本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关于crontab基础设定，直接在crontab -e编辑即可，例如在PATH中添加自定义的环境变量</span></span><br><span class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/.nvm/versions/node/v22.17.0/bin/yarn</span><br><span class="line">SHELL=/bin/bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出重定向</span></span><br><span class="line"><span class="comment"># 忽略标准输出和错误输出</span></span><br><span class="line">* * * * * /root/command.sh &gt; /dev/null 2&gt;&amp;1</span><br><span class="line"><span class="comment"># 将输出重定向到文件</span></span><br><span class="line">* * * * * /root/command.sh &gt;&gt; /var/log/script.log 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
 
 <h1 id="编译问题">6 &nbsp&nbsp<a href="#编译问题" class="headerlink" title="编译问题"></a>编译问题</h1><h2 id="编译环境的常规配置">6.1 &nbsp&nbsp<a href="#编译环境的常规配置" class="headerlink" title="编译环境的常规配置"></a>编译环境的常规配置</h2><p>以ubuntu举例，下载和更新相关的依赖：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt upgrade</span><br><span class="line">apt install linux‑headers‑amd64 <span class="comment"># 若失败，则先通过上面两条更新系统（因为/etc/apt/sources.list 源 repo 没有目前系统内核的 header，被移除了）除非换 repo branch</span></span><br><span class="line">apt install build‑essential</span><br></pre></td></tr></table></figure>
@@ -11781,7 +11782,7 @@ title UDP Packet
 
 <h1 id="netxx工具（Windows）">8 &nbsp&nbsp<a href="#netxx工具（Windows）" class="headerlink" title="netxx工具（Windows）"></a>net<code>xx</code>工具（Windows）</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网络重置，重置Windows的网络核心组件（Winsock目录）到初始状态</span></span><br><span class="line">netsh winsock reset</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重置TCP/IP协议栈</span></span><br><span class="line">netsh int ip reset</span><br><span class="line"></span><br><span class="line"><span class="comment"># 分别针对IPv4或IPv6协议进行重置</span></span><br><span class="line">netsh interface ipv4 reset</span><br><span class="line">netsh interface ipv6 reset</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看Windows Defender防火墙状态</span></span><br><span class="line">netsh advfirewall show allprofiles</span><br><span class="line"><span class="comment"># 重置Windows Defender防火墙的所有策略</span></span><br><span class="line">netsh advfirewall reset</span><br><span class="line"><span class="comment"># 打开Windows Defender防火墙</span></span><br><span class="line">netsh advfirewall <span class="built_in">set</span> allprofiles state on</span><br><span class="line"><span class="comment"># 关闭Windows Defender防火墙</span></span><br><span class="line">netsh advfirewall <span class="built_in">set</span> allprofiles state off</span><br><span class="line"></span><br><span class="line"><span class="comment"># nbtstat关注的是局域网，NetBIOS是一种网络通信协议，用于在局域网中识别计算机，即局域网名称识别。清除NetBIOS名称缓存有助于解决与NetBIOS名称相关的问题。</span></span><br><span class="line"><span class="comment"># Reload，清除并重新加载远程名称缓存表</span></span><br><span class="line">nbtstat -R</span><br><span class="line"><span class="comment"># ReleaseRefresh，清除NetBIOS名称缓存，还释放并重建NetBIOS名称缓存，例如解决局域网内“网上邻居”看不到对方的问题</span></span><br><span class="line">nbtstat -RR</span><br></pre></td></tr></table></figure>
 
-<h1 id="netstat工具">9 &nbsp&nbsp<a href="#netstat工具" class="headerlink" title="netstat工具"></a>netstat工具</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># netstat关注的是整体网络，例如所有基于TCP/IP的连接、端口监听状态和路由表</span></span><br><span class="line"><span class="comment"># netstat输出格式：Proto(协议)：通常是TCP或UDP；Local Address(本地地址，本机系统IP和端口)；Foreign Address(外部地址，远程主机的IP和端口)；State(状态)：指示TCP连接的状态</span></span><br><span class="line"><span class="comment"># 显示所有连接、不解析域名、带进程PID：常用于查找特定被占用端口，例如软件提示Port 8080 is already in use</span></span><br><span class="line">netstat -ano | findstr :8080 <span class="comment"># windows写法</span></span><br><span class="line">netstat -napt | grep :8080 <span class="comment"># linux写法</span></span><br><span class="line"><span class="comment"># 显示所有活动的TCP连接数以及计算机正在侦听的TCP和UDP端口。</span></span><br><span class="line">netstat -a</span><br><span class="line"><span class="comment"># 显示活动的TCP连接数，地址和端口号以数字表示，不会使用域名或者https/http代表443/80端口号这种名称表示。</span></span><br><span class="line"><span class="comment"># 操作系统中存在一个名为services的纯文本文件。类似于“端口字典”，记录了数字与名称的对应关系。Windows路径：C:\Windows\System32\drivers\etc\services；Linux/macOS路径：/etc/services</span></span><br><span class="line">netstat -n</span><br><span class="line"><span class="comment"># 显示活动的TCP连接数，并包括每个连接的进程ID(PID)。</span></span><br><span class="line">netstat -o</span><br><span class="line"><span class="comment"># 显示指定的协议的连接，可以指定tcp、udp、icmp、ip、tcpv6、udpv6、icmpv6或ipv6</span></span><br><span class="line">netstat -p tcp</span><br><span class="line"><span class="comment"># 显示IP路由表的内容。 这等效于route print命令。</span></span><br><span class="line">netstat -r</span><br><span class="line"><span class="comment"># 显示TCP连接统计信息</span></span><br><span class="line">netstat -s</span><br></pre></td></tr></table></figure>
+<h1 id="netstat工具">9 &nbsp&nbsp<a href="#netstat工具" class="headerlink" title="netstat工具"></a>netstat工具</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># netstat关注的是整体网络，例如所有基于TCP/IP的连接、端口监听状态和路由表</span></span><br><span class="line"><span class="comment"># netstat输出格式：Proto(协议)：通常是TCP或UDP；Local Address(本地地址，本机系统IP和端口)；Foreign Address(外部地址，远程主机的IP和端口)；State(状态)：指示TCP连接的状态</span></span><br><span class="line"><span class="comment"># 显示所有连接、不解析域名、带进程PID：常用于查找特定被占用端口，例如软件提示Port 8080 is already in use</span></span><br><span class="line">netstat -ano | findstr :8080 <span class="comment"># windows写法</span></span><br><span class="line">netstat -napt | grep :8080 <span class="comment"># linux写法</span></span><br><span class="line"><span class="comment"># 显示所有已经建立连接的网络状态</span></span><br><span class="line">netstat -napt | grep EST</span><br><span class="line"><span class="comment"># 显示所有活动的TCP连接数以及计算机正在侦听的TCP和UDP端口。</span></span><br><span class="line">netstat -a</span><br><span class="line"><span class="comment"># 显示活动的TCP连接数，地址和端口号以数字表示，不会使用域名或者https/http代表443/80端口号这种名称表示。</span></span><br><span class="line"><span class="comment"># 操作系统中存在一个名为services的纯文本文件。类似于“端口字典”，记录了数字与名称的对应关系。Windows路径：C:\Windows\System32\drivers\etc\services；Linux/macOS路径：/etc/services</span></span><br><span class="line">netstat -n</span><br><span class="line"><span class="comment"># 显示活动的TCP连接数，并包括每个连接的进程ID(PID)。</span></span><br><span class="line">netstat -o</span><br><span class="line"><span class="comment"># 显示指定的协议的连接，可以指定tcp、udp、icmp、ip、tcpv6、udpv6、icmpv6或ipv6</span></span><br><span class="line">netstat -p tcp</span><br><span class="line"><span class="comment"># 显示IP路由表的内容。 这等效于route print命令。</span></span><br><span class="line">netstat -r</span><br><span class="line"><span class="comment"># 显示TCP连接统计信息</span></span><br><span class="line">netstat -s</span><br></pre></td></tr></table></figure>
 
 <h1 id="ping工具">10 &nbsp&nbsp<a href="#ping工具" class="headerlink" title="ping工具"></a>ping工具</h1><p>ping命令是属于网络层的ICMP协议的，用于检查IP的连通性或网络连接速度，是无法用于检测IP的端口状态。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#  验证本地计算机上TCP/IP协议栈是否正常工作，TCP/IP协议栈是一个整体基础套件，并非指单个协议</span></span><br><span class="line"><span class="comment"># localhost 是一个域名，在过去它指向 127.0.0.1 这个 IP 地址。在操作系统支持 ipv6 后，它同时还指向 ipv6 的地址 [::1]</span></span><br><span class="line">ping 127.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证本机 IP 地址是否配置完成或者网卡物理属性是否完好，本机IP地址：192.168.1.55</span></span><br><span class="line">ping 192.168.1.55</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证从本机到网关的物理线路是否连通，网关地址：192.168.1.1</span></span><br><span class="line">ping 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以用于测试特定时长的网络连通性，例如是否存在网卡断流</span></span><br><span class="line"><span class="comment"># ping 1800次，ping每秒进行一次，1800次相当于30分钟</span></span><br><span class="line">ping qq.com -n 1800</span><br><span class="line"></span><br><span class="line"><span class="comment"># -t 持续发送Ping请求，Linux系统中默认就是持续发送，不需要-t参数</span></span><br><span class="line"><span class="comment"># -l 1400，设置发送的 ICMP 回显请求数据包的大小 为 1400 字节。Windows 默认发送 32 字节</span></span><br><span class="line"><span class="comment"># -f，在数据包中设置 &quot;不分段&quot;（Don&#x27;t Fragment）标志。这指示数据包在传输路径中不允许被路由器分片。若路由器的MTU为1500字节，则不分段能设置最大数据为1472字节数据（1500-20字节IP头-8字节ICMP头）</span></span><br><span class="line">ping qq.com -t -l 1400 -f</span><br></pre></td></tr></table></figure>
@@ -11819,7 +11820,7 @@ title UDP Packet
 <li>网卡属性设置：中断调整（interrupt moderation）-&gt;关闭；环保节能-&gt;关闭（包括设备管理器-&gt;网卡-&gt;电源管理-&gt;不允许关闭设备以节约电源）</li>
 <li>iperf3参数调优：<code>-w</code>参数指定窗口大小，<code>-P</code>参数指定并发数量（个人实测意义不大，默认窗口参数和单线程也能跑满2.5G带宽，或许10G&#x2F;56G这类万兆以上网卡才能体现效果）</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -c以客户端模式运行，后面接服务端地址，-p指定端口，-n指定传输数据量，1T代表1TB数据</span></span><br><span class="line"><span class="comment"># 默认是服务器接收，客户端发送</span></span><br><span class="line">iperf3 -c 192.168.1.1 -p 5201 -n 1tb</span><br><span class="line"><span class="comment"># -w 2M，设置TCP窗口大小为2MB，-P 4设置并发连接数为4（一般2线程就能跑满，大带宽网卡可以设置10）</span></span><br><span class="line"><span class="comment"># -t 30，设置传输总时间为30秒，-R，反向测试（服务器发送，客户端接收）</span></span><br><span class="line"><span class="comment"># -n指定传输数据量，1T代表1TB数据，-u, --udp 使用UDP协议（默认为TCP）</span></span><br><span class="line"><span class="comment"># -b 100M，指定目标带宽（UDP默认为1Mbps，TCP无限制）为100Mbps</span></span><br><span class="line"><span class="comment"># -i, --interval &lt;seconds&gt; 设置每次报告之间的时间间隔</span></span><br><span class="line">iperf3 -c 192.168.1.1 -w 2M -P 4 -t 30 -R -n 1tb -u -b 100M -3</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s 以服务端模式运行，-p 指定端口</span></span><br><span class="line">iperf3 -s -p 5201</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -c以客户端模式运行，后面接服务端地址，-p指定端口，-n指定传输数据量，1T代表1TB数据</span></span><br><span class="line"><span class="comment"># 默认是服务器接收，客户端发送</span></span><br><span class="line">iperf3 -c 192.168.1.1 -p 5201 -n 1tb</span><br><span class="line"><span class="comment"># -w 2M，设置TCP窗口大小为2MB，-P 4设置并发连接数为4（一般2线程就能跑满，大带宽网卡可以设置10）</span></span><br><span class="line"><span class="comment"># -t 30，设置传输总时间为30秒，-R，反向测试（服务器发送，客户端接收）</span></span><br><span class="line"><span class="comment"># -n指定传输数据量，1T代表1TB数据，-u, --udp 使用UDP协议（默认为TCP）</span></span><br><span class="line"><span class="comment"># -b 100M，指定目标带宽（UDP默认为1Mbps，TCP无限制）为100Mbps</span></span><br><span class="line"><span class="comment"># -i，--interval &lt;seconds&gt; 设置每次报告之间的时间间隔</span></span><br><span class="line">iperf3 -c 192.168.1.1 -w 2M -P 4 -t 30 -R -n 1tb -u -b 100M -3</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s 以服务端模式运行，-p 指定端口</span></span><br><span class="line">iperf3 -s -p 5201</span><br></pre></td></tr></table></figure>
 
 <h1 id="arp工具">20 &nbsp&nbsp<a href="#arp工具" class="headerlink" title="arp工具"></a>arp工具</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 显示本地ARP缓存表</span></span><br><span class="line"><span class="comment"># 显示当前局域网内所有已通信设备的IP与MAC地址对应关系</span></span><br><span class="line">arp -a</span><br></pre></td></tr></table></figure>
 
@@ -12879,12 +12880,12 @@ title UDP Packet
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#97;&#110;&#x6b;&#121;&#x6f;&#x75;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#x31;&#46;&#x63;&#111;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#64;&#56;&#46;&#99;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#x73;&#46;&#99;&#x6f;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#x61;&#110;&#107;&#121;&#111;&#117;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#x2e;&#x63;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#107;&#x73;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#101;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -15869,7 +15870,7 @@ title UDP Packet
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh admin@飞牛ip</span><br><span class="line"><span class="comment"># 例如 ssh admin@192.168.1.10</span></span><br><span class="line"><span class="comment"># 然后输入帐号密码完成验证即可登录</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="设置crontab定时任务">2.2 &nbsp&nbsp<a href="#设置crontab定时任务" class="headerlink" title="设置crontab定时任务"></a>设置crontab定时任务</h2><p>首先来了解飞牛存储空间的回收站路径：<code>/vol1/1000/.@#local/trash</code>，<code>vol1</code>是代表<code>存储空间1</code>，<code>1000</code>是代表飞牛fnOS系统中的<code>第一个用户帐号</code>。</p>
-<p>运行如下命令，编辑当前用户的定时任务列表：</p>
+<p>运行如下命令，编辑当前用户的计划任务列表：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
 
 <p>首次执行编辑时，shell会提示让你选择编辑器，输入1选择nano编辑器就行。</p>
@@ -15883,8 +15884,8 @@ title UDP Packet
 <img data-src="/images/post-articles/2025-10/auto-emtpy-bin-for-fnos/crontab-expression.webp">输入crontab定时删除任务表达式</div>
 
 <p>然后<code>Ctrl+S</code>键完成保存，<code>Ctrl+X</code>键退出编辑器。</p>
-<p><code>crontab -e</code>完成编辑保存之后文件实际是存储在<code>/var/spool/cron/crontabs/对应帐号名</code>，例如我的帐号名为<code>admin</code>，该帐号定时任务列表就被存储在<code>/var/spool/cron/crontabs/admin</code>文件中。</p>
-<h2 id="查看验证crontab是否配置成功">2.3 &nbsp&nbsp<a href="#查看验证crontab是否配置成功" class="headerlink" title="查看验证crontab是否配置成功"></a>查看验证crontab是否配置成功</h2><p>输入如下命令查看当前用户的定时任务列表，该命令实际上就是打印输出<code>/var/spool/cron/crontabs/admin</code>文件：</p>
+<p><code>crontab -e</code>完成编辑保存之后文件实际是存储在<code>/var/spool/cron/crontabs/对应帐号名</code>，例如我的帐号名为<code>admin</code>，该帐号计划任务列表就被存储在<code>/var/spool/cron/crontabs/admin</code>文件中。</p>
+<h2 id="查看验证crontab是否配置成功">2.3 &nbsp&nbsp<a href="#查看验证crontab是否配置成功" class="headerlink" title="查看验证crontab是否配置成功"></a>查看验证crontab是否配置成功</h2><p>输入如下命令查看当前用户的计划任务列表，该命令实际上就是打印输出<code>/var/spool/cron/crontabs/admin</code>文件：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
 
 <p>查看输出内容跟之前输入表达式无误后，就没问题了。</p>
@@ -17165,57 +17166,43 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>一个诡异的驱动BUG问题排查记录：大容量U盘在Windows设备管理器中无法识别，但DiskGenius可以识别</title>
-    <url>/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/</url>
-    <content><![CDATA[<p>前日，在Windows平台上遇到一个十分诡异的BUG问题。我本人自制的IS903大容量U盘，在Windows11 24H2系统中（平台是AMD的x86），无法被系统的文件管理器读取到。一开始还以为是这个自制U盘挂了，最后花了十分多分钟才排障解决这个问题。因此记录一下这个问题排障过程。</p>
-<p>该BUG问题现象表征为如下几点：</p>
-<ol>
-<li>U盘插入电脑时，系统会发出提示音，提示有设备接入。</li>
-<li>文件资源管理器，没有显示U盘的盘符。</li>
-<li>设备管理器，无法识别有U盘设备。</li>
-<li>Windows的磁盘管理工具，无法识别有U盘设备。</li>
-<li>通过终端命令行提示符进入<code>diskpart</code>工具，执行<code>list disk</code>命令，也无法识别有U盘设备。</li>
-<li>但蹊跷的是，在DiskGenius中，U盘可以正常识别，并能通过DG完成文件读取。</li>
-</ol>
+    <title>PVE&amp;PBS小版本日常升级的两种方式</title>
+    <url>/post-articles/2026-01/two-ways-for-pve-pbs-minor-upgrade/</url>
+    <content><![CDATA[<p>简单聊聊PVE(Proxmox VE)和PBS(Proxmox Backup Server)小版本日常升级的两种方式，一种是常规的命令升级，另一种是WEB后台的升级按钮。</p>
+<h1 id="方式一：常规命令升级">1 &nbsp&nbsp<a href="#方式一：常规命令升级" class="headerlink" title="方式一：常规命令升级"></a>方式一：常规命令升级</h1><p>这种命令升级的方式，对于PVE和PBS系统都适用，命令也都一致。通过SSH登录服务器，操作输入执行命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h1 id="方式二：WEB后台升级按钮">2 &nbsp&nbsp<a href="#方式二：WEB后台升级按钮" class="headerlink" title="方式二：WEB后台升级按钮"></a>方式二：WEB后台升级按钮</h1><p>在PVE(Proxmox VE)和PBS(Proxmox Backup Server)系统的WEB后台中，都有设计「更新」模块可以查看当前系统中是否存在软件更新，同时也有提供「升级」按钮。这个WEB按钮本质上就是WEB后台提前帮我们输入了升级命令。</p>
+<h2 id="PVE系统的升级按钮">2.1 &nbsp&nbsp<a href="#PVE系统的升级按钮" class="headerlink" title="PVE系统的升级按钮"></a>PVE系统的升级按钮</h2><p>PVE(Proxmox VE)系统的升级按钮位置：节点<code>pve</code>（这个节点名称是主机名hostname）-&gt;<code>更新</code>-&gt;<code>&gt;_升级</code>。点击<code>&gt;_升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
 <div class="flex-row">
 <div class="flex-column">
-<img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-devmgmt.webp">设备管理器无法识别有U盘设备</div>
+<img data-src="/images/software/pve/pve-minor-upgrade-button.webp">PVE的升级按钮</div>
 <div class="flex-column">
-<img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-diskgenius.webp">DiskGenius可以正常识别到U盘设备</div>
+<img data-src="/images/software/pve/pve-minor-upgrade-popup.webp">PVE的升级弹窗</div>
 </div>
 
-<p>前后尝试过的排障手段：</p>
-<ol>
-<li>重启系统，故障依旧。</li>
-<li>将U盘接入到平台的其他USB接口，故障依旧。</li>
-<li>将U盘接到手机上，可正常识别读取。由此我判断U盘本身并无故障，出问题的是在Windows系统平台上。</li>
-</ol>
-<p>既然问题锁定在Windows系统平台上，那么进一步分析可能引起故障的因素：</p>
-<ol>
-<li>U盘相关驱动的问题</li>
-<li>主板静电异常，导致系统运行异常</li>
-<li>硬件超频异常，导致系统运行异常（本平台的内存是长期超频运行）</li>
-</ol>
-<p>问题2和问题3诊断起来比较麻烦，所以优先从问题1开始排查。这个比较好排查，在设备管理器中，就能找到「USB大容量存储设备」的驱动。卸载并重新扫描刷新加载驱动，即可判断是否为驱动问题。</p>
-<p>果不其然，在卸载「USB大容量存储设备」并重新点击「扫描检测硬件改动」按钮后，自制的IS903的U盘终于被文件资源管理器识别到了。</p>
+<h2 id="PBS系统的升级按钮">2.2 &nbsp&nbsp<a href="#PBS系统的升级按钮" class="headerlink" title="PBS系统的升级按钮"></a>PBS系统的升级按钮</h2><p>PBS(Proxmox Backup Server)系统的升级按钮位置：<code>管理</code>-&gt;<code>更新</code>-&gt;<code>升级</code>。点击<code>升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
+<div class="flex-row">
 <div class="flex-column">
-<img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-driver.webp">卸载「USB大容量存储设备」设备</div>
-
-<p>这个BUG问题的诡异之处就是，Windows很多自带组件和工具都无法识别到U盘设备，反倒是DiskGenius可以正常识别。</p>
-<p>我推测是Windows中某个涉及存储管理的内核组件未能正确通过「USB大容量存储设备」驱动实现硬件通信，导致「文件资源管理器」「设备管理器」等这些上层工具都集体失明。通过卸载并重新加载相应驱动后，Windows相关底层组件被强制刷新加载设备，因此恢复正常。而DiskGenius并不通过该内核组件去完成硬件识别通信，因此全程未受影响。</p>
+<img data-src="/images/software/pve/pbs-minor-upgrade-button.webp">PBS的升级按钮</div>
+<div class="flex-column">
+<img data-src="/images/software/pve/pbs-minor-upgrade-popup.webp">PBS的升级弹窗</div>
+</div>
 ]]></content>
       <categories>
         <category>post-articles</category>
         <category>2026-01</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
-        <tag>驱动</tag>
-        <tag>大容量U盘</tag>
-        <tag>USB大容量存储设备</tag>
-        <tag>磁盘管理</tag>
-        <tag>DiskGenius</tag>
-        <tag>设备管理器</tag>
+        <tag>虚拟化系统</tag>
+        <tag>HomeLab</tag>
+        <tag>PVE</tag>
+        <tag>升级</tag>
+        <tag>Proxmox</tag>
+        <tag>服务器</tag>
+        <tag>PBS</tag>
+        <tag>LXC</tag>
+        <tag>Debian</tag>
       </tags>
   </entry>
   <entry>
@@ -17269,6 +17256,60 @@ title UDP Packet
         <tag>安全漏洞</tag>
         <tag>重要安全更新</tag>
         <tag>网络安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个诡异的驱动BUG问题排查记录：大容量U盘在Windows设备管理器中无法识别，但DiskGenius可以识别</title>
+    <url>/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/</url>
+    <content><![CDATA[<p>前日，在Windows平台上遇到一个十分诡异的BUG问题。我本人自制的IS903大容量U盘，在Windows11 24H2系统中（平台是AMD的x86），无法被系统的文件管理器读取到。一开始还以为是这个自制U盘挂了，最后花了十分多分钟才排障解决这个问题。因此记录一下这个问题排障过程。</p>
+<p>该BUG问题现象表征为如下几点：</p>
+<ol>
+<li>U盘插入电脑时，系统会发出提示音，提示有设备接入。</li>
+<li>文件资源管理器，没有显示U盘的盘符。</li>
+<li>设备管理器，无法识别有U盘设备。</li>
+<li>Windows的磁盘管理工具，无法识别有U盘设备。</li>
+<li>通过终端命令行提示符进入<code>diskpart</code>工具，执行<code>list disk</code>命令，也无法识别有U盘设备。</li>
+<li>但蹊跷的是，在DiskGenius中，U盘可以正常识别，并能通过DG完成文件读取。</li>
+</ol>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-devmgmt.webp">设备管理器无法识别有U盘设备</div>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-diskgenius.webp">DiskGenius可以正常识别到U盘设备</div>
+</div>
+
+<p>前后尝试过的排障手段：</p>
+<ol>
+<li>重启系统，故障依旧。</li>
+<li>将U盘接入到平台的其他USB接口，故障依旧。</li>
+<li>将U盘接到手机上，可正常识别读取。由此我判断U盘本身并无故障，出问题的是在Windows系统平台上。</li>
+</ol>
+<p>既然问题锁定在Windows系统平台上，那么进一步分析可能引起故障的因素：</p>
+<ol>
+<li>U盘相关驱动的问题</li>
+<li>主板静电异常，导致系统运行异常</li>
+<li>硬件超频异常，导致系统运行异常（本平台的内存是长期超频运行）</li>
+</ol>
+<p>问题2和问题3诊断起来比较麻烦，所以优先从问题1开始排查。这个比较好排查，在设备管理器中，就能找到「USB大容量存储设备」的驱动。卸载并重新扫描刷新加载驱动，即可判断是否为驱动问题。</p>
+<p>果不其然，在卸载「USB大容量存储设备」并重新点击「扫描检测硬件改动」按钮后，自制的IS903的U盘终于被文件资源管理器识别到了。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/usb-drive-driver.webp">卸载「USB大容量存储设备」设备</div>
+
+<p>这个BUG问题的诡异之处就是，Windows很多自带组件和工具都无法识别到U盘设备，反倒是DiskGenius可以正常识别。</p>
+<p>我推测是Windows中某个涉及存储管理的内核组件未能正确通过「USB大容量存储设备」驱动实现硬件通信，导致「文件资源管理器」「设备管理器」等这些上层工具都集体失明。通过卸载并重新加载相应驱动后，Windows相关底层组件被强制刷新加载设备，因此恢复正常。而DiskGenius并不通过该内核组件去完成硬件识别通信，因此全程未受影响。</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2026-01</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>驱动</tag>
+        <tag>大容量U盘</tag>
+        <tag>USB大容量存储设备</tag>
+        <tag>磁盘管理</tag>
+        <tag>DiskGenius</tag>
+        <tag>设备管理器</tag>
       </tags>
   </entry>
   <entry>
@@ -17437,46 +17478,6 @@ title UDP Packet
         <tag>翻译</tag>
         <tag>blender</tag>
         <tag>资料整理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PVE&amp;PBS小版本日常升级的两种方式</title>
-    <url>/post-articles/2026-01/two-ways-for-pve-pbs-minor-upgrade/</url>
-    <content><![CDATA[<p>简单聊聊PVE(Proxmox VE)和PBS(Proxmox Backup Server)小版本日常升级的两种方式，一种是常规的命令升级，另一种是WEB后台的升级按钮。</p>
-<h1 id="方式一：常规命令升级">1 &nbsp&nbsp<a href="#方式一：常规命令升级" class="headerlink" title="方式一：常规命令升级"></a>方式一：常规命令升级</h1><p>这种命令升级的方式，对于PVE和PBS系统都适用，命令也都一致。通过SSH登录服务器，操作输入执行命令即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update &amp;&amp; apt dist-upgrade -y</span><br></pre></td></tr></table></figure>
-
-<h1 id="方式二：WEB后台升级按钮">2 &nbsp&nbsp<a href="#方式二：WEB后台升级按钮" class="headerlink" title="方式二：WEB后台升级按钮"></a>方式二：WEB后台升级按钮</h1><p>在PVE(Proxmox VE)和PBS(Proxmox Backup Server)系统的WEB后台中，都有设计「更新」模块可以查看当前系统中是否存在软件更新，同时也有提供「升级」按钮。这个WEB按钮本质上就是WEB后台提前帮我们输入了升级命令。</p>
-<h2 id="PVE系统的升级按钮">2.1 &nbsp&nbsp<a href="#PVE系统的升级按钮" class="headerlink" title="PVE系统的升级按钮"></a>PVE系统的升级按钮</h2><p>PVE(Proxmox VE)系统的升级按钮位置：节点<code>pve</code>（这个节点名称是主机名hostname）-&gt;<code>更新</code>-&gt;<code>&gt;_升级</code>。点击<code>&gt;_升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pve-minor-upgrade-button.webp">PVE的升级按钮</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/pve-minor-upgrade-popup.webp">PVE的升级弹窗</div>
-</div>
-
-<h2 id="PBS系统的升级按钮">2.2 &nbsp&nbsp<a href="#PBS系统的升级按钮" class="headerlink" title="PBS系统的升级按钮"></a>PBS系统的升级按钮</h2><p>PBS(Proxmox Backup Server)系统的升级按钮位置：<code>管理</code>-&gt;<code>更新</code>-&gt;<code>升级</code>。点击<code>升级</code>按钮之后，会弹窗提示是否升级，输入y确认即可完成升级。</p>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="/images/software/pve/pbs-minor-upgrade-button.webp">PBS的升级按钮</div>
-<div class="flex-column">
-<img data-src="/images/software/pve/pbs-minor-upgrade-popup.webp">PBS的升级弹窗</div>
-</div>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2026-01</category>
-      </categories>
-      <tags>
-        <tag>虚拟化系统</tag>
-        <tag>HomeLab</tag>
-        <tag>PVE</tag>
-        <tag>升级</tag>
-        <tag>Proxmox</tag>
-        <tag>服务器</tag>
-        <tag>PBS</tag>
-        <tag>LXC</tag>
-        <tag>Debian</tag>
       </tags>
   </entry>
   <entry>
@@ -18226,7 +18227,7 @@ title UDP Packet
 <h1 id="联系方式">5 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#46;&#x6d;&#105;&#x73;&#x74;&#101;&#114;&#x6b;&#x69;&#110;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#107;&#105;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -18403,6 +18404,14 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
     </div>
     <a href="https://cppreference.com">C&C++参考手册</a>
     <a href="https://docs.python.org/zh-cn/3/">Python文档</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">构建系统参考手册</p>
+    </div>
+    <a href="https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1">Effective Modern CMake</a>
+    <a href="https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/README_GitBook.html">现代的CMake的介绍</a>
 </div>
 
 <div class="text-box">
