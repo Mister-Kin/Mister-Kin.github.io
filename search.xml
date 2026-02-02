@@ -1705,7 +1705,7 @@
     </div>
     <a href="https://www.kylinos.cn/" title="Ubuntu/Debian系，服务器版基于openEuler">KYLINSOFT银河麒麟系统</a>
     <a href="https://www.deepin.org/zh/download/" title="Debian系列（目前已脱离并自建根系统），DDE桌面基于QT框架">deepin Linux深度系统</a>
-    <a href="https://www.uniontech.com/OS.html" title="源自Deepin">Unity Operating System统信系统</a>
+    <a href="https://www.uniontech.com/OS.html" title="源自Deepin">Unity Operating System统信系统UOS</a>
     <a href="https://www.kylinsec.com.cn/products/5/1.html" title="基于openEuler">KYLINSEC麒麟信安系统</a>
     <a href="https://www.cs2c.com.cn/">STANDARD Kylin中标麒麟</a>
     <a href="https://ubuntukylin.com/">Ubuntu Kylin优麒麟</a>
@@ -1961,6 +1961,7 @@
     <a href="https://docs.qq.com/sheet/DYmV0dFFJcFZrTmhY?tab=no3u73">TestMem5内存超频测试报错表</a>
     <a href="https://docs.qq.com/sheet/DQ2FUTlZBUEVnd1lM?tab=BB08J2">1usmus Error Diagnosis(腾讯文档表格)</a>
     <a href="https://www.memtest86.com/download.htm">MemTest86</a>
+    <a href="https://www.wycad.com/2554.html">MemTest86 Pro</a>
     <a href="https://github.com/rictirse/RunMemtestStartup/releases">RunMemtestPro(HCI MemTest可视化工具)</a>
     <!-- <a href="https://www.chiphell.com/forum.php?mod=viewthread&tid=2655785&extra=page%3D1&page=1">RunMemtestPro(CH论坛)</a> -->
     <a href="https://hcidesign.com/memtest/download.html">HCI MemTest(R)</a>
@@ -2093,6 +2094,7 @@
     <a href="https://www.msi.cn/support/download">微星下载中心</a>
     <a href="https://www.gigabyte.cn/Support/Consumer/Download">技嘉下载中心</a>
     <a href="https://www.colorful.cn/home/download">七彩虹下载中心</a>
+    <a href="https://www.cancon.com.cn/download/files/drivers/driversNEW/Chipset/HygonSoCDriver-1.0.3.msi">海光芯片主板Win10驱动</a>
 </div>
 
 <div class="text-box">
@@ -3982,23 +3984,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>C&amp;C++语言总结笔记</title>
-    <url>/code/c-cpp/</url>
-    <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>c</tag>
-        <tag>编程</tag>
-        <tag>语言</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bat&amp;Powershell语法总结笔记</title>
     <url>/code/bat-powershell/</url>
     <content><![CDATA[<div class="note danger no-icon"><p>温馨提示：远离BAT语法，幸福你我他(ಡωಡ)</p>
@@ -4149,14 +4134,31 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>总结</tag>
         <tag>终端</tag>
-        <tag>笔记</tag>
         <tag>bat</tag>
         <tag>cmd</tag>
         <tag>语法</tag>
+        <tag>笔记</tag>
         <tag>windows</tag>
         <tag>运维</tag>
         <tag>powershell</tag>
         <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C&amp;C++语言总结笔记</title>
+    <url>/code/c-cpp/</url>
+    <content><![CDATA[<h1 id="语言摘记">1 &nbsp&nbsp<a href="#语言摘记" class="headerlink" title="语言摘记"></a>语言摘记</h1><h2 id="结构体的定义和引用">1.1 &nbsp&nbsp<a href="#结构体的定义和引用" class="headerlink" title="结构体的定义和引用"></a>结构体的定义和引用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">float</span> value;</span><br><span class="line">&#125;adventure;</span><br><span class="line"><span class="comment">// 引用和访问结构体</span></span><br><span class="line">adventrue.value=<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体指针的定义和访问</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">book1</span></span></span><br><span class="line"><span class="class"><span class="title">book1</span>=</span>&amp;adventure</span><br><span class="line"><span class="comment">// 引用和访问结构体指针</span></span><br><span class="line">book1-&gt;value=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>c</tag>
+        <tag>编程</tag>
+        <tag>语言</tag>
       </tags>
   </entry>
   <entry>
@@ -4678,7 +4680,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#116;&#x40;&#49;&#55;&#50;&#x2e;&#x31;&#57;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#x6f;&#116;&#64;&#x31;&#55;&#x32;&#46;&#49;&#x39;&#x2e;&#48;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5242,8 +5244,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>语法</tag>
+        <tag>笔记</tag>
         <tag>LaTeX</tag>
         <tag>TeX</tag>
         <tag>编译</tag>
@@ -5746,8 +5748,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>语法</tag>
+        <tag>笔记</tag>
         <tag>markdown</tag>
         <tag>写作</tag>
       </tags>
@@ -5804,8 +5806,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>编程</tag>
         <tag>笔记</tag>
+        <tag>编程</tag>
         <tag>python</tag>
       </tags>
   </entry>
@@ -11930,6 +11932,11 @@ title UDP Packet
 <li>开发商RARLAB官网地址：<a href="https://www.rarlab.com/">https://www.rarlab.com/</a></li>
 <li>发行商win.rar GmbH官网地址：<a href="https://www.win-rar.com/">https://www.win-rar.com/</a></li>
 <li>简体中文代理商官网地址：<a href="http://www.winrar.com.cn/">http://www.winrar.com.cn/</a></li>
+<li>WinRAR 7.13.0简中下载地址<ul>
+<li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/wrr/winrar-x64-713sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/wrr/winrar-x64-713sc.exe</a></li>
+<li>rrlb版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/rrlb/winrar-x64-713sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/rrlb/winrar-x64-713sc.exe</a></li>
+</ul>
+</li>
 <li>WinRAR 7.12.0简中下载地址<ul>
 <li>wrr版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/wrr/winrar-x64-712sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/wrr/winrar-x64-712sc.exe</a></li>
 <li>rrlb版（x64位）：<a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/rrlb/winrar-x64-712sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250627/rrlb/winrar-x64-712sc.exe</a></li>
@@ -11962,6 +11969,14 @@ title UDP Packet
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">Admin</span><br><span class="line">Unlimited Company License</span><br><span class="line">UID=1d7426b0b166c91c21ab</span><br><span class="line">641221225021abd0925f7c70456ecd71f724a7f5a00b0a0f7d19ee</span><br><span class="line">45c5e20951dae2857c2960fce6cb5ffde62890079861be57638717</span><br><span class="line">7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565</span><br><span class="line">b41bcf56929486b8bcdac33d50ecf773996076c281ccab247f6153</span><br><span class="line">ed97a3e4a4cb9bffbf35ed364a5cc6908fd2cdc84e9f53a33cf463</span><br><span class="line">9d85cd75291397987399f5159745c84654dfd11e471ec7a360b22a</span><br><span class="line">bbaf66105e62e8afa2d5d154b0c164b1f5377d2975460025531542</span><br></pre></td></tr></table></figure>
 <ul>
 <li>注册码2</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">nZoneX.com</span><br><span class="line">Unlimited Company License</span><br><span class="line">UID=5f939db84566ee3123ad</span><br><span class="line">641221225023ad93759b1a8ac6ee678323ccc7977152f82d7b9b4d</span><br><span class="line">6f356db8c04f01bb1af460fce6cb5ffde62890079861be57638717</span><br><span class="line">7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565</span><br><span class="line">b41bcf56929486b8bcdac33d50ecf7739960ab3a6eb0b1f0b088d7</span><br><span class="line">6a76dbb723aa7625c58ba7f5d6cf780b2ec5a63e009ef8e8eb72dd</span><br><span class="line">24ae96a5e76535214aea15467288598483f2d4291c647bdf6000a6</span><br><span class="line">d47c7146a10b3bab105aa21608d19f24643c970e60ed3793071489</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注册码3</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">闹着玩下网</span><br><span class="line">Unlimited Company License</span><br><span class="line">UID=d1a23321f43fc3e4af3b</span><br><span class="line">6412212250af3b3380c18dc10ff63c38bd1425423952a46fea1758</span><br><span class="line">d6c11ad7b1e5ceb3e4b860fce6cb5ffde62890079861be57638717</span><br><span class="line">7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565</span><br><span class="line">b41bcf56929486b8bcdac33d50ecf7739960695bd26e368acd0a6d</span><br><span class="line">cd7d8557949d8b086bfc6c764cf918ee208b9d35b0b5c10630cd36</span><br><span class="line">55130fc2fac6426da4331c728498702fe429b60e85346ec260a61a</span><br><span class="line">d9c03ba41462f6029630097f373fec2d5206936abb282126858549</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注册码4</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RAR registration data</span><br><span class="line">Federal Agency for Education</span><br><span class="line">1000000 PC usage license</span><br><span class="line">UID=b621cca9a84bc5deffbf</span><br><span class="line">6412612250ffbf533df6db2dfe8ccc3aae5362c06d54762105357d</span><br><span class="line">5e3b1489e751c76bf6e0640001014be50a52303fed29664b074145</span><br><span class="line">7e567d04159ad8defc3fb6edf32831fd1966f72c21c0c53c02fbbb</span><br><span class="line">2f91cfca671d9c482b11b8ac3281cb21378e85606494da349941fa</span><br><span class="line">e9ee328f12dc73e90b6356b921fbfb8522d6562a6a4b97e8ef6c9f</span><br><span class="line">fb866be1e3826b5aa126a4d2bfe9336ad63003fc0e71c307fc2c60</span><br><span class="line">64416495d4c55a0cc82d402110498da970812063934815d81470829275</span><br></pre></td></tr></table></figure>
 
@@ -12880,12 +12895,12 @@ title UDP Packet
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#104;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#x75;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#49;&#64;&#49;&#x2e;&#x63;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#56;&#x2e;&#x63;&#111;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#107;&#x73;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#x61;&#x6e;&#x6b;&#x79;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#101;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#x61;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#46;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#111;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#104;&#x61;&#110;&#107;&#x73;&#46;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#110;&#111;&#x40;&#x74;&#104;&#x61;&#x6e;&#x6b;&#121;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
+<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -13923,6 +13938,177 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>C++ Primer 第五版：第五章「语句」习题答案</title>
+    <url>/code-training/cpp-primer-v5/chap5/</url>
+    <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
+<p>什么是空语句？什么时候会用到空语句？</p>
+</blockquote>
+<p>只含有一个单独的分号的语句是空语句。如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">;</span><br></pre></td></tr></table></figure>
+<p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，此时应该使用空语句。（建议做好注释说明空语句作用）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重复读入数据直至到达文件末尾或某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (cin &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-2"><a href="#练习5-2" class="headerlink" title="练习5.2"></a>练习5.2</h2><blockquote>
+<p>什么是块？什么时候会用到块？</p>
+</blockquote>
+<p>用花括号括起来的语句和声明的序列就是块。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果在程序的某个地方，逻辑上需要多条语句，而语法上只能容纳一条语句，此时应该使用块。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">    ++val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-3"><a href="#练习5-3" class="headerlink" title="练习5.3"></a>练习5.3</h2><blockquote>
+<p>使用逗号运算符重写（参见4.10节，第140页）1.4.1节的 while 循环，使它不再需要块，观察改写之后的代码可读性提高了还是降低了。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>)</span><br><span class="line">    sum += val, ++val;</span><br></pre></td></tr></table></figure>
+<p>代码的可读性降低了。</p>
+<h2 id="练习5-4"><a href="#练习5-4" class="headerlink" title="练习5.4"></a>练习5.4</h2><blockquote>
+<p>说明下列例子的含义，如果存在问题，试着修改它。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">while</span> (string::iterator iter != s.<span class="built_in">end</span>()) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">(b) <span class="keyword">while</span> (<span class="type">bool</span> status = <span class="built_in">find</span>(word)) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">        <span class="keyword">if</span> (!status) &#123; <span class="comment">/* . . . */</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 这个循环试图用迭代器遍历string，但是变量的定义应该放在循环的外面，目前每次循环都会重新定义一个变量，明显是错误的。</li>
+<li>(b) 这个循环的 while 和 if 是两个独立的语句，if 语句中无法访问 status 变量，正确的做法是应该将 if 语句包含在 while 里面，</li>
+</ul>
+<h2 id="练习5-5"><a href="#练习5-5" class="headerlink" title="练习5.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_5.cpp">练习5.5</a></h2><blockquote>
+<p>写一段自己的程序，使用if else 语句实现把数字转换为字母成绩的要求。</p>
+</blockquote>
+<h2 id="练习5-6"><a href="#练习5-6" class="headerlink" title="练习5.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_6.cpp">练习5.6</a></h2><blockquote>
+<p>改写上一题的程序，使用条件运算符（参见4.7节，第134页）代替if else语句。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="练习5-7"><a href="#练习5-7" class="headerlink" title="练习5.7"></a>练习5.7</h2><blockquote>
+<p>改写下列代码段中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">if</span> (ival1 != ival2)</span><br><span class="line">        ival1 = ival2</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ival1 = ival2 = <span class="number">0</span>;</span><br><span class="line">(b) <span class="keyword">if</span> (ival &lt; minval)</span><br><span class="line">        minval = ival;</span><br><span class="line">        occurs = <span class="number">1</span>;</span><br><span class="line">(c) <span class="keyword">if</span> (<span class="type">int</span> ival = <span class="built_in">get_value</span>())</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = &quot;</span> &lt;&lt; ival &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (!ival)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = 0\n&quot;</span>;</span><br><span class="line">(d) <span class="keyword">if</span> (ival = <span class="number">0</span>)</span><br><span class="line">        ival = <span class="built_in">get_value</span>();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) <code>ival1 = ival2</code> 后面少了分号。</li>
+<li>(b) 应该用花括号括起来。</li>
+<li>(c) <code>if (!ival)</code> 应该改为 <code>else</code>。</li>
+<li>(d) <code>if (ival = 0)</code> 应该改为 <code>if (ival == 0)</code>。</li>
+</ul>
+<h2 id="练习5-8"><a href="#练习5-8" class="headerlink" title="练习5.8"></a>练习5.8</h2><blockquote>
+<p>什么是“悬垂else”？C++语言是如何处理else子句的？</p>
+</blockquote>
+<p>C++语言规定else与它最近的尚未匹配的if匹配。</p>
+<h2 id="练习5-9"><a href="#练习5-9" class="headerlink" title="练习5.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_9.cpp">练习5.9</a></h2><blockquote>
+<p>编写一段程序，使用一系列if语句统计从cin读入的文本中有多少元音字母。</p>
+</blockquote>
+<h2 id="练习5-10"><a href="#练习5-10" class="headerlink" title="练习5.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_10.cpp">练习5.10</a></h2><blockquote>
+<p>我们之前实现的统计元音字母的程序存在一个问题：如果元音字母以大写形式出现，不会被统计在内。编写一段程序，既统计元音字母的小写形式，也统计大写形式，也就是说，新程序遇到&#39;a&#39;和&#39;A&#39;都应该递增 aCnt 的值，以此类推。</p>
+</blockquote>
+<h2 id="练习5-11"><a href="#练习5-11" class="headerlink" title="练习5.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_11.cpp">练习5.11</a></h2><blockquote>
+<p>修改统计元音字母的程序，使其也能统计空格、制表符、和换行符的数量。</p>
+</blockquote>
+<h2 id="练习5-12"><a href="#练习5-12" class="headerlink" title="练习5.12"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_12.cpp">练习5.12</a></h2><blockquote>
+<p>修改统计元音字母的程序，使其能统计以下含有两个字符的字符序列的数量：ff、fl和fi。</p>
+</blockquote>
+<h2 id="练习5-13"><a href="#练习5-13" class="headerlink" title="练习5.13"></a>练习5.13</h2><blockquote>
+<p>下面显示的每个程序都含有一个常见的编程错误，指出错误在哪里，然后修改它们。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line">    <span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++;</span><br><span class="line">        <span class="keyword">default</span>: iouCnt++;</span><br><span class="line">    &#125;</span><br><span class="line">(b) <span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line">    <span class="keyword">switch</span> (index) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="type">int</span> ix = <span class="built_in">get_value</span>();</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            ix = ivec.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">    &#125;</span><br><span class="line">(c) <span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>:</span><br><span class="line">            oddcnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>:</span><br><span class="line">            evencnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">(d) <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line">    <span class="type">unsigned</span> bufsize;</span><br><span class="line">    <span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line">    <span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">        <span class="keyword">case</span> ival:</span><br><span class="line">            bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> jval:</span><br><span class="line">            bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kval:</span><br><span class="line">            bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>(a) 少了 break语句。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line"><span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: iouCnt++; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>switch内部的控制流：如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非程序显式地中断了这一过程，比如添加break语句，否则直到switch的结尾处才会停下来。</p>
+<ul>
+<li>(b) 在 default 分支当中，ix 未定义。应该在外部定义ix。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line"><span class="type">int</span> ix;</span><br><span class="line"><span class="keyword">switch</span> (index) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ix = <span class="built_in">get_value</span>();</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ix = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(ivec.<span class="built_in">size</span>())<span class="number">-1</span>;</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(c) case 后面应该用冒号而不是逗号。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line"><span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">5</span>: <span class="keyword">case</span> <span class="number">7</span>: <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        oddcnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">6</span>: <span class="keyword">case</span> <span class="number">8</span>: <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        evencnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(d) case 标签必须是整型常量表达式。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line"><span class="type">unsigned</span> bufsize;</span><br><span class="line"><span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line"><span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">    <span class="keyword">case</span> ival:</span><br><span class="line">        bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> jval:</span><br><span class="line">        bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> kval:</span><br><span class="line">        bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-14"><a href="#练习5-14" class="headerlink" title="练习5.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_14.cpp">练习5.14</a></h2><blockquote>
+<p>编写一段程序，从标准输入中读取若干string对象并查找连续重复出现的单词，所谓连续重复出现的意思是：一个单词后面紧跟着这个单词本身。要求记录连续重复出现的最大次数以及对应的单词。如果这样的单词存在，输出重复出现的最大次数；如果不存在，输出一条信息说明任何单词都没有连续出现过。例如：如果输入是：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">how now now now brown cow cow</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>那么输出应该表明单词now连续出现了3次。</p>
+</blockquote>
+<p>本题编程中使用了<code>std::pair</code>，<code>std::pair</code>是类模板，提供在一个单元存储两个相异类型对象的途径。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T1</span>,</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T2</span></span><br><span class="line">&gt; <span class="keyword">struct</span> <span class="title class_">pair</span>;</span><br></pre></td></tr></table></figure>
+<p>总共有两个成员对象：first和second。</p>
+<p>示例：<code>std::pair&lt;std::string, float&gt;(&quot;aa&quot;, 1.1);</code></p>
+<h2 id="练习5-15"><a href="#练习5-15" class="headerlink" title="练习5.15"></a>练习5.15</h2><blockquote>
+<p>说明下列循环的含义并改正其中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix, ++sz) &#123; <span class="comment">/*...*/</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>修正如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix = <span class="number">0</span>; ix != sz; ++ix)  &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">    <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/*...*/</span> &#125; <span class="comment">//如果首次判断ix不等于sz，执行++sz将导致死循环。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-16"><a href="#练习5-16" class="headerlink" title="练习5.16"></a>练习5.16</h2><blockquote>
+<p>while 循环特别适用于那种条件不变、反复执行操作的情况，例如，当未达到文件末尾时不断读取下一个值。for 循环则更像是在按步骤迭代，它的索引值在某个范围内依次变化。根据每种循环的习惯各自编写一段程序，然后分别用另一种循环改写。如果只能使用一种循环，你倾向于使用哪种呢？为什么？</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// while循环读取输入</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; i )</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环读取输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; cin &gt;&gt; i;)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环遍历</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != size; ++i)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// while循环遍历</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i != size)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果只能用一种循环，我会更倾向使用while循环，因为while的代码可读性更强。</p>
+<h2 id="练习5-17"><a href="#练习5-17" class="headerlink" title="练习5.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_17.cpp">练习5.17</a></h2><blockquote>
+<p>假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2 和 0、1、1、2、3、5、8，则程序的返回结果为真。</p>
+</blockquote>
+<h2 id="练习5-18"><a href="#练习5-18" class="headerlink" title="练习5.18"></a>练习5.18</h2><blockquote>
+<p>说明下列循环的含义并改正其中的错误。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
+<p>修正如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span> &#123; <span class="comment">// 应该添加花括号</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    &#125;<span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-19"><a href="#练习5-19" class="headerlink" title="练习5.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_19.cpp">练习5.19</a></h2><blockquote>
+<p>编写一段程序，使用do while 循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。</p>
+</blockquote>
+<h2 id="练习5-20"><a href="#练习5-20" class="headerlink" title="练习5.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_20.cpp">练习5.20</a></h2><blockquote>
+<p>编写一段程序，从标准输入中读取string对象的序列直到连续出现两个相同的单词或者所有的单词都读完为止。使用while循环一次读取一个单词，当一个单词连续出现两次时使用break语句终止循环。输出连续重复出现的单词，或者输出一个消息说明没有任何单词是连续重复出现的。</p>
+</blockquote>
+<h2 id="练习5-21"><a href="#练习5-21" class="headerlink" title="练习5.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_21.cpp">练习5.21</a></h2><blockquote>
+<p>修改5.5.1节（第171页）练习题的程序，使其找到的重复单词必须以大写字母开头。</p>
+</blockquote>
+<h2 id="练习5-22"><a href="#练习5-22" class="headerlink" title="练习5.22"></a>练习5.22</h2><blockquote>
+<p>本节的最后一个例子跳回到 begin，其实使用循环能更好的完成该任务，重写这段代码，注意不再使用goto语句。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 向后跳过一个带初始化的变量定义是合法的</span></span><br><span class="line">begin:</span><br><span class="line">    <span class="type">int</span> sz = <span class="built_in">get_size</span>();</span><br><span class="line">    <span class="keyword">if</span> (sz &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> begin;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 <code>for</code> 循环修改效果如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> sz = <span class="built_in">get_size</span>(); sz &lt;=<span class="number">0</span>; sz = <span class="built_in">get_size</span>())</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5-23"><a href="#练习5-23" class="headerlink" title="练习5.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_23.cpp">练习5.23</a></h2><blockquote>
+<p>编写一段程序，从标准输入读取两个整数，输出第一个数除以第二个数的结果。</p>
+</blockquote>
+<h2 id="练习5-24"><a href="#练习5-24" class="headerlink" title="练习5.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_24.cpp">练习5.24</a></h2><blockquote>
+<p>修改你的程序，使得当第二个数是0时抛出异常。先不要设定catch子句，运行程序并真的为除数输入0，看看会发生什么？</p>
+</blockquote>
+<h2 id="练习5-25"><a href="#练习5-25" class="headerlink" title="练习5.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_25.cpp">练习5.25</a></h2><blockquote>
+<p>修改上一题的程序，使用try语句块去捕获异常。catch子句应该为用户输出一条提示信息，询问其是否输入新数并重新执行try语句块的内容。</p>
+</blockquote>
+<p>异常处理（try-throw-catch）：</p>
+<ul>
+<li>将错误处理代码和正常代码分离开：传统的错误处理代码中都会使用一系列的 if-else 条件判断来处理错误。这些条件判断代码和错误处理代码会混在正常的程序流中，降低代码的可读性和可维护性。使用 try&#x2F;catch 块则能够将错误处理与正常流程分开。</li>
+<li>个人理解：更像是一个高级goto语法。</li>
+</ul>
+<p>大致的使用形式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 被保护的代码</span></span><br><span class="line">    <span class="keyword">throw</span>  <span class="comment">// 抛出异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> ()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五章</tag>
+        <tag>语句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ Primer 第五版：第四章「表达式」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap4/</url>
     <content><![CDATA[<h1 id="第四章：表达式"><a href="#第四章：表达式" class="headerlink" title="第四章：表达式"></a>第四章：表达式</h1><h2 id="练习4-1"><a href="#练习4-1" class="headerlink" title="练习4.1"></a>练习4.1</h2><blockquote>
@@ -14668,177 +14854,6 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：第五章「语句」习题答案</title>
-    <url>/code-training/cpp-primer-v5/chap5/</url>
-    <content><![CDATA[<h1 id="第五章：语句"><a href="#第五章：语句" class="headerlink" title="第五章：语句"></a>第五章：语句</h1><h2 id="练习5-1"><a href="#练习5-1" class="headerlink" title="练习5.1"></a>练习5.1</h2><blockquote>
-<p>什么是空语句？什么时候会用到空语句？</p>
-</blockquote>
-<p>只含有一个单独的分号的语句是空语句。如：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">;</span><br></pre></td></tr></table></figure>
-<p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，此时应该使用空语句。（建议做好注释说明空语句作用）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重复读入数据直至到达文件末尾或某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (cin &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-2"><a href="#练习5-2" class="headerlink" title="练习5.2"></a>练习5.2</h2><blockquote>
-<p>什么是块？什么时候会用到块？</p>
-</blockquote>
-<p>用花括号括起来的语句和声明的序列就是块。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果在程序的某个地方，逻辑上需要多条语句，而语法上只能容纳一条语句，此时应该使用块。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">    ++val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-3"><a href="#练习5-3" class="headerlink" title="练习5.3"></a>练习5.3</h2><blockquote>
-<p>使用逗号运算符重写（参见4.10节，第140页）1.4.1节的 while 循环，使它不再需要块，观察改写之后的代码可读性提高了还是降低了。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (val &lt;= <span class="number">10</span>)</span><br><span class="line">    sum += val, ++val;</span><br></pre></td></tr></table></figure>
-<p>代码的可读性降低了。</p>
-<h2 id="练习5-4"><a href="#练习5-4" class="headerlink" title="练习5.4"></a>练习5.4</h2><blockquote>
-<p>说明下列例子的含义，如果存在问题，试着修改它。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">while</span> (string::iterator iter != s.<span class="built_in">end</span>()) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">(b) <span class="keyword">while</span> (<span class="type">bool</span> status = <span class="built_in">find</span>(word)) &#123; <span class="comment">/* . . . */</span> &#125;</span><br><span class="line">        <span class="keyword">if</span> (!status) &#123; <span class="comment">/* . . . */</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 这个循环试图用迭代器遍历string，但是变量的定义应该放在循环的外面，目前每次循环都会重新定义一个变量，明显是错误的。</li>
-<li>(b) 这个循环的 while 和 if 是两个独立的语句，if 语句中无法访问 status 变量，正确的做法是应该将 if 语句包含在 while 里面，</li>
-</ul>
-<h2 id="练习5-5"><a href="#练习5-5" class="headerlink" title="练习5.5"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_5.cpp">练习5.5</a></h2><blockquote>
-<p>写一段自己的程序，使用if else 语句实现把数字转换为字母成绩的要求。</p>
-</blockquote>
-<h2 id="练习5-6"><a href="#练习5-6" class="headerlink" title="练习5.6"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_6.cpp">练习5.6</a></h2><blockquote>
-<p>改写上一题的程序，使用条件运算符（参见4.7节，第134页）代替if else语句。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="练习5-7"><a href="#练习5-7" class="headerlink" title="练习5.7"></a>练习5.7</h2><blockquote>
-<p>改写下列代码段中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">if</span> (ival1 != ival2)</span><br><span class="line">        ival1 = ival2</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        ival1 = ival2 = <span class="number">0</span>;</span><br><span class="line">(b) <span class="keyword">if</span> (ival &lt; minval)</span><br><span class="line">        minval = ival;</span><br><span class="line">        occurs = <span class="number">1</span>;</span><br><span class="line">(c) <span class="keyword">if</span> (<span class="type">int</span> ival = <span class="built_in">get_value</span>())</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = &quot;</span> &lt;&lt; ival &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (!ival)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ival = 0\n&quot;</span>;</span><br><span class="line">(d) <span class="keyword">if</span> (ival = <span class="number">0</span>)</span><br><span class="line">        ival = <span class="built_in">get_value</span>();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) <code>ival1 = ival2</code> 后面少了分号。</li>
-<li>(b) 应该用花括号括起来。</li>
-<li>(c) <code>if (!ival)</code> 应该改为 <code>else</code>。</li>
-<li>(d) <code>if (ival = 0)</code> 应该改为 <code>if (ival == 0)</code>。</li>
-</ul>
-<h2 id="练习5-8"><a href="#练习5-8" class="headerlink" title="练习5.8"></a>练习5.8</h2><blockquote>
-<p>什么是“悬垂else”？C++语言是如何处理else子句的？</p>
-</blockquote>
-<p>C++语言规定else与它最近的尚未匹配的if匹配。</p>
-<h2 id="练习5-9"><a href="#练习5-9" class="headerlink" title="练习5.9"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_9.cpp">练习5.9</a></h2><blockquote>
-<p>编写一段程序，使用一系列if语句统计从cin读入的文本中有多少元音字母。</p>
-</blockquote>
-<h2 id="练习5-10"><a href="#练习5-10" class="headerlink" title="练习5.10"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_10.cpp">练习5.10</a></h2><blockquote>
-<p>我们之前实现的统计元音字母的程序存在一个问题：如果元音字母以大写形式出现，不会被统计在内。编写一段程序，既统计元音字母的小写形式，也统计大写形式，也就是说，新程序遇到&#39;a&#39;和&#39;A&#39;都应该递增 aCnt 的值，以此类推。</p>
-</blockquote>
-<h2 id="练习5-11"><a href="#练习5-11" class="headerlink" title="练习5.11"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_11.cpp">练习5.11</a></h2><blockquote>
-<p>修改统计元音字母的程序，使其也能统计空格、制表符、和换行符的数量。</p>
-</blockquote>
-<h2 id="练习5-12"><a href="#练习5-12" class="headerlink" title="练习5.12"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_12.cpp">练习5.12</a></h2><blockquote>
-<p>修改统计元音字母的程序，使其能统计以下含有两个字符的字符序列的数量：ff、fl和fi。</p>
-</blockquote>
-<h2 id="练习5-13"><a href="#练习5-13" class="headerlink" title="练习5.13"></a>练习5.13</h2><blockquote>
-<p>下面显示的每个程序都含有一个常见的编程错误，指出错误在哪里，然后修改它们。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line">    <span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++;</span><br><span class="line">        <span class="keyword">default</span>: iouCnt++;</span><br><span class="line">    &#125;</span><br><span class="line">(b) <span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line">    <span class="keyword">switch</span> (index) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="type">int</span> ix = <span class="built_in">get_value</span>();</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            ix = ivec.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">            ivec[ ix ] = index;</span><br><span class="line">    &#125;</span><br><span class="line">(c) <span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>:</span><br><span class="line">            oddcnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>:</span><br><span class="line">            evencnt++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">(d) <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line">    <span class="type">unsigned</span> bufsize;</span><br><span class="line">    <span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line">    <span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">        <span class="keyword">case</span> ival:</span><br><span class="line">            bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> jval:</span><br><span class="line">            bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kval:</span><br><span class="line">            bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>(a) 少了 break语句。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> aCnt = <span class="number">0</span>, eCnt = <span class="number">0</span>, iouCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span> ch = <span class="built_in">next_text</span>();</span><br><span class="line"><span class="keyword">switch</span> (ch) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>: aCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;e&#x27;</span>: eCnt++; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: iouCnt++; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>switch内部的控制流：如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非程序显式地中断了这一过程，比如添加break语句，否则直到switch的结尾处才会停下来。</p>
-<ul>
-<li>(b) 在 default 分支当中，ix 未定义。应该在外部定义ix。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> index = <span class="built_in">some_value</span>();</span><br><span class="line"><span class="type">int</span> ix;</span><br><span class="line"><span class="keyword">switch</span> (index) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ix = <span class="built_in">get_value</span>();</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ix = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(ivec.<span class="built_in">size</span>())<span class="number">-1</span>;</span><br><span class="line">        ivec[ ix ] = index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(c) case 后面应该用冒号而不是逗号。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">unsigned</span> evenCnt = <span class="number">0</span>, oddCnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> digit = <span class="built_in">get_num</span>() % <span class="number">10</span>;</span><br><span class="line"><span class="keyword">switch</span> (digit) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">5</span>: <span class="keyword">case</span> <span class="number">7</span>: <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        oddcnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">6</span>: <span class="keyword">case</span> <span class="number">8</span>: <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        evencnt++;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(d) case 标签必须是整型常量表达式。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">unsigned</span> ival=<span class="number">512</span>, jval=<span class="number">1024</span>, kval=<span class="number">4096</span>;</span><br><span class="line"><span class="type">unsigned</span> bufsize;</span><br><span class="line"><span class="type">unsigned</span> swt = <span class="built_in">get_bufCnt</span>();</span><br><span class="line"><span class="keyword">switch</span>(swt) &#123;</span><br><span class="line">    <span class="keyword">case</span> ival:</span><br><span class="line">        bufsize = ival * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> jval:</span><br><span class="line">        bufsize = jval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> kval:</span><br><span class="line">        bufsize = kval * <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-14"><a href="#练习5-14" class="headerlink" title="练习5.14"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_14.cpp">练习5.14</a></h2><blockquote>
-<p>编写一段程序，从标准输入中读取若干string对象并查找连续重复出现的单词，所谓连续重复出现的意思是：一个单词后面紧跟着这个单词本身。要求记录连续重复出现的最大次数以及对应的单词。如果这样的单词存在，输出重复出现的最大次数；如果不存在，输出一条信息说明任何单词都没有连续出现过。例如：如果输入是：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">how now now now brown cow cow</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>那么输出应该表明单词now连续出现了3次。</p>
-</blockquote>
-<p>本题编程中使用了<code>std::pair</code>，<code>std::pair</code>是类模板，提供在一个单元存储两个相异类型对象的途径。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T1</span>,</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">T2</span></span><br><span class="line">&gt; <span class="keyword">struct</span> <span class="title class_">pair</span>;</span><br></pre></td></tr></table></figure>
-<p>总共有两个成员对象：first和second。</p>
-<p>示例：<code>std::pair&lt;std::string, float&gt;(&quot;aa&quot;, 1.1);</code></p>
-<h2 id="练习5-15"><a href="#练习5-15" class="headerlink" title="练习5.15"></a>练习5.15</h2><blockquote>
-<p>说明下列循环的含义并改正其中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix, ++sz) &#123; <span class="comment">/*...*/</span> &#125;</span><br></pre></td></tr></table></figure>
-<p>修正如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (ix = <span class="number">0</span>; ix != sz; ++ix)  &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    <span class="keyword">if</span> (ix != sz)</span><br><span class="line">    <span class="comment">// . . .</span></span><br><span class="line">(b) <span class="type">int</span> ix;</span><br><span class="line">    <span class="keyword">for</span> (; ix != sz; ++ix) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">(c) <span class="keyword">for</span> (<span class="type">int</span> ix = <span class="number">0</span>; ix != sz; ++ix) &#123; <span class="comment">/*...*/</span> &#125; <span class="comment">//如果首次判断ix不等于sz，执行++sz将导致死循环。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-16"><a href="#练习5-16" class="headerlink" title="练习5.16"></a>练习5.16</h2><blockquote>
-<p>while 循环特别适用于那种条件不变、反复执行操作的情况，例如，当未达到文件末尾时不断读取下一个值。for 循环则更像是在按步骤迭代，它的索引值在某个范围内依次变化。根据每种循环的习惯各自编写一段程序，然后分别用另一种循环改写。如果只能使用一种循环，你倾向于使用哪种呢？为什么？</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// while循环读取输入</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; i )</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环读取输入</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; cin &gt;&gt; i;)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for循环遍历</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != size; ++i)</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// while循环遍历</span></span><br><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i != size)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果只能用一种循环，我会更倾向使用while循环，因为while的代码可读性更强。</p>
-<h2 id="练习5-17"><a href="#练习5-17" class="headerlink" title="练习5.17"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_17.cpp">练习5.17</a></h2><blockquote>
-<p>假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2 和 0、1、1、2、3、5、8，则程序的返回结果为真。</p>
-</blockquote>
-<h2 id="练习5-18"><a href="#练习5-18" class="headerlink" title="练习5.18"></a>练习5.18</h2><blockquote>
-<p>说明下列循环的含义并改正其中的错误。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
-<p>修正如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">(a) <span class="keyword">do</span> &#123; <span class="comment">// 应该添加花括号</span></span><br><span class="line">        <span class="type">int</span> v1, v2;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Please enter two numbers to sum:&quot;</span> ;</span><br><span class="line">        <span class="keyword">if</span> (cin &gt;&gt; v1 &gt;&gt; v2)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Sum is: &quot;</span> &lt;&lt; v1 + v2 &lt;&lt; endl;</span><br><span class="line">    &#125;<span class="keyword">while</span> (cin);</span><br><span class="line">(b) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// . . .</span></span><br><span class="line">    &#125; <span class="keyword">while</span> (ival = <span class="built_in">get_response</span>()); <span class="comment">// 应该将ival 定义在循环外</span></span><br><span class="line">(c) <span class="type">int</span> ival;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        ival = <span class="built_in">get_response</span>();</span><br><span class="line">    &#125; <span class="keyword">while</span> (ival); <span class="comment">// 应该将ival 定义在循环外</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-19"><a href="#练习5-19" class="headerlink" title="练习5.19"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_19.cpp">练习5.19</a></h2><blockquote>
-<p>编写一段程序，使用do while 循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。</p>
-</blockquote>
-<h2 id="练习5-20"><a href="#练习5-20" class="headerlink" title="练习5.20"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_20.cpp">练习5.20</a></h2><blockquote>
-<p>编写一段程序，从标准输入中读取string对象的序列直到连续出现两个相同的单词或者所有的单词都读完为止。使用while循环一次读取一个单词，当一个单词连续出现两次时使用break语句终止循环。输出连续重复出现的单词，或者输出一个消息说明没有任何单词是连续重复出现的。</p>
-</blockquote>
-<h2 id="练习5-21"><a href="#练习5-21" class="headerlink" title="练习5.21"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_21.cpp">练习5.21</a></h2><blockquote>
-<p>修改5.5.1节（第171页）练习题的程序，使其找到的重复单词必须以大写字母开头。</p>
-</blockquote>
-<h2 id="练习5-22"><a href="#练习5-22" class="headerlink" title="练习5.22"></a>练习5.22</h2><blockquote>
-<p>本节的最后一个例子跳回到 begin，其实使用循环能更好的完成该任务，重写这段代码，注意不再使用goto语句。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 向后跳过一个带初始化的变量定义是合法的</span></span><br><span class="line">begin:</span><br><span class="line">    <span class="type">int</span> sz = <span class="built_in">get_size</span>();</span><br><span class="line">    <span class="keyword">if</span> (sz &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> begin;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>用 <code>for</code> 循环修改效果如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> sz = <span class="built_in">get_size</span>(); sz &lt;=<span class="number">0</span>; sz = <span class="built_in">get_size</span>())</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习5-23"><a href="#练习5-23" class="headerlink" title="练习5.23"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_23.cpp">练习5.23</a></h2><blockquote>
-<p>编写一段程序，从标准输入读取两个整数，输出第一个数除以第二个数的结果。</p>
-</blockquote>
-<h2 id="练习5-24"><a href="#练习5-24" class="headerlink" title="练习5.24"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_24.cpp">练习5.24</a></h2><blockquote>
-<p>修改你的程序，使得当第二个数是0时抛出异常。先不要设定catch子句，运行程序并真的为除数输入0，看看会发生什么？</p>
-</blockquote>
-<h2 id="练习5-25"><a href="#练习5-25" class="headerlink" title="练习5.25"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/chap5/5_25.cpp">练习5.25</a></h2><blockquote>
-<p>修改上一题的程序，使用try语句块去捕获异常。catch子句应该为用户输出一条提示信息，询问其是否输入新数并重新执行try语句块的内容。</p>
-</blockquote>
-<p>异常处理（try-throw-catch）：</p>
-<ul>
-<li>将错误处理代码和正常代码分离开：传统的错误处理代码中都会使用一系列的 if-else 条件判断来处理错误。这些条件判断代码和错误处理代码会混在正常的程序流中，降低代码的可读性和可维护性。使用 try&#x2F;catch 块则能够将错误处理与正常流程分开。</li>
-<li>个人理解：更像是一个高级goto语法。</li>
-</ul>
-<p>大致的使用形式：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 被保护的代码</span></span><br><span class="line">    <span class="keyword">throw</span>  <span class="comment">// 抛出异常</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">catch</span> ()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五章</tag>
-        <tag>语句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ Primer 第五版：第六章「函数」习题答案</title>
     <url>/code-training/cpp-primer-v5/chap6/</url>
     <content><![CDATA[<h1 id="第六章：函数"><a href="#第六章：函数" class="headerlink" title="第六章：函数"></a>第六章：函数</h1><h2 id="练习6-1"><a href="#练习6-1" class="headerlink" title="练习6.1"></a>练习6.1</h2><blockquote>
@@ -15171,35 +15186,6 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>C++ Primer 第五版：习题答案</title>
-    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
-    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
-<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
-<ul>
-<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
-<li>第Ⅰ部分 C++基础<ul>
-<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
-<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>code-training</category>
-        <category>cpp-primer-v5</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C++ Primer</tag>
-        <tag>习题答案</tag>
-        <tag>练习总结</tag>
-        <tag>第五版</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Head Fisrt HTML CSS第二版：第一章「Web语言：认识HTML」习题答案</title>
     <url>/code-training/head-first-html-css-v2/chap1/</url>
     <content><![CDATA[<h1 id="第一章：Web语言：认识HTML"><a href="#第一章：Web语言：认识HTML" class="headerlink" title="第一章：Web语言：认识HTML"></a>第一章：Web语言：认识HTML</h1><h2 id="章节总结（详见书籍P36）"><a href="#章节总结（详见书籍P36）" class="headerlink" title="章节总结（详见书籍P36）"></a>章节总结（详见书籍P36）</h2><ul>
@@ -15234,6 +15220,35 @@ title UDP Packet
         <tag>HTML</tag>
         <tag>CSS</tag>
         <tag>Head Fisrt HTML CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ Primer 第五版：习题答案</title>
+    <url>/code-training/cpp-primer-v5/cpp-primer-v5/</url>
+    <content><![CDATA[<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/blob/master/cpp_primer_v5/">点击跳转</a>。</p>
+<p><em>习题的录入主要基于<a href="https://github.com/huangmingchuan/Cpp_Primer_Answers">Cpp_Primer_Answers（中文版）</a>和<a href="https://github.com/Mooophy/Cpp-Primer">Cpp-Primer（英文版）</a>仓库。</em></p>
+<ul>
+<li><a href="/code-training/cpp-primer-v5/chap1">第一章「开始」习题答案</a></li>
+<li>第Ⅰ部分 C++基础<ul>
+<li><a href="/code-training/cpp-primer-v5/chap2">第二章「变量和基本类型」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap3">第三章「字符串、向量和数组」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap4">第四章「表达式」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap5">第五章「语句」习题答案</a></li>
+<li><a href="/code-training/cpp-primer-v5/chap6">第六章「函数」习题答案</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>code-training</category>
+        <category>cpp-primer-v5</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C++ Primer</tag>
+        <tag>习题答案</tag>
+        <tag>练习总结</tag>
+        <tag>第五版</tag>
       </tags>
   </entry>
   <entry>
@@ -17206,59 +17221,6 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>飞牛fnOS被曝重大安全漏洞。扩散通知，抓紧升级你的飞牛系统。</title>
-    <url>/post-articles/2026-02/fnos-critical-security/</url>
-    <content><![CDATA[<h1 id="官方公告通知">1 &nbsp&nbsp<a href="#官方公告通知" class="headerlink" title="官方公告通知"></a>官方公告通知</h1><p>2026-02-01日04:31，也就是今日(周日)凌晨四点半，广州铁刃公司在公众号平台上发布一篇《重要安全更新通知》文章。</p>
-<blockquote>
-<p>这个公告主要意思就是说<code>fnOS v1.1.15</code>之前的版本代码存在缺陷，有系统漏洞，请各位用户尽快升级至目前最新的<code>v1.1.18</code>版本。此次安全问题，官方共发布推送了<code>v1.1.15</code>和<code>v1.1.18</code>两版紧急修复固件。</p>
-</blockquote>
-<p>详细公告内容可以点击查看「<a href="https://mp.weixin.qq.com/s/LzkLcy92m5O24up_9c4NUA">重要安全更新通知</a>」。</p>
-<p>如果还有朋友还停留在飞牛fnOS旧版本的话，请抓紧升级飞牛系统版本，并做好对应的网络访问权限安全防护。</p>
-<p>当然，如果你是内网使用的话，并且不考虑任何外网访问的途径，可以不用担心这个问题。</p>
-<h1 id="系统安全漏洞的分析">2 &nbsp&nbsp<a href="#系统安全漏洞的分析" class="headerlink" title="系统安全漏洞的分析"></a>系统安全漏洞的分析</h1><p>这些天，这个漏洞安全事件一直在发酵，很多网络帖子都在讨论这个问题。</p>
-<p>我看了一些相关话题的帖子，<strong>很多都提及到一个「路径穿越漏洞」，就是指在未登录授权凭证的条件下，可以访问并遍历系统敏感目录。</strong></p>
-<p>不需要鉴权就能访问获取文件，这种漏洞安全性很严重。其中官方论坛有一个帖子提到，有不法分子(攻击者)通过这个漏洞获取文件<code>飞牛系统地址:5666/app-center-static/serviceicon/myapp/%7B0%7D?size=../../../../usr/trim/etc/rsa_private_key.pem</code>，进而拿到<code>longtoken</code>利用<code>cookie</code>登录飞牛fnOS系统，然后在系统中下发并持久化木马程序。</p>
-<p>还有一个是涉及到websocket鉴权漏洞，测试的链接是<code>飞牛系统地址:5666/websocket?type=main</code>，目前这个我还未找到比较详细的资料。感兴趣的朋友可以查看本文的参考文献链接或者搜索相关资料。</p>
-<blockquote>
-<p>【郑重声明】本文提及的任何漏洞信息，旨在提醒用户注意网络安全。任何人不得将其用于非法用途，否则产生的后果由使用者本人承担，与本文作者无关。</p>
-</blockquote>
-<h1 id="中招的应对方法">3 &nbsp&nbsp<a href="#中招的应对方法" class="headerlink" title="中招的应对方法"></a>中招的应对方法</h1><p>如果有朋友的飞牛设备仍停留在旧版本，并且出现了「设备连接数异常」「经常断网无法连接」「网卡超时」等问题，可以检查以下特征，判断是否已经中招被植入木马病毒。</p>
-<p>目前披露的几个常见感染特征是：</p>
-<ul>
-<li>出现网络连接突然失效、网卡超时等情况</li>
-<li>存在<code>/usr/sbin/gots</code>、<code>/usr/trim/bin/trim_https_cgi</code>等病毒文件：使用命令<code>ls</code>查看是否存在这些文件</li>
-<li>存在<code>snd_pcap</code>恶意内核模块，这个是恶意程序创建的模块：使用<code>cat /etc/modules</code>命令排查</li>
-<li><code>/usr/trim/bin/system_startup.sh</code>文件中存在异常的<code>wget</code>命令：使用命令命令<code>cat</code>查看文件内容进行排查</li>
-<li>无法使用官方的更新功能，提示错误或异常</li>
-</ul>
-<p>已经中招的朋友，请断开外部网络进行隔离（物理断网优先），在断网环境下进行排查和清除木马，详细可参考这篇文章《fnos 恶意程序分析》：<code>https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=53230</code>进行修复，并立即升级系统版本。切记清理完成前不要恢复联网，贸然联网可能导致恶意程序成功回连，被二次下发任务进一步破坏你的数据。</p>
-<p>进一步检查，可以通过<code>crontab -l</code>命令检查任务计划等，这里不再展开了。</p>
-<h1 id="聊聊作为普通用户的个人看法和系统加固建议">4 &nbsp&nbsp<a href="#聊聊作为普通用户的个人看法和系统加固建议" class="headerlink" title="聊聊作为普通用户的个人看法和系统加固建议"></a>聊聊作为普通用户的个人看法和系统加固建议</h1><p>感觉这种网安漏洞问题是NAS系统厂商必经之路，印象中之前绿联NAS也前后被曝出过几次安全漏洞问题，事情发酵也不小。</p>
-<p>飞牛官方这个周末肯定是不好过，凌晨四点半发布公告，也说明了问题的严重性。作为普通用户，真的无法奢望有百分百安全的系统，毕竟用户体量大之后，就有攻击价值，总会有不法分子尝试寻找漏洞。</p>
-<p>系统加固方面的建议：</p>
-<ol>
-<li>内网使用其实最安全，只要不暴露在外网，不法分子怎么都扫描不到，也连接不进来。</li>
-<li>有需要设置外网访问途径的，能VPN组网就VPN组网，这样可以降低被扫描的风险。</li>
-<li>开启飞牛自带的防火墙，控制好出入站规则。有用FNID实现远程的话，如果实在担心的话，可以先关闭。我看了不少帖子有零星的反馈说可以成功连入的案例。</li>
-<li><strong>有开启SSH功能的，请设置仅密钥登录并禁止ROOT账户登录</strong>。详细设置教程可以参考我以前的文章「<a href="https://mp.weixin.qq.com/s/YGxWwuB5WUTlZThpKSGTsQ?token=1144548863&lang=zh_CN">禁用飞牛fnOS的SSH密码登录，避免被爆破登录入侵</a>」。当然，进一步者可以部署<code>Fail2Ban</code>、<code>Crowdsec</code>工具禁止恶意登录IP或者端口敲门的方案来保护SSH服务。</li>
-<li>有用iKuai做主路由的朋友并且开启IPv6的话，记得设置ACL规则控制出入，否则在iKuai的IPv6默认规则模式下，你的所有设备都是裸奔在公网之上。</li>
-</ol>
-<p><strong>数据无价！！！这种NAS的网络安全问题，咱们还是留心做好防护才行。</strong></p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 系统可能存在漏洞[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=52304">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=52304</a>.<br>[2] fnos 恶意程序分析[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=53230">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=53230</a>.<br>[3] 飞牛 OS 疑似 0day 漏洞，许多用户设备遭到攻击，请尽快检查设备或暂停使用[EB&#x2F;OL]. <a href="https://www.v2ex.com/t/1189672">https://www.v2ex.com/t/1189672</a>.<br>[4] 【漏洞预警】国产飞牛系统 fnOS 出现安全漏洞[EB&#x2F;OL]. <a href="https://blog.h-acker.cn/forum-post/3762.html">https://blog.h-acker.cn/forum-post/3762.html</a>.<br>[5] 飞牛NAS(fnOS)严重安全漏洞(app-center-static)的分析及修复方式[EB&#x2F;OL]. <a href="https://blog.fyun.org/fnos-nas.html">https://blog.fyun.org/fnos-nas.html</a>.<br>[6] 紧急安全提醒！飞牛OS最新版仍然存在漏洞 请立即断开网络连接[EB&#x2F;OL]. <a href="https://www.landiannews.com/archives/111678.html">https://www.landiannews.com/archives/111678.html</a>.</p>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2026-02</category>
-      </categories>
-      <tags>
-        <tag>fnOS</tag>
-        <tag>飞牛</tag>
-        <tag>安全漏洞</tag>
-        <tag>重要安全更新</tag>
-        <tag>网络安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个诡异的驱动BUG问题排查记录：大容量U盘在Windows设备管理器中无法识别，但DiskGenius可以识别</title>
     <url>/post-articles/2026-01/usb-drive-invisible-in-windows-but-diskgenius/</url>
     <content><![CDATA[<p>前日，在Windows平台上遇到一个十分诡异的BUG问题。我本人自制的IS903大容量U盘，在Windows11 24H2系统中（平台是AMD的x86），无法被系统的文件管理器读取到。一开始还以为是这个自制U盘挂了，最后花了十分多分钟才排障解决这个问题。因此记录一下这个问题排障过程。</p>
@@ -17310,6 +17272,59 @@ title UDP Packet
         <tag>磁盘管理</tag>
         <tag>DiskGenius</tag>
         <tag>设备管理器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>飞牛fnOS被曝重大安全漏洞。扩散通知，抓紧升级你的飞牛系统。</title>
+    <url>/post-articles/2026-02/fnos-critical-security/</url>
+    <content><![CDATA[<h1 id="官方公告通知">1 &nbsp&nbsp<a href="#官方公告通知" class="headerlink" title="官方公告通知"></a>官方公告通知</h1><p>2026-02-01日04:31，也就是今日(周日)凌晨四点半，广州铁刃公司在公众号平台上发布一篇《重要安全更新通知》文章。</p>
+<blockquote>
+<p>这个公告主要意思就是说<code>fnOS v1.1.15</code>之前的版本代码存在缺陷，有系统漏洞，请各位用户尽快升级至目前最新的<code>v1.1.18</code>版本。此次安全问题，官方共发布推送了<code>v1.1.15</code>和<code>v1.1.18</code>两版紧急修复固件。</p>
+</blockquote>
+<p>详细公告内容可以点击查看「<a href="https://mp.weixin.qq.com/s/LzkLcy92m5O24up_9c4NUA">重要安全更新通知</a>」。</p>
+<p>如果还有朋友还停留在飞牛fnOS旧版本的话，请抓紧升级飞牛系统版本，并做好对应的网络访问权限安全防护。</p>
+<p>当然，如果你是内网使用的话，并且不考虑任何外网访问的途径，可以不用担心这个问题。</p>
+<h1 id="系统安全漏洞的分析">2 &nbsp&nbsp<a href="#系统安全漏洞的分析" class="headerlink" title="系统安全漏洞的分析"></a>系统安全漏洞的分析</h1><p>这些天，这个漏洞安全事件一直在发酵，很多网络帖子都在讨论这个问题。</p>
+<p>我看了一些相关话题的帖子，<strong>很多都提及到一个「路径穿越漏洞」，就是指在未登录授权凭证的条件下，可以访问并遍历系统敏感目录。</strong></p>
+<p>不需要鉴权就能访问获取文件，这种漏洞安全性很严重。其中官方论坛有一个帖子提到，有不法分子(攻击者)通过这个漏洞获取文件<code>飞牛系统地址:5666/app-center-static/serviceicon/myapp/%7B0%7D?size=../../../../usr/trim/etc/rsa_private_key.pem</code>，进而拿到<code>longtoken</code>利用<code>cookie</code>登录飞牛fnOS系统，然后在系统中下发并持久化木马程序。</p>
+<p>还有一个是涉及到websocket鉴权漏洞，测试的链接是<code>飞牛系统地址:5666/websocket?type=main</code>，目前这个我还未找到比较详细的资料。感兴趣的朋友可以查看本文的参考文献链接或者搜索相关资料。</p>
+<blockquote>
+<p>【郑重声明】本文提及的任何漏洞信息，旨在提醒用户注意网络安全。任何人不得将其用于非法用途，否则产生的后果由使用者本人承担，与本文作者无关。</p>
+</blockquote>
+<h1 id="中招的应对方法">3 &nbsp&nbsp<a href="#中招的应对方法" class="headerlink" title="中招的应对方法"></a>中招的应对方法</h1><p>如果有朋友的飞牛设备仍停留在旧版本，并且出现了「设备连接数异常」「经常断网无法连接」「网卡超时」等问题，可以检查以下特征，判断是否已经中招被植入木马病毒。</p>
+<p>目前披露的几个常见感染特征是：</p>
+<ul>
+<li>出现网络连接突然失效、网卡超时等情况</li>
+<li>存在<code>/usr/sbin/gots</code>、<code>/usr/trim/bin/trim_https_cgi</code>等病毒文件：使用命令<code>ls</code>查看是否存在这些文件</li>
+<li>存在<code>snd_pcap</code>恶意内核模块，这个是恶意程序创建的模块：使用<code>cat /etc/modules</code>命令排查</li>
+<li><code>/usr/trim/bin/system_startup.sh</code>文件中存在异常的<code>wget</code>命令：使用命令命令<code>cat</code>查看文件内容进行排查</li>
+<li>无法使用官方的更新功能，提示错误或异常</li>
+</ul>
+<p>已经中招的朋友，请断开外部网络进行隔离（物理断网优先），在断网环境下进行排查和清除木马，详细可参考这篇文章《fnos 恶意程序分析》：<code>https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=53230</code>进行修复，并立即升级系统版本。切记清理完成前不要恢复联网，贸然联网可能导致恶意程序成功回连，被二次下发任务进一步破坏你的数据。</p>
+<p>进一步检查，可以通过<code>crontab -l</code>命令检查任务计划等，这里不再展开了。</p>
+<h1 id="聊聊作为普通用户的个人看法和系统加固建议">4 &nbsp&nbsp<a href="#聊聊作为普通用户的个人看法和系统加固建议" class="headerlink" title="聊聊作为普通用户的个人看法和系统加固建议"></a>聊聊作为普通用户的个人看法和系统加固建议</h1><p>感觉这种网安漏洞问题是NAS系统厂商必经之路，印象中之前绿联NAS也前后被曝出过几次安全漏洞问题，事情发酵也不小。</p>
+<p>飞牛官方这个周末肯定是不好过，凌晨四点半发布公告，也说明了问题的严重性。作为普通用户，真的无法奢望有百分百安全的系统，毕竟用户体量大之后，就有攻击价值，总会有不法分子尝试寻找漏洞。</p>
+<p>系统加固方面的建议：</p>
+<ol>
+<li>内网使用其实最安全，只要不暴露在外网，不法分子怎么都扫描不到，也连接不进来。</li>
+<li>有需要设置外网访问途径的，能VPN组网就VPN组网，这样可以降低被扫描的风险。</li>
+<li>开启飞牛自带的防火墙，控制好出入站规则。有用FNID实现远程的话，如果实在担心的话，可以先关闭。我看了不少帖子有零星的反馈说可以成功连入的案例。</li>
+<li><strong>有开启SSH功能的，请设置仅密钥登录并禁止ROOT账户登录</strong>。详细设置教程可以参考我以前的文章「<a href="https://mp.weixin.qq.com/s/YGxWwuB5WUTlZThpKSGTsQ?token=1144548863&lang=zh_CN">禁用飞牛fnOS的SSH密码登录，避免被爆破登录入侵</a>」。当然，进一步者可以部署<code>Fail2Ban</code>、<code>Crowdsec</code>工具禁止恶意登录IP或者端口敲门的方案来保护SSH服务。</li>
+<li>有用iKuai做主路由的朋友并且开启IPv6的话，记得设置ACL规则控制出入，否则在iKuai的IPv6默认规则模式下，你的所有设备都是裸奔在公网之上。</li>
+</ol>
+<p><strong>数据无价！！！这种NAS的网络安全问题，咱们还是留心做好防护才行。</strong></p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 系统可能存在漏洞[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=52304">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=52304</a>.<br>[2] fnos 恶意程序分析[EB&#x2F;OL]. <a href="https://club.fnnas.com/forum.php?mod=viewthread&tid=53230">https://club.fnnas.com/forum.php?mod=viewthread&amp;tid=53230</a>.<br>[3] 飞牛 OS 疑似 0day 漏洞，许多用户设备遭到攻击，请尽快检查设备或暂停使用[EB&#x2F;OL]. <a href="https://www.v2ex.com/t/1189672">https://www.v2ex.com/t/1189672</a>.<br>[4] 【漏洞预警】国产飞牛系统 fnOS 出现安全漏洞[EB&#x2F;OL]. <a href="https://blog.h-acker.cn/forum-post/3762.html">https://blog.h-acker.cn/forum-post/3762.html</a>.<br>[5] 飞牛NAS(fnOS)严重安全漏洞(app-center-static)的分析及修复方式[EB&#x2F;OL]. <a href="https://blog.fyun.org/fnos-nas.html">https://blog.fyun.org/fnos-nas.html</a>.<br>[6] 紧急安全提醒！飞牛OS最新版仍然存在漏洞 请立即断开网络连接[EB&#x2F;OL]. <a href="https://www.landiannews.com/archives/111678.html">https://www.landiannews.com/archives/111678.html</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2026-02</category>
+      </categories>
+      <tags>
+        <tag>fnOS</tag>
+        <tag>飞牛</tag>
+        <tag>安全漏洞</tag>
+        <tag>重要安全更新</tag>
+        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
@@ -18227,7 +18242,7 @@ title UDP Packet
 <h1 id="联系方式">5 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#107;&#105;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#115;&#116;&#x65;&#114;&#107;&#x69;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -18340,283 +18355,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>知识总结手册</title>
-    <url>/manuals/index.html</url>
-    <content><![CDATA[<h1 id="运维-系统-维修排障">1 &nbsp&nbsp<a href="#运维-系统-维修排障" class="headerlink" title="运维&#x2F;系统&#x2F;维修排障"></a>运维&#x2F;系统&#x2F;维修排障</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">软路由/虚拟化/Linux</p>
-    </div>
-    <a href="/software/pve">PVE+iKuai+OpenWrt+fnOS折腾记录</a>
-    <a href="/code/docker">Docker总结</a>
-    <a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a>
-    <a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">运维排障总结</p>
-    </div>
-    <a href="/troubleshooting/windows-troubleshooting">Windows系统排障总结</a>
-    <a href="/troubleshooting/runtime-library-repair-on-windows">运行库修复（Windows平台）</a>
-    <a href="/troubleshooting/winpe-troubleshooting">WinPE系统封装排障总结</a>
-    <a href="/troubleshooting/linux-troubleshooting">Linux系统排障总结</a>
-    <a href="/troubleshooting/network-troubleshooting">网络排障总结</a>
-    <a href="/troubleshooting/software-troubleshooting">计算机软件排障总结</a>
-    <a href="/troubleshooting/hardware-troubleshooting">计算机硬件排障总结</a>
-    <a href="/troubleshooting/android-troubleshooting">Android系统排障总结</a>
-    <a href="/troubleshooting/optical-modem-troubleshooting">光猫排障破解总结</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">CAD/电路维修</p>
-    </div>
-    <a href="/cad/pcb">PCB设计/电路维修</a>
-    <a href="/cad/flash-disk">闪存驱动器设计</a>
-    <a href="/cad/simulation">电路仿真设计</a>
-    <a href="/cad/cad">CAD</a>
-    <a href="/cad/laptop-fundamental">笔记本硬件基础</a>
-</div>
-
-</div>
-
-<h1 id="编程开发参考资料">2 &nbsp&nbsp<a href="#编程开发参考资料" class="headerlink" title="编程开发参考资料"></a>编程开发参考资料</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">终端命令手册</p>
-    </div>
-    <a href="https://ss64.com/">终端命令手册SS64站点</a>
-    <a href="https://manpages.debian.org/">Debian Manpages</a>
-    <a href="https://man.archlinux.org/">Arch Manpages</a>
-    <a href="https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html">Bash参考手册-中英对照</a>
-    <a href="https://www.gnu.org/software/bash/manual/bash.html">Bash官方参考手册</a>
-    <a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">Win代码页标识符(chcp)</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">编程语言参考手册</p>
-    </div>
-    <a href="https://cppreference.com">C&C++参考手册</a>
-    <a href="https://docs.python.org/zh-cn/3/">Python文档</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">构建系统参考手册</p>
-    </div>
-    <a href="https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1">Effective Modern CMake</a>
-    <a href="https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/README_GitBook.html">现代的CMake的介绍</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">WinOS软件部署策略</p>
-    </div>
-    <a href="https://learn.microsoft.com/zh-cn/windows/deployment/">Windows部署文档</a>
-    <a href="https://learn.microsoft.com/zh-cn/windows-hardware/customize/desktop/unattend/">无人值守部署文档</a>
-    <a href="https://learn.microsoft.com/zh-cn/windows/configuration/">配置Windows客户端</a>
-    <a href="https://learn.microsoft.com/zh-cn/deployedge/microsoft-edge-policies">Microsoft Edge - 策略</a>
-    <a href="https://learn.microsoft.com/zh-cn/windows/configuration/start/policy-settings">Win开始菜单-策略设置</a>
-    <a href="https://learn.microsoft.com/zh-cn/windows/configuration/taskbar/policy-settings">Win任务栏-策略设置</a>
-    <a href="https://gpsearch.azurewebsites.net/">Win组策略-注册表查询(gpsearch站点)</a>
-    <a href="https://www.tenforums.com/tutorials/">Win10(tenforums论坛教程)</a>
-    <a href="https://www.elevenforum.com/tutorials/">Win11(elevenforum论坛教程)</a>
-    <a href="https://learn.microsoft.com/zh-cn/powershell/module/grouppolicy/get-gpregistryvalue">通过Powershell查询组策略对应的注册表值</a>
-    <a href="https://learn.microsoft.com/zh-cn/troubleshoot/windows-client/group-policy/create-and-manage-central-store">组策略管理模板(下载电子表格类型方便搜索)</a>
-    <a href="https://learn.microsoft.com/zh-cn/archive/technet-wiki/4976.group-policy-administrative-templates-adm-and-admx-downloads-and-selected-content">组策略管理模板(老版Win系统)</a>
-    <a href="https://learn.microsoft.com/zh-cn/previous-versions/ms815238(v=msdn.10)">组策略索引表(很久未更新)</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">前端常用资料</p>
-    </div>
-    <a href="https://developer.mozilla.org/zh-CN/docs/Web">面向开发者的Web技术&MDN</a>
-    <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Entity">HTML实体符号</a>
-    <a href="https://cn.vuejs.org/">VUE(渐进式JavaScript框架)</a>
-    <a href="https://element-plus.org/zh-CN/component/overview">Element Plus组件(VUE组件库)</a>
-    <a href="https://mermaid.nodejs.cn/intro/">Mermaid文档</a>
-    <a href="https://seo.juziseo.com/tools/web_color/">WEB标准颜色表</a>
-    <a href="https://fontawesome.com/">Font Awesome图标库</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">常见技术书籍资料</p>
-    </div>
-    <a href="https://github.com/myfreeer/cppreference2mshelp/releases">中文版cppreference参考文档</a>
-    <a href="https://github.com/zh-google-styleguide/zh-google-styleguide/releases">Google 开源项目风格指南(中文版)</a>
-    <a href="https://github.com/changkun/modern-cpp-tutorial/releases">现代 C++ 教程(Modern C++ Tutorial)</a>
-    <a href="https://github.com/progit/progit2-zh/releases/">Pro Git(中文版)</a>
-    <a href="https://github.com/yidao620c/python3-cookbook/releases">Python Cookbook</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">题库/题解</p>
-    </div>
-    <a href="https://github.com/halfrost/LeetCode-Go/releases">LeetCode Cookbook(GO语言)</a>
-    <a href="https://github.com/changgyhub/leetcode_101">LeetCode 101</a>
-    <a href="https://github.com/soulmachine/leetcode">LeetCode题解</a>
-</div>
-</div>
-
-<h1 id="编程开发总结">3 &nbsp&nbsp<a href="#编程开发总结" class="headerlink" title="编程开发总结"></a>编程开发总结</h1><div class="text-box-container">
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">编程语言</p>
-    </div>
-    <a href="/code/bat-powershell">Bat&Powershell</a>
-    <a href="/code/bash">Bash Shell</a>
-    <a href="/code/regular-expressions">正则表达式</a>
-    <a href="/code/git">Git版本控制</a>
-    <a href="/code/qt">Qt开发</a>
-    <a href="/code/c-cpp">C&C++语言</a>
-    <a href="/code/python">Python</a>
-    <a href="/code/frontend">前端总结</a>
-    <a href="/code/markdown">Markdown</a>
-    <a href="/code/latex">LaTeX</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">开发总结&工具总结</p>
-    </div>
-    <a href="/code/vscode">Visual Studio Code(VSCode)</a>
-    <a href="/code/code">开发总结</a>
-    <a href="/code/database">数据库</a>
-    <a href="/code/hexo">Hexo个人博客搭建踩坑记</a>
-    <a href="/software/virtual-machine">虚拟机总结</a>
-    <a href="/software/cloud-server">云服务器</a>
-    <a href="/code/computer-security">计算机安全/逆向工程/信息安全</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">个人题库/题解总结</p>
-    </div>
-    <a href="/code/data-structure">数据结构</a>
-    <a href="/code-training/leetcode">力扣LeetCode</a>
-    <a href="/code-training/pat">Programming Ability Test (PAT)</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">AI开发</p>
-    </div>
-    <a href="/software/ai">AI大模型总结</a>
-    <a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a>
-</div>
-
-</div>
-
-<h1 id="软件操作总结">4 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page"><a href="/software/blender/blender" style="color: #fff"><i class="fa-solid fa-link"></i>&nbsp;Blender总结</a></p>
-    </div>
-    <a href="/software/cg-fundamentals">CG基础</a>
-    <a href="https://docs.blender.org/manual/en/latest/index.html">Blender官方参考手册</a>
-    <a href="/software/blender/interface-tools-operation">Blender界面工具操作总结</a>
-    <a href="/software/blender/q-a">Blender常见问题总结 ——Q&A</a>
-    <a href="/software/blender/examples">Blender实战案例总结</a>
-    <a href="/software/blender/code-development">Blender二次代码开发总结</a>
-    <a href="/software/blender/blender-learning-resources">Blender自学资料向（干货整理）(过时，作废)</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page"><a href="/software/blender/tranining/training" style="color: #fff"><i class="fa-solid fa-link"></i>&nbsp;Blender教程总结</a></p>
-    </div>
-    <a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">游戏开发</p>
-    </div>
-    <a href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine">虚幻引擎手册</a>
-    <a href="/code/ue">虚幻引擎总结</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">音视频编解码&处理</p>
-    </div>
-    <a href="/software/ffmpeg">FFmpeg音视频编解码总结</a>
-    <a href="/software/audacity">Audacity总结&音频处理</a>
-    <a href="/software/aegisub">Aegisub总结&字幕制作</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">图像处理</p>
-    </div>
-    <a href="https://docs.krita.org/zh_CN/">Krita官方文档中心</a>
-    <a href="https://share.weiyun.com/Dea2uj0M">Krita社区中文文档</a>
-    <a href="/software/krita">Krita总结</a>
-    <a href="/software/inkscape">Inkscape总结&矢量图处理</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">办公</p>
-    </div>
-    <a href="/software/office">Office</a>
-</div>
-
-</div>
-
-<h1 id="软件教程资源站点">5 &nbsp&nbsp<a href="#软件教程资源站点" class="headerlink" title="软件教程资源站点"></a>软件教程资源站点</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">Blender教程</p>
-    </div>
-    <a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a>
-    <a href="https://drive.google.com/drive/folders/1yjJEw6WYO44U0cs-ZLMC5uyRazf8JfqV">CG boost免费教程(GD)</a>
-    <!-- <a href="https://academy.cgboost.com/l/products">CG boost网站</a> -->
-    <a href="https://www.blendercn.org/">Blender中国社区</a>
-    <a href="https://www.blenderguru.com/">Blender Guru</a>
-    <a href="https://giudansky.com/illustration/infographics/blender-map">Blender快捷键海报</a>
-</div>
-
-</div>
-
-<h1 id="书籍阅读总结">6 &nbsp&nbsp<a href="#书籍阅读总结" class="headerlink" title="书籍阅读总结"></a>书籍阅读总结</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">编程语言</p>
-    </div>
-    <a href="/code-training/cpp-primer-v5/cpp-primer-v5">C++ Primer 第五版</a>
-    <a href="/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide">QT6 C++开发指南</a>
-    <a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a>
-</div>
-
-</div>
-
-<h1 id="标准化文档">7 &nbsp&nbsp<a href="#标准化文档" class="headerlink" title="标准化文档"></a>标准化文档</h1><div class="text-box-container">
-
-<div class="text-box">
-    <div class="tag-align">
-    <p class="tag-bookmark-page">全球标准化文档</p>
-    </div>
-    <a href="https://www.iso.org/">ISO官网</a>
-    <a href="https://www.ietf.org/">IETF官网</a>
-    <a href="https://www.rfc-editor.org/">RFC Editor</a>
-    <a href="https://www.rfc-editor.org/rfc-index.html">RFC Index</a>
-</div>
-
-</div>
-]]></content>
   </entry>
   <entry>
     <title>标签</title>
@@ -20027,5 +19765,282 @@ CGI&后期处理
 <h1 id="作者">5 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.<br>[32] How to Create Extensions[EB&#x2F;OL]. <a href="https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html">https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html</a>.<br>[33] How can I call a specific keymap to draw within my AddonPreferences?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#">https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#</a>.<br>[34] addon_keymap_template[EB&#x2F;OL]. <a href="https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template">https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template</a>.<br>[35] How to draw a custom KeyMapItem.properties[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059">https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059</a>.<br>[36] UI: Operator Confirm Dialog Changes #117564[EB&#x2F;OL]. <a href="https://projects.blender.org/blender/blender/pulls/117564">https://projects.blender.org/blender/blender/pulls/117564</a>.<br>[37] WindowManager(ID)[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm">https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm</a>.<br>[38] Switching workspaces in Blender using Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/">https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/</a>.<br>[39] How to create an Empty of type Image and assign a picture with Python?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#">https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#</a>.<br>[40] How to add empty object not using bpy.ops?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops">https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops</a>.<br>[41] How to use BPY to create an Image empty?[EB&#x2F;OL]. <a href="https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430">https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430</a>.<br>[42] Footnotes in longtable captions[EB&#x2F;OL]. <a href="https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions">https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions</a>.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以前（不含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以后（含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共18种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本的插件不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:7" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+  </entry>
+  <entry>
+    <title>知识总结手册</title>
+    <url>/manuals/index.html</url>
+    <content><![CDATA[<h1 id="运维-系统-维修排障">1 &nbsp&nbsp<a href="#运维-系统-维修排障" class="headerlink" title="运维&#x2F;系统&#x2F;维修排障"></a>运维&#x2F;系统&#x2F;维修排障</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">软路由/虚拟化/Linux</p>
+    </div>
+    <a href="/software/pve">PVE+iKuai+OpenWrt+fnOS折腾记录</a>
+    <a href="/code/docker">Docker总结</a>
+    <a href="/software/arch-linux">安装Arch Linux的踩坑记录总结</a>
+    <a href="/software/install-deepin-on-lenovo-z500">给联想z500安装deepin linux（深度系统）</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">运维排障总结</p>
+    </div>
+    <a href="/troubleshooting/windows-troubleshooting">Windows系统排障总结</a>
+    <a href="/troubleshooting/runtime-library-repair-on-windows">运行库修复（Windows平台）</a>
+    <a href="/troubleshooting/winpe-troubleshooting">WinPE系统封装排障总结</a>
+    <a href="/troubleshooting/linux-troubleshooting">Linux系统排障总结</a>
+    <a href="/troubleshooting/network-troubleshooting">网络排障总结</a>
+    <a href="/troubleshooting/software-troubleshooting">计算机软件排障总结</a>
+    <a href="/troubleshooting/hardware-troubleshooting">计算机硬件排障总结</a>
+    <a href="/troubleshooting/android-troubleshooting">Android系统排障总结</a>
+    <a href="/troubleshooting/optical-modem-troubleshooting">光猫排障破解总结</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">CAD/电路维修</p>
+    </div>
+    <a href="/cad/pcb">PCB设计/电路维修</a>
+    <a href="/cad/flash-disk">闪存驱动器设计</a>
+    <a href="/cad/simulation">电路仿真设计</a>
+    <a href="/cad/cad">CAD</a>
+    <a href="/cad/laptop-fundamental">笔记本硬件基础</a>
+</div>
+
+</div>
+
+<h1 id="编程开发参考资料">2 &nbsp&nbsp<a href="#编程开发参考资料" class="headerlink" title="编程开发参考资料"></a>编程开发参考资料</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">终端命令手册</p>
+    </div>
+    <a href="https://ss64.com/">终端命令手册SS64站点</a>
+    <a href="https://manpages.debian.org/">Debian Manpages</a>
+    <a href="https://man.archlinux.org/">Arch Manpages</a>
+    <a href="https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html">Bash参考手册-中英对照</a>
+    <a href="https://www.gnu.org/software/bash/manual/bash.html">Bash官方参考手册</a>
+    <a href="https://learn.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers">Win代码页标识符(chcp)</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">编程语言参考手册</p>
+    </div>
+    <a href="https://cppreference.com">C&C++参考手册</a>
+    <a href="https://docs.python.org/zh-cn/3/">Python文档</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">构建系统参考手册</p>
+    </div>
+    <a href="https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1">Effective Modern CMake</a>
+    <a href="https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/README_GitBook.html">现代的CMake的介绍</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">WinOS软件部署策略</p>
+    </div>
+    <a href="https://learn.microsoft.com/zh-cn/windows/deployment/">Windows部署文档</a>
+    <a href="https://learn.microsoft.com/zh-cn/windows-hardware/customize/desktop/unattend/">无人值守部署文档</a>
+    <a href="https://learn.microsoft.com/zh-cn/windows/configuration/">配置Windows客户端</a>
+    <a href="https://learn.microsoft.com/zh-cn/deployedge/microsoft-edge-policies">Microsoft Edge - 策略</a>
+    <a href="https://learn.microsoft.com/zh-cn/windows/configuration/start/policy-settings">Win开始菜单-策略设置</a>
+    <a href="https://learn.microsoft.com/zh-cn/windows/configuration/taskbar/policy-settings">Win任务栏-策略设置</a>
+    <a href="https://gpsearch.azurewebsites.net/">Win组策略-注册表查询(gpsearch站点)</a>
+    <a href="https://www.tenforums.com/tutorials/">Win10(tenforums论坛教程)</a>
+    <a href="https://www.elevenforum.com/tutorials/">Win11(elevenforum论坛教程)</a>
+    <a href="https://learn.microsoft.com/zh-cn/powershell/module/grouppolicy/get-gpregistryvalue">通过Powershell查询组策略对应的注册表值</a>
+    <a href="https://learn.microsoft.com/zh-cn/troubleshoot/windows-client/group-policy/create-and-manage-central-store">组策略管理模板(下载电子表格类型方便搜索)</a>
+    <a href="https://learn.microsoft.com/zh-cn/archive/technet-wiki/4976.group-policy-administrative-templates-adm-and-admx-downloads-and-selected-content">组策略管理模板(老版Win系统)</a>
+    <a href="https://learn.microsoft.com/zh-cn/previous-versions/ms815238(v=msdn.10)">组策略索引表(很久未更新)</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">前端常用资料</p>
+    </div>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web">面向开发者的Web技术&MDN</a>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Entity">HTML实体符号</a>
+    <a href="https://cn.vuejs.org/">VUE(渐进式JavaScript框架)</a>
+    <a href="https://element-plus.org/zh-CN/component/overview">Element Plus组件(VUE组件库)</a>
+    <a href="https://mermaid.nodejs.cn/intro/">Mermaid文档</a>
+    <a href="https://seo.juziseo.com/tools/web_color/">WEB标准颜色表</a>
+    <a href="https://fontawesome.com/">Font Awesome图标库</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">常见技术书籍资料</p>
+    </div>
+    <a href="https://github.com/myfreeer/cppreference2mshelp/releases">中文版cppreference参考文档</a>
+    <a href="https://github.com/zh-google-styleguide/zh-google-styleguide/releases">Google 开源项目风格指南(中文版)</a>
+    <a href="https://github.com/changkun/modern-cpp-tutorial/releases">现代 C++ 教程(Modern C++ Tutorial)</a>
+    <a href="https://github.com/progit/progit2-zh/releases/">Pro Git(中文版)</a>
+    <a href="https://github.com/yidao620c/python3-cookbook/releases">Python Cookbook</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">题库/题解</p>
+    </div>
+    <a href="https://github.com/halfrost/LeetCode-Go/releases">LeetCode Cookbook(GO语言)</a>
+    <a href="https://github.com/changgyhub/leetcode_101">LeetCode 101</a>
+    <a href="https://github.com/soulmachine/leetcode">LeetCode题解</a>
+</div>
+</div>
+
+<h1 id="编程开发总结">3 &nbsp&nbsp<a href="#编程开发总结" class="headerlink" title="编程开发总结"></a>编程开发总结</h1><div class="text-box-container">
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">编程语言</p>
+    </div>
+    <a href="/code/bat-powershell">Bat&Powershell</a>
+    <a href="/code/bash">Bash Shell</a>
+    <a href="/code/regular-expressions">正则表达式</a>
+    <a href="/code/git">Git版本控制</a>
+    <a href="/code/qt">Qt开发</a>
+    <a href="/code/c-cpp">C&C++语言</a>
+    <a href="/code/python">Python</a>
+    <a href="/code/frontend">前端总结</a>
+    <a href="/code/markdown">Markdown</a>
+    <a href="/code/latex">LaTeX</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">开发总结&工具总结</p>
+    </div>
+    <a href="/code/vscode">Visual Studio Code(VSCode)</a>
+    <a href="/code/code">开发总结</a>
+    <a href="/code/database">数据库</a>
+    <a href="/code/hexo">Hexo个人博客搭建踩坑记</a>
+    <a href="/software/virtual-machine">虚拟机总结</a>
+    <a href="/software/cloud-server">云服务器</a>
+    <a href="/code/computer-security">计算机安全/逆向工程/信息安全</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">个人题库/题解总结</p>
+    </div>
+    <a href="/code/data-structure">数据结构</a>
+    <a href="/code-training/leetcode">力扣LeetCode</a>
+    <a href="/code-training/pat">Programming Ability Test (PAT)</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">AI开发</p>
+    </div>
+    <a href="/software/ai">AI大模型总结</a>
+    <a href="/software/nvidia-jetson">英伟达Jetson开发板踩坑记录总结</a>
+</div>
+
+</div>
+
+<h1 id="软件操作总结">4 &nbsp&nbsp<a href="#软件操作总结" class="headerlink" title="软件操作总结"></a>软件操作总结</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page"><a href="/software/blender/blender" style="color: #fff"><i class="fa-solid fa-link"></i>&nbsp;Blender总结</a></p>
+    </div>
+    <a href="/software/cg-fundamentals">CG基础</a>
+    <a href="https://docs.blender.org/manual/en/latest/index.html">Blender官方参考手册</a>
+    <a href="/software/blender/interface-tools-operation">Blender界面工具操作总结</a>
+    <a href="/software/blender/q-a">Blender常见问题总结 ——Q&A</a>
+    <a href="/software/blender/examples">Blender实战案例总结</a>
+    <a href="/software/blender/code-development">Blender二次代码开发总结</a>
+    <a href="/software/blender/blender-learning-resources">Blender自学资料向（干货整理）(过时，作废)</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page"><a href="/software/blender/tranining/training" style="color: #fff"><i class="fa-solid fa-link"></i>&nbsp;Blender教程总结</a></p>
+    </div>
+    <a href="/software/blender/tranining/cg-boost-blender28-beginner-series">Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">游戏开发</p>
+    </div>
+    <a href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine">虚幻引擎手册</a>
+    <a href="/code/ue">虚幻引擎总结</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">音视频编解码&处理</p>
+    </div>
+    <a href="/software/ffmpeg">FFmpeg音视频编解码总结</a>
+    <a href="/software/audacity">Audacity总结&音频处理</a>
+    <a href="/software/aegisub">Aegisub总结&字幕制作</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">图像处理</p>
+    </div>
+    <a href="https://docs.krita.org/zh_CN/">Krita官方文档中心</a>
+    <a href="https://share.weiyun.com/Dea2uj0M">Krita社区中文文档</a>
+    <a href="/software/krita">Krita总结</a>
+    <a href="/software/inkscape">Inkscape总结&矢量图处理</a>
+</div>
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">办公</p>
+    </div>
+    <a href="/software/office">Office</a>
+</div>
+
+</div>
+
+<h1 id="软件教程资源站点">5 &nbsp&nbsp<a href="#软件教程资源站点" class="headerlink" title="软件教程资源站点"></a>软件教程资源站点</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">Blender教程</p>
+    </div>
+    <a href="https://b3d.interplanety.org/en/">B3D - Interplanety</a>
+    <a href="https://drive.google.com/drive/folders/1yjJEw6WYO44U0cs-ZLMC5uyRazf8JfqV">CG boost免费教程(GD)</a>
+    <!-- <a href="https://academy.cgboost.com/l/products">CG boost网站</a> -->
+    <a href="https://www.blendercn.org/">Blender中国社区</a>
+    <a href="https://www.blenderguru.com/">Blender Guru</a>
+    <a href="https://giudansky.com/illustration/infographics/blender-map">Blender快捷键海报</a>
+</div>
+
+</div>
+
+<h1 id="书籍阅读总结">6 &nbsp&nbsp<a href="#书籍阅读总结" class="headerlink" title="书籍阅读总结"></a>书籍阅读总结</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">编程语言</p>
+    </div>
+    <a href="/code-training/cpp-primer-v5/cpp-primer-v5">C++ Primer 第五版</a>
+    <a href="/code-training/qt6-cpp-development-guide/qt6-cpp-development-guide">QT6 C++开发指南</a>
+    <a href="/code-training/head-first-html-css-v2/head-first-html-css-v2">Head Fisrt HTML CSS 第二版</a>
+</div>
+
+</div>
+
+<h1 id="标准化文档">7 &nbsp&nbsp<a href="#标准化文档" class="headerlink" title="标准化文档"></a>标准化文档</h1><div class="text-box-container">
+
+<div class="text-box">
+    <div class="tag-align">
+    <p class="tag-bookmark-page">全球标准化文档</p>
+    </div>
+    <a href="https://www.iso.org/">ISO官网</a>
+    <a href="https://www.ietf.org/">IETF官网</a>
+    <a href="https://www.rfc-editor.org/">RFC Editor</a>
+    <a href="https://www.rfc-editor.org/rfc-index.html">RFC Index</a>
+</div>
+
+</div>
+]]></content>
   </entry>
 </search>
