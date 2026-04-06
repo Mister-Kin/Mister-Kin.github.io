@@ -53,8 +53,9 @@
 
 <div class="text-box">
     <div class="tag-align">
-    <p class="tag-bookmark-page">Linux系统搜索软件包</p>
+    <p class="tag-bookmark-page">Linux系统搜索软件包&编程语言依赖包搜索</p>
     </div>
+    <a href="https://pypi.org/">Python搜索依赖包</a>
     <a href="https://packages.debian.org/index">Debian搜索软件包</a>
     <a href="https://archlinux.org/packages/">Arch搜索软件包</a>
     <a href="https://packages.fedoraproject.org/">Fedora搜索软件包</a>
@@ -1238,7 +1239,7 @@
     <p class="tag-bookmark-page">OpenClaw</p>
     </div>
     <a href="https://pinchbench.com/">OpenClaw模型排行</a>
-    <a href="https://docs.openclaw.ai/zh-CN">OpenClaw官网文档</a>
+    <a href="https://docs.openclaw.ai">OpenClaw官网文档</a>
     <a href="https://github.com/openclaw/openclaw">openclaw</a>
     <a href="https://clawhub.ai/skills">ClawHub</a>
     <a href="https://github.com/VoltAgent/awesome-openclaw-skills">awesome-openclaw-skills</a>
@@ -1283,7 +1284,7 @@
     </div>
     <a href="https://visualstudio.microsoft.com/zh-hans/downloads/">Visual Studio 2026生成工具</a>
     <a href="https://llvm.org/">LLVM</a>
-    <a href="https://tug.org/texlive/">TeX Live(LaTeX)</a>
+    <a href="https://tug.org/texlive/">TeXLive(LaTeX)</a>
     <a href="https://gcc.gnu.org/">GCC</a>
     <a href="https://github.com/jmeubank/tdm-gcc/releases">tdm-gcc</a>
     <a href="https://nasm.us/">NASM(汇编)</a>
@@ -1375,6 +1376,7 @@
     <p class="tag-bookmark-page">Python</p>
     </div>
     <a href="https://www.python.org/">Python</a>
+    <a href="https://pypi.org/">Python搜索依赖包</a>
     <a href="https://www.anaconda.com/download/success">Anaconda</a>
     <a href="https://docs.anaconda.com/free/miniconda/">Miniconda</a>
     <a href="https://nuitka.net/">Nuitka(Python exe打包器)</a>
@@ -2732,6 +2734,39 @@ document.addEventListener('DOMContentLoaded', function() {
       </tags>
   </entry>
   <entry>
+    <title>搜索引擎</title>
+    <url>/search-engine/</url>
+    <content><![CDATA[<div class="note info no-icon"><p>搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。</p>
+</div>
+
+<h1 id="常见搜索需求">1 &nbsp&nbsp<a href="#常见搜索需求" class="headerlink" title="常见搜索需求"></a>常见搜索需求</h1><ul>
+<li>信息资讯</li>
+<li>知识技能</li>
+<li>素材文件</li>
+<li>工具软件</li>
+</ul>
+<h1 id="搜索效率">2 &nbsp&nbsp<a href="#搜索效率" class="headerlink" title="搜索效率"></a>搜索效率</h1><ul>
+<li>一般而言：谷歌&gt;必应&gt;公众号&gt;短视频&gt;百度</li>
+<li>网页搜索：谷歌&gt;搜狗搜索引擎（可搜索公众号文章）&gt;微信APP搜索</li>
+<li>PDF搜索：谷歌限定文件格式语法&gt;垂直类网站</li>
+<li>科研PDF：谷歌学术&gt;SCI-HUB</li>
+</ul>
+<h1 id="谷歌搜索语法">3 &nbsp&nbsp<a href="#谷歌搜索语法" class="headerlink" title="谷歌搜索语法"></a>谷歌搜索语法</h1><ul>
+<li>限定关键词：<code>&quot;关键词&quot;</code>，英文双引号包含关键词</li>
+<li>限定标题：<code>intitle:关键词</code>。此时，关键词并不是限定状态，因此关键词中的字符也可能是乱序查询的。</li>
+<li>限定标题+限定关键词：<code>intitle:&quot;关键词&quot;</code>。此种用法，关键词是限定状态，要求完整出现，不能乱序。</li>
+<li>限定标题+多个关键词：<code>allintitle:关键词1 关键词2</code></li>
+<li>限定内容关键词：<code>intext:关键词</code></li>
+<li>限定网址关键词：<code>inurl:关键词</code>，如<code>inurl:cctv</code></li>
+<li>限定网址来源：<code>site:网址</code>，如<code>site:cctv.com</code>，域名的www可不输入。</li>
+<li>限定图片尺寸：<code>imagesize:分辨率</code>，如<code>imagesize:1920x1080</code></li>
+<li>限定文件格式：<code>filetype:文件后缀名</code>，如<code>filetype:pdf</code></li>
+</ul>
+<h1 id="油管直链转制">4 &nbsp&nbsp<a href="#油管直链转制" class="headerlink" title="油管直链转制"></a>油管直链转制</h1><p>youtube-&gt;9xyoutube</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 搜索技术，普通人变强的唯一外挂。全套详细宝藏教程~[EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=tiN6T1LewmQ&t=31s">https://www.youtube.com/watch?v=tiN6T1LewmQ&amp;t=31s</a>.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>飞助远程服务店（作废）</title>
     <url>/service-shop/</url>
     <content><![CDATA[<h1 id="店铺介绍">1 &nbsp&nbsp<a href="#店铺介绍" class="headerlink" title="店铺介绍"></a>店铺介绍</h1><p>本人开的一个小店，旨在通过远程操作帮助客户解决电脑系统问题。</p>
@@ -2839,37 +2874,113 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>搜索引擎</title>
-    <url>/search-engine/</url>
-    <content><![CDATA[<div class="note info no-icon"><p>搜索技巧：巧用AI GC相关工具和传统搜索引擎方式。</p>
-</div>
-
-<h1 id="常见搜索需求">1 &nbsp&nbsp<a href="#常见搜索需求" class="headerlink" title="常见搜索需求"></a>常见搜索需求</h1><ul>
-<li>信息资讯</li>
-<li>知识技能</li>
-<li>素材文件</li>
-<li>工具软件</li>
+    <title>CAD总结笔记</title>
+    <url>/cad/cad/</url>
+    <content><![CDATA[<h1 id="Autodesk-CAD">1 &nbsp&nbsp<a href="#Autodesk-CAD" class="headerlink" title="Autodesk CAD"></a>Autodesk CAD</h1><h2 id="版本下载">1.1 &nbsp&nbsp<a href="#版本下载" class="headerlink" title="版本下载"></a>版本下载</h2><p><a href="https://zhuanlan.zhihu.com/p/636416292">CAD哪个版本好用-CAD各版本对比</a></p>
+<p>下载地址：</p>
+<ul>
+<li>Autodesk CAD 2026(简体中文版)<ul>
+<li><a href="https://trial2.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/9165B4AF-8BF4-37D6-882D-694B73603AED/SFX/ACD_2026_simplified_chinese_win_db_001_002.exe">安装包文件1</a></li>
+<li><a href="https://trial2.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/9165B4AF-8BF4-37D6-882D-694B73603AED/SFX/ACD_2026_simplified_chinese_win_db_002_002.7z">安装包文件2</a></li>
 </ul>
-<h1 id="搜索效率">2 &nbsp&nbsp<a href="#搜索效率" class="headerlink" title="搜索效率"></a>搜索效率</h1><ul>
-<li>一般而言：谷歌&gt;必应&gt;公众号&gt;短视频&gt;百度</li>
-<li>网页搜索：谷歌&gt;搜狗搜索引擎（可搜索公众号文章）&gt;微信APP搜索</li>
-<li>PDF搜索：谷歌限定文件格式语法&gt;垂直类网站</li>
-<li>科研PDF：谷歌学术&gt;SCI-HUB</li>
+</li>
+<li>Autodesk CAD 2025(简体中文版)<ul>
+<li><a href="https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACD/7B66591E-A260-34D2-B2AD-8FDC4EA76CE8/SFX/AutoCAD_2025_Simplified_Chinese_Win_64bit_db_001_002.exe">安装包文件1</a></li>
+<li><a href="https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACD/7B66591E-A260-34D2-B2AD-8FDC4EA76CE8/SFX/AutoCAD_2025_Simplified_Chinese_Win_64bit_db_002_002.7z">安装包文件2</a></li>
 </ul>
-<h1 id="谷歌搜索语法">3 &nbsp&nbsp<a href="#谷歌搜索语法" class="headerlink" title="谷歌搜索语法"></a>谷歌搜索语法</h1><ul>
-<li>限定关键词：<code>&quot;关键词&quot;</code>，英文双引号包含关键词</li>
-<li>限定标题：<code>intitle:关键词</code>。此时，关键词并不是限定状态，因此关键词中的字符也可能是乱序查询的。</li>
-<li>限定标题+限定关键词：<code>intitle:&quot;关键词&quot;</code>。此种用法，关键词是限定状态，要求完整出现，不能乱序。</li>
-<li>限定标题+多个关键词：<code>allintitle:关键词1 关键词2</code></li>
-<li>限定内容关键词：<code>intext:关键词</code></li>
-<li>限定网址关键词：<code>inurl:关键词</code>，如<code>inurl:cctv</code></li>
-<li>限定网址来源：<code>site:网址</code>，如<code>site:cctv.com</code>，域名的www可不输入。</li>
-<li>限定图片尺寸：<code>imagesize:分辨率</code>，如<code>imagesize:1920x1080</code></li>
-<li>限定文件格式：<code>filetype:文件后缀名</code>，如<code>filetype:pdf</code></li>
+</li>
+<li>Autodesk CAD 2024(简体中文版)<ul>
+<li><a href="https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/C0D3A90A-5925-3283-B826-68A4EAF3698A/SFX/AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe">安装包文件1</a></li>
+<li><a href="https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/C0D3A90A-5925-3283-B826-68A4EAF3698A/SFX/AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe">安装包文件2</a></li>
+<li><a href="https://pan.baidu.com/s/16tToZ9qJfPQ74ACm1PZ02Q?pwd=i71k">破解文件</a></li>
 </ul>
-<h1 id="油管直链转制">4 &nbsp&nbsp<a href="#油管直链转制" class="headerlink" title="油管直链转制"></a>油管直链转制</h1><p>youtube-&gt;9xyoutube</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 搜索技术，普通人变强的唯一外挂。全套详细宝藏教程~[EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=tiN6T1LewmQ&t=31s">https://www.youtube.com/watch?v=tiN6T1LewmQ&amp;t=31s</a>.</p>
+</li>
+<li>Autodesk CAD 2023(简体中文版)<ul>
+<li><a href="http://dds.autodesk.com/NetSWDLD/2023/ACD/8FB3A471-BAFE-379D-AE7F-9ECF1E74401D/SFX/AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe">安装包文件1</a></li>
+<li><a href="http://dds.autodesk.com/NetSWDLD/2023/ACD/8FB3A471-BAFE-379D-AE7F-9ECF1E74401D/SFX/AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe">安装包文件2</a></li>
+<li><a href="https://up.autodesk.com/2023/ACD/D542F978-96F7-30BC-81D7-27B50E8DF170//AutoCAD_2023.0.1_Update.exe">2023.0.1 64位更新补丁</a></li>
+<li><a href="https://pan.baidu.com/s/1quoya6wkKgqfa-6ZlfCx-g?pwd=p8c8">破解文件</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2022(简体中文版)<ul>
+<li><a href="http://dds.autodesk.com/NetSWDLD/2022/ACD/7EE008AE-5D6A-3AA3-ACDF-EC695BCCA205/SFX/AutoCAD_2022_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
+<li><a href="https://up.autodesk.com/2022/ACD/F6031D87-3154-39BF-B2EA-D81E9E577486//AutoCAD_2022.1.1_Update.exe">2022.1.1 64位更新补丁</a></li>
+<li><a href="https://up.autodesk.com/2022/ACD/E3428484-5B9C-390A-9570-F40DCD1E07F4//AutoCAD_2022.1.2_Update.exe">2022.1.2 64位更新补丁</a></li>
+<li><a href="https://pan.baidu.com/s/1gD9BjPM5_26zh-Lj2LjrMQ?pwd=y5f9">破解文件</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2021(简体中文版)<ul>
+<li><a href="http://trial2.autodesk.com/NetSWDLD/2021/ACD/9046B381-E756-4D38-A7EF-FAD07F4456E6/SFX/AutoCAD_2021_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
+<li><a href="https://up.autodesk.com/2021/ACD/FB48C738-141C-4F14-BDC5-57BBA246D404/AutoCAD_2021.1_Update_64bit.exe">2021.1 64位更新补丁</a></li>
+<li><a href="https://pan.baidu.com/s/1wVQ7viHBdHmOVz1ZRSlQaA?pwd=cmh7">破解文件</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2020(简体中文版)<ul>
+<li><a href="http://trial2.autodesk.com/NetSWDLD/2020/ACD/D98B88A0-50EC-4B88-9CA3-EA909DD6BC8C/SFX/AutoCAD_2020_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
+<li><a href="https://up.autodesk.com/2020/ACD/1B52239E-5BA3-4A90-BAD4-6936ED3425BD/AutoCAD_2020.1_Update_64bit.exe">2020.1 64位升级补丁</a></li>
+<li><a href="https://up.autodesk.com/2020/ACD/C1116C06-6497-434A-BCDB-158218DDC3F9/AutoCAD_2020.1.3_Update_64bit.exe">2020.1.3 64位升级补丁</a></li>
+<li><a href="https://pan.baidu.com/s/1EaANrT-zGeYrGk8NdURDcw?pwd=py3g">破解文件</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2019(简体中文版)<ul>
+<li><a href="http://trial2.autodesk.com/NetSWDLD/2019/ACD/19B8BB53-6D2C-4FFF-A2E9-C8BBABC04DC8/SFX/AutoCAD_2019_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
+<li><a href="https://up.autodesk.com/2019/ACD/3A8501B8-C695-4FE4-88CD-C3A0F8D70EA5/AutoCAD_2019.1_Update_64bit.exe">2019.1 64位更新补丁</a></li>
+<li><a href="https://up.autodesk.com/2019/ACD/9BFD102A-51F1-4C11-9ECC-11D9414EBF44/AutoCAD_2019.1.2_Update_64bit.exe">2019.1.2 64位升级补丁</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2018 R1(简体中文版)<ul>
+<li><a href="https://dds.autodesk.com/NET18SWDLD/2018/ACD/62DF0BD6-3008-4CE2-B89C-221BE76417F8/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_r1_dlm_001_002.sfx.exe">安装包文件1</a></li>
+<li><a href="https://dds.autodesk.com/NET18SWDLD/2018/ACD/62DF0BD6-3008-4CE2-B89C-221BE76417F8/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_r1_dlm_002_002.sfx.exe">安装包文件2</a></li>
+<li><a href="https://up.autodesk.com/2018/ACD/AutoCAD_2018.1_Update_64bit.exe">2018.1 64位更新补丁</a></li>
+<li><a href="https://up.autodesk.com/2018/ACD/5C9FB70F-6354-4845-B3E6-9EA501F3C343/AutoCAD_2018.1.2_Update_64bit.exe">2018.1.2 64位更新补丁</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2018(简体中文版)<ul>
+<li><a href="http://dds.autodesk.com/NET18SWDLD/2018/ACD/724F4580-6FEF-4987-B286-234C7E13FB96/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe">安装包文件1</a></li>
+<li><a href="http://dds.autodesk.com/NET18SWDLD/2018/ACD/724F4580-6FEF-4987-B286-234C7E13FB96/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe">安装包文件2</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2017(简体中文版)<ul>
+<li><a href="https://dds.autodesk.com/NET17SWDLD/2017/ACD/AB9A4E92-D7F8-4ED3-B2F7-93DB18332165/SFX/AutoCAD_2017_Simplified_Chinese_Win_64bit_r1_dlm_001_002.sfx.exe">安装包文件1</a></li>
+<li><a href="https://dds.autodesk.com/NET17SWDLD/2017/ACD/AB9A4E92-D7F8-4ED3-B2F7-93DB18332165/SFX/AutoCAD_2017_Simplified_Chinese_Win_64bit_r1_dlm_002_002.sfx.exe">安装包文件2</a></li>
+<li><a href="https://download.autodesk.com/us/support/files/genuine/AutoCAD_2017_SP1_64bit_GL.sfx.exe">2017.1.2 32位更新补丁</a></li>
+<li><a href="https://up.autodesk.com/2017/ACD/AutoCAD_2017.1.2_Update_64bit.exe">2017.1.2 64位更新补丁</a></li>
+</ul>
+</li>
+<li>Autodesk CAD 2016(简体中文版)<ul>
+<li><a href="https://dds.autodesk.com/NET16SWDLD/2016/ACD/DLM/AutoCAD_2016_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
+<li><a href="https://download.autodesk.com/us/support/files/autocad_2016_service_pack_1/AutoCAD_2016_SP1_64bit.exe">2016 SP1 64位更新补丁</a></li>
+<li><a href="https://pan.baidu.com/s/1__IicGs72MhYyS97Ptv7Hw#iig2">度盘下载地址</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="官方文档查阅">1.2 &nbsp&nbsp<a href="#官方文档查阅" class="headerlink" title="官方文档查阅"></a>官方文档查阅</h2><ul>
+<li><a href="https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Optimize-Performance-within-Windows-7-Environments.html">在 Windows 中优化 AutoCAD 性能</a></li>
+<li><a href="https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Hardware-acceleration-options-are-unavailable-in-AutoCAD.html?us_oa=dotcom-us&us_si=69dc3963-6795-4fd5-a3e5-fd651446f36d&us_st=%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F">无法在 AutoCAD 产品中启用硬件加速</a></li>
+</ul>
+<h2 id="优化CAD性能">1.3 &nbsp&nbsp<a href="#优化CAD性能" class="headerlink" title="优化CAD性能"></a>优化CAD性能</h2><ul>
+<li>只用SHX字体，不要用系统真字体，例如宋体、黑体之类的粗字体。SHX的量级要远比TTF字体来得轻便，可以极大减小文件的尺寸，改善缩放平移以后的性能。</li>
+<li>开启硬件加速</li>
+<li>清理图面，善用清理命令及插件</li>
+</ul>
+<h1 id="浩辰CAD">2 &nbsp&nbsp<a href="#浩辰CAD" class="headerlink" title="浩辰CAD"></a>浩辰CAD</h1><h2 id="版本下载-1">2.1 &nbsp&nbsp<a href="#版本下载-1" class="headerlink" title="版本下载"></a>版本下载</h2><p>下载地址：</p>
+<ul>
+<li>浩辰CAD 2024<ul>
+<li><a href="https://hccad.gstarcad.cn/2024/GstarCAD2024_zh-cn_231117.exe">安装包</a></li>
+<li><a href="https://pan.baidu.com/s/1DjzAHIQzuZ8SkHuHmz1hGg">安装包及注册机</a></li>
+</ul>
+</li>
+<li>浩辰CAD 2023<ul>
+<li><a href="https://hccad.gstarcad.cn/2023/GstarCAD2023_SP3_zh-cn_231101-1.exe">安装包</a></li>
+<li><a href="https://hccad.gstarcad.cn/2023/GstarCAD2023_SP3_Update_zh-cn_231101.exe">SP2升级包</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] AutoCAD小秘密038：SHX大字体的通天塔[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/52121478">https://zhuanlan.zhihu.com/p/52121478</a>.<br>[2] 详解AutoCAD的.TTF字体和.SHX字体文件[EB&#x2F;OL]. <a href="https://www.cadzxw.com/711.html">https://www.cadzxw.com/711.html</a>.<br>[3] AutoCAD全系列版本官方下载地址[EB&#x2F;OL]. <a href="https://www.thcad.net/question/10513.html">https://www.thcad.net/question/10513.html</a>.</p>
 ]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
   </entry>
   <entry>
     <title>闪存驱动器设计</title>
@@ -2992,115 +3103,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>CAD总结笔记</title>
-    <url>/cad/cad/</url>
-    <content><![CDATA[<h1 id="Autodesk-CAD">1 &nbsp&nbsp<a href="#Autodesk-CAD" class="headerlink" title="Autodesk CAD"></a>Autodesk CAD</h1><h2 id="版本下载">1.1 &nbsp&nbsp<a href="#版本下载" class="headerlink" title="版本下载"></a>版本下载</h2><p><a href="https://zhuanlan.zhihu.com/p/636416292">CAD哪个版本好用-CAD各版本对比</a></p>
-<p>下载地址：</p>
-<ul>
-<li>Autodesk CAD 2026(简体中文版)<ul>
-<li><a href="https://trial2.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/9165B4AF-8BF4-37D6-882D-694B73603AED/SFX/ACD_2026_simplified_chinese_win_db_001_002.exe">安装包文件1</a></li>
-<li><a href="https://trial2.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/9165B4AF-8BF4-37D6-882D-694B73603AED/SFX/ACD_2026_simplified_chinese_win_db_002_002.7z">安装包文件2</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2025(简体中文版)<ul>
-<li><a href="https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACD/7B66591E-A260-34D2-B2AD-8FDC4EA76CE8/SFX/AutoCAD_2025_Simplified_Chinese_Win_64bit_db_001_002.exe">安装包文件1</a></li>
-<li><a href="https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACD/7B66591E-A260-34D2-B2AD-8FDC4EA76CE8/SFX/AutoCAD_2025_Simplified_Chinese_Win_64bit_db_002_002.7z">安装包文件2</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2024(简体中文版)<ul>
-<li><a href="https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/C0D3A90A-5925-3283-B826-68A4EAF3698A/SFX/AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe">安装包文件1</a></li>
-<li><a href="https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/C0D3A90A-5925-3283-B826-68A4EAF3698A/SFX/AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe">安装包文件2</a></li>
-<li><a href="https://pan.baidu.com/s/16tToZ9qJfPQ74ACm1PZ02Q?pwd=i71k">破解文件</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2023(简体中文版)<ul>
-<li><a href="http://dds.autodesk.com/NetSWDLD/2023/ACD/8FB3A471-BAFE-379D-AE7F-9ECF1E74401D/SFX/AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe">安装包文件1</a></li>
-<li><a href="http://dds.autodesk.com/NetSWDLD/2023/ACD/8FB3A471-BAFE-379D-AE7F-9ECF1E74401D/SFX/AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe">安装包文件2</a></li>
-<li><a href="https://up.autodesk.com/2023/ACD/D542F978-96F7-30BC-81D7-27B50E8DF170//AutoCAD_2023.0.1_Update.exe">2023.0.1 64位更新补丁</a></li>
-<li><a href="https://pan.baidu.com/s/1quoya6wkKgqfa-6ZlfCx-g?pwd=p8c8">破解文件</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2022(简体中文版)<ul>
-<li><a href="http://dds.autodesk.com/NetSWDLD/2022/ACD/7EE008AE-5D6A-3AA3-ACDF-EC695BCCA205/SFX/AutoCAD_2022_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
-<li><a href="https://up.autodesk.com/2022/ACD/F6031D87-3154-39BF-B2EA-D81E9E577486//AutoCAD_2022.1.1_Update.exe">2022.1.1 64位更新补丁</a></li>
-<li><a href="https://up.autodesk.com/2022/ACD/E3428484-5B9C-390A-9570-F40DCD1E07F4//AutoCAD_2022.1.2_Update.exe">2022.1.2 64位更新补丁</a></li>
-<li><a href="https://pan.baidu.com/s/1gD9BjPM5_26zh-Lj2LjrMQ?pwd=y5f9">破解文件</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2021(简体中文版)<ul>
-<li><a href="http://trial2.autodesk.com/NetSWDLD/2021/ACD/9046B381-E756-4D38-A7EF-FAD07F4456E6/SFX/AutoCAD_2021_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
-<li><a href="https://up.autodesk.com/2021/ACD/FB48C738-141C-4F14-BDC5-57BBA246D404/AutoCAD_2021.1_Update_64bit.exe">2021.1 64位更新补丁</a></li>
-<li><a href="https://pan.baidu.com/s/1wVQ7viHBdHmOVz1ZRSlQaA?pwd=cmh7">破解文件</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2020(简体中文版)<ul>
-<li><a href="http://trial2.autodesk.com/NetSWDLD/2020/ACD/D98B88A0-50EC-4B88-9CA3-EA909DD6BC8C/SFX/AutoCAD_2020_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
-<li><a href="https://up.autodesk.com/2020/ACD/1B52239E-5BA3-4A90-BAD4-6936ED3425BD/AutoCAD_2020.1_Update_64bit.exe">2020.1 64位升级补丁</a></li>
-<li><a href="https://up.autodesk.com/2020/ACD/C1116C06-6497-434A-BCDB-158218DDC3F9/AutoCAD_2020.1.3_Update_64bit.exe">2020.1.3 64位升级补丁</a></li>
-<li><a href="https://pan.baidu.com/s/1EaANrT-zGeYrGk8NdURDcw?pwd=py3g">破解文件</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2019(简体中文版)<ul>
-<li><a href="http://trial2.autodesk.com/NetSWDLD/2019/ACD/19B8BB53-6D2C-4FFF-A2E9-C8BBABC04DC8/SFX/AutoCAD_2019_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
-<li><a href="https://up.autodesk.com/2019/ACD/3A8501B8-C695-4FE4-88CD-C3A0F8D70EA5/AutoCAD_2019.1_Update_64bit.exe">2019.1 64位更新补丁</a></li>
-<li><a href="https://up.autodesk.com/2019/ACD/9BFD102A-51F1-4C11-9ECC-11D9414EBF44/AutoCAD_2019.1.2_Update_64bit.exe">2019.1.2 64位升级补丁</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2018 R1(简体中文版)<ul>
-<li><a href="https://dds.autodesk.com/NET18SWDLD/2018/ACD/62DF0BD6-3008-4CE2-B89C-221BE76417F8/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_r1_dlm_001_002.sfx.exe">安装包文件1</a></li>
-<li><a href="https://dds.autodesk.com/NET18SWDLD/2018/ACD/62DF0BD6-3008-4CE2-B89C-221BE76417F8/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_r1_dlm_002_002.sfx.exe">安装包文件2</a></li>
-<li><a href="https://up.autodesk.com/2018/ACD/AutoCAD_2018.1_Update_64bit.exe">2018.1 64位更新补丁</a></li>
-<li><a href="https://up.autodesk.com/2018/ACD/5C9FB70F-6354-4845-B3E6-9EA501F3C343/AutoCAD_2018.1.2_Update_64bit.exe">2018.1.2 64位更新补丁</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2018(简体中文版)<ul>
-<li><a href="http://dds.autodesk.com/NET18SWDLD/2018/ACD/724F4580-6FEF-4987-B286-234C7E13FB96/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe">安装包文件1</a></li>
-<li><a href="http://dds.autodesk.com/NET18SWDLD/2018/ACD/724F4580-6FEF-4987-B286-234C7E13FB96/SFX/AutoCAD_2018_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe">安装包文件2</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2017(简体中文版)<ul>
-<li><a href="https://dds.autodesk.com/NET17SWDLD/2017/ACD/AB9A4E92-D7F8-4ED3-B2F7-93DB18332165/SFX/AutoCAD_2017_Simplified_Chinese_Win_64bit_r1_dlm_001_002.sfx.exe">安装包文件1</a></li>
-<li><a href="https://dds.autodesk.com/NET17SWDLD/2017/ACD/AB9A4E92-D7F8-4ED3-B2F7-93DB18332165/SFX/AutoCAD_2017_Simplified_Chinese_Win_64bit_r1_dlm_002_002.sfx.exe">安装包文件2</a></li>
-<li><a href="https://download.autodesk.com/us/support/files/genuine/AutoCAD_2017_SP1_64bit_GL.sfx.exe">2017.1.2 32位更新补丁</a></li>
-<li><a href="https://up.autodesk.com/2017/ACD/AutoCAD_2017.1.2_Update_64bit.exe">2017.1.2 64位更新补丁</a></li>
-</ul>
-</li>
-<li>Autodesk CAD 2016(简体中文版)<ul>
-<li><a href="https://dds.autodesk.com/NET16SWDLD/2016/ACD/DLM/AutoCAD_2016_Simplified_Chinese_Win_64bit_dlm.sfx.exe">安装包文件</a></li>
-<li><a href="https://download.autodesk.com/us/support/files/autocad_2016_service_pack_1/AutoCAD_2016_SP1_64bit.exe">2016 SP1 64位更新补丁</a></li>
-<li><a href="https://pan.baidu.com/s/1__IicGs72MhYyS97Ptv7Hw#iig2">度盘下载地址</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="官方文档查阅">1.2 &nbsp&nbsp<a href="#官方文档查阅" class="headerlink" title="官方文档查阅"></a>官方文档查阅</h2><ul>
-<li><a href="https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Optimize-Performance-within-Windows-7-Environments.html">在 Windows 中优化 AutoCAD 性能</a></li>
-<li><a href="https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Hardware-acceleration-options-are-unavailable-in-AutoCAD.html?us_oa=dotcom-us&us_si=69dc3963-6795-4fd5-a3e5-fd651446f36d&us_st=%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F">无法在 AutoCAD 产品中启用硬件加速</a></li>
-</ul>
-<h2 id="优化CAD性能">1.3 &nbsp&nbsp<a href="#优化CAD性能" class="headerlink" title="优化CAD性能"></a>优化CAD性能</h2><ul>
-<li>只用SHX字体，不要用系统真字体，例如宋体、黑体之类的粗字体。SHX的量级要远比TTF字体来得轻便，可以极大减小文件的尺寸，改善缩放平移以后的性能。</li>
-<li>开启硬件加速</li>
-<li>清理图面，善用清理命令及插件</li>
-</ul>
-<h1 id="浩辰CAD">2 &nbsp&nbsp<a href="#浩辰CAD" class="headerlink" title="浩辰CAD"></a>浩辰CAD</h1><h2 id="版本下载-1">2.1 &nbsp&nbsp<a href="#版本下载-1" class="headerlink" title="版本下载"></a>版本下载</h2><p>下载地址：</p>
-<ul>
-<li>浩辰CAD 2024<ul>
-<li><a href="https://hccad.gstarcad.cn/2024/GstarCAD2024_zh-cn_231117.exe">安装包</a></li>
-<li><a href="https://pan.baidu.com/s/1DjzAHIQzuZ8SkHuHmz1hGg">安装包及注册机</a></li>
-</ul>
-</li>
-<li>浩辰CAD 2023<ul>
-<li><a href="https://hccad.gstarcad.cn/2023/GstarCAD2023_SP3_zh-cn_231101-1.exe">安装包</a></li>
-<li><a href="https://hccad.gstarcad.cn/2023/GstarCAD2023_SP3_Update_zh-cn_231101.exe">SP2升级包</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] AutoCAD小秘密038：SHX大字体的通天塔[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/52121478">https://zhuanlan.zhihu.com/p/52121478</a>.<br>[2] 详解AutoCAD的.TTF字体和.SHX字体文件[EB&#x2F;OL]. <a href="https://www.cadzxw.com/711.html">https://www.cadzxw.com/711.html</a>.<br>[3] AutoCAD全系列版本官方下载地址[EB&#x2F;OL]. <a href="https://www.thcad.net/question/10513.html">https://www.thcad.net/question/10513.html</a>.</p>
-]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-  </entry>
-  <entry>
     <title>笔记本硬件基础</title>
     <url>/cad/laptop-fundamental/</url>
     <content><![CDATA[<h1 id="基本外型介绍">1 &nbsp&nbsp<a href="#基本外型介绍" class="headerlink" title="基本外型介绍"></a>基本外型介绍</h1><table>
@@ -3221,24 +3223,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>硬件</tag>
         <tag>笔记本</tag>
         <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>电路仿真设计</title>
-    <url>/cad/simulation/</url>
-    <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
-<ul>
-<li>计算机性能不够，导致运行proteus仿真过慢</li>
-<li>proteus内设置的晶振频率和keil源码编译时设置的晶振频率不同</li>
-</ul>
-<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] proteus 8 仿真时 时间流动过慢的解决方案[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44176696/article/details/106875850">https://blog.csdn.net/weixin_44176696/article/details/106875850</a>.</p>
-]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>电路</tag>
-        <tag>仿真</tag>
       </tags>
   </entry>
   <entry>
@@ -4050,9 +4034,27 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <category>cad</category>
       </categories>
       <tags>
-        <tag>电路</tag>
         <tag>PCB</tag>
+        <tag>电路</tag>
         <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电路仿真设计</title>
+    <url>/cad/simulation/</url>
+    <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
+<ul>
+<li>计算机性能不够，导致运行proteus仿真过慢</li>
+<li>proteus内设置的晶振频率和keil源码编译时设置的晶振频率不同</li>
+</ul>
+<h1 id="参考文献">2 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] proteus 8 仿真时 时间流动过慢的解决方案[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44176696/article/details/106875850">https://blog.csdn.net/weixin_44176696/article/details/106875850</a>.</p>
+]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>电路</tag>
+        <tag>仿真</tag>
       </tags>
   </entry>
   <entry>
@@ -4785,7 +4787,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#114;&#111;&#111;&#116;&#64;&#x31;&#x37;&#50;&#46;&#49;&#x39;&#46;&#x30;&#x2e;&#52;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#116;&#x40;&#x31;&#x37;&#50;&#46;&#49;&#x39;&#x2e;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5317,12 +5319,12 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 <h2 id="Texlive的安装">1.2 &nbsp&nbsp<a href="#Texlive的安装" class="headerlink" title="Texlive的安装"></a>Texlive的安装</h2><ol>
 <li>加载镜像，双击执行install-tl-windows.bat</li>
-<li>安装路径保持默认的<code>C:/texlive/2024</code></li>
-<li>点击<code>Advanced</code><ul>
-<li><code>N. of collections</code>-&gt;<code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
-<li>Chinese</li>
-<li>Chinese&#x2F;Japanese&#x2F;Korean (base)</li>
-<li>US and UK English</li>
+<li>安装路径保持默认的<code>C:/texlive/2026</code></li>
+<li>点击<code>Advanced</code>-&gt;<code>选择</code>-&gt;<code>收藏数量</code>-&gt;<code>定制</code>：<ul>
+<li><code>Languages</code>（全勾选无，然后只勾选下面三个，然后确认）<ul>
+<li>中文（Chinese）</li>
+<li>中文&#x2F;日文&#x2F;韩文 (基本)（Chinese&#x2F;Japanese&#x2F;Korean (base)）</li>
+<li>英美英语（US and UK English）</li>
 </ul>
 </li>
 <li>取消勾选<code>安装 Texworks 前端</code></li>
@@ -5331,7 +5333,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>切换<code>Portable setup</code>为<code>是</code></li>
 <li>其他选项保持默认，然后点击开始安装。</li>
 <li>测试Tex安装情况。打开控制台（CMD或Powershell），输入命令测试<code>tex -v</code>、<code>latex -v</code>、<code>xelatex -v</code>。<ul>
-<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2024\bin\windows</code>。</li>
+<li>P.S. 如果命令控制台显示找不到命令，在系统环境变量Path中添加texlive bin的路径：<code>C:\texlive\2026\bin\windows</code>。</li>
 </ul>
 </li>
 <li>Tex更新：控制台输入<code>tlmgr update --all</code>。</li>
@@ -6960,11 +6962,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>下载<a href="https://ollama.com/download">Ollama安装包</a></li>
 <li>安装路径<ul>
 <li>默认路径：不使用参数，直接运行安装的话，路径为<code>C:\Users\xxx\AppData\Local\Programs\Ollama</code></li>
-<li>自定义路径安装：<code>OllamaSetup.exe /DIR=&quot;D:\ollama&quot;</code></li>
+<li>自定义路径安装：<code>OllamaSetup.exe /DIR=&quot;D:\ollama&quot;</code>，这个命令同时也会向用户变量的Path变量写入<code>D:\ollama</code>（注意不是系统变量）。</li>
 </ul>
 </li>
-<li>修改模型路径<ol>
-<li>新建系统环境变量：变量名：<code>OLLAMA_MODELS</code>，变量值：<code>D:\ollama\models</code></li>
+<li>修改模型路径（这个路径如果手动修改的话，卸载ollama也需要手动删除自定义的模型路径，因为自动卸载程序还是默认检测C盘的默认模型路径）<ol>
+<li>新建系统环境变量（注意不是在Path变量）：变量名：<code>OLLAMA_MODELS</code>，变量值：<code>D:\ollama\models</code></li>
 <li>若默认模型路径<code>C:\Users\xxx\.ollama\models</code>已经拉取下载存在模型文件的话，在添加了系统环境变量之后，将<code>C:\Users\xxx\.ollama\models</code>路径下的<code>blobs</code>和<code>manifests</code>两个子文件夹剪切移动至<code>D:\ollama\models</code>下即可</li>
 <li>重启ollama后台进程，运行<code>ollama list</code>验证模型迁移是否成功。</li>
 </ol>
@@ -6973,6 +6975,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>常见的ollama命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Usage:</span><br><span class="line">  ollama [flags]</span><br><span class="line">  ollama [command]</span><br><span class="line"></span><br><span class="line">Available Commands:</span><br><span class="line">  serve       Start ollama</span><br><span class="line">  create      Create a model from a Modelfile</span><br><span class="line">  show        Show information for a model</span><br><span class="line">  run         Run a model</span><br><span class="line">  stop        Stop a running model</span><br><span class="line">  pull        Pull a model from a registry</span><br><span class="line">  push        Push a model to a registry</span><br><span class="line">  list        List models</span><br><span class="line">  ps          List running models</span><br><span class="line">  cp          Copy a model</span><br><span class="line">  rm          Remove a model</span><br><span class="line">  help        Help about any command</span><br><span class="line"></span><br><span class="line">Flags:</span><br><span class="line">  -h, --help      help for ollama</span><br><span class="line">  -v, --version   Show version information</span><br><span class="line"></span><br><span class="line">Use &quot;ollama [command] --help&quot; for more information about a command.</span><br></pre></td></tr></table></figure>
 
+<h2 id="Ollama局域网共享">1.2 &nbsp&nbsp<a href="#Ollama局域网共享" class="headerlink" title="Ollama局域网共享"></a>Ollama局域网共享</h2><p>新建两个系统环境变量（注意不是在Path变量），之后ollama运行模型即可局域网访问ollama实例：</p>
+<ul>
+<li>变量名：<code>OLLAMA_HOST</code>，变量值：<code>0.0.0.0</code></li>
+<li>变量名：<code>OLLAMA_ORIGINS</code>，变量值：<code>*</code></li>
+</ul>
 <h1 id="Stable-Diffusion">2 &nbsp&nbsp<a href="#Stable-Diffusion" class="headerlink" title="Stable Diffusion"></a>Stable Diffusion</h1><h2 id="（已过时）ComfyUI本地手动安装">2.1 &nbsp&nbsp<a href="#（已过时）ComfyUI本地手动安装" class="headerlink" title="（已过时）ComfyUI本地手动安装"></a>（已过时）ComfyUI本地手动安装</h2><ol>
 <li>克隆ComfyUI仓库：<code>git clone https://github.com/comfyanonymous/ComfyUI.git</code></li>
 <li>安装PyTorch：<code>pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu126</code></li>
@@ -7306,88 +7313,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>给联想z500安装deepin linux（深度系统）</title>
-    <url>/software/install-deepin-on-lenovo-z500/</url>
-    <content><![CDATA[<h1 id="起因">1 &nbsp&nbsp<a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。</p>
-<p>这个手提电脑是联想在2012年推出的erazer z500系列机型，大概是2013年或是2014年买的吧。用到现在，这个老本子大修过好几次，换过屏幕，换过电源适配器，换过电池……总之是遇到过不少大大小小的毛病。</p>
-<p>印象中，这本子最初的系统是win7，后来换过win8和win8.1，现在用的是win10。不过整体配置确实是不太适合新版win10了，毕竟CPU是3代的i5，频率也不高，系统空载时占用的内存也不少。</p>
-<h1 id="解决方案">2 &nbsp&nbsp<a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>既然是系统不太合适，那就更换系统呗！我凭借自身的知识储备，大致想出了如下的系统更换方案：</p>
-<ol>
-<li>老版的win10</li>
-<li>精简版win10</li>
-<li>win8.1</li>
-<li>win7</li>
-<li>linux</li>
-</ol>
-<p>方案1的老版win10换汤不换药，感觉很大机率还是会出现卡顿的现象，不作考虑。</p>
-<p>方案2，网上论坛流传的精简版镜像基本都会添加私货（各种乱七八糟的预装软件，同时可能也会有后门软件，不安全），自己动手制作精简版镜像倒也行，不过现在都没啥精力折腾这些东西了，这个方案也pass。</p>
-<p>方案3，网卡驱动会有问题，以前这本子用win8.1的时候就遇到过无法连接某些wifi信号，pass。</p>
-<p>方案4的win7系统太老了，直接pass。</p>
-<p>最后也就只剩方案5——linux系统。linux确实很适合老配置的机子，系统本身就不会消耗过多的硬件资源。不过，linux的软件生态和驱动远不如windows平台，并且发行版众多。现在暂且不考虑软件生态和驱动问题，如何选择linux的发行版呢？</p>
-<span id="more"></span>
-
-<p>arch？不行！没啥精力折腾了。</p>
-<p>ubuntu？嗯，倒还行，不过有点臃肿，而且不太适合国内的使用习惯。</p>
-<p>这个时候，deepin出现在我的脑海中。deepin和ubuntu都是基于debian，而且deepin的桌面gui比较符合国内使用习惯，虽然对硬件要求比ubuntu高，但我认为z500的配置应该足够了。</p>
-<p>至于linux的软件生态问题，毕竟现在这老本子是家里长辈在使用，老父亲平时也就只用酷狗听一下歌。酷狗好像没有linux客户端，不过没关系，大不了用安卓版或是wine（应该能解决吧？(＞﹏＜)）。</p>
-<p>至于驱动，应该是双显卡驱动和网卡驱动可能会有点问题。</p>
-<p>多思无益，先安装再说吧，走一步，看一步！</p>
-<h1 id="deepin的安装步骤">3 &nbsp&nbsp<a href="#deepin的安装步骤" class="headerlink" title="deepin的安装步骤"></a>deepin的安装步骤</h1><h2 id="备份数据">3.1 &nbsp&nbsp<a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h2><p>安装系统前，第一步当然是备份数据。数据无价，可别因为懒而导致丢失宝贵的数据。</p>
-<h2 id="制作启动盘">3.2 &nbsp&nbsp<a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h2><ol>
-<li>下载系统镜像和启动盘制作工具：<a href="https://www.deepin.org/zh/download/">点击跳转下载地址</a>。</li>
-<li>准备一个大于2G的U盘，备份U盘数据。</li>
-<li>利用启动盘制作工具，制作深度系统启动盘（格式化U盘制作）。</li>
-</ol>
-<h2 id="安装deepin">3.3 &nbsp&nbsp<a href="#安装deepin" class="headerlink" title="安装deepin"></a>安装deepin</h2><ol>
-<li>插入U盘，开机，摁Fn+F12进入快速启动项（本机的BIOS开启了Fn功能键），选择U盘启动项。</li>
-<li>按照提示进行安装，这里不一一列出。</li>
-<li>安装时，勾选集成的闭源显卡驱动。</li>
-<li>我是手动分区的（分区方案如下），不懂的朋友可以选择全盘安装。</li>
-<li>完成安装，重启系统，拔出U盘。</li>
-</ol>
-<p><strong>分区方案（120G的固态硬盘，列表顺序就是实际的分区顺序）</strong></p>
-<ul>
-<li><code>/boot/efi</code> 300M</li>
-<li><code>/boot</code> 1G</li>
-<li><code>swap</code> 12G（8G×1.5）</li>
-<li><code>/</code> 剩余的空间</li>
-<li><code>/home</code> 40G</li>
-</ul>
-<h2 id="驱动安装">3.4 &nbsp&nbsp<a href="#驱动安装" class="headerlink" title="驱动安装"></a>驱动安装</h2><p><strong>安装显卡驱动</strong></p>
-<ol>
-<li>打开商店，搜索并安装「显卡驱动管理器」。</li>
-<li>选择prime显卡方案。</li>
-<li>按照提示重启系统。</li>
-</ol>
-<p><strong>安装蓝牙管理器</strong></p>
-<ol>
-<li>打开终端</li>
-<li>输入命令：<code>sudo apt-get install blueman</code></li>
-</ol>
-<p>安装完显卡驱动和蓝牙管理器之后，驱动这方面基本没啥问题。</p>
-<h2 id="几个值得注意的地方">3.5 &nbsp&nbsp<a href="#几个值得注意的地方" class="headerlink" title="几个值得注意的地方"></a>几个值得注意的地方</h2><ul>
-<li><strong>不需要关闭BIOS的安全启动</strong>：deepin v20.2.2及之后的版本都能较好的支持安全启动，因此安装deepin不需要专门关闭BIOS的安全启动。</li>
-<li><strong>未安装蓝牙管理器之前，不要使用无线鼠标</strong>：deepin默认状态下没有蓝牙管理器，因此，使用无线鼠标会出现一些莫名其妙的bug（例如，若不关闭安全启动，安装过程中则无法点击；即使关闭安全启动后安装系统时，点击操作也会导致UI变成外文语言；安装系统后初次启动时，无线鼠标使用正常，但重启后就会出现异常卡顿现象，甚至无法点击）。这些bug当时困扰了我许久，后来我想起无线鼠标的原理，才准确地定位出问题所在。只有安装蓝牙管理器之后，才能正常使用无线鼠标。</li>
-</ul>
-<h1 id="常规软件的安装和使用">4 &nbsp&nbsp<a href="#常规软件的安装和使用" class="headerlink" title="常规软件的安装和使用"></a>常规软件的安装和使用</h1><p>目前深度商店的软件应用数量已经比以前增加了很多，在商店中搜索并安装自己想用的软件即可。</p>
-<p>让我最为惊喜的是，商店竟然有酷狗，而且不是网页版或者安卓版。这点不错，也省去了我手动折腾wine的麻烦。</p>
-<p>至此，z500算是获得了新生。</p>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 如何安装[EB&#x2F;OL]. <a href="https://www.deepin.org/zh/installation/">https://www.deepin.org/zh/installation/</a>.<br>[2] 蓝牙[EB&#x2F;OL]. <a href="https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99">https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99</a>.<br>[3] Recommended Partitioning Scheme[EB&#x2F;OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>系统</tag>
-        <tag>linux</tag>
-        <tag>deepin</tag>
-        <tag>深度系统</tag>
-        <tag>联想</tag>
-        <tag>lenovo</tag>
-        <tag>z500</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Krita总结</title>
     <url>/software/krita/</url>
     <content><![CDATA[<h1 id="软件基础">1 &nbsp&nbsp<a href="#软件基础" class="headerlink" title="软件基础"></a>软件基础</h1><p>多功能拾色器：三角形外环是色相环，点击&#x2F;拖动可选择三角形内部颜色，三角形显示内容随着对色相环的操作而变化。</p>
@@ -7565,6 +7490,88 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <tags>
         <tag>后期处理</tag>
         <tag>krita</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给联想z500安装deepin linux（深度系统）</title>
+    <url>/software/install-deepin-on-lenovo-z500/</url>
+    <content><![CDATA[<h1 id="起因">1 &nbsp&nbsp<a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>前几日，老父亲向我反应：手提电脑在使用过程中，偶尔会出现不响应的状态。我一想，多半是机子的老配置跟不上win10了，于是回应说抽空我给换装另一个系统。</p>
+<p>这个手提电脑是联想在2012年推出的erazer z500系列机型，大概是2013年或是2014年买的吧。用到现在，这个老本子大修过好几次，换过屏幕，换过电源适配器，换过电池……总之是遇到过不少大大小小的毛病。</p>
+<p>印象中，这本子最初的系统是win7，后来换过win8和win8.1，现在用的是win10。不过整体配置确实是不太适合新版win10了，毕竟CPU是3代的i5，频率也不高，系统空载时占用的内存也不少。</p>
+<h1 id="解决方案">2 &nbsp&nbsp<a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>既然是系统不太合适，那就更换系统呗！我凭借自身的知识储备，大致想出了如下的系统更换方案：</p>
+<ol>
+<li>老版的win10</li>
+<li>精简版win10</li>
+<li>win8.1</li>
+<li>win7</li>
+<li>linux</li>
+</ol>
+<p>方案1的老版win10换汤不换药，感觉很大机率还是会出现卡顿的现象，不作考虑。</p>
+<p>方案2，网上论坛流传的精简版镜像基本都会添加私货（各种乱七八糟的预装软件，同时可能也会有后门软件，不安全），自己动手制作精简版镜像倒也行，不过现在都没啥精力折腾这些东西了，这个方案也pass。</p>
+<p>方案3，网卡驱动会有问题，以前这本子用win8.1的时候就遇到过无法连接某些wifi信号，pass。</p>
+<p>方案4的win7系统太老了，直接pass。</p>
+<p>最后也就只剩方案5——linux系统。linux确实很适合老配置的机子，系统本身就不会消耗过多的硬件资源。不过，linux的软件生态和驱动远不如windows平台，并且发行版众多。现在暂且不考虑软件生态和驱动问题，如何选择linux的发行版呢？</p>
+<span id="more"></span>
+
+<p>arch？不行！没啥精力折腾了。</p>
+<p>ubuntu？嗯，倒还行，不过有点臃肿，而且不太适合国内的使用习惯。</p>
+<p>这个时候，deepin出现在我的脑海中。deepin和ubuntu都是基于debian，而且deepin的桌面gui比较符合国内使用习惯，虽然对硬件要求比ubuntu高，但我认为z500的配置应该足够了。</p>
+<p>至于linux的软件生态问题，毕竟现在这老本子是家里长辈在使用，老父亲平时也就只用酷狗听一下歌。酷狗好像没有linux客户端，不过没关系，大不了用安卓版或是wine（应该能解决吧？(＞﹏＜)）。</p>
+<p>至于驱动，应该是双显卡驱动和网卡驱动可能会有点问题。</p>
+<p>多思无益，先安装再说吧，走一步，看一步！</p>
+<h1 id="deepin的安装步骤">3 &nbsp&nbsp<a href="#deepin的安装步骤" class="headerlink" title="deepin的安装步骤"></a>deepin的安装步骤</h1><h2 id="备份数据">3.1 &nbsp&nbsp<a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h2><p>安装系统前，第一步当然是备份数据。数据无价，可别因为懒而导致丢失宝贵的数据。</p>
+<h2 id="制作启动盘">3.2 &nbsp&nbsp<a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h2><ol>
+<li>下载系统镜像和启动盘制作工具：<a href="https://www.deepin.org/zh/download/">点击跳转下载地址</a>。</li>
+<li>准备一个大于2G的U盘，备份U盘数据。</li>
+<li>利用启动盘制作工具，制作深度系统启动盘（格式化U盘制作）。</li>
+</ol>
+<h2 id="安装deepin">3.3 &nbsp&nbsp<a href="#安装deepin" class="headerlink" title="安装deepin"></a>安装deepin</h2><ol>
+<li>插入U盘，开机，摁Fn+F12进入快速启动项（本机的BIOS开启了Fn功能键），选择U盘启动项。</li>
+<li>按照提示进行安装，这里不一一列出。</li>
+<li>安装时，勾选集成的闭源显卡驱动。</li>
+<li>我是手动分区的（分区方案如下），不懂的朋友可以选择全盘安装。</li>
+<li>完成安装，重启系统，拔出U盘。</li>
+</ol>
+<p><strong>分区方案（120G的固态硬盘，列表顺序就是实际的分区顺序）</strong></p>
+<ul>
+<li><code>/boot/efi</code> 300M</li>
+<li><code>/boot</code> 1G</li>
+<li><code>swap</code> 12G（8G×1.5）</li>
+<li><code>/</code> 剩余的空间</li>
+<li><code>/home</code> 40G</li>
+</ul>
+<h2 id="驱动安装">3.4 &nbsp&nbsp<a href="#驱动安装" class="headerlink" title="驱动安装"></a>驱动安装</h2><p><strong>安装显卡驱动</strong></p>
+<ol>
+<li>打开商店，搜索并安装「显卡驱动管理器」。</li>
+<li>选择prime显卡方案。</li>
+<li>按照提示重启系统。</li>
+</ol>
+<p><strong>安装蓝牙管理器</strong></p>
+<ol>
+<li>打开终端</li>
+<li>输入命令：<code>sudo apt-get install blueman</code></li>
+</ol>
+<p>安装完显卡驱动和蓝牙管理器之后，驱动这方面基本没啥问题。</p>
+<h2 id="几个值得注意的地方">3.5 &nbsp&nbsp<a href="#几个值得注意的地方" class="headerlink" title="几个值得注意的地方"></a>几个值得注意的地方</h2><ul>
+<li><strong>不需要关闭BIOS的安全启动</strong>：deepin v20.2.2及之后的版本都能较好的支持安全启动，因此安装deepin不需要专门关闭BIOS的安全启动。</li>
+<li><strong>未安装蓝牙管理器之前，不要使用无线鼠标</strong>：deepin默认状态下没有蓝牙管理器，因此，使用无线鼠标会出现一些莫名其妙的bug（例如，若不关闭安全启动，安装过程中则无法点击；即使关闭安全启动后安装系统时，点击操作也会导致UI变成外文语言；安装系统后初次启动时，无线鼠标使用正常，但重启后就会出现异常卡顿现象，甚至无法点击）。这些bug当时困扰了我许久，后来我想起无线鼠标的原理，才准确地定位出问题所在。只有安装蓝牙管理器之后，才能正常使用无线鼠标。</li>
+</ul>
+<h1 id="常规软件的安装和使用">4 &nbsp&nbsp<a href="#常规软件的安装和使用" class="headerlink" title="常规软件的安装和使用"></a>常规软件的安装和使用</h1><p>目前深度商店的软件应用数量已经比以前增加了很多，在商店中搜索并安装自己想用的软件即可。</p>
+<p>让我最为惊喜的是，商店竟然有酷狗，而且不是网页版或者安卓版。这点不错，也省去了我手动折腾wine的麻烦。</p>
+<p>至此，z500算是获得了新生。</p>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 如何安装[EB&#x2F;OL]. <a href="https://www.deepin.org/zh/installation/">https://www.deepin.org/zh/installation/</a>.<br>[2] 蓝牙[EB&#x2F;OL]. <a href="https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99">https://wiki.deepin.org/wiki/%E8%93%9D%E7%89%99</a>.<br>[3] Recommended Partitioning Scheme[EB&#x2F;OL]. <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>系统</tag>
+        <tag>linux</tag>
+        <tag>deepin</tag>
+        <tag>深度系统</tag>
+        <tag>联想</tag>
+        <tag>lenovo</tag>
+        <tag>z500</tag>
       </tags>
   </entry>
   <entry>
@@ -8657,7 +8664,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>解压gz镜像包：<code>gunzip immortalwrt-24.10.4-x86-64-generic-squashfs-rootfs.img.gz</code>（gunzip解压gz包之后会自动删除gz包的）。</li>
 <li>解压img镜像文件：<code>unsquashfs immortalwrt-24.10.4-x86-64-generic-squashfs-rootfs.img</code>，解压路径为当前路径下的<code>squashfs-root</code>文件夹。</li>
 <li>打包tar.gz格式，作为LXC模板文件： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> squashfs-root</span><br><span class="line">tar zcf /var/lib/vz/template/cache/immortalwrt-24.10.4-x86-64-generic-rootfs.tar.gz ./*</span><br><span class="line"><span class="comment"># 完成之后PVE的local的CT模板路径中就可以看到immortalwrt-24.10.4-x86-64-generic-rootfs.tar.gz文件了</span></span><br></pre></td></tr></table></figure></li>
-<li>手动创建LXC容器（注意这里不能用网页端选择LXC模板来创建，会报错），若需要后期编辑虚拟机LXC容器的配置项，使用命令编辑<code>nano /etc/pve/lxc/101.conf</code>。 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pct create 101 /var/lib/vz/template/cache/immortalwrt-24.10.4-x86-64-generic-rootfs.tar.gz --rootfs local-lvm:0.5 --ostype unmanaged --hostname openwrt --<span class="built_in">arch</span> amd64 --cores 2 --memory 512 --swap 0 --net0 bridge=vmbr4,name=eth0 --net1 bridge=vmbr4,name=eth1 --features nesting=1 --unprivileged 0</span><br></pre></td></tr></table></figure>
+<li>手动创建LXC容器（注意这里不能用网页端选择LXC模板来创建，会报错），若需要后期编辑虚拟机LXC容器的配置项，使用命令编辑<code>nano /etc/pve/lxc/101.conf</code>。 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pct create 101 /var/lib/vz/template/cache/immortalwrt-24.10.4-x86-64-generic-rootfs.tar.gz --rootfs local-lvm:0.5 --ostype unmanaged --hostname openwrt --<span class="built_in">arch</span> amd64 --cores 4 --memory 1024 --swap 0 --net0 bridge=vmbr4,name=eth0 --net1 bridge=vmbr4,name=eth1 --features nesting=1 --unprivileged 0</span><br></pre></td></tr></table></figure>
 创建LXC容器的参数说明：</li>
 </ol>
 <ul>
@@ -8667,8 +8674,8 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li><code>--ostype unmanaged</code>: 指定操作系统类型为&quot;unmanaged&quot;，即非托管模式，表示Proxmox VE不会对该容器进行自动接管配置。</li>
 <li><code>--hostname openwrt</code>: 将容器的主机名设置为openwrt。</li>
 <li><code>--arch amd64</code>: 指定容器的架构为64位（amd64）。</li>
-<li><code>--cores 2</code>: 分配2个CPU核心给容器。</li>
-<li><code>--memory 512</code>: 分配512MB的内存给容器。</li>
+<li><code>--cores 4</code>: 分配4个CPU核心给容器。</li>
+<li><code>--memory 1024</code>: 分配1024MB的内存给容器。</li>
 <li><code>--swap 0</code>: 分配0MB的交换空间给容器，即禁用容器的交换空间以提高性能。</li>
 <li><code>--net0 bridge=vmbr4,name=eth0</code>: 配置第一个网络接口，连接到vmbr4桥接口，并将接口命名为eth0。</li>
 <li><code>--net1 bridge=vmbr4,name=eth1</code>: 配置第二个网络接口，连接到vmbr4桥接口，并将接口命名为eth1。</li>
@@ -9444,7 +9451,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </ul>
 </li>
 </ol>
-<p>若遇上报错：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump&#39; error:   Logical volume pve/snap_vm-102-disk-0_vzdump contains a filesystem in use.</code>，请尝试</p>
+<p>若执行命令遇到报错：<code>lvremove /dev/pve/snap_vm-102-disk-0_vzdump&#39; error:   Logical volume pve/snap_vm-102-disk-0_vzdump contains a filesystem in use.</code>，请尝试</p>
 <ul>
 <li>方案1：重启PVE宿主机</li>
 <li>方案2：添加<code>-f</code>参数强制删除，<code>lvremove -f /dev/pve/snap_vm-102-disk-0_vzdump</code></li>
@@ -9743,14 +9750,18 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 </div>
 
 <ol>
-<li>Fork仓库<code>https://github.com/bighammer-link/jichang_checkin</code>到自己的GitHub帐号</li>
-<li><code>Settings</code>-&gt;<code>Secrets and variables</code>→<code>Actions</code>：<code>New repository secret</code><ul>
+<li>Fork仓库<code>https://github.com/Mister-Kin/airport_checkin</code>到自己的GitHub帐号。<ul>
+<li><del>过时方案的仓库：<code>https://github.com/bighammer-link/jichang_checkin</code></del></li>
+</ul>
+</li>
+<li><code>Settings</code>-&gt;<code>Secrets and variables</code>-&gt;<code>Actions</code>-&gt;<code>Repository secrets</code><ul>
 <li>NAME：<code>URL</code>，值填写机场域名网址，例如<code>https://example.com</code>，尾部不要加<code>/</code>。</li>
 <li>NAME：<code>CONFIG</code>，值填写机场的帐号（一般是邮箱）和密码。一行账号一行密码。<ul>
 <li>第一行：帐号，即邮箱</li>
 <li>第二行：密码</li>
 </ul>
 </li>
+<li>Name：<code>SENDKEY</code>，值填写<a href="https://sct.ftqq.com/">Server酱</a>秘钥。</li>
 </ul>
 </li>
 <li>在<code>Actions</code>中创建一个<code>workflow</code>，手动运行一次，后续会每日自动运行。</li>
@@ -9972,65 +9983,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
-    <title>虚拟机总结</title>
-    <url>/software/virtual-machine/</url>
-    <content><![CDATA[<blockquote>
-<p>虚拟机桌面系统一般建议设置「关闭密码登录」「关闭屏保和自动熄屏」，windows同时建议关闭「」系统更新</p>
-</blockquote>
-<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果虚拟机具有 GUI（X11 等），选择安装桌面包，否则安装普通包open-vm-tools</span></span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启虚拟机</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证安装，若输出显示版本号代表安装成功，如13.0.0.0 (build-24696409)</span></span><br><span class="line">vmware-toolbox-cmd -v</span><br></pre></td></tr></table></figure>
-
-<h2 id="VMware实现连接虚拟机ssh">1.2 &nbsp&nbsp<a href="#VMware实现连接虚拟机ssh" class="headerlink" title="VMware实现连接虚拟机ssh"></a>VMware实现连接虚拟机ssh</h2><p>以ubuntu为例，安装和配置好<code>openssh-server</code>之后，右键虚拟机标签-&gt;SSH-&gt;配置SSH（配置ubuntu用户名和SSH端口）-&gt;连接到SSH，然后VMware会自动调用Windows终端CMD连接SSH，这个<code>192.168.132.x</code>是安装VMware创建的虚拟网卡，Ubuntu虚拟机内置网卡获取的IP也是基于这个网段：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入Ubuntu密码</span></span><br><span class="line">username@192.168.132.128<span class="string">&#x27;s password:</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VMware挂载共享文件夹">1.3 &nbsp&nbsp<a href="#VMware挂载共享文件夹" class="headerlink" title="VMware挂载共享文件夹"></a>VMware挂载共享文件夹</h2><ol>
-<li>虚拟机设置-&gt;选项-&gt;共享文件夹-&gt;总是启用-&gt;挂载一个windows中创建文件夹，例如<code>share</code></li>
-<li>启动虚拟机，打开终端，执行命令：<code>vmware-hgfsclient</code>，可以看到终端返回输出<code>share</code></li>
-<li>挂载目录（请提前创建<code>/home/xxx/share</code>目录）<ul>
-<li>手动挂载方式：<code>sudo vmhgfs-fuse .host:/ /home/share -o allow_other -o auto_unmount</code></li>
-<li>自动挂载方式，编辑<code>/etc/fstab</code>添加内容：<code>.host:/ /home/xxx/share fuse.vmhgfs-fuse allow_other,auto_unmount 0 0</code>，运行命令挂载<code>mount -a</code></li>
-</ul>
-</li>
-<li>取消挂载：<code>sudo umount /home/xxx/share</code></li>
-</ol>
-<h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
-<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
-<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
-<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
-<p>解决方法：</p>
-<ol>
-<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
-<li>Containers</li>
-<li>Hyper-V</li>
-<li>Virtual Machine Platform</li>
-<li>Windows Hypervisor Platform</li>
-<li>Windows Sandbox</li>
-<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
-</ul>
-</li>
-<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
-</ol>
-<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
-<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
-<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
-<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
-<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
-<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
-<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
-<li><a href="https://github.com/intel/haxm">haxm</a></li>
-</ul>
-<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
-<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.<br>[7] open-vm-tools工具的安装与使用 [EB&#x2F;OL]. <a href="https://ransaa.github.io/Blog-Doc/src/%E7%8E%A9%E6%9C%BA/open-vm-tools%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8">https://ransaa.github.io/Blog-Doc/src/%E7%8E%A9%E6%9C%BA/open-vm-tools%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8</a>.</p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Blender手册翻译进度</title>
     <url>/translations/blender-manual/</url>
     <content><![CDATA[<p>to-do：等待官方迁移至gitea结束。</p>
@@ -10111,6 +10063,65 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
         <tag>计划</tag>
         <tag>字幕</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>虚拟机总结</title>
+    <url>/software/virtual-machine/</url>
+    <content><![CDATA[<blockquote>
+<p>虚拟机桌面系统一般建议设置「关闭密码登录」「关闭屏保和自动熄屏」，windows同时建议关闭「」系统更新</p>
+</blockquote>
+<h1 id="VMware">1 &nbsp&nbsp<a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><h2 id="新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）">1.1 &nbsp&nbsp<a href="#新版本Ubuntu虚拟机安装VMware-Tools（支持ubuntu-v20-04及以上版本）" class="headerlink" title="新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）"></a>新版本Ubuntu虚拟机安装VMware Tools（支持ubuntu v20.04及以上版本）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果虚拟机具有 GUI（X11 等），选择安装桌面包，否则安装普通包open-vm-tools</span></span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools-desktop</span><br><span class="line"><span class="built_in">sudo</span> apt install open-vm-tools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启虚拟机</span></span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证安装，若输出显示版本号代表安装成功，如13.0.0.0 (build-24696409)</span></span><br><span class="line">vmware-toolbox-cmd -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="VMware实现连接虚拟机ssh">1.2 &nbsp&nbsp<a href="#VMware实现连接虚拟机ssh" class="headerlink" title="VMware实现连接虚拟机ssh"></a>VMware实现连接虚拟机ssh</h2><p>以ubuntu为例，安装和配置好<code>openssh-server</code>之后，右键虚拟机标签-&gt;SSH-&gt;配置SSH（配置ubuntu用户名和SSH端口）-&gt;连接到SSH，然后VMware会自动调用Windows终端CMD连接SSH，这个<code>192.168.132.x</code>是安装VMware创建的虚拟网卡，Ubuntu虚拟机内置网卡获取的IP也是基于这个网段：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入Ubuntu密码</span></span><br><span class="line">username@192.168.132.128<span class="string">&#x27;s password:</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VMware挂载共享文件夹">1.3 &nbsp&nbsp<a href="#VMware挂载共享文件夹" class="headerlink" title="VMware挂载共享文件夹"></a>VMware挂载共享文件夹</h2><ol>
+<li>虚拟机设置-&gt;选项-&gt;共享文件夹-&gt;总是启用-&gt;挂载一个windows中创建文件夹，例如<code>share</code></li>
+<li>启动虚拟机，打开终端，执行命令：<code>vmware-hgfsclient</code>，可以看到终端返回输出<code>share</code></li>
+<li>挂载目录（请提前创建<code>/home/xxx/share</code>目录）<ul>
+<li>手动挂载方式：<code>sudo vmhgfs-fuse .host:/ /home/share -o allow_other -o auto_unmount</code></li>
+<li>自动挂载方式，编辑<code>/etc/fstab</code>添加内容：<code>.host:/ /home/xxx/share fuse.vmhgfs-fuse allow_other,auto_unmount 0 0</code>，运行命令挂载<code>mount -a</code></li>
+</ul>
+</li>
+<li>取消挂载：<code>sudo umount /home/xxx/share</code></li>
+</ol>
+<h1 id="VirtualBox">2 &nbsp&nbsp<a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><h2 id="VirtualBox-NAT网卡端口转发实现连接ssh">2.1 &nbsp&nbsp<a href="#VirtualBox-NAT网卡端口转发实现连接ssh" class="headerlink" title="VirtualBox NAT网卡端口转发实现连接ssh"></a>VirtualBox NAT网卡端口转发实现连接ssh</h2><p>打开vbox虚拟机的设置-&gt;网络-&gt;高级-&gt;端口转发-&gt;新建规则：名称ssh，协议TCP，主机IP127.0.0.1，主机端口9191，子系统IP留空不填，子系统端口22。</p>
+<h2 id="VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端">2.2 &nbsp&nbsp<a href="#VirtualBox安装ubuntu-18-04虚拟机打不开terminal终端" class="headerlink" title="VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端"></a>VirtualBox安装ubuntu 18.04虚拟机打不开terminal终端</h2><p>故障情况：VirtualBox新安装ubuntu 18.04虚拟机无法打开Terminal，从应用列表中单击Terminal，左上角任务栏会出现Terminal，并且鼠标转圈，但是过一会左上角Terminal消失，就像闪退一样。</p>
+<p>解决方法：CTRL + ALT + F3 进入命令行模式（需要返回桌面时CTRL + ALT + F1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/default</span><br><span class="line"><span class="built_in">sudo</span> nano locale</span><br><span class="line"><span class="comment"># 把文件中的 “en_US” 改成 “en_US.UTF-8”</span></span><br><span class="line"><span class="built_in">sudo</span> locale-gen --purge</span><br><span class="line">reboot <span class="comment">#重启虚拟机</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="VirtualBox运行虚拟机系统卡顿-缓慢">2.3 &nbsp&nbsp<a href="#VirtualBox运行虚拟机系统卡顿-缓慢" class="headerlink" title="VirtualBox运行虚拟机系统卡顿&#x2F;缓慢"></a>VirtualBox运行虚拟机系统卡顿&#x2F;缓慢</h2><p>可以观察下是否VirtualBox虚拟机底下状态栏是否出现了一个绿色海龟的图标，那证明当前VirtualBox运行在软件虚拟化模式，这确实会是十分缓慢的。而硬件虚拟化模式图标应该是蓝色的V。</p>
+<p>问题原因：其他虚拟化技术软件启动hyper-v或者虚拟机平台功能引起，比如<a href="/troubleshooting/windows-troubleshooting/#%E5%AE%89%E8%A3%85Docker-Desktop%E9%9C%80%E8%A6%81%E5%90%AF%E7%94%A8WSL2%E5%8A%9F%E8%83%BD">安装Docker Desktop开启wsl2功能</a>后导致VirtualBox运行缓慢。</p>
+<p>解决方法：</p>
+<ol>
+<li>控制面板「程序和功能」中禁用Hyper-V和Windows hypervisor后重启系统（以下功能选项全部取消勾选）。如果仍然不行，cmd终端执行命令：<code>bcdedit /set hypervisorlaunchtype off</code>，执行完bcd命令后需要重启系统。<ul>
+<li>Containers</li>
+<li>Hyper-V</li>
+<li>Virtual Machine Platform</li>
+<li>Windows Hypervisor Platform</li>
+<li>Windows Sandbox</li>
+<li>Windows Subsystem for Linux（WSL2是基于hyper-V架构的，但不是hyper-V本身）</li>
+</ul>
+</li>
+<li>移除并重装vbox增强工具包（VirtualBox Guest Additions）</li>
+</ol>
+<h2 id="VirtualBox无法删除备份">2.4 &nbsp&nbsp<a href="#VirtualBox无法删除备份" class="headerlink" title="VirtualBox无法删除备份"></a>VirtualBox无法删除备份</h2><p>故障情况：删除备份时报错提示hard disk xxxx has more than one child hard disk 2。</p>
+<p>解决方式：打开虚拟介质管理器，定位到虚拟硬盘页面，找到对应的硬盘，双击展开可以查看有一个子项目是不存在，失效导致删除备份失败，删除即可。</p>
+<h1 id="QEMU的相关资料">3 &nbsp&nbsp<a href="#QEMU的相关资料" class="headerlink" title="QEMU的相关资料"></a>QEMU的相关资料</h1><ul>
+<li><a href="https://wiki.archlinuxcn.org/wiki/QEMU">QEMU -  Arch Linux 中文维基</a></li>
+<li><a href="https://wiki.qemu.org/Links#GUI_Front_Ends">GUI_Front_Ends</a></li>
+<li><a href="https://gitlab.com/qtemu/gui">QtEmu</a></li>
+<li><a href="https://bbs.kanxue.com/thread-262606-1.htm">[原创] QEMU的虚拟加速</a></li>
+<li><a href="https://github.com/intel/haxm">haxm</a></li>
+</ul>
+<h1 id="安卓模拟器">4 &nbsp&nbsp<a href="#安卓模拟器" class="headerlink" title="安卓模拟器"></a>安卓模拟器</h1><ul>
+<li>支持运行「123云盘」的安卓模拟器：mumu模拟器（雷神模拟器这些不支持）</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] VirtualBox_Ubuntu22.04 Terminal 无法打开[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lifuqiang/articles/17167367.html">https://www.cnblogs.com/lifuqiang/articles/17167367.html</a>.<br>[2] VirtualBox下SSH通过端口转发连接Linux方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/chengqiuming/article/details/83239413">https://blog.csdn.net/chengqiuming/article/details/83239413</a>.<br>[3] [已解决] 为什么VBOX有些备份会删除失败？[EB&#x2F;OL]. <a href="https://bbs.kafan.cn/thread-939721-1-1.html">https://bbs.kafan.cn/thread-939721-1-1.html</a>.<br>[4] FIX: VirtualBox Running Very Slow in Windows 10&#x2F;11. (Solved)[EB&#x2F;OL]. <a href="https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/">https://www.wintips.org/fix-virtualbox-running-very-slow-in-windows-10-11/</a>.<br>[5] How to get VirtualBox 6.0 and WSL working at the same time [closed][EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/58031941/how%E2%80%91to%E2%80%91get%E2%80%91virtualbox%E2%80%916%E2%80%910%E2%80%91and%E2%80%91wsl%E2%80%91working%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time">https://stackoverflow.com/questions/58031941/how‑to‑get‑virtualbox‑6‑0‑and‑wsl‑working‑at‑the‑same‑time</a>.<br>[6] WSL2 breaks VirtualBox 6.1[EB&#x2F;OL]. <a href="https://github.com/MicrosoftDocs/WSL/issues/798">https://github.com/MicrosoftDocs/WSL/issues/798</a>.<br>[7] open-vm-tools工具的安装与使用 [EB&#x2F;OL]. <a href="https://ransaa.github.io/Blog-Doc/src/%E7%8E%A9%E6%9C%BA/open-vm-tools%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8">https://ransaa.github.io/Blog-Doc/src/%E7%8E%A9%E6%9C%BA/open-vm-tools%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8</a>.</p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
   </entry>
   <entry>
     <title>翻译规划（作废）</title>
@@ -12000,133 +12011,6 @@ title UDP Packet
       </categories>
   </entry>
   <entry>
-    <title>运行库修复（Windows平台）</title>
-    <url>/troubleshooting/runtime-library-repair-on-windows/</url>
-    <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为<code>Windows OS 10/11</code>。</p>
-</div>
-
-<h1 id="前言碎语">1 &nbsp&nbsp<a href="#前言碎语" class="headerlink" title="前言碎语"></a>前言碎语</h1><p>这篇《运行库修复》教程是笔者六年前闲暇时间为群友科普所写的，后来就同步到博客上，没想到竟成为笔者博客上浏览量最高的一篇文章。现在回顾一下当时的行文逻辑和知识背景，最初写的很多内容存在不准确的描述。因此抽空更新了一下教程内容。 —— Mr. Kin，2026-03-29</p>
-<h1 id="什么是运行库？">2 &nbsp&nbsp<a href="#什么是运行库？" class="headerlink" title="什么是运行库？"></a>什么是运行库？</h1><p>运行库，又称运行时库（runtime library），是为特定编程语言设计的、在程序执行期间提供支持的二进制代码集合。Windows中比较常见的形式是动态链接库<code>.dll</code>文件，Linux中常见的形式是<code>.so</code>文件。</p>
-<p>用大白话理解的话，运行库就是程序软件在运行时所依赖的一组软件资源包，属于程序调用的外部资源。只要是相同语言框架开发的程序，都是可以调用这个共享资源。这种设计能提高软件运行的资源利用率（因为多个程序可以调用同一个运行库），也能方便软件安装包的分发（因为分发时打包体积变小）。</p>
-<p>使用不同语言框架来开发的程序需要相对应的运行库才能正常工作，例如</p>
-<ul>
-<li><code>DirectX</code>主要用于游戏和多媒体</li>
-<li><code>Microsoft Visual C++ Redistributable</code>用于<code>C++</code>语言开发的程序</li>
-<li><code>.NET runtime</code>用于<code>C#</code>语言和<code>.NET</code>或者<code>.NET Framework</code>框架开发的程序</li>
-<li><code>Java Runtime Environment</code>，即<code>JRE</code>用于<code>Java</code>语言开发的程序</li>
-</ul>
-<h1 id="安装软件或运行软件时提示xxx-dll缺失等故障现象产生的原因">3 &nbsp&nbsp<a href="#安装软件或运行软件时提示xxx-dll缺失等故障现象产生的原因" class="headerlink" title="安装软件或运行软件时提示xxx.dll缺失等故障现象产生的原因"></a>安装软件或运行软件时提示<code>xxx.dll</code>缺失等故障现象产生的原因</h1><p>一般来说，如果软件开发者在发行软件的时候，没有在二进制安装包里放入这些运行库文件，那么程序安装后运行就需要调用系统中的共享运行库文件。</p>
-<p>但是微软官网服务器提供的windows系统镜像，一般是仅内置一个版本的库或者没有预装集成库文件（可以理解成官方提供的是纯净镜像，不同于第三方封装的系统镜像）。</p>
-<p>目前官方纯净<code>Windows10/11</code>系统预装集成的运行库有<code>.NET Framework 4.8</code>和<code>DirectX 11/12</code>，而其他运行库版本均是没有集成，需要手动安装补齐。</p>
-<p>当系统无法提供程序所需的共享运行库时，比如没有集成该库、内置库与程序所需的版本不一致、亦或者相应库文件已损坏，那么便会弹出<code>xxx.dll</code>缺失等运行库问题的报错提示窗口。</p>
-<h1 id="运行库手动补齐的建议">4 &nbsp&nbsp<a href="#运行库手动补齐的建议" class="headerlink" title="运行库手动补齐的建议"></a>运行库手动补齐的建议</h1><ul>
-<li>优先补齐全部的VC运行库，大部分人在安装各类应用软件都可能会遇上的。</li>
-<li>经常游玩游戏，尤其是一些老游戏，则可以补齐<code>DirectX 9/10</code>。当然，如果游戏是从Steam游戏平台安装的话，Steam一般会自动帮你安装好，不需要手动操作补齐。</li>
-<li><code>.NET runtime</code>由于版本较多，需要用到的时候再安装对应版本即可。</li>
-</ul>
-<h1 id="运行库报错的解决方法">5 &nbsp&nbsp<a href="#运行库报错的解决方法" class="headerlink" title="运行库报错的解决方法"></a>运行库报错的解决方法</h1><p>请根据报告提示窗口的信息来找对应的工具，「<code>.dll</code>缺失」一般排查DX或者VC库即可，「提示需要安装<code>.NET Framework xx</code>」或者「提示需要安装<code>.NET xx</code>」一般排查<code>.NET runtime</code>即可。</p>
-<h1 id="VC库">6 &nbsp&nbsp<a href="#VC库" class="headerlink" title="VC库"></a>VC库</h1><ul>
-<li>VC库自动修复工具：<a href="https://blog.csdn.net/vbcom/article/details/7245186">VBcom大佬开发的DX修复工具（增强版）</a><ul>
-<li>VBcom大佬停止更新几年了，目前修复工具中自带的<code>Microsoft Visual C++ 2015 Redistributable</code>还是老版的，即显示<code>Microsoft Visual C++ 2015-2022 Redistributable</code>。目前最新版的是<code>Microsoft Visual C++ v14 Redistributable</code>，安装这个最新版会自动覆盖替代<code>Microsoft Visual C++ 2015-2022 Redistributable</code>。如果选择使用VBcom大佬开发的DX修复工具来修复安装VC库的话，推荐再去微软官网下载安装最新版的v14。</li>
-</ul>
-</li>
-<li>VC库手动选择版本下载安装：<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">VC库微软官方下载地址</a></li>
-<li>VC库安装报错排障工具：<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">微软故障排除程序</a></li>
-</ul>
-<p>注：使用VBcom大佬开发的DX修复工具时，请注意要下载增强版，增强版才含有VC库（上述链接便是增强版的）。</p>
-<h2 id="VC库安装时无限报错弹窗">6.1 &nbsp&nbsp<a href="#VC库安装时无限报错弹窗" class="headerlink" title="VC库安装时无限报错弹窗"></a>VC库安装时无限报错弹窗</h2><p>故障现象：安装和卸载VC2017库出现无限弹窗，标题为<code>Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>，内容提示为 <code>vc_runtimeAdditional_x64.msi is not a valid installation package for product Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>。</p>
-<p>解决方式：使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息，然后重新安装VC库。</p>
-<h2 id="VC库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」">6.2 &nbsp&nbsp<a href="#VC库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」" class="headerlink" title="VC库安装提示「请确认C:\ProgramData\Package Cache文件夹存在并且有访问权限」"></a>VC库安装提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</h2><p>故障现象：安装VC2015-2022库失败，VBcom开发的DX修复工具提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</p>
-<p>解决方法：</p>
-<ol>
-<li>先执行常规的卸载，然后使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息。</li>
-<li>强制删除<code>C:\ProgramData\Package Cache</code>路径下的所有文件。</li>
-<li>下载最新的<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">VC库安装包</a>安装，一般先装好x86，再装x64。</li>
-</ol>
-<h2 id="VBcom开发的DX修复工具修复VC安装失败的调试解决步骤">6.3 &nbsp&nbsp<a href="#VBcom开发的DX修复工具修复VC安装失败的调试解决步骤" class="headerlink" title="VBcom开发的DX修复工具修复VC安装失败的调试解决步骤"></a>VBcom开发的DX修复工具修复VC安装失败的调试解决步骤</h2><ol>
-<li>工具-&gt;选项-&gt;常规-&gt;（勾选）修复失败时启用调试信息。</li>
-<li>执行「检测并修复」。</li>
-<li>点击修复失败的项目（软件中会显示蓝色链接），如果有显示未修复文件的具体明细，右击文件选择「在线修复」。如果没有文件明细，只有针对某个C++具体版本的错误描述，右击选择「更多提示」，看完提示后再次右击项目，有可能出现「切换至详细列表」，这时候使用「在线修复」即可解决。</li>
-</ol>
-<h1 id="DX库">7 &nbsp&nbsp<a href="#DX库" class="headerlink" title="DX库"></a>DX库</h1><ul>
-<li><a href="https://blog.csdn.net/vbcom/article/details/7245186">VBcom大佬开发的DX修复工具（增强版）</a></li>
-<li><a href="https://blog.csdn.net/vbcom/article/details/6962388">VBcom大佬开发的DX修复工具（标准版）</a></li>
-<li><a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX运行时微软官方下载地址（旧版，DX9&#x2F;10）</a></li>
-</ul>
-<h1 id="NET和-NET框架">8 &nbsp&nbsp<a href="#NET和-NET框架" class="headerlink" title=".NET和.NET框架"></a>.NET和.NET框架</h1><p><strong>注意：.NET和.NET框架（.NET Framework）是两种不同的框架。<code>.NET</code>是现代版本，支持跨平台开发的框架，包含<code>.NET Core 1.0-3.1</code>和<code>.NET 5.0-11.x</code>版本（早期版本带Core字眼以及跳过数字4的版本命名，就是为了避免和经典框架版本混淆）。<code>.NET Framework</code>是经典版本，不支持跨平台，包含<code>.NET Framework 1.0-4.8.1</code>。</strong></p>
-<p>下载记得选择「运行时」，而不是SDK：</p>
-<ul>
-<li><a href="https://dotnet.microsoft.com/zh-cn/download">.NET现代版本微软官方下载地址（当前官网主推版本10.0）</a></li>
-<li><a href="https://dotnet.microsoft.com/zh-cn/download/dotnet">.NET现代版本微软官方下载地址(1.0-11.0)</a></li>
-<li><a href="https://dotnet.microsoft.com/download/dotnet-framework">.NET框架经典版本微软官方下载地址（3.5-4.8.1）</a></li>
-<li><a href="https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available">.NET框架经典版本修复工具微软官方下载地址</a></li>
-</ul>
-<p>查询系统中已安装的<code>.NET Runtime</code>运行时现代版本：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">dotnet --list-runtimes</span><br></pre></td></tr></table></figure>
-
-<p>注：请自己选择需要的版本下载并进行安装。建议安装或修复运行库后请重启系统。</p>
-<h2 id="NET-Framework框架经典版本关系">8.1 &nbsp&nbsp<a href="#NET-Framework框架经典版本关系" class="headerlink" title=".NET Framework框架经典版本关系"></a><code>.NET Framework</code>框架经典版本关系</h2><p><code>.NET Framework</code>框架版本并非完全独立，但也不支持向下兼容。目前为止微软推出了4个版本的CLR，分别是CLR 1.0、1.1、2.0、4.0。.NET 4.x是基于CLR4的，而.NET 2.0 3.0 3.5都是基于CLR2.0，3.0 3.5其实只是在CLR2.0的基础上增加了新的功能，并没有改变CLR。关系列表如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">.NET Framework框架经典版本</th>
-<th align="center">CLR版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">.NET Framework 1.0</td>
-<td align="center">CLR 1.0</td>
-</tr>
-<tr>
-<td align="center">.NET Framework 1.1</td>
-<td align="center">CLR 1.1</td>
-</tr>
-<tr>
-<td align="center">.NET Framework 2.x（最高：2.0 SP2） <br> .NET Framework 3.x （最高：3.5 SP1）</td>
-<td align="center">CLR 2.0</td>
-</tr>
-<tr>
-<td align="center">.NET Framework 4.x（最新：4.8.1）</td>
-<td align="center">CLR 4.0</td>
-</tr>
-</tbody></table>
-<p>换而言之，如果你的程序只需要2.0&#x2F;3.0&#x2F;3.5之中的任意一个版本时，安装.NET 3.5 SP1就可以了。</p>
-<p>所以，如果只是想扩展系统的经典版本运行库的话，以win10 OS为例，那么只需要在「启动或关闭Windows功能」中启用<code>.NET Framework 3.5 (包括 .NET 2.0和 3.0)</code>即可。（想当初写这篇教程的时候，最新的版本还只是4.8而已，那时候.NET现代版本还只是5.0版本，时间一晃而过(눈_눈)）</p>
-<h3 id="Win10系统启用-NET-Framework-3-5-包括-NET-2-0和-3-0-功能时出现安装错误0x800f0950-0x800F0954">8.1.1 &nbsp&nbsp<a href="#Win10系统启用-NET-Framework-3-5-包括-NET-2-0和-3-0-功能时出现安装错误0x800f0950-0x800F0954" class="headerlink" title="Win10系统启用.NET Framework 3.5 (包括 .NET 2.0和 3.0)功能时出现安装错误0x800f0950/0x800F0954"></a>Win10系统启用<code>.NET Framework 3.5 (包括 .NET 2.0和 3.0)</code>功能时出现安装错误<code>0x800f0950/0x800F0954</code></h3><p>问题：一般是系统更新程序WUserver无法获取到更新文件，可能是由于系统精简或者相关服务项被禁用。</p>
-<p>解决方法：</p>
-<ol>
-<li>使用离线方式安装（推荐此法）</li>
-<li>恢复WUserver的正常运行，确保在线安装的功能可以正常获取更新文件</li>
-</ol>
-<p>离线方式安装步骤：</p>
-<ol>
-<li>下载当前系统版本所对应的系统镜像</li>
-<li>把source文件夹中的sxs文件夹解压出来，例如<code>C:\path\sxs</code></li>
-<li>管理员身份打开powershell，运行安装命令：<code>dism.exe /online /enable-feature /featurename:NetFX3 /Source:C:\path\sxs</code></li>
-</ol>
-<h1 id="JRE库">9 &nbsp&nbsp<a href="#JRE库" class="headerlink" title="JRE库"></a>JRE库</h1><ul>
-<li><a href="https://adoptium.net/zh-CN/temurin/releases">Adoptium OpenJDK</a></li>
-</ul>
-<p>选择JDK主版本(例如JDK25&#x2F;21&#x2F;17等)之后，再选择JRE下载安装包运行即可。</p>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] The Visual C++ missing error PLAGUE! Here’s how to fix that pesky missing .MSI file in 5 easy steps![EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=ybr5ExVOlqI">https://www.youtube.com/watch?v=ybr5ExVOlqI</a>.<br>[2] 安装.NET Framework 3.5 Error 0x800f0950 in Windows 10[EB&#x2F;OL]. <a href="https://blog.csdn.net/sinat_29315697/article/details/90438542">https://blog.csdn.net/sinat_29315697/article/details/90438542</a>.<br>[3] Win10 .NET Framework 3.5 安装错误 0x800F0954[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012722571/article/details/106336899">https://blog.csdn.net/u012722571/article/details/106336899</a>.<br>[4] DirectX修复工具使用技巧之二——手动修复C++创建失败的文件[EB&#x2F;OL]. <a href="https://blog.csdn.net/VBcom/article/details/114080642">https://blog.csdn.net/VBcom/article/details/114080642</a>.<br>[5] .NET Framework 版本和依赖项[EB&#x2F;OL]. <a href="https://learn.microsoft.com/zh-cn/dotnet/framework/install/versions-and-dependencies?source=recommendations">https://learn.microsoft.com/zh-cn/dotnet/framework/install/versions-and-dependencies?source=recommendations</a>.</p>
-]]></content>
-      <categories>
-        <category>troubleshooting</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>运行库</tag>
-        <tag>修复</tag>
-        <tag>DirectX</tag>
-        <tag>.NET Framework</tag>
-        <tag>.NET</tag>
-        <tag>Microsoft Visual C++ Runtime</tag>
-        <tag>VC库</tag>
-        <tag>CLR</tag>
-        <tag>runtime</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机软件排障总结</title>
     <url>/troubleshooting/software-troubleshooting/</url>
     <content><![CDATA[<h1 id="AIDA64">1 &nbsp&nbsp<a href="#AIDA64" class="headerlink" title="AIDA64"></a>AIDA64</h1><h2 id="AIDA64提示注册信息已损坏">1.1 &nbsp&nbsp<a href="#AIDA64提示注册信息已损坏" class="headerlink" title="AIDA64提示注册信息已损坏"></a>AIDA64提示注册信息已损坏</h2><p>aida64在windows系统时钟与互联网时钟不正确的时候，会导致报错提示「注册信息已损坏」</p>
@@ -12273,13 +12157,15 @@ title UDP Packet
 <p>原因：qtCef缓存数据异常。</p>
 <p>解决方法：打开企业微信的设置页面，查看具体数据保存路径。关闭企微，找到路径，删除里面的qtCef文件夹，让程序重新运行自动生成。例如，默认路径为<code>C:\Users\User name\Documents\WXWork\qtCef</code>。</p>
 <h1 id="360系列软件">15 &nbsp&nbsp<a href="#360系列软件" class="headerlink" title="360系列软件"></a>360系列软件</h1><h2 id="360壁纸">15.1 &nbsp&nbsp<a href="#360壁纸" class="headerlink" title="360壁纸"></a>360壁纸</h2><p>360壁纸开关在360浏览器中设置，并不在360壁纸应用程序中。</p>
-<h1 id="ToDesk远程软件">16 &nbsp&nbsp<a href="#ToDesk远程软件" class="headerlink" title="ToDesk远程软件"></a>ToDesk远程软件</h1><h2 id="受控端为精简版时，ToDesk会话数受限">16.1 &nbsp&nbsp<a href="#受控端为精简版时，ToDesk会话数受限" class="headerlink" title="受控端为精简版时，ToDesk会话数受限"></a>受控端为精简版时，ToDesk会话数受限</h2><p>提示报错：当前会话数受限，请前往个人中心购买</p>
+<h1 id="RustDesk">16 &nbsp&nbsp<a href="#RustDesk" class="headerlink" title="RustDesk"></a>RustDesk</h1><h2 id="RustDesk安卓端无法控制">16.1 &nbsp&nbsp<a href="#RustDesk安卓端无法控制" class="headerlink" title="RustDesk安卓端无法控制"></a>RustDesk安卓端无法控制</h2><p>问题原因：Windows控制安卓端RustDesk，如果能连接查看画面，但是无法控制输入的话。</p>
+<p>解决方法：无障碍开启RustDesk Input，重启手机，然后重连RustDesk</p>
+<h1 id="ToDesk远程软件">17 &nbsp&nbsp<a href="#ToDesk远程软件" class="headerlink" title="ToDesk远程软件"></a>ToDesk远程软件</h1><h2 id="受控端为精简版时，ToDesk会话数受限">17.1 &nbsp&nbsp<a href="#受控端为精简版时，ToDesk会话数受限" class="headerlink" title="受控端为精简版时，ToDesk会话数受限"></a>受控端为精简版时，ToDesk会话数受限</h2><p>提示报错：当前会话数受限，请前往个人中心购买</p>
 <p>原因：ToDesk精简版出了新的限制（精简版界面标注内容：仅支持被控，免安装运行（该版本仅支持主控登录账号为VIP时连接使用））</p>
 <p>解决方法：被控ToDesk下载安装全功能版或是操控端账号升级至VIP。</p>
-<h1 id="LocalSend">17 &nbsp&nbsp<a href="#LocalSend" class="headerlink" title="LocalSend"></a>LocalSend</h1><h2 id="RhttpTimeoutException-Request-timed-out">17.1 &nbsp&nbsp<a href="#RhttpTimeoutException-Request-timed-out" class="headerlink" title="RhttpTimeoutException: Request timed out"></a>RhttpTimeoutException: Request timed out</h2><p>问题：手机往PC Windows系统传数据时，报错<code>RhttpTimeoutException: Request timed out</code>，但是PC往手机传数据正常。</p>
+<h1 id="LocalSend">18 &nbsp&nbsp<a href="#LocalSend" class="headerlink" title="LocalSend"></a>LocalSend</h1><h2 id="RhttpTimeoutException-Request-timed-out">18.1 &nbsp&nbsp<a href="#RhttpTimeoutException-Request-timed-out" class="headerlink" title="RhttpTimeoutException: Request timed out"></a>RhttpTimeoutException: Request timed out</h2><p>问题：手机往PC Windows系统传数据时，报错<code>RhttpTimeoutException: Request timed out</code>，但是PC往手机传数据正常。</p>
 <p>原因：Windows防火墙屏蔽了出口端口。一般是由于网络类型引起，例如网络类型被设置为「公用网络」。</p>
 <p>解决方法：将Windows的网络类型从「公用网络」切换为「专用网络」。</p>
-<h1 id="华硕软件">18 &nbsp&nbsp<a href="#华硕软件" class="headerlink" title="华硕软件"></a>华硕软件</h1><h2 id="关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志">18.1 &nbsp&nbsp<a href="#关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志" class="headerlink" title="关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志"></a>关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志</h2><p>2025-05-23T22:41:33+08:00通过SpaceSniffer查看分析C盘的文件，发现已卸载的华硕GPUTweakIII仍在C盘占用多达4.4GB的存储空间。进一步分析发现全是残留下来的日志文件。最大的日志文件<code>VenderLog.txt</code>大小高达1.64GB，真是一坨大屎。</p>
+<h1 id="华硕软件">19 &nbsp&nbsp<a href="#华硕软件" class="headerlink" title="华硕软件"></a>华硕软件</h1><h2 id="关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志">19.1 &nbsp&nbsp<a href="#关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志" class="headerlink" title="关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志"></a>关于华硕GPUTweakIII卸载之后残留一坨大垃圾日志</h2><p>2025-05-23T22:41:33+08:00通过SpaceSniffer查看分析C盘的文件，发现已卸载的华硕GPUTweakIII仍在C盘占用多达4.4GB的存储空间。进一步分析发现全是残留下来的日志文件。最大的日志文件<code>VenderLog.txt</code>大小高达1.64GB，真是一坨大屎。</p>
 <div class="flex-row">
 <div class="flex-column">
 <img data-src="/images/troubleshooting/software-troubleshooting/asus-gputweaker-file1.webp">SpaceSniffer显示的大小</div>
@@ -12291,13 +12177,13 @@ title UDP Packet
 <img data-src="/images/troubleshooting/software-troubleshooting/asus-gputweaker-file4.webp">GPU Tweak III-0.log文件属性</div>
 </div>
 
-<h1 id="iPad">19 &nbsp&nbsp<a href="#iPad" class="headerlink" title="iPad"></a>iPad</h1><h2 id="切换appstore（应用商店）账号">19.1 &nbsp&nbsp<a href="#切换appstore（应用商店）账号" class="headerlink" title="切换appstore（应用商店）账号"></a>切换appstore（应用商店）账号</h2><p>设置-&gt;点击最上方的Apple ID-&gt;媒体与购买项目-&gt;操作退出登录和重新登录即可</p>
-<h1 id="QQ-微信">20 &nbsp&nbsp<a href="#QQ-微信" class="headerlink" title="QQ&amp;微信"></a>QQ&amp;微信</h1><ul>
+<h1 id="iPad">20 &nbsp&nbsp<a href="#iPad" class="headerlink" title="iPad"></a>iPad</h1><h2 id="切换appstore（应用商店）账号">20.1 &nbsp&nbsp<a href="#切换appstore（应用商店）账号" class="headerlink" title="切换appstore（应用商店）账号"></a>切换appstore（应用商店）账号</h2><p>设置-&gt;点击最上方的Apple ID-&gt;媒体与购买项目-&gt;操作退出登录和重新登录即可</p>
+<h1 id="QQ-微信">21 &nbsp&nbsp<a href="#QQ-微信" class="headerlink" title="QQ&amp;微信"></a>QQ&amp;微信</h1><ul>
 <li>长摁头像，即可<code>@</code>回复</li>
 <li><code>@</code>全体成员或者所有人，需要群主和管理员身份</li>
 <li>针对消息回复，长摁消息，选择回复</li>
 </ul>
-<h1 id="参考文献">21 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.<br>[7] RhttpTimeoutException: Request timed out[EB&#x2F;OL]. <a href="https://github.com/localsend/localsend/issues/2121">https://github.com/localsend/localsend/issues/2121</a>.</p>
+<h1 id="参考文献">22 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 腾讯游戏 ACE BASE.SYS 蓝屏.[EB&#x2F;OL]. <a href="https://easu.net/lol-acebase-sys/">https://easu.net/lol-acebase-sys/</a>.<br>[2] “https_v.youku.com_0.indexeddb.blob”文件夹产生大量本地缓存.[EB&#x2F;OL]. <a href="https://baijiahao.baidu.com/s?id=1702083151817006833&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1702083151817006833&amp;wfr=spider&amp;for=pc</a>.<br>[3] 永久授权Winrar专用激活KEY方法(rarreg.key).[EB&#x2F;OL]. <a href="https://www.cnblogs.com/Gantz/p/17692420.html">https://www.cnblogs.com/Gantz/p/17692420.html</a>.<br>[4] [应用软件] WinRAR 7.00 Final 正式版 压缩解压 2024-02-29.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994791-1-1.html">https://bbs.pcbeta.com/viewthread-1994791-1-1.html</a>.<br>[5] 3Ds Max安装与使用问题解决办法有哪些.[EB&#x2F;OL]. <a href="https://www.bilibili.com/read/cv21725210/">https://www.bilibili.com/read/cv21725210/</a>.<br>[6] Keyboard Inputs freeze 3DS MAX.[EB&#x2F;OL]. <a href="https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148">https://forums.autodesk.com/t5/3ds-max-forum/keyboard-inputs-freeze-3ds-max/td-p/9634148</a>.<br>[7] RhttpTimeoutException: Request timed out[EB&#x2F;OL]. <a href="https://github.com/localsend/localsend/issues/2121">https://github.com/localsend/localsend/issues/2121</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -12912,6 +12798,133 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>运行库修复（Windows平台）</title>
+    <url>/troubleshooting/runtime-library-repair-on-windows/</url>
+    <content><![CDATA[<div class="note info no-icon"><p>请注意：本教程适用平台为<code>Windows OS 10/11</code>。</p>
+</div>
+
+<h1 id="前言碎语">1 &nbsp&nbsp<a href="#前言碎语" class="headerlink" title="前言碎语"></a>前言碎语</h1><p>这篇《运行库修复》教程是笔者六年前闲暇时间为群友科普所写的，后来就同步到博客上，没想到竟成为笔者博客上浏览量最高的一篇文章。现在回顾一下当时的行文逻辑和知识背景，最初写的很多内容存在不准确的描述。因此抽空更新了一下教程内容。 —— Mr. Kin，2026-03-29</p>
+<h1 id="什么是运行库？">2 &nbsp&nbsp<a href="#什么是运行库？" class="headerlink" title="什么是运行库？"></a>什么是运行库？</h1><p>运行库，又称运行时库（runtime library），是为特定编程语言设计的、在程序执行期间提供支持的二进制代码集合。Windows中比较常见的形式是动态链接库<code>.dll</code>文件，Linux中常见的形式是<code>.so</code>文件。</p>
+<p>用大白话理解的话，运行库就是程序软件在运行时所依赖的一组软件资源包，属于程序调用的外部资源。只要是相同语言框架开发的程序，都是可以调用这个共享资源。这种设计能提高软件运行的资源利用率（因为多个程序可以调用同一个运行库），也能方便软件安装包的分发（因为分发时打包体积变小）。</p>
+<p>使用不同语言框架来开发的程序需要相对应的运行库才能正常工作，例如</p>
+<ul>
+<li><code>DirectX</code>主要用于游戏和多媒体</li>
+<li><code>Microsoft Visual C++ Redistributable</code>用于<code>C++</code>语言开发的程序</li>
+<li><code>.NET runtime</code>用于<code>C#</code>语言和<code>.NET</code>或者<code>.NET Framework</code>框架开发的程序</li>
+<li><code>Java Runtime Environment</code>，即<code>JRE</code>用于<code>Java</code>语言开发的程序</li>
+</ul>
+<h1 id="安装软件或运行软件时提示xxx-dll缺失等故障现象产生的原因">3 &nbsp&nbsp<a href="#安装软件或运行软件时提示xxx-dll缺失等故障现象产生的原因" class="headerlink" title="安装软件或运行软件时提示xxx.dll缺失等故障现象产生的原因"></a>安装软件或运行软件时提示<code>xxx.dll</code>缺失等故障现象产生的原因</h1><p>一般来说，如果软件开发者在发行软件的时候，没有在二进制安装包里放入这些运行库文件，那么程序安装后运行就需要调用系统中的共享运行库文件。</p>
+<p>但是微软官网服务器提供的windows系统镜像，一般是仅内置一个版本的库或者没有预装集成库文件（可以理解成官方提供的是纯净镜像，不同于第三方封装的系统镜像）。</p>
+<p>目前官方纯净<code>Windows10/11</code>系统预装集成的运行库有<code>.NET Framework 4.8</code>和<code>DirectX 11/12</code>，而其他运行库版本均是没有集成，需要手动安装补齐。</p>
+<p>当系统无法提供程序所需的共享运行库时，比如没有集成该库、内置库与程序所需的版本不一致、亦或者相应库文件已损坏，那么便会弹出<code>xxx.dll</code>缺失等运行库问题的报错提示窗口。</p>
+<h1 id="运行库手动补齐的建议">4 &nbsp&nbsp<a href="#运行库手动补齐的建议" class="headerlink" title="运行库手动补齐的建议"></a>运行库手动补齐的建议</h1><ul>
+<li>优先补齐全部的VC运行库，大部分人在安装各类应用软件都可能会遇上的。</li>
+<li>经常游玩游戏，尤其是一些老游戏，则可以补齐<code>DirectX 9/10</code>。当然，如果游戏是从Steam游戏平台安装的话，Steam一般会自动帮你安装好，不需要手动操作补齐。</li>
+<li><code>.NET runtime</code>由于版本较多，需要用到的时候再安装对应版本即可。</li>
+</ul>
+<h1 id="运行库报错的解决方法">5 &nbsp&nbsp<a href="#运行库报错的解决方法" class="headerlink" title="运行库报错的解决方法"></a>运行库报错的解决方法</h1><p>请根据报告提示窗口的信息来找对应的工具，「<code>.dll</code>缺失」一般排查DX或者VC库即可，「提示需要安装<code>.NET Framework xx</code>」或者「提示需要安装<code>.NET xx</code>」一般排查<code>.NET runtime</code>即可。</p>
+<h1 id="VC库">6 &nbsp&nbsp<a href="#VC库" class="headerlink" title="VC库"></a>VC库</h1><ul>
+<li>VC库自动修复工具：<a href="https://blog.csdn.net/vbcom/article/details/7245186">VBcom大佬开发的DX修复工具（增强版）</a><ul>
+<li>VBcom大佬停止更新几年了，目前修复工具中自带的<code>Microsoft Visual C++ 2015 Redistributable</code>还是老版的，即显示<code>Microsoft Visual C++ 2015-2022 Redistributable</code>。目前最新版的是<code>Microsoft Visual C++ v14 Redistributable</code>，安装这个最新版会自动覆盖替代<code>Microsoft Visual C++ 2015-2022 Redistributable</code>。如果选择使用VBcom大佬开发的DX修复工具来修复安装VC库的话，推荐再去微软官网下载安装最新版的v14。</li>
+</ul>
+</li>
+<li>VC库手动选择版本下载安装：<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">VC库微软官方下载地址</a></li>
+<li>VC库安装报错排障工具：<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">微软故障排除程序</a></li>
+</ul>
+<p>注：使用VBcom大佬开发的DX修复工具时，请注意要下载增强版，增强版才含有VC库（上述链接便是增强版的）。</p>
+<h2 id="VC库安装时无限报错弹窗">6.1 &nbsp&nbsp<a href="#VC库安装时无限报错弹窗" class="headerlink" title="VC库安装时无限报错弹窗"></a>VC库安装时无限报错弹窗</h2><p>故障现象：安装和卸载VC2017库出现无限弹窗，标题为<code>Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>，内容提示为 <code>vc_runtimeAdditional_x64.msi is not a valid installation package for product Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.10.25008</code>。</p>
+<p>解决方式：使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息，然后重新安装VC库。</p>
+<h2 id="VC库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」">6.2 &nbsp&nbsp<a href="#VC库安装提示「请确认C-ProgramData-Package-Cache文件夹存在并且有访问权限」" class="headerlink" title="VC库安装提示「请确认C:\ProgramData\Package Cache文件夹存在并且有访问权限」"></a>VC库安装提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</h2><p>故障现象：安装VC2015-2022库失败，VBcom开发的DX修复工具提示「请确认<code>C:\ProgramData\Package Cache</code>文件夹存在并且有访问权限」</p>
+<p>解决方法：</p>
+<ol>
+<li>先执行常规的卸载，然后使用官方的<a href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">故障排除程序（troubleshooter）</a>先卸载掉已存在的残留安装信息。</li>
+<li>强制删除<code>C:\ProgramData\Package Cache</code>路径下的所有文件。</li>
+<li>下载最新的<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist">VC库安装包</a>安装，一般先装好x86，再装x64。</li>
+</ol>
+<h2 id="VBcom开发的DX修复工具修复VC安装失败的调试解决步骤">6.3 &nbsp&nbsp<a href="#VBcom开发的DX修复工具修复VC安装失败的调试解决步骤" class="headerlink" title="VBcom开发的DX修复工具修复VC安装失败的调试解决步骤"></a>VBcom开发的DX修复工具修复VC安装失败的调试解决步骤</h2><ol>
+<li>工具-&gt;选项-&gt;常规-&gt;（勾选）修复失败时启用调试信息。</li>
+<li>执行「检测并修复」。</li>
+<li>点击修复失败的项目（软件中会显示蓝色链接），如果有显示未修复文件的具体明细，右击文件选择「在线修复」。如果没有文件明细，只有针对某个C++具体版本的错误描述，右击选择「更多提示」，看完提示后再次右击项目，有可能出现「切换至详细列表」，这时候使用「在线修复」即可解决。</li>
+</ol>
+<h1 id="DX库">7 &nbsp&nbsp<a href="#DX库" class="headerlink" title="DX库"></a>DX库</h1><ul>
+<li><a href="https://blog.csdn.net/vbcom/article/details/7245186">VBcom大佬开发的DX修复工具（增强版）</a></li>
+<li><a href="https://blog.csdn.net/vbcom/article/details/6962388">VBcom大佬开发的DX修复工具（标准版）</a></li>
+<li><a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX运行时微软官方下载地址（旧版，DX9&#x2F;10）</a></li>
+</ul>
+<h1 id="NET和-NET框架">8 &nbsp&nbsp<a href="#NET和-NET框架" class="headerlink" title=".NET和.NET框架"></a>.NET和.NET框架</h1><p><strong>注意：.NET和.NET框架（.NET Framework）是两种不同的框架。<code>.NET</code>是现代版本，支持跨平台开发的框架，包含<code>.NET Core 1.0-3.1</code>和<code>.NET 5.0-11.x</code>版本（早期版本带Core字眼以及跳过数字4的版本命名，就是为了避免和经典框架版本混淆）。<code>.NET Framework</code>是经典版本，不支持跨平台，包含<code>.NET Framework 1.0-4.8.1</code>。</strong></p>
+<p>下载记得选择「运行时」，而不是SDK：</p>
+<ul>
+<li><a href="https://dotnet.microsoft.com/zh-cn/download">.NET现代版本微软官方下载地址（当前官网主推版本10.0）</a></li>
+<li><a href="https://dotnet.microsoft.com/zh-cn/download/dotnet">.NET现代版本微软官方下载地址(1.0-11.0)</a></li>
+<li><a href="https://dotnet.microsoft.com/download/dotnet-framework">.NET框架经典版本微软官方下载地址（3.5-4.8.1）</a></li>
+<li><a href="https://support.microsoft.com/zh-cn/help/2698555/microsoft-net-framework-repair-tool-is-available">.NET框架经典版本修复工具微软官方下载地址</a></li>
+</ul>
+<p>查询系统中已安装的<code>.NET Runtime</code>运行时现代版本：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">dotnet --list-runtimes</span><br></pre></td></tr></table></figure>
+
+<p>注：请自己选择需要的版本下载并进行安装。建议安装或修复运行库后请重启系统。</p>
+<h2 id="NET-Framework框架经典版本关系">8.1 &nbsp&nbsp<a href="#NET-Framework框架经典版本关系" class="headerlink" title=".NET Framework框架经典版本关系"></a><code>.NET Framework</code>框架经典版本关系</h2><p><code>.NET Framework</code>框架版本并非完全独立，但也不支持向下兼容。目前为止微软推出了4个版本的CLR，分别是CLR 1.0、1.1、2.0、4.0。.NET 4.x是基于CLR4的，而.NET 2.0 3.0 3.5都是基于CLR2.0，3.0 3.5其实只是在CLR2.0的基础上增加了新的功能，并没有改变CLR。关系列表如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">.NET Framework框架经典版本</th>
+<th align="center">CLR版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.NET Framework 1.0</td>
+<td align="center">CLR 1.0</td>
+</tr>
+<tr>
+<td align="center">.NET Framework 1.1</td>
+<td align="center">CLR 1.1</td>
+</tr>
+<tr>
+<td align="center">.NET Framework 2.x（最高：2.0 SP2） <br> .NET Framework 3.x （最高：3.5 SP1）</td>
+<td align="center">CLR 2.0</td>
+</tr>
+<tr>
+<td align="center">.NET Framework 4.x（最新：4.8.1）</td>
+<td align="center">CLR 4.0</td>
+</tr>
+</tbody></table>
+<p>换而言之，如果你的程序只需要2.0&#x2F;3.0&#x2F;3.5之中的任意一个版本时，安装.NET 3.5 SP1就可以了。</p>
+<p>所以，如果只是想扩展系统的经典版本运行库的话，以win10 OS为例，那么只需要在「启动或关闭Windows功能」中启用<code>.NET Framework 3.5 (包括 .NET 2.0和 3.0)</code>即可。（想当初写这篇教程的时候，最新的版本还只是4.8而已，那时候.NET现代版本还只是5.0版本，时间一晃而过(눈_눈)）</p>
+<h3 id="Win10系统启用-NET-Framework-3-5-包括-NET-2-0和-3-0-功能时出现安装错误0x800f0950-0x800F0954">8.1.1 &nbsp&nbsp<a href="#Win10系统启用-NET-Framework-3-5-包括-NET-2-0和-3-0-功能时出现安装错误0x800f0950-0x800F0954" class="headerlink" title="Win10系统启用.NET Framework 3.5 (包括 .NET 2.0和 3.0)功能时出现安装错误0x800f0950/0x800F0954"></a>Win10系统启用<code>.NET Framework 3.5 (包括 .NET 2.0和 3.0)</code>功能时出现安装错误<code>0x800f0950/0x800F0954</code></h3><p>问题：一般是系统更新程序WUserver无法获取到更新文件，可能是由于系统精简或者相关服务项被禁用。</p>
+<p>解决方法：</p>
+<ol>
+<li>使用离线方式安装（推荐此法）</li>
+<li>恢复WUserver的正常运行，确保在线安装的功能可以正常获取更新文件</li>
+</ol>
+<p>离线方式安装步骤：</p>
+<ol>
+<li>下载当前系统版本所对应的系统镜像</li>
+<li>把source文件夹中的sxs文件夹解压出来，例如<code>C:\path\sxs</code></li>
+<li>管理员身份打开powershell，运行安装命令：<code>dism.exe /online /enable-feature /featurename:NetFX3 /Source:C:\path\sxs</code></li>
+</ol>
+<h1 id="JRE库">9 &nbsp&nbsp<a href="#JRE库" class="headerlink" title="JRE库"></a>JRE库</h1><ul>
+<li><a href="https://adoptium.net/zh-CN/temurin/releases">Adoptium OpenJDK</a></li>
+</ul>
+<p>选择JDK主版本(例如JDK25&#x2F;21&#x2F;17等)之后，再选择JRE下载安装包运行即可。</p>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] The Visual C++ missing error PLAGUE! Here’s how to fix that pesky missing .MSI file in 5 easy steps![EB&#x2F;OL]. <a href="https://www.youtube.com/watch?v=ybr5ExVOlqI">https://www.youtube.com/watch?v=ybr5ExVOlqI</a>.<br>[2] 安装.NET Framework 3.5 Error 0x800f0950 in Windows 10[EB&#x2F;OL]. <a href="https://blog.csdn.net/sinat_29315697/article/details/90438542">https://blog.csdn.net/sinat_29315697/article/details/90438542</a>.<br>[3] Win10 .NET Framework 3.5 安装错误 0x800F0954[EB&#x2F;OL]. <a href="https://blog.csdn.net/u012722571/article/details/106336899">https://blog.csdn.net/u012722571/article/details/106336899</a>.<br>[4] DirectX修复工具使用技巧之二——手动修复C++创建失败的文件[EB&#x2F;OL]. <a href="https://blog.csdn.net/VBcom/article/details/114080642">https://blog.csdn.net/VBcom/article/details/114080642</a>.<br>[5] .NET Framework 版本和依赖项[EB&#x2F;OL]. <a href="https://learn.microsoft.com/zh-cn/dotnet/framework/install/versions-and-dependencies?source=recommendations">https://learn.microsoft.com/zh-cn/dotnet/framework/install/versions-and-dependencies?source=recommendations</a>.</p>
+]]></content>
+      <categories>
+        <category>troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>运行库</tag>
+        <tag>修复</tag>
+        <tag>DirectX</tag>
+        <tag>.NET Framework</tag>
+        <tag>.NET</tag>
+        <tag>Microsoft Visual C++ Runtime</tag>
+        <tag>VC库</tag>
+        <tag>CLR</tag>
+        <tag>runtime</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WinPE系统封装排障总结</title>
     <url>/troubleshooting/winpe-troubleshooting/</url>
     <content><![CDATA[<h1 id="安装系统">1 &nbsp&nbsp<a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><h2 id="关于引导类型和分区表类型的组合选择">1.1 &nbsp&nbsp<a href="#关于引导类型和分区表类型的组合选择" class="headerlink" title="关于引导类型和分区表类型的组合选择"></a>关于引导类型和分区表类型的组合选择</h2><table>
@@ -13105,12 +13118,12 @@ title UDP Packet
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#110;&#111;&#x40;&#116;&#x68;&#97;&#110;&#107;&#x79;&#111;&#117;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#x31;&#46;&#x63;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#x6f;&#109;">8@8.com</a></li>
-<li><a href="mailto:&#110;&#x6f;&#x40;&#x74;&#104;&#97;&#110;&#x6b;&#115;&#x2e;&#x63;&#111;&#x6d;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#104;&#x61;&#110;&#107;&#121;&#x6f;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#x65;&#46;&#x63;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#x79;&#x6f;&#117;&#46;&#x63;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#x31;&#x40;&#49;&#46;&#99;&#x6f;&#x6d;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#64;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#x73;&#x2e;&#99;&#111;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#104;&#97;&#110;&#x6b;&#x79;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#64;&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -17696,6 +17709,114 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>修复U盘卷位图损坏故障的经验小记</title>
+    <url>/post-articles/2026-03/fix-usb-volume-bitmap-corruption/</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>这周在修复一个U盘的卷位图损坏故障时，因操作流程不当，导致丢失了部分数据。因此回顾记录整个处理过程，总结一下经验。</p>
+<h1 id="硬件-软件环境">2 &nbsp&nbsp<a href="#硬件-软件环境" class="headerlink" title="硬件&amp;软件环境"></a>硬件&amp;软件环境</h1><ul>
+<li>U盘型号：金士顿USB3.0 32GB</li>
+<li>U盘主控型号：群联Phison PS2251-07(PS2307)</li>
+<li>U盘文件分区格式：exFAT</li>
+<li>执行<code>chkdsk</code>命令程序的系统版本：Windows11 25H2</li>
+</ul>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/flashdisk-controller.webp">U盘主控型号</div>
+
+<h1 id="科普：卷位图（Volume-Bitmap）是什么？">3 &nbsp&nbsp<a href="#科普：卷位图（Volume-Bitmap）是什么？" class="headerlink" title="科普：卷位图（Volume Bitmap）是什么？"></a>科普：卷位图（Volume Bitmap）是什么？</h1><p>在exFAT分区格式中，<code>Volume Bitmap</code>是指分配位图<code>Allocation Bitmap</code>。用大白话理解就是一张表，用于记录磁盘上每一个簇（Cluster）的占用状态，比如空闲或者已被占用。</p>
+<p>簇大小（Cluster Size）是操作系统在硬盘上读写文件的最小逻辑单位。大伙们在使用Windows自带的格式化分区功能时，看到的「分配单元大小」指的就是簇大小。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/format-allocation-unit-size.webp">分配单元大小</div>
+
+<p>平常我们使用的文件数据就是按照簇的大小被分割并存储在磁盘上，即使一个文件只有1字节，也会占用一个完整的簇。因此在创建或者格式化分区的时候，有时候也会根据使用特点来设置合适的簇大小，来保证磁盘空间的利用率和读写性能。</p>
+<p>现代操作系统，默认分配的基本都是4096字节（4KB），这个方案对于小文件和大部分应用情况，拥有比较好的平衡性能和空间利用率。</p>
+<h1 id="卷位图损坏故障产生的原因">4 &nbsp&nbsp<a href="#卷位图损坏故障产生的原因" class="headerlink" title="卷位图损坏故障产生的原因"></a>卷位图损坏故障产生的原因</h1><p>笔者这个U盘，经常需要插到其他终端电脑上拷贝写入数据。为了偷懒，笔者经常没有点击弹出U盘设备，而是直接物理拔掉U盘。</p>
+<p>一般来说，U盘没有读写活动时，不执行弹出设备，直接物理拔掉也不会有什么影响。因为现在的系统基本都可以智能处理设备的挂载和卸载。</p>
+<p>例如像Windows系统自Win10起，外部存储设备的默认策略就是「快速删除」。如下截图就是「磁盘管理工具」，选中整个金士顿U盘设备，查看「属性-&gt;策略」的信息。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/deletion-policy.webp">外部存储设备默认策略</div>
+
+<p><strong>「快速删除」这个策略就是允许用户直接物理拔掉U盘，而不需要使用「安全删除硬件」通知图标选项来断开设备连接。</strong></p>
+<p>但笔者情况是U盘不单只会在Windows系统中使用，也会有插入到Linux系统环境中的终端电脑上使用。Linux中虽有像<code>udisks2</code>系统服务实现U盘的自动挂载<code>mount</code>，但是卸载一般都还是需要手动点击「弹出」<code>umount</code>或者点击「安全移除驱动器」<code>udisksctl power-off</code>。</p>
+<p>笔者就因为偷懒没有手动操作弹出，这个U盘终于在上个月某次非安全拔插的操作中出现了「卷位图损坏」。之后使用的几个星期内，我虽然察觉U盘出现了几个异常现象，但是一直也没太放在心上，因为这期间读写一些常用的数据文件并未遇到异常。</p>
+<p>U盘的几个异常现象如下：</p>
+<ol>
+<li><strong>实际存储的文件总大小远大于U盘显示的已用空间</strong>。这是卷位图损坏的常见故障现象之一，即空间计算错误。因为位图数据本身就是错误的，很多簇本应该是标记为「已被占用」，但却被错误地标记为「空闲」，因此系统中读取到已用空间小于实际文件总大小。像笔者的情况，U盘磁盘总大小是29.7GB，系统读取到的可用空间是21GB左右，但所有文件实际存储大小约为17GB左右。</li>
+<li><strong>近期存储的好几个小图片文件，经常提示文件损坏，图片浏览工具提示无法识别图片格式</strong>。这是卷位图损坏导致系统以为某个簇（Cluster）是空闲状态，因此把新数据写入该簇（Cluster）指向的空间，但实际上该簇实际是存有图片文件数据的一部分，即文件重叠写入覆盖。<strong>这种情况使用<code>chkdsk</code>扫描基本扫描之后都会提示「文件xxx在分配单元 xxx 上交叉链接」，就相当于有两个文件同时声明「我有数据块存储在分配单元xxx上」，这种情况肯定至少有一个文件的数据已经是被损坏。</strong></li>
+</ol>
+<p>鉴于上周经常出现有不少的小图片文件损坏的情况，因此本周笔者专门抽空来处理这个U盘异常故障了。</p>
+<p>PS：U盘闪存颗粒老化出现物理坏块，也可能会导致这种卷位图损坏故障的产生。这里就不展开说了。本文主要介绍「非安全拔插」操作引起的卷位图损坏的逻辑错误。</p>
+<h1 id="chkdsk修复命令">5 &nbsp&nbsp<a href="#chkdsk修复命令" class="headerlink" title="chkdsk修复命令"></a><code>chkdsk</code>修复命令</h1><p>在Windows系统中，一般在终端命令行窗口中执行<code>chkdsk</code>命令可以执行扫描和修复错误。</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM /f：修复错误</span></span><br><span class="line"><span class="comment">@REM /r：查找不良扇区并恢复可读信息，这个参数可以不使用</span></span><br><span class="line"><span class="comment">@REM /x：首先强制该卷卸载（如有必要）</span></span><br><span class="line"><span class="comment">@REM c:为磁盘盘符（如果U盘盘符是H盘，则输入h:）</span></span><br><span class="line"><span class="built_in">chkdsk</span> /f /r /x c:</span><br></pre></td></tr></table></figure>
+
+<p>修复磁盘错误，其实也有图形可视化操作「文件管理器 -&gt; 右键磁盘 -&gt; 属性 -&gt; 工具 -&gt; 查错 -&gt; 检查」，如下图。不过一般也不推荐用这个方式，因为使用终端命令行窗口运行<code>chkdsk</code>工具，可以更方便查看命令的信息输出。</p>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/chkdsk-gui.webp">修复磁盘错误的可视化操作</div>
+
+<h1 id="笔者错误的操作">6 &nbsp&nbsp<a href="#笔者错误的操作" class="headerlink" title="笔者错误的操作"></a>笔者错误的操作</h1><ul>
+<li>执行<code>chkdsk</code>工具命令之前，没有对U盘数据进行一次备份。并且U盘最近的一次全量备份，已经是三周前。</li>
+<li>在「卷位图损坏」的情况下，多次重复执行<code>chkdsk</code>命令，并在其修复过程内中断执行<code>chkdsk</code>命令。<ul>
+<li>中断这个操作，其实笔者也是无可奈何，主要U盘的主控太拉跨，性能不行。<code>chkdsk</code>工具在操作「通过复制解决交叉链接问题」时，观察任务管理器的U盘性能，发现读写活动呈现间歇性的十几KB的速率。但观察所修复的交叉文件很多，执行复制确实太费时间。</li>
+<li>「通过复制解决交叉链接问题」原理：这是<code>chkdsk</code>工具的一种补救措施，目的是让两个文件不再共用这一个簇，通过复制该簇的内容，原簇给其中一个文件，复制的新簇给另外一个文件。</li>
+</ul>
+</li>
+</ul>
+<p>由于上述愚蠢的操作，导致U盘数据产生更多的“交叉链接”和“孤立文件”。有一些原本不应该丢失的数据，却因为中断<code>chkdsk</code>命令导致变成了“孤立文件”。</p>
+<p>下面展示一部分<code>chkdsk</code>输出的信息：</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">admin</span>&gt;<span class="title">chkdsk</span> /<span class="title">f</span> <span class="title">f</span>:</span></span><br><span class="line"><span class="function">文件系统的类型是 <span class="title">exFAT</span>。</span></span><br><span class="line"><span class="function">卷序列号为 2<span class="title">A8B</span>-3<span class="title">D91</span></span></span><br><span class="line"><span class="function"><span class="title">Windows</span> 正在校验文件和文件夹...</span></span><br><span class="line"><span class="function">卷标是 工作数据。</span></span><br><span class="line"><span class="function">正在清除驱动器上细微的不一致性。</span></span><br><span class="line"><span class="function">检查目录 \ (83)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查目录 \新建文件夹\ (28)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查目录 \新建文件夹\ (43)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查目录 \新建文件夹\ (46)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查文件和目录时出错。</span></span><br><span class="line"><span class="function">检查卷位图时发现损坏。</span></span><br><span class="line"><span class="function"><span class="title">Windows</span> 正在验证文件分配...</span></span><br><span class="line"><span class="function">\测试工具\<span class="title">xxx.png</span> 在分配单元 78757 上交叉链接。</span></span><br><span class="line"><span class="function">通过复制解决交叉链接问题。</span></span><br><span class="line"><span class="function">磁盘空间不足，无法复制交叉链接部分。</span></span><br><span class="line"><span class="function">已截断文件。</span></span><br><span class="line"><span class="function">遇到关键错误。00。..</span></span><br><span class="line"><span class="function">恢复丢失文件时出错。</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="U盘丢失数据的恢复思路">7 &nbsp&nbsp<a href="#U盘丢失数据的恢复思路" class="headerlink" title="U盘丢失数据的恢复思路"></a>U盘丢失数据的恢复思路</h1><p>笔者发现中断命令导致丢失数据之后，立马停止了任何U盘的写入操作。</p>
+<p><strong><code>chkdsk</code>命令修复过程也有写入操作的，数据丢失的情况下，就不要再执行了。</strong></p>
+<p>以下是恢复数据的操作思路：</p>
+<ol>
+<li>使用<code>DiskGenius</code>工具对全盘进行了扫描（菜单-&gt;工具-&gt;恢复丢失的文件）<ul>
+<li>注意数据恢复功能需要专业版才能支持。</li>
+</ul>
+</li>
+<li><code>DiskGenius</code>全盘扫描出来的数据有两种位置可以寻找丢失的数据。注意导出数据时，需要选择其他分区保存，即非U盘的盘符分区（避免写入U盘导致二次破坏数据）。<ul>
+<li>一种位置是孤立的文件：<strong>注意：孤立的文件已经是丢失文件夹路径结构的信息了，因此只能导出之后，通过查看文件内容、文件创建修改时间来判断原本存储的路径。</strong></li>
+<li>第二种位置是标记成<code>删除</code>的文件。在原本存储的文件夹路径中会有一些被标记成「<code>删除</code>」数据，这类数据有一些是在移动文件夹或者重命名时产生的，只要丢失的数据之前恰好有这种操作，就能通过这种方式找回。</li>
+</ul>
+</li>
+<li>重新完整执行<code>chkdsk</code>命令完成磁盘修复，之后U盘根目录会出现名为<code>FOUND.xxx</code>的隐藏文件夹，例如<code>FOUND.000</code>。使用<code>DiskGenius</code>导出这些文件夹里面的<code>CHK</code>格式文件。使用deCHK工具恢复还原CHK文件：<code>https://www.techcrawler.de/dechk/index_en.html</code>。deCHK工具是基于文件特征头Magic Number识别原理，因为每种特定格式的文件，其二进制数据的开头拥有固定的字节序列。<ul>
+<li>笔者实测deCHK工具只成功还原2个xlsx的表格文件，其余均是无法识别，可能是<code>chkdsk</code>找回的CHK数据本来就是损坏的数据。</li>
+</ul>
+</li>
+</ol>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/recover-data.webp">DiskGenius恢复文件</div>
+<div class="flex-column">
+<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/isolated-files.webp">孤立的文件</div>
+
+<p>通过这一波操作下来，笔者恢复了70%左右的丢失文件（基本是近一周前写入的数据）。剩余30%丢失的数据都是近两周前写入的一些小文件，已经是完全丢失了。所幸这些数据之前已有整理，不是十分重要的，因此这次损失不大。</p>
+<p><code>chkdsk</code>成功修复磁盘错误的命令输出：</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">通过复制解决交叉链接问题。</span><br><span class="line">已完成文件和文件夹验证。</span><br><span class="line">Windows 正在验证可用空间...</span><br><span class="line">  已处理 <span class="number">361137</span> 个可用簇。</span><br><span class="line">已完成可用空间验证。</span><br><span class="line"></span><br><span class="line">Windows 已更正文件系统。</span><br><span class="line">无需采取进一步操作。</span><br><span class="line"></span><br><span class="line">总共有   <span class="number">31193056</span> KB 磁盘空间。</span><br><span class="line"><span class="number">1246</span> 个文件中有   <span class="number">19628640</span> KB。</span><br><span class="line"><span class="number">271</span> 个索引       <span class="number">7872</span> KB。</span><br><span class="line">坏扇区          <span class="number">0</span> KB。</span><br><span class="line">系统正在使用        <span class="number">160</span> KB。</span><br><span class="line">磁盘上   <span class="number">11556384</span> KB 可用。</span><br><span class="line"></span><br><span class="line">每个分配单元中有      <span class="number">32768</span> 字节。</span><br><span class="line">磁盘上共有     <span class="number">974783</span> 个分配单元。</span><br><span class="line">磁盘上有     <span class="number">361137</span> 个可用的分配单元。</span><br></pre></td></tr></table></figure>
+
+<h1 id="老生常谈：数据备份的原则">8 &nbsp&nbsp<a href="#老生常谈：数据备份的原则" class="headerlink" title="老生常谈：数据备份的原则"></a>老生常谈：数据备份的原则</h1><p>数据备份真的很重要！！！</p>
+<p>重要数据还是建议按照经典的<code>3-2-1</code>备份原则进行备份。</p>
+<ul>
+<li><strong>3份副本</strong>：除了原始数据外，至少保留2份额外的备份。</li>
+<li><strong>2种介质</strong>：将备份存储在2种不同的存储介质上。</li>
+<li><strong>1份异地</strong>：至少有1份备份存放在物理位置不同的地方。</li>
+</ul>
+<h1 id="U盘的使用习惯建议">9 &nbsp&nbsp<a href="#U盘的使用习惯建议" class="headerlink" title="U盘的使用习惯建议"></a>U盘的使用习惯建议</h1><ul>
+<li>坚持安全删除：养成点击右下角“安全删除硬件”的习惯。</li>
+<li>定期执行<code>chkdsk</code>命令检测磁盘是否存在错误（如果每天都经常写入数据的话，并且懒得手动安全删除硬件的话，建议每天或者两天检查一次）</li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Allocation Bitmap Directory Entry[EB&#x2F;OL]. <a href="https://learn.microsoft.com/en-us/windows/win32/fileio/exfat-specification#71-allocation-bitmap-directory-entry">https://learn.microsoft.com/en-us/windows/win32/fileio/exfat-specification#71-allocation-bitmap-directory-entry</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2026-03</category>
+      </categories>
+      <tags>
+        <tag>U盘</tag>
+        <tag>数据恢复</tag>
+        <tag>卷位图损坏</tag>
+        <tag>目录损坏</tag>
+        <tag>数据丢失</tag>
+        <tag>chkdsk</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>iKuai主路由升级小记（3.x-&gt;4.x）</title>
     <url>/post-articles/2026-03/ikuai-3x-to-4x/</url>
     <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>前几日，iKuai官网释出了4.x版本的测试版本，固件版本时间是2026-03-05日的。因此这周末我得空升级尝鲜看了一下。</p>
@@ -17807,114 +17928,6 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
-    <title>修复U盘卷位图损坏故障的经验小记</title>
-    <url>/post-articles/2026-03/fix-usb-volume-bitmap-corruption/</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>这周在修复一个U盘的卷位图损坏故障时，因操作流程不当，导致丢失了部分数据。因此回顾记录整个处理过程，总结一下经验。</p>
-<h1 id="硬件-软件环境">2 &nbsp&nbsp<a href="#硬件-软件环境" class="headerlink" title="硬件&amp;软件环境"></a>硬件&amp;软件环境</h1><ul>
-<li>U盘型号：金士顿USB3.0 32GB</li>
-<li>U盘主控型号：群联Phison PS2251-07(PS2307)</li>
-<li>U盘文件分区格式：exFAT</li>
-<li>执行<code>chkdsk</code>命令程序的系统版本：Windows11 25H2</li>
-</ul>
-<div class="flex-column">
-<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/flashdisk-controller.webp">U盘主控型号</div>
-
-<h1 id="科普：卷位图（Volume-Bitmap）是什么？">3 &nbsp&nbsp<a href="#科普：卷位图（Volume-Bitmap）是什么？" class="headerlink" title="科普：卷位图（Volume Bitmap）是什么？"></a>科普：卷位图（Volume Bitmap）是什么？</h1><p>在exFAT分区格式中，<code>Volume Bitmap</code>是指分配位图<code>Allocation Bitmap</code>。用大白话理解就是一张表，用于记录磁盘上每一个簇（Cluster）的占用状态，比如空闲或者已被占用。</p>
-<p>簇大小（Cluster Size）是操作系统在硬盘上读写文件的最小逻辑单位。大伙们在使用Windows自带的格式化分区功能时，看到的「分配单元大小」指的就是簇大小。</p>
-<div class="flex-column">
-<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/format-allocation-unit-size.webp">分配单元大小</div>
-
-<p>平常我们使用的文件数据就是按照簇的大小被分割并存储在磁盘上，即使一个文件只有1字节，也会占用一个完整的簇。因此在创建或者格式化分区的时候，有时候也会根据使用特点来设置合适的簇大小，来保证磁盘空间的利用率和读写性能。</p>
-<p>现代操作系统，默认分配的基本都是4096字节（4KB），这个方案对于小文件和大部分应用情况，拥有比较好的平衡性能和空间利用率。</p>
-<h1 id="卷位图损坏故障产生的原因">4 &nbsp&nbsp<a href="#卷位图损坏故障产生的原因" class="headerlink" title="卷位图损坏故障产生的原因"></a>卷位图损坏故障产生的原因</h1><p>笔者这个U盘，经常需要插到其他终端电脑上拷贝写入数据。为了偷懒，笔者经常没有点击弹出U盘设备，而是直接物理拔掉U盘。</p>
-<p>一般来说，U盘没有读写活动时，不执行弹出设备，直接物理拔掉也不会有什么影响。因为现在的系统基本都可以智能处理设备的挂载和卸载。</p>
-<p>例如像Windows系统自Win10起，外部存储设备的默认策略就是「快速删除」。如下截图就是「磁盘管理工具」，选中整个金士顿U盘设备，查看「属性-&gt;策略」的信息。</p>
-<div class="flex-column">
-<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/deletion-policy.webp">外部存储设备默认策略</div>
-
-<p><strong>「快速删除」这个策略就是允许用户直接物理拔掉U盘，而不需要使用「安全删除硬件」通知图标选项来断开设备连接。</strong></p>
-<p>但笔者情况是U盘不单只会在Windows系统中使用，也会有插入到Linux系统环境中的终端电脑上使用。Linux中虽有像<code>udisks2</code>系统服务实现U盘的自动挂载<code>mount</code>，但是卸载一般都还是需要手动点击「弹出」<code>umount</code>或者点击「安全移除驱动器」<code>udisksctl power-off</code>。</p>
-<p>笔者就因为偷懒没有手动操作弹出，这个U盘终于在上个月某次非安全拔插的操作中出现了「卷位图损坏」。之后使用的几个星期内，我虽然察觉U盘出现了几个异常现象，但是一直也没太放在心上，因为这期间读写一些常用的数据文件并未遇到异常。</p>
-<p>U盘的几个异常现象如下：</p>
-<ol>
-<li><strong>实际存储的文件总大小远大于U盘显示的已用空间</strong>。这是卷位图损坏的常见故障现象之一，即空间计算错误。因为位图数据本身就是错误的，很多簇本应该是标记为「已被占用」，但却被错误地标记为「空闲」，因此系统中读取到已用空间小于实际文件总大小。像笔者的情况，U盘磁盘总大小是29.7GB，系统读取到的可用空间是21GB左右，但所有文件实际存储大小约为17GB左右。</li>
-<li><strong>近期存储的好几个小图片文件，经常提示文件损坏，图片浏览工具提示无法识别图片格式</strong>。这是卷位图损坏导致系统以为某个簇（Cluster）是空闲状态，因此把新数据写入该簇（Cluster）指向的空间，但实际上该簇实际是存有图片文件数据的一部分，即文件重叠写入覆盖。<strong>这种情况使用<code>chkdsk</code>扫描基本扫描之后都会提示「文件xxx在分配单元 xxx 上交叉链接」，就相当于有两个文件同时声明「我有数据块存储在分配单元xxx上」，这种情况肯定至少有一个文件的数据已经是被损坏。</strong></li>
-</ol>
-<p>鉴于上周经常出现有不少的小图片文件损坏的情况，因此本周笔者专门抽空来处理这个U盘异常故障了。</p>
-<p>PS：U盘闪存颗粒老化出现物理坏块，也可能会导致这种卷位图损坏故障的产生。这里就不展开说了。本文主要介绍「非安全拔插」操作引起的卷位图损坏的逻辑错误。</p>
-<h1 id="chkdsk修复命令">5 &nbsp&nbsp<a href="#chkdsk修复命令" class="headerlink" title="chkdsk修复命令"></a><code>chkdsk</code>修复命令</h1><p>在Windows系统中，一般在终端命令行窗口中执行<code>chkdsk</code>命令可以执行扫描和修复错误。</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="comment">@REM /f：修复错误</span></span><br><span class="line"><span class="comment">@REM /r：查找不良扇区并恢复可读信息，这个参数可以不使用</span></span><br><span class="line"><span class="comment">@REM /x：首先强制该卷卸载（如有必要）</span></span><br><span class="line"><span class="comment">@REM c:为磁盘盘符（如果U盘盘符是H盘，则输入h:）</span></span><br><span class="line"><span class="built_in">chkdsk</span> /f /r /x c:</span><br></pre></td></tr></table></figure>
-
-<p>修复磁盘错误，其实也有图形可视化操作「文件管理器 -&gt; 右键磁盘 -&gt; 属性 -&gt; 工具 -&gt; 查错 -&gt; 检查」，如下图。不过一般也不推荐用这个方式，因为使用终端命令行窗口运行<code>chkdsk</code>工具，可以更方便查看命令的信息输出。</p>
-<div class="flex-column">
-<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/chkdsk-gui.webp">修复磁盘错误的可视化操作</div>
-
-<h1 id="笔者错误的操作">6 &nbsp&nbsp<a href="#笔者错误的操作" class="headerlink" title="笔者错误的操作"></a>笔者错误的操作</h1><ul>
-<li>执行<code>chkdsk</code>工具命令之前，没有对U盘数据进行一次备份。并且U盘最近的一次全量备份，已经是三周前。</li>
-<li>在「卷位图损坏」的情况下，多次重复执行<code>chkdsk</code>命令，并在其修复过程内中断执行<code>chkdsk</code>命令。<ul>
-<li>中断这个操作，其实笔者也是无可奈何，主要U盘的主控太拉跨，性能不行。<code>chkdsk</code>工具在操作「通过复制解决交叉链接问题」时，观察任务管理器的U盘性能，发现读写活动呈现间歇性的十几KB的速率。但观察所修复的交叉文件很多，执行复制确实太费时间。</li>
-<li>「通过复制解决交叉链接问题」原理：这是<code>chkdsk</code>工具的一种补救措施，目的是让两个文件不再共用这一个簇，通过复制该簇的内容，原簇给其中一个文件，复制的新簇给另外一个文件。</li>
-</ul>
-</li>
-</ul>
-<p>由于上述愚蠢的操作，导致U盘数据产生更多的“交叉链接”和“孤立文件”。有一些原本不应该丢失的数据，却因为中断<code>chkdsk</code>命令导致变成了“孤立文件”。</p>
-<p>下面展示一部分<code>chkdsk</code>输出的信息：</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">admin</span>&gt;<span class="title">chkdsk</span> /<span class="title">f</span> <span class="title">f</span>:</span></span><br><span class="line"><span class="function">文件系统的类型是 <span class="title">exFAT</span>。</span></span><br><span class="line"><span class="function">卷序列号为 2<span class="title">A8B</span>-3<span class="title">D91</span></span></span><br><span class="line"><span class="function"><span class="title">Windows</span> 正在校验文件和文件夹...</span></span><br><span class="line"><span class="function">卷标是 工作数据。</span></span><br><span class="line"><span class="function">正在清除驱动器上细微的不一致性。</span></span><br><span class="line"><span class="function">检查目录 \ (83)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查目录 \新建文件夹\ (28)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查目录 \新建文件夹\ (43)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查目录 \新建文件夹\ (46)中的文件时发现损坏。</span></span><br><span class="line"><span class="function">检查文件和目录时出错。</span></span><br><span class="line"><span class="function">检查卷位图时发现损坏。</span></span><br><span class="line"><span class="function"><span class="title">Windows</span> 正在验证文件分配...</span></span><br><span class="line"><span class="function">\测试工具\<span class="title">xxx.png</span> 在分配单元 78757 上交叉链接。</span></span><br><span class="line"><span class="function">通过复制解决交叉链接问题。</span></span><br><span class="line"><span class="function">磁盘空间不足，无法复制交叉链接部分。</span></span><br><span class="line"><span class="function">已截断文件。</span></span><br><span class="line"><span class="function">遇到关键错误。00。..</span></span><br><span class="line"><span class="function">恢复丢失文件时出错。</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="U盘丢失数据的恢复思路">7 &nbsp&nbsp<a href="#U盘丢失数据的恢复思路" class="headerlink" title="U盘丢失数据的恢复思路"></a>U盘丢失数据的恢复思路</h1><p>笔者发现中断命令导致丢失数据之后，立马停止了任何U盘的写入操作。</p>
-<p><strong><code>chkdsk</code>命令修复过程也有写入操作的，数据丢失的情况下，就不要再执行了。</strong></p>
-<p>以下是恢复数据的操作思路：</p>
-<ol>
-<li>使用<code>DiskGenius</code>工具对全盘进行了扫描（菜单-&gt;工具-&gt;恢复丢失的文件）<ul>
-<li>注意数据恢复功能需要专业版才能支持。</li>
-</ul>
-</li>
-<li><code>DiskGenius</code>全盘扫描出来的数据有两种位置可以寻找丢失的数据。注意导出数据时，需要选择其他分区保存，即非U盘的盘符分区（避免写入U盘导致二次破坏数据）。<ul>
-<li>一种位置是孤立的文件：<strong>注意：孤立的文件已经是丢失文件夹路径结构的信息了，因此只能导出之后，通过查看文件内容、文件创建修改时间来判断原本存储的路径。</strong></li>
-<li>第二种位置是标记成<code>删除</code>的文件。在原本存储的文件夹路径中会有一些被标记成「<code>删除</code>」数据，这类数据有一些是在移动文件夹或者重命名时产生的，只要丢失的数据之前恰好有这种操作，就能通过这种方式找回。</li>
-</ul>
-</li>
-<li>重新完整执行<code>chkdsk</code>命令完成磁盘修复，之后U盘根目录会出现名为<code>FOUND.xxx</code>的隐藏文件夹，例如<code>FOUND.000</code>。使用<code>DiskGenius</code>导出这些文件夹里面的<code>CHK</code>格式文件。使用deCHK工具恢复还原CHK文件：<code>https://www.techcrawler.de/dechk/index_en.html</code>。deCHK工具是基于文件特征头Magic Number识别原理，因为每种特定格式的文件，其二进制数据的开头拥有固定的字节序列。<ul>
-<li>笔者实测deCHK工具只成功还原2个xlsx的表格文件，其余均是无法识别，可能是<code>chkdsk</code>找回的CHK数据本来就是损坏的数据。</li>
-</ul>
-</li>
-</ol>
-<div class="flex-column">
-<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/recover-data.webp">DiskGenius恢复文件</div>
-<div class="flex-column">
-<img data-src="/images/post-articles/2026-03/fix-usb-volume-bitmap-corruption/isolated-files.webp">孤立的文件</div>
-
-<p>通过这一波操作下来，笔者恢复了70%左右的丢失文件（基本是近一周前写入的数据）。剩余30%丢失的数据都是近两周前写入的一些小文件，已经是完全丢失了。所幸这些数据之前已有整理，不是十分重要的，因此这次损失不大。</p>
-<p><code>chkdsk</code>成功修复磁盘错误的命令输出：</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">通过复制解决交叉链接问题。</span><br><span class="line">已完成文件和文件夹验证。</span><br><span class="line">Windows 正在验证可用空间...</span><br><span class="line">  已处理 <span class="number">361137</span> 个可用簇。</span><br><span class="line">已完成可用空间验证。</span><br><span class="line"></span><br><span class="line">Windows 已更正文件系统。</span><br><span class="line">无需采取进一步操作。</span><br><span class="line"></span><br><span class="line">总共有   <span class="number">31193056</span> KB 磁盘空间。</span><br><span class="line"><span class="number">1246</span> 个文件中有   <span class="number">19628640</span> KB。</span><br><span class="line"><span class="number">271</span> 个索引       <span class="number">7872</span> KB。</span><br><span class="line">坏扇区          <span class="number">0</span> KB。</span><br><span class="line">系统正在使用        <span class="number">160</span> KB。</span><br><span class="line">磁盘上   <span class="number">11556384</span> KB 可用。</span><br><span class="line"></span><br><span class="line">每个分配单元中有      <span class="number">32768</span> 字节。</span><br><span class="line">磁盘上共有     <span class="number">974783</span> 个分配单元。</span><br><span class="line">磁盘上有     <span class="number">361137</span> 个可用的分配单元。</span><br></pre></td></tr></table></figure>
-
-<h1 id="老生常谈：数据备份的原则">8 &nbsp&nbsp<a href="#老生常谈：数据备份的原则" class="headerlink" title="老生常谈：数据备份的原则"></a>老生常谈：数据备份的原则</h1><p>数据备份真的很重要！！！</p>
-<p>重要数据还是建议按照经典的<code>3-2-1</code>备份原则进行备份。</p>
-<ul>
-<li><strong>3份副本</strong>：除了原始数据外，至少保留2份额外的备份。</li>
-<li><strong>2种介质</strong>：将备份存储在2种不同的存储介质上。</li>
-<li><strong>1份异地</strong>：至少有1份备份存放在物理位置不同的地方。</li>
-</ul>
-<h1 id="U盘的使用习惯建议">9 &nbsp&nbsp<a href="#U盘的使用习惯建议" class="headerlink" title="U盘的使用习惯建议"></a>U盘的使用习惯建议</h1><ul>
-<li>坚持安全删除：养成点击右下角“安全删除硬件”的习惯。</li>
-<li>定期执行<code>chkdsk</code>命令检测磁盘是否存在错误（如果每天都经常写入数据的话，并且懒得手动安全删除硬件的话，建议每天或者两天检查一次）</li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Allocation Bitmap Directory Entry[EB&#x2F;OL]. <a href="https://learn.microsoft.com/en-us/windows/win32/fileio/exfat-specification#71-allocation-bitmap-directory-entry">https://learn.microsoft.com/en-us/windows/win32/fileio/exfat-specification#71-allocation-bitmap-directory-entry</a>.</p>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2026-03</category>
-      </categories>
-      <tags>
-        <tag>U盘</tag>
-        <tag>数据恢复</tag>
-        <tag>卷位图损坏</tag>
-        <tag>目录损坏</tag>
-        <tag>数据丢失</tag>
-        <tag>chkdsk</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>无损修复重建Ventoy的EFI分区，避免格式化重做</title>
     <url>/post-articles/2026-03/rebuild-vtoyefi-partition/</url>
     <content><![CDATA[<h1 id="背景：VTOYEFI分区数据损坏">1 &nbsp&nbsp<a href="#背景：VTOYEFI分区数据损坏" class="headerlink" title="背景：VTOYEFI分区数据损坏"></a>背景：VTOYEFI分区数据损坏</h1><p>前阵子给别人维修电脑时，笔者把一个写入Ventoy启动工具的大容量自制U盘，接入到一个只有C盘的Windows10系统机器中。</p>
@@ -17951,40 +17964,6 @@ title UDP Packet
         <tag>无损修复</tag>
         <tag>EFI分区</tag>
         <tag>重建引导</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender总结</title>
-    <url>/software/blender/blender/</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/software/blender/interface-tools-operation">
-<button class="navigation-button-box">Blender界面工具操作总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/q-a">
-<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/examples">
-<button class="navigation-button-box">Blender实战案例总结</button></a>
-<div style="width: 20px;"></div>
-<a href="/software/blender/code-development">
-<button class="navigation-button-box">Blender二次代码开发总结</button></a>
-</div>
-
-<div class="flex-row">
-<a href="/software/blender/blender-learning-resources">
-<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
-</div>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>blender</tag>
-        <tag>汇总</tag>
       </tags>
   </entry>
   <entry>
@@ -18156,6 +18135,40 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>Blender总结</title>
+    <url>/software/blender/blender/</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/software/blender/interface-tools-operation">
+<button class="navigation-button-box">Blender界面工具操作总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/q-a">
+<button class="navigation-button-box">Blender常见问题总结——Q&A</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/examples">
+<button class="navigation-button-box">Blender实战案例总结</button></a>
+<div style="width: 20px;"></div>
+<a href="/software/blender/code-development">
+<button class="navigation-button-box">Blender二次代码开发总结</button></a>
+</div>
+
+<div class="flex-row">
+<a href="/software/blender/blender-learning-resources">
+<button class="navigation-button-box">Blender自学资料向（干货整理）(内容已过时，作废)</button></a>
+</div>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>blender</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender二次代码开发总结</title>
     <url>/software/blender/code-development/</url>
     <content><![CDATA[<h1 id="推荐资源">1 &nbsp&nbsp<a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h1><ul>
@@ -18264,107 +18277,6 @@ title UDP Packet
         <category>software</category>
         <category>blender</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Blender常见问题总结——Q&amp;A</title>
-    <url>/software/blender/q-a/</url>
-    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
-<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
-<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
-<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
-<ul>
-<li>CPU比GPU性能差很多</li>
-<li>渲染Volumetrics场景</li>
-</ul>
-<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>问题总结</tag>
-        <tag>Q&amp;A</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
-    <url>/translations/blender-animation/sprite-fright/</url>
-    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
-<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
-<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
-<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
-<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
-<li>get wasted 喝醉，形容大醉</li>
-<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
-<li>dilly-dally v. 犹豫，磨蹭</li>
-<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
-<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
-<li>be supposed to do&#x2F;be sth. 应当……</li>
-<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
-<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
-<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
-<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
-</ul>
-</li>
-<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
-<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
-<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
-</ul>
-</li>
-<li>peppermint n. （常用于糖果的）薄荷</li>
-<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
-<li>We sprite balance to the forest. 我们让森林保持平衡</li>
-<li>Sprite them! 净化他们</li>
-</ul>
-</li>
-<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
-<li>treat sth. as sth. 把……视为……，把……看作……</li>
-</ul>
-<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
-]]></content>
-      <categories>
-        <category>translations</category>
-        <category>blender-animation</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-        <tag>blender</tag>
-        <tag>字幕</tag>
-        <tag>英语</tag>
-        <tag>开放动画</tag>
-        <tag>动画</tag>
-        <tag>动画电影</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
-    <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
-    <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
-<h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>开始建模之前，要注意建模物体的尺寸。注意观察物体外形，思考用哪些基础网格mesh创建模型会更容易点。</p>
-<p>查看当前物体的尺寸：右边侧边栏（快捷键N）&gt;item条目&gt;尺寸</p>
-<p>设置当前场景的单位：属性编辑器&gt;场景属性&gt;单位。</p>
-<p><img data-src="/1.1.png"></p>
-]]></content>
-      <categories>
-        <category>software</category>
-        <category>blender</category>
-        <category>tranining</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>练习</tag>
-        <tag>blender</tag>
-        <tag>教程</tag>
-        <tag>苹果</tag>
-        <tag>小刀</tag>
-        <tag>布料</tag>
-      </tags>
   </entry>
   <entry>
     <title>Blender界面工具操作总结</title>
@@ -18725,6 +18637,107 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>Blender常见问题总结——Q&amp;A</title>
+    <url>/software/blender/q-a/</url>
+    <content><![CDATA[<h1 id="三维视窗操作">1 &nbsp&nbsp<a href="#三维视窗操作" class="headerlink" title="三维视窗操作"></a>三维视窗操作</h1><h2 id="物体模式下无法旋转">1.1 &nbsp&nbsp<a href="#物体模式下无法旋转" class="headerlink" title="物体模式下无法旋转"></a>物体模式下无法旋转</h2><p>Active Tool and Workspace settings tab &gt; Options header &gt; Transform &gt; Affect Only and then uncheck all (Origins; Locations; Parents)</p>
+<h2 id="缩放一定程度后，便无法继续缩放或者平移">1.2 &nbsp&nbsp<a href="#缩放一定程度后，便无法继续缩放或者平移" class="headerlink" title="缩放一定程度后，便无法继续缩放或者平移"></a>缩放一定程度后，便无法继续缩放或者平移</h2><p>解决方案：点击数字键盘「小数点」最大化查看所选对象。</p>
+<p>原因：缩放操作会导致blender的观察基点变化，需要观察的东西可能会增加或者减少。</p>
+<h1 id="渲染">2 &nbsp&nbsp<a href="#渲染" class="headerlink" title="渲染"></a>渲染</h1><h2 id="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染">2.1 &nbsp&nbsp<a href="#Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染" class="headerlink" title="Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染"></a>Cycles引擎不适合混合CPU和GPU渲染的几个场景，只适合纯GPU渲染</h2><p>其实Cycles引擎渲染大多情况下，设置纯显卡渲染会更好。</p>
+<ul>
+<li>CPU比GPU性能差很多</li>
+<li>渲染Volumetrics场景</li>
+</ul>
+<h1 id="其它类别">3 &nbsp&nbsp<a href="#其它类别" class="headerlink" title="其它类别"></a>其它类别</h1><h2 id="v3-0版本之后的blender-launcher-exe">3.1 &nbsp&nbsp<a href="#v3-0版本之后的blender-launcher-exe" class="headerlink" title="v3.0版本之后的blender-launcher.exe"></a>v3.0版本之后的blender-launcher.exe</h2><p>和blender.exe一样也是启动器，但不会弹出控制台窗口console。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>问题总结</tag>
+        <tag>Q&amp;A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看翻译学英语 —— blender开放动画电影《Sprite Fright》</title>
+    <url>/translations/blender-animation/sprite-fright/</url>
+    <content><![CDATA[<h1 id="翻译的感想">1 &nbsp&nbsp<a href="#翻译的感想" class="headerlink" title="翻译的感想"></a>翻译的感想</h1><p>抽空翻译了blender的开放动画电影《Sprite Fright》，该动画电影是一部恐怖喜剧，台词有部分俚语，总体的翻译难度比一般的教学类视频要高一点。</p>
+<h1 id="观看动画电影">2 &nbsp&nbsp<a href="#观看动画电影" class="headerlink" title="观看动画电影"></a>观看动画电影</h1><iframe src="//player.bilibili.com/player.html?bvid=BV1eS4y1j7ay&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<h1 id="下载字幕">3 &nbsp&nbsp<a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p>字幕采用aegisub软件制作，已同步分享至Github仓库「<a href="https://github.com/Mister-Kin/OpenDocs/tree/master/translations/subtitles/blender_animation">OpenDocs</a>」，有需要的朋友可下载学习或者观看。</p>
+<h1 id="本期翻译的英语词汇总结">4 &nbsp&nbsp<a href="#本期翻译的英语词汇总结" class="headerlink" title="本期翻译的英语词汇总结"></a>本期翻译的英语词汇总结</h1><ul>
+<li>tree hugger 抱树者（意指给环保主义者贴上过于情绪化和不理性的标签）</li>
+<li>sugar buns&#x2F;sweet cakes&#x2F;love muffin 这三个都是用作爱称，意思同sweetheart</li>
+<li>get wasted 喝醉，形容大醉</li>
+<li>way ahead of you 形容比别人更早地完成或者解决某事</li>
+<li>dilly-dally v. 犹豫，磨蹭</li>
+<li>fungis n. 真菌（这个用法有问题，fungi本身就是复数，加s应该只是为了配合台词fun guys）</li>
+<li>dorkwad n. 傻瓜，呆子（俚语，意思同dork）</li>
+<li>be supposed to do&#x2F;be sth. 应当……</li>
+<li>piss break 指上厕所的休息过程（例如在听一个无聊的讲座时，可以说piss break，然后离场去休息）</li>
+<li>make yourself useful 让对方别闲着，干点事情（差不多就是get off your ass and do something）</li>
+<li>innit 表示强调，用于陈述句后代替附加疑问句（tag question）<ul>
+<li>She&#39;s a real weenie that one, innit? 她是一个真正的窝囊废，不是吗？（innit相当于isn’t she）</li>
+</ul>
+</li>
+<li>gnome n. 守护精灵（童话故事中的地下宝藏守护神，外形像戴着尖顶帽的小人）</li>
+<li>shag v. 和……性交（该词我根据上下文来翻译了）<ul>
+<li>It&#39;s like a gnome shagged a mushroom. 这就像一个守护精灵头顶一只蘑菇</li>
+</ul>
+</li>
+<li>peppermint n. （常用于糖果的）薄荷</li>
+<li>sprite n. 小精灵（该词本身只是名词，但动画中原创了动词用法，因此我根据上下文来翻译动词意思了）<ul>
+<li>We sprite balance to the forest. 我们让森林保持平衡</li>
+<li>Sprite them! 净化他们</li>
+</ul>
+</li>
+<li>son of a spriteberry 狗娘养的（意思同son of a bitch，不过动画中小精灵用的是spriteberry）</li>
+<li>treat sth. as sth. 把……视为……，把……看作……</li>
+</ul>
+<h1 id="参考文献">5 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] BRIDGERS B. What it Means to be Called a Tree Hugger[EB&#x2F;OL]. <a href="https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/">https://www.newamerica.org/millennials/dm/what-it-means-be-called-tree-hugger/</a>.<br>[2] What does Way ahead of you. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/166902">https://hinative.com/en-US/questions/166902</a>.<br>[3] What is the difference between get lit and get wasted and get hammered?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/17881208">https://hinative.com/en-US/questions/17881208</a>.<br>[4] What does Make yourself useful. mean?[EB&#x2F;OL]. <a href="https://hinative.com/en-US/questions/15910440">https://hinative.com/en-US/questions/15910440</a>.</p>
+]]></content>
+      <categories>
+        <category>translations</category>
+        <category>blender-animation</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+        <tag>blender</tag>
+        <tag>字幕</tag>
+        <tag>英语</tag>
+        <tag>开放动画</tag>
+        <tag>动画</tag>
+        <tag>动画电影</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blender练习总结：《CG Boost-Blender 2.8 Beginner Series》</title>
+    <url>/software/blender/tranining/cg-boost-blender28-beginner-series/</url>
+    <content><![CDATA[<h1 id="练习成果展示">1 &nbsp&nbsp<a href="#练习成果展示" class="headerlink" title="练习成果展示"></a>练习成果展示</h1><h1 id="前期工作">2 &nbsp&nbsp<a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h1><p>设计草图，善于利用参考资料（搜索引擎&gt;图片，现实中的实物&gt;拍照等）。三维创作需要时间，很难一蹴而就，慢慢迭代制作即可。</p>
+<h1 id="建模">3 &nbsp&nbsp<a href="#建模" class="headerlink" title="建模"></a>建模</h1><p>开始建模之前，要注意建模物体的尺寸。注意观察物体外形，思考用哪些基础网格mesh创建模型会更容易点。</p>
+<p>查看当前物体的尺寸：右边侧边栏（快捷键N）&gt;item条目&gt;尺寸</p>
+<p>设置当前场景的单位：属性编辑器&gt;场景属性&gt;单位。</p>
+<p><img data-src="/1.1.png"></p>
+]]></content>
+      <categories>
+        <category>software</category>
+        <category>blender</category>
+        <category>tranining</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>练习</tag>
+        <tag>blender</tag>
+        <tag>教程</tag>
+        <tag>苹果</tag>
+        <tag>小刀</tag>
+        <tag>布料</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blender教程总结</title>
     <url>/software/blender/tranining/training/</url>
     <content><![CDATA[<h1 id="单个物体建模">1 &nbsp&nbsp<a href="#单个物体建模" class="headerlink" title="单个物体建模"></a>单个物体建模</h1><h1 id="综合场景全流程">2 &nbsp&nbsp<a href="#综合场景全流程" class="headerlink" title="综合场景全流程"></a>综合场景全流程</h1><ul>
@@ -18832,7 +18845,7 @@ title UDP Packet
 <h1 id="联系方式">5 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#x6d;&#x69;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#105;&#109;&#46;&#x6d;&#x69;&#x73;&#116;&#101;&#x72;&#x6b;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -18980,11 +18993,6 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
   <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -19265,94 +19273,9 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
-    <title>作品</title>
-    <url>/works/index.html</url>
-    <content><![CDATA[<div class="wrap">
-<div class="left">
-<div class="row-right">
-<a href="/works/software-works">
-<button class="navigation-button-box">软件作品</button></a></div>
-
-<div class="blank-space-column"></div>
-
-<div class="row-right">
-<a href="/works/software-works/toggle-language">
-<button class="navigation-button-box">切换语言</button></a>
-<div class="blank-space-row"></div>
-</div>
-
-<div class="blank-space-column"></div>
-
-<div class="row-right">
-<a href="/works/software-works/batch-tools">
-<button class="navigation-button-box">批处理工具</button></a>
-<div class="blank-space-row"></div>
-</div>
-
-<div class="blank-space-column"></div>
-
-<div class="row-right">
-<a href="/works/software-works/rainmeter-skins">
-<button class="navigation-button-box">雨滴皮肤</button></a>
-<div class="blank-space-row"></div>
-</div>
-
-<div class="blank-space-column"></div>
-
-<div class="row-right">
-<a href="/works/software-works/autojs-scripts">
-<button class="navigation-button-box">Auto.js脚本</button></a>
-<div class="blank-space-row"></div>
-</div>
-
-</div>
-
-<div class="right">
-<div class="row-left">
-<a href="/works/artworks/">
-<button class="navigation-button-box">艺术作品</button></a></div></div>
-
-<div class="row-left">
-
-<div class="blank-space-row"></div>
-</div>
-
-</div>
-
-<style type="text/css">
-.wrap{
-    display: flex;
-    flex-direction: row;
-}
-.left {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    margin-right: 25px;
-}
-.right {
-    flex-grow: 1;
-    margin-left: 25px;
-}
-.row-right{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-.row-left{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-.blank-space-column{
-    height: 20px;
-}
-.blank-space-row{
-    width: 60px;
-}
-</style>
-]]></content>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于本站</title>
@@ -19881,164 +19804,93 @@ CGI&后期处理
 ]]></content>
   </entry>
   <entry>
-    <title>「批处理工具」使用手册</title>
-    <url>/works/software-works/batch-tools/index.html</url>
-    <content><![CDATA[<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一些方便工作的批处理程序。</p>
-<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>TODO</p>
-<h2 id="程序目前实现的功能">1.2 &nbsp&nbsp<a href="#程序目前实现的功能" class="headerlink" title="程序目前实现的功能"></a>程序目前实现的功能</h2><ul>
-<li>ffmpeg.sh<ul>
-<li>个人工作：批量操作媒体资源</li>
-<li>压缩媒体资源</li>
-<li>图片转换器：图片格式互转</li>
-<li>视频转换器：视频格式互转</li>
-<li>音频转换器：音频格式互转</li>
-<li>音频元数据标签工具</li>
-<li>音频封面图工具：获取、添加、删除</li>
-<li>媒体资源工具：合并、分割、缩放</li>
-</ul>
-</li>
-<li>text.sh<ul>
-<li>合并文本文件</li>
-</ul>
-</li>
-<li>ffmpeg.bat（不再维护bat）<ul>
-<li>给图片添加版权水印并压缩</li>
-<li>图片压缩</li>
-<li>合并音视频</li>
-<li>视频转封装</li>
-<li>视频压缩：转 hevc 编码</li>
-<li>显卡加速图片序列合成视频</li>
-</ul>
-</li>
-</ul>
-<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
-<li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
-<li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
-<li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
-</ul>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/download_ffmpeg.webp">下载FFmpeg</div>
-<div class="flex-column">
-<img data-src="./images/download_git.webp">下载Git for Windows</div>
-<div class="flex-column">
-<img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
+    <title>作品</title>
+    <url>/works/index.html</url>
+    <content><![CDATA[<div class="wrap">
+<div class="left">
+<div class="row-right">
+<a href="/works/software-works">
+<button class="navigation-button-box">软件作品</button></a></div>
+
+<div class="blank-space-column"></div>
+
+<div class="row-right">
+<a href="/works/software-works/toggle-language">
+<button class="navigation-button-box">切换语言</button></a>
+<div class="blank-space-row"></div>
 </div>
 
-<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="FFmpeg配置">2.1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h4><ol>
-<li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
-<li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
-<li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
-</ol>
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/1.1.webp">解压重命名放于C盘</div>
-<div class="flex-column">
-<img data-src="./images/1.2.webp">运行对话框</div>
-<div class="flex-column">
-<img data-src="./images/1.3.webp">打开高级系统设置</div>
-<div class="flex-column">
-<img data-src="./images/1.4.webp">打开环境变量</div>
+<div class="blank-space-column"></div>
+
+<div class="row-right">
+<a href="/works/software-works/batch-tools">
+<button class="navigation-button-box">批处理工具</button></a>
+<div class="blank-space-row"></div>
 </div>
 
-<div class="flex-row">
-<div class="flex-column">
-<img data-src="./images/1.5.webp">编辑系统变量Path</div>
-<div class="flex-column">
-<img data-src="./images/1.6.webp">添加一个新路径</div>
-<div class="flex-column">
-<img data-src="./images/1.7.webp">定位路径</div>
-<div class="flex-column">
-<img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
+<div class="blank-space-column"></div>
+
+<div class="row-right">
+<a href="/works/software-works/rainmeter-skins">
+<button class="navigation-button-box">雨滴皮肤</button></a>
+<div class="blank-space-row"></div>
 </div>
 
-<h4 id="安装Git-for-Windows">2.1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h4><p>一路默认安装下去，终端使用Git Bash。</p>
-<h4 id="批处理工具配置">2.1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h4><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
-<div class="flex-column">
-<img data-src="./images/1.9.webp">批处理工具程序路径</div>
+<div class="blank-space-column"></div>
 
-<h2 id="使用方法">2.2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol>
-<li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
-<li>输入批处理工具程序的路径，回车执行。</li>
-<li>按菜单提示选择对应功能。</li>
-<li>输入需要操作媒体文件的文件夹路径。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/2.1.webp">输入程序路径执行</div>
-<div class="flex-column">
-<img data-src="./images/2.2.webp">输入操作路径执行</div>
+<div class="row-right">
+<a href="/works/software-works/autojs-scripts">
+<button class="navigation-button-box">Auto.js脚本</button></a>
+<div class="blank-space-row"></div>
+</div>
 
-<h2 id="程序功能">2.3 &nbsp&nbsp<a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h2><ul>
-<li>ffmpeg.sh<ul>
-<li>个人工作：批量操作媒体资源<ul>
-<li>给图片添加版权文字水印并压缩</li>
-<li>给视频添加文字版权水印（libx264）</li>
-<li>图片序列导出mp4格式视频（libx264）</li>
-<li>重编码视频导出mp4格式视频（libx264）</li>
-<li>添加字幕（硬编码，libx264）</li>
-<li>显卡加速将图片序列合成为视频（不再维护该功能）</li>
-</ul>
-</li>
-<li>压缩媒体资源<ul>
-<li>压缩图片（原格式压缩或者转换为webp格式）</li>
-<li>压缩视频，转换为hevc编码的mp4格式（libx265）</li>
-</ul>
-</li>
-<li>图片转换器：图片格式互转<ul>
-<li>图片转png格式</li>
-</ul>
-</li>
-<li>视频转换器：视频格式互转<ul>
-<li>视频转mp4格式</li>
-</ul>
-</li>
-<li>音频转换器：音频格式互转<ul>
-<li>无损音频转m4a格式</li>
-</ul>
-</li>
-<li>音频元数据标签工具<ul>
-<li>根据元数据标签重命名音频文件</li>
-<li>根据音频文件名修改元数据标签</li>
-<li>设置音频文件的专辑名</li>
-<li>设置音频文件的歌曲名</li>
-<li>设置音频文件的歌手名</li>
-</ul>
-</li>
-<li>音频封面图工具：获取、添加、删除<ul>
-<li>获取音频封面图</li>
-<li>添加音频封面图</li>
-<li>删除音频封面图</li>
-</ul>
-</li>
-<li>媒体资源工具：合并、分割、缩放<ul>
-<li>合并音视频：mp4+m4a&#x2F;mp3</li>
-<li>分割视频</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>text.sh<ul>
-<li>合并文本文件<ul>
-<li>合并文本文件（文件首尾拼接）</li>
-<li>合并文本文件（逐行拼接合并）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>ffmpeg.bat（不再维护bat）<ul>
-<li>给图片添加版权水印并压缩</li>
-<li>图片压缩：转 webp</li>
-<li>合并音视频：mp4 + m4a</li>
-<li>视频转封装：flv -&gt; mp4</li>
-<li>视频压缩：转 hevc 编码（libx265）</li>
-<li>显卡加速图片序列合成视频：普通录屏（jpg + wav -&gt; h264_nvenc + aac）</li>
-<li>显卡加速图片序列合成视频：CG（png + wav -&gt; h264_nvenc + aac）</li>
-</ul>
-</li>
-</ul>
-<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Arch Linux &#x2F; Mac<br>Shell: Git Bash &#x2F; Zsh</p>
-<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>批处理工具</strong> © Mr. Kin，所有文件均采用 <a href="https://github.com/Mister-Kin/BatchTools/blob/master/LICENSE">WTFPL</a> 许可协议进行发布。</p>
-<p>由 Mr. Kin 著作并维护。</p>
+</div>
+
+<div class="right">
+<div class="row-left">
+<a href="/works/artworks/">
+<button class="navigation-button-box">艺术作品</button></a></div></div>
+
+<div class="row-left">
+
+<div class="blank-space-row"></div>
+</div>
+
+</div>
+
+<style type="text/css">
+.wrap{
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 25px;
+}
+.right {
+    flex-grow: 1;
+    margin-left: 25px;
+}
+.row-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.row-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.blank-space-column{
+    height: 20px;
+}
+.blank-space-row{
+    width: 60px;
+}
+</style>
 ]]></content>
   </entry>
   <entry>
@@ -20668,5 +20520,166 @@ CGI&后期处理
 <h1 id="作者">5 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>ToggleLanguage</strong> © Mr. Kin, 项目代码采用 <a href="https://github.com/Mister-Kin/ToggleLanguage/blob/master/LICENSE">GNU GPL v3.0</a> 许可协议进行发布。<br>由 Mr. Kin 著作并维护。</p>
 <h1 id="参考文献">6 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] CONLAN C. The Blender Python API[M]. Bethesda, Maryland: Apress, 2017: 65-85. DOI: 10.1007&#x2F;978-1-4842-2802-9.<br>[2] Blender Python API Documentation[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/index.html">https://docs.blender.org/api/current/index.html</a>.<br>[3] Blender Stackexchange[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/">https://blender.stackexchange.com/questions/</a>.<br>[4] 一花一世界，一叶一乾坤. Blender 插件编写指南[EB&#x2F;OL]. <a href="https://www.cnblogs.com/yaoyu126/p/9319746.html">https://www.cnblogs.com/yaoyu126/p/9319746.html</a>.<br>[5] Python Documentation[EB&#x2F;OL]. <a href="https://docs.python.org/3/library/functions.html?highlight=dir#dir">https://docs.python.org/3/library/functions.html?highlight=dir#dir</a>.<br>[6] Nikita. Localization of Blender add-ons –with API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/">https://b3d.interplanety.org/en/localization-of-blender-add-ons-with-api/</a>.<br>[7] Nikita. Add-on preferences panel[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/add-on-preferences-panel/">https://b3d.interplanety.org/en/add-on-preferences-panel/</a>.<br>[8] Blendermonkey. How to save custom user preferences for an addon[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362">https://devtalk.blender.org/t/how-to-save-custom-user-preferences-for-an-addon/10362</a>.<br>[9] Skylumz. How to popup simple message box from python console?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console">https://blender.stackexchange.com/questions/109711/how-to-popup-simple-message-box-from-python-console</a>.<br>[10] P2or. How to call a confirmation dialog box?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box">https://blender.stackexchange.com/questions/73286/how-to-call-a-confirmation-dialog-box</a>.<br>[11] Nikita. Creating pop-up panels with user UI in Blender add-on[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/">https://b3d.interplanety.org/en/creating-pop-up-panels-with-user-ui-in-blender-add-on/</a>.<br>[12] TEUSINK D. Force GPU rendering python script[EB&#x2F;OL]. <a href="https://developer.blender.org/T54099">https://developer.blender.org/T54099</a>.<br>[13] Lewis2e. Need a way to detect if a valid GPU device is available from Python[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080">https://devtalk.blender.org/t/need-a-way-to-detect-if-a-valid-gpu-device-is-available-from-python/17080</a>.<br>[14] NEUMANN N. Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[15] Quarkpol. How setup Cycles Compute Device in console[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console">https://blender.stackexchange.com/questions/154249/how-setup-cycles-compute-device-in-console</a>.<br>[16] User2746401. Render using all cores except one (or N)[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n">https://blender.stackexchange.com/questions/45213/render-using-all-cores-except-one-or-n</a>.<br>[17] Nikita. Class naming conventions in Blender 2.8 Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/">https://b3d.interplanety.org/en/class-naming-conventions-in-blender-2-8-python-api/</a>.<br>[18] BARTON C. Python API, changes to type registration in 2.8[EB&#x2F;OL]. <a href="https://developer.blender.org/T52599">https://developer.blender.org/T52599</a>.<br>[19] Blender Addon UI Cookbook[EB&#x2F;OL]. <a href="https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/">https://archive.blender.org/wiki/index.php/Dev:Py/Scripts/Cookbook/Code_snippets/Interface/</a>.<br>[20] Rendering on command‑line with GPU?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/156503/rendering%E2%80%91on%E2%80%91command%E2%80%91line%E2%80%91with%E2%80%91gpu/156680#">https://blender.stackexchange.com/questions/156503/rendering‑on‑command‑line‑with‑gpu/156680#</a>.<br>[21] Why does getting Cycles devices fail with Blender 3.0?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/255371/why%E2%80%91does%E2%80%91getting%E2%80%91cycles%E2%80%91devices%E2%80%91fail%E2%80%91with%E2%80%91blender%E2%80%913%E2%80%910">https://blender.stackexchange.com/questions/255371/why‑does‑getting‑cycles‑devices‑fail‑with‑blender‑3‑0</a>.<br>[22] Python API for getting available devices is getting even more awkward in 2.81[EB&#x2F;OL]. <a href="https://developer.blender.org/T71172">https://developer.blender.org/T71172</a>.<br>[23] How to use bpy.context.scene.use_denoising in Blender 2.8?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/163941/how%E2%80%91to%E2%80%91use%E2%80%91bpy%E2%80%91context%E2%80%91scene%E2%80%91use%E2%80%91denoising%E2%80%91in%E2%80%91blender%E2%80%912%E2%80%918?noredirect=1&lq=1">https://blender.stackexchange.com/questions/163941/how‑to‑use‑bpy‑context‑scene‑use‑denoising‑in‑blender‑2‑8?noredirect=1&amp;lq=1</a>.<br>[24] How Do I Speed Up My Render Times In Cycles And Cycles X?[EB&#x2F;OL]. <a href="https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/">https://www.blenderbasecamp.com/home/how-do-i-speed-my-render-times-in-cycles-and-cycles-x/</a>.<br>[25] How to speed up Blender&#39;s Cycles X rendering engine[EB&#x2F;OL]. <a href="https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/">https://irendering.net/how-to-speed-up-blenders-cycles-x-rendering-engine/</a>.<br>[26] SCRIPT TO DELETE ALL OBJECTS IN 3D WINDOW[EB&#x2F;OL]. <a href="https://blendernet.blogspot.com/2020/10/script%E2%80%91to%E2%80%91delete%E2%80%91all%E2%80%91objects%E2%80%91in%E2%80%913d.html">https://blendernet.blogspot.com/2020/10/script‑to‑delete‑all‑objects‑in‑3d.html</a>.<br>[27] How to list all collections and their objects?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/144928/how%E2%80%91to%E2%80%91list%E2%80%91all%E2%80%91collections%E2%80%91and%E2%80%91their%E2%80%91objects">https://blender.stackexchange.com/questions/144928/how‑to‑list‑all‑collections‑and‑their‑objects</a>.<br>[28] How to get all collections of the current scene?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/167878/how%E2%80%91to%E2%80%91get%E2%80%91all%E2%80%91collections%E2%80%91of%E2%80%91the%E2%80%91current%E2%80%91scene">https://blender.stackexchange.com/questions/167878/how‑to‑get‑all‑collections‑of‑the‑current‑scene</a>.<br>[29] Selecting a specific Collection by name and then deleting it[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/173867/selecting%E2%80%91a%E2%80%91specific%E2%80%91collection%E2%80%91by%E2%80%91name%E2%80%91and%E2%80%91then%E2%80%91deleting%E2%80%91it">https://blender.stackexchange.com/questions/173867/selecting‑a‑specific‑collection‑by‑name‑and‑then‑deleting‑it</a>.<br>[30] How to programmatically add an effect strip[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/73955/how%E2%80%91to%E2%80%91programmatically%E2%80%91add%E2%80%91an%E2%80%91effect%E2%80%91strip#">https://blender.stackexchange.com/questions/73955/how‑to‑programmatically‑add‑an‑effect‑strip#</a>.<br>[31] Blender, video sequencer, insert keyframes for transform.offset by script[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/44238673/blender%E2%80%91video%E2%80%91sequencer%E2%80%91insert%E2%80%91keyframes%E2%80%91for%E2%80%91transform%E2%80%91offset%E2%80%91by%E2%80%91script">https://stackoverflow.com/questions/44238673/blender‑video‑sequencer‑insert‑keyframes‑for‑transform‑offset‑by‑script</a>.<br>[32] How to Create Extensions[EB&#x2F;OL]. <a href="https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html">https://docs.blender.org/manual/en/4.2/advanced/extensions/getting_started.html</a>.<br>[33] How can I call a specific keymap to draw within my AddonPreferences?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#">https://blender.stackexchange.com/questions/1497/how-can-i-call-a-specific-keymap-to-draw-within-my-addonpreferences#</a>.<br>[34] addon_keymap_template[EB&#x2F;OL]. <a href="https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template">https://github.com/pitiwazou/Scripts-Blender/blob/Older-Scripts/addon_keymap_template</a>.<br>[35] How to draw a custom KeyMapItem.properties[EB&#x2F;OL]. <a href="https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059">https://devtalk.blender.org/t/how-to-draw-a-custom-keymapitem-properties/13059</a>.<br>[36] UI: Operator Confirm Dialog Changes #117564[EB&#x2F;OL]. <a href="https://projects.blender.org/blender/blender/pulls/117564">https://projects.blender.org/blender/blender/pulls/117564</a>.<br>[37] WindowManager(ID)[EB&#x2F;OL]. <a href="https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm">https://docs.blender.org/api/current/bpy.types.WindowManager.html#bpy.types.WindowManager.invoke_confirm</a>.<br>[38] Switching workspaces in Blender using Python API[EB&#x2F;OL]. <a href="https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/">https://b3d.interplanety.org/en/switching-workspaces-in-blender-using-python-api/</a>.<br>[39] How to create an Empty of type Image and assign a picture with Python?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#">https://blender.stackexchange.com/questions/10875/how-to-create-an-empty-of-type-image-and-assign-a-picture-with-python#</a>.<br>[40] How to add empty object not using bpy.ops?[EB&#x2F;OL]. <a href="https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops">https://blender.stackexchange.com/questions/51290/how-to-add-empty-object-not-using-bpy-ops</a>.<br>[41] How to use BPY to create an Image empty?[EB&#x2F;OL]. <a href="https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430">https://blenderartists.org/t/how-to-use-bpy-to-create-an-image-empty/606430</a>.<br>[42] Footnotes in longtable captions[EB&#x2F;OL]. <a href="https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions">https://tex.stackexchange.com/questions/50151/footnotes-in-longtable-captions</a>.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以前（不含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共17种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">即blender v4.0以后（含blender v4.0）内置翻译语言列表中 Complete 和 In Progress 两个列表中的语言，共18种。暂不考虑加入 Starting 列表中的语言，因为其变动性较高，有可能被删除或者新添加。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">v1.1之后版本的插件不再是强制接管该功能。虽然可以通过用户偏好设置来设置一个不同于插件的设置值，但在使用插件的该功能或者语言切换按钮后，插件会对该项改写修正为插件的设置值。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">理论上支持任意系统、任意安装路径、任意显卡平台的情况，但Linux OS和Mac OS比较少测试，可能会存在有bug。</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">实际上，在禁用用户偏好设置的自动保存设置功能后，本插件偏好设置面板中的两种语言的属性值也无法自动存储，需要保存在某一工程文件中才行。</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">保存在启动文件也是可行的。</span><a href="#fnref:6" rev="footnote"> ↩</a></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">7.</span><span style="display: inline-block; vertical-align: top;">例如通过安装路径打开主程序的情况或者打开一个工程文件后进行修改却未保存的情况。</span><a href="#fnref:7" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+  </entry>
+  <entry>
+    <title>「批处理工具」使用手册</title>
+    <url>/works/software-works/batch-tools/index.html</url>
+    <content><![CDATA[<h1 id="介绍">1 &nbsp&nbsp<a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一些方便工作的批处理程序。</p>
+<h2 id="背景">1.1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>TODO</p>
+<h2 id="程序目前实现的功能">1.2 &nbsp&nbsp<a href="#程序目前实现的功能" class="headerlink" title="程序目前实现的功能"></a>程序目前实现的功能</h2><ul>
+<li>ffmpeg.sh<ul>
+<li>个人工作：批量操作媒体资源</li>
+<li>压缩媒体资源</li>
+<li>图片转换器：图片格式互转</li>
+<li>视频转换器：视频格式互转</li>
+<li>音频转换器：音频格式互转</li>
+<li>音频元数据标签工具</li>
+<li>音频封面图工具：获取、添加、删除</li>
+<li>媒体资源工具：合并、分割、缩放</li>
+</ul>
+</li>
+<li>text.sh<ul>
+<li>合并文本文件</li>
+</ul>
+</li>
+<li>ffmpeg.bat（不再维护bat）<ul>
+<li>给图片添加版权水印并压缩</li>
+<li>图片压缩</li>
+<li>合并音视频</li>
+<li>视频转封装</li>
+<li>视频压缩：转 hevc 编码</li>
+<li>显卡加速图片序列合成视频</li>
+</ul>
+</li>
+</ul>
+<h1 id="用法">2 &nbsp&nbsp<a href="#用法" class="headerlink" title="用法"></a>用法</h1><h2 id="下载及安装">2.1 &nbsp&nbsp<a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><h3 id="下载步骤">2.1.1 &nbsp&nbsp<a href="#下载步骤" class="headerlink" title="下载步骤"></a>下载步骤</h3><ul>
+<li>下载最新版的<a href="https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases">FFmpeg</a>。</li>
+<li>下载最新版的<a href="https://git-scm.com/download/win">Git for Windows</a>。</li>
+<li>下载<a href="https://github.com/Mister-Kin/BatchTools">批处理工具</a>仓库代码。</li>
+</ul>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/download_ffmpeg.webp">下载FFmpeg</div>
+<div class="flex-column">
+<img data-src="./images/download_git.webp">下载Git for Windows</div>
+<div class="flex-column">
+<img data-src="./images/download_project_code.webp">下载批处理工具代码</div>
+</div>
+
+<h3 id="安装步骤">2.1.2 &nbsp&nbsp<a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="FFmpeg配置">2.1.2.1 &nbsp&nbsp<a href="#FFmpeg配置" class="headerlink" title="FFmpeg配置"></a>FFmpeg配置</h4><ol>
+<li>将前面下载好的FFmpeg压缩包，解压并重命名文件名为ffmpeg放置于C盘根目录。</li>
+<li>WIN+R键打开运行对话框，输入<code>control system</code>。</li>
+<li>在System Path环境变量新建一个路径，定位到FFmpeg路径。</li>
+</ol>
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/1.1.webp">解压重命名放于C盘</div>
+<div class="flex-column">
+<img data-src="./images/1.2.webp">运行对话框</div>
+<div class="flex-column">
+<img data-src="./images/1.3.webp">打开高级系统设置</div>
+<div class="flex-column">
+<img data-src="./images/1.4.webp">打开环境变量</div>
+</div>
+
+<div class="flex-row">
+<div class="flex-column">
+<img data-src="./images/1.5.webp">编辑系统变量Path</div>
+<div class="flex-column">
+<img data-src="./images/1.6.webp">添加一个新路径</div>
+<div class="flex-column">
+<img data-src="./images/1.7.webp">定位路径</div>
+<div class="flex-column">
+<img data-src="./images/1.8.webp">确保添加成功，点击确定</div>
+</div>
+
+<h4 id="安装Git-for-Windows">2.1.2.2 &nbsp&nbsp<a href="#安装Git-for-Windows" class="headerlink" title="安装Git for Windows"></a>安装Git for Windows</h4><p>一路默认安装下去，终端使用Git Bash。</p>
+<h4 id="批处理工具配置">2.1.2.3 &nbsp&nbsp<a href="#批处理工具配置" class="headerlink" title="批处理工具配置"></a>批处理工具配置</h4><p>解压批处理工具代码的压缩包即可，自行确定路径。比如我的路径如下图：</p>
+<div class="flex-column">
+<img data-src="./images/1.9.webp">批处理工具程序路径</div>
+
+<h2 id="使用方法">2.2 &nbsp&nbsp<a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol>
+<li>鼠标右键选择<code>Git Bash Here</code>，即可打开Bash终端。</li>
+<li>输入批处理工具程序的路径，回车执行。</li>
+<li>按菜单提示选择对应功能。</li>
+<li>输入需要操作媒体文件的文件夹路径。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/2.1.webp">输入程序路径执行</div>
+<div class="flex-column">
+<img data-src="./images/2.2.webp">输入操作路径执行</div>
+
+<h2 id="程序功能">2.3 &nbsp&nbsp<a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h2><ul>
+<li>ffmpeg.sh<ul>
+<li>个人工作：批量操作媒体资源<ul>
+<li>给图片添加版权文字水印并压缩</li>
+<li>给视频添加文字版权水印（libx264）</li>
+<li>图片序列导出mp4格式视频（libx264）</li>
+<li>重编码视频导出mp4格式视频（libx264）</li>
+<li>添加字幕（硬编码，libx264）</li>
+<li>显卡加速将图片序列合成为视频（不再维护该功能）</li>
+</ul>
+</li>
+<li>压缩媒体资源<ul>
+<li>压缩图片（原格式压缩或者转换为webp格式）</li>
+<li>压缩视频，转换为hevc编码的mp4格式（libx265）</li>
+</ul>
+</li>
+<li>图片转换器：图片格式互转<ul>
+<li>图片转png格式</li>
+</ul>
+</li>
+<li>视频转换器：视频格式互转<ul>
+<li>视频转mp4格式</li>
+</ul>
+</li>
+<li>音频转换器：音频格式互转<ul>
+<li>无损音频转m4a格式</li>
+</ul>
+</li>
+<li>音频元数据标签工具<ul>
+<li>根据元数据标签重命名音频文件</li>
+<li>根据音频文件名修改元数据标签</li>
+<li>设置音频文件的专辑名</li>
+<li>设置音频文件的歌曲名</li>
+<li>设置音频文件的歌手名</li>
+</ul>
+</li>
+<li>音频封面图工具：获取、添加、删除<ul>
+<li>获取音频封面图</li>
+<li>添加音频封面图</li>
+<li>删除音频封面图</li>
+</ul>
+</li>
+<li>媒体资源工具：合并、分割、缩放<ul>
+<li>合并音视频：mp4+m4a&#x2F;mp3</li>
+<li>分割视频</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>text.sh<ul>
+<li>合并文本文件<ul>
+<li>合并文本文件（文件首尾拼接）</li>
+<li>合并文本文件（逐行拼接合并）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ffmpeg.bat（不再维护bat）<ul>
+<li>给图片添加版权水印并压缩</li>
+<li>图片压缩：转 webp</li>
+<li>合并音视频：mp4 + m4a</li>
+<li>视频转封装：flv -&gt; mp4</li>
+<li>视频压缩：转 hevc 编码（libx265）</li>
+<li>显卡加速图片序列合成视频：普通录屏（jpg + wav -&gt; h264_nvenc + aac）</li>
+<li>显卡加速图片序列合成视频：CG（png + wav -&gt; h264_nvenc + aac）</li>
+</ul>
+</li>
+</ul>
+<h1 id="开发记录">3 &nbsp&nbsp<a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><h2 id="开发与测试环境">3.1 &nbsp&nbsp<a href="#开发与测试环境" class="headerlink" title="开发与测试环境"></a>开发与测试环境</h2><p>OS: Win10 v22H2 &#x2F; Arch Linux &#x2F; Mac<br>Shell: Git Bash &#x2F; Zsh</p>
+<h1 id="作者">4 &nbsp&nbsp<a href="#作者" class="headerlink" title="作者"></a>作者</h1><p><strong>批处理工具</strong> © Mr. Kin，所有文件均采用 <a href="https://github.com/Mister-Kin/BatchTools/blob/master/LICENSE">WTFPL</a> 许可协议进行发布。</p>
+<p>由 Mr. Kin 著作并维护。</p>
+]]></content>
   </entry>
 </search>
