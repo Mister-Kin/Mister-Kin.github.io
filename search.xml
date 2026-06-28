@@ -62,9 +62,36 @@
             if (links.length === 0) return;
             // 创建显示链接数量的 span
             const countSpan = document.createElement('span');
-            countSpan.style.cssText = 'color: #fff; font-size: 0.9em; margin-left: .5em; font-weight: normal;';
+            countSpan.style.cssText = 'color: #fff; font-size: 0.9em; margin-left: 0.5em; font-weight: normal;';
             countSpan.innerText = `(${links.length})`;
             tag.appendChild(countSpan);
+        });
+    }
+
+    // 统计每个 H1 标题下 text-box-container 的链接总数，并显示在 H1 标题之后
+    function addLinkCountToH1Headers() {
+        const h1Headers = document.querySelectorAll('.post-body h1');
+        h1Headers.forEach((h1) => {
+            // 查找 H1 后面的第一个 text-box-container，获取 H1 的下一个兄弟元素
+            let nextEl = h1.nextElementSibling;
+            // 只要 nextEl 不是 text-box-container，就继续向后找
+            while (nextEl && (!nextEl.classList || !nextEl.classList.contains('text-box-container'))) {
+                nextEl = nextEl.nextElementSibling;
+            }
+            // 三元运算符? nextEl : null前面的语句，等价于nextEl && nextEl.classList && nextEl.classList.contains('text-box-container')
+            // 如果 nextEl 是 null 或 undefined → 短路返回 undefined，不继续执行
+            // 如果 nextEl.classList 是 null 或 undefined → 短路返回 undefined，不继续执行
+            // 只有两者都存在 → 才执行 .contains(...)，这个结果作为三元运算符的判断条件
+            const container = nextEl?.classList?.contains('text-box-container') ? nextEl : null;
+            if (!container) return;
+            // 统计该容器内所有 <a> 标签数量
+            const links = container.getElementsByTagName('a');
+            if (links.length === 0) return;
+            // 创建显示链接数量的 span，插入到 H1 标题之后
+            const countSpan = document.createElement('span');
+            countSpan.style.cssText = 'color: var(--text-color); font-size: 0.9em; margin-left: 0.5em; font-weight: normal; opacity: 0.8;';
+            countSpan.innerText = `(${links.length} links)`;
+            h1.appendChild(countSpan);
         });
     }
 
@@ -72,6 +99,7 @@
     const onReady = () => {
         countBookmarkLinks();
         addLinkCountToTags();
+        addLinkCountToH1Headers();
     };
 
     if (document.readyState === 'loading') {
@@ -1890,7 +1918,7 @@
     <a href="https://archive.org/details/tiny-11-24-h-2-x-64-26100.1742">tiny11 24H2</a>
     <a href="https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool">Windows and Office ISO Downloader</a>
     <a href="https://www.winos.me/">精简WinOS系统</a>
-    <a href="https://download.cmgos.com/oem/login" title="OEM序列号SN：0601000000000，激活可用MAS脚本的TSforge方案。OOBE阶段，密码必须大于8位且包含大小写字母和数字，且还要填写3个安全问题，无法跳过。每次进入电脑桌面都要按下【Ctrl+Alt+Delete】组合键方可进入。注册表默认关闭权限，无法直接获得打开摄像头和麦克风的权限，像远程电脑也是，可以远程别人的，别人无法远程本机。">神州网信CMIT(政府定制版Win10)ℹ️</a>
+    <a href="https://download.cmgos.com/oem/login" title="OEM序列号SN：0601000000000，激活可用MAS脚本的TSforge方案。OOBE阶段，密码必须大于8位且包含大小写字母和数字，且还要填写3个安全问题，无法跳过。每次进入电脑桌面都要按下【Ctrl+Alt+Delete】组合键方可进入。注册表默认关闭权限，无法直接获得打开摄像头和麦克风的权限，像远程电脑也是，可以远程别人的，别人无法远程本机。">Win10-CMIT(神州网信政府版)ℹ️</a>
 </div>
 
 <div class="text-box">
@@ -2106,10 +2134,10 @@
 
 <div class="text-box">
     <div class="tag-align">
-    <p class="tag-bookmark-page">硬件ID&硬件查询</p>
+    <p class="tag-bookmark-page">硬件ID&硬件查询&USB ID</p>
     </div>
-    <a href="https://the-sz.com/products/usbid/">USB ID Database</a>
     <a href="https://devicehunt.com/">DeviceHunt</a>
+    <a href="https://the-sz.com/products/usbid/">USB ID Database</a>
     <a href="https://www.devicekb.com/hardware/lookup">Hardware ID Lookup</a>
     <a href="https://www.intel.cn/content/www/cn/zh/products/details/processors.html">Intel CPU处理器SKU</a>
     <a href="https://www.amd.com/zh-cn/products/specifications.html">AMD CPU处理器SKU</a>
@@ -2368,6 +2396,7 @@
     <a href="https://dgpu-docs.intel.com/driver/client/overview.html#ubuntu-latest">Intel英特尔®显卡驱动(ubuntu linux)</a>
     <a href="https://www.wagnardsoft.com/display-driver-uninstaller-DDU-">DDU显卡驱动卸载工具</a>
     <a href="https://www.techpowerup.com/download/techpowerup-nvcleanstall/">NVCleanstall显卡驱动卸载</a>
+    <a href="https://drivers.amd.com/drivers/amdcleanuputility.exe" title="原始帖子链接：https://www.amd.com/en/resources/support-articles/faqs/GPU-601.htm，如果使用该工具进入安全模式，原理是msconfig设置了安全引导，这个选项不取消勾选，重启也会持续生效进入安全模式">AMD显卡驱动&音频驱动卸载</a>
     <a href="https://www.glenfly.com/index.php?catid=23" title="国产品牌中，驱动兼容较好，包括win平台">Glenfly格兰菲驱动</a>
     <a href="https://www.mthreads.com/pes/drivers/search">摩尔线程驱动</a>
     <a href="https://www.fantasyxpu.com/support/driver-download" title="风华2号Linux驱动3.3.3.42之后的版本，名称变更为fantgpu开头，而不是innogpu开头(dpkg和lsmod都可以查看)。安装新版fant会自动生效使用，旧版inno不会自动删除但也不生效。母公司是芯动科技，芯动官网已下架驱动链接。">风华1/2/3号驱动|风华创智ℹ️</a>
@@ -3165,126 +3194,6 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       <categories>
         <category>cad</category>
       </categories>
-  </entry>
-  <entry>
-    <title>闪存驱动器设计</title>
-    <url>/cad/flash-disk/</url>
-    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
-<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
-<p>部分店铺的网评：大树推荐，翼浪排除</p>
-</blockquote>
-<p><strong>店铺总结（个人购买经验总结）：</strong></p>
-<ul>
-<li>南翔科技（TB）：东芝颗粒。发货的芯片都是已经值球的（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
-<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
-<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
-</ul>
-<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
-<li>一般的主控选择：不要4K上 903。要4K，单贴3281，双贴3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
-<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
-</ul>
-<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
-<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
-<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
-<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
-</ul>
-</li>
-<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
-<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
-<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
-</ul>
-</li>
-<li>THGBMFG9C4LBAIR：64GB<ul>
-<li>颗粒从酷派平板拆出来</li>
-</ul>
-</li>
-<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
-<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
-</ul>
-</li>
-<li>NW852（7WB2D&#x2F;7ZB2D）：镁光64GB颗粒，BGA132封装，ID为2CB47832AA04。<ul>
-<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
-</ul>
-</li>
-<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
-<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
-</ul>
-</li>
-<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
-<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
-<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
-<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
-</ul>
-</li>
-<li>ID为EC1E98AF84CD，三星TLC颗粒，查到资料有U盘用SM3281BB主控芯片开这个颗粒<ul>
-<li>从威刚SX8200 Pro（容量未知）拆出来，SX8200NPB1</li>
-<li>主控：SM2262 BC（TB1M12.00） TW 2D</li>
-</ul>
-</li>
-</ul>
-<p>颗粒的部分资料：</p>
-<ul>
-<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
-</ul>
-<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
-<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
-<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
-<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
-<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
-<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
-</ul>
-<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
-<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
-<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
-<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
-</ul>
-<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
-<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
-<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
-<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
-</ul>
-<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
-<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
-<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
-<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
-<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
-</ul>
-<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
-<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
-<li>焊接颗粒到主控盘，插上电脑</li>
-<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
-<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
-<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
-<li>「量产测试」标签页点击「开始」就会开始量产</li>
-</ol>
-<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
-<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
-<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
-<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
-<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
-</ul>
-<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
-<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
-<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
-<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
-<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
-</ul>
-<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>cad</category>
-      </categories>
-      <tags>
-        <tag>量产</tag>
-        <tag>U盘</tag>
-        <tag>固态</tag>
-        <tag>开卡</tag>
-        <tag>测试架</tag>
-        <tag>主控</tag>
-        <tag>颗粒</tag>
-      </tags>
   </entry>
   <entry>
     <title>笔记本硬件基础</title>
@@ -4240,6 +4149,126 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
       </tags>
   </entry>
   <entry>
+    <title>闪存驱动器设计</title>
+    <url>/cad/flash-disk/</url>
+    <content><![CDATA[<h1 id="焊接技巧">1 &nbsp&nbsp<a href="#焊接技巧" class="headerlink" title="焊接技巧"></a>焊接技巧</h1><p>详看<a href="/cad/pcb/#%E7%84%8A%E6%8E%A5%E6%80%BB%E7%BB%93">「PCB设计」的焊接总结</a></p>
+<h1 id="店铺点评">2 &nbsp&nbsp<a href="#店铺点评" class="headerlink" title="店铺点评"></a>店铺点评</h1><blockquote>
+<p>部分店铺的网评：大树推荐，翼浪排除</p>
+</blockquote>
+<p><strong>店铺总结（个人购买经验总结）：</strong></p>
+<ul>
+<li>南翔科技（TB）：东芝颗粒。发货的芯片都是已经值球的（自己懒得值球的，推荐这个店铺买颗粒，省事）</li>
+<li>QFZ FLY SPEED SSD U盘（TB）：IS903主控板+外壳。（外壳设计属于个人觉得很好看的金属壳，主控板买了四块都正常工作）</li>
+<li>约翰的咖啡屋（TB）：模块化测试架。（模块化的设计十分优秀，买了一个IS903测试架，使用超级方便）</li>
+</ul>
+<h1 id="主控和颗粒的选择">3 &nbsp&nbsp<a href="#主控和颗粒的选择" class="headerlink" title="主控和颗粒的选择"></a>主控和颗粒的选择</h1><ul>
+<li>一般的主控选择：不要4K上 903。要4K，单贴3281，双贴3280。（3280和3281在4k性能差不多，3280好一点）。预算足够的话，可考虑2246xt&#x2F;2246en。</li>
+<li>东芝颗粒在IS903主控上的适配性和兼容性都比较好</li>
+</ul>
+<h2 id="部分颗粒总结">3.1 &nbsp&nbsp<a href="#部分颗粒总结" class="headerlink" title="部分颗粒总结"></a>部分颗粒总结</h2><ul>
+<li>TH58TEG9DDKBA8H：经典DDK 64GB MLC颗粒，BGA132封装。ID为983A95937AD0。IS903单贴顺序读取312MB，写入101MB。4K读取7.7MB，写入0.26MB。</li>
+<li>TH58TFG9EFLBS8C：EFL 64GB MLC颗粒，BGA132封装。ID为983A3AA4A493937A7AD1D1。IS903单贴顺序读取300MB，写入79.89MB。4K读取7.7MB，写入0.26MB。IS903双贴EFL性能和单贴DDK性能差不多。<ul>
+<li>颗粒是从东芝Q200 EX固态拆出来（主控为TC358790XBG）</li>
+</ul>
+</li>
+<li>TH58TFT0DFKBA8J：DFK 128GB MLC颗粒，BGA152封装。ID为983CA5937ED0。IS903双贴顺序读取212MB，顺序写入183MB。4K读取5.25MB，写入0.26MB。</li>
+<li>29F2T08EMLCE：132BGA封装，256GB，镁光后打的自封丝印，网络资料传为B27B晶圆。IS903测试架检测ID为：2C2CC3C308083232E6E600，无法量产。可尝试用PS3111主控量产开卡。<ul>
+<li>颗粒是从七彩虹SL500固态拆出来（主控为MAS0902A-B2C）</li>
+</ul>
+</li>
+<li>THGBMFG9C4LBAIR：64GB<ul>
+<li>颗粒从酷派平板拆出来</li>
+</ul>
+</li>
+<li>FB51208UCN1（表面丝印层印有金士顿logo）（颗粒本身实际为英特尔 144层QLC 3D NAND颗粒）：512GB<ul>
+<li>颗粒从金士顿NV2 1TB（PCIe 4.0 NVMe M.2）（SNV2S&#x2F;1000GCN，99M7461-021.A01G，1054433-2337）拆出来（主控为SM2267XTV）</li>
+</ul>
+</li>
+<li>NW852（7WB2D&#x2F;7ZB2D）：镁光64GB颗粒，BGA132封装，ID为2CB47832AA04。<ul>
+<li>颗粒从HP SSD S700 M.2 250GB拆出来，PN：2LU79AA#UUF（主控为hp 1746 H6008 G AB N1GX89 00）</li>
+</ul>
+</li>
+<li>LGLY256G09CB1（第二行丝印LP2350J120，第三行丝印CD08AI42384）：256GB<ul>
+<li>颗粒从梵想256G固态U盘FF520拆出来（A&#x2F;C双口+USB 3.2）（主控为Maxio MAS1102B-B1C AFNA8R41003 2224 &#x2F; Maxio MAS1102B-B1C AANA1B21313 2342，桥接芯片JMS580）</li>
+</ul>
+</li>
+<li>SEC116 K9DVGY8 J5BDCK0 PUAC189VC：1TB<ul>
+<li>从三星980Pro 2TB固态拆出来，PN MZVL22T0HBLB，MODEL MZ-V8P2T0，2021.05</li>
+<li>缓存芯片：SEC 052 K4F6E3S 4HMBGCH HAKVP490</li>
+<li>主控：SAMSUNG S4LV003 NPA0ZSYH 2214 ARM ELPIS</li>
+</ul>
+</li>
+<li>ID为EC1E98AF84CD，三星TLC颗粒，查到资料有U盘用SM3281BB主控芯片开这个颗粒<ul>
+<li>从威刚SX8200 Pro（容量未知）拆出来，SX8200NPB1</li>
+<li>主控：SM2262 BC（TB1M12.00） TW 2D</li>
+</ul>
+</li>
+</ul>
+<p>颗粒的部分资料：</p>
+<ul>
+<li><a href="https://www.mydigit.cn/thread-142601-1-1.html">[慧荣] SM2258XT固件 29F2T08EMLCE颗粒</a></li>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=230139">[慧荣] B27B的颗粒有解了</a></li>
+</ul>
+<h1 id="颗粒芯片资料查询">4 &nbsp&nbsp<a href="#颗粒芯片资料查询" class="headerlink" title="颗粒芯片资料查询"></a>颗粒芯片资料查询</h1><ul>
+<li><a href="https://www.flashinfo.top/">「翼浪数码」店铺的FlashInfo网站</a></li>
+<li><a href="https://fm-us.xfjportal.com/">在线FlashMaster</a></li>
+<li><a href="https://www.usbdev.ru/">USBDEV（需要海外IP）</a></li>
+<li><a href="https://www.diyflash.top/">diyflash（usbdev.ru镜像站）</a></li>
+<li><a href="https://file.diyflash.top/">diyflash（资源分享站）</a></li>
+</ul>
+<h1 id="开卡量产工具">5 &nbsp&nbsp<a href="#开卡量产工具" class="headerlink" title="开卡量产工具"></a>开卡量产工具</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-495185-1-1.html">[Other] 固态硬盘量产工具合集（2025.1.28）</a></li>
+<li><a href="http://am.adianshi.com:6805/%E5%BC%80%E5%8D%A1%E8%BD%AF%E4%BB%B6/">「明丽电子」店铺的资料文件共享链接</a></li>
+<li><a href="https://down.wttx.ltd/mp_tools/">「球球的折腾铺子」店铺的资料文件共享链接</a></li>
+<li><a href="https://www.ssdtool.cc/ma">https://www.ssdtool.cc/ma</a></li>
+</ul>
+<h1 id="测试架资料">6 &nbsp&nbsp<a href="#测试架资料" class="headerlink" title="测试架资料"></a>测试架资料</h1><ul>
+<li><a href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=204030">[其他] 请叫我“撸架狂魔”——秀一下这两些年撸过的测试架！</a></li>
+<li><a href="https://www.mydigit.cn/thread-360745-1-1.html">[芯邦] 自打板6层沉金CBM2199测试架简单测试+大量晒图(支持1.2V、1.8V、3.3V 3D颗粒)</a></li>
+<li><a href="https://www.mydigit.cn/thread-263993-1-1.html">[安国] 安国AU6989主控这下真是全球通了，居然还能支持长江颗粒</a></li>
+</ul>
+<h1 id="主控芯片资料">7 &nbsp&nbsp<a href="#主控芯片资料" class="headerlink" title="主控芯片资料"></a>主控芯片资料</h1><ul>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=50691&extra=page=">常见固态U盘主控芯片介绍总结</a></li>
+<li><a href="https://bbs.luobotou.org/bstra/forum.php?mod=viewthread&tid=47287&extra=page=">主流USB3.0闪存盘主控介绍</a></li>
+<li><a href="https://www.mydigit.cn/thread-202315-1-1.html">[闪存] U盘主控解析（转发技术宅小唐）</a></li>
+<li><a href="https://www.mydigit.cn/thread-306846-1-1.html">[SMI] 流言终结者之：SM2258XT是不是最好的固态U盘主控</a></li>
+<li><a href="https://www.mydigit.cn/thread-85081-1-1.html">[慧荣] 新人必看：玩了这么久SM3280&#x2F;3281，一些经验分享给大家</a></li>
+</ul>
+<h1 id="IS903">8 &nbsp&nbsp<a href="#IS903" class="headerlink" title="IS903"></a>IS903</h1><p><a href="https://www.upantool.com/jiaocheng/liangchan/Innostor/13507.html">银灿主控的U盘量产怎么调整ECC大小，多大合适</a></p>
+<h2 id="量产开卡步骤">8.1 &nbsp&nbsp<a href="#量产开卡步骤" class="headerlink" title="量产开卡步骤"></a>量产开卡步骤</h2><ol>
+<li>焊接颗粒到主控盘，插上电脑</li>
+<li>打开量产工具软件，「量产测试」标签页点击「搜寻装置」，点击下方通道查看是否有识别到颗粒ID</li>
+<li>摁F9，点击强力擦除（量产之前推荐先擦除）</li>
+<li>「量产设定」标签页，点击「编辑」，输入密码<code>IS0024</code>，设定好参数，点击「存档」</li>
+<li>「量产测试」标签页点击「开始」就会开始量产</li>
+</ol>
+<h2 id="部分资料">8.2 &nbsp&nbsp<a href="#部分资料" class="headerlink" title="部分资料"></a>部分资料</h2><ul>
+<li><a href="https://www.cnblogs.com/DLHC-TECH/p/IS903_FLASH-DRIVE_D-P10.html">银灿IS903主控 + MT29F64G08CBAAA(NAND) 制作8GB闪存驱动器</a></li>
+<li><a href="https://www.mydigit.cn/thread-336398-1-1.html">[银灿] 免费共享IS903测试架原理图+PCB资料，带04T跳线，电压跳线</a></li>
+<li><a href="https://www.mydigit.cn/thread-219825-1-1.html">[银灿] ISD903-V6.0主控板上市，彻底解决了Win10系统下掉盘的问题</a></li>
+<li><a href="https://github.com/prashant87/IS903">prashant87&#x2F;IS903</a></li>
+</ul>
+<h1 id="关于开卡设定参数的帖子链接">9 &nbsp&nbsp<a href="#关于开卡设定参数的帖子链接" class="headerlink" title="关于开卡设定参数的帖子链接"></a>关于开卡设定参数的帖子链接</h1><ul>
+<li><a href="https://www.mydigit.cn/thread-23817-1-1.html">[银灿] 如何添加参数让银灿IS903支持自己的Flash颗粒-小白晋级+备忘</a></li>
+<li><a href="https://www.mydigit.cn/thread-240834-1-1.html">[Toshiba] 东芝9DDK在sm2246xt上写入速度低的终极解决办法</a></li>
+<li><a href="https://www.mydigit.cn/thread-153446-1-1.html">[慧荣] 发一个自己总结的SM3280、SM3281改参数的教程</a></li>
+<li><a href="https://www.mydigit.cn/thread-285939-1-1.html">[慧荣] 修改forceflash文件里的一个小小参数，增容SM3280&#x2F;3281贴东芝颗粒增容</a></li>
+</ul>
+<h1 id="参考文献">10 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>cad</category>
+      </categories>
+      <tags>
+        <tag>量产</tag>
+        <tag>U盘</tag>
+        <tag>固态</tag>
+        <tag>开卡</tag>
+        <tag>测试架</tag>
+        <tag>主控</tag>
+        <tag>颗粒</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>电路仿真设计</title>
     <url>/cad/simulation/</url>
     <content><![CDATA[<h1 id="Proteus仿真">1 &nbsp&nbsp<a href="#Proteus仿真" class="headerlink" title="Proteus仿真"></a>Proteus仿真</h1><h2 id="仿真时时间流动过慢">1.1 &nbsp&nbsp<a href="#仿真时时间流动过慢" class="headerlink" title="仿真时时间流动过慢"></a>仿真时时间流动过慢</h2><p>可能存在的原因：</p>
@@ -5006,7 +5035,7 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#x74;&#64;&#x31;&#55;&#x32;&#46;&#49;&#x39;&#46;&#x30;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#x74;&#64;&#x31;&#55;&#50;&#46;&#x31;&#57;&#x2e;&#48;&#x2e;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -11355,6 +11384,11 @@ QQ二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px">
 <li>make &#x2F;lib&#x2F;modules&#x2F;xxx&#x2F;build no such file or directory：证明无 header</li>
 <li>在新系统上编译老驱动可能会遇到&#39;SUBDIRS&#39; was removed in Linux 5.3 Use &#39;M&#x3D;&#39; or &#39;KBUILD_EXTMOD&#x3D;&#39; instead：这代表驱动太老了，驱动代码的编译流程已不适合新系统。</li>
 </ul>
+<h3 id="源代码文件的修改时间比当前系统时间还“新”时，构建报错">6.4.1 &nbsp&nbsp<a href="#源代码文件的修改时间比当前系统时间还“新”时，构建报错" class="headerlink" title="源代码文件的修改时间比当前系统时间还“新”时，构建报错"></a>源代码文件的修改时间比当前系统时间还“新”时，构建报错</h3><p>报错提示：<code>Warning: File &#39;xxx&#39; has modification time yyy s in the future</code></p>
+<p>报错原因：源代码文件的修改时间比当前系统时间还“新”时，即时间在未来future</p>
+<p>解决方法：修正文件「修改时间」的时间戳，修复make构建异常导致编译不完整</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">touch</span> &#123;&#125; +</span><br></pre></td></tr></table></figure>
+
 <h1 id="账户管理">7 &nbsp&nbsp<a href="#账户管理" class="headerlink" title="账户管理"></a>账户管理</h1><h2 id="删除账户">7.1 &nbsp&nbsp<a href="#删除账户" class="headerlink" title="删除账户"></a>删除账户</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">userdel [-r] [user_account] <span class="comment"># 切换到其他账户再执行，建议是root账户</span></span><br><span class="line">userdel -r kin <span class="comment"># 删除账户kin，-r参数是移除该账户的home目录和用户邮箱（mail spool）</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="自动root登录">7.2 &nbsp&nbsp<a href="#自动root登录" class="headerlink" title="自动root登录"></a>自动root登录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gedit /etc/gdm/custom.conf</span><br><span class="line"><span class="comment"># 在daemon下添加</span></span><br><span class="line">AutomaticLoginEnable=True</span><br><span class="line">AutomaticLogin=root</span><br></pre></td></tr></table></figure>
@@ -13235,7 +13269,18 @@ title UDP Packet
 <li>视觉效果：最佳性能【勾选平滑屏幕字体边缘】</li>
 <li>电源选项</li>
 </ul>
-<h1 id="参考文献">25 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[2] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[3] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[4] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[5]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[6] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.<br>[7] Microsoft账户无法登录怎么办？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/449928889">https://www.zhihu.com/question/449928889</a>.<br>[8] 技术 | Windows 10 更新新版微软商城（Microsoft Store） [EB&#x2F;OL]. <a href="https://www.sizau.com/a/update-microsoft-store.html">https://www.sizau.com/a/update-microsoft-store.html</a>.<br>[9] WIN10安装NVIDIA面板两种方式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/144801155">https://zhuanlan.zhihu.com/p/144801155</a>.<br>[10] 更新完显卡驱动，任务管理器里N卡的CUDA没了[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_45888599/article/details/119672852">https://blog.csdn.net/weixin_45888599/article/details/119672852</a>.<br>[11] User Profile Service 服务登录失败 无法加载用户配置文件[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/5e913b9cf74d">https://www.jianshu.com/p/5e913b9cf74d</a>.<br>[12] Windows10切换用户显示User Profile Service或ProfSvc服务登录失败[EB&#x2F;OL]. <a href="https://blog.csdn.net/Stand_Fast/article/details/119488113">https://blog.csdn.net/Stand_Fast/article/details/119488113</a>.<br>[13] 【经验之谈】“User Profile Service 服务未能登录,无法加载用户配置文件”实战历程[EB&#x2F;OL]. <a href="https://blog.51cto.com/weixiao43/506699">https://blog.51cto.com/weixiao43/506699</a>.<br>[14] Win10 电脑连接U盘&#x2F;移动硬盘失败解决方法分享，该设备的驱动程序未被安装。（代码28）[EB&#x2F;OL]. <a href="https://blog.csdn.net/XiaoMuiii/article/details/132660886">https://blog.csdn.net/XiaoMuiii/article/details/132660886</a>.<br>[15] 蓝屏代码0x00000109 错误分析.[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_35206244/article/details/113805925">https://blog.csdn.net/qq_35206244/article/details/113805925</a>.<br>[16] [求助] (已解决)请问怎么关闭&quot;无法打开此ms-gamebar&quot;弹窗，谢谢？.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1972471-1-1.html">https://bbs.pcbeta.com/viewthread-1972471-1-1.html</a>.<br>[17] Win11更新不能连接服务器的解决方法.[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/4c1edd1f08a8">https://www.jianshu.com/p/4c1edd1f08a8</a>.<br>[18] Windows11显示“无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet”.[EB&#x2F;OL]. <a href="https://answers.microsoft.com/zh-hans/windows/forum/all/windows11%E6%98%BE%E7%A4%BA%E6%97%A0%E6%B3%95/ebbafb81-7002-4f54-a565-cdc4a89f3c31">https://answers.microsoft.com/zh-hans/windows/forum/all/windows11%E6%98%BE%E7%A4%BA%E6%97%A0%E6%B3%95/ebbafb81-7002-4f54-a565-cdc4a89f3c31</a>.<br>[19] Run Docker and VMware&#x2F;VirtualBox at the same time in Windows[EB&#x2F;OL]. <a href="https://medium.com/@eng.binasaker/run%E2%80%91docker%E2%80%91and%E2%80%91vmware%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time%E2%80%91in%E2%80%91windows%E2%80%91dabf32babd71">https://medium.com/@eng.binasaker/run‑docker‑and‑vmware‑at‑the‑same‑time‑in‑windows‑dabf32babd71</a>.<br>[20] Windows电脑睡眠中自动唤醒的原因和解决方法[EB&#x2F;OL]. <a href="https://baiyunju.cc/11568">https://baiyunju.cc/11568</a>.<br>[21] Reinstall and Re-register Microsoft Edge in Windows 10[EB&#x2F;OL]. <a href="https://www.tenforums.com/tutorials/28655-reinstall-re-register-microsoft-edge-windows-10-a.html">https://www.tenforums.com/tutorials/28655-reinstall-re-register-microsoft-edge-windows-10-a.html</a>.<br>[22] New Windows driver blocks software from changing default web browser[EB&#x2F;OL]. <a href="https://www.bleepingcomputer.com/news/microsoft/new-windows-driver-blocks-software-from-changing-default-web-browser/">https://www.bleepingcomputer.com/news/microsoft/new-windows-driver-blocks-software-from-changing-default-web-browser/</a>.<br>[23] [技术] 详细探讨一下12、13代酷睿处理器在Win11、W10中大小核调度[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1966999-2-1.html">https://bbs.pcbeta.com/viewthread-1966999-2-1.html</a>.<br>[24] [技术] win10_电源方案设置为卓越性能节能高效设置[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994529-1-1.html">https://bbs.pcbeta.com/viewthread-1994529-1-1.html</a>.<br>[25] Windows 10 科学计算 CPU大小核调度策略试验与设置建议[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/660344272">https://zhuanlan.zhihu.com/p/660344272</a>.<br>[26] win10安装openssh失败，使用离线安装包[EB&#x2F;OL]. <a href="https://www.cnblogs.com/zhg1016/p/17353348.html">https://www.cnblogs.com/zhg1016/p/17353348.html</a>.<br>[27] 安全中心无法打开【2024年1月】[EB&#x2F;OL]. <a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83%E6%97%A0/220c53f6-09eb-4306-a969-98adadd6c1e3">https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83%E6%97%A0/220c53f6-09eb-4306-a969-98adadd6c1e3</a>.<br>[28] Windows共享文件夹无法访问，提示“不允许一个用户使用一个以上用户名与服务器或共享资源的多重连接”[EB&#x2F;OL]. <a href="https://www.cnblogs.com/sunnyhill/p/11780248.html">https://www.cnblogs.com/sunnyhill/p/11780248.html</a>.<br>[29] window10 电脑总是会从睡眠模式中自动唤醒[EB&#x2F;OL]. <a href="https://blog.csdn.net/lsllll44/article/details/116880276">https://blog.csdn.net/lsllll44/article/details/116880276</a>.<br>[30] Windows 11 睡眠后立即莫名唤醒问题[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/636133226">https://zhuanlan.zhihu.com/p/636133226</a>.</p>
+<h1 id="启动模式">25 &nbsp&nbsp<a href="#启动模式" class="headerlink" title="启动模式"></a>启动模式</h1><h2 id="安全模式">25.1 &nbsp&nbsp<a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h2><ul>
+<li>一次性启用安全模式：（重启系统就会恢复正常启动模式）<ul>
+<li>方案一：<code>shutdown /r /t 0 /o</code>启动到高级启动选项界面，高级选项-&gt;启动设置-&gt;启动，然后按数字选择模式</li>
+<li>方案二：Windows更新-&gt;高级选型-&gt;恢复-&gt;高级启动-&gt;启动到高级启动选项界面，高级选项-&gt;启动设置-&gt;启动，然后按数字选择模式</li>
+</ul>
+</li>
+<li>永久持续启动安全模式：<ul>
+<li>msconfig打开Win系统配置，引导-&gt;引导选项-&gt;勾选启用「安全引导」（如果不取消勾选，即使重启也会进入安全模式）</li>
+</ul>
+</li>
+</ul>
+<h1 id="参考文献">26 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 远程桌面连接出错「用户账户限制会阻止你登录...」[EB&#x2F;OL]. <a href="https://blog.csdn.net/tian_ci/article/details/106790244">https://blog.csdn.net/tian_ci/article/details/106790244</a>.<br>[2] win10 系统怎么删除远程桌面连接记录[EB&#x2F;OL]. <a href="https://blog.csdn.net/COCO56/article/details/102671007">https://blog.csdn.net/COCO56/article/details/102671007</a>.<br>[3] 公用网络切换为专用网络的详细步骤[EB&#x2F;OL]. <a href="https://blog.csdn.net/xuzishe/article/details/110818980">https://blog.csdn.net/xuzishe/article/details/110818980</a>.<br>[4] 如何使用 Windows 自带的 OpenSSH 服务端[EB&#x2F;OL]. <a href="https://www.cnblogs.com/lfri/p/13423261.html">https://www.cnblogs.com/lfri/p/13423261.html</a>.<br>[5]【Windows】允许空密码连接 Windows 的 OpenSSH Server[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/1ec72a019bd9">https://www.jianshu.com/p/1ec72a019bd9</a>.<br>[6] 解决 Windows 10 防火墙开启后无法 ping 通的问题[EB&#x2F;OL]. <a href="https://blog.csdn.net/coco56/article/details/105800213">https://blog.csdn.net/coco56/article/details/105800213</a>.<br>[7] Microsoft账户无法登录怎么办？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/449928889">https://www.zhihu.com/question/449928889</a>.<br>[8] 技术 | Windows 10 更新新版微软商城（Microsoft Store） [EB&#x2F;OL]. <a href="https://www.sizau.com/a/update-microsoft-store.html">https://www.sizau.com/a/update-microsoft-store.html</a>.<br>[9] WIN10安装NVIDIA面板两种方式[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/144801155">https://zhuanlan.zhihu.com/p/144801155</a>.<br>[10] 更新完显卡驱动，任务管理器里N卡的CUDA没了[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_45888599/article/details/119672852">https://blog.csdn.net/weixin_45888599/article/details/119672852</a>.<br>[11] User Profile Service 服务登录失败 无法加载用户配置文件[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/5e913b9cf74d">https://www.jianshu.com/p/5e913b9cf74d</a>.<br>[12] Windows10切换用户显示User Profile Service或ProfSvc服务登录失败[EB&#x2F;OL]. <a href="https://blog.csdn.net/Stand_Fast/article/details/119488113">https://blog.csdn.net/Stand_Fast/article/details/119488113</a>.<br>[13] 【经验之谈】“User Profile Service 服务未能登录,无法加载用户配置文件”实战历程[EB&#x2F;OL]. <a href="https://blog.51cto.com/weixiao43/506699">https://blog.51cto.com/weixiao43/506699</a>.<br>[14] Win10 电脑连接U盘&#x2F;移动硬盘失败解决方法分享，该设备的驱动程序未被安装。（代码28）[EB&#x2F;OL]. <a href="https://blog.csdn.net/XiaoMuiii/article/details/132660886">https://blog.csdn.net/XiaoMuiii/article/details/132660886</a>.<br>[15] 蓝屏代码0x00000109 错误分析.[EB&#x2F;OL]. <a href="https://blog.csdn.net/qq_35206244/article/details/113805925">https://blog.csdn.net/qq_35206244/article/details/113805925</a>.<br>[16] [求助] (已解决)请问怎么关闭&quot;无法打开此ms-gamebar&quot;弹窗，谢谢？.[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1972471-1-1.html">https://bbs.pcbeta.com/viewthread-1972471-1-1.html</a>.<br>[17] Win11更新不能连接服务器的解决方法.[EB&#x2F;OL]. <a href="https://www.jianshu.com/p/4c1edd1f08a8">https://www.jianshu.com/p/4c1edd1f08a8</a>.<br>[18] Windows11显示“无法连接到更新服务。我们将稍后再试，你也可以立即进行检查。如果问题仍然存在，请确保你已连接到 Internet”.[EB&#x2F;OL]. <a href="https://answers.microsoft.com/zh-hans/windows/forum/all/windows11%E6%98%BE%E7%A4%BA%E6%97%A0%E6%B3%95/ebbafb81-7002-4f54-a565-cdc4a89f3c31">https://answers.microsoft.com/zh-hans/windows/forum/all/windows11%E6%98%BE%E7%A4%BA%E6%97%A0%E6%B3%95/ebbafb81-7002-4f54-a565-cdc4a89f3c31</a>.<br>[19] Run Docker and VMware&#x2F;VirtualBox at the same time in Windows[EB&#x2F;OL]. <a href="https://medium.com/@eng.binasaker/run%E2%80%91docker%E2%80%91and%E2%80%91vmware%E2%80%91at%E2%80%91the%E2%80%91same%E2%80%91time%E2%80%91in%E2%80%91windows%E2%80%91dabf32babd71">https://medium.com/@eng.binasaker/run‑docker‑and‑vmware‑at‑the‑same‑time‑in‑windows‑dabf32babd71</a>.<br>[20] Windows电脑睡眠中自动唤醒的原因和解决方法[EB&#x2F;OL]. <a href="https://baiyunju.cc/11568">https://baiyunju.cc/11568</a>.<br>[21] Reinstall and Re-register Microsoft Edge in Windows 10[EB&#x2F;OL]. <a href="https://www.tenforums.com/tutorials/28655-reinstall-re-register-microsoft-edge-windows-10-a.html">https://www.tenforums.com/tutorials/28655-reinstall-re-register-microsoft-edge-windows-10-a.html</a>.<br>[22] New Windows driver blocks software from changing default web browser[EB&#x2F;OL]. <a href="https://www.bleepingcomputer.com/news/microsoft/new-windows-driver-blocks-software-from-changing-default-web-browser/">https://www.bleepingcomputer.com/news/microsoft/new-windows-driver-blocks-software-from-changing-default-web-browser/</a>.<br>[23] [技术] 详细探讨一下12、13代酷睿处理器在Win11、W10中大小核调度[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1966999-2-1.html">https://bbs.pcbeta.com/viewthread-1966999-2-1.html</a>.<br>[24] [技术] win10_电源方案设置为卓越性能节能高效设置[EB&#x2F;OL]. <a href="https://bbs.pcbeta.com/viewthread-1994529-1-1.html">https://bbs.pcbeta.com/viewthread-1994529-1-1.html</a>.<br>[25] Windows 10 科学计算 CPU大小核调度策略试验与设置建议[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/660344272">https://zhuanlan.zhihu.com/p/660344272</a>.<br>[26] win10安装openssh失败，使用离线安装包[EB&#x2F;OL]. <a href="https://www.cnblogs.com/zhg1016/p/17353348.html">https://www.cnblogs.com/zhg1016/p/17353348.html</a>.<br>[27] 安全中心无法打开【2024年1月】[EB&#x2F;OL]. <a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83%E6%97%A0/220c53f6-09eb-4306-a969-98adadd6c1e3">https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83%E6%97%A0/220c53f6-09eb-4306-a969-98adadd6c1e3</a>.<br>[28] Windows共享文件夹无法访问，提示“不允许一个用户使用一个以上用户名与服务器或共享资源的多重连接”[EB&#x2F;OL]. <a href="https://www.cnblogs.com/sunnyhill/p/11780248.html">https://www.cnblogs.com/sunnyhill/p/11780248.html</a>.<br>[29] window10 电脑总是会从睡眠模式中自动唤醒[EB&#x2F;OL]. <a href="https://blog.csdn.net/lsllll44/article/details/116880276">https://blog.csdn.net/lsllll44/article/details/116880276</a>.<br>[30] Windows 11 睡眠后立即莫名唤醒问题[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/636133226">https://zhuanlan.zhihu.com/p/636133226</a>.</p>
 ]]></content>
       <categories>
         <category>troubleshooting</category>
@@ -13445,12 +13490,12 @@ title UDP Packet
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#x75;&#46;&#99;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#x40;&#49;&#x2e;&#99;&#x6f;&#x6d;">1@1.com</a></li>
-<li><a href="mailto:&#x38;&#64;&#56;&#46;&#x63;&#x6f;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#x68;&#x61;&#110;&#x6b;&#115;&#46;&#99;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#x61;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#x6b;&#121;&#x6f;&#x75;&#46;&#99;&#x6f;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#x40;&#x31;&#46;&#99;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#56;&#x40;&#56;&#46;&#99;&#111;&#x6d;">8@8.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#x74;&#x68;&#x61;&#x6e;&#107;&#115;&#x2e;&#x63;&#x6f;&#x6d;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#64;&#116;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#117;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#108;&#101;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -19210,7 +19255,7 @@ title UDP Packet
 <h1 id="联系方式">5 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#105;&#x6d;&#x2e;&#109;&#x69;&#115;&#116;&#x65;&#x72;&#107;&#105;&#110;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#x6d;&#105;&#115;&#x74;&#x65;&#x72;&#x6b;&#x69;&#110;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
@@ -20015,6 +20060,74 @@ QQ 二维码<img data-src="/images-public/qq-qr-code2.webp" style="width: 200px;
 ]]></content>
   </entry>
   <entry>
+    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
+    <url>/about/post-offline-download/index.html</url>
+    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
+<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
+<ul>
+<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
+<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
+<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
+</ul>
+<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
+</div>
+
+<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
+<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
+<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
+<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
+<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
+</div>
+
+<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
+<ol>
+<li>打开火狐浏览器。</li>
+<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
+<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
+<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
+<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
+</ol>
+<div class="flex-row">
+    <div class="flex-column">
+    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
+    <div class="flex-column">
+    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
+</div>
+
+<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
+</div>
+
+<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
+<li>保存压缩包到本地即可。</li>
+</ol>
+<div class="flex-column">
+<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
+
+<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
+<li>打开浏览器。</li>
+<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
+<li>点击「Code」图标上，如图 3 所示。</li>
+<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
+<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
+<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/live2d-models/umaru/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+  </entry>
+  <entry>
     <title>第三方开源许可声明</title>
     <url>/about/third-party-declaration/index.html</url>
     <content><![CDATA[<div class="wrap">
@@ -20086,11 +20199,6 @@ CGI&后期处理
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/umaru/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/live2d-models/umaru/umaru.model.json</url>
     <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.5,"center_x":-0.0507,"center_y":0.57},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"hit_areas_custom":{"head_x":[0.3,-0.9],"head_y":[0.19,-0.2],"body_x":[-0.3,-0.25],"body_y":[0.3,-0.9]},"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":1000,"fade_out":1000,"expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_001.mtn","sound":"voice/01.wav"},{"file":"mtn/rita_Live2D_002.mtn","sound":"voice/02.wav"},{"file":"mtn/rita_Live2D_003.mtn","sound":"voice/03.wav"},{"file":"mtn/rita_Live2D_004.mtn","sound":"voice/04.wav"},{"file":"mtn/rita_Live2D_005.mtn","sound":"voice/05.wav"},{"file":"mtn/rita_Live2D_006.mtn","sound":"voice/06.wav"},{"file":"mtn/rita_Live2D_007.mtn","sound":"voice/07.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","sound":"voice/08.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","sound":"voice/09.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","sound":"voice/10.wav"},{"file":"mtn/rita_Live2D_011.mtn","sound":"voice/11.wav"},{"file":"mtn/rita_Live2D_012.mtn","sound":"voice/12.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","sound":"voice/13.wav","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","sound":"voice/14.wav"},{"file":"mtn/rita_Live2D_015.mtn","sound":"voice/15.wav"},{"file":"mtn/rita_Live2D_016.mtn","sound":"voice/16.wav"},{"file":"mtn/rita_Live2D_017.mtn","sound":"voice/17.wav"},{"file":"mtn/rita_Live2D_018.mtn","sound":"voice/18.wav"},{"file":"mtn/rita_Live2D_019.mtn","sound":"voice/19.wav"},{"file":"mtn/rita_Live2D_020.mtn","sound":"voice/20.wav","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_021.mtn","sound":"voice/21.wav"},{"file":"mtn/rita_Live2D_022.mtn","sound":"voice/22.wav"},{"file":"mtn/rita_Live2D_023.mtn","sound":"voice/23.wav"},{"file":"mtn/rita_Live2D_024.mtn","sound":"voice/24.wav"},{"file":"mtn/rita_Live2D_025.mtn","sound":"voice/25.wav"},{"file":"mtn/rita_Live2D_026.mtn","sound":"voice/26.wav"},{"file":"mtn/rita_Live2D_027.mtn","sound":"voice/27.wav"},{"file":"mtn/rita_Live2D_028.mtn","sound":"voice/28.wav"},{"file":"mtn/rita_Live2D_029.mtn","sound":"voice/29.wav"},{"file":"mtn/rita_Live2D_030.mtn","sound":"voice/30.wav"},{"file":"mtn/rita_Live2D_031.mtn","sound":"voice/31.wav"},{"file":"mtn/rita_Live2D_032.mtn","sound":"voice/32.wav"},{"file":"mtn/rita_Live2D_033.mtn","sound":"voice/33.wav"},{"file":"mtn/rita_Live2D_034.mtn","sound":"voice/34.wav"}]}}]]></content>
   </entry>
@@ -20098,87 +20206,6 @@ CGI&后期处理
     <title>艺术作品</title>
     <url>/works/artworks/index.html</url>
     <content><![CDATA[<p>TODO</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>博文离线下载 - PDF 及 LaTeX 源码</title>
-    <url>/about/post-offline-download/index.html</url>
-    <content><![CDATA[<h1 id="背景">1 &nbsp&nbsp<a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>本站一些重要的博文（例如软件手册或者系列文章汇总）会有对应的 PDF 及 LaTeX 源码，可以下载用以离线查看，<strong>一般都是在博文开头处有相关说明</strong>。PDF 文件发布在<a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a>，LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库。</p>
-<h1 id="获取-PDF-电子文档">2 &nbsp&nbsp<a href="#获取-PDF-电子文档" class="headerlink" title="获取 PDF 电子文档"></a>获取 PDF 电子文档</h1><p>PDF 电子文档主要发布在OpenDocs的latex2pdf页面，百度云和蓝奏云提供分流下载。PDF 和项目文件夹同名，直接下载即可。</p>
-<ul>
-<li><a href="https://github.com/Mister-Kin/OpenDocs/releases/tag/latex2pdf">OpenDocs的latex2pdf页面</a></li>
-<li><a href="https://pan.baidu.com/s/1Tn7qIO0raqvNoesgT8SKow?pwd=docs">百度云</a>（提取码：docs）</li>
-<li><a href="https://wwr.lanzoui.com/b02c7lamf#docs">蓝奏云</a>（提取码：docs）</li>
-</ul>
-<h1 id="获取-LaTeX-源码文件">3 &nbsp&nbsp<a href="#获取-LaTeX-源码文件" class="headerlink" title="获取 LaTeX 源码文件"></a>获取 LaTeX 源码文件</h1><div class="note info no-icon"><p><strong>LaTeX 源码文件可用以编译生成 PDF 文件，若不熟悉 LaTeX 语法的话，不推荐使用此方法。</strong></p>
-</div>
-
-<p>LaTeX 源码文件存放在 Github 的 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库，在下载LaTeX源码文件之前，建议先了解一下仓库的存储结构。</p>
-<h2 id="OpenDocs-仓库存储结构">3.1 &nbsp&nbsp<a href="#OpenDocs-仓库存储结构" class="headerlink" title="OpenDocs 仓库存储结构"></a>OpenDocs 仓库存储结构</h2><p><a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 仓库只提供文章源码（LaTeX）。</p>
-<p><strong>注：为缩减仓库大小，本仓库自 2021&#x2F;6&#x2F;28 起，不再提供电子格式文件（PDF）。PDF 文件将改由百度云网盘同步分享。</strong></p>
-<p>单个文档项目本身由一个含有 PDF 电子文档及其 LaTeX 源码的文件夹组成，均有其父分类。文件夹的名称就是该项目的名称，主文件名一般与文档项目名一致，即 PDF 电子文档和 LaTeX 源码主文件的文件名与文件夹名称相同。</p>
-<p>例如名为 ToggleLanguage 文件夹所对应的项目名称就是 ToggleLanguage，位于名为 Manuals 的父文件夹下。其 PDF 电子文档和 LaTeX 源码的主文件名均为 ToggleLanuage。目录结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└── OpenDocs</span><br><span class="line">    └── Manuals</span><br><span class="line">        └── ToggleLanguage</span><br><span class="line">            ├── resources</span><br><span class="line">            │   ├── images</span><br><span class="line">            │   │   ├── Installation.png</span><br><span class="line">            │   │   ├── UI.png</span><br><span class="line">            │   │   └── ...</span><br><span class="line">            │   └── reference.bib</span><br><span class="line">            ├── ToggleLanguage.pdf</span><br><span class="line">            └── ToggleLanguage.tex</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载单个文件（推荐）">3.2 &nbsp&nbsp<a href="#下载单个文件（推荐）" class="headerlink" title="下载单个文件（推荐）"></a>下载单个文件（推荐）</h2><div class="note info no-icon"><p><strong>优点：可以找到所需单个文件夹或者单个文件进行下载，无需下载或克隆整个仓库。</strong></p>
-</div>
-
-<p>下面以火狐浏览器为例，说明具体的下载步骤：</p>
-<ol>
-<li>打开火狐浏览器。</li>
-<li>安装浏览器插件 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/gitzip/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">GitZip</a>。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>在所需的文件或者文件夹对应的空白处双击鼠标左键。</li>
-<li>之后左侧会自动出现 √ 符号，如图 1 所示。</li>
-<li>点击右下角的箭头图标，GitZip 会拉取文件。</li>
-<li>GitZip 插件成功拉取文件后，记得保存文件到本地，如图 2 所示。</li>
-</ol>
-<div class="flex-row">
-    <div class="flex-column">
-    <img data-src="./images/DownloadProcess.webp">图 1: 下载步骤</div>
-    <div class="flex-column">
-    <img data-src="./images/Downloaded.webp">图 2: 保存文件</div>
-</div>
-
-<h2 id="下载整个仓库">3.3 &nbsp&nbsp<a href="#下载整个仓库" class="headerlink" title="下载整个仓库"></a>下载整个仓库</h2><div class="note danger no-icon"><p><strong>浏览器下载仓库的 ZIP 压缩包不会包含 .git 文件夹（即不包含 git 历史），Git 克隆方式则会完整克隆仓库。</strong></p>
-</div>
-
-<h3 id="通过浏览器下载仓库（推荐）">3.3.1 &nbsp&nbsp<a href="#通过浏览器下载仓库（推荐）" class="headerlink" title="通过浏览器下载仓库（推荐）"></a>通过浏览器下载仓库（推荐）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>点击「Download ZIP」，下载整个仓库的 ZIP 压缩包。</li>
-<li>保存压缩包到本地即可。</li>
-</ol>
-<div class="flex-column">
-<img data-src="./images/DownloadClone.webp">图 3: 浏览器下载和 Git 克隆仓库</div>
-
-<h3 id="用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）">3.3.2 &nbsp&nbsp<a href="#用过-Git-克隆完整仓库（确保系统已经安装了-Git-程序）" class="headerlink" title="用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）"></a>用过 Git 克隆完整仓库（确保系统已经安装了 Git 程序）</h3><ol>
-<li>打开浏览器。</li>
-<li>访问 <a href="https://github.com/Mister-Kin/OpenDocs">OpenDocs</a> 页面。</li>
-<li>点击「Code」图标上，如图 3 所示。</li>
-<li>复制克隆操作所需的 HTTPS 链接：<a href="https://github.com/Mister-Kin/OpenDocs.git">https://github.com/Mister-Kin/OpenDocs.git</a></li>
-<li>运行 Git Bash，切换当前目录到所需保存的路径，输入 <code>git clone https://github.com/Mister-Kin/OpenDocs.git</code>。</li>
-<li>在保存路径上会生成一个 OpenDocs 文件夹。</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>软件作品</title>
-    <url>/works/software-works/index.html</url>
-    <content><![CDATA[<div class="flex-row">
-<a href="/works/software-works/toggle-language">
-<button class="navigation-button-box">切换语言</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/batch-tools">
-<button class="navigation-button-box">批处理工具</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/rainmeter-skins">
-<button class="navigation-button-box">雨滴皮肤</button></a>
-<div style="width: 20px;"></div>
-<a href="/works/software-works/autojs-scripts">
-<button class="navigation-button-box">Auto.js脚本</button></a>
-</div>
 ]]></content>
   </entry>
   <entry>
@@ -20224,6 +20251,24 @@ CGI&后期处理
 <h1 id="Author">5 &nbsp&nbsp<a href="#Author" class="headerlink" title="Author"></a>Author</h1><p><strong>Auto.js Scripts</strong> © Mr. Kin, all files may not be used for commercial purposes.</p>
 <p>Authored and maintained by Mr. Kin.</p>
 <h1 id="参考资料">6 &nbsp&nbsp<a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] Autojs多个js脚本依次执行的代码分享[EB&#x2F;OL]. <a href="https://blog.csdn.net/m0_55125030/article/details/116990243">https://blog.csdn.net/m0_55125030/article/details/116990243</a>.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>软件作品</title>
+    <url>/works/software-works/index.html</url>
+    <content><![CDATA[<div class="flex-row">
+<a href="/works/software-works/toggle-language">
+<button class="navigation-button-box">切换语言</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/batch-tools">
+<button class="navigation-button-box">批处理工具</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/rainmeter-skins">
+<button class="navigation-button-box">雨滴皮肤</button></a>
+<div style="width: 20px;"></div>
+<a href="/works/software-works/autojs-scripts">
+<button class="navigation-button-box">Auto.js脚本</button></a>
+</div>
 ]]></content>
   </entry>
   <entry>
