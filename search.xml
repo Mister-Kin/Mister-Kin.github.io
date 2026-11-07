@@ -208,13 +208,6 @@
 
 <div class="text-box">
     <div class="tag-align">
-    <p class="tag-bookmark-page">使用工具箱</p>
-    </div>
-    <a href="https://ss.netnr.com/">脚本服务</a>
-</div>
-
-<div class="text-box">
-    <div class="tag-align">
     <p class="tag-bookmark-page">Markdown排版器</p>
     </div>
     <a href="https://github.com/doocs/md">WeChat Markdown Editor</a>
@@ -4452,6 +4445,42 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
       </tags>
   </entry>
   <entry>
+    <title>力扣LeetCode</title>
+    <url>/code-training/leetcode/</url>
+    <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Programming Ability Test (PAT)</title>
+    <url>/code-training/pat/</url>
+    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
+<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
+<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
+<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
+<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
+<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
+<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
+<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
+]]></content>
+      <categories>
+        <category>code-training</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>PAT</tag>
+        <tag>PTA</tag>
+        <tag>编程</tag>
+        <tag>练习</tag>
+        <tag>题库</tag>
+        <tag>题目</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>算法</title>
     <url>/code/algorithm/</url>
     <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] titel[EB&#x2F;OL]. url.</p>
@@ -4460,8 +4489,8 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
         <category>code</category>
       </categories>
       <tags>
-        <tag>程序</tag>
         <tag>算法</tag>
+        <tag>程序</tag>
         <tag>开发</tag>
       </tags>
   </entry>
@@ -4670,9 +4699,9 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
       </categories>
       <tags>
         <tag>总结</tag>
+        <tag>编程</tag>
         <tag>笔记</tag>
         <tag>c</tag>
-        <tag>编程</tag>
         <tag>语言</tag>
       </tags>
   </entry>
@@ -4820,9 +4849,9 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
         <category>code</category>
       </categories>
       <tags>
+        <tag>数据结构</tag>
         <tag>程序</tag>
         <tag>开发</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -5200,7 +5229,7 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
 <p>解决方法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"><span class="comment"># 运行上面两条命令，然后重新启动Docker Desktop</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#x31;&#x37;&#x32;&#46;&#49;&#57;&#46;&#48;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] Docker Unexpected error[EB&#x2F;OL]. <a href="https://github.com/docker/for-win/issues/14034">https://github.com/docker/for-win/issues/14034</a>.<br>[2] Install Docker Engine on Debian[EB&#x2F;OL]. <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">https://docs.docker.com/engine/install/debian/#install-using-the-repository</a>.<br>[3] DockerHub 国内加速镜像列表[EB&#x2F;OL]. <a href="https://github.com/dongyubin/DockerHub">https://github.com/dongyubin/DockerHub</a>.<br>[4] Docker 容器使用[EB&#x2F;OL]. <a href="https://www.runoob.com/docker/docker-container-usage.html">https://www.runoob.com/docker/docker-container-usage.html</a>.<br>[5] [Question]配置doris数据源提示错误：Access denied for user &#39;<a href="mailto:&#x72;&#x6f;&#111;&#116;&#64;&#x31;&#55;&#x32;&#46;&#x31;&#x39;&#x2e;&#x30;&#46;&#x34;">root@172.19.0.4</a>&#39; (using password: YES)[EB&#x2F;OL]. <a href="https://github.com/dataease/dataease/issues/5939">https://github.com/dataease/dataease/issues/5939</a>.<br>[6] 安装模式[EB&#x2F;OL]. <a href="https://dataease.io/docs/v1/installation/installation_mode/#11">https://dataease.io/docs/v1/installation/installation_mode/#11</a>.<br>[7] Docker Build Cache 缓存清理[EB&#x2F;OL]. <a href="https://blog.csdn.net/catoop/article/details/128002962">https://blog.csdn.net/catoop/article/details/128002962</a>.<br>[8] docker下redis容器清理缓存[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44662304/article/details/114694451">https://blog.csdn.net/weixin_44662304/article/details/114694451</a>.<br>[9] “版本发布”下，自己上传的文件url错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/url/8030/1">https://forum.gitea.com/t/url/8030/1</a>.<br>[10] 反向代理[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/administration/reverse-proxies">https://docs.gitea.com/zh-cn/administration/reverse-proxies</a>.<br>[11] 使用 Docker 安装[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/installation/install-with-docker">https://docs.gitea.com/zh-cn/next/installation/install-with-docker</a>.<br>[12] Act Runner[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/usage/actions/act-runner">https://docs.gitea.com/zh-cn/next/usage/actions/act-runner</a>.<br>[13] 备份与恢复[EB&#x2F;OL]. <a href="https://docs.gitea.com/zh-cn/next/administration/backup-and-restore">https://docs.gitea.com/zh-cn/next/administration/backup-and-restore</a>.<br>[14] 求助：Docker-compose部署act_runner出现错误[EB&#x2F;OL]. <a href="https://forum.gitea.com/t/docker-compose-act-runner/8525">https://forum.gitea.com/t/docker-compose-act-runner/8525</a>.<br>[15] Runner Will Not Register via Docker Compose[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/550">https://gitea.com/gitea/act_runner/issues/550</a>.<br>[16] runner: level&#x3D;error msg&#x3D;&quot;Cannot ping the Gitea instance server&quot; error&#x3D;&quot;unknown: 500 Internal Server Error&quot;[EB&#x2F;OL]. <a href="https://gitea.com/gitea/act_runner/issues/400">https://gitea.com/gitea/act_runner/issues/400</a>.<br>[17] 使用docker-compose 部署 MySQL（所有版本通用）[EB&#x2F;OL]. <a href="https://blog.csdn.net/weixin_44606481/article/details/132840940">https://blog.csdn.net/weixin_44606481/article/details/132840940</a>.<br>[18] Can I store my password hashed?[EB&#x2F;OL]. <a href="https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed">https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-store-my-password-hashed</a>.<br>[19] 【学习笔记 - code-server】通过docker-compose配置code-server（一）[EB&#x2F;OL]. <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">https://blog.csdn.net/kirigirihitomi/article/details/132859159</a>.<br>[20] 完全免费利用家宽IPV6和个人电脑搭建rustdesk-server-windows服务器实现远程控制[EB&#x2F;OL]. <a href="https://www.npspro.cn/27999.html">https://www.npspro.cn/27999.html</a>.<br>[21] docker-compose自建RustDesk远程控制服务器 [EB&#x2F;OL]. <a href="https://www.cnblogs.com/zwgbk/p/16648073.html">https://www.cnblogs.com/zwgbk/p/16648073.html</a>.<br>[22] 安装[EB&#x2F;OL]. <a href="https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/">https://rustdesk.com/docs/zh-cn/self-host/rustdesk-server-oss/install/</a>.<br>[23] DDNS-GO[EB&#x2F;OL]. <a href="https://github.com/jeessy2/ddns-go">https://github.com/jeessy2/ddns-go</a>.<br>[24] wol&#x2F;examples&#x2F;reverse-proxy.yml[EB&#x2F;OL]. <a href="https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml">https://github.com/Trugamr/wol/blob/main/examples/reverse-proxy.yml</a>.</p>
 ]]></content>
       <categories>
         <category>code</category>
@@ -5236,208 +5265,6 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
         <tag>总结</tag>
         <tag>笔记</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git版本控制总结笔记</title>
-    <url>/code/git/</url>
-    <content><![CDATA[<h1 id="三维模型等二进制文件的版本控制">1 &nbsp&nbsp<a href="#三维模型等二进制文件的版本控制" class="headerlink" title="三维模型等二进制文件的版本控制"></a>三维模型等二进制文件的版本控制</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
-<p>Perforce Helix Core官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
-<h1 id="linux和windows之间的文件换行符">2 &nbsp&nbsp<a href="#linux和windows之间的文件换行符" class="headerlink" title="linux和windows之间的文件换行符"></a>linux和windows之间的文件换行符</h1><p>windows中的换行符（dos）是\r\n，而linux中的换行符（unix）是\n。若不转换，git可能会视作为被更改的文件，从而造成大量无意义的commit。此外，windows中bat脚本文件要求换行符为\r\n，否则cmd解释器无法正确解析，导致无法正确执行脚本。</p>
-<p>单文件转换：</p>
-<ul>
-<li>\r\n转\n：<code>dos2unix test.c</code></li>
-<li>\n转\r\n：<code>unix2dos test.c</code></li>
-</ul>
-<p>批量转换：</p>
-<ul>
-<li>\r\n转\n：<code>find . -type f -exec dos2unix &#123;&#125; \;</code></li>
-<li>\n转\r\n：<code>find . -type f -exec unix2dos &#123;&#125; \;</code></li>
-</ul>
-<p>详细命令解释：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find .: Find anything in this directory, including its subdirectories, and anything in those subdirectories as well (recursion)</span><br><span class="line">-type f: Only return &#x27;regular file&#x27; names. Exclude folder names from the results.</span><br><span class="line">-exec: Execute the following command for every result. Everything beyond this point should be treated as part of that command until the ; character is found.</span><br><span class="line">dos2unix: dos2unix will be executed with the following options...</span><br><span class="line">-k: Keep the date stamp of the output file the same as the input file</span><br><span class="line">-s: Skip binary files (images, archives, etc.). This option is included by default, but I use it anyway in case that default were different on some systems (e.g. OS X v. Debian v. CentOS v. Ubuntu v. ...).</span><br><span class="line">-o: Write the changes directly to the file, rather than creating a new file with the data in the new format.</span><br><span class="line">&#123;&#125;: This tells find to insert the filename it has found as a parameter of the dos2unix call.</span><br><span class="line">&#x27;;&#x27;: Tell find that the params for dos2unix have ended. Anything beyond this point will again be treated as a parameter of find. 反斜杠\是用于转移分号;</span><br><span class="line">&#x27;&#123;&#125;&#x27; is a placeholder which indicates where in the command you want the filename(s) to be inserted, and &#x27;+&#x27; terminates the said command. You can also run dos2unix once for each filename (by changing &#x27;+&#x27; with &#x27;;&#x27;), but since dos2unix accepts an arbitrary number of input arguments, it’s better to use it (as it avoids spawning many processes).</span><br></pre></td></tr></table></figure>
-
-<h2 id="换行符问题导致git同步错误">2.1 &nbsp&nbsp<a href="#换行符问题导致git同步错误" class="headerlink" title="换行符问题导致git同步错误"></a>换行符问题导致git同步错误</h2><p>若出现本地仓库文件和远程仓库文件出现crlf和lf不相同的问题，会导致git代码同步报错。</p>
-<p>解决方法：使用editorconfig文件规定文档。</p>
-<h1 id="Git配置">3 &nbsp&nbsp<a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><p>查看设置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-<h2 id="git常规配置">3.1 &nbsp&nbsp<a href="#git常规配置" class="headerlink" title="git常规配置"></a>git常规配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;yourname&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="编辑git特定的config项">3.2 &nbsp&nbsp<a href="#编辑git特定的config项" class="headerlink" title="编辑git特定的config项"></a>编辑git特定的config项</h2><p>打开<code>%USERPROFILE%\.gitconfig</code>文件，编辑特定的设置项即可。</p>
-<h2 id="代理设置">3.3 &nbsp&nbsp<a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br><span class="line">git config --global http.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line">git config --global https.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于git的重命名操作">3.4 &nbsp&nbsp<a href="#关于git的重命名操作" class="headerlink" title="关于git的重命名操作"></a>关于git的重命名操作</h2><p>git默认对大小写不敏感，一般可通过两种方式避免git未识别大小写操作。</p>
-<p>方式1：中间文件方法</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git mv（重命名索引，文件夹直接大小写重命名可能无法成功，可以用tmp做中间处理，文件直接大小写无问题）</span></span><br><span class="line">git <span class="built_in">mv</span> myfolder tmp</span><br><span class="line">git <span class="built_in">mv</span> tmp MyFolder</span><br></pre></td></tr></table></figure>
-
-<p>方式2：设置git配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="package-json安装git仓库依赖出现报错fatal-Could-not-read-from-remote-repository">3.5 &nbsp&nbsp<a href="#package-json安装git仓库依赖出现报错fatal-Could-not-read-from-remote-repository" class="headerlink" title="package.json安装git仓库依赖出现报错fatal: Could not read from remote repository."></a><code>package.json</code>安装git仓库依赖出现报错<code>fatal: Could not read from remote repository.</code></h2><p>问题现象：hexo项目中，<code>package.json</code>中有git仓库链接的依赖，但是尝试安装依赖时出现报错</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">error Command failed.</span><br><span class="line">Exit code: 128</span><br><span class="line">Command: git</span><br><span class="line">Arguments: ls-remote --tags --heads git://github.com/Mister-Kin/live2d-widget.git</span><br><span class="line">Directory: /root/BlogSource</span><br><span class="line">Output:</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
-
-<p>问题原因：github的安全机制升级，不再支持端口9418上未经身份验证的git协议。<code>fatal: remote error: The unauthenticated git protocol on port 9418 is no longer support</code></p>
-<p>解决方法：</p>
-<ol>
-<li>配置git替换<code>git:</code>链接为<code>https:</code>：<ul>
-<li>方案一：手动修改<code>~/.gitconfig</code></li>
-</ul>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[url <span class="string">&quot;https://github.com/&quot;</span>]</span><br><span class="line">    insteadOf = git://github.com/</span><br></pre></td></tr></table></figure>
-<ul>
-<li>方案二：git配置全局命令</li>
-</ul>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global url.<span class="string">&quot;https://github.com/&quot;</span>.insteadOf git://github.com/</span><br></pre></td></tr></table></figure></li>
-<li>将<code>package.json</code>中依赖的git仓库链接<code>git://github.com/</code>替换为<code>https://github.com/</code>。</li>
-</ol>
-<div class="note danger no-icon"><p>一般来说，操作第二个步骤即可。但如果引用的git仓库链接的依赖，他们本身也有依赖于<code>git://</code>协议的依赖时，只操作第二步就仍无法解决问题。需要同时配置第一个步骤的操作。</p>
-</div>
-
-<h1 id="log日志">4 &nbsp&nbsp<a href="#log日志" class="headerlink" title="log日志"></a>log日志</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 筛选作者，格式化查看日期和提交信息</span></span><br><span class="line"><span class="comment"># %s参数为查看short commit message</span></span><br><span class="line"><span class="comment"># %B是查看完整的信息</span></span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %s&quot;</span> --<span class="built_in">date</span>=short</span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %B&quot;</span> --<span class="built_in">date</span>=short</span><br></pre></td></tr></table></figure>
-
-<h1 id="branch分支">5 &nbsp&nbsp<a href="#branch分支" class="headerlink" title="branch分支"></a>branch分支</h1><h2 id="常规操作">5.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
-
-<p>因为文件冲突导致的操作中断，解决冲突之后通过命令继续执行或者中止操作</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git merge --<span class="built_in">continue</span></span><br><span class="line">git merge --abort</span><br><span class="line"></span><br><span class="line">git rebase --<span class="built_in">continue</span></span><br><span class="line">git rebase --abort</span><br><span class="line"></span><br><span class="line">git cherry-pick --<span class="built_in">continue</span></span><br><span class="line">git cherry-pick --abort</span><br></pre></td></tr></table></figure>
-
-<h2 id="合并分支避免产生Merge-branch-xxx-main-into-main提交历史">5.2 &nbsp&nbsp<a href="#合并分支避免产生Merge-branch-xxx-main-into-main提交历史" class="headerlink" title="合并分支避免产生Merge branch &#39;xxx:main&#39; into main提交历史"></a>合并分支避免产生<code>Merge branch &#39;xxx:main&#39; into main</code>提交历史</h2><p>在 Git 中整合来自不同分支的修改主要有两种方法：merge以及rebase。如果父提交历史相同，可以直接使用merge的fast-forward模式，否则建议rebase。</p>
-<ul>
-<li>merge：提交历史存在分叉<ul>
-<li>Merge into current branch</li>
-<li>如果父提交历史相同，直接使用fast-forward模式，不要创建一个新提交(create a new commit)</li>
-<li>squash模式可以在合并的时候，将多个commit合并为一个commit。但是会丢失那几个commit的信息，若不填写message则变成<code>Merge commit &#39;xxxxxx&#39;</code>，<code>xxxxxx</code>则是最近的一次commit hash值。注意git graph图中，两个分支并无交叉，因为合并成一个新commit，没有共同的父提交历史。</li>
-</ul>
-</li>
-<li>rebase：相当于提取在某个提交中引入的补丁和修改，然后对当前分支某个提交的基础上应用一次（注意新commit hash不同）。变基使得提交历史更加整洁，提交历史可以保持一条直线没有分叉<ul>
-<li>Rebase current branch on this Commit，日常使用该方式即可保持提交历史整洁了（它会自动将分叉点之后的个人提交，全都提取并将最新上游最新提交作为父提交，应用一次，然后force push即可）</li>
-</ul>
-</li>
-<li>reset：Reset current branch to this Commit，reset会将当前分支重置为指定提交，并删除之后的所有提交。慎重操作，reset操作是直接操作移动当前分支引用的指针HEAD。<ul>
-<li>reset也可以用于撤销一次提交</li>
-</ul>
-</li>
-<li>cherry pick：选择其他分支的某个commit执行cherry pick操作，会将该commit的修改应用到当前分支上（相当于复制粘贴，commit hash不同，可同时保留提交历史信息commit message）。</li>
-</ul>
-<h2 id="清理Merge-branch-xxx-main-into-main提交历史">5.3 &nbsp&nbsp<a href="#清理Merge-branch-xxx-main-into-main提交历史" class="headerlink" title="清理Merge branch &#39;xxx:main&#39; into main提交历史"></a>清理<code>Merge branch &#39;xxx:main&#39; into main</code>提交历史</h2><p>背景：一个克隆clone仓库，合并上游仓库，产生大量<code>Merge branch &#39;xxx:main&#39; into main</code>提交历史。</p>
-<ol>
-<li>在main主分支最初分叉的commit（就是克隆仓库中自己提交的commit，分叉点）上使用hard reset，重置指针HEAD到该commit</li>
-<li>使用cherry pick，将自己提交的所有commit都选中，并cherry pick到main主分支上</li>
-<li>然后选中上游仓库最新的commit，选择rebase到main主分支上</li>
-<li>git push --force origin main</li>
-</ol>
-<h2 id="多人协作的工作流">5.4 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h2><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。</p>
-<h2 id="常规分支管理项目">5.5 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Switched to a new branch &quot;dev&quot;</span></span><br><span class="line">git checkout -b dev</span><br><span class="line"><span class="comment"># Switched to a new branch &quot;hotfix&quot;</span></span><br><span class="line">git checkout -b hotfix</span><br><span class="line"><span class="comment"># 切换到主分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># 合并hotfix分支</span></span><br><span class="line">git merge hotfix</span><br><span class="line"><span class="comment"># 删除hotfix分支</span></span><br><span class="line">git branch -d hotfix</span><br></pre></td></tr></table></figure>
-
-<h2 id="切换分支时有未提交的文件">5.6 &nbsp&nbsp<a href="#切换分支时有未提交的文件" class="headerlink" title="切换分支时有未提交的文件"></a>切换分支时有未提交的文件</h2><p>应用场景：在dev分支进行开发编写，突然发现master分支有bug，想checkout分支（切换分支），但此时dev分支上有未提交的文件，并且也并不想现在提交。</p>
-<p>解决方式（GUI操作）：</p>
-<ol>
-<li>存储-&gt;储藏-&gt;输入注释字符</li>
-<li>在Git Graph槽操作创建并切换分支，然后进行开发</li>
-<li>完成开发之后，切换分支，点击「应用(仅恢复，不删除储藏)&#x2F;弹出(恢复并删除)」储藏</li>
-</ol>
-<p>解决方式（命令操作）：</p>
-<ol>
-<li>在dev分支上git stash，储藏当前工作区</li>
-<li>checkout到master分支进行bug修复（新建bugfix分支时，完成后合并，删除）</li>
-<li>checkout到dev分支，git stash list</li>
-<li>git stash pop，恢复工作区（该方式恢复的同时也把stash内容删除）。（另一种方式是git stash apply（恢复）后git stash drop（删除））</li>
-</ol>
-<h2 id="回滚操作">5.7 &nbsp&nbsp<a href="#回滚操作" class="headerlink" title="回滚操作"></a>回滚操作</h2><p>使用revert产生一个新的commit完成回滚指定commit，不要使用<code>git push -f</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git revert &lt;commit&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="远程仓库">6 &nbsp&nbsp<a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，首次使用vs code进行push时，直接使用「推送到」按钮，因为使用「同步更改」命令提示会找不到远程仓库配置对应的分支。</p>
-<h2 id="重命名分支并推送到远程仓库">6.1 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除已经推送到远程仓库中的包含在-gitignore中的文件">6.2 &nbsp&nbsp<a href="#删除已经推送到远程仓库中的包含在-gitignore中的文件" class="headerlink" title="删除已经推送到远程仓库中的包含在.gitignore中的文件"></a>删除已经推送到远程仓库中的包含在.gitignore中的文件</h2><p>.gitignore文件中添加新的文件过滤，但是该文件在之前已经提交到远程仓库分支里，我们需要将远程分支代码中的这个文件移除。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.为避免冲突，同步已下远程仓库最新代码</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.在本地项目目录下删除git缓存</span></span><br><span class="line">git <span class="built_in">rm</span> -r --cached .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.add所有文件：输入以下命令，再次将项目中所有文件添加到本地仓库缓存中</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.本地commit</span></span><br><span class="line">git commit -m <span class="string">&quot;filter new files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.push到远程仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<h2 id="unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054">6.3 &nbsp&nbsp<a href="#unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054"></a>unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>这是由于Http协议错误，刷新缓存即可解决</p>
-<div class="tabs" id="flush_dns"><ul class="nav-tabs"><li class="tab active"><a href="#flush_dns-1">Windows</a></li><li class="tab"><a href="#flush_dns-2">Mac</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flush_dns-1"><p>使用终端命令窗口运行命令：</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="flush_dns-2"><p>使用终端命令窗口运行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall -HUP mDNSResponder</span><br><span class="line"><span class="built_in">sudo</span> dscacheutil -flushcache</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h2 id="更改已提交到远程仓库的commit消息（修改错别字或添加信息）">6.4 &nbsp&nbsp<a href="#更改已提交到远程仓库的commit消息（修改错别字或添加信息）" class="headerlink" title="更改已提交到远程仓库的commit消息（修改错别字或添加信息）"></a>更改已提交到远程仓库的commit消息（修改错别字或添加信息）</h2><ol>
-<li>git rebase -i HEAD~n(N为最近n个提交)</li>
-<li>git会生成一个文件在编辑器打开，在需要修改的commit那一行中，将pick修改为reword，保存关闭</li>
-<li>之后会弹出一个文件，在编辑器修改后保存关闭</li>
-<li>之后强制push到远程仓库</li>
-</ol>
-<h2 id="RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8">6.5 &nbsp&nbsp<a href="#RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8" class="headerlink" title="RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)"></a>RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)</h2><p>因为git文件过大造成的错误，默认缓冲区是1M大小。</p>
-<p>解决方法：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000 <span class="comment"># 设置为500M</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="已经提交Pull-Request的如何二次修改覆盖">6.6 &nbsp&nbsp<a href="#已经提交Pull-Request的如何二次修改覆盖" class="headerlink" title="已经提交Pull Request的如何二次修改覆盖"></a>已经提交Pull Request的如何二次修改覆盖</h2><ol>
-<li>本地git reset撤销提交，然后重新完成二次修改</li>
-<li>push -f强行覆盖掉你远程的commit</li>
-<li>上游仓库的PR会自动更新相关内容（例如xx强制push commit）</li>
-<li>有其他的新内容commit，push普通推送也能自动追加到上游仓库的PR中。</li>
-</ol>
-<h1 id="pull拉取">7 &nbsp&nbsp<a href="#pull拉取" class="headerlink" title="pull拉取"></a>pull拉取</h1><h2 id="github从远程仓库拉取">7.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="github从上游拉取未并入主干的拉取请求-pull-request">7.2 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
-
-<h1 id="clone克隆">8 &nbsp&nbsp<a href="#clone克隆" class="headerlink" title="clone克隆"></a>clone克隆</h1><h2 id="常规克隆">8.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://xxx.git <span class="comment">#（可以不包含.git后缀）</span></span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://xxx.git <span class="comment"># 只拉取最近一次提交</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="wget从Github仓库下载特定的文件夹">8.2 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
-
-<h2 id="克隆特定分支">8.3 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br><span class="line">git <span class="built_in">clone</span> --recursive -b branch—name url</span><br></pre></td></tr></table></figure>
-
-<h2 id="克隆远程仓库中的指定文件或者文件夹">8.4 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h2><p>以克隆blender手册翻译的简中为例：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line"><span class="comment"># 为当前目录初始化一个git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加上游git链接</span></span><br><span class="line">git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line"><span class="comment"># 设置稀疏检出的筛选目录，sparse-checkout文件里写入要拉取的文件或者文件夹。匹配规则类似.gitignore</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout</span><br><span class="line"><span class="comment"># 或者使用sparse-checkout set命令设置设置稀疏检出的筛选目录</span></span><br><span class="line">git sparse-checkout <span class="built_in">set</span> <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"><span class="comment"># 开启稀疏检出</span></span><br><span class="line">git config core.sparsecheckout <span class="literal">true</span></span><br><span class="line"><span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
-
-<h1 id="commit提交">9 &nbsp&nbsp<a href="#commit提交" class="headerlink" title="commit提交"></a>commit提交</h1><h2 id="commit信息的规范化">9.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
-<ul>
-<li>chore</li>
-<li>fix</li>
-<li>feat</li>
-<li>docs</li>
-</ul>
-<h1 id="release发布">10 &nbsp&nbsp<a href="#release发布" class="headerlink" title="release发布"></a>release发布</h1><h2 id="常规发布">10.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
-<h2 id="release-note的规范化">10.2 &nbsp&nbsp<a href="#release-note的规范化" class="headerlink" title="release note的规范化"></a>release note的规范化</h2><ul>
-<li>Breaking Changes</li>
-<li>Changes</li>
-<li>New Features</li>
-<li>Features</li>
-<li>Bug Fixes</li>
-<li>Improvements</li>
-<li>Documentation（可缩写 Docs）</li>
-</ul>
-<blockquote>
-<p>注：支持……版本，英文用 Support for …… 表示</p>
-</blockquote>
-<h1 id="添加子仓库">11 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="重写历史">12 &nbsp&nbsp<a href="#重写历史" class="headerlink" title="重写历史"></a>重写历史</h1><h2 id="删除所有commit">12.1 &nbsp&nbsp<a href="#删除所有commit" class="headerlink" title="删除所有commit"></a>删除所有commit</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf .git</span><br><span class="line">git init</span><br><span class="line">git remote add origin url（仓库地址） <span class="comment"># git remote -v</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;commit message&#x27;</span></span><br><span class="line">git push --force origin master</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意如果使用这种方式，强制推送到远程github仓库的话，实际查看github网站的信息，貌似并没有缩小，可能数据更新有延迟。</p>
-</blockquote>
-<p>还有另外一种方式，在github网站上删除该reop，并重新建立同名repo再推送。</p>
-<h2 id="从所有commit中清除特定文件">12.2 &nbsp&nbsp<a href="#从所有commit中清除特定文件" class="headerlink" title="从所有commit中清除特定文件"></a>从所有commit中清除特定文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --index-filter <span class="string">&#x27;git rm --cached --ignore-unmatch filename&#x27;</span> HEAD <span class="comment">#（*.pdf）</span></span><br><span class="line">git <span class="built_in">rm</span> -rf --ignore-unmatch .git/refs/original <span class="comment">#删除git的备份</span></span><br><span class="line">git reflog expire --expire=now --all <span class="comment">#使所有散落的object失效</span></span><br><span class="line">git fsck --full --unreachable <span class="comment">#检查是否有散落的object, 验证数据库中对象的连接性和有效性</span></span><br><span class="line">git repack -A -d <span class="comment">#重新打包所有对象，并删除旧的打包文件</span></span><br><span class="line">git gc --aggressive --prune=now <span class="comment">#git的垃圾清理车最终删除那些对象, --aggressive 此选项将导致git gc更积极地优化存储库</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="Github-LFS">13 &nbsp&nbsp<a href="#Github-LFS" class="headerlink" title="Github LFS"></a>Github LFS</h1><p>Github LFS是收费产品，免费账户只有1G的存储空间和带宽流量（本人已弃用）。</p>
-<p>仓库一旦使用LFS存储，无法直接通过wget或者curl工具下载原文件，只会下载到一个文本指针文件，指向LFS的存储云地址。</p>
-<h2 id="为Git启用LFS">13.1 &nbsp&nbsp<a href="#为Git启用LFS" class="headerlink" title="为Git启用LFS"></a>为Git启用LFS</h2><p>Windows Git LFS大文件管理：windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code>。</p>
-<p>ubuntu安装LFS包：<code>sudo apt install git-lfs</code>。</p>
-<h2 id="LFS基本使用">13.2 &nbsp&nbsp<a href="#LFS基本使用" class="headerlink" title="LFS基本使用"></a>LFS基本使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加LFS需要管理的大文件，如果文件名就是*.txt，则需要用双引号&quot;&quot;包含</span></span><br><span class="line"><span class="comment"># 若无引号，通配符*会被shell扩展，导致LFS跟踪所有txt文件</span></span><br><span class="line">git lfs track test.txt</span><br><span class="line">git lfs track *.txt</span><br><span class="line">git lfs track <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 取消LFS跟踪文件</span></span><br><span class="line">git lfs untrack *.txt</span><br><span class="line"><span class="comment"># 常规git操作都可以处理LFS文件，显式指定lfs命令可提高速度</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line">git pull origin main</span><br><span class="line"><span class="comment"># git lfs clone是检出（checkout）完成后再批量下载所有必需的 Git LFS 文件。利用并行下载的优势，显著减少产生的 HTTP 请求和进程的数量</span></span><br><span class="line">git lfs <span class="built_in">clone</span></span><br><span class="line"><span class="comment"># 同样地，lfs提供拉取速度</span></span><br><span class="line">git lfs pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除lfs，然后手动删除.gitattribute中关于lfs的条目</span></span><br><span class="line">git lfs uninstall</span><br><span class="line"><span class="comment"># 重组织所有文件，可以使标记为lfs文件恢复到正常状态，但不会影响到不关联的文件。</span></span><br><span class="line">git add --renormalize .</span><br><span class="line"><span class="comment"># 重新提交</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h1 id="CI-CD">14 &nbsp&nbsp<a href="#CI-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h1><p>重复繁琐的工作交予自动CI&#x2F;CD完成。</p>
-<h1 id="Git仓库的迁移">15 &nbsp&nbsp<a href="#Git仓库的迁移" class="headerlink" title="Git仓库的迁移"></a>Git仓库的迁移</h1><h2 id="将windows的git仓库迁移至linux">15.1 &nbsp&nbsp<a href="#将windows的git仓库迁移至linux" class="headerlink" title="将windows的git仓库迁移至linux"></a>将windows的git仓库迁移至linux</h2><p>如果将windows的git仓库的文件夹直接复制到linux系统中（例如使用WinSCP进行复制），虽然文件本身的行尾序列EOF不会变更修改，但因为两个平台默认的行尾序列不同（Windows的行尾序列是LF，Linux的行尾序列是CRLF），迁移到Linux后的git仓库中CRLF行尾序列的文件会显示文件已被修改。</p>
-<p>解决方法，创建<code>.gitattributes</code>文件，输入如下内容说明所有文件均为CRLF行尾序列：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* text=auto</span><br><span class="line">*.* text eol=crlf</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.<br>[6] How to run dos2unix on all files with all extensions in a directory and its sun-directories?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun">https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun</a>.<br>[7] How to pull a pull request from upstream in github[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github">https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github</a>.<br>[8] 详解 Git 大文件存储（Git LFS）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/146683392">https://zhuanlan.zhihu.com/p/146683392</a>.<br>[9] Git Sparse Checkout使用指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/shelutai/article/details/123116973">https://blog.csdn.net/shelutai/article/details/123116973</a>.<br>[10] git-sparse-checkout[EB&#x2F;OL]. <a href="https://www.git-scm.com/docs/git-sparse-checkout">https://www.git-scm.com/docs/git-sparse-checkout</a>.<br>[11] Simple steps to uninstall Git LFS from your repository[EB&#x2F;OL]. <a href="https://github.com/git-lfs/git-lfs/issues/3026">https://github.com/git-lfs/git-lfs/issues/3026</a>.<br>[12] zh-cn 与 zh-hans 是什么关系、有什么区别？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/21980689">https://www.zhihu.com/question/21980689</a>.<br>[13] github 提交pull request操作后, 如果想对代码再次进行修改，该如何操作？[EB&#x2F;OL]. <a href="https://segmentfault.com/q/1010000012129041">https://segmentfault.com/q/1010000012129041</a>.<br>[14] git filter-branch 命令修改删除提示记录,删除误提交的大文件.减小.git的大小[EB&#x2F;OL]. <a href="https://www.zhaokeli.com/article/8332.html">https://www.zhaokeli.com/article/8332.html</a>.</p>
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>笔记</tag>
-        <tag>git</tag>
-        <tag>github</tag>
-        <tag>代码管理</tag>
-        <tag>版本控制</tag>
       </tags>
   </entry>
   <entry>
@@ -6277,6 +6104,208 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
       </tags>
   </entry>
   <entry>
+    <title>Git版本控制总结笔记</title>
+    <url>/code/git/</url>
+    <content><![CDATA[<h1 id="三维模型等二进制文件的版本控制">1 &nbsp&nbsp<a href="#三维模型等二进制文件的版本控制" class="headerlink" title="三维模型等二进制文件的版本控制"></a>三维模型等二进制文件的版本控制</h1><p>git和svn适合管理文本类的代码文件，perforce更适合管理像游戏资产3D模型、psd图像文件等的大型文件。</p>
+<p>Perforce Helix Core官网下载：<a href="https://www.perforce.com/products">点击跳转</a></p>
+<h1 id="linux和windows之间的文件换行符">2 &nbsp&nbsp<a href="#linux和windows之间的文件换行符" class="headerlink" title="linux和windows之间的文件换行符"></a>linux和windows之间的文件换行符</h1><p>windows中的换行符（dos）是\r\n，而linux中的换行符（unix）是\n。若不转换，git可能会视作为被更改的文件，从而造成大量无意义的commit。此外，windows中bat脚本文件要求换行符为\r\n，否则cmd解释器无法正确解析，导致无法正确执行脚本。</p>
+<p>单文件转换：</p>
+<ul>
+<li>\r\n转\n：<code>dos2unix test.c</code></li>
+<li>\n转\r\n：<code>unix2dos test.c</code></li>
+</ul>
+<p>批量转换：</p>
+<ul>
+<li>\r\n转\n：<code>find . -type f -exec dos2unix &#123;&#125; \;</code></li>
+<li>\n转\r\n：<code>find . -type f -exec unix2dos &#123;&#125; \;</code></li>
+</ul>
+<p>详细命令解释：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find .: Find anything in this directory, including its subdirectories, and anything in those subdirectories as well (recursion)</span><br><span class="line">-type f: Only return &#x27;regular file&#x27; names. Exclude folder names from the results.</span><br><span class="line">-exec: Execute the following command for every result. Everything beyond this point should be treated as part of that command until the ; character is found.</span><br><span class="line">dos2unix: dos2unix will be executed with the following options...</span><br><span class="line">-k: Keep the date stamp of the output file the same as the input file</span><br><span class="line">-s: Skip binary files (images, archives, etc.). This option is included by default, but I use it anyway in case that default were different on some systems (e.g. OS X v. Debian v. CentOS v. Ubuntu v. ...).</span><br><span class="line">-o: Write the changes directly to the file, rather than creating a new file with the data in the new format.</span><br><span class="line">&#123;&#125;: This tells find to insert the filename it has found as a parameter of the dos2unix call.</span><br><span class="line">&#x27;;&#x27;: Tell find that the params for dos2unix have ended. Anything beyond this point will again be treated as a parameter of find. 反斜杠\是用于转移分号;</span><br><span class="line">&#x27;&#123;&#125;&#x27; is a placeholder which indicates where in the command you want the filename(s) to be inserted, and &#x27;+&#x27; terminates the said command. You can also run dos2unix once for each filename (by changing &#x27;+&#x27; with &#x27;;&#x27;), but since dos2unix accepts an arbitrary number of input arguments, it’s better to use it (as it avoids spawning many processes).</span><br></pre></td></tr></table></figure>
+
+<h2 id="换行符问题导致git同步错误">2.1 &nbsp&nbsp<a href="#换行符问题导致git同步错误" class="headerlink" title="换行符问题导致git同步错误"></a>换行符问题导致git同步错误</h2><p>若出现本地仓库文件和远程仓库文件出现crlf和lf不相同的问题，会导致git代码同步报错。</p>
+<p>解决方法：使用editorconfig文件规定文档。</p>
+<h1 id="Git配置">3 &nbsp&nbsp<a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h1><p>查看设置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+
+<h2 id="git常规配置">3.1 &nbsp&nbsp<a href="#git常规配置" class="headerlink" title="git常规配置"></a>git常规配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;yourname&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;youremail@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑git特定的config项">3.2 &nbsp&nbsp<a href="#编辑git特定的config项" class="headerlink" title="编辑git特定的config项"></a>编辑git特定的config项</h2><p>打开<code>%USERPROFILE%\.gitconfig</code>文件，编辑特定的设置项即可。</p>
+<h2 id="代理设置">3.3 &nbsp&nbsp<a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br><span class="line">git config --global http.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line">git config --global https.proxy <span class="string">&#x27;socks5://127.0.0.1:1080&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于git的重命名操作">3.4 &nbsp&nbsp<a href="#关于git的重命名操作" class="headerlink" title="关于git的重命名操作"></a>关于git的重命名操作</h2><p>git默认对大小写不敏感，一般可通过两种方式避免git未识别大小写操作。</p>
+<p>方式1：中间文件方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git mv（重命名索引，文件夹直接大小写重命名可能无法成功，可以用tmp做中间处理，文件直接大小写无问题）</span></span><br><span class="line">git <span class="built_in">mv</span> myfolder tmp</span><br><span class="line">git <span class="built_in">mv</span> tmp MyFolder</span><br></pre></td></tr></table></figure>
+
+<p>方式2：设置git配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="package-json安装git仓库依赖出现报错fatal-Could-not-read-from-remote-repository">3.5 &nbsp&nbsp<a href="#package-json安装git仓库依赖出现报错fatal-Could-not-read-from-remote-repository" class="headerlink" title="package.json安装git仓库依赖出现报错fatal: Could not read from remote repository."></a><code>package.json</code>安装git仓库依赖出现报错<code>fatal: Could not read from remote repository.</code></h2><p>问题现象：hexo项目中，<code>package.json</code>中有git仓库链接的依赖，但是尝试安装依赖时出现报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">error Command failed.</span><br><span class="line">Exit code: 128</span><br><span class="line">Command: git</span><br><span class="line">Arguments: ls-remote --tags --heads git://github.com/Mister-Kin/live2d-widget.git</span><br><span class="line">Directory: /root/BlogSource</span><br><span class="line">Output:</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
+
+<p>问题原因：github的安全机制升级，不再支持端口9418上未经身份验证的git协议。<code>fatal: remote error: The unauthenticated git protocol on port 9418 is no longer support</code></p>
+<p>解决方法：</p>
+<ol>
+<li>配置git替换<code>git:</code>链接为<code>https:</code>：<ul>
+<li>方案一：手动修改<code>~/.gitconfig</code></li>
+</ul>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[url <span class="string">&quot;https://github.com/&quot;</span>]</span><br><span class="line">    insteadOf = git://github.com/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方案二：git配置全局命令</li>
+</ul>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global url.<span class="string">&quot;https://github.com/&quot;</span>.insteadOf git://github.com/</span><br></pre></td></tr></table></figure></li>
+<li>将<code>package.json</code>中依赖的git仓库链接<code>git://github.com/</code>替换为<code>https://github.com/</code>。</li>
+</ol>
+<div class="note danger no-icon"><p>一般来说，操作第二个步骤即可。但如果引用的git仓库链接的依赖，他们本身也有依赖于<code>git://</code>协议的依赖时，只操作第二步就仍无法解决问题。需要同时配置第一个步骤的操作。</p>
+</div>
+
+<h1 id="log日志">4 &nbsp&nbsp<a href="#log日志" class="headerlink" title="log日志"></a>log日志</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 筛选作者，格式化查看日期和提交信息</span></span><br><span class="line"><span class="comment"># %s参数为查看short commit message</span></span><br><span class="line"><span class="comment"># %B是查看完整的信息</span></span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %s&quot;</span> --<span class="built_in">date</span>=short</span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">&quot;Mr. Kin&quot;</span> --pretty=format:<span class="string">&quot;%ad %B&quot;</span> --<span class="built_in">date</span>=short</span><br></pre></td></tr></table></figure>
+
+<h1 id="branch分支">5 &nbsp&nbsp<a href="#branch分支" class="headerlink" title="branch分支"></a>branch分支</h1><h2 id="常规操作">5.1 &nbsp&nbsp<a href="#常规操作" class="headerlink" title="常规操作"></a>常规操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -M master <span class="comment"># 创建分支</span></span><br></pre></td></tr></table></figure>
+
+<p>因为文件冲突导致的操作中断，解决冲突之后通过命令继续执行或者中止操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git merge --<span class="built_in">continue</span></span><br><span class="line">git merge --abort</span><br><span class="line"></span><br><span class="line">git rebase --<span class="built_in">continue</span></span><br><span class="line">git rebase --abort</span><br><span class="line"></span><br><span class="line">git cherry-pick --<span class="built_in">continue</span></span><br><span class="line">git cherry-pick --abort</span><br></pre></td></tr></table></figure>
+
+<h2 id="合并分支避免产生Merge-branch-xxx-main-into-main提交历史">5.2 &nbsp&nbsp<a href="#合并分支避免产生Merge-branch-xxx-main-into-main提交历史" class="headerlink" title="合并分支避免产生Merge branch &#39;xxx:main&#39; into main提交历史"></a>合并分支避免产生<code>Merge branch &#39;xxx:main&#39; into main</code>提交历史</h2><p>在 Git 中整合来自不同分支的修改主要有两种方法：merge以及rebase。如果父提交历史相同，可以直接使用merge的fast-forward模式，否则建议rebase。</p>
+<ul>
+<li>merge：提交历史存在分叉<ul>
+<li>Merge into current branch</li>
+<li>如果父提交历史相同，直接使用fast-forward模式，不要创建一个新提交(create a new commit)</li>
+<li>squash模式可以在合并的时候，将多个commit合并为一个commit。但是会丢失那几个commit的信息，若不填写message则变成<code>Merge commit &#39;xxxxxx&#39;</code>，<code>xxxxxx</code>则是最近的一次commit hash值。注意git graph图中，两个分支并无交叉，因为合并成一个新commit，没有共同的父提交历史。</li>
+</ul>
+</li>
+<li>rebase：相当于提取在某个提交中引入的补丁和修改，然后对当前分支某个提交的基础上应用一次（注意新commit hash不同）。变基使得提交历史更加整洁，提交历史可以保持一条直线没有分叉<ul>
+<li>Rebase current branch on this Commit，日常使用该方式即可保持提交历史整洁了（它会自动将分叉点之后的个人提交，全都提取并将最新上游最新提交作为父提交，应用一次，然后force push即可）</li>
+</ul>
+</li>
+<li>reset：Reset current branch to this Commit，reset会将当前分支重置为指定提交，并删除之后的所有提交。慎重操作，reset操作是直接操作移动当前分支引用的指针HEAD。<ul>
+<li>reset也可以用于撤销一次提交</li>
+</ul>
+</li>
+<li>cherry pick：选择其他分支的某个commit执行cherry pick操作，会将该commit的修改应用到当前分支上（相当于复制粘贴，commit hash不同，可同时保留提交历史信息commit message）。</li>
+</ul>
+<h2 id="清理Merge-branch-xxx-main-into-main提交历史">5.3 &nbsp&nbsp<a href="#清理Merge-branch-xxx-main-into-main提交历史" class="headerlink" title="清理Merge branch &#39;xxx:main&#39; into main提交历史"></a>清理<code>Merge branch &#39;xxx:main&#39; into main</code>提交历史</h2><p>背景：一个克隆clone仓库，合并上游仓库，产生大量<code>Merge branch &#39;xxx:main&#39; into main</code>提交历史。</p>
+<ol>
+<li>在main主分支最初分叉的commit（就是克隆仓库中自己提交的commit，分叉点）上使用hard reset，重置指针HEAD到该commit</li>
+<li>使用cherry pick，将自己提交的所有commit都选中，并cherry pick到main主分支上</li>
+<li>然后选中上游仓库最新的commit，选择rebase到main主分支上</li>
+<li>git push --force origin main</li>
+</ol>
+<h2 id="多人协作的工作流">5.4 &nbsp&nbsp<a href="#多人协作的工作流" class="headerlink" title="多人协作的工作流"></a>多人协作的工作流</h2><p>多人协作注意版本控制，分支把控好，不能污染上游，开发者每个人单独分支。</p>
+<h2 id="常规分支管理项目">5.5 &nbsp&nbsp<a href="#常规分支管理项目" class="headerlink" title="常规分支管理项目"></a>常规分支管理项目</h2><p>dev分支常规开发，hotfix分支临时修复</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Switched to a new branch &quot;dev&quot;</span></span><br><span class="line">git checkout -b dev</span><br><span class="line"><span class="comment"># Switched to a new branch &quot;hotfix&quot;</span></span><br><span class="line">git checkout -b hotfix</span><br><span class="line"><span class="comment"># 切换到主分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># 合并hotfix分支</span></span><br><span class="line">git merge hotfix</span><br><span class="line"><span class="comment"># 删除hotfix分支</span></span><br><span class="line">git branch -d hotfix</span><br></pre></td></tr></table></figure>
+
+<h2 id="切换分支时有未提交的文件">5.6 &nbsp&nbsp<a href="#切换分支时有未提交的文件" class="headerlink" title="切换分支时有未提交的文件"></a>切换分支时有未提交的文件</h2><p>应用场景：在dev分支进行开发编写，突然发现master分支有bug，想checkout分支（切换分支），但此时dev分支上有未提交的文件，并且也并不想现在提交。</p>
+<p>解决方式（GUI操作）：</p>
+<ol>
+<li>存储-&gt;储藏-&gt;输入注释字符</li>
+<li>在Git Graph槽操作创建并切换分支，然后进行开发</li>
+<li>完成开发之后，切换分支，点击「应用(仅恢复，不删除储藏)&#x2F;弹出(恢复并删除)」储藏</li>
+</ol>
+<p>解决方式（命令操作）：</p>
+<ol>
+<li>在dev分支上git stash，储藏当前工作区</li>
+<li>checkout到master分支进行bug修复（新建bugfix分支时，完成后合并，删除）</li>
+<li>checkout到dev分支，git stash list</li>
+<li>git stash pop，恢复工作区（该方式恢复的同时也把stash内容删除）。（另一种方式是git stash apply（恢复）后git stash drop（删除））</li>
+</ol>
+<h2 id="回滚操作">5.7 &nbsp&nbsp<a href="#回滚操作" class="headerlink" title="回滚操作"></a>回滚操作</h2><p>使用revert产生一个新的commit完成回滚指定commit，不要使用<code>git push -f</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git revert &lt;commit&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="远程仓库">6 &nbsp&nbsp<a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><p>对于新建的空仓库，使用clone命令克隆仓库后，首次使用vs code进行push时，直接使用「推送到」按钮，因为使用「同步更改」命令提示会找不到远程仓库配置对应的分支。</p>
+<h2 id="重命名分支并推送到远程仓库">6.1 &nbsp&nbsp<a href="#重命名分支并推送到远程仓库" class="headerlink" title="重命名分支并推送到远程仓库"></a>重命名分支并推送到远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rename the local branch to the new name</span></span><br><span class="line">git branch -m &lt;old_name&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the old branch on remote - where &lt;remote&gt; is, for example, origin</span></span><br><span class="line">git push &lt;remote&gt; --delete &lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or shorter way to delete remote branch [:]</span></span><br><span class="line">git push &lt;remote&gt; :&lt;old_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除失败时，请更改默认分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Prevent git from using the old name when pushing in the next step.</span></span><br><span class="line"><span class="comment"># Otherwise, git will use the old upstream name instead of &lt;new_name&gt;.</span></span><br><span class="line">git branch --unset-upstream &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push the new branch to remote</span></span><br><span class="line">git push &lt;remote&gt; &lt;new_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reset the upstream branch for the new_name local branch</span></span><br><span class="line">git push &lt;remote&gt; -u &lt;new_name&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除已经推送到远程仓库中的包含在-gitignore中的文件">6.2 &nbsp&nbsp<a href="#删除已经推送到远程仓库中的包含在-gitignore中的文件" class="headerlink" title="删除已经推送到远程仓库中的包含在.gitignore中的文件"></a>删除已经推送到远程仓库中的包含在.gitignore中的文件</h2><p>.gitignore文件中添加新的文件过滤，但是该文件在之前已经提交到远程仓库分支里，我们需要将远程分支代码中的这个文件移除。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.为避免冲突，同步已下远程仓库最新代码</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.在本地项目目录下删除git缓存</span></span><br><span class="line">git <span class="built_in">rm</span> -r --cached .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.add所有文件：输入以下命令，再次将项目中所有文件添加到本地仓库缓存中</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.本地commit</span></span><br><span class="line">git commit -m <span class="string">&quot;filter new files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.push到远程仓库</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<h2 id="unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054">6.3 &nbsp&nbsp<a href="#unable-to-access-github-OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054"></a>unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>这是由于Http协议错误，刷新缓存即可解决</p>
+<div class="tabs" id="flush_dns"><ul class="nav-tabs"><li class="tab active"><a href="#flush_dns-1">Windows</a></li><li class="tab"><a href="#flush_dns-2">Mac</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flush_dns-1"><p>使用终端命令窗口运行命令：</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="flush_dns-2"><p>使用终端命令窗口运行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall -HUP mDNSResponder</span><br><span class="line"><span class="built_in">sudo</span> dscacheutil -flushcache</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h2 id="更改已提交到远程仓库的commit消息（修改错别字或添加信息）">6.4 &nbsp&nbsp<a href="#更改已提交到远程仓库的commit消息（修改错别字或添加信息）" class="headerlink" title="更改已提交到远程仓库的commit消息（修改错别字或添加信息）"></a>更改已提交到远程仓库的commit消息（修改错别字或添加信息）</h2><ol>
+<li>git rebase -i HEAD~n(N为最近n个提交)</li>
+<li>git会生成一个文件在编辑器打开，在需要修改的commit那一行中，将pick修改为reword，保存关闭</li>
+<li>之后会弹出一个文件，在编辑器修改后保存关闭</li>
+<li>之后强制push到远程仓库</li>
+</ol>
+<h2 id="RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8">6.5 &nbsp&nbsp<a href="#RPC-failed-curl-92-HTTP-2-stream-0-was-not-closed-cleanly-CANCEL-err-8" class="headerlink" title="RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)"></a>RPC failed; curl 92 HTTP&#x2F;2 stream 0 was not closed cleanly: CANCEL (err 8)</h2><p>因为git文件过大造成的错误，默认缓冲区是1M大小。</p>
+<p>解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000 <span class="comment"># 设置为500M</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="已经提交Pull-Request的如何二次修改覆盖">6.6 &nbsp&nbsp<a href="#已经提交Pull-Request的如何二次修改覆盖" class="headerlink" title="已经提交Pull Request的如何二次修改覆盖"></a>已经提交Pull Request的如何二次修改覆盖</h2><ol>
+<li>本地git reset撤销提交，然后重新完成二次修改</li>
+<li>push -f强行覆盖掉你远程的commit</li>
+<li>上游仓库的PR会自动更新相关内容（例如xx强制push commit）</li>
+<li>有其他的新内容commit，push普通推送也能自动追加到上游仓库的PR中。</li>
+</ol>
+<h1 id="pull拉取">7 &nbsp&nbsp<a href="#pull拉取" class="headerlink" title="pull拉取"></a>pull拉取</h1><h2 id="github从远程仓库拉取">7.1 &nbsp&nbsp<a href="#github从远程仓库拉取" class="headerlink" title="github从远程仓库拉取"></a>github从远程仓库拉取</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master <span class="comment"># 相当于fetch后merge</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="github从上游拉取未并入主干的拉取请求-pull-request">7.2 &nbsp&nbsp<a href="#github从上游拉取未并入主干的拉取请求-pull-request" class="headerlink" title="github从上游拉取未并入主干的拉取请求(pull request)"></a>github从上游拉取未并入主干的拉取请求(pull request)</h2><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># 添加远程上游，仓库地址填写需要拉取的上游</span><br><span class="line">git remote add upstream https://github.com/USER/repository.git</span><br><span class="line"># ID 填pull-request id，BRANCHNAME填准备拉取到本地的某个分支名</span><br><span class="line">git pull upstream pull/ID/head:BRANCHNAME</span><br><span class="line"># 切换到分支目录</span><br><span class="line">git checkout BRANCHNAME</span><br><span class="line"># push到自己fork之后的上游</span><br><span class="line">git push -u origin BRANCHNAME</span><br></pre></td></tr></table></figure>
+
+<h1 id="clone克隆">8 &nbsp&nbsp<a href="#clone克隆" class="headerlink" title="clone克隆"></a>clone克隆</h1><h2 id="常规克隆">8.1 &nbsp&nbsp<a href="#常规克隆" class="headerlink" title="常规克隆"></a>常规克隆</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://xxx.git <span class="comment">#（可以不包含.git后缀）</span></span><br><span class="line">git <span class="built_in">clone</span> --depth 1 https://xxx.git <span class="comment"># 只拉取最近一次提交</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="wget从Github仓库下载特定的文件夹">8.2 &nbsp&nbsp<a href="#wget从Github仓库下载特定的文件夹" class="headerlink" title="wget从Github仓库下载特定的文件夹"></a>wget从Github仓库下载特定的文件夹</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -O为输出到指定文件，-和-O配合，不输出到具体文件，而是标准输出。可通过管道符|直接给其他命令。</span></span><br><span class="line"><span class="comment"># -x为解压，-z为gzip解压缩，移除目录，-C指定解压路径，--strip根据数字移除后面给定目录结构参数</span></span><br><span class="line">wget -O - https://github.com/Mister-Kin/PublicResources/archive/refs/heads/main.tar.gz | tar -xz -C path --strip=2 PublicResources-main/test</span><br></pre></td></tr></table></figure>
+
+<h2 id="克隆特定分支">8.3 &nbsp&nbsp<a href="#克隆特定分支" class="headerlink" title="克隆特定分支"></a>克隆特定分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 克隆特定分支，-b（--branch）支持输入tag，--recursive包含子仓库</span></span><br><span class="line">git <span class="built_in">clone</span> --recursive -b v1.0 url</span><br><span class="line">git <span class="built_in">clone</span> --recursive -b branch—name url</span><br></pre></td></tr></table></figure>
+
+<h2 id="克隆远程仓库中的指定文件或者文件夹">8.4 &nbsp&nbsp<a href="#克隆远程仓库中的指定文件或者文件夹" class="headerlink" title="克隆远程仓库中的指定文件或者文件夹"></a>克隆远程仓库中的指定文件或者文件夹</h2><p>以克隆blender手册翻译的简中为例：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> locale</span><br><span class="line"><span class="built_in">cd</span> locale</span><br><span class="line"><span class="comment"># 为当前目录初始化一个git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加上游git链接</span></span><br><span class="line">git remote add -f origin https://projects.blender.org/blender/blender-manual-translations.git</span><br><span class="line"><span class="comment"># 设置稀疏检出的筛选目录，sparse-checkout文件里写入要拉取的文件或者文件夹。匹配规则类似.gitignore</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zh-hans&quot;</span> &gt;&gt; .git/info/sparse-checkout</span><br><span class="line"><span class="comment"># 或者使用sparse-checkout set命令设置设置稀疏检出的筛选目录</span></span><br><span class="line">git sparse-checkout <span class="built_in">set</span> <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"><span class="comment"># 开启稀疏检出</span></span><br><span class="line">git config core.sparsecheckout <span class="literal">true</span></span><br><span class="line"><span class="comment"># 最后执行拉取获得特定文件或者文件夹</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
+
+<h1 id="commit提交">9 &nbsp&nbsp<a href="#commit提交" class="headerlink" title="commit提交"></a>commit提交</h1><h2 id="commit信息的规范化">9.1 &nbsp&nbsp<a href="#commit信息的规范化" class="headerlink" title="commit信息的规范化"></a>commit信息的规范化</h2><p>规范编写的commit message可通过auto changelog发布release：</p>
+<ul>
+<li>chore</li>
+<li>fix</li>
+<li>feat</li>
+<li>docs</li>
+</ul>
+<h1 id="release发布">10 &nbsp&nbsp<a href="#release发布" class="headerlink" title="release发布"></a>release发布</h1><h2 id="常规发布">10.1 &nbsp&nbsp<a href="#常规发布" class="headerlink" title="常规发布"></a>常规发布</h2><p>github release create -a ..&#x2F;learngit&#x2F;README.md -m &quot;release my first program&quot; v1.0.1</p>
+<h2 id="release-note的规范化">10.2 &nbsp&nbsp<a href="#release-note的规范化" class="headerlink" title="release note的规范化"></a>release note的规范化</h2><ul>
+<li>Breaking Changes</li>
+<li>Changes</li>
+<li>New Features</li>
+<li>Features</li>
+<li>Bug Fixes</li>
+<li>Improvements</li>
+<li>Documentation（可缩写 Docs）</li>
+</ul>
+<blockquote>
+<p>注：支持……版本，英文用 Support for …… 表示</p>
+</blockquote>
+<h1 id="添加子仓库">11 &nbsp&nbsp<a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/Mister-Kin/actions.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动如下功能，更新主仓，同时会执行submodule update</span></span><br><span class="line">git config --global submodule.recurse <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="重写历史">12 &nbsp&nbsp<a href="#重写历史" class="headerlink" title="重写历史"></a>重写历史</h1><h2 id="删除所有commit">12.1 &nbsp&nbsp<a href="#删除所有commit" class="headerlink" title="删除所有commit"></a>删除所有commit</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf .git</span><br><span class="line">git init</span><br><span class="line">git remote add origin url（仓库地址） <span class="comment"># git remote -v</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;commit message&#x27;</span></span><br><span class="line">git push --force origin master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意如果使用这种方式，强制推送到远程github仓库的话，实际查看github网站的信息，貌似并没有缩小，可能数据更新有延迟。</p>
+</blockquote>
+<p>还有另外一种方式，在github网站上删除该reop，并重新建立同名repo再推送。</p>
+<h2 id="从所有commit中清除特定文件">12.2 &nbsp&nbsp<a href="#从所有commit中清除特定文件" class="headerlink" title="从所有commit中清除特定文件"></a>从所有commit中清除特定文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --index-filter <span class="string">&#x27;git rm --cached --ignore-unmatch filename&#x27;</span> HEAD <span class="comment">#（*.pdf）</span></span><br><span class="line">git <span class="built_in">rm</span> -rf --ignore-unmatch .git/refs/original <span class="comment">#删除git的备份</span></span><br><span class="line">git reflog expire --expire=now --all <span class="comment">#使所有散落的object失效</span></span><br><span class="line">git fsck --full --unreachable <span class="comment">#检查是否有散落的object, 验证数据库中对象的连接性和有效性</span></span><br><span class="line">git repack -A -d <span class="comment">#重新打包所有对象，并删除旧的打包文件</span></span><br><span class="line">git gc --aggressive --prune=now <span class="comment">#git的垃圾清理车最终删除那些对象, --aggressive 此选项将导致git gc更积极地优化存储库</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Github-LFS">13 &nbsp&nbsp<a href="#Github-LFS" class="headerlink" title="Github LFS"></a>Github LFS</h1><p>Github LFS是收费产品，免费账户只有1G的存储空间和带宽流量（本人已弃用）。</p>
+<p>仓库一旦使用LFS存储，无法直接通过wget或者curl工具下载原文件，只会下载到一个文本指针文件，指向LFS的存储云地址。</p>
+<h2 id="为Git启用LFS">13.1 &nbsp&nbsp<a href="#为Git启用LFS" class="headerlink" title="为Git启用LFS"></a>为Git启用LFS</h2><p>Windows Git LFS大文件管理：windows上使用Git for windows客户端程序时，LFS启用命令：<code>git lfs install</code>。</p>
+<p>ubuntu安装LFS包：<code>sudo apt install git-lfs</code>。</p>
+<h2 id="LFS基本使用">13.2 &nbsp&nbsp<a href="#LFS基本使用" class="headerlink" title="LFS基本使用"></a>LFS基本使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加LFS需要管理的大文件，如果文件名就是*.txt，则需要用双引号&quot;&quot;包含</span></span><br><span class="line"><span class="comment"># 若无引号，通配符*会被shell扩展，导致LFS跟踪所有txt文件</span></span><br><span class="line">git lfs track test.txt</span><br><span class="line">git lfs track *.txt</span><br><span class="line">git lfs track <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 取消LFS跟踪文件</span></span><br><span class="line">git lfs untrack *.txt</span><br><span class="line"><span class="comment"># 常规git操作都可以处理LFS文件，显式指定lfs命令可提高速度</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line">git pull origin main</span><br><span class="line"><span class="comment"># git lfs clone是检出（checkout）完成后再批量下载所有必需的 Git LFS 文件。利用并行下载的优势，显著减少产生的 HTTP 请求和进程的数量</span></span><br><span class="line">git lfs <span class="built_in">clone</span></span><br><span class="line"><span class="comment"># 同样地，lfs提供拉取速度</span></span><br><span class="line">git lfs pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除lfs，然后手动删除.gitattribute中关于lfs的条目</span></span><br><span class="line">git lfs uninstall</span><br><span class="line"><span class="comment"># 重组织所有文件，可以使标记为lfs文件恢复到正常状态，但不会影响到不关联的文件。</span></span><br><span class="line">git add --renormalize .</span><br><span class="line"><span class="comment"># 重新提交</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h1 id="CI-CD">14 &nbsp&nbsp<a href="#CI-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h1><p>重复繁琐的工作交予自动CI&#x2F;CD完成。</p>
+<h1 id="Git仓库的迁移">15 &nbsp&nbsp<a href="#Git仓库的迁移" class="headerlink" title="Git仓库的迁移"></a>Git仓库的迁移</h1><h2 id="将windows的git仓库迁移至linux">15.1 &nbsp&nbsp<a href="#将windows的git仓库迁移至linux" class="headerlink" title="将windows的git仓库迁移至linux"></a>将windows的git仓库迁移至linux</h2><p>如果将windows的git仓库的文件夹直接复制到linux系统中（例如使用WinSCP进行复制），虽然文件本身的行尾序列EOF不会变更修改，但因为两个平台默认的行尾序列不同（Windows的行尾序列是LF，Linux的行尾序列是CRLF），迁移到Linux后的git仓库中CRLF行尾序列的文件会显示文件已被修改。</p>
+<p>解决方法，创建<code>.gitattributes</code>文件，输入如下内容说明所有文件均为CRLF行尾序列：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* text=auto</span><br><span class="line">*.* text eol=crlf</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文献">16 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] How do I rename both a Git local and remote branch name?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/30590083/how%E2%80%91do%E2%80%91i%E2%80%91rename%E2%80%91both%E2%80%91a%E2%80%91git%E2%80%91local%E2%80%91and%E2%80%91remote%E2%80%91branch%E2%80%91name">https://stackoverflow.com/questions/30590083/how‑do‑i‑rename‑both‑a‑git‑local‑and‑remote‑branch‑name</a>.<br>[2] Git 中 submodule 的使用[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/614114699">https://zhuanlan.zhihu.com/p/614114699</a>.<br>[3] Why is git submodule not updated automatically on git checkout?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/1899792/why%E2%80%91is%E2%80%91git%E2%80%91submodule%E2%80%91not%E2%80%91updated%E2%80%91automatically%E2%80%91on%E2%80%91git%E2%80%91checkout">https://stackoverflow.com/questions/1899792/why‑is‑git‑submodule‑not‑updated‑automatically‑on‑git‑checkout</a>.<br>[4] git lfs安装及使用方法[EB&#x2F;OL]. <a href="https://blog.csdn.net/michaelshare/article/details/83183806">https://blog.csdn.net/michaelshare/article/details/83183806</a>.<br>[5] Git克隆远程仓库中的指定文件或者文件夹[EB&#x2F;OL]. <a href="https://blog.csdn.net/fsfsdgsdg/article/details/127177631">https://blog.csdn.net/fsfsdgsdg/article/details/127177631</a>.<br>[6] How to run dos2unix on all files with all extensions in a directory and its sun-directories?[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun">https://stackoverflow.com/questions/67254229/how-to-run-dos2unix-on-all-files-with-all-extensions-in-a-directory-and-its-sun</a>.<br>[7] How to pull a pull request from upstream in github[EB&#x2F;OL]. <a href="https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github">https://stackoverflow.com/questions/54033842/how-to-pull-a-pull-request-from-upstream-in-github</a>.<br>[8] 详解 Git 大文件存储（Git LFS）[EB&#x2F;OL]. <a href="https://zhuanlan.zhihu.com/p/146683392">https://zhuanlan.zhihu.com/p/146683392</a>.<br>[9] Git Sparse Checkout使用指南[EB&#x2F;OL]. <a href="https://blog.csdn.net/shelutai/article/details/123116973">https://blog.csdn.net/shelutai/article/details/123116973</a>.<br>[10] git-sparse-checkout[EB&#x2F;OL]. <a href="https://www.git-scm.com/docs/git-sparse-checkout">https://www.git-scm.com/docs/git-sparse-checkout</a>.<br>[11] Simple steps to uninstall Git LFS from your repository[EB&#x2F;OL]. <a href="https://github.com/git-lfs/git-lfs/issues/3026">https://github.com/git-lfs/git-lfs/issues/3026</a>.<br>[12] zh-cn 与 zh-hans 是什么关系、有什么区别？[EB&#x2F;OL]. <a href="https://www.zhihu.com/question/21980689">https://www.zhihu.com/question/21980689</a>.<br>[13] github 提交pull request操作后, 如果想对代码再次进行修改，该如何操作？[EB&#x2F;OL]. <a href="https://segmentfault.com/q/1010000012129041">https://segmentfault.com/q/1010000012129041</a>.<br>[14] git filter-branch 命令修改删除提示记录,删除误提交的大文件.减小.git的大小[EB&#x2F;OL]. <a href="https://www.zhaokeli.com/article/8332.html">https://www.zhaokeli.com/article/8332.html</a>.</p>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>笔记</tag>
+        <tag>git</tag>
+        <tag>github</tag>
+        <tag>代码管理</tag>
+        <tag>版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python总结笔记</title>
     <url>/code/python/</url>
     <content><![CDATA[<h1 id="Python-语法摘记">1 &nbsp&nbsp<a href="#Python-语法摘记" class="headerlink" title="Python 语法摘记"></a>Python 语法摘记</h1><p>python在相对路径import导入时，包名前面的小数点.是必要的，python3之后都是严格模式。</p>
@@ -6328,8 +6357,8 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
       </categories>
       <tags>
         <tag>总结</tag>
-        <tag>笔记</tag>
         <tag>编程</tag>
+        <tag>笔记</tag>
         <tag>python</tag>
       </tags>
   </entry>
@@ -6889,42 +6918,6 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
         <tag>vscode</tag>
         <tag>编辑器</tag>
         <tag>链接</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣LeetCode</title>
-    <url>/code-training/leetcode/</url>
-    <content><![CDATA[<h1 id="参考文献">1 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1>]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Programming Ability Test (PAT)</title>
-    <url>/code-training/pat/</url>
-    <content><![CDATA[<p>“程序设计类教学辅助教学平台”（Programming Teaching Assistant，亦简称 PTA）（依稀记得以前这玩意叫PAT），面向高校和社会的程序自动评测、开放式的教学辅助平台。</p>
-<p>练习代码文件的仓库链接：<a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT">点击跳转</a>。</p>
-<p>难点题解主要参考<a href="https://github.com/tiny656/PAT">PAT(tiny656)</a>和[<a href="https://gitee.com/branches/PAT">PAT(枝桠)</a>]</p>
-<h1 id="基础编程题目集（PTA平台）"><a href="#基础编程题目集（PTA平台）" class="headerlink" title="基础编程题目集（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/tree/master/PAT/BasicProgrammingProblemSet">基础编程题目集</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6">PTA平台</a>）</h1><h2 id="函数题"><a href="#函数题" class="headerlink" title="函数题"></a>函数题</h2><h3 id="6-1-简单输出整数（PTA平台）"><a href="#6-1-简单输出整数（PTA平台）" class="headerlink" title="6-1 简单输出整数（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-1-print_n.c">6-1 简单输出整数</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=733">PTA平台</a>）</h3><p>简单的<code>for</code>循环运用</p>
-<h3 id="6-2-多项式求值（PTA平台）"><a href="#6-2-多项式求值（PTA平台）" class="headerlink" title="6-2 多项式求值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-2-multinomial_sum.c">6-2 多项式求值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=734">PTA平台</a>）</h3><p>先罗列多项式值，分析构成规律，再去考虑如何编写逻辑。（当年我是傻乎乎分开两个<code>for</code>循环处理，因此导致会导致部份用例运行超时）</p>
-<h3 id="6-3-简单求和（PTA平台）"><a href="#6-3-简单求和（PTA平台）" class="headerlink" title="6-3 简单求和（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-3-sum.c">6-3 简单求和</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=735">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。（当年是挺傻乎乎的）</p>
-<h3 id="6-4-求自定类型元素的平均（PTA平台）"><a href="#6-4-求自定类型元素的平均（PTA平台）" class="headerlink" title="6-4 求自定类型元素的平均（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-4-average.c">6-4 求自定类型元素的平均</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=736">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<h3 id="6-5-求自定类型元素的最大值（PTA平台）"><a href="#6-5-求自定类型元素的最大值（PTA平台）" class="headerlink" title="6-5 求自定类型元素的最大值（PTA平台）"></a><a href="https://github.com/Mister-Kin/CodeTraining/blob/master/PAT/BasicProgrammingProblemSet/CodeCompletion/6-5-max_num.c">6-5 求自定类型元素的最大值</a>（<a href="https://pintia.cn/problem-sets/14/exam/problems/type/6?problemSetProblemId=737">PTA平台</a>）</h3><p><code>for</code>循环中应为<code>i&lt;N</code>，注意<code>main</code>函数最后赋值的下标，即需要保持和<code>main</code>函数中<code>for</code>循环的条件一致。</p>
-<p>第一个MaxNum应该设为数组里的元素。如果设为0的话，当元素全为负数时，没法输出最大值。（也不知道我当年是怎么想出这种傻乎乎的逻辑）</p>
-]]></content>
-      <categories>
-        <category>code-training</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>算法</tag>
-        <tag>编程</tag>
-        <tag>数据结构</tag>
-        <tag>PAT</tag>
-        <tag>PTA</tag>
-        <tag>练习</tag>
-        <tag>题库</tag>
-        <tag>题目</tag>
       </tags>
   </entry>
   <entry>
@@ -10181,7 +10174,7 @@ QQ二维码<img src="/images-public/qq-qr-code2.webp" style="width: 200px"></div
 <li>访问tale后台地址：<code>http://飞牛IP:8090</code>，配置帐号&#x2F;密码&#x2F;邮件。</li>
 <li>在tale后台，管理-&gt;系统设置-&gt;互联网书籍信息源，配置如下豆瓣插件信息，然后在最底部点击保存设置。使用教程：点击任意书籍，管理-&gt;从互联网更新信息。<ul>
 <li>豆瓣插件 API 地址 (例如 <a href="http://10.0.0.1:8080/">http://10.0.0.1:8080</a> )：<code>http://飞牛IP:8080</code>，原本是<code>https://api.douban.com</code></li>
-<li>原豆瓣API Key：删除<code>0df993c66c0c636e29ecbb5344252a4a</code>并留空。因为这个Key已经被禁用（调试API返回报错apikey_is_blocked: 0df993c66c0c636e29ecbb5344252a4a, Please contact <a href="mailto:&#98;&#100;&#x2d;&#x74;&#101;&#x61;&#109;&#64;&#100;&#111;&#117;&#98;&#x61;&#110;&#x2e;&#x63;&#x6f;&#x6d;">bd-team@douban.com</a> for authorized access.）</li>
+<li>原豆瓣API Key：删除<code>0df993c66c0c636e29ecbb5344252a4a</code>并留空。因为这个Key已经被禁用（调试API返回报错apikey_is_blocked: 0df993c66c0c636e29ecbb5344252a4a, Please contact <a href="mailto:&#98;&#100;&#45;&#x74;&#x65;&#x61;&#x6d;&#x40;&#100;&#x6f;&#117;&#x62;&#97;&#110;&#x2e;&#99;&#111;&#x6d;">bd-team@douban.com</a> for authorized access.）</li>
 </ul>
 </li>
 <li>手机APP<code>静读天下-moonreader</code>，找到「网上书库」右上角，增加新书库，书库地址：<code>http://飞牛IP:8090/opds/</code>。</li>
@@ -13719,12 +13712,12 @@ title UDP Packet
 </ul>
 </li>
 <li>方案2：方案1的衍生方法，通过注册表修改BypassNRO的值以激活方案1的功能。Shift+F10调出cmd窗口，运行：<code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f shutdown /r /t 0</code>。</li>
-<li>方案3：输入<a href="mailto:&#x6e;&#111;&#64;&#x74;&#104;&#x61;&#x6e;&#107;&#x79;&#x6f;&#117;&#x2e;&#99;&#111;&#109;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
-<li><a href="mailto:&#x31;&#64;&#49;&#x2e;&#99;&#x6f;&#109;">1@1.com</a></li>
-<li><a href="mailto:&#56;&#x40;&#x38;&#x2e;&#99;&#111;&#x6d;">8@8.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#64;&#116;&#104;&#x61;&#110;&#x6b;&#x73;&#46;&#x63;&#111;&#109;">no@thanks.com</a></li>
-<li><a href="mailto:&#x6e;&#x6f;&#x40;&#x74;&#x68;&#97;&#110;&#x6b;&#x79;&#111;&#x75;&#46;&#x63;&#x6f;&#109;">no@thankyou.com</a></li>
-<li><a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#46;&#99;&#111;&#109;">example@example.com</a></li>
+<li>方案3：输入<a href="mailto:&#x6e;&#x6f;&#x40;&#116;&#x68;&#x61;&#110;&#107;&#121;&#x6f;&#117;&#46;&#x63;&#111;&#x6d;">no@thankyou.com</a>触发账户锁定，在登录里输入此账户然后随便输入个字符当做密码点登录，此时系统会弹出错误提醒，然后点击下一步，创建本地账户。其他类似的账户有如下：<ul>
+<li><a href="mailto:&#49;&#64;&#x31;&#46;&#x63;&#111;&#109;">1@1.com</a></li>
+<li><a href="mailto:&#x38;&#x40;&#x38;&#x2e;&#99;&#x6f;&#109;">8@8.com</a></li>
+<li><a href="mailto:&#110;&#111;&#64;&#x74;&#104;&#x61;&#110;&#107;&#115;&#x2e;&#x63;&#x6f;&#109;">no@thanks.com</a></li>
+<li><a href="mailto:&#x6e;&#111;&#x40;&#116;&#x68;&#97;&#x6e;&#107;&#121;&#111;&#x75;&#46;&#99;&#x6f;&#x6d;">no@thankyou.com</a></li>
+<li><a href="mailto:&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">example@example.com</a></li>
 </ul>
 </li>
 <li>方案4：拔掉网线，Shift+F10调出cmd窗口，运行<code>start ms-cxh:localonly</code>。系统会自动打开微软账户管理的窗口，在此窗口输入帐号的用户名称和密码即可。<ul>
@@ -16569,6 +16562,46 @@ title UDP Packet
       </tags>
   </entry>
   <entry>
+    <title>飞牛fnOS调整AutoBangumi参数，以适配国内直连域名订阅mikanime.tv</title>
+    <url>/post-articles/2025-10/auto-bangumi-set-mikanimetv-for-fnos/</url>
+    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>mikan站点目前是根据访问IP地区跳转域名，大陆IP是访问<code>mikanime.tv</code>域名，其他IP是访问<code>mikanani.me</code>域名。</p>
+<p>在飞牛fnOS的应用中心上安装<code>AutoBangumi</code>，使用<code>mikanime.tv</code>域名的订阅链接进行下载时，会发现在<code>AutoBangumi</code>的日志中发现这样的警告信息<code>[Network] Failed to get torrents: https://mikanani.me/RSS/xxxxxx</code>。</p>
+<p>很奇怪对吧！明明填写的是<code>mikanime.tv</code>域名的订阅链接，但是日志却是提示无法从<code>mikanani.me</code>域名链接中获取磁力呢？</p>
+<p>原因是<code>AutoBangumi</code>的磁力搜索功能是根据<code>config/search_provider.json</code>中的url参数实现的，而该配置文件的参数默认为<code>mikanani.me</code>域名的url。</p>
+<h1 id="配置方法">2 &nbsp&nbsp<a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h1><p>测试版本：</p>
+<ul>
+<li>飞牛版本：fnOS 0.9.32</li>
+<li>AutoBangumi版本：3.1.18</li>
+</ul>
+<p>在<code>文件管理</code>应用中找到<code>AutoBangumi</code>的应用配置文件：<code>存储空间1/应用文件/AutoBangumi/config/search_provider.json</code>，对应的原始路径是<code>/vol1/@appshare/AutoBangumi/config/search_provider.json</code>。</p>
+<p>使用<code>文本编辑器</code>应用打开并编辑文件内容（确保已经提前在<code>应用中心</code>安装<code>文本编辑器</code>）：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;mikan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://mikanani.me/RSS/Search?searchstr=%s&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;nyaa&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://nyaa.si/?page=rss&amp;q=%s&amp;c=0_0&amp;f=0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dmhy&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://dmhy.org/topics/rss/rss.xml?keyword=%s&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>将<code>mikan</code>的域名从<code>mikanani.me</code>更改为<code>mikanime.tv</code>：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;mikan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://mikanime.tv/RSS/Search?searchstr=%s&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;nyaa&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://nyaa.si/?page=rss&amp;q=%s&amp;c=0_0&amp;f=0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dmhy&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://dmhy.org/topics/rss/rss.xml?keyword=%s&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<div class="flex-row">
+<div class="flex-column">
+<img src="/images/post-articles/2025-10/auto-bangumi-set-mikanimetv-for-fnos/config-path.webp">配置路径</div>
+<div class="flex-column">
+<img src="/images/post-articles/2025-10/auto-bangumi-set-mikanimetv-for-fnos/config-file.webp">配置文件</div>
+</div>
+
+<p>P.S. 如果局域网网络整体被梯子代理的话，记得将飞牛fnOS的系统IP分流出去，不然处于代理状态下，配置了<code>mikanime.tv</code>也会自动跳转到<code>mikanani.me</code>。</p>
+<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [错误报告]RSS订阅为国内域名(mikanime.tv)，但torrent获取仍为mikanime.me，以致出现网络连接失败问题[EB&#x2F;OL]. <a href="https://github.com/EstrellaXD/Auto_Bangumi/issues/804">https://github.com/EstrellaXD/Auto_Bangumi/issues/804</a>.<br>[2] 网络问题[EB&#x2F;OL]. <a href="https://www.autobangumi.org/faq/network.html">https://www.autobangumi.org/faq/network.html</a>.</p>
+]]></content>
+      <categories>
+        <category>post-articles</category>
+        <category>2025-10</category>
+      </categories>
+      <tags>
+        <tag>fnOS</tag>
+        <tag>飞牛</tag>
+        <tag>AutoBangumi</tag>
+        <tag>mikan</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>USB千兆网卡评测-Airsky USB-C/USB-A外置网卡</title>
     <url>/post-articles/2025-10/airsky-usb-c-usb-a-gigabit-ethernet-adapter-review/</url>
     <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间从某宝上淘了一个USB外置网卡（USB C&#x2F;USB A二合一接口），整体使用体验还行，因此抽空写一下评测。</p>
@@ -16653,46 +16686,6 @@ title UDP Packet
         <tag>外置网卡</tag>
         <tag>评测</tag>
         <tag>千兆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>飞牛fnOS调整AutoBangumi参数，以适配国内直连域名订阅mikanime.tv</title>
-    <url>/post-articles/2025-10/auto-bangumi-set-mikanimetv-for-fnos/</url>
-    <content><![CDATA[<h1 id="前言">1 &nbsp&nbsp<a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>mikan站点目前是根据访问IP地区跳转域名，大陆IP是访问<code>mikanime.tv</code>域名，其他IP是访问<code>mikanani.me</code>域名。</p>
-<p>在飞牛fnOS的应用中心上安装<code>AutoBangumi</code>，使用<code>mikanime.tv</code>域名的订阅链接进行下载时，会发现在<code>AutoBangumi</code>的日志中发现这样的警告信息<code>[Network] Failed to get torrents: https://mikanani.me/RSS/xxxxxx</code>。</p>
-<p>很奇怪对吧！明明填写的是<code>mikanime.tv</code>域名的订阅链接，但是日志却是提示无法从<code>mikanani.me</code>域名链接中获取磁力呢？</p>
-<p>原因是<code>AutoBangumi</code>的磁力搜索功能是根据<code>config/search_provider.json</code>中的url参数实现的，而该配置文件的参数默认为<code>mikanani.me</code>域名的url。</p>
-<h1 id="配置方法">2 &nbsp&nbsp<a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h1><p>测试版本：</p>
-<ul>
-<li>飞牛版本：fnOS 0.9.32</li>
-<li>AutoBangumi版本：3.1.18</li>
-</ul>
-<p>在<code>文件管理</code>应用中找到<code>AutoBangumi</code>的应用配置文件：<code>存储空间1/应用文件/AutoBangumi/config/search_provider.json</code>，对应的原始路径是<code>/vol1/@appshare/AutoBangumi/config/search_provider.json</code>。</p>
-<p>使用<code>文本编辑器</code>应用打开并编辑文件内容（确保已经提前在<code>应用中心</code>安装<code>文本编辑器</code>）：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;mikan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://mikanani.me/RSS/Search?searchstr=%s&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;nyaa&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://nyaa.si/?page=rss&amp;q=%s&amp;c=0_0&amp;f=0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dmhy&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://dmhy.org/topics/rss/rss.xml?keyword=%s&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>将<code>mikan</code>的域名从<code>mikanani.me</code>更改为<code>mikanime.tv</code>：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;mikan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://mikanime.tv/RSS/Search?searchstr=%s&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;nyaa&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://nyaa.si/?page=rss&amp;q=%s&amp;c=0_0&amp;f=0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dmhy&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://dmhy.org/topics/rss/rss.xml?keyword=%s&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<div class="flex-row">
-<div class="flex-column">
-<img src="/images/post-articles/2025-10/auto-bangumi-set-mikanimetv-for-fnos/config-path.webp">配置路径</div>
-<div class="flex-column">
-<img src="/images/post-articles/2025-10/auto-bangumi-set-mikanimetv-for-fnos/config-file.webp">配置文件</div>
-</div>
-
-<p>P.S. 如果局域网网络整体被梯子代理的话，记得将飞牛fnOS的系统IP分流出去，不然处于代理状态下，配置了<code>mikanime.tv</code>也会自动跳转到<code>mikanani.me</code>。</p>
-<h1 id="参考文献">3 &nbsp&nbsp<a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] [错误报告]RSS订阅为国内域名(mikanime.tv)，但torrent获取仍为mikanime.me，以致出现网络连接失败问题[EB&#x2F;OL]. <a href="https://github.com/EstrellaXD/Auto_Bangumi/issues/804">https://github.com/EstrellaXD/Auto_Bangumi/issues/804</a>.<br>[2] 网络问题[EB&#x2F;OL]. <a href="https://www.autobangumi.org/faq/network.html">https://www.autobangumi.org/faq/network.html</a>.</p>
-]]></content>
-      <categories>
-        <category>post-articles</category>
-        <category>2025-10</category>
-      </categories>
-      <tags>
-        <tag>fnOS</tag>
-        <tag>飞牛</tag>
-        <tag>AutoBangumi</tag>
-        <tag>mikan</tag>
       </tags>
   </entry>
   <entry>
@@ -19578,7 +19571,7 @@ title UDP Packet
 <h1 id="联系方式">5 &nbsp&nbsp<a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><div class="note danger no-icon"><p>注：联系时请注明身份，谢谢！</p>
 </div>
 <ul>
-<li>邮箱：<a href="mailto:&#x69;&#109;&#46;&#109;&#105;&#115;&#116;&#x65;&#114;&#107;&#105;&#110;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">im.misterkin@gmail.com</a></li>
+<li>邮箱：<a href="mailto:&#x69;&#109;&#x2e;&#x6d;&#105;&#115;&#x74;&#x65;&#114;&#x6b;&#x69;&#110;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">im.misterkin@gmail.com</a></li>
 <li>QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2312463626&website=www.oicqzone.com">2312463626</a><strong>（点击号码即加好友）</strong></li>
 </ul>
 <div class="flex-row-left-start">
